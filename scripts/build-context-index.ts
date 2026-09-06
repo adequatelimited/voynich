@@ -1,0 +1,12 @@
+import { readFile, writeFile } from 'node:fs/promises';
+import { sha256 } from '../src/hash.ts';
+const projection = JSON.parse(await readFile('public/projection.json', 'utf8'));
+const context = JSON.parse(await readFile('grading/context.json', 'utf8'));
+const fields = ['id', 'title', 'question', 'scope', 'family_id', 'url', 'source_url', 'canonical_url', 'references', 'source_ids'];
+const collections = Object.fromEntries(['sources', 'branches', 'methods', 'claims', 'directions', 'tasks', 'experiments'].map(key => [key, (projection[key] ?? []).map((record: Record<string, unknown>) => Object.fromEntries(fields.filter(field => record[field] !== undefined).map(field => [field, record[field]])))]));
+const content = JSON.stringify({ schema_version: '1.0', purpose: 'Bounded discovery index for overlap checks; listed source files still require retrieval for any conclusion depending on their full evidence.', collections, seed_families: context.families.map((f: Record<string, unknown>) => ({ id: f.id, scope: f.scope, seed_baseline: f.seed_baseline })) }, null, 2) + '\n';
+if (new TextEncoder().encode(content).byteLength > 48000) throw new Error('Context index requires a prospective retrieval profile update; never silently truncate.');
+await writeFile('research/context-index.json', content);
+context.public_evidence = [{ path: 'research/context-index.json', content, sha256: await sha256(content), byte_length: new TextEncoder().encode(content).byteLength, media_type: 'application/json', inspection: 'complete' }];
+await writeFile('grading/context.json', JSON.stringify(context, null, 2) + '\n');
+process.stdout.write(JSON.stringify({ index_bytes: new TextEncoder().encode(content).byteLength, indexed_collections: Object.keys(collections).length }) + '\n');

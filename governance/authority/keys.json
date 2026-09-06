@@ -1,0 +1,16 @@
+{
+  "schema_version": "1.0",
+  "repository_id": 1359336540,
+  "github_app_id": 4852859,
+  "installation_id": 159580006,
+  "keys": [
+    {
+      "key_id": "voynich-2026-09-06",
+      "algorithm": "Ed25519",
+      "public_key_pem": "-----BEGIN PUBLIC KEY-----\nMCowBQYDK2VwAyEAF+XbX7SVzF4fsTZa6JQ8ZoSy6tKWYr4+KYjNwNiTSA4=\n-----END PUBLIC KEY-----\n",
+      "status": "active",
+      "valid_from": "2026-09-06T18:53:43.151Z"
+    }
+  ],
+  "official_grading_enabled": false
+}

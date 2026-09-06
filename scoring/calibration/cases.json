@@ -1,0 +1,258 @@
+{
+  "schema_version": "1.0",
+  "status": "unreviewed_draft_no_actual_model_trials",
+  "cases": [
+    {
+      "id": "fixture-literature-eligible_or_service",
+      "route": "literature",
+      "boundary": "eligible_or_service",
+      "file": "grading/fixtures/fixture-literature-eligible_or_service.json",
+      "reference_status": "unreviewed_author_draft"
+    },
+    {
+      "id": "fixture-literature-ineligible",
+      "route": "literature",
+      "boundary": "ineligible",
+      "file": "grading/fixtures/fixture-literature-ineligible.json",
+      "reference_status": "unreviewed_author_draft"
+    },
+    {
+      "id": "fixture-acquisition-eligible_or_service",
+      "route": "acquisition",
+      "boundary": "eligible_or_service",
+      "file": "grading/fixtures/fixture-acquisition-eligible_or_service.json",
+      "reference_status": "unreviewed_author_draft"
+    },
+    {
+      "id": "fixture-acquisition-ineligible",
+      "route": "acquisition",
+      "boundary": "ineligible",
+      "file": "grading/fixtures/fixture-acquisition-ineligible.json",
+      "reference_status": "unreviewed_author_draft"
+    },
+    {
+      "id": "fixture-annotation-eligible_or_service",
+      "route": "annotation",
+      "boundary": "eligible_or_service",
+      "file": "grading/fixtures/fixture-annotation-eligible_or_service.json",
+      "reference_status": "unreviewed_author_draft"
+    },
+    {
+      "id": "fixture-annotation-ineligible",
+      "route": "annotation",
+      "boundary": "ineligible",
+      "file": "grading/fixtures/fixture-annotation-ineligible.json",
+      "reference_status": "unreviewed_author_draft"
+    },
+    {
+      "id": "fixture-comparative_corpus-eligible_or_service",
+      "route": "comparative_corpus",
+      "boundary": "eligible_or_service",
+      "file": "grading/fixtures/fixture-comparative_corpus-eligible_or_service.json",
+      "reference_status": "unreviewed_author_draft"
+    },
+    {
+      "id": "fixture-comparative_corpus-ineligible",
+      "route": "comparative_corpus",
+      "boundary": "ineligible",
+      "file": "grading/fixtures/fixture-comparative_corpus-ineligible.json",
+      "reference_status": "unreviewed_author_draft"
+    },
+    {
+      "id": "fixture-expertise-eligible_or_service",
+      "route": "expertise",
+      "boundary": "eligible_or_service",
+      "file": "grading/fixtures/fixture-expertise-eligible_or_service.json",
+      "reference_status": "unreviewed_author_draft"
+    },
+    {
+      "id": "fixture-expertise-ineligible",
+      "route": "expertise",
+      "boundary": "ineligible",
+      "file": "grading/fixtures/fixture-expertise-ineligible.json",
+      "reference_status": "unreviewed_author_draft"
+    },
+    {
+      "id": "fixture-synthesis-eligible_or_service",
+      "route": "synthesis",
+      "boundary": "eligible_or_service",
+      "file": "grading/fixtures/fixture-synthesis-eligible_or_service.json",
+      "reference_status": "unreviewed_author_draft"
+    },
+    {
+      "id": "fixture-synthesis-ineligible",
+      "route": "synthesis",
+      "boundary": "ineligible",
+      "file": "grading/fixtures/fixture-synthesis-ineligible.json",
+      "reference_status": "unreviewed_author_draft"
+    },
+    {
+      "id": "fixture-direction-eligible_or_service",
+      "route": "direction",
+      "boundary": "eligible_or_service",
+      "file": "grading/fixtures/fixture-direction-eligible_or_service.json",
+      "reference_status": "unreviewed_author_draft"
+    },
+    {
+      "id": "fixture-direction-ineligible",
+      "route": "direction",
+      "boundary": "ineligible",
+      "file": "grading/fixtures/fixture-direction-ineligible.json",
+      "reference_status": "unreviewed_author_draft"
+    },
+    {
+      "id": "fixture-experiment-eligible_or_service",
+      "route": "experiment",
+      "boundary": "eligible_or_service",
+      "file": "grading/fixtures/fixture-experiment-eligible_or_service.json",
+      "reference_status": "unreviewed_author_draft"
+    },
+    {
+      "id": "fixture-experiment-ineligible",
+      "route": "experiment",
+      "boundary": "ineligible",
+      "file": "grading/fixtures/fixture-experiment-ineligible.json",
+      "reference_status": "unreviewed_author_draft"
+    },
+    {
+      "id": "fixture-formal-eligible_or_service",
+      "route": "formal",
+      "boundary": "eligible_or_service",
+      "file": "grading/fixtures/fixture-formal-eligible_or_service.json",
+      "reference_status": "unreviewed_author_draft"
+    },
+    {
+      "id": "fixture-formal-ineligible",
+      "route": "formal",
+      "boundary": "ineligible",
+      "file": "grading/fixtures/fixture-formal-ineligible.json",
+      "reference_status": "unreviewed_author_draft"
+    },
+    {
+      "id": "fixture-decipherment-eligible_or_service",
+      "route": "decipherment",
+      "boundary": "eligible_or_service",
+      "file": "grading/fixtures/fixture-decipherment-eligible_or_service.json",
+      "reference_status": "unreviewed_author_draft"
+    },
+    {
+      "id": "fixture-decipherment-ineligible",
+      "route": "decipherment",
+      "boundary": "ineligible",
+      "file": "grading/fixtures/fixture-decipherment-ineligible.json",
+      "reference_status": "unreviewed_author_draft"
+    },
+    {
+      "id": "fixture-software-eligible_or_service",
+      "route": "software",
+      "boundary": "eligible_or_service",
+      "file": "grading/fixtures/fixture-software-eligible_or_service.json",
+      "reference_status": "unreviewed_author_draft"
+    },
+    {
+      "id": "fixture-software-ineligible",
+      "route": "software",
+      "boundary": "ineligible",
+      "file": "grading/fixtures/fixture-software-ineligible.json",
+      "reference_status": "unreviewed_author_draft"
+    },
+    {
+      "id": "fixture-replication-eligible_or_service",
+      "route": "replication",
+      "boundary": "eligible_or_service",
+      "file": "grading/fixtures/fixture-replication-eligible_or_service.json",
+      "reference_status": "unreviewed_author_draft"
+    },
+    {
+      "id": "fixture-replication-ineligible",
+      "route": "replication",
+      "boundary": "ineligible",
+      "file": "grading/fixtures/fixture-replication-ineligible.json",
+      "reference_status": "unreviewed_author_draft"
+    },
+    {
+      "id": "fixture-infrastructure-eligible_or_service",
+      "route": "infrastructure",
+      "boundary": "eligible_or_service",
+      "file": "grading/fixtures/fixture-infrastructure-eligible_or_service.json",
+      "reference_status": "unreviewed_author_draft"
+    },
+    {
+      "id": "fixture-infrastructure-ineligible",
+      "route": "infrastructure",
+      "boundary": "ineligible",
+      "file": "grading/fixtures/fixture-infrastructure-ineligible.json",
+      "reference_status": "unreviewed_author_draft"
+    },
+    {
+      "id": "fixture-accessibility-eligible_or_service",
+      "route": "accessibility",
+      "boundary": "eligible_or_service",
+      "file": "grading/fixtures/fixture-accessibility-eligible_or_service.json",
+      "reference_status": "unreviewed_author_draft"
+    },
+    {
+      "id": "fixture-accessibility-ineligible",
+      "route": "accessibility",
+      "boundary": "ineligible",
+      "file": "grading/fixtures/fixture-accessibility-ineligible.json",
+      "reference_status": "unreviewed_author_draft"
+    },
+    {
+      "id": "fixture-community_service-eligible_or_service",
+      "route": "community_service",
+      "boundary": "eligible_or_service",
+      "file": "grading/fixtures/fixture-community_service-eligible_or_service.json",
+      "reference_status": "unreviewed_author_draft"
+    },
+    {
+      "id": "fixture-community_service-ineligible",
+      "route": "community_service",
+      "boundary": "ineligible",
+      "file": "grading/fixtures/fixture-community_service-ineligible.json",
+      "reference_status": "unreviewed_author_draft"
+    },
+    {
+      "id": "fixture-publication-eligible_or_service",
+      "route": "publication",
+      "boundary": "eligible_or_service",
+      "file": "grading/fixtures/fixture-publication-eligible_or_service.json",
+      "reference_status": "unreviewed_author_draft"
+    },
+    {
+      "id": "fixture-publication-ineligible",
+      "route": "publication",
+      "boundary": "ineligible",
+      "file": "grading/fixtures/fixture-publication-ineligible.json",
+      "reference_status": "unreviewed_author_draft"
+    },
+    {
+      "id": "fixture-support-eligible_or_service",
+      "route": "support",
+      "boundary": "eligible_or_service",
+      "file": "grading/fixtures/fixture-support-eligible_or_service.json",
+      "reference_status": "unreviewed_author_draft"
+    },
+    {
+      "id": "fixture-support-ineligible",
+      "route": "support",
+      "boundary": "ineligible",
+      "file": "grading/fixtures/fixture-support-ineligible.json",
+      "reference_status": "unreviewed_author_draft"
+    },
+    {
+      "id": "fixture-unclassified-eligible_or_service",
+      "route": "unclassified",
+      "boundary": "eligible_or_service",
+      "file": "grading/fixtures/fixture-unclassified-eligible_or_service.json",
+      "reference_status": "unreviewed_author_draft"
+    },
+    {
+      "id": "fixture-unclassified-ineligible",
+      "route": "unclassified",
+      "boundary": "ineligible",
+      "file": "grading/fixtures/fixture-unclassified-ineligible.json",
+      "reference_status": "unreviewed_author_draft"
+    }
+  ]
+}

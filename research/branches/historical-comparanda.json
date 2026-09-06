@@ -1,0 +1,17 @@
+{
+  "id": "historical-comparanda",
+  "title": "Historical comparanda and provenance",
+  "summary": "Which dated textual, visual and cipher practices impose useful constraints?",
+  "question": "Which dated textual, visual and cipher practices impose useful constraints?",
+  "status": "open",
+  "methods": [
+    "method-history",
+    "method-cipher"
+  ],
+  "dependencies": [],
+  "depends_on": [],
+  "next_step": "Resolve source rights and locate a machine-readable historical herbal comparator.",
+  "first_experiment": "Resolve source rights and locate a machine-readable historical herbal comparator.",
+  "seed": true,
+  "competitive_points": 0
+}

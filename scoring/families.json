@@ -1,0 +1,223 @@
+[
+    {
+        "id":  "seed-source-catalog",
+        "rubric_version":  "0.1",
+        "scope":  "This curated bounded source inventory and rights/provenance records.",
+        "acceptance_test":  "Inspect source-level provenance, original annotations and explicit failed retrievals.",
+        "aliases":  [
+
+                    ],
+        "predecessor_family_ids":  [
+
+                                   ],
+        "excluded_overlap":  [
+
+                             ],
+        "seed":  true,
+        "seed_baseline":  null
+    },
+    {
+        "id":  "seed-corpus-parser",
+        "rubric_version":  "0.1",
+        "scope":  "Pinned ZL/GC corpora, folio/locus metadata and tested EVA uncertainty parser.",
+        "acceptance_test":  "Verify source hashes, rights, parser invariants and normalization disclosures.",
+        "aliases":  [
+
+                    ],
+        "predecessor_family_ids":  [
+
+                                   ],
+        "excluded_overlap":  [
+
+                             ],
+        "seed":  true,
+        "seed_baseline":  null
+    },
+    {
+        "id":  "seed-research-navigation",
+        "rubric_version":  "0.1",
+        "scope":  "Eight initial branches, fourteen method cards, twelve claims and eighteen bounded tasks.",
+        "acceptance_test":  "Inspect each record\u0027s actionable question, source, limitations and overlapping scope.",
+        "aliases":  [
+
+                    ],
+        "predecessor_family_ids":  [
+
+                                   ],
+        "excluded_overlap":  [
+
+                             ],
+        "seed":  true,
+        "seed_baseline":  null
+    },
+    {
+        "id":  "seed-local-harness",
+        "rubric_version":  "0.1",
+        "scope":  "CPU-only frozen-protocol prepare/run/compare/bundle workflow with all attempts and controls.",
+        "acceptance_test":  "Execute the offline worked example and verify the complete bundle.",
+        "aliases":  [
+
+                    ],
+        "predecessor_family_ids":  [
+
+                                   ],
+        "excluded_overlap":  [
+
+                             ],
+        "seed":  true,
+        "seed_baseline":  null
+    },
+    {
+        "id":  "seed-baseline-integrity",
+        "rubric_version":  "0.1",
+        "scope":  "Coverage and normalization audit of pinned ZL3b.",
+        "acceptance_test":  "Reproduce actual versioned output under all three declared variants and inspect controls and limits.",
+        "aliases":  [
+
+                    ],
+        "predecessor_family_ids":  [
+
+                                   ],
+        "excluded_overlap":  [
+
+                             ],
+        "seed":  true,
+        "seed_baseline":  null
+    },
+    {
+        "id":  "seed-baseline-frequency",
+        "rubric_version":  "0.1",
+        "scope":  "Encoded frequency and length diagnostics with matched controls.",
+        "acceptance_test":  "Reproduce actual versioned output under all three declared variants and inspect controls and limits.",
+        "aliases":  [
+
+                    ],
+        "predecessor_family_ids":  [
+
+                                   ],
+        "excluded_overlap":  [
+
+                             ],
+        "seed":  true,
+        "seed_baseline":  null
+    },
+    {
+        "id":  "seed-baseline-entropy",
+        "rubric_version":  "0.1",
+        "scope":  "Conditional symbol entropy under explicit encoding/boundary conventions.",
+        "acceptance_test":  "Reproduce actual versioned output under all three declared variants and inspect controls and limits.",
+        "aliases":  [
+
+                    ],
+        "predecessor_family_ids":  [
+
+                                   ],
+        "excluded_overlap":  [
+
+                             ],
+        "seed":  true,
+        "seed_baseline":  null
+    },
+    {
+        "id":  "seed-baseline-position",
+        "rubric_version":  "0.1",
+        "scope":  "P0 locus position/repetition and within-locus shuffle diagnostics.",
+        "acceptance_test":  "Reproduce actual versioned output under all three declared variants and inspect controls and limits.",
+        "aliases":  [
+
+                    ],
+        "predecessor_family_ids":  [
+
+                                   ],
+        "excluded_overlap":  [
+
+                             ],
+        "seed":  true,
+        "seed_baseline":  null
+    },
+    {
+        "id":  "seed-baseline-clustering",
+        "rubric_version":  "0.1",
+        "scope":  "Encoded-symbol clustering with source-specific section/hand/quire confound diagnostics.",
+        "acceptance_test":  "Reproduce actual versioned output under all three declared variants and inspect controls and limits.",
+        "aliases":  [
+
+                    ],
+        "predecessor_family_ids":  [
+
+                                   ],
+        "excluded_overlap":  [
+
+                             ],
+        "seed":  true,
+        "seed_baseline":  null
+    },
+    {
+        "id":  "seed-direction-uncertainty-ranking",
+        "rubric_version":  "0.1",
+        "scope":  "Rank research conclusions by uncertainty sensitivity",
+        "acceptance_test":  "Inspect suggestion usefulness, bounded prior-work check, distinction and plausible first step.",
+        "aliases":  [
+
+                    ],
+        "predecessor_family_ids":  [
+
+                                   ],
+        "excluded_overlap":  [
+
+                             ],
+        "seed":  true,
+        "seed_baseline":  null
+    },
+    {
+        "id":  "seed-direction-negative-control-atlas",
+        "rubric_version":  "0.1",
+        "scope":  "Create a diagnostic failure atlas for candidate mechanisms",
+        "acceptance_test":  "Inspect suggestion usefulness, bounded prior-work check, distinction and plausible first step.",
+        "aliases":  [
+
+                    ],
+        "predecessor_family_ids":  [
+
+                                   ],
+        "excluded_overlap":  [
+
+                             ],
+        "seed":  true,
+        "seed_baseline":  null
+    },
+    {
+        "id":  "seed-direction-confound-information",
+        "rubric_version":  "0.1",
+        "scope":  "Measure what additional annotation would resolve section-hand confounding",
+        "acceptance_test":  "Inspect suggestion usefulness, bounded prior-work check, distinction and plausible first step.",
+        "aliases":  [
+
+                    ],
+        "predecessor_family_ids":  [
+
+                                   ],
+        "excluded_overlap":  [
+
+                             ],
+        "seed":  true,
+        "seed_baseline":  null
+    },
+    {
+        "id":  "seed-direction-decipherment-budget",
+        "rubric_version":  "0.1",
+        "scope":  "Record the flexibility budget of a proposed decipherment",
+        "acceptance_test":  "Inspect suggestion usefulness, bounded prior-work check, distinction and plausible first step.",
+        "aliases":  [
+
+                    ],
+        "predecessor_family_ids":  [
+
+                                   ],
+        "excluded_overlap":  [
+
+                             ],
+        "seed":  true,
+        "seed_baseline":  null
+    }
+]

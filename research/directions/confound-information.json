@@ -1,0 +1,29 @@
+{
+  "schema_version": "1.0",
+  "id": "direction-confound-information",
+  "title": "Measure what additional annotation would resolve section-hand confounding",
+  "question": "Which underrepresented combinations of section and source-specific hand labels would best distinguish competing explanations?",
+  "rationale": "A map of missing combinations can direct limited manual annotation to useful evidence instead of collecting more of the same examples.",
+  "distinctness": "An annotation-priority proposal, separate from re-running a cluster algorithm or treating its labels as truth.",
+  "prior_work_check": {
+    "scope": "Bounded launch-source catalog and current seed directions inspected; this does not establish world-first novelty.",
+    "references": [
+      "davis-2022",
+      "sterneck-polish-bowern-2021"
+    ],
+    "checked_at": "2026-09-06"
+  },
+  "first_step": "Audit the existing label contingency table and list a bounded image sample with an explicit sampling rationale.",
+  "limitations": [
+    "Candidate suggestion only; detailed protocol and execution are future work.",
+    "Designated seed: zero competitive allocations; evidence-tier baseline awaits official assessment."
+  ],
+  "attribution": [
+    "voynich.win launch curation, AI-assisted by OpenAI Codex; exposed precise model version not recorded"
+  ],
+  "branch_ids": [
+    "layout-paleography"
+  ],
+  "family_id": "seed-direction-confound-information",
+  "status": "candidate"
+}

@@ -1,0 +1,38 @@
+# Template: replace YOUR-* and numeric ID 0 before validation/submission.
+schema_version: "1.0"
+id: "YOUR-ID"
+kind: direction
+title: "YOUR specific contribution title"
+summary: "What useful addition does this make to the shared research?"
+branch_ids: ["YOUR-BRANCH-ID"]
+contributors:
+  - github_id: 0
+    github_login: "YOUR-HANDLE"
+    roles: ["Conceptualization"]
+ai_usage:
+  status: none
+  tools: []
+  reproducibility_notes: "Describe AI use and exposed versions honestly; update status/tools if applicable."
+changes:
+  - path: "research/directions/YOUR-ID.yaml"
+    improvement: "A distinct useful direction with rationale, bounded prior-work check and plausible first step."
+outcomes:
+  - id: "outcome-YOUR-ID"
+    family_id: "family-YOUR-ID"
+    extends: null
+    before: "Describe the existing shared evidence/capability."
+    after: "Describe the distinct useful addition."
+    acceptance_test: "Inspect usefulness, distinction, rationale, prior-work check and first step."
+    evidence: ["research/directions/YOUR-ID.yaml"]
+    related_outcomes: []
+    claimed_cumulative_tier: 2
+    claimed_incremental_points: 2
+    claim_rationale: "Explain why the published gates and tier-2 direction anchor are satisfied."
+    attribution:
+      - github_id: 0
+        share_basis_points: 10000
+claimed_total_points: 2
+rubric_version: "0.1"
+conflicts: []
+limitations: ["This is a suggestion, not an executed scientific result."]
+rights_manifest: "contributions/YOUR-ID/rights.md"

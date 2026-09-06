@@ -1,0 +1,30 @@
+{
+  "schema_version": "1.0",
+  "id": "clean-environment-verification-v1",
+  "verified_at": "2026-09-06T19:02:38.301868+00:00",
+  "status": "all_three_variants_reproduced",
+  "environment": "Fresh Python 3.14 venv without pip; -s disables user site; no package installs, network or model calls",
+  "same_implementation": true,
+  "independent_human": false,
+  "limitation": "Same AI-assisted operator and machine; clean interpreter verification does not satisfy external human reproduction gate. Initial -I CLI attempt failed because isolation removes script-directory module lookup; the documented ordinary CLI with -s succeeded.",
+  "full_runs": [
+    {
+      "variant": "join",
+      "path": "experiments/runs/clean-env-verification-v1/2026-09-06T190131-737982Z-e291fdbb/output.json",
+      "sha256": "46abe268dd27a8f12ff7d35a7b7f347252410abbcecd8f369a7e5d70e44eff6c",
+      "all_scientific_outputs_identical_excluding_cpu_time": true
+    },
+    {
+      "variant": "split",
+      "path": "experiments/runs/clean-env-verification-v1/2026-09-06T190133-456581Z-39924d11/output.json",
+      "sha256": "2ae435b449b51a36ea2fc11805b97d31e42ff721081de88d3c83c05a68c6e79c",
+      "all_scientific_outputs_identical_excluding_cpu_time": true
+    },
+    {
+      "variant": "strict",
+      "path": "experiments/runs/clean-env-verification-v1/2026-09-06T190135-480206Z-1f2fcb66/output.json",
+      "sha256": "be2cc719b75d277d317540a42bea479996c007e1acb8170c07605a637697f371",
+      "all_scientific_outputs_identical_excluding_cpu_time": true
+    }
+  ]
+}

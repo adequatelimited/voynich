@@ -1,0 +1,15 @@
+{
+  "id": "task-01-source-rights",
+  "title": "Verify one source's reuse and version record",
+  "summary": "Inspect an official source, record exact item/version/rights evidence and correct a material catalog defect if found.",
+  "branch_ids": [
+    "historical-comparanda"
+  ],
+  "difficulty": "novice",
+  "status": "open",
+  "acceptance_evidence": "Source metadata and a concrete before/after correction with quoted locator; link-only additions do not suffice.",
+  "tier_anchor": 2,
+  "scoring_note": "Indicative evidence anchor only. Mission gates, family overlap and prior seed baselines govern any AI assessment; tasks reserve neither ownership nor points.",
+  "seed": true,
+  "competitive_points": 0
+}

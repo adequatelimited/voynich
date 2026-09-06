@@ -1,0 +1,24 @@
+{
+  "name": "@voynich/core",
+  "version": "0.1.0",
+  "description": "Public contracts, qualitative grading methodology and deterministic research credit for voynich.win",
+  "type": "module",
+  "private": true,
+  "engines": { "node": ">=24" },
+  "packageManager": "pnpm@10.28.1",
+  "exports": { ".": { "types": "./dist/index.d.ts", "import": "./dist/index.js" }, "./package.json": "./package.json" },
+  "bin": { "voynich": "./dist/cli.js" },
+  "files": ["dist", "grading", "scoring", "schemas", "RULES.md", "GRADING.md"],
+  "scripts": {
+    "build": "tsc",
+    "typecheck": "tsc --noEmit",
+    "test": "node --test tests/*.test.ts",
+    "validate": "node --experimental-strip-types src/cli.ts validate-repository",
+    "grade": "node --experimental-strip-types src/cli.ts grade",
+    "preflight": "node --experimental-strip-types src/cli.ts preflight",
+    "projection": "node --experimental-strip-types scripts/build-projection.ts",
+    "check": "pnpm typecheck && pnpm test && pnpm validate && pnpm build"
+  },
+  "dependencies": { "yaml": "2.8.2" },
+  "devDependencies": { "@types/node": "24.10.1", "typescript": "5.9.3" }
+}

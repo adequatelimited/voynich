@@ -1,0 +1,21 @@
+{
+  "id": "generative-mechanisms",
+  "title": "Cryptographic and generative mechanisms",
+  "summary": "Which bounded cipher or pseudotext families jointly predict held-out diagnostics?",
+  "question": "Which bounded cipher or pseudotext families jointly predict held-out diagnostics?",
+  "status": "open",
+  "methods": [
+    "method-cipher",
+    "method-generative"
+  ],
+  "dependencies": [
+    "statistical-structure"
+  ],
+  "depends_on": [
+    "statistical-structure"
+  ],
+  "next_step": "Specify a finite generator family and complexity cost before fitting it.",
+  "first_experiment": "Specify a finite generator family and complexity cost before fitting it.",
+  "seed": true,
+  "competitive_points": 0
+}

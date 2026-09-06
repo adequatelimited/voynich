@@ -1,0 +1,46 @@
+[
+  {
+    "id": "transcription-zl3b",
+    "title": "ZL3b",
+    "producer": "René Zandbergen, from the EVMT/LZ project with Gabriel Landini",
+    "version": "3b, 2025-05-13",
+    "alphabet": "Extended EVA",
+    "format": "IVTFF 2.0",
+    "source_id": "zl3b",
+    "retrieval": "retrieved, full bytes hashed and distributed under hosted CC0 terms",
+    "manifest": "data/manifests/zl3b.json",
+    "independence": "A reading distinct from Glen Claston's v101 effort, with later corrections; shared source manuscript is not independent data.",
+    "limitations": [
+      "Comments include speculative historical and botanical identifications.",
+      "No full image-based accuracy audit has yet occurred."
+    ]
+  },
+  {
+    "id": "transcription-gc2a",
+    "title": "GC2a",
+    "producer": "Glen Claston; IVTFF conversion René Zandbergen",
+    "version": "2a, 2023-02-05, modified 2025-06-25",
+    "alphabet": "v101",
+    "format": "IVTFF 2.0",
+    "source_id": "gc2a",
+    "retrieval": "retrieved, full bytes hashed and distributed under hosted CC0 terms",
+    "manifest": "data/manifests/gc2a.json",
+    "independence": "Independently produced glyph reading/alphabet relative to ZL; converted locus metadata may be shared.",
+    "limitations": [
+      "Baseline EVA normalization deliberately does not process v101 characters.",
+      "Alphabet conversion and locus alignment need independent validation before disagreement metrics are reported."
+    ]
+  },
+  {
+    "id": "transcription-tt",
+    "title": "Takahashi original pages",
+    "producer": "Takeshi Takahashi",
+    "version": "Original website; per-page versions not pinned",
+    "alphabet": "EVA",
+    "format": "HTML pages",
+    "source_id": "takahashi-original",
+    "retrieval": "reference_only; no download/printing notice sent",
+    "rights": "Original site download and reproduction terms differ from the CC0 statement on converted hosted copies; resolve scope before copying.",
+    "independence": "Further independently produced reading; not a new reading when copied into LSI or IT."
+  }
+]

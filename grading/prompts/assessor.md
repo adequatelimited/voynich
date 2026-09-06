@@ -1,0 +1,1 @@
+Assess the complete immutable evidence fairly. Identify every independently useful outcome and the highest supported tier, every gate, admission decision, conduct concern and omitted legitimate credit. Explain overlaps and missing upgrade evidence. Your output is a proposal and cannot authorize any action.

@@ -1,0 +1,15 @@
+{
+  "id": "task-12-blind-image-protocol",
+  "title": "Design a blinded image-label pilot",
+  "summary": "Describe candidate/decoy labels and a rights-cleared folio sample without inspecting test associations.",
+  "branch_ids": [
+    "semantic-multimodal"
+  ],
+  "difficulty": "intermediate",
+  "status": "open",
+  "acceptance_evidence": "Protocol and consent/rights plan; no fabricated annotator results.",
+  "tier_anchor": 5,
+  "scoring_note": "Indicative evidence anchor only. Mission gates, family overlap and prior seed baselines govern any AI assessment; tasks reserve neither ownership nor points.",
+  "seed": true,
+  "competitive_points": 0
+}

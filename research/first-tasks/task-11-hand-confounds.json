@@ -1,0 +1,15 @@
+{
+  "id": "task-11-hand-confounds",
+  "title": "Audit section-hand-quire confounding",
+  "summary": "Use ZL labels as sourced hypotheses and quantify overlap before any hand classification claim.",
+  "branch_ids": [
+    "layout-paleography"
+  ],
+  "difficulty": "advanced",
+  "status": "open",
+  "acceptance_evidence": "Contingency tables, mixed-label handling, constrained permutations and source-limited conclusions.",
+  "tier_anchor": 5,
+  "scoring_note": "Indicative evidence anchor only. Mission gates, family overlap and prior seed baselines govern any AI assessment; tasks reserve neither ownership nor points.",
+  "seed": true,
+  "competitive_points": 0
+}

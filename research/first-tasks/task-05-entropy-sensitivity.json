@@ -1,0 +1,15 @@
+{
+  "id": "task-05-entropy-sensitivity",
+  "title": "Reproduce entropy and space-policy baselines",
+  "summary": "Run the documented offline three-variant loop; compare all controls and investigate a material discrepancy.",
+  "branch_ids": [
+    "statistical-structure"
+  ],
+  "difficulty": "novice",
+  "status": "open",
+  "acceptance_evidence": "A routine matching rerun is service at tier 0; a documented new informative defect can meet tier 2 or a substantive replication tier 10.",
+  "tier_anchor": 0,
+  "scoring_note": "Indicative evidence anchor only. Mission gates, family overlap and prior seed baselines govern any AI assessment; tasks reserve neither ownership nor points.",
+  "seed": true,
+  "competitive_points": 0
+}

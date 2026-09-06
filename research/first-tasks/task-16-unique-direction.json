@@ -1,0 +1,15 @@
+{
+  "id": "task-16-unique-direction",
+  "title": "Suggest a useful distinct research direction",
+  "summary": "State a concrete question, research rationale, bounded prior-work search and plausible first step.",
+  "branch_ids": [
+    "replication-decipherments"
+  ],
+  "difficulty": "novice",
+  "status": "open",
+  "acceptance_evidence": "A distinct useful suggestion can meet tier 2 before a full protocol or experiment; vague or repeated suggestions meet 0.",
+  "tier_anchor": 2,
+  "scoring_note": "Indicative evidence anchor only. Mission gates, family overlap and prior seed baselines govern any AI assessment; tasks reserve neither ownership nor points.",
+  "seed": true,
+  "competitive_points": 0
+}

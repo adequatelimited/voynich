@@ -1,0 +1,15 @@
+{
+  "id": "task-03-foldout-index",
+  "title": "Check foldout and missing-leaf indexing",
+  "summary": "Verify f85/f86 panel conventions and three named missing leaves against custodian and format sources.",
+  "branch_ids": [
+    "layout-paleography"
+  ],
+  "difficulty": "novice",
+  "status": "open",
+  "acceptance_evidence": "Cited corrections separating leaves, sides, panels, loci and scans; no invented canvas IDs.",
+  "tier_anchor": 2,
+  "scoring_note": "Indicative evidence anchor only. Mission gates, family overlap and prior seed baselines govern any AI assessment; tasks reserve neither ownership nor points.",
+  "seed": true,
+  "competitive_points": 0
+}

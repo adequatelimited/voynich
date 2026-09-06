@@ -1,0 +1,10 @@
+schema_version: "1.0"
+github_id: 0
+github_login: "YOUR-HANDLE"
+display_name: "Optional display name"
+bio: "Optional plain-text short biography; no personal details are required."
+links: []
+consent:
+  public_profile: true
+  public_ranking: true
+  story: false

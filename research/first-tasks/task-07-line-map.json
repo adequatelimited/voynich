@@ -1,0 +1,15 @@
+{
+  "id": "task-07-line-map",
+  "title": "Validate a locus-to-physical-line sample",
+  "summary": "Map 30 declared P0/Pt loci to actual image lines when official images are accessible.",
+  "branch_ids": [
+    "layout-paleography"
+  ],
+  "difficulty": "intermediate",
+  "status": "open",
+  "acceptance_evidence": "Rights/canvas provenance, annotation criteria and retained disagreements.",
+  "tier_anchor": 5,
+  "scoring_note": "Indicative evidence anchor only. Mission gates, family overlap and prior seed baselines govern any AI assessment; tasks reserve neither ownership nor points.",
+  "seed": true,
+  "competitive_points": 0
+}

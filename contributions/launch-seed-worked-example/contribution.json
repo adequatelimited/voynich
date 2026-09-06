@@ -1,0 +1,58 @@
+{
+  "schema_version": "1.0",
+  "id": "launch-seed-worked-example",
+  "kind": "research",
+  "title": "Documented local normalization sensitivity run",
+  "summary": "All three bounded registered variants of five descriptive Voynich baseline diagnostics, with controls and complete run records.",
+  "branch_ids": [
+    "statistical-structure"
+  ],
+  "contributors": [
+    {
+      "github_id": 226906489,
+      "github_login": "adequatelimited",
+      "roles": [
+        "Investigation",
+        "Software",
+        "Validation"
+      ]
+    }
+  ],
+  "ai_usage": {
+    "status": "primarily_generated",
+    "tools": [
+      {
+        "provider": "OpenAI",
+        "model_id": "Codex (GPT-6 family)",
+        "model_version": "Exact serving revision not exposed in this workspace",
+        "accessed_at": "2026-09-06",
+        "tasks": [
+          "Source inspection and original annotations",
+          "Research navigation and protocol design",
+          "Python baseline and harness implementation",
+          "Actual local execution and report generation"
+        ],
+        "human_verification": "Requested by the project operator; independent human scientific verification, calibration and reproduction remain pending."
+      }
+    ],
+    "reproducibility_notes": "Numerical runs use Python's standard library and zero model calls. The design/code/prose are AI-assisted and should receive independent review; no model role-play is counted as human validation."
+  },
+  "changes": [
+    {
+      "path": "contributions/launch-seed-worked-example/comparison.json",
+      "improvement": "An inspectable comparison retaining every registered variant and failure."
+    }
+  ],
+  "outcomes": [],
+  "claimed_total_points": 0,
+  "rubric_version": "0.1",
+  "conflicts": [
+    "Author is responsible for these runs; no independent human reproduction is asserted."
+  ],
+  "limitations": [
+    "A routine rerun of designated seed baselines does not create new scoreable value.",
+    "Inspect results and supply a distinct, evidenced family outcome before claiming credit.",
+    "Local protocol freezing is not an independent public preregistration."
+  ],
+  "rights_manifest": "contributions/launch-seed-worked-example/rights.md"
+}

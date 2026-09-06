@@ -1,0 +1,22 @@
+{
+  "id": "statistical-structure",
+  "title": "Statistical structure",
+  "summary": "Which distributional and positional effects differ from declared matched controls?",
+  "question": "Which distributional and positional effects differ from declared matched controls?",
+  "status": "open",
+  "methods": [
+    "method-frequency",
+    "method-entropy",
+    "method-position"
+  ],
+  "dependencies": [
+    "corpus-integrity"
+  ],
+  "depends_on": [
+    "corpus-integrity"
+  ],
+  "next_step": "Reproduce all three normalization variants of the five local baselines.",
+  "first_experiment": "Reproduce all three normalization variants of the five local baselines.",
+  "seed": true,
+  "competitive_points": 0
+}

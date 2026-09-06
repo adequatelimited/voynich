@@ -1,0 +1,27 @@
+{
+  "schema_version": "1.0",
+  "id": "replication-transliteration-counts-v1",
+  "title": "Partial reproduction of published transliteration inventory counts",
+  "status": "partial",
+  "target_source": "https://www.voynich.nu/transcr.html",
+  "target_locator": "Table 9, versions ZL3b and GC2a; inspected 2026-09-06",
+  "target_claim": "ZL has 5,385 loci and 740 paragraphs; GC has 5,367 loci and 775 paragraphs.",
+  "actual_results": {
+    "ZL3b": {"loci": 5385, "paragraph_start_markers": 740, "transcription_page_units": 227},
+    "GC2a": {"loci": 5367, "paragraph_start_markers": 775, "transcription_page_units": 226}
+  },
+  "agreement": "All four targeted locus/paragraph counts match the source table. Page-unit difference is documented separately: GC has no f116v page record.",
+  "method": "Original Python IVTFF parser, source-verified raw hashes, count unique locus/transcriber IDs and explicit paragraph-start markers; no reuse of IVTT code.",
+  "inputs": ["data/manifests/zl3b.json", "data/manifests/gc2a.json"],
+  "execution": "python tools/research/verify_replications.py",
+  "evidence": "research/replications/count-verification.json",
+  "limitations": [
+    "Partial relative to the complete source table: STA1 character counts and all native word-count conventions are not reconstructed.",
+    "This independently written parser was executed by the same AI-assisted launch effort; it is not independent human validation.",
+    "Matching counts do not validate glyph accuracy, image alignment or independence of shared page metadata."
+  ],
+  "scientific_consequence": "Coverage and paragraph-marker invariants can catch accidental truncation and parser regressions before downstream analyses.",
+  "independent_human_reproduction": "pending",
+  "seed": true,
+  "competitive_points": 0
+}

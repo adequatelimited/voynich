@@ -1,0 +1,67 @@
+[
+  {
+    "id": "seed-source-catalog",
+    "scope": "This curated bounded source inventory and rights/provenance records.",
+    "acceptance_test": "Inspect source-level provenance, original annotations and explicit failed retrievals."
+  },
+  {
+    "id": "seed-corpus-parser",
+    "scope": "Pinned ZL/GC corpora, folio/locus metadata and tested EVA uncertainty parser.",
+    "acceptance_test": "Verify source hashes, rights, parser invariants and normalization disclosures."
+  },
+  {
+    "id": "seed-research-navigation",
+    "scope": "Eight initial branches, fourteen method cards, twelve claims and eighteen bounded tasks.",
+    "acceptance_test": "Inspect each record's actionable question, source, limitations and overlapping scope."
+  },
+  {
+    "id": "seed-local-harness",
+    "scope": "CPU-only frozen-protocol prepare/run/compare/bundle workflow with all attempts and controls.",
+    "acceptance_test": "Execute the offline worked example and verify the complete bundle."
+  },
+  {
+    "id": "seed-baseline-integrity",
+    "scope": "Coverage and normalization audit of pinned ZL3b.",
+    "acceptance_test": "Reproduce actual versioned output under all three declared variants and inspect controls and limits."
+  },
+  {
+    "id": "seed-baseline-frequency",
+    "scope": "Encoded frequency and length diagnostics with matched controls.",
+    "acceptance_test": "Reproduce actual versioned output under all three declared variants and inspect controls and limits."
+  },
+  {
+    "id": "seed-baseline-entropy",
+    "scope": "Conditional symbol entropy under explicit encoding/boundary conventions.",
+    "acceptance_test": "Reproduce actual versioned output under all three declared variants and inspect controls and limits."
+  },
+  {
+    "id": "seed-baseline-position",
+    "scope": "P0 locus position/repetition and within-locus shuffle diagnostics.",
+    "acceptance_test": "Reproduce actual versioned output under all three declared variants and inspect controls and limits."
+  },
+  {
+    "id": "seed-baseline-clustering",
+    "scope": "Encoded-symbol clustering with source-specific section/hand/quire confound diagnostics.",
+    "acceptance_test": "Reproduce actual versioned output under all three declared variants and inspect controls and limits."
+  },
+  {
+    "id": "seed-direction-uncertainty-ranking",
+    "scope": "Rank research conclusions by uncertainty sensitivity",
+    "acceptance_test": "Inspect suggestion usefulness, bounded prior-work check, distinction and plausible first step."
+  },
+  {
+    "id": "seed-direction-negative-control-atlas",
+    "scope": "Create a diagnostic failure atlas for candidate mechanisms",
+    "acceptance_test": "Inspect suggestion usefulness, bounded prior-work check, distinction and plausible first step."
+  },
+  {
+    "id": "seed-direction-confound-information",
+    "scope": "Measure what additional annotation would resolve section-hand confounding",
+    "acceptance_test": "Inspect suggestion usefulness, bounded prior-work check, distinction and plausible first step."
+  },
+  {
+    "id": "seed-direction-decipherment-budget",
+    "scope": "Record the flexibility budget of a proposed decipherment",
+    "acceptance_test": "Inspect suggestion usefulness, bounded prior-work check, distinction and plausible first step."
+  }
+]

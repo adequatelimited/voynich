@@ -1,0 +1,14 @@
+{
+  "status": "primarily_generated",
+  "tools": [
+    {
+      "provider": "OpenAI",
+      "model_id": "Codex (GPT-6 family)",
+      "model_version": "Exact serving revision not exposed in this workspace",
+      "accessed_at": "2026-09-06",
+      "tasks": ["Source inspection and original annotations", "Research navigation and protocol design", "Python baseline and harness implementation", "Actual local execution and report generation"],
+      "human_verification": "Requested by the project operator; independent human scientific verification, calibration and reproduction remain pending."
+    }
+  ],
+  "reproducibility_notes": "Numerical runs use Python's standard library and zero model calls. The design/code/prose are AI-assisted and should receive independent review; no model role-play is counted as human validation."
+}

@@ -1,0 +1,24 @@
+{
+  "id": "method-cipher",
+  "title": "Bounded cipher-family testing",
+  "summary": "Specify reversible procedures and test predeclared held-out predictions and failure conditions.",
+  "branch_ids": [
+    "generative-mechanisms"
+  ],
+  "assumptions": [
+    "Keys, substitutions, exceptions and search domain are fully disclosed."
+  ],
+  "controls": [
+    "Known-plaintext recovery; decoy languages; equal search budget and exception penalties."
+  ],
+  "limitations": [
+    "Flexible readings and unconstrained anagrams can fit almost anything; historical plausibility needs separate evidence."
+  ],
+  "sources": [
+    "bowern-gaskell-2022"
+  ],
+  "cost": "CPU-scale initial protocol or small manual evidence audit; declare exact budget before expanding.",
+  "status": "available_method_card",
+  "seed": true,
+  "competitive_points": 0
+}

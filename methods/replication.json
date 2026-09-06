@@ -1,0 +1,24 @@
+{
+  "id": "method-replication",
+  "title": "Explicit replication and falsification",
+  "summary": "Reconstruct a published procedure, inspect input availability and record exact departures.",
+  "branch_ids": [
+    "replication-decipherments"
+  ],
+  "assumptions": [
+    "Target claim, implementation lineage and acceptance criterion are fixed."
+  ],
+  "controls": [
+    "Independent implementation where possible; retained failures; code and data hashes."
+  ],
+  "limitations": [
+    "A same-author rerun is reproducibility checking, not independent human validation."
+  ],
+  "sources": [
+    "gaskell-bowern-2022"
+  ],
+  "cost": "CPU-scale initial protocol or small manual evidence audit; declare exact budget before expanding.",
+  "status": "available_method_card",
+  "seed": true,
+  "competitive_points": 0
+}

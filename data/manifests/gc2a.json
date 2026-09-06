@@ -1,0 +1,15 @@
+{
+  "schema_version": "1.0",
+  "id": "gc2a",
+  "path": "data/corpora/GC2a-n.txt",
+  "origin": "https://voynich.nu/data/GC2a-n.txt",
+  "sha256": "b09570cb6c993bc2d87134d115e60a978650a8a6495483ddbb1f6005a586096f",
+  "byte_length": 314916,
+  "media_type": "text/plain",
+  "source_id": "gc2a",
+  "rights": "CC0-1.0; explicit hosted-transliteration terms https://voynich.nu/roadmap.html, verified 2026-09-06. Original attribution retained.",
+  "redistribution": "permitted",
+  "state": "verified",
+  "attribution": "Glen Claston; IVTFF conversion René Zandbergen",
+  "retention": "Versioned immutable research source; corrections are new versions, not silent normalization."
+}

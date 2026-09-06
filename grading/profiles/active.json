@@ -1,0 +1,21 @@
+{
+  "schema_version": "1.0",
+  "id": "voynich-claude-subscription-0.1",
+  "status": "unconfigured",
+  "provider": "anthropic",
+  "model_id": null,
+  "exposed_version": "unknown",
+  "runtime": "operator-owned supported Claude Code runner; version unconfigured",
+  "rules_version": "0.1",
+  "rubric_version": "0.1",
+  "max_stages": 3,
+  "max_attempts_per_stage": 1,
+  "max_input_bytes": 128000,
+  "max_output_bytes": 24000,
+  "max_duration_ms": 120000,
+  "max_files": 40,
+  "max_file_bytes": 64000,
+  "max_total_bytes": 96000,
+  "settings": {},
+  "tool_access": "none"
+}

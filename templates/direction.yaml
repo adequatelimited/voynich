@@ -1,0 +1,16 @@
+schema_version: "1.0"
+id: "YOUR-ID"
+title: "A specific research question or approach"
+question: "What bounded question might this approach answer?"
+rationale: "Why could the answer change a manuscript research decision?"
+distinctness: "How does it materially differ from known project directions?"
+prior_work_check:
+  scope: "State the bounded repository/source search actually performed."
+  references: []
+  checked_at: "YOUR-ACTUAL-CHECK-DATE"
+first_step: "A plausible small first investigation; no completed protocol is required."
+limitations: ["Known assumptions, risks and what this suggestion does not establish."]
+attribution: ["YOUR-HANDLE and original sources/co-proposers as applicable"]
+branch_ids: ["YOUR-BRANCH-ID"]
+family_id: "family-YOUR-ID"
+status: candidate

@@ -1,0 +1,24 @@
+{
+  "id": "method-generative",
+  "title": "Pseudotext and mechanism controls",
+  "summary": "Fit finite generators and compare several held-out diagnostics, not a selected resemblance.",
+  "branch_ids": [
+    "generative-mechanisms"
+  ],
+  "assumptions": [
+    "Generator family, seed scope and parameter budget are frozen."
+  ],
+  "controls": [
+    "Known-language, character-shuffle, copy/mutate and grammar controls; all attempts retained."
+  ],
+  "limitations": [
+    "Matching measured statistics does not prove this generator produced the manuscript."
+  ],
+  "sources": [
+    "timm-2015"
+  ],
+  "cost": "CPU-scale initial protocol or small manual evidence audit; declare exact budget before expanding.",
+  "status": "available_method_card",
+  "seed": true,
+  "competitive_points": 0
+}

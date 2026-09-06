@@ -1,0 +1,24 @@
+{
+  "id": "method-cluster",
+  "title": "Clustering and topic-model auditing",
+  "summary": "Compare text-derived groups to source-specific labels with permutation diagnostics.",
+  "branch_ids": [
+    "semantic-multimodal"
+  ],
+  "assumptions": [
+    "Features, k, initialization and preprocessing are declared before evaluation."
+  ],
+  "controls": [
+    "Label permutations within quire; equal page-length controls; held-out assignment."
+  ],
+  "limitations": [
+    "Association is not semantics. Scribe, section, quire and page length can confound each other."
+  ],
+  "sources": [
+    "sterneck-polish-bowern-2021"
+  ],
+  "cost": "CPU-scale initial protocol or small manual evidence audit; declare exact budget before expanding.",
+  "status": "available_method_card",
+  "seed": true,
+  "competitive_points": 0
+}

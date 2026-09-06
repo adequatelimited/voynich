@@ -1,0 +1,74 @@
+{
+  "schema_version": "1.0",
+  "id": "baseline-clustering-v1",
+  "title": "Source-label association and confounded clustering baseline",
+  "summary": "Unsupervised encoded-symbol page clusters are compared with ZL section and hand annotations; global and within-quire permutations expose confounding limits.",
+  "status": "executed_descriptive_seed_baseline",
+  "branch_ids": [
+    "layout-paleography"
+  ],
+  "method_ids": [
+    "method-cluster"
+  ],
+  "family_id": "seed-baseline-clustering",
+  "protocol": "protocols/launch-seed-v1.json",
+  "protocol_sha256": "c4588637a4090e3c5f91c426df9c7565798f6ca1fef2d9ea516107dd8ba9ba47",
+  "registration_status": "Descriptive launch baseline, frozen locally after a join-variant engineering smoke run; not preregistered confirmatory science.",
+  "comparison": "experiments/comparisons/launch-seed-v1.json",
+  "outputs": [
+    {
+      "variant": "join",
+      "path": "experiments/runs/launch-seed-v1/2026-09-06T184558-358352Z-9b662cb7/output.json",
+      "json_pointer": "/clustering"
+    },
+    {
+      "variant": "split",
+      "path": "experiments/runs/launch-seed-v1/2026-09-06T184600-812043Z-129fed73/output.json",
+      "json_pointer": "/clustering"
+    },
+    {
+      "variant": "strict",
+      "path": "experiments/runs/launch-seed-v1/2026-09-06T184603-376651Z-72d40bae/output.json",
+      "json_pointer": "/clustering"
+    }
+  ],
+  "report": "experiments/baselines/clustering.md",
+  "inputs": [
+    "data/manifests/zl3b.json",
+    "data/manifests/alice-english.json"
+  ],
+  "controls": [
+    "meaningful English Alice prose",
+    "authored known-plaintext templates",
+    "equal-length symbol shuffle",
+    "authored bounded copy/mutate pseudotext",
+    "type-appropriate positional/label permutations"
+  ],
+  "independent_human_reproduction": "pending",
+  "seed": true,
+  "competitive_points": 0,
+  "limitations": [
+    "These are descriptive instrument baselines, not new language identifications or translation claims.",
+    "Source-specific labels and encoded units remain uncertain; all three registered variants are retained."
+  ],
+  "compact_summaries": [
+    {
+      "variant": "join",
+      "path": "experiments/summaries/join-v1.json",
+      "bytes": 11531,
+      "sha256": "6674256a65df31863fa69dd11f11f10b27edad41c25b6a2b8a403eb8b4091693"
+    },
+    {
+      "variant": "split",
+      "path": "experiments/summaries/split-v1.json",
+      "bytes": 11427,
+      "sha256": "a8a48f4c39c5a09c55fd692affb665088576cf21043767a2a385a45757cbc134"
+    },
+    {
+      "variant": "strict",
+      "path": "experiments/summaries/strict-v1.json",
+      "bytes": 11457,
+      "sha256": "fdbae5e6ed0f4b859a1fd2716942996b20c482e12f1c9366f0628d83f25d7673"
+    }
+  ]
+}

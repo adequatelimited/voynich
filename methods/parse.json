@@ -1,0 +1,24 @@
+{
+  "id": "method-parse",
+  "title": "Uncertainty-preserving corpus parsing",
+  "summary": "Count format violations, alternative readings and token exclusions under explicit policies.",
+  "branch_ids": [
+    "corpus-integrity"
+  ],
+  "assumptions": [
+    "Locus IDs and alphabet metadata are correctly interpreted."
+  ],
+  "controls": [
+    "Synthetic malformed and foldout fixtures; raw byte hashes; alternative-space variants."
+  ],
+  "limitations": [
+    "Cannot decide which reading is correct or identify language units."
+  ],
+  "sources": [
+    "ivtff-2"
+  ],
+  "cost": "CPU-scale initial protocol or small manual evidence audit; declare exact budget before expanding.",
+  "status": "available_method_card",
+  "seed": true,
+  "competitive_points": 0
+}

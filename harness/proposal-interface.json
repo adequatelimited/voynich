@@ -1,0 +1,11 @@
+{
+  "schema_version": "1.0",
+  "purpose": "Agent-neutral local research proposal contract; not an official grade or executable command source.",
+  "required_fields": ["question", "branch_ids", "prior_work", "distinctness", "first_step", "status", "ai_usage", "rights_and_inputs", "limitations"],
+  "candidate_direction": {"status": "candidate", "protocol_required": false, "execution_required": false, "minimum_evidence": "A useful distinct question or approach, research rationale, bounded prior-work check and plausible first step."},
+  "executed_study_additions": ["frozen_protocol", "input_and_code_hashes", "all_variants_and_attempts", "controls", "resource_limits", "outputs", "uncertainty", "selection_rules", "registration_history"],
+  "allowed_baseline_variants": ["join", "split", "strict"],
+  "default_limits": {"runs": 3, "seconds_per_run": 60, "total_seconds": 180, "model_calls": 0},
+  "authority": "Candidate experiments cannot modify the effective rubric, evaluator, source manifest or control definition and present it as an unchanged comparison. Such modifications require separate reviewed artifacts.",
+  "publication": "The participant reviews and explicitly publishes a fork branch/PR; the local harness never publishes or awards itself."
+}

@@ -1,0 +1,20 @@
+{
+  "id": "claim-encipherment-compatible",
+  "title": "Some encipherment remains compatible with word-level metrics",
+  "summary": "Bowern and Gaskell investigate cipher mechanisms whose outputs preserve relevant word-level statistics.",
+  "statement": "Bowern and Gaskell investigate cipher mechanisms whose outputs preserve relevant word-level statistics.",
+  "sources": [
+    "bowern-gaskell-2022"
+  ],
+  "branch_ids": [
+    "generative-mechanisms"
+  ],
+  "status": "bounded_compatibility_claim",
+  "epistemic_status": "bounded_compatibility_claim",
+  "test_or_next_step": "Implement named transforms with known plaintext, equal parameter budgets and held-out tests.",
+  "limitations": [
+    "Source reporting is distinguished from project execution and independent validation; no universal truth or full translation is asserted."
+  ],
+  "seed": true,
+  "competitive_points": 0
+}

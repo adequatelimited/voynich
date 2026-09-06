@@ -1,0 +1,24 @@
+{
+  "id": "method-history",
+  "title": "Historical constraint and provenance testing",
+  "summary": "Trace dated ownership, material and textual claims to inspectable primary evidence.",
+  "branch_ids": [
+    "historical-comparanda"
+  ],
+  "assumptions": [
+    "Dating methods and source chains have explicit uncertainties."
+  ],
+  "controls": [
+    "Competing chronologies; distinguish material date from writing date; named counterevidence."
+  ],
+  "limitations": [
+    "Catalogs can repeat obsolete assertions; stylistic resemblance alone does not establish origin."
+  ],
+  "sources": [
+    "yale-catalog"
+  ],
+  "cost": "CPU-scale initial protocol or small manual evidence audit; declare exact budget before expanding.",
+  "status": "available_method_card",
+  "seed": true,
+  "competitive_points": 0
+}

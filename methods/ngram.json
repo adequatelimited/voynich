@@ -1,0 +1,24 @@
+{
+  "id": "method-ngram",
+  "title": "Held-out sequence models",
+  "summary": "Fit finite n-gram models and report held-out cross-entropy and parameter count.",
+  "branch_ids": [
+    "morphology-segmentation"
+  ],
+  "assumptions": [
+    "Training and test partitions are separated before fitting."
+  ],
+  "controls": [
+    "Equal tuning budgets; simpler baselines; out-of-quire evaluation."
+  ],
+  "limitations": [
+    "Predictive fit does not identify a production mechanism; related pages can leak information."
+  ],
+  "sources": [
+    "reddy-knight-2011"
+  ],
+  "cost": "CPU-scale initial protocol or small manual evidence audit; declare exact budget before expanding.",
+  "status": "available_method_card",
+  "seed": true,
+  "competitive_points": 0
+}

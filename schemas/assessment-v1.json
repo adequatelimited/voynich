@@ -1,0 +1,325 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://voynich.win/schemas/assessment-v1.json",
+  "type": "object",
+  "properties": {
+    "schema_version": {
+      "enum": [
+        "1.0"
+      ]
+    },
+    "admission_action": {
+      "enum": [
+        "accept",
+        "accept_unscored",
+        "needs_revision",
+        "hold",
+        "duplicate_consolidated",
+        "reject"
+      ]
+    },
+    "score_status": {
+      "enum": [
+        "proposed",
+        "unscored",
+        "held",
+        "declined"
+      ]
+    },
+    "conduct_status": {
+      "enum": [
+        "clear",
+        "concern",
+        "restricted_hold"
+      ]
+    },
+    "findings": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "rule_id_or_gate": {
+            "type": "string",
+            "minLength": 1,
+            "maxLength": 100
+          },
+          "severity": {
+            "enum": [
+              "info",
+              "warning",
+              "blocker"
+            ]
+          },
+          "path_or_locus": {
+            "type": "string",
+            "minLength": 1,
+            "maxLength": 1000
+          },
+          "evidence_refs": {
+            "type": "array",
+            "items": {
+              "type": "string",
+              "minLength": 1,
+              "maxLength": 12000
+            },
+            "minItems": 0,
+            "maxItems": 1000
+          },
+          "reason": {
+            "type": "string",
+            "minLength": 1,
+            "maxLength": 12000
+          },
+          "required_change": {
+            "type": "string",
+            "maxLength": 12000
+          },
+          "verification_step": {
+            "type": "string",
+            "maxLength": 12000
+          },
+          "blocks_merge_or_credit": {
+            "type": "boolean"
+          }
+        },
+        "required": [
+          "rule_id_or_gate",
+          "severity",
+          "path_or_locus",
+          "evidence_refs",
+          "reason",
+          "required_change",
+          "verification_step",
+          "blocks_merge_or_credit"
+        ],
+        "additionalProperties": false
+      },
+      "minItems": 0,
+      "maxItems": 1000
+    },
+    "outcomes": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "family_id": {
+            "type": "string",
+            "minLength": 1,
+            "maxLength": 160,
+            "pattern": "^[a-zA-Z0-9][a-zA-Z0-9._:-]*$"
+          },
+          "scope": {
+            "type": "string",
+            "minLength": 1,
+            "maxLength": 12000
+          },
+          "category": {
+            "enum": [
+              "sources_history",
+              "corpus_annotations",
+              "proposals",
+              "tools_methods",
+              "experiments",
+              "replications_audits",
+              "research_enablement",
+              "publication_synthesis"
+            ]
+          },
+          "predecessors": {
+            "type": "array",
+            "items": {
+              "type": "string",
+              "minLength": 1,
+              "maxLength": 12000
+            },
+            "minItems": 0,
+            "maxItems": 1000
+          },
+          "aliases": {
+            "type": "array",
+            "items": {
+              "type": "string",
+              "minLength": 1,
+              "maxLength": 12000
+            },
+            "minItems": 0,
+            "maxItems": 1000
+          },
+          "claimed_tier": {
+            "enum": [
+              0,
+              2,
+              5,
+              10,
+              20
+            ]
+          },
+          "assessed_tier": {
+            "enum": [
+              0,
+              2,
+              5,
+              10,
+              20
+            ]
+          },
+          "gate_evidence": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "properties": {
+                "gate": {
+                  "type": "string",
+                  "minLength": 1,
+                  "maxLength": 100
+                },
+                "status": {
+                  "enum": [
+                    "pass",
+                    "fail",
+                    "unknown"
+                  ]
+                },
+                "evidence_refs": {
+                  "type": "array",
+                  "items": {
+                    "type": "string",
+                    "minLength": 1,
+                    "maxLength": 12000
+                  },
+                  "minItems": 0,
+                  "maxItems": 1000
+                },
+                "reason": {
+                  "type": "string",
+                  "minLength": 1,
+                  "maxLength": 12000
+                }
+              },
+              "required": [
+                "gate",
+                "status",
+                "evidence_refs",
+                "reason"
+              ],
+              "additionalProperties": false
+            },
+            "minItems": 7,
+            "maxItems": 7
+          },
+          "attribution_status": {
+            "enum": [
+              "verified",
+              "partially_withheld",
+              "withheld"
+            ]
+          },
+          "reason": {
+            "type": "string",
+            "minLength": 1,
+            "maxLength": 12000
+          },
+          "validation_evidence": {
+            "type": "object",
+            "properties": {
+              "execution_receipt_refs": {
+                "type": "array",
+                "items": {
+                  "type": "string",
+                  "minLength": 1,
+                  "maxLength": 12000
+                },
+                "minItems": 0,
+                "maxItems": 1000
+              },
+              "external_assessment_receipt_refs": {
+                "type": "array",
+                "items": {
+                  "type": "string",
+                  "minLength": 1,
+                  "maxLength": 12000
+                },
+                "minItems": 0,
+                "maxItems": 1000
+              },
+              "independent_inspection_refs": {
+                "type": "array",
+                "items": {
+                  "type": "string",
+                  "minLength": 1,
+                  "maxLength": 12000
+                },
+                "minItems": 0,
+                "maxItems": 1000
+              }
+            },
+            "required": [
+              "execution_receipt_refs",
+              "external_assessment_receipt_refs",
+              "independent_inspection_refs"
+            ],
+            "additionalProperties": false
+          }
+        },
+        "required": [
+          "family_id",
+          "scope",
+          "category",
+          "predecessors",
+          "aliases",
+          "claimed_tier",
+          "assessed_tier",
+          "gate_evidence",
+          "attribution_status",
+          "reason"
+        ],
+        "additionalProperties": false
+      },
+      "minItems": 0,
+      "maxItems": 1000
+    },
+    "inspected_paths": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "minLength": 1,
+        "maxLength": 12000
+      },
+      "minItems": 0,
+      "maxItems": 1000
+    },
+    "inspection_gaps": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "minLength": 1,
+        "maxLength": 12000
+      },
+      "minItems": 0,
+      "maxItems": 1000
+    },
+    "next_action": {
+      "type": "string",
+      "minLength": 1,
+      "maxLength": 12000
+    },
+    "appeal_route": {
+      "type": "string",
+      "minLength": 1,
+      "maxLength": 12000
+    }
+  },
+  "required": [
+    "schema_version",
+    "admission_action",
+    "score_status",
+    "conduct_status",
+    "findings",
+    "outcomes",
+    "inspected_paths",
+    "inspection_gaps",
+    "next_action",
+    "appeal_route"
+  ],
+  "additionalProperties": false
+}

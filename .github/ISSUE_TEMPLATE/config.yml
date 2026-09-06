@@ -1,0 +1,8 @@
+blank_issues_enabled: false
+contact_links:
+  - name: Research, artifacts, suggestions and appeals
+    url: https://github.com/adequatelimited/voynich/blob/main/CONTRIBUTING.md
+    about: Contributions use a fork and pull request with an inspectable manifest.
+  - name: Security and privacy
+    url: https://github.com/adequatelimited/voynich/blob/main/SECURITY.md
+    about: Do not expose sensitive evidence in public issues or pull requests.

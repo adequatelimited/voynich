@@ -1,0 +1,13 @@
+# Governance and delegated automation
+
+The confirmed founding operator is **adequatelimited**, GitHub numeric ID **226906489**. Backup operator, uninvolved appeal reviewer, qualified reference calibrators and domain advisers are **unfilled launch roles** until named and consented. AI personas cannot fill independent scientific evidence requirements.
+
+All official grades and regrades come from the public AI method. The narrow broker verifies receipts, current state, delegated authority and deterministic arithmetic before feedback, permitted repairs, research merges and decision merges. Contributors and their agents cannot authorize their own awards. Humans govern prospective rules and resolve contested facts, rights, identity, attribution and serious incidents; no operator endpoint accepts replacement points, hidden bonuses or a mutable total.
+
+Routine research needs no standing human approval quorum. Protected paths include `.github/`, `src/`, `scripts/`, `schemas/`, `grading/`, `scoring/`, `governance/`, dependency locks and normative policy/AGENTS files. External trusted checks enforce this independently of candidate CI. A proposed file cannot make its own rules effective or appoint an approver.
+
+Substantive rubric/methodology/profile/trusted-code changes require a governance PR, seven-day public comment window, impact assessment and migration examples, two authorized human governance approvals and a future effective version/date. Proposed grading changes cannot judge/deploy themselves. Emergency protective action may pause/suppress affected services with an incident record and later review, but cannot secretly change earned credit. Migration preserves occupied family history and earning periods.
+
+Appeals identify exact artifacts, criteria and evidence, normally within 30 days; later material evidence may reopen. An uninvolved person resolves contested facts, then the AI regrades from that authenticated finding. Permanent bans, public accusations, serious contested sanctions and disputed account linkage need accountable process. Temporary quarantine/resource protection may be immediate. Shared models, IPs or unpopular hypotheses alone do not establish guilt or identity.
+
+Operators disclose conflicts, recuse where necessary, document appointments/removal and retain custody through authenticated key/delegation rotation. Required role coverage and private reporting routes are launch gates. Target supported-submission feedback is within 30 minutes when budget permits and escalated acknowledgment within three business days; these are service objectives to measure, not verified guarantees.

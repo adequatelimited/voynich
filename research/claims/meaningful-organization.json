@@ -1,0 +1,20 @@
+{
+  "id": "claim-meaningful-organization",
+  "title": "Statistical organization may constrain explanations",
+  "summary": "Montemurro and Zanette interpret measured word organization as supporting a linguistic account.",
+  "statement": "Montemurro and Zanette interpret measured word organization as supporting a linguistic account.",
+  "sources": [
+    "montemurro-zanette-2013"
+  ],
+  "branch_ids": [
+    "statistical-structure"
+  ],
+  "status": "competing_interpretation",
+  "epistemic_status": "competing_interpretation",
+  "test_or_next_step": "Test the same diagnostics against predeclared structured pseudotext families.",
+  "limitations": [
+    "Source reporting is distinguished from project execution and independent validation; no universal truth or full translation is asserted."
+  ],
+  "seed": true,
+  "competitive_points": 0
+}

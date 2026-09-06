@@ -1,0 +1,68 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://voynich.win/schemas/profile-v1.json",
+  "type": "object",
+  "properties": {
+    "schema_version": {
+      "enum": [
+        "1.0"
+      ]
+    },
+    "github_id": {
+      "type": "integer",
+      "minimum": 1,
+      "maximum": 9007199254740991
+    },
+    "github_login": {
+      "type": "string",
+      "minLength": 1,
+      "maxLength": 100
+    },
+    "display_name": {
+      "type": "string",
+      "minLength": 1,
+      "maxLength": 100
+    },
+    "bio": {
+      "type": "string",
+      "maxLength": 1200
+    },
+    "links": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "minLength": 1,
+        "maxLength": 1000
+      },
+      "minItems": 0,
+      "maxItems": 5
+    },
+    "consent": {
+      "type": "object",
+      "properties": {
+        "public_profile": {
+          "type": "boolean"
+        },
+        "public_ranking": {
+          "type": "boolean"
+        },
+        "story": {
+          "type": "boolean"
+        }
+      },
+      "required": [
+        "public_profile",
+        "public_ranking",
+        "story"
+      ],
+      "additionalProperties": false
+    }
+  },
+  "required": [
+    "schema_version",
+    "github_id",
+    "github_login",
+    "consent"
+  ],
+  "additionalProperties": false
+}

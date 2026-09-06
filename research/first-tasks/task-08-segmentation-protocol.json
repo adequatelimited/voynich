@@ -1,0 +1,15 @@
+{
+  "id": "task-08-segmentation-protocol",
+  "title": "Propose a bounded segmentation comparison",
+  "summary": "Specify two competing boundary models and a disjoint held-out folio partition.",
+  "branch_ids": [
+    "morphology-segmentation"
+  ],
+  "difficulty": "intermediate",
+  "status": "open",
+  "acceptance_evidence": "Executable protocol, complexity penalty, nulls, failure criteria and finite search scope.",
+  "tier_anchor": 5,
+  "scoring_note": "Indicative evidence anchor only. Mission gates, family overlap and prior seed baselines govern any AI assessment; tasks reserve neither ownership nor points.",
+  "seed": true,
+  "competitive_points": 0
+}

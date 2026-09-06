@@ -1,0 +1,15 @@
+{
+  "id": "task-02-align-readings",
+  "title": "Align a bounded ZL/GC sample",
+  "summary": "Choose 20 predeclared loci across two illustration categories; document alphabet conversion and uncertain matches.",
+  "branch_ids": [
+    "corpus-integrity"
+  ],
+  "difficulty": "intermediate",
+  "status": "open",
+  "acceptance_evidence": "Alignment table, excluded loci, reversible mapping, checks and uncertainty report.",
+  "tier_anchor": 5,
+  "scoring_note": "Indicative evidence anchor only. Mission gates, family overlap and prior seed baselines govern any AI assessment; tasks reserve neither ownership nor points.",
+  "seed": true,
+  "competitive_points": 0
+}

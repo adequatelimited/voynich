@@ -1,0 +1,24 @@
+{
+  "id": "method-agreement",
+  "title": "Independent annotation and reading agreement",
+  "summary": "Align named loci and report agreement with uncertainty and adjudication history.",
+  "branch_ids": [
+    "corpus-integrity"
+  ],
+  "assumptions": [
+    "Annotators follow a shared protocol; reading lineages are recorded."
+  ],
+  "controls": [
+    "Blinded duplicate annotation; chance and prevalence checks; disagreements retained."
+  ],
+  "limitations": [
+    "Agreement is not accuracy; converted copies of one reading are not independent witnesses."
+  ],
+  "sources": [
+    "davis-2022"
+  ],
+  "cost": "CPU-scale initial protocol or small manual evidence audit; declare exact budget before expanding.",
+  "status": "available_method_card",
+  "seed": true,
+  "competitive_points": 0
+}

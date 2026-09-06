@@ -1,0 +1,24 @@
+{
+  "id": "method-stratification",
+  "title": "Codicological stratification",
+  "summary": "Partition effects by source-specific quire, layout, section and hand labels.",
+  "branch_ids": [
+    "layout-paleography"
+  ],
+  "assumptions": [
+    "Label provenance and unit boundaries are known."
+  ],
+  "controls": [
+    "Within-quire permutations; leave-one-quire-out checks; mixed labels excluded or modeled."
+  ],
+  "limitations": [
+    "Labels and neighboring foldouts are confounded; a partition does not establish a scribe."
+  ],
+  "sources": [
+    "yale-catalog"
+  ],
+  "cost": "CPU-scale initial protocol or small manual evidence audit; declare exact budget before expanding.",
+  "status": "available_method_card",
+  "seed": true,
+  "competitive_points": 0
+}

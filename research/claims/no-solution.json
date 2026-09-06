@@ -1,0 +1,20 @@
+{
+  "id": "claim-no-solution",
+  "title": "A decipherment must make constrained unseen predictions",
+  "summary": "A proposed solution needs a specified procedure and held-out evidence beyond matching a few selected words or illustrations.",
+  "statement": "A proposed solution needs a specified procedure and held-out evidence beyond matching a few selected words or illustrations.",
+  "sources": [
+    "reddy-knight-2011"
+  ],
+  "branch_ids": [
+    "replication-decipherments"
+  ],
+  "status": "project_methodological_requirement",
+  "epistemic_status": "project_methodological_requirement",
+  "test_or_next_step": "Use research/solution-protocol.md; keep failures and exception budgets visible.",
+  "limitations": [
+    "Source reporting is distinguished from project execution and independent validation; no universal truth or full translation is asserted."
+  ],
+  "seed": true,
+  "competitive_points": 0
+}

@@ -1,0 +1,17 @@
+{
+  "id": "corpus-integrity",
+  "title": "Corpus integrity and uncertainty",
+  "summary": "Which uncertainty and segmentation choices change downstream conclusions?",
+  "question": "Which uncertainty and segmentation choices change downstream conclusions?",
+  "status": "open",
+  "methods": [
+    "method-parse",
+    "method-agreement"
+  ],
+  "dependencies": [],
+  "depends_on": [],
+  "next_step": "Align a documented sample of ZL and GC loci before calculating disagreement.",
+  "first_experiment": "Align a documented sample of ZL and GC loci before calculating disagreement.",
+  "seed": true,
+  "competitive_points": 0
+}

@@ -1,0 +1,3 @@
+Inspect the exact input, code, environment, protocol and result hashes. Confirm every registered attempt is retained and that outputs are actual rather than fixture-derived. Re-execute only the declared trusted CPU workflow within its resource budget; contributed executable code needs the separate isolated execution process. Compare only compatible protocols and distinguish exact reproduction, partial reconstruction and blocked inputs.
+
+Report the commands you actually ran, failures, deviations, output comparison and the limits of your independence. A second AI role or the same operator rerunning a command is not an independent person. Do not assert source rights, external validation, consent, publication or official scoring authority you have not verified.

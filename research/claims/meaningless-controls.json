@@ -1,0 +1,20 @@
+{
+  "id": "claim-meaningless-controls",
+  "title": "Human meaningless text can share selected statistics",
+  "summary": "Gaskell and Bowern compare Voynich metrics with human-produced meaningless samples.",
+  "statement": "Gaskell and Bowern compare Voynich metrics with human-produced meaningless samples.",
+  "sources": [
+    "gaskell-bowern-2022"
+  ],
+  "branch_ids": [
+    "generative-mechanisms"
+  ],
+  "status": "competing_interpretation",
+  "epistemic_status": "competing_interpretation",
+  "test_or_next_step": "Acquire original sample-level outputs and examine sampling and feature-selection limits.",
+  "limitations": [
+    "Source reporting is distinguished from project execution and independent validation; no universal truth or full translation is asserted."
+  ],
+  "seed": true,
+  "competitive_points": 0
+}

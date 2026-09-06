@@ -1,0 +1,15 @@
+{
+  "id": "task-04-parser-audit",
+  "title": "Audit uncertainty parser edge cases",
+  "summary": "Independently inspect literal IVTFF uncertainty, tags and drawing interruptions against the specification.",
+  "branch_ids": [
+    "corpus-integrity"
+  ],
+  "difficulty": "intermediate",
+  "status": "open",
+  "acceptance_evidence": "Demonstrated behavior defect and useful fix, or substantive audit with retained checks.",
+  "tier_anchor": 5,
+  "scoring_note": "Indicative evidence anchor only. Mission gates, family overlap and prior seed baselines govern any AI assessment; tasks reserve neither ownership nor points.",
+  "seed": true,
+  "competitive_points": 0
+}

@@ -1,0 +1,24 @@
+{
+  "id": "method-entropy",
+  "title": "Conditional entropy diagnostics",
+  "summary": "Estimate empirical next-symbol uncertainty under declared token/boundary conventions.",
+  "branch_ids": [
+    "statistical-structure"
+  ],
+  "assumptions": [
+    "Encoded units, sample boundaries and estimator are fixed."
+  ],
+  "controls": [
+    "Equal symbol count; boundary and glyph-composition variants; known plaintext and shuffled nulls."
+  ],
+  "limitations": [
+    "Finite-sample bias, script differences and genre remain; low entropy is not a decipherment."
+  ],
+  "sources": [
+    "lindemann-bowern-2020"
+  ],
+  "cost": "CPU-scale initial protocol or small manual evidence audit; declare exact budget before expanding.",
+  "status": "available_method_card",
+  "seed": true,
+  "competitive_points": 0
+}

@@ -1,0 +1,13 @@
+schema_version: "1.0"
+status: unconfigured
+primary_operator:
+  github_id: 226906489
+  github_login: adequatelimited
+backup_operator: null
+appeal_reviewer: null
+governance_approvers: []
+github_app_id: null
+installation_id: null
+receipt_verification_keys: []
+official_grading_enabled: false
+note: "Bootstrap authorization must be verified outside candidate PR control. This draft grants no runtime authority."

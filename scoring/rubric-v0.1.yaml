@@ -1,0 +1,93 @@
+{
+  "schema_version": "1.0",
+  "version": "0.1",
+  "status": "provisional_uncalibrated",
+  "scoring_unit": "independently useful marginal outcome family",
+  "categories": [
+    "sources_history",
+    "corpus_annotations",
+    "proposals",
+    "tools_methods",
+    "experiments",
+    "replications_audits",
+    "research_enablement",
+    "publication_synthesis"
+  ],
+  "gates": [
+    {
+      "id": "G1",
+      "requirement": "Mission-linked research question, direction or necessary shared capability."
+    },
+    {
+      "id": "G2",
+      "requirement": "Traceable inputs and acceptable rights/provenance."
+    },
+    {
+      "id": "G3",
+      "requirement": "Inspectable type-appropriate evidence; actual execution where claimed."
+    },
+    {
+      "id": "G4",
+      "requirement": "Explicit scope, assumptions, uncertainty, contrary evidence and limits."
+    },
+    {
+      "id": "G5",
+      "requirement": "Required human attribution and honest AI disclosure."
+    },
+    {
+      "id": "G6",
+      "requirement": "Incremental value after related-work, family overlap and seed review."
+    },
+    {
+      "id": "G7",
+      "requirement": "No fabricated evidence, concealed material selection or unsupported factual claims."
+    }
+  ],
+  "tiers": [
+    {
+      "points": 0,
+      "anchor": "Acknowledged activity, duplicate, unsupported or service-only work; useful zero-point material may still merge."
+    },
+    {
+      "points": 2,
+      "anchor": "Bounded verified improvement or distinct useful direction with rationale, bounded prior-work check and plausible first step; no full protocol or execution required for a direction."
+    },
+    {
+      "points": 5,
+      "anchor": "Completed coherent reusable source synthesis, corpus batch, usable protocol/tool or informative pilot."
+    },
+    {
+      "points": 10,
+      "anchor": "Controlled reproducible discriminating result, substantive independent replication or material corpus/method improvement with appropriate baselines and independent inspection/execution."
+    },
+    {
+      "points": 20,
+      "anchor": "Independently validated major constraint/capability, with genuine nonconflicted external domain assessment."
+    }
+  ],
+  "arithmetic": {
+    "units_per_point": 10000,
+    "attribution_basis_points": 10000,
+    "progression": "max(0, assessed_tier - current_credit_high_water_tier)",
+    "family_maximum": 20,
+    "seed_allocation": 0,
+    "corrections_reopen_consumed_credit": false
+  },
+  "direction_progression": [
+    {
+      "cumulative": 2,
+      "increment": 2
+    },
+    {
+      "cumulative": 5,
+      "increment": 3
+    },
+    {
+      "cumulative": 10,
+      "increment": 5
+    }
+  ],
+  "normative_handbook": "SCORING.md",
+  "methodology": "GRADING.md",
+  "note": "All atlas routes and overlap/successor/attribution exceptions are normative in SCORING.md. Numerical anchors remain provisional until actual calibration."
+}

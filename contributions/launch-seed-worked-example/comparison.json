@@ -1,0 +1,46 @@
+{
+  "schema_version": "1.0",
+  "protocol_sha256": "c4588637a4090e3c5f91c426df9c7565798f6ca1fef2d9ea516107dd8ba9ba47",
+  "created_at": "2026-09-06T18:46:06.510239Z",
+  "status": "complete",
+  "all_run_ids": [
+    "2026-09-06T184558-358352Z-9b662cb7",
+    "2026-09-06T184600-812043Z-129fed73",
+    "2026-09-06T184603-376651Z-72d40bae"
+  ],
+  "selection_rule": "Publish all three predeclared variants and all failed attempts; no best-run selection",
+  "summaries": [
+    {
+      "variant": "join",
+      "state": "completed",
+      "retained_paragraph_tokens": 32514,
+      "mean_token_length": 5.370025219905272,
+      "conditional_entropy": 2.145728567909814,
+      "section_nmi": 0.26445662287971894,
+      "source_specific_hand_nmi": 0.4152000891441188,
+      "first_minus_nonfirst_length": 0.5603518112355754
+    },
+    {
+      "variant": "split",
+      "state": "completed",
+      "retained_paragraph_tokens": 34977,
+      "mean_token_length": 4.992823855676588,
+      "conditional_entropy": 2.1225343793221465,
+      "section_nmi": 0.20170684339718037,
+      "source_specific_hand_nmi": 0.3192876280497548,
+      "first_minus_nonfirst_length": 0.5252569294178251
+    },
+    {
+      "variant": "strict",
+      "state": "completed",
+      "retained_paragraph_tokens": 29791,
+      "mean_token_length": 5.204491289315565,
+      "conditional_entropy": 2.078744640527475,
+      "section_nmi": 0.31676501713816557,
+      "source_specific_hand_nmi": 0.38595616857474574,
+      "first_minus_nonfirst_length": 0.45304347024372404
+    }
+  ],
+  "interpretation": "Descriptive normalization sensitivity only; no metric is a translation accuracy or contribution score.",
+  "registration": "local_frozen_before_this_run; not an independent timestamped preregistration"
+}

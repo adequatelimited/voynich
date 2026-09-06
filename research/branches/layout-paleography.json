@@ -1,0 +1,21 @@
+{
+  "id": "layout-paleography",
+  "title": "Codicology, paleography and layout",
+  "summary": "Which text differences survive controls for page layout, quire and source-specific hand labels?",
+  "question": "Which text differences survive controls for page layout, quire and source-specific hand labels?",
+  "status": "open",
+  "methods": [
+    "method-stratification",
+    "method-agreement"
+  ],
+  "dependencies": [
+    "corpus-integrity"
+  ],
+  "depends_on": [
+    "corpus-integrity"
+  ],
+  "next_step": "Verify a blinded set of page/hand labels against cited loci and preserve disagreement.",
+  "first_experiment": "Verify a blinded set of page/hand labels against cited loci and preserve disagreement.",
+  "seed": true,
+  "competitive_points": 0
+}

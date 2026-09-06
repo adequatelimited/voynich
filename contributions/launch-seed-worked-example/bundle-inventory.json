@@ -1,0 +1,22 @@
+{
+  "files": {
+    "contributions/launch-seed-worked-example/comparison.json": "67fb8a2ed53f4f8310b2fba39405bb26119e5f1b169348d163f0e09b8d699310",
+    "contributions/launch-seed-worked-example/contribution.json": "c5d218416252a331e026b072b1a4da084b747c6054271f7bfcbf03cb50e875b7",
+    "contributions/launch-seed-worked-example/protocol.json": "0b69c41025709656705c379a445c4f3cf973d515636e287bdef062571a68de61",
+    "contributions/launch-seed-worked-example/rights.md": "239c94e9085d791ddfc8be1a7409ae7bc3986e2b69595272834cd7550ead8528",
+    "contributions/launch-seed-worked-example/runs/2026-09-06T184558-358352Z-9b662cb7/output.json": "8ed6c03ef4659bed1c44c14fc6a2d3569840692a909398aea1e297a3d5224ff1",
+    "contributions/launch-seed-worked-example/runs/2026-09-06T184558-358352Z-9b662cb7/run.json": "69a698ffe12b49bc65e78dd96526ab082bcbdd5d28f09266c454ddce68ff1605",
+    "contributions/launch-seed-worked-example/runs/2026-09-06T184558-358352Z-9b662cb7/stderr.txt": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "contributions/launch-seed-worked-example/runs/2026-09-06T184558-358352Z-9b662cb7/stdout.txt": "65b581e02f80808df03635bc2ec939e07995ec9a8c0e1b5587ad7d53e5432b4d",
+    "contributions/launch-seed-worked-example/runs/2026-09-06T184600-812043Z-129fed73/output.json": "adc2e97bfddd4ddaeed1db7420c48b52f077de3d0bf200001885b961775dacd3",
+    "contributions/launch-seed-worked-example/runs/2026-09-06T184600-812043Z-129fed73/run.json": "0d4f0f41b2bfb17ddc18c52579aafa632ec1577fe2fbec44f7af426111cb2aed",
+    "contributions/launch-seed-worked-example/runs/2026-09-06T184600-812043Z-129fed73/stderr.txt": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "contributions/launch-seed-worked-example/runs/2026-09-06T184600-812043Z-129fed73/stdout.txt": "c417fafa0d060dc85d03fe2fbb65c7400a88e1cbb791ae8434a9f29be9ae4c72",
+    "contributions/launch-seed-worked-example/runs/2026-09-06T184603-376651Z-72d40bae/output.json": "5223dd8fd973073db863141b24c74fa5e5b4ced9edc398c9a102e8268433ca3e",
+    "contributions/launch-seed-worked-example/runs/2026-09-06T184603-376651Z-72d40bae/run.json": "3b53c450cbff09dbad830957812e40860521061b2905dad11a93088423ccbd4e",
+    "contributions/launch-seed-worked-example/runs/2026-09-06T184603-376651Z-72d40bae/stderr.txt": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "contributions/launch-seed-worked-example/runs/2026-09-06T184603-376651Z-72d40bae/stdout.txt": "b821f0fabcae92a0578e13bfeac26426d5a093f16e1ecaf736baf0a13de5e1a9"
+  },
+  "source_protocol_sha256": "c4588637a4090e3c5f91c426df9c7565798f6ca1fef2d9ea516107dd8ba9ba47",
+  "includes_all_registered_attempts": true
+}

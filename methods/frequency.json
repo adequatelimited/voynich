@@ -1,0 +1,24 @@
+{
+  "id": "method-frequency",
+  "title": "Frequency and encoded token lengths",
+  "summary": "Report counts, rank distributions, hapax types and token-length histograms.",
+  "branch_ids": [
+    "statistical-structure"
+  ],
+  "assumptions": [
+    "Token/character conventions are declared and stable."
+  ],
+  "controls": [
+    "Matched text lengths, shuffled characters and meaningful prose; sensitivity to spaces."
+  ],
+  "limitations": [
+    "Zipf-like curves and length fits cannot identify meaning or a specific language."
+  ],
+  "sources": [
+    "reddy-knight-2011"
+  ],
+  "cost": "CPU-scale initial protocol or small manual evidence audit; declare exact budget before expanding.",
+  "status": "available_method_card",
+  "seed": true,
+  "competitive_points": 0
+}

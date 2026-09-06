@@ -1,0 +1,10 @@
+cff-version: 1.2.0
+message: "Cite this repository release and the original research sources you use."
+type: software
+title: "voynich.win: open evidence and qualitative research credit"
+version: 0.1.0
+url: "https://voynich.win"
+repository-code: "https://github.com/adequatelimited/voynich"
+authors:
+  - name: "voynich.win contributors"
+license: Apache-2.0

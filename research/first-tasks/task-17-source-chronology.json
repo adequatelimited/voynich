@@ -1,0 +1,15 @@
+{
+  "id": "task-17-source-chronology",
+  "title": "Check one historical attribution chain",
+  "summary": "Distinguish a legacy catalog assertion from later primary evidence for one ownership/dating claim.",
+  "branch_ids": [
+    "historical-comparanda"
+  ],
+  "difficulty": "novice",
+  "status": "open",
+  "acceptance_evidence": "Traceable chain, dated sources, uncertainty and concrete consequence for research choices.",
+  "tier_anchor": 2,
+  "scoring_note": "Indicative evidence anchor only. Mission gates, family overlap and prior seed baselines govern any AI assessment; tasks reserve neither ownership nor points.",
+  "seed": true,
+  "competitive_points": 0
+}

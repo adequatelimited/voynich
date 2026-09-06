@@ -1,0 +1,23 @@
+{
+  "id": "replication-decipherments",
+  "title": "Replication and candidate decipherments",
+  "summary": "Can a fully specified procedure make predeclared predictions on unseen manuscript material?",
+  "question": "Can a fully specified procedure make predeclared predictions on unseen manuscript material?",
+  "status": "open",
+  "methods": [
+    "method-replication",
+    "method-cipher"
+  ],
+  "dependencies": [
+    "corpus-integrity",
+    "statistical-structure"
+  ],
+  "depends_on": [
+    "corpus-integrity",
+    "statistical-structure"
+  ],
+  "next_step": "Select one published procedure and produce a step-by-step evidence and failure checklist.",
+  "first_experiment": "Select one published procedure and produce a step-by-step evidence and failure checklist.",
+  "seed": true,
+  "competitive_points": 0
+}

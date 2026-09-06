@@ -1,0 +1,29 @@
+{
+  "schema_version": "1.0",
+  "id": "direction-uncertainty-ranking",
+  "title": "Rank research conclusions by uncertainty sensitivity",
+  "question": "Which claimed effects change most when uncertain reading and spacing policies are varied?",
+  "rationale": "A sensitivity ranking could prioritize the image loci whose reinspection would most improve confidence.",
+  "distinctness": "Combines available alternative-reading annotations with effects already present in the baseline, rather than simply requesting another transcription.",
+  "prior_work_check": {
+    "scope": "Bounded launch-source catalog and current seed directions inspected; this does not establish world-first novelty.",
+    "references": [
+      "zl3b",
+      "lindemann-bowern-2020"
+    ],
+    "checked_at": "2026-09-06"
+  },
+  "first_step": "Calculate effect ranges for the three frozen baseline variants and identify the responsible locus set.",
+  "limitations": [
+    "Candidate suggestion only; detailed protocol and execution are future work.",
+    "Designated seed: zero competitive allocations; evidence-tier baseline awaits official assessment."
+  ],
+  "attribution": [
+    "voynich.win launch curation, AI-assisted by OpenAI Codex; exposed precise model version not recorded"
+  ],
+  "branch_ids": [
+    "corpus-integrity"
+  ],
+  "family_id": "seed-direction-uncertainty-ranking",
+  "status": "candidate"
+}

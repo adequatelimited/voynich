@@ -1,0 +1,42 @@
+{
+  "schema_version": "1.0",
+  "id": "clean-env-reproduction-v1",
+  "created_at": "2026-09-06T19:01:31.439696Z",
+  "registration_status": "local_frozen_before_this_run; not an independent timestamped preregistration",
+  "branch_id": "statistical-structure",
+  "task_id": "task-05-entropy-sensitivity",
+  "claim_id": "claim-entropy-structure",
+  "question": "How do declared uncertainty-space policies change five descriptive ZL3b baseline diagnostics?",
+  "analysis": "five_baseline_suite",
+  "variants": [
+    "join",
+    "split",
+    "strict"
+  ],
+  "seed": 408,
+  "selection_rule": "Publish all three predeclared variants and all failed attempts; no best-run selection",
+  "inputs": {
+    "data/corpora/ZL3b-n.txt": "bf5b6d4ac1e3a51b1847a9c388318d609020441ccd56984c901c32b09beccafc",
+    "data/corpora/pg11.txt": "01b38ea4c710a84bc18d0bd41271a5a1a92b94e97b2812f4dece97d4a694725e"
+  },
+  "software": {
+    "tools/research/engine.py": "2c7a7c1f4a10a39d75e6486ff3051c0cd8962facb89bd828b23f7fb7d5a13326",
+    "tools/research/research.py": "982c172f6e2ddbcf995c57ee85782c8c1328a3f3a381e8f20c0c4059e9c386c0"
+  },
+  "limits": {
+    "max_runs": 3,
+    "max_wall_seconds_per_run": 60,
+    "max_total_wall_seconds": 180,
+    "max_input_bytes": 2000000,
+    "max_output_bytes": 2000000,
+    "model_calls": 0,
+    "paid_inference": false
+  },
+  "acceptance": "Inputs and engine hashes unchanged, all five outputs generated, controls and every registered variant included; scientific interpretation remains qualitative and reviewable",
+  "ai_usage": {
+    "status": "none",
+    "tools": [],
+    "reproducibility_notes": "This execution uses deterministic Python only. Disclose AI assistance to protocol/code/report authorship separately."
+  },
+  "protocol_sha256": "4a7abe21e3b66ad9c6a381fb3b44341598db2c1c436452c67d4c26df16eac7fd"
+}

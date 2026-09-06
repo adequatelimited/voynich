@@ -1,0 +1,20 @@
+{
+  "id": "claim-entropy-structure",
+  "title": "Voynich conditional character predictability is unusual in published comparisons",
+  "summary": "Lindemann and Bowern report low conditional entropy across their encodings and corpus comparisons.",
+  "statement": "Lindemann and Bowern report low conditional entropy across their encodings and corpus comparisons.",
+  "sources": [
+    "lindemann-bowern-2020"
+  ],
+  "branch_ids": [
+    "statistical-structure"
+  ],
+  "status": "reported_not_independently_replicated_here",
+  "epistemic_status": "reported_not_independently_replicated_here",
+  "test_or_next_step": "Recover original corpora and estimator conventions; current baseline is a scoped partial reconstruction.",
+  "limitations": [
+    "Source reporting is distinguished from project execution and independent validation; no universal truth or full translation is asserted."
+  ],
+  "seed": true,
+  "competitive_points": 0
+}

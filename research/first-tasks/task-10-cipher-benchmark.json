@@ -1,0 +1,15 @@
+{
+  "id": "task-10-cipher-benchmark",
+  "title": "Build a known-plaintext cipher diagnostic",
+  "summary": "Choose a historically documented reversible transform and verify recovery on authored plaintext.",
+  "branch_ids": [
+    "generative-mechanisms"
+  ],
+  "difficulty": "intermediate",
+  "status": "open",
+  "acceptance_evidence": "Source, key/exception budget, decoys, correctness tests and worked output.",
+  "tier_anchor": 5,
+  "scoring_note": "Indicative evidence anchor only. Mission gates, family overlap and prior seed baselines govern any AI assessment; tasks reserve neither ownership nor points.",
+  "seed": true,
+  "competitive_points": 0
+}

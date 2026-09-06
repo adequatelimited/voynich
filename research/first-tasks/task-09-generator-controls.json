@@ -1,0 +1,15 @@
+{
+  "id": "task-09-generator-controls",
+  "title": "Test one finite pseudotext family",
+  "summary": "Freeze a generator, parameter grid and joint metrics before testing held-out pages.",
+  "branch_ids": [
+    "generative-mechanisms"
+  ],
+  "difficulty": "advanced",
+  "status": "open",
+  "acceptance_evidence": "All parameter runs, known plaintext recovery, uncertainty and explicit excluded overlap with seed null.",
+  "tier_anchor": 10,
+  "scoring_note": "Indicative evidence anchor only. Mission gates, family overlap and prior seed baselines govern any AI assessment; tasks reserve neither ownership nor points.",
+  "seed": true,
+  "competitive_points": 0
+}

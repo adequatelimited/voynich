@@ -1,0 +1,15 @@
+{
+  "id": "task-18-instrument-accessibility",
+  "title": "Improve access to a research instrument",
+  "summary": "Identify a demonstrated accessibility or reproducibility barrier in the worked analysis flow and repair it.",
+  "branch_ids": [
+    "statistical-structure"
+  ],
+  "difficulty": "intermediate",
+  "status": "open",
+  "acceptance_evidence": "Before/after evidence and a usable example; generic cosmetic activity remains tier 0.",
+  "tier_anchor": 5,
+  "scoring_note": "Indicative evidence anchor only. Mission gates, family overlap and prior seed baselines govern any AI assessment; tasks reserve neither ownership nor points.",
+  "seed": true,
+  "competitive_points": 0
+}

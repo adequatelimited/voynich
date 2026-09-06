@@ -1,0 +1,23 @@
+{
+  "id": "semantic-multimodal",
+  "title": "Semantic and multimodal constraints",
+  "summary": "Do text-image associations survive blinded annotation and shuffled associations?",
+  "question": "Do text-image associations survive blinded annotation and shuffled associations?",
+  "status": "open",
+  "methods": [
+    "method-cluster",
+    "method-multimodal"
+  ],
+  "dependencies": [
+    "layout-paleography",
+    "statistical-structure"
+  ],
+  "depends_on": [
+    "layout-paleography",
+    "statistical-structure"
+  ],
+  "next_step": "Construct a small consented, rights-cleared annotation panel with competing labels.",
+  "first_experiment": "Construct a small consented, rights-cleared annotation panel with competing labels.",
+  "seed": true,
+  "competitive_points": 0
+}

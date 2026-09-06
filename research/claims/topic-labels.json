@@ -1,0 +1,20 @@
+{
+  "id": "claim-topic-labels",
+  "title": "Text-derived clusters can associate with source labels",
+  "summary": "Sterneck and colleagues report topic groups associated with illustration and scribal categories.",
+  "statement": "Sterneck and colleagues report topic groups associated with illustration and scribal categories.",
+  "sources": [
+    "sterneck-polish-bowern-2021"
+  ],
+  "branch_ids": [
+    "semantic-multimodal"
+  ],
+  "status": "reported_not_independently_replicated_here",
+  "epistemic_status": "reported_not_independently_replicated_here",
+  "test_or_next_step": "Replicate the models and test label permutations within quire/hand; association alone does not assign meanings.",
+  "limitations": [
+    "Source reporting is distinguished from project execution and independent validation; no universal truth or full translation is asserted."
+  ],
+  "seed": true,
+  "competitive_points": 0
+}

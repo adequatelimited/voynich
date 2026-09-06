@@ -1,0 +1,15 @@
+{
+  "id": "task-14-replicate-entropy",
+  "title": "Extend the partial entropy replication",
+  "summary": "Recover the paper's declared encodings and comparison subset; log departures from the original setup.",
+  "branch_ids": [
+    "replication-decipherments"
+  ],
+  "difficulty": "advanced",
+  "status": "open",
+  "acceptance_evidence": "Actual independent implementation/data inspection and complete or informative partial report.",
+  "tier_anchor": 10,
+  "scoring_note": "Indicative evidence anchor only. Mission gates, family overlap and prior seed baselines govern any AI assessment; tasks reserve neither ownership nor points.",
+  "seed": true,
+  "competitive_points": 0
+}

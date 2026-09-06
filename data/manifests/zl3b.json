@@ -1,0 +1,15 @@
+{
+  "schema_version": "1.0",
+  "id": "zl3b",
+  "path": "data/corpora/ZL3b-n.txt",
+  "origin": "https://voynich.nu/data/ZL3b-n.txt",
+  "sha256": "bf5b6d4ac1e3a51b1847a9c388318d609020441ccd56984c901c32b09beccafc",
+  "byte_length": 411671,
+  "media_type": "text/plain",
+  "source_id": "zl3b",
+  "rights": "CC0-1.0; explicit hosted-transliteration terms https://voynich.nu/roadmap.html, verified 2026-09-06. Original attribution retained.",
+  "redistribution": "permitted",
+  "state": "verified",
+  "attribution": "René Zandbergen; Gabriel Landini",
+  "retention": "Versioned immutable research source; corrections are new versions, not silent normalization."
+}

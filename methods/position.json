@@ -1,0 +1,24 @@
+{
+  "id": "method-position",
+  "title": "Line position and local repetition",
+  "summary": "Measure first/last-token length and repeated adjacent-token rates by locus type.",
+  "branch_ids": [
+    "statistical-structure"
+  ],
+  "assumptions": [
+    "Locus-to-line mapping and exclusions are explicit."
+  ],
+  "controls": [
+    "Within-line shuffles preserving token multiset; uncertainty sensitivity; source checks."
+  ],
+  "limitations": [
+    "Discarded uncertain words can create apparent adjacency; layout conventions can mimic grammar."
+  ],
+  "sources": [
+    "reddy-knight-2011"
+  ],
+  "cost": "CPU-scale initial protocol or small manual evidence audit; declare exact budget before expanding.",
+  "status": "available_method_card",
+  "seed": true,
+  "competitive_points": 0
+}

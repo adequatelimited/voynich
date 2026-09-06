@@ -1,0 +1,13 @@
+# Context, inspection and stage boundaries
+
+The public evidence snapshot contains repository/PR identity, exact head/base, policy/profile/evaluator version, canonical family registry, current high-water state, ledger digest, complete changed-file inventory and hashes, all required evidence bytes, retrieval/execution receipts and current responsibility acknowledgments. The trusted attendant obtains these from authenticated GitHub/protected history. Contributor-authored fields are claims, not authority.
+
+The initial text profile is finite: 40 files, 64,000 bytes/file, 96,000 bundle bytes, 128,000 stage input bytes, 24,000 stage output bytes and 120 seconds/stage. Two assessment contexts plus at most one adjudication, one attempt per stage, tool access none. These are conservative local envelopes, not a subscription token percentage or spending authorization. Large legitimate work needs a supported expanded-review route; do not fragment it to evade quotas.
+
+No automatic arbitrary-URL retrieval, hidden reranking or private corpus is supplied by the public text adapter. All supplied public context text must be hash/byte verified. Text artifacts are read as inert UTF-8; unsupported encodings/formats and essential missing context hold the affected review. Relevant images/PDFs need actual bounded visual inspection in a later configured adapter, not a claim based on metadata or OCR alone.
+
+The adversary gets the exact same evidence but never the assessor response. Adjudication sees exactly two reports and the same evidence, resolves material admission/scope/tier/gate/category/attribution/blocker disagreement and cannot average or reroll. Complete runtime instructions are exported from `src/grading.ts` to `grading/prompts/`.
+
+The exact action digest and merit digest serve distinct purposes. Only explicit score-claim/local-estimate fields and current head/PR identity are excluded from merit reuse; byte-significant research content is retained. Canonical manifest serialization is safe for field ordering; semantic equivalence of prose or cross-PR rewording is not proved by normalization. Before a reused judgment can act, changed bytes/admission, acknowledgments, current base/head, scope and arithmetic are rechecked by the broker. The old receipt remains linked.
+
+All score-producing records require authenticated delegated assessment receipts, actual merged-artifact binding and an independently trusted deterministic decision check. The public replay engine deliberately refuses events without a caller-provided verifier and trusted accepted-research history. Its verifier must validate signatures/delegation/content/stages, not return a contributor-controlled boolean. Unsigned seed projection generation refuses decision files altogether.

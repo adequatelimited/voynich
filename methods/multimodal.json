@@ -1,0 +1,24 @@
+{
+  "id": "method-multimodal",
+  "title": "Blinded image-text association",
+  "summary": "Test proposed associations against independently labeled images and randomized pairing.",
+  "branch_ids": [
+    "semantic-multimodal"
+  ],
+  "assumptions": [
+    "Rights-cleared images and non-leading annotation criteria are available."
+  ],
+  "controls": [
+    "Blinded annotators; decoy images; withheld folios; competing plant identifications."
+  ],
+  "limitations": [
+    "Resemblance is subjective; pictures and text could be only loosely related."
+  ],
+  "sources": [
+    "montemurro-zanette-2013"
+  ],
+  "cost": "CPU-scale initial protocol or small manual evidence audit; declare exact budget before expanding.",
+  "status": "available_method_card",
+  "seed": true,
+  "competitive_points": 0
+}

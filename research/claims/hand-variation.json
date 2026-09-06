@@ -1,0 +1,20 @@
+{
+  "id": "claim-hand-variation",
+  "title": "Scribal variation is a paleographic research hypothesis",
+  "summary": "Davis provides paleographic analysis that informs the source's H labels.",
+  "statement": "Davis provides paleographic analysis that informs the source's H labels.",
+  "sources": [
+    "davis-2022"
+  ],
+  "branch_ids": [
+    "layout-paleography"
+  ],
+  "status": "source_specific_annotation",
+  "epistemic_status": "source_specific_annotation",
+  "test_or_next_step": "Inspect glyph evidence independently and distinguish Davis H labels from Currier C labels.",
+  "limitations": [
+    "Source reporting is distinguished from project execution and independent validation; no universal truth or full translation is asserted."
+  ],
+  "seed": true,
+  "competitive_points": 0
+}

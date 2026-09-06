@@ -1,0 +1,24 @@
+{
+  "id": "method-segmentation",
+  "title": "Morphology and segmentation sensitivity",
+  "summary": "Compare limited boundary and affix hypotheses using held-out compression or predictions.",
+  "branch_ids": [
+    "morphology-segmentation"
+  ],
+  "assumptions": [
+    "Apparent manuscript spaces need not be lexical boundaries."
+  ],
+  "controls": [
+    "Character-shuffled controls; equal model complexity; report all tested segmentations."
+  ],
+  "limitations": [
+    "A useful encoding can compress pseudotext; affixes need not encode grammar."
+  ],
+  "sources": [
+    "bowern-gaskell-2022"
+  ],
+  "cost": "CPU-scale initial protocol or small manual evidence audit; declare exact budget before expanding.",
+  "status": "available_method_card",
+  "seed": true,
+  "competitive_points": 0
+}

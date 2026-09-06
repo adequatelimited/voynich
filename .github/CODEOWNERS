@@ -1,0 +1,15 @@
+# Configure independent trusted checks/rulesets; this file alone grants no authority.
+/.github/ @adequatelimited
+/src/ @adequatelimited
+/scripts/ @adequatelimited
+/schemas/ @adequatelimited
+/grading/ @adequatelimited
+/scoring/ @adequatelimited
+/governance/ @adequatelimited
+/RULES.md @adequatelimited
+/GRADING.md @adequatelimited
+/SCORING.md @adequatelimited
+/GOVERNANCE.md @adequatelimited
+/AGENTS.md @adequatelimited
+/package.json @adequatelimited
+/pnpm-lock.yaml @adequatelimited

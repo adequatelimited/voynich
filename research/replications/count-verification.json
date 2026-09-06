@@ -1,0 +1,37 @@
+{
+  "schema_version": "1.0",
+  "id": "replication-check-seed-v1",
+  "status": "completed_bounded_checks",
+  "executed_at": "2026-09-06T19:21:46.202825+00:00",
+  "command": "python tools/research/verify_replications.py",
+  "python": "3.14.0",
+  "elapsed_seconds": 0.11671160001424141,
+  "code_sha256": "50515588279dd904d1d9698a8c9a49222e4c0c80caa3f0938e8eff724d2d8ebd",
+  "parser_sha256": "2c7a7c1f4a10a39d75e6486ff3051c0cd8962facb89bd828b23f7fb7d5a13326",
+  "counts": {
+    "ZL3b-n.txt": {
+      "sha256": "bf5b6d4ac1e3a51b1847a9c388318d609020441ccd56984c901c32b09beccafc",
+      "loci": 5385,
+      "paragraph_start_markers": 740,
+      "page_units": 227,
+      "matches_targeted_source_counts": true
+    },
+    "GC2a-n.txt": {
+      "sha256": "b09570cb6c993bc2d87134d115e60a978650a8a6495483ddbb1f6005a586096f",
+      "loci": 5367,
+      "paragraph_start_markers": 775,
+      "page_units": 226,
+      "matches_targeted_source_counts": true
+    }
+  },
+  "actual_join_entropy_bits": {
+    "voynich": 2.145728567909814,
+    "english_alice": 3.0672406717780807,
+    "authored_plaintext": 2.1047006580145307,
+    "symbol_shuffle": 3.872656018783226,
+    "copy_mutate_pseudotext": 3.8157218940544744
+  },
+  "full_paper_replications": false,
+  "independent_human_reproduction": false,
+  "model_calls": 0
+}

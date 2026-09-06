@@ -1,0 +1,1939 @@
+{
+  "schema_version": "1.0",
+  "generated_at": "2026-09-06T19:20:53.157Z",
+  "repository_commit": "4d73860a5bb4c84d64602a00bc713d9cbe9d73d5+working-tree",
+  "status": "prelaunch",
+  "branches": [
+    {
+      "id": "corpus-integrity",
+      "title": "Corpus integrity and uncertainty",
+      "summary": "Which uncertainty and segmentation choices change downstream conclusions?",
+      "question": "Which uncertainty and segmentation choices change downstream conclusions?",
+      "status": "open",
+      "methods": [
+        "method-parse",
+        "method-agreement"
+      ],
+      "dependencies": [],
+      "depends_on": [],
+      "next_step": "Align a documented sample of ZL and GC loci before calculating disagreement.",
+      "first_experiment": "Align a documented sample of ZL and GC loci before calculating disagreement.",
+      "seed": true,
+      "competitive_points": 0
+    },
+    {
+      "id": "generative-mechanisms",
+      "title": "Cryptographic and generative mechanisms",
+      "summary": "Which bounded cipher or pseudotext families jointly predict held-out diagnostics?",
+      "question": "Which bounded cipher or pseudotext families jointly predict held-out diagnostics?",
+      "status": "open",
+      "methods": [
+        "method-cipher",
+        "method-generative"
+      ],
+      "dependencies": [
+        "statistical-structure"
+      ],
+      "depends_on": [
+        "statistical-structure"
+      ],
+      "next_step": "Specify a finite generator family and complexity cost before fitting it.",
+      "first_experiment": "Specify a finite generator family and complexity cost before fitting it.",
+      "seed": true,
+      "competitive_points": 0
+    },
+    {
+      "id": "historical-comparanda",
+      "title": "Historical comparanda and provenance",
+      "summary": "Which dated textual, visual and cipher practices impose useful constraints?",
+      "question": "Which dated textual, visual and cipher practices impose useful constraints?",
+      "status": "open",
+      "methods": [
+        "method-history",
+        "method-cipher"
+      ],
+      "dependencies": [],
+      "depends_on": [],
+      "next_step": "Resolve source rights and locate a machine-readable historical herbal comparator.",
+      "first_experiment": "Resolve source rights and locate a machine-readable historical herbal comparator.",
+      "seed": true,
+      "competitive_points": 0
+    },
+    {
+      "id": "layout-paleography",
+      "title": "Codicology, paleography and layout",
+      "summary": "Which text differences survive controls for page layout, quire and source-specific hand labels?",
+      "question": "Which text differences survive controls for page layout, quire and source-specific hand labels?",
+      "status": "open",
+      "methods": [
+        "method-stratification",
+        "method-agreement"
+      ],
+      "dependencies": [
+        "corpus-integrity"
+      ],
+      "depends_on": [
+        "corpus-integrity"
+      ],
+      "next_step": "Verify a blinded set of page/hand labels against cited loci and preserve disagreement.",
+      "first_experiment": "Verify a blinded set of page/hand labels against cited loci and preserve disagreement.",
+      "seed": true,
+      "competitive_points": 0
+    },
+    {
+      "id": "morphology-segmentation",
+      "title": "Morphology and segmentation",
+      "summary": "What structure persists when apparent spaces and glyph units are varied?",
+      "question": "What structure persists when apparent spaces and glyph units are varied?",
+      "status": "open",
+      "methods": [
+        "method-segmentation",
+        "method-ngram"
+      ],
+      "dependencies": [
+        "corpus-integrity",
+        "statistical-structure"
+      ],
+      "depends_on": [
+        "corpus-integrity",
+        "statistical-structure"
+      ],
+      "next_step": "Freeze two segmentation models and test held-out pages with equal search budgets.",
+      "first_experiment": "Freeze two segmentation models and test held-out pages with equal search budgets.",
+      "seed": true,
+      "competitive_points": 0
+    },
+    {
+      "id": "replication-decipherments",
+      "title": "Replication and candidate decipherments",
+      "summary": "Can a fully specified procedure make predeclared predictions on unseen manuscript material?",
+      "question": "Can a fully specified procedure make predeclared predictions on unseen manuscript material?",
+      "status": "open",
+      "methods": [
+        "method-replication",
+        "method-cipher"
+      ],
+      "dependencies": [
+        "corpus-integrity",
+        "statistical-structure"
+      ],
+      "depends_on": [
+        "corpus-integrity",
+        "statistical-structure"
+      ],
+      "next_step": "Select one published procedure and produce a step-by-step evidence and failure checklist.",
+      "first_experiment": "Select one published procedure and produce a step-by-step evidence and failure checklist.",
+      "seed": true,
+      "competitive_points": 0
+    },
+    {
+      "id": "semantic-multimodal",
+      "title": "Semantic and multimodal constraints",
+      "summary": "Do text-image associations survive blinded annotation and shuffled associations?",
+      "question": "Do text-image associations survive blinded annotation and shuffled associations?",
+      "status": "open",
+      "methods": [
+        "method-cluster",
+        "method-multimodal"
+      ],
+      "dependencies": [
+        "layout-paleography",
+        "statistical-structure"
+      ],
+      "depends_on": [
+        "layout-paleography",
+        "statistical-structure"
+      ],
+      "next_step": "Construct a small consented, rights-cleared annotation panel with competing labels.",
+      "first_experiment": "Construct a small consented, rights-cleared annotation panel with competing labels.",
+      "seed": true,
+      "competitive_points": 0
+    },
+    {
+      "id": "statistical-structure",
+      "title": "Statistical structure",
+      "summary": "Which distributional and positional effects differ from declared matched controls?",
+      "question": "Which distributional and positional effects differ from declared matched controls?",
+      "status": "open",
+      "methods": [
+        "method-frequency",
+        "method-entropy",
+        "method-position"
+      ],
+      "dependencies": [
+        "corpus-integrity"
+      ],
+      "depends_on": [
+        "corpus-integrity"
+      ],
+      "next_step": "Reproduce all three normalization variants of the five local baselines.",
+      "first_experiment": "Reproduce all three normalization variants of the five local baselines.",
+      "seed": true,
+      "competitive_points": 0
+    }
+  ],
+  "sources": [
+    {
+      "id": "alice-english",
+      "title": "Alice's Adventures in Wonderland, Project Gutenberg eBook 11",
+      "authors": "Lewis Carroll; e-text credits Arthur DiBianca and David Widger",
+      "canonical_url": "https://www.gutenberg.org/ebooks/11",
+      "url": "https://www.gutenberg.org/ebooks/11",
+      "category": "comparison_corpus",
+      "summary": "Meaningful English prose comparison with pinned complete text, body delimiters and lowercase a-z normalization.",
+      "rights": "Public domain in the USA per item record. Preserve full Gutenberg notice in the redistributed source; users elsewhere check local terms.",
+      "rights_status": "source_specific",
+      "retrieval_status": "retrieved_and_hashed",
+      "status": "retrieved_and_hashed",
+      "verified_at": "2026-09-06",
+      "verification_method": "Primary source browser inspection; downloaded artifacts additionally hashed in data/manifests. Failed access is explicitly recorded.",
+      "seed": true,
+      "competitive_points": 0
+    },
+    {
+      "id": "bowern-gaskell-2022",
+      "title": "Enciphered after all?",
+      "authors": "Claire Bowern; Daniel Gaskell",
+      "canonical_url": "https://ceur-ws.org/Vol-3313/paper6.pdf",
+      "url": "https://ceur-ws.org/Vol-3313/paper6.pdf",
+      "category": "original_paper",
+      "summary": "Investigates compatibility of word-level metrics with particular encipherment mechanisms.",
+      "rights": "CC BY 4.0 per proceedings. Compatibility with selected metrics is weaker than identification of a cipher.",
+      "rights_status": "source_specific",
+      "retrieval_status": "verified_web",
+      "status": "verified_web",
+      "verified_at": "2026-09-06",
+      "verification_method": "Primary source browser inspection; downloaded artifacts additionally hashed in data/manifests. Failed access is explicitly recorded.",
+      "seed": true,
+      "competitive_points": 0
+    },
+    {
+      "id": "davis-2022",
+      "title": "Voynich Paleography",
+      "authors": "Lisa Fagin Davis",
+      "canonical_url": "https://ceur-ws.org/Vol-3313/keynote2.pdf",
+      "url": "https://ceur-ws.org/Vol-3313/keynote2.pdf",
+      "category": "original_paper",
+      "summary": "Paleographic talk entry verified in the proceedings; full PDF exceeded the browser document-size limit. IVTFF separately specifies the H-label convention.",
+      "rights": "CC BY 4.0 per proceedings. Full talk not inspected in this seed pass; automated clusters do not verify paleographic identities.",
+      "rights_status": "source_specific",
+      "retrieval_status": "metadata_verified_fulltext_blocked",
+      "status": "metadata_verified_fulltext_blocked",
+      "verified_at": "2026-09-06",
+      "verification_method": "Primary source browser inspection; downloaded artifacts additionally hashed in data/manifests. Failed access is explicitly recorded.",
+      "seed": true,
+      "competitive_points": 0
+    },
+    {
+      "id": "dimperio-1978",
+      "title": "The Voynich Manuscript: An Elegant Enigma",
+      "authors": "Mary E. D'Imperio",
+      "canonical_url": "https://www.nsa.gov/portals/75/documents/about/cryptologic-heritage/historical-figures-publications/publications/misc/voynich_manuscript.pdf",
+      "url": "https://www.nsa.gov/portals/75/documents/about/cryptologic-heritage/historical-figures-publications/publications/misc/voynich_manuscript.pdf",
+      "category": "historical",
+      "summary": "1978 analytical monograph identified in Yale's catalog; browser retrieval of the NSA copy exceeded its 25 MB document limit.",
+      "rights": "Bibliography verified through custodian catalog. Full PDF was not inspected or copied in this seed pass.",
+      "rights_status": "source_specific",
+      "retrieval_status": "metadata_verified_fulltext_blocked",
+      "status": "metadata_verified_fulltext_blocked",
+      "verified_at": "2026-09-06",
+      "verification_method": "Primary source browser inspection; downloaded artifacts additionally hashed in data/manifests. Failed access is explicitly recorded.",
+      "seed": true,
+      "competitive_points": 0
+    },
+    {
+      "id": "dioscorides-comparator",
+      "title": "Of Medical Substances: Dioscurides Neapolitanus",
+      "authors": "Biblioteca Nazionale di Napoli; Library of Congress / World Digital Library record",
+      "canonical_url": "https://www.loc.gov/resource/gdcwdl.wdl_10690/?sp=9&st=gallery",
+      "url": "https://www.loc.gov/resource/gdcwdl.wdl_10690/?sp=9&st=gallery",
+      "category": "historical_comparator",
+      "summary": "Historically relevant herbal illustration comparator located in the custodian catalog; automated object retrieval returned 403.",
+      "rights": "Reference only. Image rights, full metadata and an aligned machine-readable text remain acquisition tasks.",
+      "rights_status": "source_specific",
+      "retrieval_status": "metadata_located_access_blocked",
+      "status": "metadata_located_access_blocked",
+      "verified_at": "2026-09-06",
+      "verification_method": "Primary source browser inspection; downloaded artifacts additionally hashed in data/manifests. Failed access is explicitly recorded.",
+      "seed": true,
+      "competitive_points": 0
+    },
+    {
+      "id": "gaskell-bowern-2022",
+      "title": "Gibberish after all?",
+      "authors": "Daniel Gaskell; Claire Bowern",
+      "canonical_url": "https://ceur-ws.org/Vol-3313/paper4.pdf",
+      "url": "https://ceur-ws.org/Vol-3313/paper4.pdf",
+      "category": "original_paper",
+      "summary": "Human-generated meaningless samples provide a competing explanation for some language-like text statistics.",
+      "rights": "CC BY 4.0 per proceedings. Synthetic templates here do not substitute for the paper's human-produced sample set.",
+      "rights_status": "source_specific",
+      "retrieval_status": "verified_web",
+      "status": "verified_web",
+      "verified_at": "2026-09-06",
+      "verification_method": "Primary source browser inspection; downloaded artifacts additionally hashed in data/manifests. Failed access is explicitly recorded.",
+      "seed": true,
+      "competitive_points": 0
+    },
+    {
+      "id": "gc2a",
+      "title": "Glen Claston v101 transliteration, GC2a",
+      "authors": "Glen Claston; IVTFF conversion hosted by René Zandbergen",
+      "canonical_url": "https://voynich.nu/data/GC2a-n.txt",
+      "url": "https://voynich.nu/data/GC2a-n.txt",
+      "category": "transcriptions",
+      "summary": "Independent v101 reading, IVTFF 2a dated 2023-02-05, modified 2025-06-25; raw bytes retrieved for future alignment.",
+      "rights": "CC0 according to host's explicit table license. Different alphabet prevents naïve character-by-character agreement scoring.",
+      "rights_status": "source_specific",
+      "retrieval_status": "retrieved_and_hashed",
+      "status": "retrieved_and_hashed",
+      "verified_at": "2026-09-06",
+      "verification_method": "Primary source browser inspection; downloaded artifacts additionally hashed in data/manifests. Failed access is explicitly recorded.",
+      "seed": true,
+      "competitive_points": 0
+    },
+    {
+      "id": "ivtff-2",
+      "title": "Intermediate Voynich Transliteration File Format 2.0",
+      "authors": "René Zandbergen",
+      "canonical_url": "https://voynich.nu/software/ivtt/IVTFF_format.pdf",
+      "url": "https://voynich.nu/software/ivtt/IVTFF_format.pdf",
+      "category": "specification",
+      "summary": "Format reference for page/locus identities, continuations, alternate readings, uncertain spacing and page/text tags.",
+      "rights": "PDF referenced, not mirrored. Parser implements a documented subset and retains original bytes.",
+      "rights_status": "source_specific",
+      "retrieval_status": "verified_web",
+      "status": "verified_web",
+      "verified_at": "2026-09-06",
+      "verification_method": "Primary source browser inspection; downloaded artifacts additionally hashed in data/manifests. Failed access is explicitly recorded.",
+      "seed": true,
+      "competitive_points": 0
+    },
+    {
+      "id": "lindemann-bowern-2020",
+      "title": "Character Entropy in Modern and Historical Texts",
+      "authors": "Luke Lindemann; Claire Bowern",
+      "canonical_url": "https://arxiv.org/abs/2010.14697v2",
+      "url": "https://arxiv.org/abs/2010.14697v2",
+      "category": "original_paper",
+      "summary": "Studies conditional character predictability across alternative Voynich encodings and comparison corpora.",
+      "rights": "Version 2, revised 2021-05-18. Our baseline uses a smaller declared comparison and does not reproduce the full paper.",
+      "rights_status": "source_specific",
+      "retrieval_status": "verified_web",
+      "status": "verified_web",
+      "verified_at": "2026-09-06",
+      "verification_method": "Primary source browser inspection; downloaded artifacts additionally hashed in data/manifests. Failed access is explicitly recorded.",
+      "seed": true,
+      "competitive_points": 0
+    },
+    {
+      "id": "montemurro-zanette-2013",
+      "title": "Keywords and Co-Occurrence Patterns in the Voynich Manuscript",
+      "authors": "Marcelo A. Montemurro; Damián H. Zanette",
+      "canonical_url": "https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0066344",
+      "url": "https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0066344",
+      "category": "original_paper",
+      "summary": "Information-based word organization analysis, interpreted by its authors as evidence for linguistic structure.",
+      "rights": "Publisher open-access record; original annotation only. Statistical organization alone does not assign semantics.",
+      "rights_status": "source_specific",
+      "retrieval_status": "verified_web",
+      "status": "verified_web",
+      "verified_at": "2026-09-06",
+      "verification_method": "Primary source browser inspection; downloaded artifacts additionally hashed in data/manifests. Failed access is explicitly recorded.",
+      "seed": true,
+      "competitive_points": 0
+    },
+    {
+      "id": "reddy-knight-2011",
+      "title": "What We Know About The Voynich Manuscript",
+      "authors": "Sravana Reddy; Kevin Knight",
+      "canonical_url": "https://aclanthology.org/W11-1511/",
+      "url": "https://aclanthology.org/W11-1511/",
+      "category": "original_paper",
+      "summary": "Analytical inventory and statistical questions useful for building explicit reproduction targets.",
+      "rights": "Publisher record and linked paper inspected; metadata and original annotations only.",
+      "rights_status": "source_specific",
+      "retrieval_status": "verified_web",
+      "status": "verified_web",
+      "verified_at": "2026-09-06",
+      "verification_method": "Primary source browser inspection; downloaded artifacts additionally hashed in data/manifests. Failed access is explicitly recorded.",
+      "seed": true,
+      "competitive_points": 0
+    },
+    {
+      "id": "sterneck-polish-bowern-2021",
+      "title": "Topic Modeling in the Voynich Manuscript",
+      "authors": "Rachel Sterneck; Annie Polish; Claire Bowern",
+      "canonical_url": "https://arxiv.org/abs/2107.02858",
+      "url": "https://arxiv.org/abs/2107.02858",
+      "category": "original_paper",
+      "summary": "Compares computational topics with illustration and scribe categories, motivating confound-aware replication.",
+      "rights": "Original annotation only. Our symbol-frequency clustering is not a replication of the paper's topic models.",
+      "rights_status": "source_specific",
+      "retrieval_status": "verified_web",
+      "status": "verified_web",
+      "verified_at": "2026-09-06",
+      "verification_method": "Primary source browser inspection; downloaded artifacts additionally hashed in data/manifests. Failed access is explicitly recorded.",
+      "seed": true,
+      "competitive_points": 0
+    },
+    {
+      "id": "takahashi-original",
+      "title": "Takeshi Takahashi original transcription pages",
+      "authors": "Takeshi Takahashi",
+      "canonical_url": "https://www.voynich.com/pages/",
+      "url": "https://www.voynich.com/pages/",
+      "category": "transcriptions",
+      "summary": "A further independent EVA reading. Original site states conditions for saving and republication; this project records its existence only.",
+      "rights": "Reference only: downloading/printing requires an email notice; republication requires permission. No notice or permission is claimed.",
+      "rights_status": "source_specific",
+      "retrieval_status": "verified_web_reference_only",
+      "status": "verified_web_reference_only",
+      "verified_at": "2026-09-06",
+      "verification_method": "Primary source browser inspection; downloaded artifacts additionally hashed in data/manifests. Failed access is explicitly recorded.",
+      "seed": true,
+      "competitive_points": 0
+    },
+    {
+      "id": "timm-2015",
+      "title": "How the Voynich Manuscript was created",
+      "authors": "Torsten Timm",
+      "canonical_url": "https://arxiv.org/abs/1407.6639v3",
+      "url": "https://arxiv.org/abs/1407.6639v3",
+      "category": "original_paper",
+      "summary": "Proposes a text-generation explanation based on similarly spelled words; it competes with linguistic interpretations.",
+      "rights": "Version 3, 2015-12-09. Treat mechanism identification as the author's hypothesis, not a settled conclusion.",
+      "rights_status": "source_specific",
+      "retrieval_status": "verified_web",
+      "status": "verified_web",
+      "verified_at": "2026-09-06",
+      "verification_method": "Primary source browser inspection; downloaded artifacts additionally hashed in data/manifests. Failed access is explicitly recorded.",
+      "seed": true,
+      "competitive_points": 0
+    },
+    {
+      "id": "voy2022",
+      "title": "International Conference on the Voynich Manuscript 2022 proceedings",
+      "authors": "Colin Layfield; John Abela, editors",
+      "canonical_url": "https://ceur-ws.org/Vol-3313/",
+      "url": "https://ceur-ws.org/Vol-3313/",
+      "category": "proceedings",
+      "summary": "Verified program and paper metadata covering paleography, history, cryptography and quantitative analysis.",
+      "rights": "Papers CC BY 4.0; proceedings bibliography CC0. Catalog is selective, not an exhaustive literature review.",
+      "rights_status": "source_specific",
+      "retrieval_status": "verified_web",
+      "status": "verified_web",
+      "verified_at": "2026-09-06",
+      "verification_method": "Primary source browser inspection; downloaded artifacts additionally hashed in data/manifests. Failed access is explicitly recorded.",
+      "seed": true,
+      "competitive_points": 0
+    },
+    {
+      "id": "voynich-public-code",
+      "title": "Voynich-public companion research repository",
+      "authors": "Yale Voynich Working Group; chirila repository maintainers",
+      "canonical_url": "https://github.com/chirila/Voynich-public",
+      "url": "https://github.com/chirila/Voynich-public",
+      "category": "code",
+      "summary": "Companion code/corpus entry point for historical and multilingual comparison studies.",
+      "rights": "No root redistribution license established in this pass; no source code or corpora imported.",
+      "rights_status": "source_specific",
+      "retrieval_status": "verified_web_reference_only",
+      "status": "verified_web_reference_only",
+      "verified_at": "2026-09-06",
+      "verification_method": "Primary source browser inspection; downloaded artifacts additionally hashed in data/manifests. Failed access is explicitly recorded.",
+      "seed": true,
+      "competitive_points": 0
+    },
+    {
+      "id": "yale-catalog",
+      "title": "Beinecke MS 408 physical description",
+      "authors": "Barbara A. Shailor; Yale Beinecke Library",
+      "canonical_url": "https://pre1600ms.beinecke.library.yale.edu/docs/pre1600.ms408.HTM",
+      "url": "https://pre1600ms.beinecke.library.yale.edu/docs/pre1600.ms408.HTM",
+      "category": "custodian",
+      "summary": "Catalog records physical leaves, foldouts, collation and archival holdings; some dating and ownership assertions reflect older scholarship.",
+      "rights": "Original annotations only. Historical catalog wording must not override newer evidence; no plant identification or John Dee attribution is adopted.",
+      "rights_status": "source_specific",
+      "retrieval_status": "verified_web",
+      "status": "verified_web",
+      "verified_at": "2026-09-06",
+      "verification_method": "Primary source browser inspection; downloaded artifacts additionally hashed in data/manifests. Failed access is explicitly recorded.",
+      "seed": true,
+      "competitive_points": 0
+    },
+    {
+      "id": "yale-images",
+      "title": "Beinecke MS 408 official digital object",
+      "authors": "Yale Library",
+      "canonical_url": "https://collections.library.yale.edu/catalog/2002046",
+      "url": "https://collections.library.yale.edu/catalog/2002046",
+      "category": "images",
+      "summary": "Official image landing reference; current automated retrieval returned HTTP 403, so no canvas IDs or scan count are claimed.",
+      "rights": "Reference only; item-level image rights and exact IIIF mappings remain unresolved.",
+      "rights_status": "source_specific",
+      "retrieval_status": "access_blocked_403",
+      "status": "access_blocked_403",
+      "verified_at": "2026-09-06",
+      "verification_method": "Primary source browser inspection; downloaded artifacts additionally hashed in data/manifests. Failed access is explicitly recorded.",
+      "seed": true,
+      "competitive_points": 0
+    },
+    {
+      "id": "yale-overview",
+      "title": "Voynich Manuscript: Beinecke collection overview",
+      "authors": "Yale Beinecke Library",
+      "canonical_url": "https://beinecke.library.yale.edu/collections/highlights/voynich-manuscript",
+      "url": "https://beinecke.library.yale.edu/collections/highlights/voynich-manuscript",
+      "category": "custodian",
+      "summary": "Custodian introduction and links to manuscript history and scientific examination.",
+      "rights": "Reference only. Distinguish overview statements from independently retrieved technical reports.",
+      "rights_status": "source_specific",
+      "retrieval_status": "verified_web",
+      "status": "verified_web",
+      "verified_at": "2026-09-06",
+      "verification_method": "Primary source browser inspection; downloaded artifacts additionally hashed in data/manifests. Failed access is explicitly recorded.",
+      "seed": true,
+      "competitive_points": 0
+    },
+    {
+      "id": "yale-reuse",
+      "title": "Yale Library reuse, permissions and copyright policy",
+      "authors": "Yale Library",
+      "canonical_url": "https://library.yale.edu/policies/reuse",
+      "url": "https://library.yale.edu/policies/reuse",
+      "category": "rights",
+      "summary": "Institutional starting policy for item-specific image reuse assessment.",
+      "rights": "Policy reference, not blanket permission to mirror every collection object.",
+      "rights_status": "source_specific",
+      "retrieval_status": "verified_web",
+      "status": "verified_web",
+      "verified_at": "2026-09-06",
+      "verification_method": "Primary source browser inspection; downloaded artifacts additionally hashed in data/manifests. Failed access is explicitly recorded.",
+      "seed": true,
+      "competitive_points": 0
+    },
+    {
+      "id": "zandbergen-2022",
+      "title": "Transliteration of the Voynich MS Text",
+      "authors": "René Zandbergen",
+      "canonical_url": "https://ceur-ws.org/Vol-3313/keynote1.pdf",
+      "url": "https://ceur-ws.org/Vol-3313/keynote1.pdf",
+      "category": "original_paper",
+      "summary": "Original talk on representation choices and alignment of differing readings.",
+      "rights": "CC BY 4.0 per proceedings. Original annotation only; no PDF mirrored.",
+      "rights_status": "source_specific",
+      "retrieval_status": "verified_web",
+      "status": "verified_web",
+      "verified_at": "2026-09-06",
+      "verification_method": "Primary source browser inspection; downloaded artifacts additionally hashed in data/manifests. Failed access is explicitly recorded.",
+      "seed": true,
+      "competitive_points": 0
+    },
+    {
+      "id": "zandbergen-rights",
+      "title": "voynich.nu copyright and transliteration licensing",
+      "authors": "René Zandbergen",
+      "canonical_url": "https://voynich.nu/roadmap.html",
+      "url": "https://voynich.nu/roadmap.html",
+      "category": "rights",
+      "summary": "The site's copyright section explicitly publishes the hosted transliteration tables under CC0; fonts have separate terms.",
+      "rights": "CC0 applies to hosted transliterations. Other site materials and external originals retain their stated rights; no font is copied.",
+      "rights_status": "source_specific",
+      "retrieval_status": "verified_web",
+      "status": "verified_web",
+      "verified_at": "2026-09-06",
+      "verification_method": "Primary source browser inspection; downloaded artifacts additionally hashed in data/manifests. Failed access is explicitly recorded.",
+      "seed": true,
+      "competitive_points": 0
+    },
+    {
+      "id": "zandbergen-transliterations",
+      "title": "Voynich transliteration resources and version table",
+      "authors": "René Zandbergen",
+      "canonical_url": "https://www.voynich.nu/transcr.html",
+      "url": "https://www.voynich.nu/transcr.html",
+      "category": "transcriptions",
+      "summary": "Documents independently produced readings and format/version differences. EVA is a shape representation rather than a recovered language alphabet.",
+      "rights": "Reference and attributed original metadata; source-table statistics use specific counting conventions.",
+      "rights_status": "source_specific",
+      "retrieval_status": "verified_web",
+      "status": "verified_web",
+      "verified_at": "2026-09-06",
+      "verification_method": "Primary source browser inspection; downloaded artifacts additionally hashed in data/manifests. Failed access is explicitly recorded.",
+      "seed": true,
+      "competitive_points": 0
+    },
+    {
+      "id": "zl3b",
+      "title": "Zandbergen-Landini transliteration, ZL3b",
+      "authors": "René Zandbergen; Gabriel Landini acknowledged in source provenance",
+      "canonical_url": "https://voynich.nu/data/ZL3b-n.txt",
+      "url": "https://voynich.nu/data/ZL3b-n.txt",
+      "category": "transcriptions",
+      "summary": "Actual IVTFF 2.0 EVA source, version 3b dated 2025-05-13; retrieved bytes and uncertainty-preserving local copy are pinned.",
+      "rights": "CC0 according to the host's explicit transliteration licensing statement. Preserve source header, comments and attribution.",
+      "rights_status": "source_specific",
+      "retrieval_status": "retrieved_and_hashed",
+      "status": "retrieved_and_hashed",
+      "verified_at": "2026-09-06",
+      "verification_method": "Primary source browser inspection; downloaded artifacts additionally hashed in data/manifests. Failed access is explicitly recorded.",
+      "seed": true,
+      "competitive_points": 0
+    }
+  ],
+  "tasks": [
+    {
+      "id": "task-01-source-rights",
+      "title": "Verify one source's reuse and version record",
+      "summary": "Inspect an official source, record exact item/version/rights evidence and correct a material catalog defect if found.",
+      "branch_ids": [
+        "historical-comparanda"
+      ],
+      "difficulty": "novice",
+      "status": "open",
+      "acceptance_evidence": "Source metadata and a concrete before/after correction with quoted locator; link-only additions do not suffice.",
+      "tier_anchor": 2,
+      "scoring_note": "Indicative evidence anchor only. Mission gates, family overlap and prior seed baselines govern any AI assessment; tasks reserve neither ownership nor points.",
+      "seed": true,
+      "competitive_points": 0
+    },
+    {
+      "id": "task-02-align-readings",
+      "title": "Align a bounded ZL/GC sample",
+      "summary": "Choose 20 predeclared loci across two illustration categories; document alphabet conversion and uncertain matches.",
+      "branch_ids": [
+        "corpus-integrity"
+      ],
+      "difficulty": "intermediate",
+      "status": "open",
+      "acceptance_evidence": "Alignment table, excluded loci, reversible mapping, checks and uncertainty report.",
+      "tier_anchor": 5,
+      "scoring_note": "Indicative evidence anchor only. Mission gates, family overlap and prior seed baselines govern any AI assessment; tasks reserve neither ownership nor points.",
+      "seed": true,
+      "competitive_points": 0
+    },
+    {
+      "id": "task-03-foldout-index",
+      "title": "Check foldout and missing-leaf indexing",
+      "summary": "Verify f85/f86 panel conventions and three named missing leaves against custodian and format sources.",
+      "branch_ids": [
+        "layout-paleography"
+      ],
+      "difficulty": "novice",
+      "status": "open",
+      "acceptance_evidence": "Cited corrections separating leaves, sides, panels, loci and scans; no invented canvas IDs.",
+      "tier_anchor": 2,
+      "scoring_note": "Indicative evidence anchor only. Mission gates, family overlap and prior seed baselines govern any AI assessment; tasks reserve neither ownership nor points.",
+      "seed": true,
+      "competitive_points": 0
+    },
+    {
+      "id": "task-04-parser-audit",
+      "title": "Audit uncertainty parser edge cases",
+      "summary": "Independently inspect literal IVTFF uncertainty, tags and drawing interruptions against the specification.",
+      "branch_ids": [
+        "corpus-integrity"
+      ],
+      "difficulty": "intermediate",
+      "status": "open",
+      "acceptance_evidence": "Demonstrated behavior defect and useful fix, or substantive audit with retained checks.",
+      "tier_anchor": 5,
+      "scoring_note": "Indicative evidence anchor only. Mission gates, family overlap and prior seed baselines govern any AI assessment; tasks reserve neither ownership nor points.",
+      "seed": true,
+      "competitive_points": 0
+    },
+    {
+      "id": "task-05-entropy-sensitivity",
+      "title": "Reproduce entropy and space-policy baselines",
+      "summary": "Run the documented offline three-variant loop; compare all controls and investigate a material discrepancy.",
+      "branch_ids": [
+        "statistical-structure"
+      ],
+      "difficulty": "novice",
+      "status": "open",
+      "acceptance_evidence": "A routine matching rerun is service at tier 0; a documented new informative defect can meet tier 2 or a substantive replication tier 10.",
+      "tier_anchor": 0,
+      "scoring_note": "Indicative evidence anchor only. Mission gates, family overlap and prior seed baselines govern any AI assessment; tasks reserve neither ownership nor points.",
+      "seed": true,
+      "competitive_points": 0
+    },
+    {
+      "id": "task-06-length-matching",
+      "title": "Check sample-length bias in frequency metrics",
+      "summary": "Predeclare equal-length windows and inspect whether type-token differences remain stable across them.",
+      "branch_ids": [
+        "statistical-structure"
+      ],
+      "difficulty": "intermediate",
+      "status": "open",
+      "acceptance_evidence": "All windows/attempts, matched controls, uncertainty and no selected-best language.",
+      "tier_anchor": 5,
+      "scoring_note": "Indicative evidence anchor only. Mission gates, family overlap and prior seed baselines govern any AI assessment; tasks reserve neither ownership nor points.",
+      "seed": true,
+      "competitive_points": 0
+    },
+    {
+      "id": "task-07-line-map",
+      "title": "Validate a locus-to-physical-line sample",
+      "summary": "Map 30 declared P0/Pt loci to actual image lines when official images are accessible.",
+      "branch_ids": [
+        "layout-paleography"
+      ],
+      "difficulty": "intermediate",
+      "status": "open",
+      "acceptance_evidence": "Rights/canvas provenance, annotation criteria and retained disagreements.",
+      "tier_anchor": 5,
+      "scoring_note": "Indicative evidence anchor only. Mission gates, family overlap and prior seed baselines govern any AI assessment; tasks reserve neither ownership nor points.",
+      "seed": true,
+      "competitive_points": 0
+    },
+    {
+      "id": "task-08-segmentation-protocol",
+      "title": "Propose a bounded segmentation comparison",
+      "summary": "Specify two competing boundary models and a disjoint held-out folio partition.",
+      "branch_ids": [
+        "morphology-segmentation"
+      ],
+      "difficulty": "intermediate",
+      "status": "open",
+      "acceptance_evidence": "Executable protocol, complexity penalty, nulls, failure criteria and finite search scope.",
+      "tier_anchor": 5,
+      "scoring_note": "Indicative evidence anchor only. Mission gates, family overlap and prior seed baselines govern any AI assessment; tasks reserve neither ownership nor points.",
+      "seed": true,
+      "competitive_points": 0
+    },
+    {
+      "id": "task-09-generator-controls",
+      "title": "Test one finite pseudotext family",
+      "summary": "Freeze a generator, parameter grid and joint metrics before testing held-out pages.",
+      "branch_ids": [
+        "generative-mechanisms"
+      ],
+      "difficulty": "advanced",
+      "status": "open",
+      "acceptance_evidence": "All parameter runs, known plaintext recovery, uncertainty and explicit excluded overlap with seed null.",
+      "tier_anchor": 10,
+      "scoring_note": "Indicative evidence anchor only. Mission gates, family overlap and prior seed baselines govern any AI assessment; tasks reserve neither ownership nor points.",
+      "seed": true,
+      "competitive_points": 0
+    },
+    {
+      "id": "task-10-cipher-benchmark",
+      "title": "Build a known-plaintext cipher diagnostic",
+      "summary": "Choose a historically documented reversible transform and verify recovery on authored plaintext.",
+      "branch_ids": [
+        "generative-mechanisms"
+      ],
+      "difficulty": "intermediate",
+      "status": "open",
+      "acceptance_evidence": "Source, key/exception budget, decoys, correctness tests and worked output.",
+      "tier_anchor": 5,
+      "scoring_note": "Indicative evidence anchor only. Mission gates, family overlap and prior seed baselines govern any AI assessment; tasks reserve neither ownership nor points.",
+      "seed": true,
+      "competitive_points": 0
+    },
+    {
+      "id": "task-11-hand-confounds",
+      "title": "Audit section-hand-quire confounding",
+      "summary": "Use ZL labels as sourced hypotheses and quantify overlap before any hand classification claim.",
+      "branch_ids": [
+        "layout-paleography"
+      ],
+      "difficulty": "advanced",
+      "status": "open",
+      "acceptance_evidence": "Contingency tables, mixed-label handling, constrained permutations and source-limited conclusions.",
+      "tier_anchor": 5,
+      "scoring_note": "Indicative evidence anchor only. Mission gates, family overlap and prior seed baselines govern any AI assessment; tasks reserve neither ownership nor points.",
+      "seed": true,
+      "competitive_points": 0
+    },
+    {
+      "id": "task-12-blind-image-protocol",
+      "title": "Design a blinded image-label pilot",
+      "summary": "Describe candidate/decoy labels and a rights-cleared folio sample without inspecting test associations.",
+      "branch_ids": [
+        "semantic-multimodal"
+      ],
+      "difficulty": "intermediate",
+      "status": "open",
+      "acceptance_evidence": "Protocol and consent/rights plan; no fabricated annotator results.",
+      "tier_anchor": 5,
+      "scoring_note": "Indicative evidence anchor only. Mission gates, family overlap and prior seed baselines govern any AI assessment; tasks reserve neither ownership nor points.",
+      "seed": true,
+      "competitive_points": 0
+    },
+    {
+      "id": "task-13-historical-corpus",
+      "title": "Acquire a historical herbal comparison text",
+      "summary": "Find a custodian-backed readable text and establish item-level redistribution terms.",
+      "branch_ids": [
+        "historical-comparanda"
+      ],
+      "difficulty": "intermediate",
+      "status": "open",
+      "acceptance_evidence": "Usable pinned source, normalization documentation and actual matched baseline run.",
+      "tier_anchor": 5,
+      "scoring_note": "Indicative evidence anchor only. Mission gates, family overlap and prior seed baselines govern any AI assessment; tasks reserve neither ownership nor points.",
+      "seed": true,
+      "competitive_points": 0
+    },
+    {
+      "id": "task-14-replicate-entropy",
+      "title": "Extend the partial entropy replication",
+      "summary": "Recover the paper's declared encodings and comparison subset; log departures from the original setup.",
+      "branch_ids": [
+        "replication-decipherments"
+      ],
+      "difficulty": "advanced",
+      "status": "open",
+      "acceptance_evidence": "Actual independent implementation/data inspection and complete or informative partial report.",
+      "tier_anchor": 10,
+      "scoring_note": "Indicative evidence anchor only. Mission gates, family overlap and prior seed baselines govern any AI assessment; tasks reserve neither ownership nor points.",
+      "seed": true,
+      "competitive_points": 0
+    },
+    {
+      "id": "task-15-replicate-topics",
+      "title": "Reconstruct one topic-model experiment",
+      "summary": "Select a specific paper table/model and recover its inputs, labels and preprocessing.",
+      "branch_ids": [
+        "replication-decipherments"
+      ],
+      "difficulty": "advanced",
+      "status": "open",
+      "acceptance_evidence": "Pinned implementation, declared comparison tolerance and actual execution or informative failure.",
+      "tier_anchor": 10,
+      "scoring_note": "Indicative evidence anchor only. Mission gates, family overlap and prior seed baselines govern any AI assessment; tasks reserve neither ownership nor points.",
+      "seed": true,
+      "competitive_points": 0
+    },
+    {
+      "id": "task-16-unique-direction",
+      "title": "Suggest a useful distinct research direction",
+      "summary": "State a concrete question, research rationale, bounded prior-work search and plausible first step.",
+      "branch_ids": [
+        "replication-decipherments"
+      ],
+      "difficulty": "novice",
+      "status": "open",
+      "acceptance_evidence": "A distinct useful suggestion can meet tier 2 before a full protocol or experiment; vague or repeated suggestions meet 0.",
+      "tier_anchor": 2,
+      "scoring_note": "Indicative evidence anchor only. Mission gates, family overlap and prior seed baselines govern any AI assessment; tasks reserve neither ownership nor points.",
+      "seed": true,
+      "competitive_points": 0
+    },
+    {
+      "id": "task-17-source-chronology",
+      "title": "Check one historical attribution chain",
+      "summary": "Distinguish a legacy catalog assertion from later primary evidence for one ownership/dating claim.",
+      "branch_ids": [
+        "historical-comparanda"
+      ],
+      "difficulty": "novice",
+      "status": "open",
+      "acceptance_evidence": "Traceable chain, dated sources, uncertainty and concrete consequence for research choices.",
+      "tier_anchor": 2,
+      "scoring_note": "Indicative evidence anchor only. Mission gates, family overlap and prior seed baselines govern any AI assessment; tasks reserve neither ownership nor points.",
+      "seed": true,
+      "competitive_points": 0
+    },
+    {
+      "id": "task-18-instrument-accessibility",
+      "title": "Improve access to a research instrument",
+      "summary": "Identify a demonstrated accessibility or reproducibility barrier in the worked analysis flow and repair it.",
+      "branch_ids": [
+        "statistical-structure"
+      ],
+      "difficulty": "intermediate",
+      "status": "open",
+      "acceptance_evidence": "Before/after evidence and a usable example; generic cosmetic activity remains tier 0.",
+      "tier_anchor": 5,
+      "scoring_note": "Indicative evidence anchor only. Mission gates, family overlap and prior seed baselines govern any AI assessment; tasks reserve neither ownership nor points.",
+      "seed": true,
+      "competitive_points": 0
+    }
+  ],
+  "methods": [
+    {
+      "id": "method-agreement",
+      "title": "Independent annotation and reading agreement",
+      "summary": "Align named loci and report agreement with uncertainty and adjudication history.",
+      "branch_ids": [
+        "corpus-integrity"
+      ],
+      "assumptions": [
+        "Annotators follow a shared protocol; reading lineages are recorded."
+      ],
+      "controls": [
+        "Blinded duplicate annotation; chance and prevalence checks; disagreements retained."
+      ],
+      "limitations": [
+        "Agreement is not accuracy; converted copies of one reading are not independent witnesses."
+      ],
+      "sources": [
+        "davis-2022"
+      ],
+      "cost": "CPU-scale initial protocol or small manual evidence audit; declare exact budget before expanding.",
+      "status": "available_method_card",
+      "seed": true,
+      "competitive_points": 0
+    },
+    {
+      "id": "method-cipher",
+      "title": "Bounded cipher-family testing",
+      "summary": "Specify reversible procedures and test predeclared held-out predictions and failure conditions.",
+      "branch_ids": [
+        "generative-mechanisms"
+      ],
+      "assumptions": [
+        "Keys, substitutions, exceptions and search domain are fully disclosed."
+      ],
+      "controls": [
+        "Known-plaintext recovery; decoy languages; equal search budget and exception penalties."
+      ],
+      "limitations": [
+        "Flexible readings and unconstrained anagrams can fit almost anything; historical plausibility needs separate evidence."
+      ],
+      "sources": [
+        "bowern-gaskell-2022"
+      ],
+      "cost": "CPU-scale initial protocol or small manual evidence audit; declare exact budget before expanding.",
+      "status": "available_method_card",
+      "seed": true,
+      "competitive_points": 0
+    },
+    {
+      "id": "method-cluster",
+      "title": "Clustering and topic-model auditing",
+      "summary": "Compare text-derived groups to source-specific labels with permutation diagnostics.",
+      "branch_ids": [
+        "semantic-multimodal"
+      ],
+      "assumptions": [
+        "Features, k, initialization and preprocessing are declared before evaluation."
+      ],
+      "controls": [
+        "Label permutations within quire; equal page-length controls; held-out assignment."
+      ],
+      "limitations": [
+        "Association is not semantics. Scribe, section, quire and page length can confound each other."
+      ],
+      "sources": [
+        "sterneck-polish-bowern-2021"
+      ],
+      "cost": "CPU-scale initial protocol or small manual evidence audit; declare exact budget before expanding.",
+      "status": "available_method_card",
+      "seed": true,
+      "competitive_points": 0
+    },
+    {
+      "id": "method-entropy",
+      "title": "Conditional entropy diagnostics",
+      "summary": "Estimate empirical next-symbol uncertainty under declared token/boundary conventions.",
+      "branch_ids": [
+        "statistical-structure"
+      ],
+      "assumptions": [
+        "Encoded units, sample boundaries and estimator are fixed."
+      ],
+      "controls": [
+        "Equal symbol count; boundary and glyph-composition variants; known plaintext and shuffled nulls."
+      ],
+      "limitations": [
+        "Finite-sample bias, script differences and genre remain; low entropy is not a decipherment."
+      ],
+      "sources": [
+        "lindemann-bowern-2020"
+      ],
+      "cost": "CPU-scale initial protocol or small manual evidence audit; declare exact budget before expanding.",
+      "status": "available_method_card",
+      "seed": true,
+      "competitive_points": 0
+    },
+    {
+      "id": "method-frequency",
+      "title": "Frequency and encoded token lengths",
+      "summary": "Report counts, rank distributions, hapax types and token-length histograms.",
+      "branch_ids": [
+        "statistical-structure"
+      ],
+      "assumptions": [
+        "Token/character conventions are declared and stable."
+      ],
+      "controls": [
+        "Matched text lengths, shuffled characters and meaningful prose; sensitivity to spaces."
+      ],
+      "limitations": [
+        "Zipf-like curves and length fits cannot identify meaning or a specific language."
+      ],
+      "sources": [
+        "reddy-knight-2011"
+      ],
+      "cost": "CPU-scale initial protocol or small manual evidence audit; declare exact budget before expanding.",
+      "status": "available_method_card",
+      "seed": true,
+      "competitive_points": 0
+    },
+    {
+      "id": "method-generative",
+      "title": "Pseudotext and mechanism controls",
+      "summary": "Fit finite generators and compare several held-out diagnostics, not a selected resemblance.",
+      "branch_ids": [
+        "generative-mechanisms"
+      ],
+      "assumptions": [
+        "Generator family, seed scope and parameter budget are frozen."
+      ],
+      "controls": [
+        "Known-language, character-shuffle, copy/mutate and grammar controls; all attempts retained."
+      ],
+      "limitations": [
+        "Matching measured statistics does not prove this generator produced the manuscript."
+      ],
+      "sources": [
+        "timm-2015"
+      ],
+      "cost": "CPU-scale initial protocol or small manual evidence audit; declare exact budget before expanding.",
+      "status": "available_method_card",
+      "seed": true,
+      "competitive_points": 0
+    },
+    {
+      "id": "method-history",
+      "title": "Historical constraint and provenance testing",
+      "summary": "Trace dated ownership, material and textual claims to inspectable primary evidence.",
+      "branch_ids": [
+        "historical-comparanda"
+      ],
+      "assumptions": [
+        "Dating methods and source chains have explicit uncertainties."
+      ],
+      "controls": [
+        "Competing chronologies; distinguish material date from writing date; named counterevidence."
+      ],
+      "limitations": [
+        "Catalogs can repeat obsolete assertions; stylistic resemblance alone does not establish origin."
+      ],
+      "sources": [
+        "yale-catalog"
+      ],
+      "cost": "CPU-scale initial protocol or small manual evidence audit; declare exact budget before expanding.",
+      "status": "available_method_card",
+      "seed": true,
+      "competitive_points": 0
+    },
+    {
+      "id": "method-multimodal",
+      "title": "Blinded image-text association",
+      "summary": "Test proposed associations against independently labeled images and randomized pairing.",
+      "branch_ids": [
+        "semantic-multimodal"
+      ],
+      "assumptions": [
+        "Rights-cleared images and non-leading annotation criteria are available."
+      ],
+      "controls": [
+        "Blinded annotators; decoy images; withheld folios; competing plant identifications."
+      ],
+      "limitations": [
+        "Resemblance is subjective; pictures and text could be only loosely related."
+      ],
+      "sources": [
+        "montemurro-zanette-2013"
+      ],
+      "cost": "CPU-scale initial protocol or small manual evidence audit; declare exact budget before expanding.",
+      "status": "available_method_card",
+      "seed": true,
+      "competitive_points": 0
+    },
+    {
+      "id": "method-ngram",
+      "title": "Held-out sequence models",
+      "summary": "Fit finite n-gram models and report held-out cross-entropy and parameter count.",
+      "branch_ids": [
+        "morphology-segmentation"
+      ],
+      "assumptions": [
+        "Training and test partitions are separated before fitting."
+      ],
+      "controls": [
+        "Equal tuning budgets; simpler baselines; out-of-quire evaluation."
+      ],
+      "limitations": [
+        "Predictive fit does not identify a production mechanism; related pages can leak information."
+      ],
+      "sources": [
+        "reddy-knight-2011"
+      ],
+      "cost": "CPU-scale initial protocol or small manual evidence audit; declare exact budget before expanding.",
+      "status": "available_method_card",
+      "seed": true,
+      "competitive_points": 0
+    },
+    {
+      "id": "method-parse",
+      "title": "Uncertainty-preserving corpus parsing",
+      "summary": "Count format violations, alternative readings and token exclusions under explicit policies.",
+      "branch_ids": [
+        "corpus-integrity"
+      ],
+      "assumptions": [
+        "Locus IDs and alphabet metadata are correctly interpreted."
+      ],
+      "controls": [
+        "Synthetic malformed and foldout fixtures; raw byte hashes; alternative-space variants."
+      ],
+      "limitations": [
+        "Cannot decide which reading is correct or identify language units."
+      ],
+      "sources": [
+        "ivtff-2"
+      ],
+      "cost": "CPU-scale initial protocol or small manual evidence audit; declare exact budget before expanding.",
+      "status": "available_method_card",
+      "seed": true,
+      "competitive_points": 0
+    },
+    {
+      "id": "method-position",
+      "title": "Line position and local repetition",
+      "summary": "Measure first/last-token length and repeated adjacent-token rates by locus type.",
+      "branch_ids": [
+        "statistical-structure"
+      ],
+      "assumptions": [
+        "Locus-to-line mapping and exclusions are explicit."
+      ],
+      "controls": [
+        "Within-line shuffles preserving token multiset; uncertainty sensitivity; source checks."
+      ],
+      "limitations": [
+        "Discarded uncertain words can create apparent adjacency; layout conventions can mimic grammar."
+      ],
+      "sources": [
+        "reddy-knight-2011"
+      ],
+      "cost": "CPU-scale initial protocol or small manual evidence audit; declare exact budget before expanding.",
+      "status": "available_method_card",
+      "seed": true,
+      "competitive_points": 0
+    },
+    {
+      "id": "method-replication",
+      "title": "Explicit replication and falsification",
+      "summary": "Reconstruct a published procedure, inspect input availability and record exact departures.",
+      "branch_ids": [
+        "replication-decipherments"
+      ],
+      "assumptions": [
+        "Target claim, implementation lineage and acceptance criterion are fixed."
+      ],
+      "controls": [
+        "Independent implementation where possible; retained failures; code and data hashes."
+      ],
+      "limitations": [
+        "A same-author rerun is reproducibility checking, not independent human validation."
+      ],
+      "sources": [
+        "gaskell-bowern-2022"
+      ],
+      "cost": "CPU-scale initial protocol or small manual evidence audit; declare exact budget before expanding.",
+      "status": "available_method_card",
+      "seed": true,
+      "competitive_points": 0
+    },
+    {
+      "id": "method-segmentation",
+      "title": "Morphology and segmentation sensitivity",
+      "summary": "Compare limited boundary and affix hypotheses using held-out compression or predictions.",
+      "branch_ids": [
+        "morphology-segmentation"
+      ],
+      "assumptions": [
+        "Apparent manuscript spaces need not be lexical boundaries."
+      ],
+      "controls": [
+        "Character-shuffled controls; equal model complexity; report all tested segmentations."
+      ],
+      "limitations": [
+        "A useful encoding can compress pseudotext; affixes need not encode grammar."
+      ],
+      "sources": [
+        "bowern-gaskell-2022"
+      ],
+      "cost": "CPU-scale initial protocol or small manual evidence audit; declare exact budget before expanding.",
+      "status": "available_method_card",
+      "seed": true,
+      "competitive_points": 0
+    },
+    {
+      "id": "method-stratification",
+      "title": "Codicological stratification",
+      "summary": "Partition effects by source-specific quire, layout, section and hand labels.",
+      "branch_ids": [
+        "layout-paleography"
+      ],
+      "assumptions": [
+        "Label provenance and unit boundaries are known."
+      ],
+      "controls": [
+        "Within-quire permutations; leave-one-quire-out checks; mixed labels excluded or modeled."
+      ],
+      "limitations": [
+        "Labels and neighboring foldouts are confounded; a partition does not establish a scribe."
+      ],
+      "sources": [
+        "yale-catalog"
+      ],
+      "cost": "CPU-scale initial protocol or small manual evidence audit; declare exact budget before expanding.",
+      "status": "available_method_card",
+      "seed": true,
+      "competitive_points": 0
+    }
+  ],
+  "directions": [
+    {
+      "schema_version": "1.0",
+      "id": "direction-confound-information",
+      "title": "Measure what additional annotation would resolve section-hand confounding",
+      "question": "Which underrepresented combinations of section and source-specific hand labels would best distinguish competing explanations?",
+      "rationale": "A map of missing combinations can direct limited manual annotation to useful evidence instead of collecting more of the same examples.",
+      "distinctness": "An annotation-priority proposal, separate from re-running a cluster algorithm or treating its labels as truth.",
+      "prior_work_check": {
+        "scope": "Bounded launch-source catalog and current seed directions inspected; this does not establish world-first novelty.",
+        "references": [
+          "davis-2022",
+          "sterneck-polish-bowern-2021"
+        ],
+        "checked_at": "2026-09-06"
+      },
+      "first_step": "Audit the existing label contingency table and list a bounded image sample with an explicit sampling rationale.",
+      "limitations": [
+        "Candidate suggestion only; detailed protocol and execution are future work.",
+        "Designated seed: zero competitive allocations; evidence-tier baseline awaits official assessment."
+      ],
+      "attribution": [
+        "voynich.win launch curation, AI-assisted by OpenAI Codex; exposed precise model version not recorded"
+      ],
+      "branch_ids": [
+        "layout-paleography"
+      ],
+      "family_id": "seed-direction-confound-information",
+      "status": "candidate"
+    },
+    {
+      "schema_version": "1.0",
+      "id": "direction-decipherment-budget",
+      "title": "Record the flexibility budget of a proposed decipherment",
+      "question": "How many optional readings, exceptions and selection choices are needed before a proposed procedure matches its examples?",
+      "rationale": "A visible flexibility budget turns a vague dispute into inspectable assumptions and testable out-of-sample predictions.",
+      "distinctness": "Operationalizes an audit of a particular complete procedure; it is not a generic request to use AI or try a new language.",
+      "prior_work_check": {
+        "scope": "Bounded launch-source catalog and current seed directions inspected; this does not establish world-first novelty.",
+        "references": [
+          "reddy-knight-2011",
+          "bowern-gaskell-2022"
+        ],
+        "checked_at": "2026-09-06"
+      },
+      "first_step": "Choose one publicly specified procedure and tabulate every discretionary choice on a fixed passage.",
+      "limitations": [
+        "Candidate suggestion only; detailed protocol and execution are future work.",
+        "Designated seed: zero competitive allocations; evidence-tier baseline awaits official assessment."
+      ],
+      "attribution": [
+        "voynich.win launch curation, AI-assisted by OpenAI Codex; exposed precise model version not recorded"
+      ],
+      "branch_ids": [
+        "replication-decipherments"
+      ],
+      "family_id": "seed-direction-decipherment-budget",
+      "status": "candidate"
+    },
+    {
+      "schema_version": "1.0",
+      "id": "direction-negative-control-atlas",
+      "title": "Create a diagnostic failure atlas for candidate mechanisms",
+      "question": "Which deliberately wrong generators pass individual metrics while failing joint held-out tests?",
+      "rationale": "Exposing easy false positives can prevent promising-looking but weak decipherment claims from dominating effort.",
+      "distinctness": "Focus is failure characterization across a finite declared control set; it does not claim novelty for copy/mutate generation itself.",
+      "prior_work_check": {
+        "scope": "Bounded launch-source catalog and current seed directions inspected; this does not establish world-first novelty.",
+        "references": [
+          "timm-2015",
+          "gaskell-bowern-2022",
+          "bowern-gaskell-2022"
+        ],
+        "checked_at": "2026-09-06"
+      },
+      "first_step": "Write a small table of three fixed mechanisms and predeclare two held-out diagnostics before execution.",
+      "limitations": [
+        "Candidate suggestion only; detailed protocol and execution are future work.",
+        "Designated seed: zero competitive allocations; evidence-tier baseline awaits official assessment."
+      ],
+      "attribution": [
+        "voynich.win launch curation, AI-assisted by OpenAI Codex; exposed precise model version not recorded"
+      ],
+      "branch_ids": [
+        "generative-mechanisms"
+      ],
+      "family_id": "seed-direction-negative-control-atlas",
+      "status": "candidate"
+    },
+    {
+      "schema_version": "1.0",
+      "id": "direction-uncertainty-ranking",
+      "title": "Rank research conclusions by uncertainty sensitivity",
+      "question": "Which claimed effects change most when uncertain reading and spacing policies are varied?",
+      "rationale": "A sensitivity ranking could prioritize the image loci whose reinspection would most improve confidence.",
+      "distinctness": "Combines available alternative-reading annotations with effects already present in the baseline, rather than simply requesting another transcription.",
+      "prior_work_check": {
+        "scope": "Bounded launch-source catalog and current seed directions inspected; this does not establish world-first novelty.",
+        "references": [
+          "zl3b",
+          "lindemann-bowern-2020"
+        ],
+        "checked_at": "2026-09-06"
+      },
+      "first_step": "Calculate effect ranges for the three frozen baseline variants and identify the responsible locus set.",
+      "limitations": [
+        "Candidate suggestion only; detailed protocol and execution are future work.",
+        "Designated seed: zero competitive allocations; evidence-tier baseline awaits official assessment."
+      ],
+      "attribution": [
+        "voynich.win launch curation, AI-assisted by OpenAI Codex; exposed precise model version not recorded"
+      ],
+      "branch_ids": [
+        "corpus-integrity"
+      ],
+      "family_id": "seed-direction-uncertainty-ranking",
+      "status": "candidate"
+    }
+  ],
+  "claims": [
+    {
+      "id": "claim-catalog-dating",
+      "title": "Legacy catalog dating and ownership assertions need source dating",
+      "summary": "The older Yale description contains claims that should be examined alongside more recent custodian evidence.",
+      "statement": "The older Yale description contains claims that should be examined alongside more recent custodian evidence.",
+      "sources": [
+        "yale-catalog"
+      ],
+      "branch_ids": [
+        "historical-comparanda"
+      ],
+      "status": "historical_source_audit_needed",
+      "epistemic_status": "historical_source_audit_needed",
+      "test_or_next_step": "Trace one named attribution or chronology to dated primary evidence; do not copy it as settled fact.",
+      "limitations": [
+        "Source reporting is distinguished from project execution and independent validation; no universal truth or full translation is asserted."
+      ],
+      "seed": true,
+      "competitive_points": 0
+    },
+    {
+      "id": "claim-copy-generation",
+      "title": "Copy-related generation is a candidate explanation",
+      "summary": "Timm proposes a mechanism involving similarly written words; this competes with interpretations requiring recoverable linguistic meaning.",
+      "statement": "Timm proposes a mechanism involving similarly written words; this competes with interpretations requiring recoverable linguistic meaning.",
+      "sources": [
+        "timm-2015"
+      ],
+      "branch_ids": [
+        "generative-mechanisms"
+      ],
+      "status": "hypothesis_untested_here",
+      "epistemic_status": "hypothesis_untested_here",
+      "test_or_next_step": "Reconstruct the exact proposed algorithm and compare joint held-out metrics; the seed null is not that algorithm.",
+      "limitations": [
+        "Source reporting is distinguished from project execution and independent validation; no universal truth or full translation is asserted."
+      ],
+      "seed": true,
+      "competitive_points": 0
+    },
+    {
+      "id": "claim-encipherment-compatible",
+      "title": "Some encipherment remains compatible with word-level metrics",
+      "summary": "Bowern and Gaskell investigate cipher mechanisms whose outputs preserve relevant word-level statistics.",
+      "statement": "Bowern and Gaskell investigate cipher mechanisms whose outputs preserve relevant word-level statistics.",
+      "sources": [
+        "bowern-gaskell-2022"
+      ],
+      "branch_ids": [
+        "generative-mechanisms"
+      ],
+      "status": "bounded_compatibility_claim",
+      "epistemic_status": "bounded_compatibility_claim",
+      "test_or_next_step": "Implement named transforms with known plaintext, equal parameter budgets and held-out tests.",
+      "limitations": [
+        "Source reporting is distinguished from project execution and independent validation; no universal truth or full translation is asserted."
+      ],
+      "seed": true,
+      "competitive_points": 0
+    },
+    {
+      "id": "claim-entropy-structure",
+      "title": "Voynich conditional character predictability is unusual in published comparisons",
+      "summary": "Lindemann and Bowern report low conditional entropy across their encodings and corpus comparisons.",
+      "statement": "Lindemann and Bowern report low conditional entropy across their encodings and corpus comparisons.",
+      "sources": [
+        "lindemann-bowern-2020"
+      ],
+      "branch_ids": [
+        "statistical-structure"
+      ],
+      "status": "reported_not_independently_replicated_here",
+      "epistemic_status": "reported_not_independently_replicated_here",
+      "test_or_next_step": "Recover original corpora and estimator conventions; current baseline is a scoped partial reconstruction.",
+      "limitations": [
+        "Source reporting is distinguished from project execution and independent validation; no universal truth or full translation is asserted."
+      ],
+      "seed": true,
+      "competitive_points": 0
+    },
+    {
+      "id": "claim-folio-units",
+      "title": "Physical leaves, page units and scans are distinct",
+      "summary": "Yale's physical-leaf count and IVTFF foldout-locus conventions describe different units.",
+      "statement": "Yale's physical-leaf count and IVTFF foldout-locus conventions describe different units.",
+      "sources": [
+        "ivtff-2"
+      ],
+      "branch_ids": [
+        "layout-paleography"
+      ],
+      "status": "source_supported_methodological_constraint",
+      "epistemic_status": "source_supported_methodological_constraint",
+      "test_or_next_step": "Verify fRos and panel conventions against actual custodian images when accessible.",
+      "limitations": [
+        "Source reporting is distinguished from project execution and independent validation; no universal truth or full translation is asserted."
+      ],
+      "seed": true,
+      "competitive_points": 0
+    },
+    {
+      "id": "claim-hand-variation",
+      "title": "Scribal variation is a paleographic research hypothesis",
+      "summary": "Davis provides paleographic analysis that informs the source's H labels.",
+      "statement": "Davis provides paleographic analysis that informs the source's H labels.",
+      "sources": [
+        "davis-2022"
+      ],
+      "branch_ids": [
+        "layout-paleography"
+      ],
+      "status": "source_specific_annotation",
+      "epistemic_status": "source_specific_annotation",
+      "test_or_next_step": "Inspect glyph evidence independently and distinguish Davis H labels from Currier C labels.",
+      "limitations": [
+        "Source reporting is distinguished from project execution and independent validation; no universal truth or full translation is asserted."
+      ],
+      "seed": true,
+      "competitive_points": 0
+    },
+    {
+      "id": "claim-meaningful-organization",
+      "title": "Statistical organization may constrain explanations",
+      "summary": "Montemurro and Zanette interpret measured word organization as supporting a linguistic account.",
+      "statement": "Montemurro and Zanette interpret measured word organization as supporting a linguistic account.",
+      "sources": [
+        "montemurro-zanette-2013"
+      ],
+      "branch_ids": [
+        "statistical-structure"
+      ],
+      "status": "competing_interpretation",
+      "epistemic_status": "competing_interpretation",
+      "test_or_next_step": "Test the same diagnostics against predeclared structured pseudotext families.",
+      "limitations": [
+        "Source reporting is distinguished from project execution and independent validation; no universal truth or full translation is asserted."
+      ],
+      "seed": true,
+      "competitive_points": 0
+    },
+    {
+      "id": "claim-meaningless-controls",
+      "title": "Human meaningless text can share selected statistics",
+      "summary": "Gaskell and Bowern compare Voynich metrics with human-produced meaningless samples.",
+      "statement": "Gaskell and Bowern compare Voynich metrics with human-produced meaningless samples.",
+      "sources": [
+        "gaskell-bowern-2022"
+      ],
+      "branch_ids": [
+        "generative-mechanisms"
+      ],
+      "status": "competing_interpretation",
+      "epistemic_status": "competing_interpretation",
+      "test_or_next_step": "Acquire original sample-level outputs and examine sampling and feature-selection limits.",
+      "limitations": [
+        "Source reporting is distinguished from project execution and independent validation; no universal truth or full translation is asserted."
+      ],
+      "seed": true,
+      "competitive_points": 0
+    },
+    {
+      "id": "claim-no-solution",
+      "title": "A decipherment must make constrained unseen predictions",
+      "summary": "A proposed solution needs a specified procedure and held-out evidence beyond matching a few selected words or illustrations.",
+      "statement": "A proposed solution needs a specified procedure and held-out evidence beyond matching a few selected words or illustrations.",
+      "sources": [
+        "reddy-knight-2011"
+      ],
+      "branch_ids": [
+        "replication-decipherments"
+      ],
+      "status": "project_methodological_requirement",
+      "epistemic_status": "project_methodological_requirement",
+      "test_or_next_step": "Use research/solution-protocol.md; keep failures and exception budgets visible.",
+      "limitations": [
+        "Source reporting is distinguished from project execution and independent validation; no universal truth or full translation is asserted."
+      ],
+      "seed": true,
+      "competitive_points": 0
+    },
+    {
+      "id": "claim-representation",
+      "title": "EVA units are not recovered language letters",
+      "summary": "EVA encodes visible shapes; composed sequences should not automatically be interpreted as linguistic characters.",
+      "statement": "EVA encodes visible shapes; composed sequences should not automatically be interpreted as linguistic characters.",
+      "sources": [
+        "zandbergen-transliterations"
+      ],
+      "branch_ids": [
+        "corpus-integrity"
+      ],
+      "status": "source_supported_methodological_constraint",
+      "epistemic_status": "source_supported_methodological_constraint",
+      "test_or_next_step": "Compare alternate glyph composition conventions before interpreting entropy or lengths.",
+      "limitations": [
+        "Source reporting is distinguished from project execution and independent validation; no universal truth or full translation is asserted."
+      ],
+      "seed": true,
+      "competitive_points": 0
+    },
+    {
+      "id": "claim-topic-labels",
+      "title": "Text-derived clusters can associate with source labels",
+      "summary": "Sterneck and colleagues report topic groups associated with illustration and scribal categories.",
+      "statement": "Sterneck and colleagues report topic groups associated with illustration and scribal categories.",
+      "sources": [
+        "sterneck-polish-bowern-2021"
+      ],
+      "branch_ids": [
+        "semantic-multimodal"
+      ],
+      "status": "reported_not_independently_replicated_here",
+      "epistemic_status": "reported_not_independently_replicated_here",
+      "test_or_next_step": "Replicate the models and test label permutations within quire/hand; association alone does not assign meanings.",
+      "limitations": [
+        "Source reporting is distinguished from project execution and independent validation; no universal truth or full translation is asserted."
+      ],
+      "seed": true,
+      "competitive_points": 0
+    },
+    {
+      "id": "claim-uncertain-spaces",
+      "title": "Spacing uncertainty can alter token statistics",
+      "summary": "ZL explicitly records ambiguous spaces and alternative readings; derived token counts depend on their treatment.",
+      "statement": "ZL explicitly records ambiguous spaces and alternative readings; derived token counts depend on their treatment.",
+      "sources": [
+        "zl3b"
+      ],
+      "branch_ids": [
+        "corpus-integrity"
+      ],
+      "status": "under_test",
+      "epistemic_status": "under_test",
+      "test_or_next_step": "Compare fixed join, split and strict variants, retaining every exclusion.",
+      "limitations": [
+        "Source reporting is distinguished from project execution and independent validation; no universal truth or full translation is asserted."
+      ],
+      "seed": true,
+      "competitive_points": 0
+    }
+  ],
+  "experiments": [
+    {
+      "schema_version": "1.0",
+      "id": "baseline-clustering-v1",
+      "title": "Source-label association and confounded clustering baseline",
+      "summary": "Unsupervised encoded-symbol page clusters are compared with ZL section and hand annotations; global and within-quire permutations expose confounding limits.",
+      "status": "executed_descriptive_seed_baseline",
+      "branch_ids": [
+        "layout-paleography"
+      ],
+      "method_ids": [
+        "method-cluster"
+      ],
+      "family_id": "seed-baseline-clustering",
+      "protocol": "protocols/launch-seed-v1.json",
+      "protocol_sha256": "c4588637a4090e3c5f91c426df9c7565798f6ca1fef2d9ea516107dd8ba9ba47",
+      "registration_status": "Descriptive launch baseline, frozen locally after a join-variant engineering smoke run; not preregistered confirmatory science.",
+      "comparison": "experiments/comparisons/launch-seed-v1.json",
+      "outputs": [
+        {
+          "variant": "join",
+          "path": "experiments/runs/launch-seed-v1/2026-09-06T184558-358352Z-9b662cb7/output.json",
+          "json_pointer": "/clustering"
+        },
+        {
+          "variant": "split",
+          "path": "experiments/runs/launch-seed-v1/2026-09-06T184600-812043Z-129fed73/output.json",
+          "json_pointer": "/clustering"
+        },
+        {
+          "variant": "strict",
+          "path": "experiments/runs/launch-seed-v1/2026-09-06T184603-376651Z-72d40bae/output.json",
+          "json_pointer": "/clustering"
+        }
+      ],
+      "report": "experiments/baselines/clustering.md",
+      "inputs": [
+        "data/manifests/zl3b.json",
+        "data/manifests/alice-english.json"
+      ],
+      "controls": [
+        "meaningful English Alice prose",
+        "authored known-plaintext templates",
+        "equal-length symbol shuffle",
+        "authored bounded copy/mutate pseudotext",
+        "type-appropriate positional/label permutations"
+      ],
+      "independent_human_reproduction": "pending",
+      "seed": true,
+      "competitive_points": 0,
+      "limitations": [
+        "These are descriptive instrument baselines, not new language identifications or translation claims.",
+        "Source-specific labels and encoded units remain uncertain; all three registered variants are retained."
+      ],
+      "compact_summaries": [
+        {
+          "variant": "join",
+          "path": "experiments/summaries/join-v1.json",
+          "bytes": 11531,
+          "sha256": "6674256a65df31863fa69dd11f11f10b27edad41c25b6a2b8a403eb8b4091693"
+        },
+        {
+          "variant": "split",
+          "path": "experiments/summaries/split-v1.json",
+          "bytes": 11427,
+          "sha256": "a8a48f4c39c5a09c55fd692affb665088576cf21043767a2a385a45757cbc134"
+        },
+        {
+          "variant": "strict",
+          "path": "experiments/summaries/strict-v1.json",
+          "bytes": 11457,
+          "sha256": "fdbae5e6ed0f4b859a1fd2716942996b20c482e12f1c9366f0628d83f25d7673"
+        }
+      ]
+    },
+    {
+      "schema_version": "1.0",
+      "id": "baseline-entropy-v1",
+      "title": "Conditional symbol entropy under declared encodings",
+      "summary": "Empirical next-symbol entropy is compared at equal symbol counts; word-boundary inclusion is a separately labeled sensitivity analysis.",
+      "status": "executed_descriptive_seed_baseline",
+      "branch_ids": [
+        "statistical-structure"
+      ],
+      "method_ids": [
+        "method-entropy"
+      ],
+      "family_id": "seed-baseline-entropy",
+      "protocol": "protocols/launch-seed-v1.json",
+      "protocol_sha256": "c4588637a4090e3c5f91c426df9c7565798f6ca1fef2d9ea516107dd8ba9ba47",
+      "registration_status": "Descriptive launch baseline, frozen locally after a join-variant engineering smoke run; not preregistered confirmatory science.",
+      "comparison": "experiments/comparisons/launch-seed-v1.json",
+      "outputs": [
+        {
+          "variant": "join",
+          "path": "experiments/runs/launch-seed-v1/2026-09-06T184558-358352Z-9b662cb7/output.json",
+          "json_pointer": "/entropy"
+        },
+        {
+          "variant": "split",
+          "path": "experiments/runs/launch-seed-v1/2026-09-06T184600-812043Z-129fed73/output.json",
+          "json_pointer": "/entropy"
+        },
+        {
+          "variant": "strict",
+          "path": "experiments/runs/launch-seed-v1/2026-09-06T184603-376651Z-72d40bae/output.json",
+          "json_pointer": "/entropy"
+        }
+      ],
+      "report": "experiments/baselines/entropy.md",
+      "inputs": [
+        "data/manifests/zl3b.json",
+        "data/manifests/alice-english.json"
+      ],
+      "controls": [
+        "meaningful English Alice prose",
+        "authored known-plaintext templates",
+        "equal-length symbol shuffle",
+        "authored bounded copy/mutate pseudotext",
+        "type-appropriate positional/label permutations"
+      ],
+      "independent_human_reproduction": "pending",
+      "seed": true,
+      "competitive_points": 0,
+      "limitations": [
+        "These are descriptive instrument baselines, not new language identifications or translation claims.",
+        "Source-specific labels and encoded units remain uncertain; all three registered variants are retained."
+      ],
+      "compact_summaries": [
+        {
+          "variant": "join",
+          "path": "experiments/summaries/join-v1.json",
+          "bytes": 11531,
+          "sha256": "6674256a65df31863fa69dd11f11f10b27edad41c25b6a2b8a403eb8b4091693"
+        },
+        {
+          "variant": "split",
+          "path": "experiments/summaries/split-v1.json",
+          "bytes": 11427,
+          "sha256": "a8a48f4c39c5a09c55fd692affb665088576cf21043767a2a385a45757cbc134"
+        },
+        {
+          "variant": "strict",
+          "path": "experiments/summaries/strict-v1.json",
+          "bytes": 11457,
+          "sha256": "fdbae5e6ed0f4b859a1fd2716942996b20c482e12f1c9366f0628d83f25d7673"
+        }
+      ]
+    },
+    {
+      "schema_version": "1.0",
+      "id": "baseline-frequency-v1",
+      "title": "Encoded-symbol frequency and token-length baselines",
+      "summary": "Full paragraph-token distributions and equal-token comparison with English prose, authored plaintext, symbol shuffles and copy/mutate pseudotext.",
+      "status": "executed_descriptive_seed_baseline",
+      "branch_ids": [
+        "statistical-structure"
+      ],
+      "method_ids": [
+        "method-frequency"
+      ],
+      "family_id": "seed-baseline-frequency",
+      "protocol": "protocols/launch-seed-v1.json",
+      "protocol_sha256": "c4588637a4090e3c5f91c426df9c7565798f6ca1fef2d9ea516107dd8ba9ba47",
+      "registration_status": "Descriptive launch baseline, frozen locally after a join-variant engineering smoke run; not preregistered confirmatory science.",
+      "comparison": "experiments/comparisons/launch-seed-v1.json",
+      "outputs": [
+        {
+          "variant": "join",
+          "path": "experiments/runs/launch-seed-v1/2026-09-06T184558-358352Z-9b662cb7/output.json",
+          "json_pointer": "/frequency"
+        },
+        {
+          "variant": "split",
+          "path": "experiments/runs/launch-seed-v1/2026-09-06T184600-812043Z-129fed73/output.json",
+          "json_pointer": "/frequency"
+        },
+        {
+          "variant": "strict",
+          "path": "experiments/runs/launch-seed-v1/2026-09-06T184603-376651Z-72d40bae/output.json",
+          "json_pointer": "/frequency"
+        }
+      ],
+      "report": "experiments/baselines/frequency.md",
+      "inputs": [
+        "data/manifests/zl3b.json",
+        "data/manifests/alice-english.json"
+      ],
+      "controls": [
+        "meaningful English Alice prose",
+        "authored known-plaintext templates",
+        "equal-length symbol shuffle",
+        "authored bounded copy/mutate pseudotext",
+        "type-appropriate positional/label permutations"
+      ],
+      "independent_human_reproduction": "pending",
+      "seed": true,
+      "competitive_points": 0,
+      "limitations": [
+        "These are descriptive instrument baselines, not new language identifications or translation claims.",
+        "Source-specific labels and encoded units remain uncertain; all three registered variants are retained."
+      ],
+      "compact_summaries": [
+        {
+          "variant": "join",
+          "path": "experiments/summaries/join-v1.json",
+          "bytes": 11531,
+          "sha256": "6674256a65df31863fa69dd11f11f10b27edad41c25b6a2b8a403eb8b4091693"
+        },
+        {
+          "variant": "split",
+          "path": "experiments/summaries/split-v1.json",
+          "bytes": 11427,
+          "sha256": "a8a48f4c39c5a09c55fd692affb665088576cf21043767a2a385a45757cbc134"
+        },
+        {
+          "variant": "strict",
+          "path": "experiments/summaries/strict-v1.json",
+          "bytes": 11457,
+          "sha256": "fdbae5e6ed0f4b859a1fd2716942996b20c482e12f1c9366f0628d83f25d7673"
+        }
+      ]
+    },
+    {
+      "schema_version": "1.0",
+      "id": "baseline-integrity-v1",
+      "title": "Corpus coverage and uncertainty audit",
+      "summary": "All 5,385 ZL loci parsed; 227 ZL page units versus 226 GC page units. GC lacks a page record for f116v. Counts refer to readings, not physical scans.",
+      "status": "executed_descriptive_seed_baseline",
+      "branch_ids": [
+        "corpus-integrity"
+      ],
+      "method_ids": [
+        "method-parse"
+      ],
+      "family_id": "seed-baseline-integrity",
+      "protocol": "protocols/launch-seed-v1.json",
+      "protocol_sha256": "c4588637a4090e3c5f91c426df9c7565798f6ca1fef2d9ea516107dd8ba9ba47",
+      "registration_status": "Descriptive launch baseline, frozen locally after a join-variant engineering smoke run; not preregistered confirmatory science.",
+      "comparison": "experiments/comparisons/launch-seed-v1.json",
+      "outputs": [
+        {
+          "variant": "join",
+          "path": "experiments/runs/launch-seed-v1/2026-09-06T184558-358352Z-9b662cb7/output.json",
+          "json_pointer": "/integrity"
+        },
+        {
+          "variant": "split",
+          "path": "experiments/runs/launch-seed-v1/2026-09-06T184600-812043Z-129fed73/output.json",
+          "json_pointer": "/integrity"
+        },
+        {
+          "variant": "strict",
+          "path": "experiments/runs/launch-seed-v1/2026-09-06T184603-376651Z-72d40bae/output.json",
+          "json_pointer": "/integrity"
+        }
+      ],
+      "report": "experiments/baselines/integrity.md",
+      "inputs": [
+        "data/manifests/zl3b.json",
+        "data/manifests/alice-english.json"
+      ],
+      "controls": [
+        "meaningful English Alice prose",
+        "authored known-plaintext templates",
+        "equal-length symbol shuffle",
+        "authored bounded copy/mutate pseudotext",
+        "type-appropriate positional/label permutations"
+      ],
+      "independent_human_reproduction": "pending",
+      "seed": true,
+      "competitive_points": 0,
+      "limitations": [
+        "These are descriptive instrument baselines, not new language identifications or translation claims.",
+        "Source-specific labels and encoded units remain uncertain; all three registered variants are retained."
+      ],
+      "compact_summaries": [
+        {
+          "variant": "join",
+          "path": "experiments/summaries/join-v1.json",
+          "bytes": 11531,
+          "sha256": "6674256a65df31863fa69dd11f11f10b27edad41c25b6a2b8a403eb8b4091693"
+        },
+        {
+          "variant": "split",
+          "path": "experiments/summaries/split-v1.json",
+          "bytes": 11427,
+          "sha256": "a8a48f4c39c5a09c55fd692affb665088576cf21043767a2a385a45757cbc134"
+        },
+        {
+          "variant": "strict",
+          "path": "experiments/summaries/strict-v1.json",
+          "bytes": 11457,
+          "sha256": "fdbae5e6ed0f4b859a1fd2716942996b20c482e12f1c9366f0628d83f25d7673"
+        }
+      ]
+    },
+    {
+      "schema_version": "1.0",
+      "id": "baseline-position-v1",
+      "title": "Locus-position and repetition baselines",
+      "summary": "First-token lengths and adjacent repetition on P0 loci are compared to 39 within-locus token shuffles for each normalization variant.",
+      "status": "executed_descriptive_seed_baseline",
+      "branch_ids": [
+        "statistical-structure"
+      ],
+      "method_ids": [
+        "method-position"
+      ],
+      "family_id": "seed-baseline-position",
+      "protocol": "protocols/launch-seed-v1.json",
+      "protocol_sha256": "c4588637a4090e3c5f91c426df9c7565798f6ca1fef2d9ea516107dd8ba9ba47",
+      "registration_status": "Descriptive launch baseline, frozen locally after a join-variant engineering smoke run; not preregistered confirmatory science.",
+      "comparison": "experiments/comparisons/launch-seed-v1.json",
+      "outputs": [
+        {
+          "variant": "join",
+          "path": "experiments/runs/launch-seed-v1/2026-09-06T184558-358352Z-9b662cb7/output.json",
+          "json_pointer": "/position"
+        },
+        {
+          "variant": "split",
+          "path": "experiments/runs/launch-seed-v1/2026-09-06T184600-812043Z-129fed73/output.json",
+          "json_pointer": "/position"
+        },
+        {
+          "variant": "strict",
+          "path": "experiments/runs/launch-seed-v1/2026-09-06T184603-376651Z-72d40bae/output.json",
+          "json_pointer": "/position"
+        }
+      ],
+      "report": "experiments/baselines/position.md",
+      "inputs": [
+        "data/manifests/zl3b.json",
+        "data/manifests/alice-english.json"
+      ],
+      "controls": [
+        "meaningful English Alice prose",
+        "authored known-plaintext templates",
+        "equal-length symbol shuffle",
+        "authored bounded copy/mutate pseudotext",
+        "type-appropriate positional/label permutations"
+      ],
+      "independent_human_reproduction": "pending",
+      "seed": true,
+      "competitive_points": 0,
+      "limitations": [
+        "These are descriptive instrument baselines, not new language identifications or translation claims.",
+        "Source-specific labels and encoded units remain uncertain; all three registered variants are retained."
+      ],
+      "compact_summaries": [
+        {
+          "variant": "join",
+          "path": "experiments/summaries/join-v1.json",
+          "bytes": 11531,
+          "sha256": "6674256a65df31863fa69dd11f11f10b27edad41c25b6a2b8a403eb8b4091693"
+        },
+        {
+          "variant": "split",
+          "path": "experiments/summaries/split-v1.json",
+          "bytes": 11427,
+          "sha256": "a8a48f4c39c5a09c55fd692affb665088576cf21043767a2a385a45757cbc134"
+        },
+        {
+          "variant": "strict",
+          "path": "experiments/summaries/strict-v1.json",
+          "bytes": 11457,
+          "sha256": "fdbae5e6ed0f4b859a1fd2716942996b20c482e12f1c9366f0628d83f25d7673"
+        }
+      ]
+    }
+  ],
+  "leaderboard": [],
+  "awards": [],
+  "grading": {
+    "profile_id": "voynich-claude-subscription-0.1",
+    "status": "unconfigured",
+    "ranked_intake_enabled": false
+  },
+  "gaps": [
+    "Ranked intake awaits a configured bounded subscription runner, actual-model calibration and the real integration pilot.",
+    "This seed projection contains no competitive awards. It cannot ingest unsigned contributor decisions."
+  ]
+}

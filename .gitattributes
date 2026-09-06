@@ -1,0 +1,8 @@
+* text=auto eol=lf
+data/third-party/** -text
+data/corpora/** -text -whitespace
+*.png -text
+*.jpg -text
+*.jpeg -text
+*.pdf -text
+*.zip -text

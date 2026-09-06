@@ -1,0 +1,58 @@
+{
+  "schema_version": "1.0",
+  "id": "2026-09-06T190131-737982Z-e291fdbb",
+  "parent_task": "task-05-entropy-sensitivity",
+  "parent_claim": "claim-entropy-structure",
+  "protocol_sha256": "4a7abe21e3b66ad9c6a381fb3b44341598db2c1c436452c67d4c26df16eac7fd",
+  "variant": "join",
+  "seed": 408,
+  "parameters": {
+    "variant": "join"
+  },
+  "inputs": {
+    "data/corpora/ZL3b-n.txt": "bf5b6d4ac1e3a51b1847a9c388318d609020441ccd56984c901c32b09beccafc",
+    "data/corpora/pg11.txt": "01b38ea4c710a84bc18d0bd41271a5a1a92b94e97b2812f4dece97d4a694725e"
+  },
+  "software": {
+    "tools/research/engine.py": "2c7a7c1f4a10a39d75e6486ff3051c0cd8962facb89bd828b23f7fb7d5a13326",
+    "tools/research/research.py": "982c172f6e2ddbcf995c57ee85782c8c1328a3f3a381e8f20c0c4059e9c386c0"
+  },
+  "command": [
+    "python",
+    "tools/research/research.py",
+    "_execute",
+    "--variant",
+    "join",
+    "--seed",
+    "408",
+    "--output",
+    "artifacts/local/clean-env-reproduction-v1/runs/2026-09-06T190131-737982Z-e291fdbb/output.json"
+  ],
+  "environment": {
+    "python": "3.14.0",
+    "implementation": "CPython",
+    "platform": "Windows-11-10.0.26200-SP0",
+    "dependencies": "Python standard library only"
+  },
+  "started_at": "2026-09-06T19:01:31.825432Z",
+  "ended_at": "2026-09-06T19:01:33.455746Z",
+  "elapsed_seconds": 1.6294455000024755,
+  "state": "completed",
+  "exit_code": 0,
+  "stdout": "stdout.txt",
+  "stderr": "stderr.txt",
+  "outputs": {
+    "output.json": "46abe268dd27a8f12ff7d35a7b7f347252410abbcecd8f369a7e5d70e44eff6c"
+  },
+  "ai_usage": {
+    "status": "none",
+    "tools": [],
+    "reproducibility_notes": "This execution uses deterministic Python only. Disclose AI assistance to protocol/code/report authorship separately."
+  },
+  "resource_usage": {
+    "maximum_wall_seconds": 60,
+    "model_calls": 0,
+    "network_requests": 0,
+    "memory_limit": "Input/output bounded; trusted CPU engine only. No OS memory sandbox is claimed."
+  }
+}

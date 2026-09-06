@@ -1,0 +1,20 @@
+{
+  "id": "claim-copy-generation",
+  "title": "Copy-related generation is a candidate explanation",
+  "summary": "Timm proposes a mechanism involving similarly written words; this competes with interpretations requiring recoverable linguistic meaning.",
+  "statement": "Timm proposes a mechanism involving similarly written words; this competes with interpretations requiring recoverable linguistic meaning.",
+  "sources": [
+    "timm-2015"
+  ],
+  "branch_ids": [
+    "generative-mechanisms"
+  ],
+  "status": "hypothesis_untested_here",
+  "epistemic_status": "hypothesis_untested_here",
+  "test_or_next_step": "Reconstruct the exact proposed algorithm and compare joint held-out metrics; the seed null is not that algorithm.",
+  "limitations": [
+    "Source reporting is distinguished from project execution and independent validation; no universal truth or full translation is asserted."
+  ],
+  "seed": true,
+  "competitive_points": 0
+}

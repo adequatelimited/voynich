@@ -1,0 +1,20 @@
+{
+  "id": "claim-folio-units",
+  "title": "Physical leaves, page units and scans are distinct",
+  "summary": "Yale's physical-leaf count and IVTFF foldout-locus conventions describe different units.",
+  "statement": "Yale's physical-leaf count and IVTFF foldout-locus conventions describe different units.",
+  "sources": [
+    "ivtff-2"
+  ],
+  "branch_ids": [
+    "layout-paleography"
+  ],
+  "status": "source_supported_methodological_constraint",
+  "epistemic_status": "source_supported_methodological_constraint",
+  "test_or_next_step": "Verify fRos and panel conventions against actual custodian images when accessible.",
+  "limitations": [
+    "Source reporting is distinguished from project execution and independent validation; no universal truth or full translation is asserted."
+  ],
+  "seed": true,
+  "competitive_points": 0
+}

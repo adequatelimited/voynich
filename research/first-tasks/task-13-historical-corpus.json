@@ -1,0 +1,15 @@
+{
+  "id": "task-13-historical-corpus",
+  "title": "Acquire a historical herbal comparison text",
+  "summary": "Find a custodian-backed readable text and establish item-level redistribution terms.",
+  "branch_ids": [
+    "historical-comparanda"
+  ],
+  "difficulty": "intermediate",
+  "status": "open",
+  "acceptance_evidence": "Usable pinned source, normalization documentation and actual matched baseline run.",
+  "tier_anchor": 5,
+  "scoring_note": "Indicative evidence anchor only. Mission gates, family overlap and prior seed baselines govern any AI assessment; tasks reserve neither ownership nor points.",
+  "seed": true,
+  "competitive_points": 0
+}

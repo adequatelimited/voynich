@@ -1,0 +1,496 @@
+{
+  "schema_version": "1.0",
+  "purpose": "Bounded discovery index for overlap checks; listed source files still require retrieval for any conclusion depending on their full evidence.",
+  "collections": {
+    "sources": [
+      {
+        "id": "alice-english",
+        "title": "Alice's Adventures in Wonderland, Project Gutenberg eBook 11",
+        "url": "https://www.gutenberg.org/ebooks/11",
+        "canonical_url": "https://www.gutenberg.org/ebooks/11"
+      },
+      {
+        "id": "bowern-gaskell-2022",
+        "title": "Enciphered after all?",
+        "url": "https://ceur-ws.org/Vol-3313/paper6.pdf",
+        "canonical_url": "https://ceur-ws.org/Vol-3313/paper6.pdf"
+      },
+      {
+        "id": "davis-2022",
+        "title": "Voynich Paleography",
+        "url": "https://ceur-ws.org/Vol-3313/keynote2.pdf",
+        "canonical_url": "https://ceur-ws.org/Vol-3313/keynote2.pdf"
+      },
+      {
+        "id": "dimperio-1978",
+        "title": "The Voynich Manuscript: An Elegant Enigma",
+        "url": "https://www.nsa.gov/portals/75/documents/about/cryptologic-heritage/historical-figures-publications/publications/misc/voynich_manuscript.pdf",
+        "canonical_url": "https://www.nsa.gov/portals/75/documents/about/cryptologic-heritage/historical-figures-publications/publications/misc/voynich_manuscript.pdf"
+      },
+      {
+        "id": "dioscorides-comparator",
+        "title": "Of Medical Substances: Dioscurides Neapolitanus",
+        "url": "https://www.loc.gov/resource/gdcwdl.wdl_10690/?sp=9&st=gallery",
+        "canonical_url": "https://www.loc.gov/resource/gdcwdl.wdl_10690/?sp=9&st=gallery"
+      },
+      {
+        "id": "gaskell-bowern-2022",
+        "title": "Gibberish after all?",
+        "url": "https://ceur-ws.org/Vol-3313/paper4.pdf",
+        "canonical_url": "https://ceur-ws.org/Vol-3313/paper4.pdf"
+      },
+      {
+        "id": "gc2a",
+        "title": "Glen Claston v101 transliteration, GC2a",
+        "url": "https://voynich.nu/data/GC2a-n.txt",
+        "canonical_url": "https://voynich.nu/data/GC2a-n.txt"
+      },
+      {
+        "id": "ivtff-2",
+        "title": "Intermediate Voynich Transliteration File Format 2.0",
+        "url": "https://voynich.nu/software/ivtt/IVTFF_format.pdf",
+        "canonical_url": "https://voynich.nu/software/ivtt/IVTFF_format.pdf"
+      },
+      {
+        "id": "lindemann-bowern-2020",
+        "title": "Character Entropy in Modern and Historical Texts",
+        "url": "https://arxiv.org/abs/2010.14697v2",
+        "canonical_url": "https://arxiv.org/abs/2010.14697v2"
+      },
+      {
+        "id": "montemurro-zanette-2013",
+        "title": "Keywords and Co-Occurrence Patterns in the Voynich Manuscript",
+        "url": "https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0066344",
+        "canonical_url": "https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0066344"
+      },
+      {
+        "id": "reddy-knight-2011",
+        "title": "What We Know About The Voynich Manuscript",
+        "url": "https://aclanthology.org/W11-1511/",
+        "canonical_url": "https://aclanthology.org/W11-1511/"
+      },
+      {
+        "id": "sterneck-polish-bowern-2021",
+        "title": "Topic Modeling in the Voynich Manuscript",
+        "url": "https://arxiv.org/abs/2107.02858",
+        "canonical_url": "https://arxiv.org/abs/2107.02858"
+      },
+      {
+        "id": "takahashi-original",
+        "title": "Takeshi Takahashi original transcription pages",
+        "url": "https://www.voynich.com/pages/",
+        "canonical_url": "https://www.voynich.com/pages/"
+      },
+      {
+        "id": "timm-2015",
+        "title": "How the Voynich Manuscript was created",
+        "url": "https://arxiv.org/abs/1407.6639v3",
+        "canonical_url": "https://arxiv.org/abs/1407.6639v3"
+      },
+      {
+        "id": "voy2022",
+        "title": "International Conference on the Voynich Manuscript 2022 proceedings",
+        "url": "https://ceur-ws.org/Vol-3313/",
+        "canonical_url": "https://ceur-ws.org/Vol-3313/"
+      },
+      {
+        "id": "voynich-public-code",
+        "title": "Voynich-public companion research repository",
+        "url": "https://github.com/chirila/Voynich-public",
+        "canonical_url": "https://github.com/chirila/Voynich-public"
+      },
+      {
+        "id": "yale-catalog",
+        "title": "Beinecke MS 408 physical description",
+        "url": "https://pre1600ms.beinecke.library.yale.edu/docs/pre1600.ms408.HTM",
+        "canonical_url": "https://pre1600ms.beinecke.library.yale.edu/docs/pre1600.ms408.HTM"
+      },
+      {
+        "id": "yale-images",
+        "title": "Beinecke MS 408 official digital object",
+        "url": "https://collections.library.yale.edu/catalog/2002046",
+        "canonical_url": "https://collections.library.yale.edu/catalog/2002046"
+      },
+      {
+        "id": "yale-overview",
+        "title": "Voynich Manuscript: Beinecke collection overview",
+        "url": "https://beinecke.library.yale.edu/collections/highlights/voynich-manuscript",
+        "canonical_url": "https://beinecke.library.yale.edu/collections/highlights/voynich-manuscript"
+      },
+      {
+        "id": "yale-reuse",
+        "title": "Yale Library reuse, permissions and copyright policy",
+        "url": "https://library.yale.edu/policies/reuse",
+        "canonical_url": "https://library.yale.edu/policies/reuse"
+      },
+      {
+        "id": "zandbergen-2022",
+        "title": "Transliteration of the Voynich MS Text",
+        "url": "https://ceur-ws.org/Vol-3313/keynote1.pdf",
+        "canonical_url": "https://ceur-ws.org/Vol-3313/keynote1.pdf"
+      },
+      {
+        "id": "zandbergen-rights",
+        "title": "voynich.nu copyright and transliteration licensing",
+        "url": "https://voynich.nu/roadmap.html",
+        "canonical_url": "https://voynich.nu/roadmap.html"
+      },
+      {
+        "id": "zandbergen-transliterations",
+        "title": "Voynich transliteration resources and version table",
+        "url": "https://www.voynich.nu/transcr.html",
+        "canonical_url": "https://www.voynich.nu/transcr.html"
+      },
+      {
+        "id": "zl3b",
+        "title": "Zandbergen-Landini transliteration, ZL3b",
+        "url": "https://voynich.nu/data/ZL3b-n.txt",
+        "canonical_url": "https://voynich.nu/data/ZL3b-n.txt"
+      }
+    ],
+    "branches": [
+      {
+        "id": "corpus-integrity",
+        "title": "Corpus integrity and uncertainty",
+        "question": "Which uncertainty and segmentation choices change downstream conclusions?"
+      },
+      {
+        "id": "generative-mechanisms",
+        "title": "Cryptographic and generative mechanisms",
+        "question": "Which bounded cipher or pseudotext families jointly predict held-out diagnostics?"
+      },
+      {
+        "id": "historical-comparanda",
+        "title": "Historical comparanda and provenance",
+        "question": "Which dated textual, visual and cipher practices impose useful constraints?"
+      },
+      {
+        "id": "layout-paleography",
+        "title": "Codicology, paleography and layout",
+        "question": "Which text differences survive controls for page layout, quire and source-specific hand labels?"
+      },
+      {
+        "id": "morphology-segmentation",
+        "title": "Morphology and segmentation",
+        "question": "What structure persists when apparent spaces and glyph units are varied?"
+      },
+      {
+        "id": "replication-decipherments",
+        "title": "Replication and candidate decipherments",
+        "question": "Can a fully specified procedure make predeclared predictions on unseen manuscript material?"
+      },
+      {
+        "id": "semantic-multimodal",
+        "title": "Semantic and multimodal constraints",
+        "question": "Do text-image associations survive blinded annotation and shuffled associations?"
+      },
+      {
+        "id": "statistical-structure",
+        "title": "Statistical structure",
+        "question": "Which distributional and positional effects differ from declared matched controls?"
+      }
+    ],
+    "methods": [
+      {
+        "id": "method-agreement",
+        "title": "Independent annotation and reading agreement"
+      },
+      {
+        "id": "method-cipher",
+        "title": "Bounded cipher-family testing"
+      },
+      {
+        "id": "method-cluster",
+        "title": "Clustering and topic-model auditing"
+      },
+      {
+        "id": "method-entropy",
+        "title": "Conditional entropy diagnostics"
+      },
+      {
+        "id": "method-frequency",
+        "title": "Frequency and encoded token lengths"
+      },
+      {
+        "id": "method-generative",
+        "title": "Pseudotext and mechanism controls"
+      },
+      {
+        "id": "method-history",
+        "title": "Historical constraint and provenance testing"
+      },
+      {
+        "id": "method-multimodal",
+        "title": "Blinded image-text association"
+      },
+      {
+        "id": "method-ngram",
+        "title": "Held-out sequence models"
+      },
+      {
+        "id": "method-parse",
+        "title": "Uncertainty-preserving corpus parsing"
+      },
+      {
+        "id": "method-position",
+        "title": "Line position and local repetition"
+      },
+      {
+        "id": "method-replication",
+        "title": "Explicit replication and falsification"
+      },
+      {
+        "id": "method-segmentation",
+        "title": "Morphology and segmentation sensitivity"
+      },
+      {
+        "id": "method-stratification",
+        "title": "Codicological stratification"
+      }
+    ],
+    "claims": [
+      {
+        "id": "claim-catalog-dating",
+        "title": "Legacy catalog dating and ownership assertions need source dating"
+      },
+      {
+        "id": "claim-copy-generation",
+        "title": "Copy-related generation is a candidate explanation"
+      },
+      {
+        "id": "claim-encipherment-compatible",
+        "title": "Some encipherment remains compatible with word-level metrics"
+      },
+      {
+        "id": "claim-entropy-structure",
+        "title": "Voynich conditional character predictability is unusual in published comparisons"
+      },
+      {
+        "id": "claim-folio-units",
+        "title": "Physical leaves, page units and scans are distinct"
+      },
+      {
+        "id": "claim-hand-variation",
+        "title": "Scribal variation is a paleographic research hypothesis"
+      },
+      {
+        "id": "claim-meaningful-organization",
+        "title": "Statistical organization may constrain explanations"
+      },
+      {
+        "id": "claim-meaningless-controls",
+        "title": "Human meaningless text can share selected statistics"
+      },
+      {
+        "id": "claim-no-solution",
+        "title": "A decipherment must make constrained unseen predictions"
+      },
+      {
+        "id": "claim-representation",
+        "title": "EVA units are not recovered language letters"
+      },
+      {
+        "id": "claim-topic-labels",
+        "title": "Text-derived clusters can associate with source labels"
+      },
+      {
+        "id": "claim-uncertain-spaces",
+        "title": "Spacing uncertainty can alter token statistics"
+      }
+    ],
+    "directions": [
+      {
+        "id": "direction-confound-information",
+        "title": "Measure what additional annotation would resolve section-hand confounding",
+        "question": "Which underrepresented combinations of section and source-specific hand labels would best distinguish competing explanations?",
+        "family_id": "seed-direction-confound-information"
+      },
+      {
+        "id": "direction-decipherment-budget",
+        "title": "Record the flexibility budget of a proposed decipherment",
+        "question": "How many optional readings, exceptions and selection choices are needed before a proposed procedure matches its examples?",
+        "family_id": "seed-direction-decipherment-budget"
+      },
+      {
+        "id": "direction-negative-control-atlas",
+        "title": "Create a diagnostic failure atlas for candidate mechanisms",
+        "question": "Which deliberately wrong generators pass individual metrics while failing joint held-out tests?",
+        "family_id": "seed-direction-negative-control-atlas"
+      },
+      {
+        "id": "direction-uncertainty-ranking",
+        "title": "Rank research conclusions by uncertainty sensitivity",
+        "question": "Which claimed effects change most when uncertain reading and spacing policies are varied?",
+        "family_id": "seed-direction-uncertainty-ranking"
+      }
+    ],
+    "tasks": [
+      {
+        "id": "task-01-source-rights",
+        "title": "Verify one source's reuse and version record"
+      },
+      {
+        "id": "task-02-align-readings",
+        "title": "Align a bounded ZL/GC sample"
+      },
+      {
+        "id": "task-03-foldout-index",
+        "title": "Check foldout and missing-leaf indexing"
+      },
+      {
+        "id": "task-04-parser-audit",
+        "title": "Audit uncertainty parser edge cases"
+      },
+      {
+        "id": "task-05-entropy-sensitivity",
+        "title": "Reproduce entropy and space-policy baselines"
+      },
+      {
+        "id": "task-06-length-matching",
+        "title": "Check sample-length bias in frequency metrics"
+      },
+      {
+        "id": "task-07-line-map",
+        "title": "Validate a locus-to-physical-line sample"
+      },
+      {
+        "id": "task-08-segmentation-protocol",
+        "title": "Propose a bounded segmentation comparison"
+      },
+      {
+        "id": "task-09-generator-controls",
+        "title": "Test one finite pseudotext family"
+      },
+      {
+        "id": "task-10-cipher-benchmark",
+        "title": "Build a known-plaintext cipher diagnostic"
+      },
+      {
+        "id": "task-11-hand-confounds",
+        "title": "Audit section-hand-quire confounding"
+      },
+      {
+        "id": "task-12-blind-image-protocol",
+        "title": "Design a blinded image-label pilot"
+      },
+      {
+        "id": "task-13-historical-corpus",
+        "title": "Acquire a historical herbal comparison text"
+      },
+      {
+        "id": "task-14-replicate-entropy",
+        "title": "Extend the partial entropy replication"
+      },
+      {
+        "id": "task-15-replicate-topics",
+        "title": "Reconstruct one topic-model experiment"
+      },
+      {
+        "id": "task-16-unique-direction",
+        "title": "Suggest a useful distinct research direction"
+      },
+      {
+        "id": "task-17-source-chronology",
+        "title": "Check one historical attribution chain"
+      },
+      {
+        "id": "task-18-instrument-accessibility",
+        "title": "Improve access to a research instrument"
+      }
+    ],
+    "experiments": [
+      {
+        "id": "baseline-clustering-v1",
+        "title": "Source-label association and confounded clustering baseline",
+        "family_id": "seed-baseline-clustering"
+      },
+      {
+        "id": "baseline-entropy-v1",
+        "title": "Conditional symbol entropy under declared encodings",
+        "family_id": "seed-baseline-entropy"
+      },
+      {
+        "id": "baseline-frequency-v1",
+        "title": "Encoded-symbol frequency and token-length baselines",
+        "family_id": "seed-baseline-frequency"
+      },
+      {
+        "id": "baseline-integrity-v1",
+        "title": "Corpus coverage and uncertainty audit",
+        "family_id": "seed-baseline-integrity"
+      },
+      {
+        "id": "baseline-position-v1",
+        "title": "Locus-position and repetition baselines",
+        "family_id": "seed-baseline-position"
+      }
+    ]
+  },
+  "seed_families": [
+    {
+      "id": "seed-source-catalog",
+      "scope": "This curated bounded source inventory and rights/provenance records.",
+      "seed_baseline": null
+    },
+    {
+      "id": "seed-corpus-parser",
+      "scope": "Pinned ZL/GC corpora, folio/locus metadata and tested EVA uncertainty parser.",
+      "seed_baseline": null
+    },
+    {
+      "id": "seed-research-navigation",
+      "scope": "Eight initial branches, fourteen method cards, twelve claims and eighteen bounded tasks.",
+      "seed_baseline": null
+    },
+    {
+      "id": "seed-local-harness",
+      "scope": "CPU-only frozen-protocol prepare/run/compare/bundle workflow with all attempts and controls.",
+      "seed_baseline": null
+    },
+    {
+      "id": "seed-baseline-integrity",
+      "scope": "Coverage and normalization audit of pinned ZL3b.",
+      "seed_baseline": null
+    },
+    {
+      "id": "seed-baseline-frequency",
+      "scope": "Encoded frequency and length diagnostics with matched controls.",
+      "seed_baseline": null
+    },
+    {
+      "id": "seed-baseline-entropy",
+      "scope": "Conditional symbol entropy under explicit encoding/boundary conventions.",
+      "seed_baseline": null
+    },
+    {
+      "id": "seed-baseline-position",
+      "scope": "P0 locus position/repetition and within-locus shuffle diagnostics.",
+      "seed_baseline": null
+    },
+    {
+      "id": "seed-baseline-clustering",
+      "scope": "Encoded-symbol clustering with source-specific section/hand/quire confound diagnostics.",
+      "seed_baseline": null
+    },
+    {
+      "id": "seed-direction-uncertainty-ranking",
+      "scope": "Rank research conclusions by uncertainty sensitivity",
+      "seed_baseline": null
+    },
+    {
+      "id": "seed-direction-negative-control-atlas",
+      "scope": "Create a diagnostic failure atlas for candidate mechanisms",
+      "seed_baseline": null
+    },
+    {
+      "id": "seed-direction-confound-information",
+      "scope": "Measure what additional annotation would resolve section-hand confounding",
+      "seed_baseline": null
+    },
+    {
+      "id": "seed-direction-decipherment-budget",
+      "scope": "Record the flexibility budget of a proposed decipherment",
+      "seed_baseline": null
+    }
+  ]
+}

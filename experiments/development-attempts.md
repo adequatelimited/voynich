@@ -1,0 +1,13 @@
+# Development history and selection disclosure
+
+These launch seeds are descriptive engineering baselines. They are not preregistered scientific discoveries and no attempt is a competitive contribution.
+
+On 2026-09-06 the implementation agent first parsed actual ZL3b and GC2a files while implementing the parser. An expectation of 227 page units for each file failed: GC contains 226 and omits the ZL f116v page record. The test was corrected to the observed source-specific counts, without altering either input. The actual locus counts match the host table: ZL 5,385 and GC 5,367.
+
+Before freezing `launch-seed-v1`, one full `analyze(..., 'join', 408)` smoke call ran in the interactive tool to check the engine. It reported 32,514 retained paragraph tokens, conditional entropy about 2.14573 bits and section NMI about 0.26446. This engineering output was not archived as a complete run bundle; this absence is disclosed rather than inventing a historical receipt. The code was then finalized for frozen-protocol execution. No alternative seed, clustering initialization or candidate generator parameter was selected from an undeclared search.
+
+The subsequent protocol froze all three variants (join, split, strict), seed 408, one clustering initialization and all comparison controls. Each official seed execution is now retained with input/code/protocol hashes, actual timestamps, outputs and resource records. All three completed. The reports explicitly describe the earlier inspection and the lack of independent public preregistration. Future confirmatory studies need their own prospective, externally inspectable registration and independent validation.
+
+HTTP retrieval history also matters: Python urllib requests to the `www.voynich.nu` download host returned 406; canonical `https://voynich.nu/data/...` retrieval with curl succeeded. The Yale digital object returned 403. Browser document limits prevented full inspection of the NSA monograph and Davis keynote PDFs; their source records distinguish verified metadata from full-text review.
+
+After the launch suite, a fresh Python virtual environment was created without pip. An initial command using Python `-I` failed before analysis because it removes script-directory module lookup and could not import the adjacent `engine` module. The supported ordinary CLI, with `-s` to disable user-site imports, then ran all three variants successfully; complete retained validation outputs match the initial scientific results except CPU-time measurements. No additional model calls, seed search or selected metric changes occurred. This remains same-operator verification rather than independent human reproduction.

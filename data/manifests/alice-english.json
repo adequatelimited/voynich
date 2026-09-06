@@ -1,0 +1,15 @@
+{
+  "schema_version": "1.0",
+  "id": "alice-english",
+  "path": "data/corpora/pg11.txt",
+  "origin": "https://www.gutenberg.org/cache/epub/11/pg11.txt",
+  "sha256": "01b38ea4c710a84bc18d0bd41271a5a1a92b94e97b2812f4dece97d4a694725e",
+  "byte_length": 174311,
+  "media_type": "text/plain",
+  "source_id": "alice-english",
+  "rights": "Public domain in USA; complete Gutenberg source notice retained; see source record for territorial limits.",
+  "redistribution": "permitted",
+  "state": "verified",
+  "attribution": "Lewis Carroll; Project Gutenberg; Arthur DiBianca; David Widger",
+  "retention": "Versioned immutable research source; corrections are new versions, not silent normalization."
+}

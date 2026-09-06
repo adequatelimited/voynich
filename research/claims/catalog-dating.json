@@ -1,0 +1,20 @@
+{
+  "id": "claim-catalog-dating",
+  "title": "Legacy catalog dating and ownership assertions need source dating",
+  "summary": "The older Yale description contains claims that should be examined alongside more recent custodian evidence.",
+  "statement": "The older Yale description contains claims that should be examined alongside more recent custodian evidence.",
+  "sources": [
+    "yale-catalog"
+  ],
+  "branch_ids": [
+    "historical-comparanda"
+  ],
+  "status": "historical_source_audit_needed",
+  "epistemic_status": "historical_source_audit_needed",
+  "test_or_next_step": "Trace one named attribution or chronology to dated primary evidence; do not copy it as settled fact.",
+  "limitations": [
+    "Source reporting is distinguished from project execution and independent validation; no universal truth or full translation is asserted."
+  ],
+  "seed": true,
+  "competitive_points": 0
+}

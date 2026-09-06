@@ -1,0 +1,31 @@
+{
+  "schema_version": "1.0",
+  "id": "replication-entropy-v1",
+  "title": "Partial reconstruction of conditional-entropy comparisons",
+  "status": "partial",
+  "target_source": "https://arxiv.org/abs/2010.14697v2",
+  "target_claim": "Conditional character predictability is an informative cross-corpus diagnostic when encodings and preprocessing are explicitly controlled.",
+  "reconstruction_scope": "An original empirical bigram-entropy implementation on ZL3b paragraph text, one meaningful English comparison, and authored/symbol-shuffle controls; no reproduction of the paper's complete corpus or glyph-composition experiments.",
+  "actual_join_variant_bits_per_symbol": {
+    "voynich_ZL3b": 2.145728567909814,
+    "english_Alice": 3.0672406717780807,
+    "authored_plaintext": 2.1047006580145307
+  },
+  "value_authority": "The complete actual run output and generated verification receipt are authoritative; this prose-level record is checked against them by verify_replications.py.",
+  "evidence": [
+    "experiments/baselines/entropy.json",
+    "experiments/comparisons/launch-seed-v1.json",
+    "research/replications/count-verification.json"
+  ],
+  "agreement": "Voynich is more predictable than this one English prose comparison. A deliberately repetitive meaningful authored control is also highly predictable; the selected scalar alone does not classify meaningfulness.",
+  "limitations": [
+    "No claim that the paper's numerical results, multilingual sample, historical texts or alternate glyph compositions have been reproduced.",
+    "ZL3b is a later corpus version; encoded EVA units and within-token, no-boundary estimator convention differ from other possible study definitions.",
+    "Equal symbol counts reduce one sampling difference but do not equalize genre, alphabet, dependence or token boundaries.",
+    "All three local normalization variants are retained; this descriptive seed was frozen after an engineering smoke run, not preregistered confirmatory research.",
+    "No independent human reproduction or external domain assessment has occurred."
+  ],
+  "next_step": "Recover the original study's exact input versions, estimator conventions and encodings; independently implement a named result with a declared comparison tolerance.",
+  "seed": true,
+  "competitive_points": 0
+}

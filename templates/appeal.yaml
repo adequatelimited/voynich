@@ -1,0 +1,9 @@
+schema_version: "1.0"
+id: "appeal-YOUR-ID"
+assessment_id: "EXACT-ASSESSED-ID"
+head_sha: "EXACT-ASSESSED-HEAD"
+criterion: "The rule/gate/tier/family boundary in dispute"
+evidence_paths: []
+requested_factual_resolution: "Describe evidence or interpretation to review; do not enter replacement points."
+new_evidence: "Explain what materially changed, or cite an authorized factual finding."
+claimed_points: 0

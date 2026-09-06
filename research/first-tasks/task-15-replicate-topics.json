@@ -1,0 +1,15 @@
+{
+  "id": "task-15-replicate-topics",
+  "title": "Reconstruct one topic-model experiment",
+  "summary": "Select a specific paper table/model and recover its inputs, labels and preprocessing.",
+  "branch_ids": [
+    "replication-decipherments"
+  ],
+  "difficulty": "advanced",
+  "status": "open",
+  "acceptance_evidence": "Pinned implementation, declared comparison tolerance and actual execution or informative failure.",
+  "tier_anchor": 10,
+  "scoring_note": "Indicative evidence anchor only. Mission gates, family overlap and prior seed baselines govern any AI assessment; tasks reserve neither ownership nor points.",
+  "seed": true,
+  "competitive_points": 0
+}

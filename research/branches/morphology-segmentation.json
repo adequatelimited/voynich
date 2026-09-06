@@ -1,0 +1,23 @@
+{
+  "id": "morphology-segmentation",
+  "title": "Morphology and segmentation",
+  "summary": "What structure persists when apparent spaces and glyph units are varied?",
+  "question": "What structure persists when apparent spaces and glyph units are varied?",
+  "status": "open",
+  "methods": [
+    "method-segmentation",
+    "method-ngram"
+  ],
+  "dependencies": [
+    "corpus-integrity",
+    "statistical-structure"
+  ],
+  "depends_on": [
+    "corpus-integrity",
+    "statistical-structure"
+  ],
+  "next_step": "Freeze two segmentation models and test held-out pages with equal search budgets.",
+  "first_experiment": "Freeze two segmentation models and test held-out pages with equal search budgets.",
+  "seed": true,
+  "competitive_points": 0
+}

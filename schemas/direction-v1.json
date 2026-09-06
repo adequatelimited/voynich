@@ -1,0 +1,135 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://voynich.win/schemas/direction-v1.json",
+  "type": "object",
+  "properties": {
+    "schema_version": {
+      "enum": [
+        "1.0"
+      ]
+    },
+    "id": {
+      "type": "string",
+      "minLength": 1,
+      "maxLength": 160,
+      "pattern": "^[a-zA-Z0-9][a-zA-Z0-9._:-]*$"
+    },
+    "title": {
+      "type": "string",
+      "minLength": 1,
+      "maxLength": 250
+    },
+    "question": {
+      "type": "string",
+      "minLength": 1,
+      "maxLength": 12000
+    },
+    "rationale": {
+      "type": "string",
+      "minLength": 1,
+      "maxLength": 12000
+    },
+    "distinctness": {
+      "type": "string",
+      "minLength": 1,
+      "maxLength": 12000
+    },
+    "prior_work_check": {
+      "type": "object",
+      "properties": {
+        "scope": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 12000
+        },
+        "references": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "minLength": 1,
+            "maxLength": 12000
+          },
+          "minItems": 0,
+          "maxItems": 1000
+        },
+        "checked_at": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 40
+        }
+      },
+      "required": [
+        "scope",
+        "references",
+        "checked_at"
+      ],
+      "additionalProperties": false
+    },
+    "first_step": {
+      "type": "string",
+      "minLength": 1,
+      "maxLength": 12000
+    },
+    "limitations": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "minLength": 1,
+        "maxLength": 12000
+      },
+      "minItems": 0,
+      "maxItems": 1000
+    },
+    "attribution": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "minLength": 1,
+        "maxLength": 12000
+      },
+      "minItems": 1,
+      "maxItems": 1000
+    },
+    "branch_ids": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "minLength": 1,
+        "maxLength": 12000
+      },
+      "minItems": 0,
+      "maxItems": 1000
+    },
+    "family_id": {
+      "type": "string",
+      "minLength": 1,
+      "maxLength": 160,
+      "pattern": "^[a-zA-Z0-9][a-zA-Z0-9._:-]*$"
+    },
+    "status": {
+      "enum": [
+        "candidate",
+        "accepted",
+        "in_progress",
+        "tested",
+        "superseded"
+      ]
+    }
+  },
+  "required": [
+    "schema_version",
+    "id",
+    "title",
+    "question",
+    "rationale",
+    "distinctness",
+    "prior_work_check",
+    "first_step",
+    "limitations",
+    "attribution",
+    "branch_ids",
+    "family_id",
+    "status"
+  ],
+  "additionalProperties": false
+}

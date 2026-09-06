@@ -1,0 +1,3 @@
+Review the concrete question, family overlap, source lineage, preprocessing, controls, held-out split, flexibility budget, selection history and claimed inference. Identify information that would distinguish competing explanations. Test whether a null or deliberately wrong mechanism can pass the selected metrics. Separate encoded symbols from glyphs, apparent spaces from words, source labels from ground truth, and correlation from semantics.
+
+Return actionable defects with paths/loci, the relevant assumption, a bounded repair and verification step. Do not invent results or demand a full experiment from a qualifying useful candidate suggestion. This AI critique does not constitute independent human, domain-expert or publication review.

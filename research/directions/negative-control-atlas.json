@@ -1,0 +1,30 @@
+{
+  "schema_version": "1.0",
+  "id": "direction-negative-control-atlas",
+  "title": "Create a diagnostic failure atlas for candidate mechanisms",
+  "question": "Which deliberately wrong generators pass individual metrics while failing joint held-out tests?",
+  "rationale": "Exposing easy false positives can prevent promising-looking but weak decipherment claims from dominating effort.",
+  "distinctness": "Focus is failure characterization across a finite declared control set; it does not claim novelty for copy/mutate generation itself.",
+  "prior_work_check": {
+    "scope": "Bounded launch-source catalog and current seed directions inspected; this does not establish world-first novelty.",
+    "references": [
+      "timm-2015",
+      "gaskell-bowern-2022",
+      "bowern-gaskell-2022"
+    ],
+    "checked_at": "2026-09-06"
+  },
+  "first_step": "Write a small table of three fixed mechanisms and predeclare two held-out diagnostics before execution.",
+  "limitations": [
+    "Candidate suggestion only; detailed protocol and execution are future work.",
+    "Designated seed: zero competitive allocations; evidence-tier baseline awaits official assessment."
+  ],
+  "attribution": [
+    "voynich.win launch curation, AI-assisted by OpenAI Codex; exposed precise model version not recorded"
+  ],
+  "branch_ids": [
+    "generative-mechanisms"
+  ],
+  "family_id": "seed-direction-negative-control-atlas",
+  "status": "candidate"
+}
