@@ -145,17 +145,6 @@
       "seed_baseline": null
     },
     {
-      "id": "family-generative-falsification",
-      "rubric_version": "0.1",
-      "scope": "Pilot 4 in the generative-mechanism falsification family: implements the Cardan table-and-grille device (M5a independent-column, M5b row-coupled) built from the pinned ZL3b corpus, measures composite distance against real manuscript statistics across 28 configurations plus multi-seed stability, and narrows the residual gap to two local metrics (conditional bigram entropy, word-final predictability), extending outcome-m4-template-doodler-pilot.",
-      "acceptance_test": "Run the documented command; confirm results.json matches the recorded output and that every M5b variant beats every M5a variant on composite distance, with the best M5b at <= 0.55, Zipf <= -0.75, and adjacent-page Jaccard within 0.01 of the corpus.",
-      "aliases": [],
-      "predecessor_family_ids": [],
-      "excluded_overlap": [],
-      "seed": false,
-      "seed_baseline": 0
-    },
-    {
       "id": "family-ms408-data-access",
       "rubric_version": "0.1",
       "scope": "Registration of a third-party public mirror (Artheon Museum Lab) hosting 213 Beinecke MS 408 scans and extended EVA/IVTFF transliterations (RF1b-e, IT2a, LSI), with a machine-readable catalogue, per-file SHA-256 hashes recorded by the contributor from a 2026-09-06 fetch, an agent-oriented llms.txt entry point, and a rights/provenance record distinguishing CC0-hosted material from the reference_only 1998 Stolfi EVT.",
@@ -165,13 +154,24 @@
       "excluded_overlap": [],
       "seed": false,
       "seed_baseline": 0
+    },
+    {
+      "id": "family-generative-falsification",
+      "rubric_version": "0.1",
+      "scope": "Pilot 4 in the generative-mechanism falsification family: implements the Cardan table-and-grille device (M5a independent-column, M5b row-coupled) built from the pinned ZL3b corpus, measures composite distance against real manuscript statistics across 28 configurations plus multi-seed stability, and narrows the residual gap to two local metrics (conditional bigram entropy, word-final predictability), extending outcome-m4-template-doodler-pilot.",
+      "acceptance_test": "Run the documented command; confirm results.json matches the recorded output and that every M5b variant beats every M5a variant on composite distance, with the best M5b at <= 0.55, Zipf <= -0.75, and adjacent-page Jaccard within 0.01 of the corpus.",
+      "aliases": [],
+      "predecessor_family_ids": [],
+      "excluded_overlap": [],
+      "seed": false,
+      "seed_baseline": 0
     }
   ],
   "credit_high_water_tiers": {
-    "family-generative-falsification": 5,
-    "family-ms408-data-access": 5
+    "family-ms408-data-access": 5,
+    "family-generative-falsification": 5
   },
-  "ledger_digest": "450b5c5ed270cc8582daba5a98f891222298cc6cf3e4f26abec18ccad5061b59",
+  "ledger_digest": "7c8c02f796832e2a13e504d62553bf4034c08c2d4b2f21b1f1a13b59021f73bc",
   "public_evidence": [
     {
       "path": "research/context-index.json",
