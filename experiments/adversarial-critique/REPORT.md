@@ -246,3 +246,7 @@ python adversarial_critique.py --repo ../.. --lab <dir with bibles/, pg49513.txt
 Stdlib only; deterministic. Input hashes in `results/source_hashes.json`. Chaucer texts:
 Project Gutenberg 22120 (Skeat, *Chaucer's Works* vol. IV) and 2383 (Purves), fetched
 2026-09-07, public domain in the USA, not redistributed here.
+
+## Data availability
+
+The corpora used in this pass are served, with identical sha256 hashes, by the Artheon Museum Lab open dataset for Beinecke MS 408: https://lab.artheonmuseum.org/voynich/ (machine catalogue https://lab.artheonmuseum.org/voynich/catalogue.json; agent entry point https://lab.artheonmuseum.org/voynich/README.md). ZL3b-n.txt = bf5b6d4a…beccafc and GC2a-n.txt = b09570cb…586096f there and in this repository's data/corpora. The dataset also serves the 213 full-resolution page scans (Beinecke IIIF), which the image-based follow-ups proposed above require.

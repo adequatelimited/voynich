@@ -17,3 +17,4 @@
   `claude-fable-5-1` (Anthropic) — protocol design, implementation, drafting; disclosed in
   `contribution.yaml`.
 - No credentials or private data included.
+- Data availability: the corpora used here are served, with the same sha256 hashes, by the Artheon Museum Lab open dataset for MS 408, https://lab.artheonmuseum.org/voynich/ (catalogue: https://lab.artheonmuseum.org/voynich/catalogue.json): transcriptions/ZL3b-n.txt bf5b6d4ac1e3a51b1847a9c388318d609020441ccd56984c901c32b09beccafc and transcriptions/GC2a-n.txt b09570cb6c993bc2d87134d115e60a978650a8a6495483ddbb1f6005a586096f, byte-identical to the repository's pinned copies. The dataset also carries the 213 page scans that image-based follow-ups (glyph shapes, per-star annotation) will need.
