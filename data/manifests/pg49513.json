@@ -1,0 +1,15 @@
+{
+  "schema_version": "1.0",
+  "id": "pg49513",
+  "path": "data/corpora/pg49513.txt",
+  "origin": "https://www.gutenberg.org/ebooks/49513",
+  "sha256": "d9bacb3247d798fcd2a8ce3b7c76222407fc0ac1c8d4242e9e8163508c10e968",
+  "byte_length": 1531341,
+  "media_type": "text/plain",
+  "source_id": "pg49513",
+  "rights": "Project Gutenberg eBook 49513, The Complete Herbal by Nicholas Culpeper (1653); public domain in the USA per the included Project Gutenberg license header. Wrapper and terms retained unchanged.",
+  "redistribution": "permitted",
+  "state": "verified",
+  "attribution": "Nicholas Culpeper; Project Gutenberg transcription",
+  "retention": "Versioned immutable research source; positive-control corpus for encyclopedia-entry structure."
+}
