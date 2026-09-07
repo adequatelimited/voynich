@@ -2,34 +2,31 @@
 
 ## In plain words
 
-Imagine a medieval artist doodling fake writing to make his drawings look scientific. He
-isn't writing a language — he just has habits: favorite ways to start words, favorite
-middles, favorite endings, and he keeps riffing on whatever he wrote a minute ago.
+**IDEA**
+- The Voynich writer was not writing a real language.
+- He was drawing fake text the way artists draw fake letters in decorations.
+- Words were made up on the spot, following personal habits.
 
-We built three robot doodlers that do exactly that — no dictionary, no meaning, just
-habits — and let each one "write" a full fake Voynich manuscript. Then we compared the
-fakes with the real text.
+**TEST METHOD**
+- We built 3 computer programs that write fake text with no meaning.
+- Each program wrote a fake manuscript the same size as the real one.
+- We compared fake vs. real on 10 simple measurements (how often words repeat, how letters combine, etc.).
 
-**What the robots faked easily:** how often words repeat, how rich the vocabulary is, and
-the general look of the letter soup. So "someone was just improvising pretty gibberish"
-is genuinely possible — a doodler *can* look like the Voynich at first glance.
+**EXPECTATIONS**
+- If the "just doodling" idea is right → the fakes should match the real text on all measurements.
+- If they don't match → the real text has stricter rules than doodling.
 
-**What they couldn't fake:** the real manuscript is oddly *disciplined*. Word endings are
-more predictable, the letter patterns are more constrained, and common words get reused
-far more deliberately than casual improvisation produces. Whatever the scribe was doing,
-it followed stricter rules than free doodling — whether those rules encoded a real
-language or just a very systematic art project is exactly the question still open.
+**ACTUAL RESULT**
+- Fakes matched the real text on: vocabulary size, word repetition, letter frequency. ✓
+- Fakes failed on: word endings (real ones are much more predictable), letter patterns (real ones are more constrained), word popularity curve (real one is steeper). ✗
+- Surprise finding: pure doodling invents too many new words. The real writer reused words deliberately, like someone working from a fixed word list.
 
-One more curiosity: if the robot only copies-and-slightly-changes recent words, it invents
-way too many new words. To sound like the real manuscript it must deliberately reuse its
-old favorites — meaning the real scribe had a stable working "vocabulary", real or
-pretend. Nobody doodles that consistently by accident.
+**SO IT IS "THIS"**
+- "Pure artistic fun with no system" — unlikely now, ~15%.
+- "Fake text, but made with a strict personal system/rulebook" — strong, ~50%. (Still fits the artistic idea, just a very methodical artist.)
+- "Real encoded language or real information" — still alive, ~35%.
 
-**Bottom line:** "they were just having fun" survives round one, but the fun was
-surprisingly rule-bound. The next tests (fake scribes with stricter word templates,
-and checking whether star labels match their pictures) will narrow it further.
-
-*Technical details follow.*
+*Note: these percentages are an informal judgment from one pilot, not a computed probability.*
 
 ---
 
