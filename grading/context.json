@@ -234,6 +234,24 @@
       ],
       "seed": false,
       "seed_baseline": 0
+    },
+    {
+      "id": "family-generative-falsification-poetry-control",
+      "rubric_version": "0.1",
+      "scope": "A new bounded diagnostic control in the generative-falsification research area: measures line-structured metrics (word-final char entropy, line-final word final-char entropy, line-initial first-char entropy, top-5 line-final word rhyme concentration) across the pinned ZL3b corpus's real lines, a newly added rhymed-verse control (Shakespeare's Sonnets, PG 1041), and existing Culpeper/Alice prose pseudo-line baselines, showing that rhyme (even at its most ending-constrained, 3.50 bits) does not approach the manuscript's every-word final-char entropy (2.59 bits), excluding versification as the mechanism behind the residual word-ending discipline, plus a side finding that the manuscript's line-final position is less constrained than its average word (2.99 vs 2.59), opposite of rhyme.",
+      "acceptance_test": "Run the documented command; confirm results.json matches the recorded output showing sonnet line-final final-char entropy in [3.3,3.7], prose controls (Culpeper/Alice) in [3.5,3.8], Voynich all-word final-char entropy in [2.5,2.7], and Voynich line-final entropy above its all-word value.",
+      "aliases": [],
+      "predecessor_family_ids": [],
+      "excluded_overlap": [
+        "Does not claim or extend the Cardan table-and-grille (M5a/M5b) mechanism experiment credited under family-generative-falsification.",
+        "Does not claim the M1/M2 syllable-table/self-citation pilot credited under family-generative-falsification-doodler.",
+        "Does not claim the M3 per-page entry/topic-carryover generator credited under family-generative-falsification-entry-doodler.",
+        "Does not claim the Stolfi word-grammar template generator or its original Culpeper/Alice word-level final-char entropy measurement credited under family-generative-falsification-word-grammar-template; reuses those two texts' bytes only as new line-structured baseline rows.",
+        "Does not claim the entry-ladder genre-control metrics (Devil's Dictionary/Wonder Book) credited under family-generative-falsification-controls-entry-ladder.",
+        "Does not claim credit for the pinned ZL3b corpus/parser (seed-corpus-parser) or local harness workflow (seed-local-harness), used only as inputs."
+      ],
+      "seed": false,
+      "seed_baseline": 0
     }
   ],
   "credit_high_water_tiers": {
@@ -242,9 +260,10 @@
     "family-generative-falsification-entry-doodler": 5,
     "family-generative-falsification-word-grammar-template": 5,
     "family-generative-falsification": 5,
-    "family-generative-falsification-controls-entry-ladder": 2
+    "family-generative-falsification-controls-entry-ladder": 2,
+    "family-generative-falsification-poetry-control": 2
   },
-  "ledger_digest": "97a6d3762a20b835e2590794ad6ffe243c6da061fc09ab094f6bdffd041b64c3",
+  "ledger_digest": "ec1bd2da1635063eb95ba7147e87eb2560fe59d1296739c760667089ff380d28",
   "public_evidence": [
     {
       "path": "research/context-index.json",
