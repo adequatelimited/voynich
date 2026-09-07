@@ -115,3 +115,12 @@ test('a valid final judgment cannot buy a correction and every gate and receipt 
   const falseExpert = assessment(); falseExpert.outcomes[0]!.validation_evidence = { execution_receipt_refs: [], external_assessment_receipt_refs: ['fake'], independent_inspection_refs: [] };
   assert.ok(validateStageJudgment(falseExpert, input).some(x => x.includes('External assessment')));
 });
+
+test('independent outcome mapping binds new families to real claims and participates in agreement', async () => {
+ const input=await gradingInput(); input.profile.settings.outcome_scope='independent-results-v1';
+ const proposal=assessment(); assert.ok(validateStageJudgment(proposal,input).some(e=>e.includes('source_outcome_ids')));
+ proposal.outcomes[0]!.source_outcome_ids=[input.contribution.outcomes[0]!.id]; proposal.outcomes[0]!.acceptance_test='Inspect the distinct diagnostic finding'; proposal.outcomes[0]!.excluded_overlap=['Previously credited reusable harness'];
+ assert.deepEqual(validateStageJudgment(proposal,input),[]);
+ const other=structuredClone(proposal);other.outcomes[0]!.acceptance_test='A different result';assert.equal(assessmentsAgree(proposal,other),false);
+ proposal.outcomes[0]!.source_outcome_ids=['invented-claim'];assert.ok(validateStageJudgment(proposal,input).some(e=>e.includes('source_outcome_ids')));
+});

@@ -102,6 +102,31 @@
       "items": {
         "type": "object",
         "properties": {
+          "source_outcome_ids": {
+            "type": "array",
+            "items": {
+              "type": "string",
+              "minLength": 1,
+              "maxLength": 12000
+            },
+            "minItems": 0,
+            "maxItems": 1000
+          },
+          "acceptance_test": {
+            "type": "string",
+            "minLength": 1,
+            "maxLength": 12000
+          },
+          "excluded_overlap": {
+            "type": "array",
+            "items": {
+              "type": "string",
+              "minLength": 1,
+              "maxLength": 12000
+            },
+            "minItems": 0,
+            "maxItems": 1000
+          },
           "family_id": {
             "type": "string",
             "minLength": 1,
