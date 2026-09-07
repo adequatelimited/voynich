@@ -1,5 +1,38 @@
 # The doodler test: can a content-free process fake the Voynich fingerprint?
 
+## In plain words
+
+Imagine a medieval artist doodling fake writing to make his drawings look scientific. He
+isn't writing a language — he just has habits: favorite ways to start words, favorite
+middles, favorite endings, and he keeps riffing on whatever he wrote a minute ago.
+
+We built three robot doodlers that do exactly that — no dictionary, no meaning, just
+habits — and let each one "write" a full fake Voynich manuscript. Then we compared the
+fakes with the real text.
+
+**What the robots faked easily:** how often words repeat, how rich the vocabulary is, and
+the general look of the letter soup. So "someone was just improvising pretty gibberish"
+is genuinely possible — a doodler *can* look like the Voynich at first glance.
+
+**What they couldn't fake:** the real manuscript is oddly *disciplined*. Word endings are
+more predictable, the letter patterns are more constrained, and common words get reused
+far more deliberately than casual improvisation produces. Whatever the scribe was doing,
+it followed stricter rules than free doodling — whether those rules encoded a real
+language or just a very systematic art project is exactly the question still open.
+
+One more curiosity: if the robot only copies-and-slightly-changes recent words, it invents
+way too many new words. To sound like the real manuscript it must deliberately reuse its
+old favorites — meaning the real scribe had a stable working "vocabulary", real or
+pretend. Nobody doodles that consistently by accident.
+
+**Bottom line:** "they were just having fun" survives round one, but the fun was
+surprisingly rule-bound. The next tests (fake scribes with stricter word templates,
+and checking whether star labels match their pictures) will narrow it further.
+
+*Technical details follow.*
+
+---
+
 **Experiment date:** 2026-09-06 · **Corpus:** `data/corpora/ZL3b-n.txt` (repo-pinned, sha256 `bf5b6d4a…`, IVTFF comments stripped) · **Code:** `doodler.py` (stdlib-only, seed 1904)
 
 ## Question
