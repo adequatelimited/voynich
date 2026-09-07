@@ -21,6 +21,17 @@ test('held provisional tiers may be adjudicated but cannot create credit or bypa
   assert.ok(validateStageJudgment(unsafe, input).length);
   assert.equal((await runGrading(input, runner([assessment(), held, unsafe]))).expected_score, null);
 });
+test('logical conflicts require adjudication even when both proposals match; final conflicts cannot award', async () => {
+  const input = await gradingInput(); const conflicting = assessment(); conflicting.inspection_gaps = ['A stated unresolved limitation.'];
+  const model = runner([conflicting, conflicting, assessment()]);
+  assert.equal((await runGrading(input, model)).status, 'complete');
+  assert.deepEqual(model.calls, ['assessor', 'adversary', 'adjudicator']);
+  assert.equal((await runGrading(input, runner([conflicting, conflicting, conflicting]))).expected_score, null);
+  const annotated = assessment(); annotated.outcomes[0]!.gate_evidence[0]!.evidence_refs = ['research/example.md (question and first step)'];
+  assert.deepEqual(validateStageJudgment(annotated, input), []);
+  annotated.outcomes[0]!.gate_evidence[0]!.evidence_refs = ['research/missing.md (question and first step)'];
+  assert.ok(validateStageJudgment(annotated, input).some(error => error.startsWith('Unknown evidence citation')));
+});
 test('malformed shares and claimed totals are rejected before any model', () => { const copy = structuredClone(contribution); copy.outcomes[0]!.attribution[0]!.share_basis_points = 9999; copy.claimed_total_points = 20; const result = validateContribution(copy); assert.equal(result.valid, false); if (!result.valid) assert.deepEqual(result.issues.map(i => i.code), ['shares', 'claim_arithmetic']); });
 test('unknown model version is allowed; missing AI disclosure is not', () => { const copy = structuredClone(contribution); copy.ai_usage = { status: 'assisted', tools: [{ provider: 'provider', model_id: 'model', model_version: 'unknown', accessed_at: '2026-09-06', tasks: ['Drafting'], human_verification: 'Inspected the source.' }], reproducibility_notes: 'Version not exposed.' }; assert.equal(validateContribution(copy).valid, true); copy.ai_usage.tools = []; assert.equal(validateContribution(copy).valid, false); });
 test('paths reject traversal, Windows devices, drives and alternate data streams', () => { for (const path of ['../secret', 'a/../../b', 'C:/secret', '/secret', 'a\\b', '.git/config', 'a/NUL.txt', 'a/file:secret', 'a/trailing.']) assert.equal(isSafeRepositoryPath(path), false, path); assert.equal(isSafeRepositoryPath('research/folios/f1r.md'), true); });

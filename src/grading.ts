@@ -65,6 +65,8 @@ export async function gradingDigests(input: GradingInput): Promise<{ artifact_bi
 }
 export function validateStageJudgment(value: StageAssessment, input: GradingInput): string[] {
   const errors: string[] = []; const known = new Set([...input.files, ...input.context.public_evidence].map(f => f.path));
+  // A parenthesized locus annotates an existing path; it cannot introduce another source.
+  const suppliedCitation = (ref: string) => known.has(ref) || [...known].some(path => ref.startsWith(path + ' (') && ref.endsWith(')'));
   const inspected = new Set(value.inspected_paths); for (const file of input.files) if (!inspected.has(file.path)) errors.push(`Incomplete coverage: ${file.path}`);
   for (const path of inspected) if (!known.has(path)) errors.push(`Unknown inspected path: ${path}`);
   const families = new Set<string>();
@@ -79,14 +81,23 @@ export function validateStageJudgment(value: StageAssessment, input: GradingInpu
     }
     for (const ref of outcome.validation_evidence?.execution_receipt_refs ?? []) if (!input.context.execution_receipts.includes(ref)) errors.push('Execution evidence is not in the trusted context.');
     for (const ref of outcome.validation_evidence?.independent_inspection_refs ?? []) if (!known.has(ref)) errors.push('Independent inspection citation is not supplied evidence.');
-    for (const gate of outcome.gate_evidence) for (const ref of gate.evidence_refs) if (!known.has(ref)) errors.push(`Unknown evidence citation: ${ref}`);
+    for (const gate of outcome.gate_evidence) for (const ref of gate.evidence_refs) if (!suppliedCitation(ref)) errors.push(`Unknown evidence citation: ${ref}`);
   }
-  for (const finding of value.findings) for (const ref of finding.evidence_refs) if (!known.has(ref)) errors.push(`Unknown finding evidence: ${ref}`);
+  for (const finding of value.findings) for (const ref of finding.evidence_refs) if (!suppliedCitation(ref)) errors.push(`Unknown finding evidence: ${ref}`);
   const accept = ['accept', 'accept_unscored', 'duplicate_consolidated'].includes(value.admission_action);
   if (accept && (value.inspection_gaps.length || value.findings.some(f => f.blocks_merge_or_credit))) errors.push('Acceptance conflicts with unresolved blocking findings or inspection gaps.');
   if (value.admission_action === 'accept_unscored' && value.outcomes.some(o => o.assessed_tier > 0)) errors.push('Unscored admission cannot carry positive tiers.');
   if (value.conduct_status === 'restricted_hold' && accept) errors.push('Restricted content cannot be accepted.');
   return errors;
+}
+/** Proposals can contain adjudicable logical contradictions. Evidence integrity is never waived. */
+export function preliminaryJudgmentErrors(value: StageAssessment, input: GradingInput): string[] {
+  const conflicts = new Set(['Positive credit requires all universal gates and evidence citations.',
+    'Acceptance conflicts with unresolved blocking findings or inspection gaps.', 'Unscored admission cannot carry positive tiers.']);
+  return validateStageJudgment(value, input).filter(error => !conflicts.has(error));
+}
+export function needsAdjudication(input: GradingInput, assessor: StageAssessment, adversary: StageAssessment): boolean {
+  return !assessmentsAgree(assessor, adversary) || validateStageJudgment(assessor, input).length > 0 || validateStageJudgment(adversary, input).length > 0;
 }
 function comparison(assessment: StageAssessment): string {
   return canonicalJson({ admission: assessment.admission_action, score: assessment.score_status, conduct: assessment.conduct_status, gaps: [...assessment.inspection_gaps].sort(), blockers: assessment.findings.filter(f => f.blocks_merge_or_credit).map(f => [f.rule_id_or_gate, f.path_or_locus]).sort(), outcomes: assessment.outcomes.map(o => ({ family: o.family_id, scope: o.scope, tier: o.assessed_tier, category: o.category, aliases: [...o.aliases].sort(), predecessors: [...o.predecessors].sort(), gates: o.gate_evidence.map(g => [g.gate, g.status]).sort(), attribution: o.attribution_status })).sort((a, b) => a.family.localeCompare(b.family)) });
@@ -117,10 +128,10 @@ export function proposedIncrement(assessment: StageAssessment, context: GradingC
   return total;
 }
 export async function finalizeAssessments(input: GradingInput, reports: { assessor: StageAssessment; adversary: StageAssessment; adjudicator?: StageAssessment }, receipts: StageReceipt[]): Promise<GradingReport> {
-  const digests = await gradingDigests(input); const disagreement = !assessmentsAgree(reports.assessor, reports.adversary);
+  const digests = await gradingDigests(input); const disagreement = needsAdjudication(input, reports.assessor, reports.adversary);
   const result: GradingReport = { schema_version: '1.0', assessment_id: `assessment-${digests.artifact_binding_digest.slice(0, 32)}`, ...digests, repository_id: input.context.repository_id, pr_number: input.context.pr_number, head_sha: input.context.head_sha, base_sha: input.context.base_sha, rules_version: input.context.rules_version, rubric_version: input.context.rubric_version, grading_profile: input.profile.id, evaluator_commit: input.context.evaluator_commit, mode: input.mode ?? 'local_estimate', status: 'held', claimed_score: input.contribution.claimed_total_points, expected_score: null, official_proposed_score: null, awarded_score: null, assessment: null, stages: receipts, disagreements: disagreement ? ['Material independent-assessment disagreement.'] : [], holds: [], reused_assessment_id: null };
   result.holds.push(...(await preflight(input)).map(i => `${i.code}: ${i.path}: ${i.message}`));
-  for (const [stage, report] of Object.entries(reports)) { const validated = validateAssessment(report); if (!validated.valid) result.holds.push(`Invalid ${stage} schema.`); else result.holds.push(...validateStageJudgment(report, input)); }
+  for (const [stage, report] of Object.entries(reports)) { const validated = validateAssessment(report); if (!validated.valid) result.holds.push(`Invalid ${stage} schema.`); else result.holds.push(...(stage === 'adjudicator' ? validateStageJudgment(report, input) : preliminaryJudgmentErrors(report, input))); }
   if (input.profile.status === 'unconfigured' || !input.profile.model_id || (input.mode === 'official_proposal' && input.profile.status !== 'active')) result.holds.push('No active calibrated official model profile.');
   const required: GradingStage[] = disagreement ? ['assessor', 'adversary', 'adjudicator'] : ['assessor', 'adversary'];
   if (receipts.length !== required.length || required.some(stage => receipts.filter(r => r.stage === stage && r.model === input.profile.model_id && r.provider === input.profile.provider && !!r.receipt_ref).length !== 1)) result.holds.push('Missing, duplicate or inconsistent stage receipts.');
@@ -147,14 +158,14 @@ export async function runGrading(input: GradingInput, runner?: StageRunner, cach
     if (response.provider !== input.profile.provider || response.model !== input.profile.model_id || !response.receipt_ref) throw new Error('runtime_identity: Missing receipt or unconfigured model substitution.');
     if (new TextEncoder().encode(response.text).byteLength > input.profile.max_output_bytes) throw new Error('output_limit: Stage response exceeds the allowed envelope.');
     const parsed: unknown = JSON.parse(response.text); const checked = validateAssessment(parsed); if (!checked.valid) throw new Error('invalid_model_output: Stage did not return the public schema; no automatic repair/reroll.');
-    const errors = validateStageJudgment(checked.value, input); if (errors.length) throw new Error(`invalid_judgment: ${errors.join('; ')}`);
+    const errors = name === 'adjudicator' ? validateStageJudgment(checked.value, input) : preliminaryJudgmentErrors(checked.value, input); if (errors.length) throw new Error(`invalid_judgment: ${errors.join('; ')}`);
     const receipt: StageReceipt = { stage: name, provider: response.provider, model: response.model, exposed_version: response.exposed_version, prompt_digest: promptDigest, response_digest: await sha256(response.text), started_at: started, completed_at: new Date().toISOString(), usage: response.usage, receipt_ref: response.receipt_ref };
     await cache.putIfAbsent(key, { assessment: checked.value, receipt }); const winner = await cache.get(key); if (!winner) throw new Error('cache_failure: Cannot preserve first successful result.');
     report.stages.push(winner.receipt); return structuredClone(winner.assessment);
   }
   try {
     const assessor = await stage('assessor'); const adversary = await stage('adversary'); let final = assessor;
-    if (comparison(assessor) !== comparison(adversary)) { report.disagreements.push('The independent assessments differ on admission, scope, tiers, gates, attribution, category or blockers.'); final = await stage('adjudicator', [assessor, adversary]); }
+    if (needsAdjudication(input, assessor, adversary)) { report.disagreements.push('The independent assessments differ or contain a logical conflict requiring resolution.'); final = await stage('adjudicator', [assessor, adversary]); }
     report.assessment = final;
     if (['hold', 'needs_revision'].includes(final.admission_action) || final.inspection_gaps.length || final.score_status === 'held') { report.holds.push(final.next_action); return report; }
     const expected = proposedIncrement(final, input.context);
