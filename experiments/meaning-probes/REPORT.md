@@ -426,3 +426,6 @@ The `t_z1.py` self-hash recorded inside `results/z1.json` still matches the file
 **Frozen glyph units.** The 20 byte-pair merges from T2 (protocol `318a679`, freq mode, corpus `Voynich_S`), applied in order: `ch dy ai ok ol ee sh in che aiin ot ar al qok or she eey ain daiin chedy`. Every test also run at raw EVA-character level.
 
 **Provenance.** Tests, adversarial review and this report were produced by Claude Code (Anthropic), model `claude-opus-5`, under the frozen pre-registration above. Gates were not adjusted after any statistic was seen; where the protocol was ambiguous, the reading taken is stated inline and, in each case, is the reading that makes the test harder to pass.
+## Data availability
+
+The corpora used in this pass are served, with identical sha256 hashes, by the Artheon Museum Lab open dataset for Beinecke MS 408: https://lab.artheonmuseum.org/voynich/ (machine catalogue https://lab.artheonmuseum.org/voynich/catalogue.json; agent entry point https://lab.artheonmuseum.org/voynich/README.md). ZL3b-n.txt = bf5b6d4a…beccafc and GC2a-n.txt = b09570cb…586096f there and in this repository's data/corpora. The dataset also serves the 213 full-resolution page scans (Beinecke IIIF), which the image-based follow-ups proposed above require.
