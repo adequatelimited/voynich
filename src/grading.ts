@@ -1,3 +1,4 @@
+import { canSummarize, excludedArtifact } from './artifacts.ts';
 import type { Contribution, EvidenceFile, GradingContext, GradingProfile, GradingReport, GradingStage, StageAssessment, StageReceipt, ValidationIssue } from './contracts.ts';
 import { assessmentSchema, isSafeRepositoryPath, validateAssessment, validateContribution } from './validation.ts';
 import { canonicalJson, hashObject, sha256 } from './hash.ts';
@@ -42,17 +43,25 @@ export async function preflight(input: GradingInput): Promise<ValidationIssue[]>
   if (input.profile.rules_version !== input.context.rules_version || input.profile.rubric_version !== input.context.rubric_version || input.contribution.rubric_version !== input.context.rubric_version) add('context', 'policy_mismatch', 'Contribution, context and profile policy versions must agree.');
   if (![3, 4].includes(input.profile.max_stages) || input.profile.max_attempts_per_stage !== 1 || input.profile.tool_access !== 'none') add('profile', 'unsupported_profile', 'This runtime requires two assessments, at most one adjudication and an explicitly enabled single correction, one attempt per stage and no tools.');
   if (input.files.length > input.profile.max_files) add('files', 'file_limit', 'Bundle exceeds the finite supported file envelope; request expanded review.');
-  const paths = new Set<string>(); let total = 0;
+  const paths = new Set<string>(); let total = 0; let modelBytes = 0;
   for (const file of input.files) {
     if (!isSafeRepositoryPath(file.path) || paths.has(file.path)) add(file.path, 'inventory', 'Unsafe or duplicate inventory path.'); paths.add(file.path);
     if (!Number.isSafeInteger(file.byte_length) || file.byte_length < 0 || file.byte_length > input.profile.max_file_bytes) add(file.path, 'size_limit', 'Invalid or excessive file size.'); total += file.byte_length;
+    const prohibited = excludedArtifact(file.path); if (prohibited) add(file.path, prohibited, 'Video and archive/compressed content is prohibited.');
     if (PROTECTED_PATH.test(file.path)) add(file.path, 'protected_path', 'Trusted policy/grader/workflow changes follow protected governance and cannot judge themselves.');
-    if (file.inspection !== 'complete' || file.content === undefined || !TEXT_TYPES.has(file.media_type)) add(file.path, 'inspection_gap', 'This public text adapter cannot establish complete inspection of this artifact. Supply supported bounded inspection/vision evidence; do not treat OCR alone as complete visual inspection.');
+    const derived = file.inspection === 'derived' && input.profile.settings.artifact_handling === 'bounded-text-v1' && file.representation?.method === 'bounded-text-v1' && file.representation.coverage === 'structural_full_semantic_partial';
+    if (file.inspection === 'derived' && (!canSummarize(file.path) || !/^[a-f0-9]{64}$/.test(file.sha256) || !Number.isSafeInteger(file.representation?.text_budget) || (file.representation?.text_budget ?? 0) < 2000 || (file.representation?.text_budget ?? Infinity) > 96000 || (file.representation?.byte_length ?? Infinity) > (file.representation?.text_budget ?? 0))) add(file.path, 'representation_invalid', 'Derived evidence has invalid source identity, type or budget.');
+    if (derived && file.content) {
+      try { const view = JSON.parse(file.content); if (view.source_sha256 !== file.sha256 || view.source_bytes !== file.byte_length || view.source_path !== file.path || view.method !== file.representation?.method) add(file.path, 'representation_binding', 'Derived view is not bound to the declared source.'); } catch { add(file.path, 'representation_invalid', 'Derived view must be valid JSON.'); }
+    }
+    if ((!derived && file.inspection !== 'complete') || file.content === undefined || !TEXT_TYPES.has(file.media_type)) add(file.path, 'inspection_gap', 'This public text adapter cannot establish complete inspection of this artifact. Supply supported bounded inspection/vision evidence; do not treat OCR alone as complete visual inspection.');
     if (file.content !== undefined) {
-      if (new TextEncoder().encode(file.content).byteLength !== file.byte_length || await sha256(file.content) !== file.sha256) add(file.path, 'integrity', 'Inspected content does not match its exact byte count and SHA-256.');
+      modelBytes += new TextEncoder().encode(file.content).byteLength;
+      if (new TextEncoder().encode(file.content).byteLength !== (derived ? file.representation!.byte_length : file.byte_length) || await sha256(file.content) !== (derived ? file.representation!.sha256 : file.sha256)) add(file.path, 'integrity', 'Inspected content does not match its exact byte count and SHA-256.');
       if (/-----BEGIN (?:RSA |EC |OPENSSH )?PRIVATE KEY-----|\b(?:ghp_[A-Za-z0-9]{30,}|github_pat_[A-Za-z0-9_]{40,})/.test(file.content)) add(file.path, 'restricted_content', 'Potential credential exposure requires restricted review. Content is not echoed here.');
     }
   }
+  if (input.profile.settings.artifact_handling === 'bounded-text-v1' && modelBytes > 96_000) add('files', 'model_evidence_limit', 'Represented evidence exceeds the bounded AI input allocation.');
   if (!Number.isSafeInteger(total) || total > input.profile.max_total_bytes) add('files', 'total_limit', 'Bundle exceeds the supported total byte envelope.');
   for (const path of [...input.contribution.changes.map(c => c.path), input.contribution.rights_manifest, ...input.contribution.outcomes.flatMap(o => o.evidence)]) if (!paths.has(path)) add(path, 'missing_evidence', 'Referenced changed/rights/evidence path is absent from the complete inspected bundle.');
   for (const file of input.context.public_evidence) if (file.inspection !== 'complete' || file.content === undefined || !TEXT_TYPES.has(file.media_type) || await sha256(file.content) !== file.sha256 || new TextEncoder().encode(file.content).byteLength !== file.byte_length) add(file.path, 'context_inspection', 'Public context evidence is unavailable, uninspected or fails byte integrity.');

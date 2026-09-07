@@ -65,3 +65,8 @@ PR feedback includes a readable summary and machine-readable findings so a contr
 ## Inclusion-first launch interpretation
 
 The operator-authorized [2026-09-07 inclusion-first policy](grading/releases/2026-09-07-inclusion-first.md) governs admission and tier-specific evidence for profile v3. Relevant, attributable work is accepted at its supported tier, including zero credit, unless concrete prohibited content or an actual safe-inspection failure prevents acceptance.
+
+
+## Artifact admission
+
+Video and archive/compressed content of any kind are prohibited, including renamed or embedded payloads. This includes ZIP, TAR, GZIP, RAR, 7z, compression-only formats and archive-based documents such as DOCX, XLSX, EPUB and NPZ. Animated formats are excluded; GIF is conservatively excluded entirely. Submit unpacked supported research files with provenance and rights. Unknown binary formats are not admitted by renaming them. See the current large-artifact release in GRADING.md.

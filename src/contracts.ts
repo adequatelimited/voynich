@@ -77,7 +77,7 @@ export interface StageAssessment {
   outcomes: OutcomeAssessment[]; inspected_paths: string[]; inspection_gaps: string[];
   next_action: string; appeal_route: string;
 }
-export interface EvidenceFile { path: string; sha256: string; byte_length: number; media_type: string; content?: string; inspection: 'complete' | 'unsupported' | 'unavailable'; receipt_ref?: string }
+export interface EvidenceFile { path: string; sha256: string; byte_length: number; media_type: string; content?: string; inspection: 'complete' | 'derived' | 'unsupported' | 'unavailable'; representation?: { method: 'bounded-text-v1'; sha256: string; byte_length: number; text_budget: number; coverage: 'structural_full_semantic_partial' }; receipt_ref?: string }
 export interface GradingContext {
   schema_version: '1.0'; repository_id: number; pr_number: number; head_sha: string; base_sha: string;
   rules_version: string; rubric_version: string; evaluator_commit: string;
