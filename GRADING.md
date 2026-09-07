@@ -1,3 +1,7 @@
+## Current v9 clarification: credit is not research ancestry
+
+A later result naming an earlier outcome as its predecessor does not establish that the earlier outcome was already rewarded. Family grouping requires substantive overlap in the actual delivered result or capability. Shared lineage, topic, code, inputs or diagnostics cannot replace that comparison. Preserve existing positive awards and assess distinct, useful upstream work separately. See [the release record](grading/releases/2026-09-07-credit-not-lineage.md).
+
 ## Current v8: explicit comparison against existing credited outcomes
 
 The first v7 historical review called PR3 a new family with no prior overlap while returning an ID already occupied by the table-and-grille experiment. The trusted input did include that existing family. This is an identifiable registry-comparison error, not evidence that the submitted result lacks value. V8 makes the decision explicit and independently checked: each outcome states new/extension/duplicate and compares the actual recorded scope of every already-known claimed source family. New outcomes must use unoccupied IDs and explain distinct value; reused families require a same-outcome comparison. Known IDs/scopes are supplied from signed context and constrained by the native formatter. The model determines scientific distinctness and tier; changing a label alone cannot create credit.
