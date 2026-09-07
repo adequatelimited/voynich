@@ -156,17 +156,6 @@
       "seed_baseline": 0
     },
     {
-      "id": "family-generative-falsification",
-      "rubric_version": "0.1",
-      "scope": "Pilot 4 in the generative-mechanism falsification family: implements the Cardan table-and-grille device (M5a independent-column, M5b row-coupled) built from the pinned ZL3b corpus, measures composite distance against real manuscript statistics across 28 configurations plus multi-seed stability, and narrows the residual gap to two local metrics (conditional bigram entropy, word-final predictability), extending outcome-m4-template-doodler-pilot.",
-      "acceptance_test": "Run the documented command; confirm results.json matches the recorded output and that every M5b variant beats every M5a variant on composite distance, with the best M5b at <= 0.55, Zipf <= -0.75, and adjacent-page Jaccard within 0.01 of the corpus.",
-      "aliases": [],
-      "predecessor_family_ids": [],
-      "excluded_overlap": [],
-      "seed": false,
-      "seed_baseline": 0
-    },
-    {
       "id": "family-generative-falsification-doodler",
       "rubric_version": "0.1",
       "scope": "A distinct generative-mechanism falsification pilot testing content-free syllable-table (Rugg-style, M1) and self-citation/preferential-reuse (Schinner-style, M2) generators against the pinned ZL3b corpus across 27 M2 grid variants plus M0/M1 baselines on 10 quantitative metrics, identifying which corpus properties (ttr, H1, vocabulary growth) are reproducible content-free and which (H2|1, word-final entropy, Zipf slope) are not, plus a diagnostic finding on verbatim-reuse rate needed to avoid type-explosion.",
@@ -180,14 +169,45 @@
       ],
       "seed": false,
       "seed_baseline": 0
+    },
+    {
+      "id": "family-generative-falsification",
+      "rubric_version": "0.1",
+      "scope": "Pilot 4 in the generative-mechanism falsification family: implements the Cardan table-and-grille device (M5a independent-column, M5b row-coupled) built from the pinned ZL3b corpus, measures composite distance against real manuscript statistics across 28 configurations plus multi-seed stability, and narrows the residual gap to two local metrics (conditional bigram entropy, word-final predictability), extending outcome-m4-template-doodler-pilot.",
+      "acceptance_test": "Run the documented command; confirm results.json matches the recorded output and that every M5b variant beats every M5a variant on composite distance, with the best M5b at <= 0.55, Zipf <= -0.75, and adjacent-page Jaccard within 0.01 of the corpus.",
+      "aliases": [],
+      "predecessor_family_ids": [],
+      "excluded_overlap": [],
+      "seed": false,
+      "seed_baseline": 0
+    },
+    {
+      "id": "family-generative-falsification-entry-doodler",
+      "rubric_version": "0.1",
+      "scope": "A distinct generative-mechanism falsification pilot testing a content-free per-page entry/topic-carryover generator (M3) against the pinned ZL3b corpus's newly measured page-level structural fingerprint (adjacent vs distant page vocabulary Jaccard, page-unique vocabulary share) across 24 grid variants, showing these page-level metrics are reproducible content-free while character-level residue (H2|1, Zipf slope, word length) persists.",
+      "acceptance_test": "Run `python entry_doodler.py --corpus ../../data/corpora/ZL3b-n.txt --out results/ --seed 408`; confirm results.json matches the recorded output and that the best M3 variant matches real adjacent-page Jaccard (0.0804), distant-page Jaccard (0.0422) and page-unique share (0.3024) each within +/-0.01, while remaining measurably higher on H2|1 and shallower on Zipf slope than the real corpus.",
+      "aliases": [
+        "entry-doodler-pilot",
+        "family-generative-falsification-entrydoodler"
+      ],
+      "predecessor_family_ids": [],
+      "excluded_overlap": [
+        "Does not claim credit for the pinned ZL3b corpus/parser (seed-corpus-parser) or local harness workflow (seed-local-harness), used only as inputs.",
+        "Does not claim or reuse the Cardan table-and-grille (M5a/M5b) experiment credited under family-generative-falsification.",
+        "Does not claim or reuse the M1/M2 syllable-table/self-citation pilot credited under family-generative-falsification-doodler.",
+        "Does not claim a standalone clustering/confound audit credited under seed-baseline-clustering."
+      ],
+      "seed": false,
+      "seed_baseline": 0
     }
   ],
   "credit_high_water_tiers": {
     "family-ms408-data-access": 5,
+    "family-generative-falsification-doodler": 5,
     "family-generative-falsification": 5,
-    "family-generative-falsification-doodler": 5
+    "family-generative-falsification-entry-doodler": 5
   },
-  "ledger_digest": "3e6efdf099264957fc8b534bcb055a6f03c6208d984505d2ef27dcd1f26c9ac4",
+  "ledger_digest": "84b080eb42026fea65663446ae5e22c6af4e420b54a469fff6717ca16b478119",
   "public_evidence": [
     {
       "path": "research/context-index.json",
