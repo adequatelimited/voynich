@@ -1,0 +1,87 @@
+schema_version: "1.0"
+id: "artheon-ms408-hosted-dataset"
+kind: artifact
+title: "Public hashed hosting of Beinecke MS 408 scans and extended EVA/IVTFF transliterations for agentic research"
+summary: >-
+  Registers the Artheon Museum Lab public dataset (https://lab.artheonmuseum.org/voynich/) as an
+  inspectable research resource: 213 full-resolution page scans from the Beinecke IIIF service,
+  the RF1b-e reference transliteration, the IT2a Takahashi transliteration, the Landini-Stolfi
+  interlinear, a deterministic cleaned reference corpus, per-file SHA-256 integrity hashes in a
+  machine-readable catalogue, an llms.txt agent entry point and a stdlib-only verified bulk
+  downloader. All objects are anonymously readable over HTTPS; no credentials are required.
+  This closes the repo's recorded gap that manuscript images and the extended transcriptions
+  had not been imported or registered.
+branch_ids: ["corpus-integrity"]
+contributors:
+  - github_id: 859355
+    github_login: "gnuchev"
+    roles: ["Resources", "Data curation"]
+ai_usage:
+  status: assisted
+  tools:
+    - provider: "Moonshot AI"
+      model_id: "kimi-k3"
+      model_version: "kimi-code/k3 (Kimi Code CLI; model string from local CLI config, 2026-09)"
+      accessed_at: "2026-09-06"
+      tasks:
+        - "Download orchestration for scans and transliterations from public origins"
+        - "SHA-256 catalogue generation and integrity verification scripting"
+        - "Drafting of dataset documentation and this contribution metadata"
+      human_verification: >-
+        Every registered hash was recomputed from bytes actually fetched from the public URLs
+        on 2026-09-06; the ZL3b hosted copy was verified byte-identical to this repository's
+        pinned manifest hash; the hosted downloader's end-to-end verification was run against
+        the live dataset.
+  reproducibility_notes: >-
+    All dataset bytes come from the cited public origins; no AI-generated content is part of the
+    data. AI assistance was limited to scripting downloads, computing hashes and drafting docs.
+    Every registered hash was computed from bytes actually fetched on 2026-09-06.
+changes:
+  - path: "data/transcriptions/catalog.json"
+    improvement: "Adds honest hosted-external catalog entries for RF1b-e, IT2a, LSI and the overall Artheon dataset with rights and limitations."
+  - path: "contributions/artheon-ms408-hosted-dataset/hosted-hashes.json"
+    improvement: "Records SHA-256 and byte lengths computed from bytes actually fetched on 2026-09-06, incl. the ZL3b cross-check against data/manifests/zl3b.json."
+  - path: "contributions/artheon-ms408-hosted-dataset/rights.md"
+    improvement: "Per-source rights and provenance record for scans, transliterations and derived corpus."
+outcomes:
+  - id: "outcome-artheon-ms408-hosted-dataset"
+    family_id: "family-ms408-data-access"
+    extends: null
+    before: >-
+      The project corpus held ZL3b and GC2a bytes only; RIGHTS.md records that manuscript images,
+      scholarly PDFs and source fonts had not been imported, and agents had no verified programmatic
+      route to the full scan set or the RF/IT/LSI transliterations.
+    after: >-
+      Agents and contributors can anonymously fetch all 213 full-resolution MS 408 scans and the
+      extended transliterations, verify every byte against published SHA-256 hashes, and enumerate
+      the whole dataset from one machine-readable catalogue. ZL3b hosted copy verified
+      byte-identical to this repo's pinned manifest hash
+      (bf5b6d4ac1e3a51b1847a9c388318d609020441ccd56984c901c32b09beccafc).
+    acceptance_test: >-
+      Fetch https://lab.artheonmuseum.org/voynich/catalogue.json, pick any entry, download its
+      public_url and confirm the SHA-256 matches the catalogue; or run the hosted
+      download_dataset.py which performs exactly this verification.
+    evidence:
+      - "contributions/artheon-ms408-hosted-dataset/hosted-hashes.json"
+      - "contributions/artheon-ms408-hosted-dataset/rights.md"
+      - "data/transcriptions/catalog.json"
+    related_outcomes: []
+    claimed_cumulative_tier: 5
+    claimed_incremental_points: 5
+    claim_rationale: >-
+      Scoring atlas row "Source acquisition, rights resolution, digitization and preservation":
+      a usable provenance-preserving resource. The resource removes a material access obstacle
+      (no verified bulk/agent access to the full scan set and extended transcriptions), preserves
+      provenance and rights per source, and is inspectable via the published acceptance test.
+    attribution:
+      - github_id: 859355
+        share_basis_points: 10000
+claimed_total_points: 5
+rubric_version: "0.1"
+conflicts: []
+limitations:
+  - "Scans are the Beinecke full-size JPEG derivatives; archival TIFFs remain at Yale via the documented IIIF/download URLs."
+  - "Re-hosting adds no new manuscript readings; value is verified access, integrity and agent ergonomics."
+  - "The hosted catalogue evolves; the manifest pins its 2026-09-06 bytes, and per-file hashes inside it version the data objects."
+  - "Original 1998 Stolfi EVT is marked reference_only pending terms review."
+rights_manifest: "contributions/artheon-ms408-hosted-dataset/rights.md"
