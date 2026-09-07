@@ -1,0 +1,89 @@
+schema_version: "1.0"
+id: "m5-grille-pilot"
+kind: research
+title: "Weighted table-and-grille generator built from the manuscript: row coupling steepens Zipf and matches page structure"
+summary: >-
+  Fourth executed pilot in the generative-falsification family. Implements the Cardan
+  table-and-grille mechanism (Rugg 2004; Zandbergen 2021) with the table built from the
+  pinned corpus itself via Stolfi-layer word parsing. Two devices compared: independent
+  weighted columns (M5a) and the faithful row-coupled grille with fixed hole offsets
+  (M5b). M5b is the best content-free model so far (composite distance 0.50 vs 0.94 for
+  M4): Zipf slope steepens to -0.84 (real -1.05), adjacent/distant page sharing matched
+  (0.077/0.045 vs 0.080/0.042), word length matched. Row coupling beats independent
+  columns in every configuration. Residual narrowed to exactly two local properties:
+  conditional bigram entropy (2.89 vs 2.26) and word-final predictability (3.11 vs 2.59);
+  device models overshoot entry-private vocabulary (0.38 vs 0.30), consistent with a
+  reused rather than regenerated table. Multi-seed stability verified (SD <= 0.02 on
+  entropy metrics, seeds 101/202/303).
+branch_ids: ["generative-mechanisms", "statistical-structure"]
+contributors:
+  - github_id: 859355
+    github_login: "gnuchev"
+    roles: ["Formal analysis", "Investigation"]
+ai_usage:
+  status: assisted
+  tools:
+    - provider: "Moonshot AI"
+      model_id: "kimi-k2"
+      model_version: "kimi-k2 (Kimi Code CLI, 2026-09)"
+      accessed_at: "2026-09-07"
+      tasks:
+        - "Implementation of m5_grille.py (M5a/M5b devices, grid, multi-seed)"
+        - "Drafting of report.md and this manifest"
+      human_verification: >-
+        Executed locally; all numbers come from the recorded run
+        (experiments/runs/2026-09-07T064500Z-m5-grille-pilot/output.json). Corpus hash
+        verified against data/manifests/zl3b.json. No metric hand-edited.
+  reproducibility_notes: >-
+    Deterministic: python m5_grille.py --corpus ../../data/corpora/ZL3b-n.txt --out
+    results/ --seed 408. Stdlib only.
+changes:
+  - path: "experiments/m5-grille/m5_grille.py"
+    improvement: "Corpus-derived table-and-grille harness with independent-column and row-coupled devices."
+  - path: "experiments/m5-grille/report.md"
+    improvement: "Pilot-4 findings: row coupling matters; residue narrowed to two local properties; cross-pilot comparison table."
+  - path: "experiments/m5-grille/results/results.json"
+    improvement: "Full metrics: 12 M5a + 16 M5b variants plus multi-seed stability block."
+  - path: "experiments/runs/2026-09-07T064500Z-m5-grille-pilot/run.json"
+    improvement: "Run record with command, seed and corpus hash."
+outcomes:
+  - id: "outcome-m5-grille-pilot"
+    family_id: "family-generative-falsification"
+    extends: "outcome-m4-template-doodler-pilot"
+    before: >-
+      Pilot 3 left four residual properties and had not tested the literature's main
+      mechanical hypothesis (table-and-grille) at corpus scale.
+    after: >-
+      The literature's flagship hoax device is now implemented and measured at corpus
+      scale; its faithful (row-coupled) form outperforms all prior family models and
+      matches page-level structure and word length; the unexplained residue is exactly
+      two local letter-level properties, and entry-private overshoot points to a reused
+      table across pages.
+    acceptance_test: >-
+      Run the documented command; confirm results.json matches the recorded output and
+      that every M5b variant beats every M5a variant on composite distance, with the best
+      M5b at <= 0.55, Zipf <= -0.75, and adjacent-page Jaccard within 0.01 of the corpus.
+    evidence:
+      - "experiments/m5-grille/m5_grille.py"
+      - "experiments/m5-grille/report.md"
+      - "experiments/m5-grille/results/results.json"
+      - "experiments/runs/2026-09-07T064500Z-m5-grille-pilot/output.json"
+    related_outcomes: ["outcome-generative-doodler-pilot", "outcome-entry-doodler-pilot", "outcome-m4-template-doodler-pilot"]
+    claimed_cumulative_tier: 5
+    claimed_incremental_points: 2
+    claim_rationale: >-
+      Atlas "Experiments": incremental bounded verified improvement (2) — the canonical
+      production device from the literature is measured at corpus scale with multi-seed
+      stability, tightening the family result. Family cumulative stays 5; not 10 — the
+      table is corpus-derived by construction and independent execution is pending.
+    attribution:
+      - github_id: 859355
+        share_basis_points: 10000
+claimed_total_points: 2
+rubric_version: "0.1"
+conflicts: []
+limitations:
+  - "Table built from the manuscript's own words (maximal advantage by construction); residue persists despite it."
+  - "ZL3b only; small offset grid; no line-position effects; English-only controls (from pilot 3)."
+  - "Composite distance is a heuristic; see report for per-metric table."
+rights_manifest: "contributions/m5-grille-pilot/rights.md"
