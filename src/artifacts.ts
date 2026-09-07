@@ -1,3 +1,4 @@
+import JSON5 from 'json5';
 import { SaxesParser } from 'saxes';
 import { fileTypeFromBuffer } from 'file-type';
 import { parse as parseCSV } from 'csv-parse/sync';
@@ -57,7 +58,7 @@ export async function inspectTextArtifact(path: string, bytes: Uint8Array, textB
   if (bytes.length > MAX_ARTIFACT_BYTES) throw new Error('artifact_storage_limit');
   let kind: Awaited<ReturnType<typeof fileTypeFromBuffer>>;
   try { kind = await fileTypeFromBuffer(bytes.subarray(0, 8192)); } catch { throw new Error('artifact_signature_unreadable'); }
-  if (kind) {
+  if (kind && kind.ext !== 'xml') {
     if (kind.mime.startsWith('video/') || videos.test(`x.${kind.ext}`)) throw new Error('video_content_prohibited');
     if (archives.test(`x.${kind.ext}`) || /(?:zip|gzip|compress|archive|tar|rar|7z)/i.test(kind.mime)) throw new Error('archive_content_prohibited');
     throw new Error('artifact_format_requires_isolated_inspection');
@@ -69,7 +70,7 @@ export async function inspectTextArtifact(path: string, bytes: Uint8Array, textB
   if (secret.test(text)) throw new Error('restricted_secret_artifact');
   if (/data:(?:video\/|application\/(?:zip|gzip|x-(?:tar|rar|7z)))/i.test(text)) throw new Error('embedded_prohibited_artifact');
   const structure: Record<string, unknown> = { lines: text.split('\n').length, utf8_valid: true, secret_scan: 'entire source', execution_performed: false };
-  if (/\.xml$/i.test(path)) {
+  if (/\.xml$/i.test(path) || kind?.ext === 'xml') {
     if (/<!\s*(?:DOCTYPE|ENTITY)/i.test(text)) throw new Error('artifact_xml_dtd_prohibited');
     let elements = 0; const parser = new SaxesParser({ xmlns: true });
     parser.on('opentag', () => { elements++; });
@@ -77,7 +78,15 @@ export async function inspectTextArtifact(path: string, bytes: Uint8Array, textB
     parser.on('doctype', () => { throw new Error('artifact_xml_dtd_prohibited'); });
     parser.write(text).close(); structure.elements = elements;
   } else if (/\.(?:json|ipynb)$/.test(path)) {
-    let value: unknown; try { value = JSON.parse(text.replace(/^\uFEFF/, '')); } catch { throw new Error('artifact_invalid_json'); }
+    let value: unknown;
+    try { value = JSON.parse(text.replace(/^\uFEFF/, '')); }
+    catch {
+      if (!/\b(?:Infinity|NaN)\b/.test(text) || /\.ipynb$/i.test(path)) throw new Error('artifact_invalid_json');
+      try { value = JSON5.parse(text); structure.format = 'scientific_json5'; } catch { throw new Error('artifact_invalid_json'); }
+      let nonfinite = 0; const pending: unknown[] = [value];
+      while (pending.length) { const item = pending.pop(); if (typeof item === 'number' && !Number.isFinite(item)) nonfinite++; else if (item && typeof item === 'object') for (const child of Object.values(item)) pending.push(child); }
+      structure.nonfinite_values = nonfinite;
+    }
     structure.json_type = Array.isArray(value) ? 'array' : typeof value;
     structure.json_entries = Array.isArray(value) ? value.length : value && typeof value === 'object' ? Object.keys(value).length : 1;
     if (/\.ipynb$/i.test(path)) {

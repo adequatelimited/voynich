@@ -50,10 +50,17 @@ test('notebook attachments and embedded visual payloads stay blocked; plain note
 
 
 test('XML is fully parsed without DTD/entity expansion and can be represented within a published budget', async () => {
- const xml = bytes('<root>' + '<word>test &amp; evidence</word>'.repeat(50000) + '</root>');
+ const xml = bytes('<?xml version="1.0"?><root>' + '<word>test &amp; evidence</word>'.repeat(50000) + '</root>');
  const view = await inspectTextArtifact('data/control.xml', xml, 3000);assert.equal(JSON.parse(view.content!).structure.elements, 50001);
  await assert.rejects(inspectTextArtifact('data/control.xml',bytes('<!DOCTYPE x [<!ENTITY a SYSTEM "file:///secret">]><x>&a;</x>')), /dtd_prohibited/);
  await assert.rejects(inspectTextArtifact('data/control.xml',bytes('<root><bad></root>')), /invalid_xml/);
  assert.equal(artifactBudgets([{path:'report.md',byte_length:100000}],1000000).get('report.md'),100000);
  assert.throws(()=>artifactBudgets([{path:'report.md',byte_length:100000}]),/model_evidence_limit/);
+});
+
+test('scientific Infinity and NaN remain unchanged source evidence with explicit format disclosure',async()=>{
+ const source=bytes('{"ratio":Infinity,"negative":-Infinity,"missing":NaN,"data":['+'1,'.repeat(5000)+'0]}');
+ const view=await inspectTextArtifact('results.json',source,3000);const structure=JSON.parse(view.content!).structure;
+ assert.equal(structure.format,'scientific_json5');assert.equal(structure.nonfinite_values,3);assert.equal(view.sha256,await sha256(source));
+ await assert.rejects(inspectTextArtifact('results.json',bytes('{"x":Infinity,"bad":function(){}}')),/invalid_json/);
 });

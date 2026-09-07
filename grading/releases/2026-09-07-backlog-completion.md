@@ -6,3 +6,5 @@ XML joins the UTF-8 data allowlist. The established saxes parser validates the e
 
 Response-completeness instructions prefer concise gate/outcome explanations over redundant informational findings. Every included finding still requires an explicit blocks_merge_or_credit boolean; nothing is inferred or repaired by the server. Invalid prior responses remain immutable and do not authorize points. The new published profile can assess the still-pending evidence afresh; valid judgments under an unchanged profile cannot be rerolled. This release is operator-authorized to clear actual artifact and pipeline blockers and does not claim calibration passed.
 
+
+Scientific result JSON containing nonfinite values (Infinity, -Infinity, NaN) is inspected with the established JSON5 parser when strict JSON fails. Original bytes and values are preserved; derived views disclose scientific_json5 and the count of nonfinite numbers. These are numerical limitations to assess, not permission to invent finite results. Manifests and trusted policy records retain their existing strict validation.

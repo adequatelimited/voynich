@@ -39,6 +39,7 @@
   "dependencies": {
     "csv-parse": "6.1.0",
     "file-type": "22.0.2",
+    "json5": "2.2.3",
     "saxes": "6.0.0",
     "yaml": "2.8.2"
   },
