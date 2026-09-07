@@ -1,0 +1,87 @@
+schema_version: "1.0"
+id: "generative-doodler-pilot"
+kind: research
+title: "The doodler test: a content-free self-citation generator vs. the Voynich statistical fingerprint"
+summary: >-
+  Executed pilot experiment in the generative-mechanisms branch. Three content-free models
+  (random null, Rugg-style syllable table, Schinner-style self-citation with Simon preferential
+  reuse) were generated at corpus size and compared against the repo-pinned ZL3b corpus on 10
+  quantitative properties. Result: the coarse fingerprint (type/token ratio, unigram entropy,
+  vocabulary growth) is reproducible without content, but conditional bigram entropy,
+  word-final predictability and the Zipf slope remain unmatched by the parameterized doodler.
+  A diagnostic finding: copy-and-mutate alone explodes type diversity; ~40% preferential
+  verbatim reuse is required, i.e. the real text recycles its vocabulary more deliberately
+  than naive improvisation. Deterministic stdlib-only code, one command, one seed.
+branch_ids: ["generative-mechanisms", "statistical-structure"]
+contributors:
+  - github_id: 859355
+    github_login: "gnuchev"
+    roles: ["Formal analysis", "Investigation"]
+ai_usage:
+  status: assisted
+  tools:
+    - provider: "Moonshot AI"
+      model_id: "kimi-k2"
+      model_version: "kimi-k2 (Kimi Code CLI, 2026-09)"
+      accessed_at: "2026-09-06"
+      tasks:
+        - "Experiment design discussion support"
+        - "Implementation of doodler.py (models, metrics, grid)"
+        - "Drafting of report.md and this manifest"
+      human_verification: >-
+        The experiment was executed locally; results.json values quoted in report.md come from
+        the recorded run output (experiments/runs/2026-09-06T193000Z-doodler-pilot/output.json).
+        The corpus hash was re-verified against data/manifests/zl3b.json. No metric was hand-edited.
+  reproducibility_notes: >-
+    Fully deterministic: python doodler.py --corpus ../../data/corpora/ZL3b-n.txt --out results/
+    --seed 1904 reproduces results.json. Stdlib only.
+changes:
+  - path: "experiments/generative-doodler/doodler.py"
+    improvement: "New reproducible generator/metric harness for content-free production models."
+  - path: "experiments/generative-doodler/report.md"
+    improvement: "Pilot findings with matched and unmatched properties, interpretation, limits and next steps."
+  - path: "experiments/generative-doodler/results/results.json"
+    improvement: "Full metric table for corpus and all model variants in the grid."
+  - path: "experiments/runs/2026-09-06T193000Z-doodler-pilot/run.json"
+    improvement: "Run record: command, seed, corpus hash, environment, output."
+outcomes:
+  - id: "outcome-generative-doodler-pilot"
+    family_id: "family-generative-falsification"
+    extends: null
+    before: >-
+      The 'meaningless but structured production' hypothesis (Rugg grille, Schinner self-citation,
+      artistic pseudo-script) was represented in the repo as an open direction without executed,
+      repo-reproducible comparisons against the pinned corpus.
+    after: >-
+      A runnable harness plus a completed pilot quantifies which corpus properties a content-free
+      process already reproduces (ttr, H1, vocabulary growth) and which it does not (H2|1,
+      word-final entropy, Zipf slope), localizing where real structure or stronger production
+      rules must hide. Includes a diagnostic result on mutation-driven type explosion.
+    acceptance_test: >-
+      Run the documented command; confirm results.json matches the recorded output and that the
+      three residual properties listed in report.md hold (H2|1 >= 0.4 bits above corpus,
+      word-final entropy above corpus, Zipf slope shallower than corpus) for every M2 grid variant.
+    evidence:
+      - "experiments/generative-doodler/doodler.py"
+      - "experiments/generative-doodler/report.md"
+      - "experiments/generative-doodler/results/results.json"
+      - "experiments/runs/2026-09-06T193000Z-doodler-pilot/output.json"
+    related_outcomes: []
+    claimed_cumulative_tier: 5
+    claimed_incremental_points: 5
+    claim_rationale: >-
+      Atlas row "Experiments": an informative controlled pilot with a reusable harness;
+      negative/partial-match results reported with the same evidence standard as positive ones.
+      Not claimed as 10: no independent execution yet, single seed, single corpus.
+    attribution:
+      - github_id: 859355
+        share_basis_points: 10000
+claimed_total_points: 5
+rubric_version: "0.1"
+conflicts: []
+limitations:
+  - "Single corpus (ZL3b), single seed, heuristic composite distance, coarse grid."
+  - "M2 habit set is corpus-derived: content-free but not corpus-free; residual misses occur despite this advantage."
+  - "Not a replication of Rugg (2004) or Schinner (2007); no comparison to their published runs."
+  - "Line-level structure and Currier A/B split not modeled in this pilot."
+rights_manifest: "contributions/generative-doodler-pilot/rights.md"

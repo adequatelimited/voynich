@@ -1,0 +1,15 @@
+{
+  "id": "2026-09-06T193000Z-doodler-pilot",
+  "experiment": "experiments/generative-doodler",
+  "command": "python doodler.py --corpus ../../data/corpora/ZL3b-n.txt --out results/ --seed 1904",
+  "seed": 1904,
+  "corpus": {
+    "path": "data/corpora/ZL3b-n.txt",
+    "sha256": "bf5b6d4ac1e3a51b1847a9c388318d609020441ccd56984c901c32b09beccafc",
+    "bytes": 411671
+  },
+  "code": "experiments/generative-doodler/doodler.py",
+  "environment": "CPython 3.12, stdlib only, Windows 11",
+  "started": "2026-09-06T19:30:00Z",
+  "status": "completed"
+}
