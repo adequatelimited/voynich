@@ -1,0 +1,752 @@
+{
+ "0": {
+  "voynich": {
+   "n_items": 79,
+   "n_similar_pairs": 28,
+   "S3_mean_jaccard": 0.0846,
+   "N3_perm_mean": 0.0805,
+   "N3_perm_sd": 0.0051,
+   "N3_p": 0.2122,
+   "N3_z": 0.8,
+   "N4_pairs_with_candidates": 26,
+   "S3_on_matched_subset": 0.0845,
+   "N4_matched_mean": 0.0958,
+   "N4_sd": 0.0044,
+   "N4_p": 0.9962,
+   "N4_z": -2.58,
+   "detectable_excess_at_p05": 0.0084,
+   "exploratory_lift": {
+    "vocab_V": 2287,
+    "set_size_mean": 72.4,
+    "set_size_min_max": [
+     36,
+     119
+    ],
+    "lift_observed": 4.828,
+    "lift_N3_mean": 4.786,
+    "lift_N3_sd": 0.312,
+    "lift_N3_p": 0.4464,
+    "lift_observed_matched_subset": 4.898,
+    "lift_N4_mean": 5.555,
+    "lift_N4_sd": 0.243,
+    "lift_N4_p": 0.9988,
+    "largest_name_clusters": [
+     [
+      "thistle",
+      6
+     ],
+     [
+      "scabiosa",
+      3
+     ],
+     [
+      "boragine",
+      3
+     ],
+     [
+      "primula",
+      2
+     ],
+     [
+      "crassulatea",
+      1
+     ],
+     [
+      "pari",
+      1
+     ],
+     [
+      "cucumber",
+      1
+     ],
+     [
+      "polygonum",
+      1
+     ],
+     [
+      "silene",
+      1
+     ],
+     [
+      "maju",
+      1
+     ],
+     [
+      "hemp",
+      1
+     ],
+     [
+      "communi",
+      1
+     ]
+    ]
+   }
+  },
+  "control": {
+   "n_items": 96,
+   "n_similar_pairs": 15,
+   "S3_mean_jaccard": 0.2045,
+   "N3_perm_mean": 0.2011,
+   "N3_perm_sd": 0.0216,
+   "N3_p": 0.4428,
+   "N3_z": 0.16,
+   "N4_pairs_with_candidates": 15,
+   "S3_on_matched_subset": 0.2045,
+   "N4_matched_mean": 0.2053,
+   "N4_sd": 0.0107,
+   "N4_p": 0.5264,
+   "N4_z": -0.07,
+   "detectable_excess_at_p05": 0.0355,
+   "exploratory_lift": {
+    "vocab_V": 8528,
+    "set_size_mean": 563.9,
+    "set_size_min_max": [
+     44,
+     2988
+    ],
+    "lift_observed": 9.872,
+    "lift_N3_mean": 7.827,
+    "lift_N3_sd": 1.203,
+    "lift_N3_p": 0.0562,
+    "lift_observed_matched_subset": 9.872,
+    "lift_N4_mean": 8.975,
+    "lift_N4_sd": 0.551,
+    "lift_N4_p": 0.053,
+    "largest_name_clusters": [
+     [
+      "mustard",
+      6
+     ],
+     [
+      "cresse",
+      3
+     ],
+     [
+      "alder",
+      1
+     ],
+     [
+      "blade",
+      1
+     ],
+     [
+      "winter",
+      1
+     ],
+     [
+      "wort",
+      1
+     ],
+     [
+      "saxifrage",
+      1
+     ],
+     [
+      "thistle",
+      1
+     ]
+    ]
+   }
+  }
+ },
+ "25": {
+  "voynich": {
+   "n_items": 79,
+   "n_similar_pairs": 28,
+   "S3_mean_jaccard": 0.0438,
+   "N3_perm_mean": 0.0391,
+   "N3_perm_sd": 0.0039,
+   "N3_p": 0.1136,
+   "N3_z": 1.22,
+   "N4_pairs_with_candidates": 26,
+   "S3_on_matched_subset": 0.0439,
+   "N4_matched_mean": 0.0505,
+   "N4_sd": 0.0036,
+   "N4_p": 0.9672,
+   "N4_z": -1.85,
+   "detectable_excess_at_p05": 0.0063,
+   "exploratory_lift": {
+    "vocab_V": 2262,
+    "set_size_mean": 60.6,
+    "set_size_min_max": [
+     28,
+     104
+    ],
+    "lift_observed": 3.094,
+    "lift_N3_mean": 2.811,
+    "lift_N3_sd": 0.286,
+    "lift_N3_p": 0.1556,
+    "lift_observed_matched_subset": 3.151,
+    "lift_N4_mean": 3.516,
+    "lift_N4_sd": 0.24,
+    "lift_N4_p": 0.9328,
+    "largest_name_clusters": [
+     [
+      "thistle",
+      6
+     ],
+     [
+      "scabiosa",
+      3
+     ],
+     [
+      "boragine",
+      3
+     ],
+     [
+      "primula",
+      2
+     ],
+     [
+      "crassulatea",
+      1
+     ],
+     [
+      "pari",
+      1
+     ],
+     [
+      "cucumber",
+      1
+     ],
+     [
+      "polygonum",
+      1
+     ],
+     [
+      "silene",
+      1
+     ],
+     [
+      "maju",
+      1
+     ],
+     [
+      "hemp",
+      1
+     ],
+     [
+      "communi",
+      1
+     ]
+    ]
+   }
+  },
+  "control": {
+   "n_items": 96,
+   "n_similar_pairs": 15,
+   "S3_mean_jaccard": 0.1804,
+   "N3_perm_mean": 0.1776,
+   "N3_perm_sd": 0.0214,
+   "N3_p": 0.4468,
+   "N3_z": 0.13,
+   "N4_pairs_with_candidates": 15,
+   "S3_on_matched_subset": 0.1804,
+   "N4_matched_mean": 0.1797,
+   "N4_sd": 0.0104,
+   "N4_p": 0.4718,
+   "N4_z": 0.06,
+   "detectable_excess_at_p05": 0.0353,
+   "exploratory_lift": {
+    "vocab_V": 8503,
+    "set_size_mean": 540.8,
+    "set_size_min_max": [
+     38,
+     2963
+    ],
+    "lift_observed": 9.585,
+    "lift_N3_mean": 7.384,
+    "lift_N3_sd": 1.103,
+    "lift_N3_p": 0.0332,
+    "lift_observed_matched_subset": 9.585,
+    "lift_N4_mean": 8.611,
+    "lift_N4_sd": 0.493,
+    "lift_N4_p": 0.0258,
+    "largest_name_clusters": [
+     [
+      "mustard",
+      6
+     ],
+     [
+      "cresse",
+      3
+     ],
+     [
+      "alder",
+      1
+     ],
+     [
+      "blade",
+      1
+     ],
+     [
+      "winter",
+      1
+     ],
+     [
+      "wort",
+      1
+     ],
+     [
+      "saxifrage",
+      1
+     ],
+     [
+      "thistle",
+      1
+     ]
+    ]
+   }
+  }
+ },
+ "50": {
+  "voynich": {
+   "n_items": 79,
+   "n_similar_pairs": 28,
+   "S3_mean_jaccard": 0.0311,
+   "N3_perm_mean": 0.0277,
+   "N3_perm_sd": 0.0032,
+   "N3_p": 0.1404,
+   "N3_z": 1.06,
+   "N4_pairs_with_candidates": 26,
+   "S3_on_matched_subset": 0.0309,
+   "N4_matched_mean": 0.0371,
+   "N4_sd": 0.003,
+   "N4_p": 0.9798,
+   "N4_z": -2.07,
+   "detectable_excess_at_p05": 0.0053,
+   "exploratory_lift": {
+    "vocab_V": 2237,
+    "set_size_mean": 54.5,
+    "set_size_min_max": [
+     26,
+     96
+    ],
+    "lift_observed": 2.461,
+    "lift_N3_mean": 2.21,
+    "lift_N3_sd": 0.274,
+    "lift_N3_p": 0.1752,
+    "lift_observed_matched_subset": 2.495,
+    "lift_N4_mean": 2.89,
+    "lift_N4_sd": 0.25,
+    "lift_N4_p": 0.9436,
+    "largest_name_clusters": [
+     [
+      "thistle",
+      6
+     ],
+     [
+      "scabiosa",
+      3
+     ],
+     [
+      "boragine",
+      3
+     ],
+     [
+      "primula",
+      2
+     ],
+     [
+      "crassulatea",
+      1
+     ],
+     [
+      "pari",
+      1
+     ],
+     [
+      "cucumber",
+      1
+     ],
+     [
+      "polygonum",
+      1
+     ],
+     [
+      "silene",
+      1
+     ],
+     [
+      "maju",
+      1
+     ],
+     [
+      "hemp",
+      1
+     ],
+     [
+      "communi",
+      1
+     ]
+    ]
+   }
+  },
+  "control": {
+   "n_items": 96,
+   "n_similar_pairs": 15,
+   "S3_mean_jaccard": 0.1633,
+   "N3_perm_mean": 0.1619,
+   "N3_perm_sd": 0.0206,
+   "N3_p": 0.4664,
+   "N3_z": 0.07,
+   "N4_pairs_with_candidates": 15,
+   "S3_on_matched_subset": 0.1633,
+   "N4_matched_mean": 0.1619,
+   "N4_sd": 0.01,
+   "N4_p": 0.4364,
+   "N4_z": 0.14,
+   "detectable_excess_at_p05": 0.0339,
+   "exploratory_lift": {
+    "vocab_V": 8478,
+    "set_size_mean": 521.2,
+    "set_size_min_max": [
+     38,
+     2938
+    ],
+    "lift_observed": 9.426,
+    "lift_N3_mean": 7.172,
+    "lift_N3_sd": 1.063,
+    "lift_N3_p": 0.0282,
+    "lift_observed_matched_subset": 9.426,
+    "lift_N4_mean": 8.36,
+    "lift_N4_sd": 0.473,
+    "lift_N4_p": 0.012,
+    "largest_name_clusters": [
+     [
+      "mustard",
+      6
+     ],
+     [
+      "cresse",
+      3
+     ],
+     [
+      "alder",
+      1
+     ],
+     [
+      "blade",
+      1
+     ],
+     [
+      "winter",
+      1
+     ],
+     [
+      "wort",
+      1
+     ],
+     [
+      "saxifrage",
+      1
+     ],
+     [
+      "thistle",
+      1
+     ]
+    ]
+   }
+  }
+ },
+ "100": {
+  "voynich": {
+   "n_items": 79,
+   "n_similar_pairs": 28,
+   "S3_mean_jaccard": 0.018,
+   "N3_perm_mean": 0.0162,
+   "N3_perm_sd": 0.0026,
+   "N3_p": 0.2482,
+   "N3_z": 0.67,
+   "N4_pairs_with_candidates": 26,
+   "S3_on_matched_subset": 0.0186,
+   "N4_matched_mean": 0.0233,
+   "N4_sd": 0.0024,
+   "N4_p": 0.9782,
+   "N4_z": -1.91,
+   "detectable_excess_at_p05": 0.0043,
+   "exploratory_lift": {
+    "vocab_V": 2187,
+    "set_size_mean": 46.4,
+    "set_size_min_max": [
+     19,
+     84
+    ],
+    "lift_observed": 1.604,
+    "lift_N3_mean": 1.499,
+    "lift_N3_sd": 0.261,
+    "lift_N3_p": 0.333,
+    "lift_observed_matched_subset": 1.672,
+    "lift_N4_mean": 2.099,
+    "lift_N4_sd": 0.253,
+    "lift_N4_p": 0.965,
+    "largest_name_clusters": [
+     [
+      "thistle",
+      6
+     ],
+     [
+      "scabiosa",
+      3
+     ],
+     [
+      "boragine",
+      3
+     ],
+     [
+      "primula",
+      2
+     ],
+     [
+      "crassulatea",
+      1
+     ],
+     [
+      "pari",
+      1
+     ],
+     [
+      "cucumber",
+      1
+     ],
+     [
+      "polygonum",
+      1
+     ],
+     [
+      "silene",
+      1
+     ],
+     [
+      "maju",
+      1
+     ],
+     [
+      "hemp",
+      1
+     ],
+     [
+      "communi",
+      1
+     ]
+    ]
+   }
+  },
+  "control": {
+   "n_items": 96,
+   "n_similar_pairs": 15,
+   "S3_mean_jaccard": 0.137,
+   "N3_perm_mean": 0.1346,
+   "N3_perm_sd": 0.019,
+   "N3_p": 0.4352,
+   "N3_z": 0.13,
+   "N4_pairs_with_candidates": 15,
+   "S3_on_matched_subset": 0.137,
+   "N4_matched_mean": 0.132,
+   "N4_sd": 0.0097,
+   "N4_p": 0.2968,
+   "N4_z": 0.51,
+   "detectable_excess_at_p05": 0.0312,
+   "exploratory_lift": {
+    "vocab_V": 8428,
+    "set_size_mean": 486.1,
+    "set_size_min_max": [
+     38,
+     2888
+    ],
+    "lift_observed": 9.123,
+    "lift_N3_mean": 6.683,
+    "lift_N3_sd": 0.963,
+    "lift_N3_p": 0.012,
+    "lift_observed_matched_subset": 9.123,
+    "lift_N4_mean": 7.806,
+    "lift_N4_sd": 0.42,
+    "lift_N4_p": 0.0018,
+    "largest_name_clusters": [
+     [
+      "mustard",
+      6
+     ],
+     [
+      "cresse",
+      3
+     ],
+     [
+      "alder",
+      1
+     ],
+     [
+      "blade",
+      1
+     ],
+     [
+      "winter",
+      1
+     ],
+     [
+      "wort",
+      1
+     ],
+     [
+      "saxifrage",
+      1
+     ],
+     [
+      "thistle",
+      1
+     ]
+    ]
+   }
+  }
+ },
+ "200": {
+  "voynich": {
+   "n_items": 79,
+   "n_similar_pairs": 28,
+   "S3_mean_jaccard": 0.0083,
+   "N3_perm_mean": 0.0079,
+   "N3_perm_sd": 0.0019,
+   "N3_p": 0.4038,
+   "N3_z": 0.2,
+   "N4_pairs_with_candidates": 26,
+   "S3_on_matched_subset": 0.0085,
+   "N4_matched_mean": 0.0114,
+   "N4_sd": 0.0019,
+   "N4_p": 0.9408,
+   "N4_z": -1.5,
+   "detectable_excess_at_p05": 0.0031,
+   "exploratory_lift": {
+    "vocab_V": 2087,
+    "set_size_mean": 37.3,
+    "set_size_min_max": [
+     12,
+     74
+    ],
+    "lift_observed": 0.833,
+    "lift_N3_mean": 0.844,
+    "lift_N3_sd": 0.231,
+    "lift_N3_p": 0.494,
+    "lift_observed_matched_subset": 0.86,
+    "lift_N4_mean": 1.177,
+    "lift_N4_sd": 0.245,
+    "lift_N4_p": 0.907,
+    "largest_name_clusters": [
+     [
+      "thistle",
+      6
+     ],
+     [
+      "scabiosa",
+      3
+     ],
+     [
+      "boragine",
+      3
+     ],
+     [
+      "primula",
+      2
+     ],
+     [
+      "crassulatea",
+      1
+     ],
+     [
+      "pari",
+      1
+     ],
+     [
+      "cucumber",
+      1
+     ],
+     [
+      "polygonum",
+      1
+     ],
+     [
+      "silene",
+      1
+     ],
+     [
+      "maju",
+      1
+     ],
+     [
+      "hemp",
+      1
+     ],
+     [
+      "communi",
+      1
+     ]
+    ]
+   }
+  },
+  "control": {
+   "n_items": 96,
+   "n_similar_pairs": 15,
+   "S3_mean_jaccard": 0.1031,
+   "N3_perm_mean": 0.0984,
+   "N3_perm_sd": 0.0161,
+   "N3_p": 0.3708,
+   "N3_z": 0.29,
+   "N4_pairs_with_candidates": 15,
+   "S3_on_matched_subset": 0.1031,
+   "N4_matched_mean": 0.0943,
+   "N4_sd": 0.0086,
+   "N4_p": 0.1608,
+   "N4_z": 1.02,
+   "detectable_excess_at_p05": 0.0264,
+   "exploratory_lift": {
+    "vocab_V": 8329,
+    "set_size_mean": 429.5,
+    "set_size_min_max": [
+     33,
+     2796
+    ],
+    "lift_observed": 8.824,
+    "lift_N3_mean": 5.857,
+    "lift_N3_sd": 0.852,
+    "lift_N3_p": 0.0018,
+    "lift_observed_matched_subset": 8.824,
+    "lift_N4_mean": 6.965,
+    "lift_N4_sd": 0.383,
+    "lift_N4_p": 0.0,
+    "largest_name_clusters": [
+     [
+      "mustard",
+      6
+     ],
+     [
+      "cresse",
+      3
+     ],
+     [
+      "alder",
+      1
+     ],
+     [
+      "blade",
+      1
+     ],
+     [
+      "winter",
+      1
+     ],
+     [
+      "wort",
+      1
+     ],
+     [
+      "saxifrage",
+      1
+     ],
+     [
+      "thistle",
+      1
+     ]
+    ]
+   }
+  }
+ }
+}
