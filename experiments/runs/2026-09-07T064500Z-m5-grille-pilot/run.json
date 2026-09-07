@@ -1,0 +1,19 @@
+{
+  "id": "2026-09-07T064500Z-m5-grille-pilot",
+  "experiment": "experiments/m5-grille",
+  "command": "python m5_grille.py --corpus ../../data/corpora/ZL3b-n.txt --out results/ --seed 408",
+  "seed": 408,
+  "multiseed_check": [
+    101,
+    202,
+    303
+  ],
+  "corpus": {
+    "path": "data/corpora/ZL3b-n.txt",
+    "sha256": "bf5b6d4ac1e3a51b1847a9c388318d609020441ccd56984c901c32b09beccafc"
+  },
+  "code": "experiments/m5-grille/m5_grille.py",
+  "environment": "CPython 3.12, stdlib only, Windows 11",
+  "started": "2026-09-07T06:45:00Z",
+  "status": "completed"
+}
