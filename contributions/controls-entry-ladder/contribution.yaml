@@ -1,0 +1,103 @@
+schema_version: "1.0"
+id: "controls-entry-ladder"
+kind: research
+title: "Entry-structure controls ladder: dictionary and kids' encyclopedia narrow the manuscript's gap"
+summary: >-
+  Controls extension in the generative-falsification family, motivated by a hypothesis contributed by Vasily
+  Gnuchev (2026-09-07): pilot 3's "10x entry-private vocabulary" claim compared the manuscript only to
+  a scholarly 1653 encyclopedia. Two more real genres measured with the identical suite:
+  Devil's Dictionary (878 short entries) and The Wonder Book of Knowledge (164 children's
+  Q&A entries). Result: entry-private vocabulary is genre- and length-dependent
+  (scholarly 2.8% < kids 8.0% < dictionary 13.8% < Voynich 30.2%); the dictionary's
+  neighbor-sharing (0.063) nearly equals the manuscript's (0.080). The manuscript stays
+  the extreme but is on a continuum with real short-entry genres; this partially
+  rehabilitates the encoded-content reading and weakens pilot 3's device-overshoot
+  emphasis. New control texts committed with schema manifests and rights notes.
+branch_ids: ["generative-mechanisms", "statistical-structure", "corpus-integrity"]
+contributors:
+  - github_id: 859355
+    github_login: "gnuchev"
+    roles: ["Conceptualization", "Formal analysis", "Resources"]
+ai_usage:
+  status: assisted
+  tools:
+    - provider: "Moonshot AI"
+      model_id: "kimi-k2"
+      model_version: "kimi-k2 (Kimi Code CLI, 2026-09)"
+      accessed_at: "2026-09-07"
+      tasks:
+        - "Implementation of controls_entry.py (entry parsers, metric suite)"
+        - "Retrieval of the two new public-domain control texts"
+        - "Drafting of report.md and this manifest"
+      human_verification: >-
+        The motivating hypothesis (dictionary / kids' encyclopedia as fairer
+        comparisons) was contributed by Vasily Gnuchev, 2026-09-07. Entry parsers spot-checked against the
+        e-texts; all numbers from the recorded run output.
+  reproducibility_notes: >-
+    Deterministic: python controls_entry.py with the five documented corpora. Stdlib only.
+changes:
+  - path: "experiments/controls-entry/controls_entry.py"
+    improvement: "Four-genre entry-structure control ladder with documented entry parsers."
+  - path: "experiments/controls-entry/report.md"
+    improvement: "Findings: genre ladder; manuscript on-continuum; correction to pilot-3 emphasis."
+  - path: "experiments/controls-entry/results/results.json"
+    improvement: "Full metric table across Voynich + four real genres."
+  - path: "data/corpora/pg972.txt"
+    improvement: "Dictionary control text (Devil's Dictionary; PG public domain)."
+  - path: "data/corpora/pg41111.txt"
+    improvement: "Kids' encyclopedia control text (Wonder Book of Knowledge; PG public domain)."
+  - path: "data/manifests/pg972.json"
+    improvement: "Schema manifest with fetched-byte hash."
+  - path: "data/manifests/pg41111.json"
+    improvement: "Schema manifest with fetched-byte hash."
+  - path: "data/corpora/pg49513.txt"
+    improvement: "Culpeper control (as in PR #5; identical bytes so either merge order is clean)."
+  - path: "data/manifests/pg49513.json"
+    improvement: "Manifest identical to PR #5's for clean merge either order."
+  - path: "data/corpora/RIGHTS.md"
+    improvement: "Rights records for pg972 and pg41111 (and pg49513 if merged first)."
+outcomes:
+  - id: "outcome-controls-entry-ladder"
+    family_id: "family-generative-falsification"
+    extends: "outcome-m5-grille-pilot"
+    before: >-
+      Entry-structure conclusions rested on a single scholarly-encyclopedia control
+      (Culpeper), leaving open the objection that simpler reference genres behave
+      differently.
+    after: >-
+      A four-genre real-text ladder (dictionary, kids' encyclopedia, scholarly
+      encyclopedia, narrative) now anchors the entry metrics; the manuscript's
+      entry-private vocabulary is extreme but on a continuum, and its neighbor-sharing
+      matches the dictionary. Pilot 3's device-overshoot emphasis is corrected; the
+      encoded-content reading regains ground.
+    acceptance_test: >-
+      Run the documented command; confirm results.json matches the recorded output:
+      dictionary entry-unique share in [0.12, 0.16], kids' encyclopedia in [0.07, 0.09],
+      both between Culpeper and the manuscript; dictionary adjacent Jaccard within 0.02
+      of the manuscript's 0.080.
+    evidence:
+      - "experiments/controls-entry/controls_entry.py"
+      - "experiments/controls-entry/report.md"
+      - "experiments/controls-entry/results/results.json"
+      - "data/corpora/pg972.txt"
+      - "data/corpora/pg41111.txt"
+      - "data/manifests/pg972.json"
+      - "data/manifests/pg41111.json"
+    related_outcomes: ["outcome-m4-template-doodler-pilot", "outcome-m5-grille-pilot"]
+    claimed_cumulative_tier: 5
+    claimed_incremental_points: 2
+    claim_rationale: >-
+      Atlas "Experiments"/"Corpus": bounded verified improvement (2) — two new controls
+      that demonstrably change the interpretation of an earlier family claim, with
+      documented parsers and hashed sources. Family cumulative stays 5.
+    attribution:
+      - github_id: 859355
+        share_basis_points: 10000
+claimed_total_points: 2
+rubric_version: "0.1"
+conflicts: []
+limitations:
+  - "Devil's Dictionary entries are satirical register; Wonder Book Q&A parse includes ~1% narrative noise."
+  - "All controls English; medieval Latin/Italian control remains open."
+  - "Percentages in the report's plain-words section are judgment, not measurement."
+rights_manifest: "contributions/controls-entry-ladder/rights.md"
