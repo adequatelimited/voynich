@@ -165,13 +165,29 @@
       "excluded_overlap": [],
       "seed": false,
       "seed_baseline": 0
+    },
+    {
+      "id": "family-generative-falsification-doodler",
+      "rubric_version": "0.1",
+      "scope": "A distinct generative-mechanism falsification pilot testing content-free syllable-table (Rugg-style, M1) and self-citation/preferential-reuse (Schinner-style, M2) generators against the pinned ZL3b corpus across 27 M2 grid variants plus M0/M1 baselines on 10 quantitative metrics, identifying which corpus properties (ttr, H1, vocabulary growth) are reproducible content-free and which (H2|1, word-final entropy, Zipf slope) are not, plus a diagnostic finding on verbatim-reuse rate needed to avoid type-explosion.",
+      "acceptance_test": "Run `python doodler.py --corpus ../../data/corpora/ZL3b-n.txt --out results/ --seed 1904`; confirm results.json matches the recorded output and that for every M2 grid variant H2|1 remains below the corpus value, word-final entropy remains below the corpus value, and Zipf slope stays shallower than the corpus slope, per report.md.",
+      "aliases": [],
+      "predecessor_family_ids": [],
+      "excluded_overlap": [
+        "Does not claim credit for the pinned ZL3b corpus/parser (seed-corpus-parser) or local harness workflow (seed-local-harness), used only as inputs.",
+        "Does not claim or extend the Cardan table-and-grille (M5a/M5b) experiment credited under family-generative-falsification's existing high-water tier of 5.",
+        "Does not claim a standalone entropy-baseline audit credited under seed-baseline-entropy."
+      ],
+      "seed": false,
+      "seed_baseline": 0
     }
   ],
   "credit_high_water_tiers": {
     "family-ms408-data-access": 5,
-    "family-generative-falsification": 5
+    "family-generative-falsification": 5,
+    "family-generative-falsification-doodler": 5
   },
-  "ledger_digest": "7746616e5adfa73acca8e8d0223133588be8fe4f0d0e641888d92b077b94afbe",
+  "ledger_digest": "3e6efdf099264957fc8b534bcb055a6f03c6208d984505d2ef27dcd1f26c9ac4",
   "public_evidence": [
     {
       "path": "research/context-index.json",
