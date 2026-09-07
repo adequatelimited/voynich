@@ -102,6 +102,52 @@
       "items": {
         "type": "object",
         "properties": {
+          "family_decision": {
+            "enum": [
+              "new",
+              "extension",
+              "duplicate"
+            ]
+          },
+          "family_comparisons": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "properties": {
+                "family_id": {
+                  "type": "string",
+                  "minLength": 1,
+                  "maxLength": 160,
+                  "pattern": "^[a-zA-Z0-9][a-zA-Z0-9._:-]*$"
+                },
+                "existing_scope": {
+                  "type": "string",
+                  "minLength": 1,
+                  "maxLength": 12000
+                },
+                "relationship": {
+                  "enum": [
+                    "same_outcome",
+                    "distinct_outcome"
+                  ]
+                },
+                "reason": {
+                  "type": "string",
+                  "minLength": 1,
+                  "maxLength": 12000
+                }
+              },
+              "required": [
+                "family_id",
+                "existing_scope",
+                "relationship",
+                "reason"
+              ],
+              "additionalProperties": false
+            },
+            "minItems": 0,
+            "maxItems": 1000
+          },
           "source_outcome_ids": {
             "type": "array",
             "items": {
