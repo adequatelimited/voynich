@@ -3,7 +3,7 @@
   "id": "pilot-unique-direction",
   "kind": "direction",
   "title": "[UNRANKED PILOT FIXTURE] unique-direction",
-  "summary": "Propose a bounded new direction in the isolated fixture context.",
+  "summary": "Specify a proposed synthetic boundary-sensitivity control with explicit novelty and execution limits.",
   "branch_ids": [],
   "contributors": [
     {
@@ -26,6 +26,16 @@
           "Prepared synthetic launch test fixtures"
         ],
         "human_verification": "Operator has not yet completed the contributor pilot."
+      },
+      {
+        "provider": "OpenAI",
+        "model_id": "Codex; exact backend version not exposed",
+        "model_version": "not exposed",
+        "accessed_at": "2026-09-07T04:11:00Z",
+        "tasks": [
+          "Revised synthetic controls and disclosed limitations for pipeline integration testing"
+        ],
+        "human_verification": "Operator authorized integration testing; no scientific verification or human review of these proposed controls is asserted."
       }
     ],
     "reproducibility_notes": "Synthetic integration material only; no research result or qualification is asserted."
@@ -33,7 +43,7 @@
   "changes": [
     {
       "path": "contributions/pilot-unique-direction/proposal.md",
-      "improvement": "Propose a bounded new direction in the isolated fixture context."
+      "improvement": "Specify a proposed synthetic boundary-sensitivity control with explicit novelty and execution limits."
     }
   ],
   "outcomes": [
@@ -41,8 +51,8 @@
       "id": "outcome-pilot-unique-direction",
       "family_id": "family-pilot-boundary-direction",
       "before": "No occupied proposal in the isolated synthetic context.",
-      "after": "Propose a bounded new direction in the isolated fixture context.",
-      "acceptance_test": "Inspect question, rationale, bounded prior-work check, distinction and first executable step.",
+      "after": "Specify a proposed synthetic boundary-sensitivity control with explicit novelty and execution limits.",
+      "acceptance_test": "Inspect the fixed controls, concentration statistic, character-invariance check, overlap-check step, and explicit no-execution limitation.",
       "evidence": [
         "contributions/pilot-unique-direction/proposal.md"
       ],
