@@ -39,6 +39,12 @@ ai_usage:
         - "Reconnaissance counts, PROTOCOL.md with frozen gates and held-out splits (committed before any statistic)"
         - "Implementation of meaning_lib.py and the five test scripts; 34 verifier scripts (null correctness, confounds, independent re-implementation)"
         - "REPORT.md synthesis, errata against the tests' own JSON (Z4 PASS overridden to FAIL), completeness audit"
+      human_verification: >-
+        Vasily Gnuchev approved the probe plan and reviewed the verdict summary; the
+        protocol commit (9cb0a18) precedes every result commit; every gate result was checked
+        by three adversarial verifier agents whose corrections are recorded in REPORT.md
+        section 3, and two unregistered analysis choices that decided a gate are disclosed
+        with the affected PASS overridden to FAIL. No number was hand-edited.
     - provider: "Anthropic"
       model_id: "claude-fable-5-1"
       model_version: "Claude Code agent (Claude Fable 5.1), 2026-09"
@@ -77,8 +83,8 @@ changes:
     improvement: "Label-register vs running-text morphology, within page, calibrated on Culpeper headings vs bodies."
   - path: "experiments/meaning-probes/REPORT.md"
     improvement: "Verdicts by frozen gates, measured detection floors, what survived adversarial review, errata, open questions."
-  - path: "experiments/meaning-probes/results/"
-    improvement: "Test JSON and stdout, 34 verifier outputs, completeness audit."
+  - path: "experiments/meaning-probes/results/completeness_critic.md"
+    improvement: "Completeness audit of the pass against its own protocol; test JSON, stdout and 34 verifier outputs sit alongside it in the same directory."
   - path: "experiments/runs/2026-09-07T140000Z-meaning-probes/run.json"
     improvement: "Run record."
 outcomes:
