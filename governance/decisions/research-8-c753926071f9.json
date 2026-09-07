@@ -1,0 +1,298 @@
+{
+  "schema_version": "1.0",
+  "research_pr": 8,
+  "merge_sha": "258f2788887b0fdd29d0160ce84fe8064f07061d",
+  "events": [
+    {
+      "schema_version": "1.0",
+      "id": "decision-8-family-generative-falsification-poetry-control-c753926071f9",
+      "sequence": 12,
+      "kind": "award",
+      "family_id": "family-generative-falsification-poetry-control",
+      "rubric_version": "0.1",
+      "category": "experiments",
+      "repository_id": 1359336540,
+      "pr_number": 8,
+      "milestone_id": "milestone-1359336540-8-family-generative-falsification-poetry-control",
+      "earned_at": "2026-09-07T22:00:44Z",
+      "assessment_id": "assessment-19fe2692bd9ff38c9f8e2a76d22441cd",
+      "artifact_binding_digest": "c753926071f98c3425c38a4005efd47441c4e13cf257b24f035838d85e0e642f",
+      "authority_receipt_ref": "receipt:job-c753926071f98c3425c38a4005efd47441c4e13c",
+      "cumulative_tier": 2,
+      "allocation_shares": [
+        {
+          "github_id": 859355,
+          "share_basis_points": 10000,
+          "status": "paid",
+          "acknowledgment_receipt_ref": "github-pr:1359336540:8:039b1d764be6845fb86367426ebbd61847ae3057:68568e3b59aade0bd7da362b1cab57ea5b3b6ed4c1611f24ee42fd1945ded2a2:52339fec838a8d61f4fb7f01d2e002d4084e9aa015d5a22cadd55bb046efef61"
+        }
+      ],
+      "reason": "Resolving the two prior reports' disagreement: both agreed on tier 2 but split on family_decision/family_id (one proposed a new family, one reused family-generative-falsification as an 'extension'). Per CREDIT_IS_NOT_LINEAGE_V1 and FAMILY_IDENTITY_GUARD_V1, the contributor's own 'extends: outcome-controls-entry-ladder' declaration and citation of family-generative-falsification in their YAML do not bind this work into that occupied family, since the actual delivered result (a rhyme/versification negative control) is a substantively different mechanism test from the credited Cardan table-and-grille (M5a/M5b) experiment. It also does not overlap the entry-ladder genre-control or word-grammar-template families' delivered results. This is a single bounded diagnostic control (one new hypothesis, one new corpus, no configuration grid/sweep comparable to the credited 5-tier pilots), supporting tier 2 under the rubric's 'bounded verified improvement' anchor, not tier 5 (informative controlled pilot with grid/reusable tool) which the claim sought. The correct resolution is a new, unoccupied, descriptive family ID reflecting this distinct diagnostic result."
+    }
+  ],
+  "families_added": [
+    {
+      "id": "family-generative-falsification-poetry-control",
+      "rubric_version": "0.1",
+      "scope": "A new bounded diagnostic control in the generative-falsification research area: measures line-structured metrics (word-final char entropy, line-final word final-char entropy, line-initial first-char entropy, top-5 line-final word rhyme concentration) across the pinned ZL3b corpus's real lines, a newly added rhymed-verse control (Shakespeare's Sonnets, PG 1041), and existing Culpeper/Alice prose pseudo-line baselines, showing that rhyme (even at its most ending-constrained, 3.50 bits) does not approach the manuscript's every-word final-char entropy (2.59 bits), excluding versification as the mechanism behind the residual word-ending discipline, plus a side finding that the manuscript's line-final position is less constrained than its average word (2.99 vs 2.59), opposite of rhyme.",
+      "acceptance_test": "Run the documented command; confirm results.json matches the recorded output showing sonnet line-final final-char entropy in [3.3,3.7], prose controls (Culpeper/Alice) in [3.5,3.8], Voynich all-word final-char entropy in [2.5,2.7], and Voynich line-final entropy above its all-word value.",
+      "aliases": [],
+      "predecessor_family_ids": [],
+      "excluded_overlap": [
+        "Does not claim or extend the Cardan table-and-grille (M5a/M5b) mechanism experiment credited under family-generative-falsification.",
+        "Does not claim the M1/M2 syllable-table/self-citation pilot credited under family-generative-falsification-doodler.",
+        "Does not claim the M3 per-page entry/topic-carryover generator credited under family-generative-falsification-entry-doodler.",
+        "Does not claim the Stolfi word-grammar template generator or its original Culpeper/Alice word-level final-char entropy measurement credited under family-generative-falsification-word-grammar-template; reuses those two texts' bytes only as new line-structured baseline rows.",
+        "Does not claim the entry-ladder genre-control metrics (Devil's Dictionary/Wonder Book) credited under family-generative-falsification-controls-entry-ladder.",
+        "Does not claim credit for the pinned ZL3b corpus/parser (seed-corpus-parser) or local harness workflow (seed-local-harness), used only as inputs."
+      ],
+      "seed": false,
+      "seed_baseline": 0
+    }
+  ],
+  "milestones": [
+    {
+      "id": "milestone-1359336540-8-family-generative-falsification-poetry-control",
+      "family_id": "family-generative-falsification-poetry-control",
+      "repository_id": 1359336540,
+      "pr_number": 8,
+      "earned_at": "2026-09-07T22:00:44Z",
+      "depends_on": []
+    }
+  ],
+  "assessment": {
+    "schema_version": "1.0",
+    "assessment_id": "assessment-19fe2692bd9ff38c9f8e2a76d22441cd",
+    "artifact_binding_digest": "19fe2692bd9ff38c9f8e2a76d22441cda7160b42b89c88a3a7c7f34fcf6b4689",
+    "merit_evidence_digest": "740bb1a5d253d7929db71993ffd6f6be837a625041cd27b01f86b5cd02571a12",
+    "repository_id": 1359336540,
+    "pr_number": 8,
+    "head_sha": "039b1d764be6845fb86367426ebbd61847ae3057",
+    "base_sha": "43e1743c255320d9c9a974d859d96368d31ee24c",
+    "rules_version": "0.1",
+    "rubric_version": "0.1",
+    "grading_profile": "voynich-sonnet-ai-pilot-2026-09-07-v9",
+    "evaluator_commit": "a26c63625881b3fcb1326cea69d4b1f8430692b0",
+    "mode": "official_proposal",
+    "status": "complete",
+    "claimed_score": 2,
+    "expected_score": 2,
+    "official_proposed_score": 2,
+    "awarded_score": null,
+    "assessment": {
+      "schema_version": "1.0",
+      "admission_action": "accept",
+      "score_status": "proposed",
+      "conduct_status": "clear",
+      "findings": [],
+      "outcomes": [
+        {
+          "family_id": "family-generative-falsification-poetry-control",
+          "scope": "A new bounded diagnostic control in the generative-falsification research area: measures line-structured metrics (word-final char entropy, line-final word final-char entropy, line-initial first-char entropy, top-5 line-final word rhyme concentration) across the pinned ZL3b corpus's real lines, a newly added rhymed-verse control (Shakespeare's Sonnets, PG 1041), and existing Culpeper/Alice prose pseudo-line baselines, showing that rhyme (even at its most ending-constrained, 3.50 bits) does not approach the manuscript's every-word final-char entropy (2.59 bits), excluding versification as the mechanism behind the residual word-ending discipline, plus a side finding that the manuscript's line-final position is less constrained than its average word (2.99 vs 2.59), opposite of rhyme.",
+          "category": "experiments",
+          "predecessors": [
+            "outcome-controls-entry-ladder",
+            "outcome-m5-grille-pilot"
+          ],
+          "aliases": [],
+          "claimed_tier": 5,
+          "assessed_tier": 2,
+          "gate_evidence": [
+            {
+              "gate": "G1",
+              "status": "pass",
+              "evidence_refs": [
+                "experiments/poetry-control/report.md"
+              ],
+              "reason": "Directly tests an alternative explanation (versification) for the generative-mechanisms/statistical-structure branch's open residual-entropy question."
+            },
+            {
+              "gate": "G2",
+              "status": "pass",
+              "evidence_refs": [
+                "data/manifests/pg1041.json",
+                "contributions/poetry-control/rights.md"
+              ],
+              "reason": "New source (Shakespeare's Sonnets, PG 1041) has a rights manifest declaring public-domain status with hash; ZL3b/Culpeper/Alice are reused pinned/rights-cleared inputs."
+            },
+            {
+              "gate": "G3",
+              "status": "pass",
+              "evidence_refs": [
+                "experiments/poetry-control/poetry_control.py",
+                "experiments/poetry-control/results/results.json",
+                "experiments/poetry-control/report.md"
+              ],
+              "reason": "Documented deterministic stdlib command, code and recorded results.json are inspectable ordinary evidence; no trusted execution receipt exists or is required at this tier (context.execution_receipts is empty)."
+            },
+            {
+              "gate": "G4",
+              "status": "pass",
+              "evidence_refs": [
+                "experiments/poetry-control/report.md"
+              ],
+              "reason": "Report discloses single-corpus (English sonnets) scope, absence of medieval/Latin verse controls, and that device generators (M5b) lack line structure for direct comparison."
+            },
+            {
+              "gate": "G5",
+              "status": "pass",
+              "evidence_refs": [
+                "contributions/poetry-control/contribution.yaml",
+                "contributions/poetry-control/rights.md"
+              ],
+              "reason": "Human hypothesis attribution (Vasily Gnuchev) and AI assistance (Kimi Code CLI, kimi-code/k3) are disclosed with a verification note."
+            },
+            {
+              "gate": "G6",
+              "status": "pass",
+              "evidence_refs": [
+                "experiments/poetry-control/report.md",
+                "research/context-index.json"
+              ],
+              "reason": "This is a genuinely new negative-control comparison not covered by any registered family scope; it does not reuse the M5a/M5b grille mechanism, M1-M3 pilots, word-grammar template, or entry-ladder genre metrics, citing them only as related context per CREDIT_IS_NOT_LINEAGE_V1."
+            },
+            {
+              "gate": "G7",
+              "status": "pass",
+              "evidence_refs": [
+                "experiments/poetry-control/results/results.json",
+                "experiments/poetry-control/report.md"
+              ],
+              "reason": "Report numbers match results.json; interpretive percentages are explicitly labeled 'informal judgment, not measurement,' not concealed selection or fabrication."
+            }
+          ],
+          "attribution_status": "verified",
+          "reason": "Resolving the two prior reports' disagreement: both agreed on tier 2 but split on family_decision/family_id (one proposed a new family, one reused family-generative-falsification as an 'extension'). Per CREDIT_IS_NOT_LINEAGE_V1 and FAMILY_IDENTITY_GUARD_V1, the contributor's own 'extends: outcome-controls-entry-ladder' declaration and citation of family-generative-falsification in their YAML do not bind this work into that occupied family, since the actual delivered result (a rhyme/versification negative control) is a substantively different mechanism test from the credited Cardan table-and-grille (M5a/M5b) experiment. It also does not overlap the entry-ladder genre-control or word-grammar-template families' delivered results. This is a single bounded diagnostic control (one new hypothesis, one new corpus, no configuration grid/sweep comparable to the credited 5-tier pilots), supporting tier 2 under the rubric's 'bounded verified improvement' anchor, not tier 5 (informative controlled pilot with grid/reusable tool) which the claim sought. The correct resolution is a new, unoccupied, descriptive family ID reflecting this distinct diagnostic result.",
+          "family_decision": "new",
+          "family_comparisons": [
+            {
+              "family_id": "family-generative-falsification",
+              "existing_scope": "Pilot 4 in the generative-mechanism falsification family: implements the Cardan table-and-grille device (M5a independent-column, M5b row-coupled) built from the pinned ZL3b corpus, measures composite distance against real manuscript statistics across 28 configurations plus multi-seed stability, and narrows the residual gap to two local metrics (conditional bigram entropy, word-final predictability), extending outcome-m4-template-doodler-pilot.",
+              "relationship": "distinct_outcome",
+              "reason": "The credited family scope is specifically the Cardan grille mechanism generator (M5a/M5b) and its 28-configuration composite-distance measurement. This submission tests an entirely different hypothesis (real rhymed verse/versification) using no grille/device generator, comparing real-language genres rather than extending the grille mechanism; citing the grille pilot as related context is not substantive same-outcome overlap."
+            },
+            {
+              "family_id": "family-generative-falsification-controls-entry-ladder",
+              "existing_scope": "A bounded diagnostic control extending the existing entry-structure metric suite (entry-private vocabulary share, adjacent/distant page Jaccard, ttr, entry token length) to two new real-text genres (Devil's Dictionary, Wonder Book of Knowledge) alongside the previously measured Culpeper/Alice controls, showing the manuscript's entry-private vocabulary is genre- and entry-length-dependent and lies on a continuum with short-entry real genres rather than being an order-of-magnitude outlier, with a documented correction to an earlier interpretive emphasis about device-overshoot.",
+              "relationship": "distinct_outcome",
+              "reason": "That family measures entry-structure/vocabulary-share metrics across genres; this submission measures line-structured phonetic/rhyme metrics (final-char entropy at word/line boundaries) to test versification specifically, a different metric suite and different alternative hypothesis, though both use Culpeper/Alice as baseline texts."
+            },
+            {
+              "family_id": "family-generative-falsification-word-grammar-template",
+              "existing_scope": "A distinct generative-mechanism falsification pilot implementing Stolfi's published 2000 word grammar (core/mantle/crust unimodal-hill slot structure) as a template generator embedded in an entry/topic-carryover engine, and measuring two real-language positive controls (Culpeper's Complete Herbal 1653, Alice in Wonderland) with the identical metric suite against the pinned ZL3b corpus across 12 grid variants, showing (a) real language differs from the manuscript on conditional entropy, final-char entropy and entry-private vocabulary share, reframing prior 'unmatched by content-free generators' results away from a linguistic-content reading, and (b) the published grammar covers 86% of corpus word types with zero fitting and jointly reproduces vocabulary size, ttr, word length and page-sharing, leaving a residual mechanical-repetition signature (H2|1, final-char entropy, Zipf slope, entry-unique overshoot).",
+              "relationship": "distinct_outcome",
+              "reason": "That family credits a template-generator mechanism implementing Stolfi's word grammar plus original Culpeper/Alice final-char entropy measurements at the word level across a 12-variant grid. This submission reuses Culpeper/Alice bytes only as prose pseudo-line baselines but introduces a wholly new line-structured metric suite (rhyme concentration, line-final/line-initial entropy) and a new corpus (Sonnets) to test a different hypothesis (versification), not the word-grammar template mechanism."
+            }
+          ],
+          "source_outcome_ids": [
+            "outcome-poetry-control"
+          ],
+          "acceptance_test": "Run the documented command; confirm results.json matches the recorded output showing sonnet line-final final-char entropy in [3.3,3.7], prose controls (Culpeper/Alice) in [3.5,3.8], Voynich all-word final-char entropy in [2.5,2.7], and Voynich line-final entropy above its all-word value.",
+          "excluded_overlap": [
+            "Does not claim or extend the Cardan table-and-grille (M5a/M5b) mechanism experiment credited under family-generative-falsification.",
+            "Does not claim the M1/M2 syllable-table/self-citation pilot credited under family-generative-falsification-doodler.",
+            "Does not claim the M3 per-page entry/topic-carryover generator credited under family-generative-falsification-entry-doodler.",
+            "Does not claim the Stolfi word-grammar template generator or its original Culpeper/Alice word-level final-char entropy measurement credited under family-generative-falsification-word-grammar-template; reuses those two texts' bytes only as new line-structured baseline rows.",
+            "Does not claim the entry-ladder genre-control metrics (Devil's Dictionary/Wonder Book) credited under family-generative-falsification-controls-entry-ladder.",
+            "Does not claim credit for the pinned ZL3b corpus/parser (seed-corpus-parser) or local harness workflow (seed-local-harness), used only as inputs."
+          ]
+        }
+      ],
+      "inspected_paths": [
+        "contributions/poetry-control/contribution.yaml",
+        "contributions/poetry-control/rights.md",
+        "data/corpora/pg1041.txt",
+        "data/manifests/pg1041.json",
+        "experiments/poetry-control/poetry_control.py",
+        "experiments/poetry-control/report.md",
+        "experiments/poetry-control/results/results.json",
+        "research/context-index.json"
+      ],
+      "inspection_gaps": [],
+      "next_action": "Accept as a new distinct family 'family-generative-falsification-poetry-control' at assessed tier 2. To pursue tier 5, the contributor could extend the control with additional verse genres (e.g., medieval Latin/vernacular hymn or troubadour forms) across a declared parameter/genre grid, or build a line-aware device generator for direct device-vs-manuscript line comparison, disclosed as a systematic sweep rather than a single-comparison diagnostic.",
+      "appeal_route": "The contributor may appeal the family-identity determination and tier assessment via the standard PR comment/appeal process, citing the acceptance test and requesting reconsideration of whether tier 5 is warranted (e.g., by arguing the four-source line-metric comparison already constitutes an informative controlled pilot) or whether the new family_id determination under FAMILY_IDENTITY_GUARD_V1/CREDIT_IS_NOT_LINEAGE_V1 should instead be treated as same_outcome with an existing family; a human reviewer or the next assessment stage can re-examine the registry-comparison judgment against the same evidence."
+    },
+    "stages": [
+      {
+        "stage": "adjudicator",
+        "provider": "anthropic",
+        "model": "claude-sonnet-5",
+        "exposed_version": "claude-sonnet-5",
+        "prompt_digest": "bbe189675fd777d59221807f5d4c887dc821b7f76bd9b93514e722d937de1d16",
+        "response_digest": "df541f82a2b75b0fa44284b66f2d3de5aabeeecac6e7f5da7506a5a6634024be",
+        "started_at": "2026-09-07T23:54:44.402Z",
+        "completed_at": "2026-09-07T23:55:35.859Z",
+        "usage": {
+          "sessions": 1,
+          "input_bytes": 206398,
+          "output_bytes": 41459,
+          "runtime_ms": 50665
+        },
+        "receipt_ref": "stage-results/job-c753926071f98c3425c38a4005efd47441c4e13c/adjudicator.json"
+      },
+      {
+        "stage": "adversary",
+        "provider": "anthropic",
+        "model": "claude-sonnet-5",
+        "exposed_version": "claude-sonnet-5",
+        "prompt_digest": "9bb132f09a9dcb5cf893b2dc97f5bc759a37f195d0c87debe46f4cd8090c0717",
+        "response_digest": "df076e9494ef3265ba9f7505d94e47dd49be45e3da9dd7b118873ddf66c46ba6",
+        "started_at": "2026-09-07T23:53:02.723Z",
+        "completed_at": "2026-09-07T23:53:52.543Z",
+        "usage": {
+          "sessions": 1,
+          "input_bytes": 190464,
+          "output_bytes": 35696,
+          "runtime_ms": 49096
+        },
+        "receipt_ref": "stage-results/job-c753926071f98c3425c38a4005efd47441c4e13c/adversary.json"
+      },
+      {
+        "stage": "assessor",
+        "provider": "anthropic",
+        "model": "claude-sonnet-5",
+        "exposed_version": "claude-sonnet-5",
+        "prompt_digest": "6d6456f7d127cbc82ce4dca28e6072525782496827d2c50fbc05e5c23db73128",
+        "response_digest": "a8a3e4a5bf38fc6b4f6457ab90a893c81c907ed507d15c6b5b0d022d14c6f835",
+        "started_at": "2026-09-07T23:51:41.452Z",
+        "completed_at": "2026-09-07T23:52:16.801Z",
+        "usage": {
+          "sessions": 1,
+          "input_bytes": 190345,
+          "output_bytes": 15148,
+          "runtime_ms": 34606
+        },
+        "receipt_ref": "stage-results/job-c753926071f98c3425c38a4005efd47441c4e13c/assessor.json"
+      }
+    ],
+    "disagreements": [
+      "Material independent-assessment disagreement or invalid proposal."
+    ],
+    "holds": [],
+    "reused_assessment_id": null
+  },
+  "receipt": {
+    "schema_version": "1.0",
+    "id": "receipt:job-c753926071f98c3425c38a4005efd47441c4e13c",
+    "key_id": "voynich-2026-09-06",
+    "issued_at": "2026-09-07T23:56:27.118Z",
+    "payload": {
+      "repository_id": 1359336540,
+      "events_digest": "e8c760a2ca0e1d5577adae5ac1f50723f8b0edd9e4f70f0f0863f72ac0f3b153",
+      "milestones_digest": "0f8a423828d52be9fe35a39105a0105add78cacb42b7ee23d4855ce8b098ce5b",
+      "families_digest": "84e9c0727da1cb06bbc9e15f96a4500fa48936eec8d0461c47d7e8cf6a32411d",
+      "merge_sha": "258f2788887b0fdd29d0160ce84fe8064f07061d",
+      "assessed_head": "039b1d764be6845fb86367426ebbd61847ae3057",
+      "artifact_digest": "c753926071f98c3425c38a4005efd47441c4e13cf257b24f035838d85e0e642f",
+      "profile_digest": "2f8d18abf176f95380df7e809a525db1c36186a0f8bfe46ce106d8b228a28a93",
+      "report_digest": "dcec5fc703c78e19c5ae0d5fc04940fbb04fdb53470c37a2e009c94e93781b99",
+      "stage_receipt_refs": [
+        "stage-results/job-c753926071f98c3425c38a4005efd47441c4e13c/adjudicator.json",
+        "stage-results/job-c753926071f98c3425c38a4005efd47441c4e13c/adversary.json",
+        "stage-results/job-c753926071f98c3425c38a4005efd47441c4e13c/assessor.json"
+      ]
+    },
+    "payload_digest": "be4ceffeb6529c4bcf42dbe2f910f291220c7e6a53168c283d7644e02d7a4ef5",
+    "signature": "WhLkwmkCRGqzAkM049ixmm2GkOVoQu3lbG2nTXphFzYsAxeFEiSAPBlkATINKPiYkUqnY99JOE8UTt3a43U4CA"
+  }
+}
