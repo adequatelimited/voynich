@@ -154,12 +154,24 @@
       "excluded_overlap": [],
       "seed": false,
       "seed_baseline": 0
+    },
+    {
+      "id": "family-ms408-data-access",
+      "rubric_version": "0.1",
+      "scope": "Registration of a third-party public mirror (Artheon Museum Lab) hosting 213 Beinecke MS 408 scans and extended EVA/IVTFF transliterations (RF1b-e, IT2a, LSI), with a machine-readable catalogue, per-file SHA-256 hashes recorded by the contributor from a 2026-09-06 fetch, an agent-oriented llms.txt entry point, and a rights/provenance record distinguishing CC0-hosted material from the reference_only 1998 Stolfi EVT.",
+      "acceptance_test": "Fetch https://lab.artheonmuseum.org/voynich/catalogue.json, pick any entry, download its public_url and confirm the SHA-256 matches the catalogue; or run the hosted download_dataset.py which performs exactly this verification.",
+      "aliases": [],
+      "predecessor_family_ids": [],
+      "excluded_overlap": [],
+      "seed": false,
+      "seed_baseline": 0
     }
   ],
   "credit_high_water_tiers": {
-    "family-generative-falsification": 5
+    "family-generative-falsification": 5,
+    "family-ms408-data-access": 5
   },
-  "ledger_digest": "b13d767b52f1b87d78fe50027f1447df0d6fdfbbc4d44065e8008684e99b8e0b",
+  "ledger_digest": "450b5c5ed270cc8582daba5a98f891222298cc6cf3e4f26abec18ccad5061b59",
   "public_evidence": [
     {
       "path": "research/context-index.json",
