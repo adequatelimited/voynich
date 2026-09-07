@@ -1,0 +1,344 @@
+{
+  "schema_version": "1.0",
+  "research_pr": 5,
+  "merge_sha": "48e93897c364433d17c2cc1c38986e58b5bf030a",
+  "events": [
+    {
+      "schema_version": "1.0",
+      "id": "decision-5-family-generative-falsification-word-grammar-template-fd9988569d5b",
+      "sequence": 10,
+      "kind": "award",
+      "family_id": "family-generative-falsification-word-grammar-template",
+      "rubric_version": "0.1",
+      "category": "experiments",
+      "repository_id": 1359336540,
+      "pr_number": 5,
+      "milestone_id": "milestone-1359336540-5-family-generative-falsification-word-grammar-template",
+      "earned_at": "2026-09-07T21:43:54Z",
+      "assessment_id": "assessment-06b892128e6fed7fec1451f6d4ef0ab4",
+      "artifact_binding_digest": "fd9988569d5b2e97436cdbbbd032d14b31081271f93effa5399b6b05229dfb8f",
+      "authority_receipt_ref": "receipt:job-fd9988569d5b2e97436cdbbbd032d14b31081271",
+      "cumulative_tier": 5,
+      "allocation_shares": [
+        {
+          "github_id": 859355,
+          "share_basis_points": 10000,
+          "status": "paid",
+          "acknowledgment_receipt_ref": "github-pr:1359336540:5:7a50abc1cf9cdc789bdd4861e8723b18faff4ad1:6f4e17affa190999156bfd202deaea112eba6a8fb8cf3999efd7d5ad39539215:14395bbce07e631b6cb1f3f65b10f8e68c061abb0ac204e65b68113c0b4a1b69"
+        }
+      ],
+      "reason": "The contributor filed this under family-generative-falsification and declared it extends outcome-m4-template-doodler-pilot, but the registered scope of that family in context is specifically the Cardan table-and-grille (M5a/M5b) mechanism at high-water tier 5. Per CREDIT_IS_NOT_LINEAGE_V1 and FAMILY_IDENTITY_GUARD_V1, a declared predecessor/extends relationship and shared manuscript question do not establish same_outcome; the actual delivered capability here (Stolfi word-grammar template generator plus new real-language positive controls) is a materially different mechanism and evidence type from the grille device, so it is assessed as a new, distinct family rather than added to the occupied family's ladder. Assessed at tier 5 (informative controlled pilot / usable evidenced capability): a working, inspectable generator implementing a cited published grammar with measured 86% type coverage, plus genuinely new positive-control evidence that changes interpretation of prior results. Not tier 10: single seed, coarse 12-point grid, English-only (era-mismatched) controls, no independent execution receipt, and several core diagnostics (H2|1, final-char entropy, Zipf slope, entry-unique share) remain unmatched, so it falls short of a full discriminating/falsifying result with baselines and independent inspection at the tier-10 anchor."
+    }
+  ],
+  "families_added": [
+    {
+      "id": "family-generative-falsification-word-grammar-template",
+      "rubric_version": "0.1",
+      "scope": "A distinct generative-mechanism falsification pilot implementing Stolfi's published 2000 word grammar (core/mantle/crust unimodal-hill slot structure) as a template generator embedded in an entry/topic-carryover engine, and measuring two real-language positive controls (Culpeper's Complete Herbal 1653, Alice in Wonderland) with the identical metric suite against the pinned ZL3b corpus across 12 grid variants, showing (a) real language differs from the manuscript on conditional entropy, final-char entropy and entry-private vocabulary share, reframing prior 'unmatched by content-free generators' results away from a linguistic-content reading, and (b) the published grammar covers 86% of corpus word types with zero fitting and jointly reproduces vocabulary size, ttr, word length and page-sharing, leaving a residual mechanical-repetition signature (H2|1, final-char entropy, Zipf slope, entry-unique overshoot).",
+      "acceptance_test": "Run `python m4_doodler.py --corpus ../../data/corpora/ZL3b-n.txt --alice ../../data/corpora/pg11.txt --culpeper ../../data/corpora/pg49513.txt --out results/ --seed 408`; confirm results.json matches the recorded output showing control H2|1 >= 3.1 bits for both Culpeper and Alice vs 2.26 for the corpus, Stolfi grammar coverage >= 0.85 of corpus word types, and the best M4 grid variant within +/-10% of corpus types/ttr while H2|1 remains >= 0.4 bits above the corpus.",
+      "aliases": [],
+      "predecessor_family_ids": [],
+      "excluded_overlap": [
+        "Does not claim or extend the Cardan table-and-grille (M5a/M5b) mechanism experiment credited under family-generative-falsification's existing high-water tier of 5.",
+        "Does not claim the M1/M2 syllable-table/self-citation pilot credited under family-generative-falsification-doodler.",
+        "Does not claim the M3 per-page entry/topic-carryover pilot credited under family-generative-falsification-entry-doodler; uses its entry-engine scaffold only as an input/dependency for the new M4 template layer."
+      ],
+      "seed": false,
+      "seed_baseline": 0
+    }
+  ],
+  "milestones": [
+    {
+      "id": "milestone-1359336540-5-family-generative-falsification-word-grammar-template",
+      "family_id": "family-generative-falsification-word-grammar-template",
+      "repository_id": 1359336540,
+      "pr_number": 5,
+      "earned_at": "2026-09-07T21:43:54Z",
+      "depends_on": []
+    }
+  ],
+  "assessment": {
+    "schema_version": "1.0",
+    "assessment_id": "assessment-06b892128e6fed7fec1451f6d4ef0ab4",
+    "artifact_binding_digest": "06b892128e6fed7fec1451f6d4ef0ab454aff7811965a37c9b09aec7ffca02aa",
+    "merit_evidence_digest": "b07bf14ff797dad637a99161ef401fb323c574f80a4da7d80591c03b51ec4b7a",
+    "repository_id": 1359336540,
+    "pr_number": 5,
+    "head_sha": "7a50abc1cf9cdc789bdd4861e8723b18faff4ad1",
+    "base_sha": "b12ac52a2b2c89056aff705f0cd187014c86606c",
+    "rules_version": "0.1",
+    "rubric_version": "0.1",
+    "grading_profile": "voynich-sonnet-ai-pilot-2026-09-07-v9",
+    "evaluator_commit": "a26c63625881b3fcb1326cea69d4b1f8430692b0",
+    "mode": "official_proposal",
+    "status": "complete",
+    "claimed_score": 2,
+    "expected_score": 5,
+    "official_proposed_score": 5,
+    "awarded_score": null,
+    "assessment": {
+      "schema_version": "1.0",
+      "admission_action": "accept",
+      "score_status": "proposed",
+      "conduct_status": "clear",
+      "findings": [
+        {
+          "blocks_merge_or_credit": false,
+          "evidence_refs": [
+            "experiments/runs/2026-09-07T060000Z-m4-template-pilot/run.json",
+            "experiments/runs/2026-09-07T060000Z-m4-template-pilot/output.json"
+          ],
+          "path_or_locus": "experiments/runs/2026-09-07T060000Z-m4-template-pilot/run.json",
+          "reason": "This run.json/output.json is ordinary submitted-run evidence, not a trusted execution receipt from context.execution_receipts (which is empty). Tier 5 does not require an independent receipt; disclosed as nonblocking.",
+          "required_change": "",
+          "verification_step": "Confirm context.execution_receipts is empty and no independent-execution claim is made for this outcome.",
+          "rule_id_or_gate": "G3",
+          "severity": "info"
+        },
+        {
+          "blocks_merge_or_credit": false,
+          "evidence_refs": [
+            "contributions/m4-template-doodler-pilot/contribution.yaml"
+          ],
+          "path_or_locus": "contributions/m4-template-doodler-pilot/contribution.yaml",
+          "reason": "Controls are English (Culpeper, Alice), not era-matched Latin/Italian; contributor discloses this limitation honestly.",
+          "required_change": "",
+          "verification_step": "Confirm limitations list includes the era-mismatch disclosure.",
+          "rule_id_or_gate": "R3",
+          "severity": "info"
+        }
+      ],
+      "outcomes": [
+        {
+          "family_id": "family-generative-falsification-word-grammar-template",
+          "scope": "A distinct generative-mechanism falsification pilot implementing Stolfi's published 2000 word grammar (core/mantle/crust unimodal-hill slot structure) as a template generator embedded in an entry/topic-carryover engine, and measuring two real-language positive controls (Culpeper's Complete Herbal 1653, Alice in Wonderland) with the identical metric suite against the pinned ZL3b corpus across 12 grid variants, showing (a) real language differs from the manuscript on conditional entropy, final-char entropy and entry-private vocabulary share, reframing prior 'unmatched by content-free generators' results away from a linguistic-content reading, and (b) the published grammar covers 86% of corpus word types with zero fitting and jointly reproduces vocabulary size, ttr, word length and page-sharing, leaving a residual mechanical-repetition signature (H2|1, final-char entropy, Zipf slope, entry-unique overshoot).",
+          "category": "experiments",
+          "predecessors": [
+            "outcome-entry-doodler-pilot"
+          ],
+          "aliases": [],
+          "claimed_tier": 5,
+          "assessed_tier": 5,
+          "gate_evidence": [
+            {
+              "gate": "G1",
+              "status": "pass",
+              "evidence_refs": [
+                "contributions/m4-template-doodler-pilot/contribution.yaml"
+              ],
+              "reason": "Addresses the generative-mechanisms branch question of whether a bounded rule-based mechanism jointly predicts held-out diagnostics, adding real-language positive controls and a published word-grammar implementation."
+            },
+            {
+              "gate": "G2",
+              "status": "pass",
+              "evidence_refs": [
+                "data/corpora/RIGHTS.md",
+                "data/manifests/pg49513.json",
+                "contributions/m4-template-doodler-pilot/rights.md"
+              ],
+              "reason": "Culpeper (PG 49513) and Alice (PG 11) are public-domain Project Gutenberg texts with recorded provenance/rights; pinned ZL3b corpus rights already established under seed-corpus-parser; Stolfi grammar cited, not copied."
+            },
+            {
+              "gate": "G3",
+              "status": "pass",
+              "evidence_refs": [
+                "experiments/m4-template-doodler/m4_doodler.py",
+                "experiments/m4-template-doodler/results/results.json",
+                "experiments/runs/2026-09-07T060000Z-m4-template-pilot/run.json",
+                "experiments/runs/2026-09-07T060000Z-m4-template-pilot/output.json"
+              ],
+              "reason": "Full code, documented command, seed, corpus/control hashes and complete recorded output for corpus, two controls and 12 M4 grid variants are inspectable. No trusted execution receipt exists or is required at tier 5."
+            },
+            {
+              "gate": "G4",
+              "status": "pass",
+              "evidence_refs": [
+                "experiments/m4-template-doodler/report.md"
+              ],
+              "reason": "Explicit limitations disclosed: English-only controls (no era match), corpus-estimated slot weights, single seed, coarse grid, sampled distant-Jaccard, artificial Alice chunking, disclosed rule-faked/rule-encrypted ambiguity."
+            },
+            {
+              "gate": "G5",
+              "status": "pass",
+              "evidence_refs": [
+                "contributions/m4-template-doodler-pilot/contribution.yaml"
+              ],
+              "reason": "Human contributor and AI tool/provider/model disclosed, with verification notes distinguishing human-checked numeric claims from AI-drafted prose."
+            },
+            {
+              "gate": "G6",
+              "status": "pass",
+              "evidence_refs": [
+                "contributions/m4-template-doodler-pilot/contribution.yaml",
+                "experiments/m4-template-doodler/report.md"
+              ],
+              "reason": "Adds two elements absent from the credited Cardan table-and-grille family and the M1/M2 and M3 doodler families: real-language positive controls measured identically, and a distinct published-grammar mechanism (Stolfi core/mantle/crust) rather than a grille or syllable-table mechanism."
+            },
+            {
+              "gate": "G7",
+              "status": "pass",
+              "evidence_refs": [
+                "experiments/m4-template-doodler/results/results.json",
+                "experiments/m4-template-doodler/report.md"
+              ],
+              "reason": "Full 12-point grid and both controls reported without selective suppression; residual unmatched metrics disclosed rather than concealed."
+            }
+          ],
+          "attribution_status": "verified",
+          "reason": "The contributor filed this under family-generative-falsification and declared it extends outcome-m4-template-doodler-pilot, but the registered scope of that family in context is specifically the Cardan table-and-grille (M5a/M5b) mechanism at high-water tier 5. Per CREDIT_IS_NOT_LINEAGE_V1 and FAMILY_IDENTITY_GUARD_V1, a declared predecessor/extends relationship and shared manuscript question do not establish same_outcome; the actual delivered capability here (Stolfi word-grammar template generator plus new real-language positive controls) is a materially different mechanism and evidence type from the grille device, so it is assessed as a new, distinct family rather than added to the occupied family's ladder. Assessed at tier 5 (informative controlled pilot / usable evidenced capability): a working, inspectable generator implementing a cited published grammar with measured 86% type coverage, plus genuinely new positive-control evidence that changes interpretation of prior results. Not tier 10: single seed, coarse 12-point grid, English-only (era-mismatched) controls, no independent execution receipt, and several core diagnostics (H2|1, final-char entropy, Zipf slope, entry-unique share) remain unmatched, so it falls short of a full discriminating/falsifying result with baselines and independent inspection at the tier-10 anchor.",
+          "family_decision": "new",
+          "family_comparisons": [
+            {
+              "family_id": "family-generative-falsification",
+              "existing_scope": "Pilot 4 in the generative-mechanism falsification family: implements the Cardan table-and-grille device (M5a independent-column, M5b row-coupled) built from the pinned ZL3b corpus, measures composite distance against real manuscript statistics across 28 configurations plus multi-seed stability, and narrows the residual gap to two local metrics (conditional bigram entropy, word-final predictability), extending outcome-m4-template-doodler-pilot.",
+              "relationship": "distinct_outcome",
+              "reason": "The registered family's delivered capability is the Cardan table-and-grille (M5a/M5b) mechanism with 28 grille configurations. This submission implements a different mechanism (Stolfi word-grammar template) and adds real-language positive controls (Culpeper, Alice) absent from the grille family's scope. Different mechanism, different acceptance test, new evidence type; the declared extends/predecessor link is ancestry, not identity."
+            },
+            {
+              "family_id": "family-generative-falsification-doodler",
+              "existing_scope": "A distinct generative-mechanism falsification pilot testing content-free syllable-table (Rugg-style, M1) and self-citation/preferential-reuse (Schinner-style, M2) generators against the pinned ZL3b corpus across 27 M2 grid variants plus M0/M1 baselines on 10 quantitative metrics, identifying which corpus properties (ttr, H1, vocabulary growth) are reproducible content-free and which (H2|1, word-final entropy, Zipf slope) are not, plus a diagnostic finding on verbatim-reuse rate needed to avoid type-explosion.",
+              "relationship": "distinct_outcome",
+              "reason": "Different generator mechanism (Stolfi word-grammar vs Rugg/Schinner syllable-table/self-citation); adds positive controls entirely absent from this family's scope."
+            },
+            {
+              "family_id": "family-generative-falsification-entry-doodler",
+              "existing_scope": "A distinct generative-mechanism falsification pilot testing a content-free per-page entry/topic-carryover generator (M3) against the pinned ZL3b corpus's newly measured page-level structural fingerprint (adjacent vs distant page vocabulary Jaccard, page-unique vocabulary share) across 24 grid variants, showing these page-level metrics are reproducible content-free while character-level residue (H2|1, Zipf slope, word length) persists.",
+              "relationship": "distinct_outcome",
+              "reason": "This submission uses the M3 entry engine as a scaffold (declared predecessor) but its independently useful contribution is the new M4 word-template layer plus the positive-control measurement suite, neither in the M3 family's recorded scope."
+            }
+          ],
+          "source_outcome_ids": [
+            "outcome-m4-template-doodler-pilot"
+          ],
+          "acceptance_test": "Run `python m4_doodler.py --corpus ../../data/corpora/ZL3b-n.txt --alice ../../data/corpora/pg11.txt --culpeper ../../data/corpora/pg49513.txt --out results/ --seed 408`; confirm results.json matches the recorded output showing control H2|1 >= 3.1 bits for both Culpeper and Alice vs 2.26 for the corpus, Stolfi grammar coverage >= 0.85 of corpus word types, and the best M4 grid variant within +/-10% of corpus types/ttr while H2|1 remains >= 0.4 bits above the corpus.",
+          "excluded_overlap": [
+            "Does not claim or extend the Cardan table-and-grille (M5a/M5b) mechanism experiment credited under family-generative-falsification's existing high-water tier of 5.",
+            "Does not claim the M1/M2 syllable-table/self-citation pilot credited under family-generative-falsification-doodler.",
+            "Does not claim the M3 per-page entry/topic-carryover pilot credited under family-generative-falsification-entry-doodler; uses its entry-engine scaffold only as an input/dependency for the new M4 template layer."
+          ],
+          "validation_evidence": {
+            "execution_receipt_refs": [],
+            "external_assessment_receipt_refs": [],
+            "independent_inspection_refs": []
+          }
+        }
+      ],
+      "inspected_paths": [
+        "contributions/m4-template-doodler-pilot/contribution.yaml",
+        "contributions/m4-template-doodler-pilot/rights.md",
+        "data/corpora/RIGHTS.md",
+        "experiments/m4-template-doodler/m4_doodler.py",
+        "experiments/m4-template-doodler/report.md",
+        "experiments/m4-template-doodler/results/results.json",
+        "experiments/runs/2026-09-07T060000Z-m4-template-pilot/output.json",
+        "experiments/runs/2026-09-07T060000Z-m4-template-pilot/run.json",
+        "data/corpora/pg49513.txt",
+        "data/manifests/pg49513.json",
+        "research/context-index.json"
+      ],
+      "inspection_gaps": [],
+      "next_action": "Accept and register this as a new distinct family (family-generative-falsification-word-grammar-template) at assessed tier 5, since the contributor's declared family_id (family-generative-falsification) is already occupied by a substantively different Cardan table-and-grille result; the deterministic broker should allocate a fresh family ledger entry rather than adding to the occupied family's high-water tier.",
+      "appeal_route": "If the contributor believes this pilot is a genuine incremental extension of the Cardan table-and-grille family rather than a distinct mechanism, they may appeal by identifying the specific shared delivered capability (not merely shared predecessor/branch/corpus) between the M4 word-grammar template generator and the M5a/M5b grille device, per CREDIT_IS_NOT_LINEAGE_V1, and request re-comparison against the existing family's acceptance test (composite distance <=0.55, Zipf<=-0.75, adjacent-page Jaccard within 0.01) versus this outcome's own acceptance test. File appeals via the PR comment thread referencing this assessment's family_comparisons section for evidence-based review."
+    },
+    "stages": [
+      {
+        "stage": "adjudicator",
+        "provider": "anthropic",
+        "model": "claude-sonnet-5",
+        "exposed_version": "claude-sonnet-5",
+        "prompt_digest": "f4a41f83e0abbd9c2e24aa63a03437add3bac3d155668b4fcbdaee261fa0257e",
+        "response_digest": "2a793f3873a6cf990cd2b107e13db849fc192eb8b4d963c6e675c6926b328982",
+        "started_at": "2026-09-07T23:29:55.094Z",
+        "completed_at": "2026-09-07T23:31:23.500Z",
+        "usage": {
+          "sessions": 1,
+          "input_bytes": 238092,
+          "output_bytes": 57272,
+          "runtime_ms": 87560
+        },
+        "receipt_ref": "stage-results/job-fd9988569d5b2e97436cdbbbd032d14b31081271/adjudicator.json"
+      },
+      {
+        "stage": "adversary",
+        "provider": "anthropic",
+        "model": "claude-sonnet-5",
+        "exposed_version": "claude-sonnet-5",
+        "prompt_digest": "4725c49b8c3d4d8d96cd5ad2fde9c4909f87f2e8bc56a0c552b01c8a7d123bad",
+        "response_digest": "1d1c0fe26c01be642ac8d7235cbac2159a281666b62d39312fb58d52f103d8c2",
+        "started_at": "2026-09-07T23:27:32.832Z",
+        "completed_at": "2026-09-07T23:28:58.400Z",
+        "usage": {
+          "sessions": 1,
+          "input_bytes": 215740,
+          "output_bytes": 50417,
+          "runtime_ms": 84891
+        },
+        "receipt_ref": "stage-results/job-fd9988569d5b2e97436cdbbbd032d14b31081271/adversary.json"
+      },
+      {
+        "stage": "assessor",
+        "provider": "anthropic",
+        "model": "claude-sonnet-5",
+        "exposed_version": "claude-sonnet-5",
+        "prompt_digest": "6a421166238e73c5eb5f871395b0494e0fa22c49ca18a41db47d8a125d428dbd",
+        "response_digest": "4b45454800a512d5624d23c178c744b9be38adef3a409c601cf3863da55d36c1",
+        "started_at": "2026-09-07T23:25:11.444Z",
+        "completed_at": "2026-09-07T23:26:35.118Z",
+        "usage": {
+          "sessions": 1,
+          "input_bytes": 215621,
+          "output_bytes": 55433,
+          "runtime_ms": 82869
+        },
+        "receipt_ref": "stage-results/job-fd9988569d5b2e97436cdbbbd032d14b31081271/assessor.json"
+      },
+      {
+        "stage": "corrector",
+        "provider": "anthropic",
+        "model": "claude-sonnet-5",
+        "exposed_version": "claude-sonnet-5",
+        "prompt_digest": "6f7c0df40a6dacdd1312167db82a0b704ada1c95a1a203a4367b869562cecda6",
+        "response_digest": "83b50c4f0da71f8144be22e21f2ff260c96e797ede6ec18b895ea01712621632",
+        "started_at": "2026-09-07T23:32:16.890Z",
+        "completed_at": "2026-09-07T23:33:30.334Z",
+        "usage": {
+          "sessions": 1,
+          "input_bytes": 250717,
+          "output_bytes": 55087,
+          "runtime_ms": 72704
+        },
+        "receipt_ref": "stage-results/job-fd9988569d5b2e97436cdbbbd032d14b31081271/corrector.json"
+      }
+    ],
+    "disagreements": [
+      "Material independent-assessment disagreement or invalid proposal."
+    ],
+    "holds": [],
+    "reused_assessment_id": null
+  },
+  "receipt": {
+    "schema_version": "1.0",
+    "id": "receipt:job-fd9988569d5b2e97436cdbbbd032d14b31081271",
+    "key_id": "voynich-2026-09-06",
+    "issued_at": "2026-09-07T23:34:17.264Z",
+    "payload": {
+      "repository_id": 1359336540,
+      "events_digest": "5c45c55aa6ee46bc0f68f567c3276762d3329c9fe9ff22e826704098b397adb6",
+      "milestones_digest": "1e93c8f5454a748c1a872b4ffffaa9704be1033c9f28227602744344d3609820",
+      "families_digest": "37a755d3c8d7275083a0a9b5704b40fb7277f2d42cdcc2cbf3f45433b9118619",
+      "merge_sha": "48e93897c364433d17c2cc1c38986e58b5bf030a",
+      "assessed_head": "7a50abc1cf9cdc789bdd4861e8723b18faff4ad1",
+      "artifact_digest": "fd9988569d5b2e97436cdbbbd032d14b31081271f93effa5399b6b05229dfb8f",
+      "profile_digest": "2f8d18abf176f95380df7e809a525db1c36186a0f8bfe46ce106d8b228a28a93",
+      "report_digest": "6ebc5e121564cf7fc14edfe869995f983bdf63088d8815b90426c62c77c2eae3",
+      "stage_receipt_refs": [
+        "stage-results/job-fd9988569d5b2e97436cdbbbd032d14b31081271/adjudicator.json",
+        "stage-results/job-fd9988569d5b2e97436cdbbbd032d14b31081271/adversary.json",
+        "stage-results/job-fd9988569d5b2e97436cdbbbd032d14b31081271/assessor.json",
+        "stage-results/job-fd9988569d5b2e97436cdbbbd032d14b31081271/corrector.json"
+      ]
+    },
+    "payload_digest": "62f4b2519a6e365d392f56661bb421931802c02bc97ffa5c7b54537ba9181e55",
+    "signature": "9gdlrn39fel1vtj8xrO8knxz9ryVw26B-Oz6RNvsnvlbroSdxVS8ht2b102SPbMIeD3WM0rOLL85KWVOucHeAQ"
+  }
+}

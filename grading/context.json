@@ -171,17 +171,6 @@
       "seed_baseline": 0
     },
     {
-      "id": "family-generative-falsification",
-      "rubric_version": "0.1",
-      "scope": "Pilot 4 in the generative-mechanism falsification family: implements the Cardan table-and-grille device (M5a independent-column, M5b row-coupled) built from the pinned ZL3b corpus, measures composite distance against real manuscript statistics across 28 configurations plus multi-seed stability, and narrows the residual gap to two local metrics (conditional bigram entropy, word-final predictability), extending outcome-m4-template-doodler-pilot.",
-      "acceptance_test": "Run the documented command; confirm results.json matches the recorded output and that every M5b variant beats every M5a variant on composite distance, with the best M5b at <= 0.55, Zipf <= -0.75, and adjacent-page Jaccard within 0.01 of the corpus.",
-      "aliases": [],
-      "predecessor_family_ids": [],
-      "excluded_overlap": [],
-      "seed": false,
-      "seed_baseline": 0
-    },
-    {
       "id": "family-generative-falsification-entry-doodler",
       "rubric_version": "0.1",
       "scope": "A distinct generative-mechanism falsification pilot testing a content-free per-page entry/topic-carryover generator (M3) against the pinned ZL3b corpus's newly measured page-level structural fingerprint (adjacent vs distant page vocabulary Jaccard, page-unique vocabulary share) across 24 grid variants, showing these page-level metrics are reproducible content-free while character-level residue (H2|1, Zipf slope, word length) persists.",
@@ -199,15 +188,42 @@
       ],
       "seed": false,
       "seed_baseline": 0
+    },
+    {
+      "id": "family-generative-falsification",
+      "rubric_version": "0.1",
+      "scope": "Pilot 4 in the generative-mechanism falsification family: implements the Cardan table-and-grille device (M5a independent-column, M5b row-coupled) built from the pinned ZL3b corpus, measures composite distance against real manuscript statistics across 28 configurations plus multi-seed stability, and narrows the residual gap to two local metrics (conditional bigram entropy, word-final predictability), extending outcome-m4-template-doodler-pilot.",
+      "acceptance_test": "Run the documented command; confirm results.json matches the recorded output and that every M5b variant beats every M5a variant on composite distance, with the best M5b at <= 0.55, Zipf <= -0.75, and adjacent-page Jaccard within 0.01 of the corpus.",
+      "aliases": [],
+      "predecessor_family_ids": [],
+      "excluded_overlap": [],
+      "seed": false,
+      "seed_baseline": 0
+    },
+    {
+      "id": "family-generative-falsification-word-grammar-template",
+      "rubric_version": "0.1",
+      "scope": "A distinct generative-mechanism falsification pilot implementing Stolfi's published 2000 word grammar (core/mantle/crust unimodal-hill slot structure) as a template generator embedded in an entry/topic-carryover engine, and measuring two real-language positive controls (Culpeper's Complete Herbal 1653, Alice in Wonderland) with the identical metric suite against the pinned ZL3b corpus across 12 grid variants, showing (a) real language differs from the manuscript on conditional entropy, final-char entropy and entry-private vocabulary share, reframing prior 'unmatched by content-free generators' results away from a linguistic-content reading, and (b) the published grammar covers 86% of corpus word types with zero fitting and jointly reproduces vocabulary size, ttr, word length and page-sharing, leaving a residual mechanical-repetition signature (H2|1, final-char entropy, Zipf slope, entry-unique overshoot).",
+      "acceptance_test": "Run `python m4_doodler.py --corpus ../../data/corpora/ZL3b-n.txt --alice ../../data/corpora/pg11.txt --culpeper ../../data/corpora/pg49513.txt --out results/ --seed 408`; confirm results.json matches the recorded output showing control H2|1 >= 3.1 bits for both Culpeper and Alice vs 2.26 for the corpus, Stolfi grammar coverage >= 0.85 of corpus word types, and the best M4 grid variant within +/-10% of corpus types/ttr while H2|1 remains >= 0.4 bits above the corpus.",
+      "aliases": [],
+      "predecessor_family_ids": [],
+      "excluded_overlap": [
+        "Does not claim or extend the Cardan table-and-grille (M5a/M5b) mechanism experiment credited under family-generative-falsification's existing high-water tier of 5.",
+        "Does not claim the M1/M2 syllable-table/self-citation pilot credited under family-generative-falsification-doodler.",
+        "Does not claim the M3 per-page entry/topic-carryover pilot credited under family-generative-falsification-entry-doodler; uses its entry-engine scaffold only as an input/dependency for the new M4 template layer."
+      ],
+      "seed": false,
+      "seed_baseline": 0
     }
   ],
   "credit_high_water_tiers": {
     "family-ms408-data-access": 5,
     "family-generative-falsification-doodler": 5,
+    "family-generative-falsification-entry-doodler": 5,
     "family-generative-falsification": 5,
-    "family-generative-falsification-entry-doodler": 5
+    "family-generative-falsification-word-grammar-template": 5
   },
-  "ledger_digest": "84b080eb42026fea65663446ae5e22c6af4e420b54a469fff6717ca16b478119",
+  "ledger_digest": "08f0e479e0ff9ba8a867d55c4b7f2d196e1dbd5fbc4faa6c5699f9d1987bd93a",
   "public_evidence": [
     {
       "path": "research/context-index.json",
