@@ -1,0 +1,103 @@
+schema_version: "1.0"
+id: "m4-template-doodler-pilot"
+kind: research
+title: "Template doodler on Stolfi's published word grammar, with real-language positive controls"
+summary: >-
+  Third executed pilot in the generative-falsification family. Adds the missing positive
+  controls: Culpeper's Complete Herbal (PG 49513, real encyclopedia with real per-herb
+  entries) and Alice in Wonderland (repo pg11.txt) measured with the identical metric
+  suite. Controls show the manuscript's residual anomalies (conditional entropy 2.26 bits,
+  final-char entropy 2.59, 30% entry-private vocabulary) are also where it differs from
+  real language — reframing earlier "unmatched" results away from the linguistic-content
+  reading. M4 implements Stolfi's published word grammar (2000a: core/mantle/crust
+  unimodal hill), which covers 86% of corpus word types with zero fitting; the
+  template+entry generator matches vocabulary size, type/token ratio, word length and
+  neighbor-page sharing simultaneously. Residual: H2|1, final-char entropy, Zipf slope,
+  entry-private share overshoot — a mechanical-repetition signature compatible with both
+  weighted table-and-grille production and ciphered content.
+branch_ids: ["generative-mechanisms", "statistical-structure", "corpus-integrity"]
+contributors:
+  - github_id: 859355
+    github_login: "gnuchev"
+    roles: ["Formal analysis", "Investigation", "Resources"]
+ai_usage:
+  status: assisted
+  tools:
+    - provider: "Moonshot AI"
+      model_id: "kimi-k2"
+      model_version: "kimi-k2 (Kimi Code CLI, 2026-09)"
+      accessed_at: "2026-09-07"
+      tasks:
+        - "Implementation of m4_doodler.py (controls, Stolfi-grammar generator, metrics)"
+        - "Drafting of report.md and this manifest"
+        - "Retrieval of Stolfi (2000a) and the Culpeper control text from public sources"
+      human_verification: >-
+        Executed locally; all numbers come from the recorded run
+        (experiments/runs/2026-09-07T060000Z-m4-template-pilot/output.json). Corpus and
+        control hashes verified against data/manifests. Culpeper entry splitting
+        spot-checked against the e-text (per-herb headings, e.g. ELECAMPANE).
+  reproducibility_notes: >-
+    Deterministic: python m4_doodler.py --corpus ../../data/corpora/ZL3b-n.txt --alice
+    ../../data/corpora/pg11.txt --culpeper ../../data/corpora/pg49513.txt --out results/
+    --seed 408. Stdlib only.
+changes:
+  - path: "experiments/m4-template-doodler/m4_doodler.py"
+    improvement: "Positive-control measurement suite plus Stolfi-grammar template generator."
+  - path: "experiments/m4-template-doodler/report.md"
+    improvement: "Pilot-3 findings: controls reframe the residual anomalies; grammar coverage 86%."
+  - path: "experiments/m4-template-doodler/results/results.json"
+    improvement: "Full metrics: Voynich corpus, both controls, 12 M4 grid variants."
+  - path: "experiments/runs/2026-09-07T060000Z-m4-template-pilot/run.json"
+    improvement: "Run record with command, seed and corpus/control hashes."
+  - path: "data/corpora/pg49513.txt"
+    improvement: "Real-encyclopedia positive control text (Culpeper, 1653; PG public domain)."
+  - path: "data/manifests/pg49513.json"
+    improvement: "Schema manifest with fetched-byte hash for the new control."
+  - path: "data/corpora/RIGHTS.md"
+    improvement: "Rights record extended for pg49513."
+outcomes:
+  - id: "outcome-m4-template-doodler-pilot"
+    family_id: "family-generative-falsification"
+    extends: "outcome-entry-doodler-pilot"
+    before: >-
+      Pilots 1-2 compared content-free generators against the manuscript without positive
+      controls, so "unmatched by the doodler" could be misread as evidence of linguistic
+      content; no published word grammar had been implemented against the pinned corpus.
+    after: >-
+      Real-language controls (one real encyclopedia, one narrative) measured identically
+      show the manuscript's residual anomalies are also non-language-like; Stolfi's
+      published grammar is shown to cover 86% of word types and to raise generator fidelity
+      to vocabulary size, reuse, length and page structure. The open question is narrowed
+      to a mechanical-repetition signature shared by weighted-grille production and cipher.
+    acceptance_test: >-
+      Run the documented command; confirm results.json matches the recorded output:
+      control H2|1 >= 3.1 for both controls vs 2.26 for the corpus; Stolfi grammar coverage
+      >= 0.85 of types; best M4 within +-10% of corpus types and ttr while H2|1 remains
+      >= 0.4 bits above the corpus.
+    evidence:
+      - "experiments/m4-template-doodler/m4_doodler.py"
+      - "experiments/m4-template-doodler/report.md"
+      - "experiments/m4-template-doodler/results/results.json"
+      - "experiments/runs/2026-09-07T060000Z-m4-template-pilot/output.json"
+      - "data/corpora/pg49513.txt"
+      - "data/manifests/pg49513.json"
+    related_outcomes: ["outcome-generative-doodler-pilot", "outcome-entry-doodler-pilot"]
+    claimed_cumulative_tier: 5
+    claimed_incremental_points: 2
+    claim_rationale: >-
+      Atlas "Experiments": incremental bounded verified improvement (2) — adds positive
+      controls that change the interpretation of the family's earlier results and a
+      published-grammar implementation with measured coverage. Family cumulative stays 5;
+      not 10 — single seed, English controls, no independent execution.
+    attribution:
+      - github_id: 859355
+        share_basis_points: 10000
+claimed_total_points: 2
+rubric_version: "0.1"
+conflicts: []
+limitations:
+  - "Controls are English; a medieval Latin/Italian control is still needed for era match."
+  - "M4 slot weights are corpus-estimated; circle insertion probabilities are heuristic."
+  - "Single seed, coarse grid, sampled distant-Jaccard pairs; Alice chunks are artificial pages."
+  - "Rule-faked and rule-encrypted content remain observationally close under this metric family."
+rights_manifest: "contributions/m4-template-doodler-pilot/rights.md"
