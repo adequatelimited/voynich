@@ -1,0 +1,87 @@
+schema_version: "1.0"
+id: "poetry-control-line-endings"
+kind: research
+title: "Poetry control: rhyme does not explain the manuscript's word-ending discipline"
+summary: >-
+  Control experiment in the generative-falsification family, from a hypothesis by Vasily
+  Gnuchev: maybe the manuscript's word-final predictability is versification-like
+  discipline. Line-structured metrics over the pinned corpus' real lines vs Shakespeare's
+  Sonnets (strict rhyme) vs prose pseudo-lines at the Voynich mean line length. Rhyme
+  position in sonnets reaches only 3.50 bits final-char entropy — far above the
+  manuscript's every-word 2.59; verse recycles a few rhyming words (thee/me/be) while the
+  manuscript constrains endings across 10k types. Versification is excluded as an
+  explanation of the final-glyph residue. Side observation: the manuscript's line-final
+  position is LESS constrained than its average word (2.99 vs 2.59) — opposite of rhyme.
+branch_ids: ["generative-mechanisms", "statistical-structure"]
+contributors:
+  - github_id: 859355
+    github_login: "gnuchev"
+    roles: ["Conceptualization", "Formal analysis"]
+ai_usage:
+  status: assisted
+  tools:
+    - provider: "Moonshot AI"
+      model_id: "kimi-k3"
+      model_version: "kimi-code/k3 (Kimi Code CLI; model string from local CLI config, 2026-09)"
+      accessed_at: "2026-09-07"
+      tasks:
+        - "Implementation of poetry_control.py (line-structured metrics, sonnet parser)"
+        - "Drafting of report.md and this manifest"
+      human_verification: >-
+        The poetry-comparison hypothesis was contributed by Vasily Gnuchev, 2026-09-07.
+        Sonnet parsing verified (154 sonnets, roman-numeral boundaries); all numbers from
+        the recorded run output.
+  reproducibility_notes: >-
+    Deterministic: python poetry_control.py --corpus ../../data/corpora/ZL3b-n.txt
+    --sonnets ../../data/corpora/pg1041.txt --culpeper ../../data/corpora/pg49513.txt
+    --alice ../../data/corpora/pg11.txt --out results/. Stdlib only.
+changes:
+  - path: "experiments/poetry-control/poetry_control.py"
+    improvement: "Line-structured metric suite with real verse lines and prose pseudo-lines."
+  - path: "experiments/poetry-control/report.md"
+    improvement: "Findings: rhyme excluded as explanation of the final-glyph residue; line-final anti-constraint noted."
+  - path: "experiments/poetry-control/results/results.json"
+    improvement: "Full line-metric table across the four sources."
+  - path: "data/corpora/pg1041.txt"
+    improvement: "Rhymed-verse control text (Shakespeare's Sonnets; PG public domain)."
+  - path: "data/manifests/pg1041.json"
+    improvement: "Schema manifest with fetched-byte hash."
+outcomes:
+  - id: "outcome-poetry-control"
+    family_id: "family-generative-falsification"
+    extends: "outcome-controls-entry-ladder"
+    before: >-
+      The final-glyph residue (2.59 bits) had no real-language control for constrained
+      endings; versification was an untested alternative explanation.
+    after: >-
+      Rhymed verse is measured and excluded: even the rhyme position (3.50 bits) does not
+      approach the manuscript's every-word 2.59; the manuscript's line-final position is
+      anti-constrained relative to its average word, opposite of rhyme. The residue
+      stands after its hardest real-language control.
+    acceptance_test: >-
+      Run the documented command; confirm results.json matches: sonnet line-final
+      final-char entropy in [3.3, 3.7], prose controls in [3.5, 3.8], Voynich all-word
+      final-char entropy in [2.5, 2.7] and Voynich line-final above its all-word value.
+    evidence:
+      - "experiments/poetry-control/poetry_control.py"
+      - "experiments/poetry-control/report.md"
+      - "experiments/poetry-control/results/results.json"
+      - "data/corpora/pg1041.txt"
+      - "data/manifests/pg1041.json"
+    related_outcomes: ["outcome-controls-entry-ladder", "outcome-m5-grille-pilot"]
+    claimed_cumulative_tier: 5
+    claimed_incremental_points: 2
+    claim_rationale: >-
+      Atlas "Experiments": bounded verified improvement (2) — a control that closes an
+      alternative explanation (versification) for the family's main residue, with a
+      hashed new source. Family cumulative stays 5.
+    attribution:
+      - github_id: 859355
+        share_basis_points: 10000
+claimed_total_points: 2
+rubric_version: "0.1"
+conflicts: []
+limitations:
+  - "One English verse corpus; medieval Latin/vernacular verse (hymns, troubadour forms) may constrain endings differently."
+  - "Device models currently generate no line structure; device-vs-manuscript line metrics unmeasured."
+rights_manifest: "contributions/poetry-control/rights.md"
