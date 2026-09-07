@@ -1,0 +1,29 @@
+H1/H2 first glyph unit of star-paragraph openers, merged vs raw EVA
+  n=271 openers; first unit == first raw EVA char in 262 (0.967)
+  merged first units: {'p': 144, 't': 59, 'k': 21, 'f': 15, 'd': 9, 'qok': 5, 'y': 5, 's': 4, 'o': 2, 'q': 2, 'ol': 1, 'or': 1, 'ok': 1, 'l': 1, 'che': 1}
+  raw first chars   : {'p': 144, 't': 59, 'k': 21, 'f': 15, 'd': 9, 'q': 7, 'y': 5, 'o': 5, 's': 4, 'l': 1, 'c': 1}
+
+H3 are paragraph starts in the Recipes section anchored outside the text?
+  Recipes paragraphs 292 ; with a ZL comment 274 ; parsed as a drawn star 271
+  -> paragraph identity here is fixed by the marginal star in the drawing,
+     not by the text, so R1(a) is not circular with the opener glyph.
+
+H4 R1(b) variant matrix — same statistic, nuisance choices the PROTOCOL
+   does not fix.  (+ = openers attested MORE than control)
+  variant                                                  | TEST_even              | FIT_odd                | ALL                   
+  -----------------------------------------------------------------------------------------------------------------------------------
+  pre-registered: exact g+len, control pool = own half (TOKENS) | -0.04 SD p=1.0000 n=92 | -3.18 SD p=0.0014 n=126 | -2.99 SD p=0.0033 n=242
+  exact g+len, control pool = whole section (TOKENS)       | -3.51 SD p=0.0004 n=116 | -0.77 SD p=0.4727 n=126 | -2.97 SD p=0.0029 n=242
+  exact g+len, control pool = whole section (TYPES)        | -2.11 SD p=0.0464 n=116 | +0.62 SD p=0.5649 n=126 | -0.99 SD p=0.3607 n=242
+  exact g+len, control from the SAME PAGE                  | -1.53 SD p=0.1724 n=43 | -1.87 SD p=0.0959 n=63 | -2.45 SD p=0.0162 n=106
+  TYPES + control length >= opener length, own half        | +0.75 SD p=0.5137 n=98 | -1.92 SD p=0.0690 n=127 | -0.91 SD p=0.4014 n=244
+  TYPES + control length >= opener length, section         | -2.11 SD p=0.0432 n=117 | +0.70 SD p=0.4988 n=127 | -0.92 SD p=0.3982 n=244
+  exact g+len, attestation must be OFF the opener page     | -3.24 SD p=0.0015 n=116 | -0.27 SD p=0.8136 n=126 | -2.41 SD p=0.0175 n=242
+  agent's SUPPLEMENTARY relaxed match (+/-1,2,any), own half | -3.56 SD p=0.0008 n=120 | -3.63 SD p=0.0006 n=130 | -3.58 SD p=0.0006 n=250
+  same relaxed match but control length >= opener length   | -0.03 SD p=1.0000 n=98 | -3.06 SD p=0.0031 n=127 | -2.89 SD p=0.0040 n=244
+  exact g+len+log2-frequency-bin matched, own half         | +0.39 SD p=0.7207 n=82 | -2.68 SD p=0.0102 n=120 | -2.81 SD p=0.0049 n=229
+
+  Openers are systematically RARER words than the token-drawn control
+  (mean log2 section frequency, exact-matched): TEST 0.689 vs 0.894, FIT 0.724 vs 0.975, ALL 0.664 vs 0.882
+  and residue attestation falls steeply with word length in the control
+  pool, e.g. ALL: len3 0.921 len5 0.778 len7 0.508 len9 0.200

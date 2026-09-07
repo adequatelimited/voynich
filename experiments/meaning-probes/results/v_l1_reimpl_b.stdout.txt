@@ -1,0 +1,23 @@
+TEST word-final        naive-corrected vs t_l1 log_odds: max abs diff 0.000048 ; K-list identical: True
+    pooled mean|logOR| corrected 0.6462 (t_l1 0.6462) ; uncorrected over 21 finite units 0.9320 (t_l1 0.932)
+    leg-1 passers  corrected: ['daiin', 'n'] (2)   uncorrected: ['daiin', 'eey'] (2)
+TEST word-initial      naive-corrected vs t_l1 log_odds: max abs diff 0.000050 ; K-list identical: True
+    pooled mean|logOR| corrected 0.6786 (t_l1 0.6786) ; uncorrected over 24 finite units 0.9525 (t_l1 0.9525)
+    leg-1 passers  corrected: ['c', 'daiin', 'q', 'qok'] (4)   uncorrected: ['c', 'ot', 'q', 'qok'] (4)
+Culpeper char-final    naive-corrected vs t_l1 log_odds: max abs diff 0.000049 ; K-list identical: True
+    pooled mean|logOR| corrected 0.6497 (t_l1 0.6497) ; uncorrected over 22 finite units 0.8636 (t_l1 0.8636)
+    leg-1 passers  corrected: ['p'] (1)   uncorrected: ['g', 'o', 'p', 'r'] (4)
+Culpeper char-initial  naive-corrected vs t_l1 log_odds: max abs diff 0.000048 ; K-list identical: True
+    pooled mean|logOR| corrected 0.3595 (t_l1 0.3595) ; uncorrected over 23 finite units 0.4853 (t_l1 0.4853)
+    leg-1 passers  corrected: ['i', 'o'] (2)   uncorrected: ['d', 'i', 'o', 'u'] (4)
+
+independent permutation of the CORRECTED statistic, TEST word-final:
+   daiin    logOR  -1.102 (t_l1  -1.102)  Bonf p 0.0050 (t_l1 0.0050)  pass=True (t_l1 True)
+   chedy    logOR  -1.862 (t_l1  -1.862)  Bonf p 0.2175 (t_l1 0.2175)  pass=False (t_l1 False)
+   l        logOR  +1.115 (t_l1  +1.115)  Bonf p 0.1400 (t_l1 0.1400)  pass=False (t_l1 False)
+   in       logOR  -1.015 (t_l1  -1.015)  Bonf p 0.0200 (t_l1 0.0200)  pass=False (t_l1 False)
+   n        logOR  +1.586 (t_l1  +1.586)  Bonf p 0.0025 (t_l1 0.0025)  pass=True (t_l1 True)
+   k        logOR  +1.491 (t_l1  +1.491)  Bonf p 0.3875 (t_l1 0.3875)  pass=False (t_l1 False)
+   ot       logOR  -1.064 (t_l1  -1.063)  Bonf p 1.0000 (t_l1 1.0000)  pass=False (t_l1 False)
+   t        logOR  +1.080 (t_l1  +1.080)  Bonf p 1.0000 (t_l1 1.0000)  pass=False (t_l1 False)
+   units passing under corrected estimator: 2 (t_l1 reports 2)

@@ -1,0 +1,165 @@
+pages with both registers: 54
+
+page     illus lang hand   nlab   ntxt   text-locus-types / label-locus-subcodes
+f2r          H    A    1      4     98   P0=98 | L0=3 Lp=1
+f11v*        H    A    1      1     48   P0=48 | L0=1
+f17r*        H    A    1      2     77   P0=77 | Lx=2
+f41v*        H    B    5      1     65   P0=65 | Lp=1
+f49v*        H    A    1     20    141   P0=141 | L0=20
+f57v*        C None    1      5    171   Cc=167 Ro=4 | L0=5
+f66r         T    B    5     51    293   P0=293 | L0=46 Lx=5
+f67r2*       A None    4     64    126   P0=36 Pb=90 | L0=47 Ls=17
+f67v2*       C None    4      8     51   Pb=33 Ri=9 Ro=9 | La=8
+f67v1*       A None    4     16     57   Ro=57 | L0=16
+f68r1        A None    4     28     35   Cc=4 P0=28 Pb=3 | Ls=28
+f68r2        A None    4     24     56   Cc=19 P0=37 | Ls=24
+f68r3        A None    4     16     89   Cc=48 Ri=41 | La=1 Ls=15
+f68v3        C None    4      2    165   Cc=65 P0=44 Pb=11 Ri=45 | L0=2
+f69r*        C None    4     47    111   Cc=9 P0=36 Ro=66 | L0=47
+f70v2        Z None    4     34     94   Cc=94 | Lz=34
+f70v1        Z None    4     25     60   Cc=60 | Lz=25
+f71r*        Z None    4     17     72   Cc=72 | Lz=17
+f71v*        Z None    4     22     77   Cc=77 | Lz=22
+f72r1        Z None    4     23     81   Cc=81 | Lz=23
+f72r2        Z None    4     31     81   Cc=81 | Lz=31
+f72r3        Z None    4     39    121   Cc=121 | Lz=39
+f72v3        Z None    4     34     81   Cc=81 | Lz=34
+f72v2        Z None    4     31     75   Cc=75 | Lz=31
+f72v1        Z None    4     28     72   Cc=72 | Lz=28
+f73r*        Z None    4     30     65   Cc=65 | Lz=30
+f73v*        Z None    4     30     68   Cc=68 | Lz=30
+f75v*        B    B    2     36    323   P0=253 P1=59 Pb=11 | L0=6 Ln=21 Lt=9
+f76r         T    B    2      9    560   P0=560 | L0=9
+f77r*        B    B    2     11    321   P0=321 | Ln=3 Lt=8
+f77v*        B    B    2     10    321   P0=321 | Ln=1 Lt=9
+f78r         B    B    2      7    285   P0=285 | Lt=7
+f80r         B    B    2     10    435   P0=435 | Ln=10
+f81v*        B    B    2      2    252   P0=252 | Lt=2
+f82r         B    B    2     13    277   P0=272 Pr=5 | Ln=10 Lt=3
+f82v         B    B    2     14    304   P0=304 | Ln=6 Lt=8
+f83r*        B    B    2      4    338   P0=219 P1=92 Pb=27 | Lt=4
+f83v*        B    B    2      4    255   P0=255 | Ln=1 Lt=3
+f84r         B    B    2     14    352   P0=285 P1=67 | Ln=12 Lt=2
+f88r         P    A    1     16    134   P0=134 | Lc=3 Lf=13
+f88v         P    A    1     13    131   P0=131 | Lc=3 Lf=10
+f89r1*       P    A    1     15    125   P0=125 | Lc=3 Lf=12
+f89r2*       P    A    1     22    211   P0=211 | Lc=5 Lf=17
+f89v2*       P    A    1     15    164   P0=164 | Lc=3 Lf=12
+f89v1*       P    A    1      9    145   P0=145 | Lc=2 Lf=7
+f99r*        P    A    1     35    158   P0=158 | Lc=4 Lf=31
+f99v*        P    A    1     28    148   P0=148 | Lc=4 Lf=24
+f100r        P    A    1     19     89   P0=89 | Lf=19
+f100v        P    A    1     14     79   P0=79 | Lf=14
+f101v*       P    A    1     18    182   P0=173 Pc=9 | Lf=18
+f102r1       P    A    1      4    102   P0=102 | Lc=3 Lf=1
+f102r2       P    A    1      4    137   P0=137 | Lc=2 Lf=2
+f102v2       P    A    1     20    165   P0=165 | Lc=3 Lf=17
+f102v1       P    A    1      9    118   P0=118 | Lc=1 Lf=8
+(* = odd folio = TEST split)
+
+ODD/TEST section x language composition:
+    illus=P   lang=A    pages= 7  label words= 142  text words= 1133
+    illus=Z   lang=None  pages= 4  label words=  99  text words=  282
+    illus=A   lang=None  pages= 2  label words=  80  text words=  183
+    illus=B   lang=B    pages= 6  label words=  67  text words= 1810
+    illus=C   lang=None  pages= 3  label words=  60  text words=  333
+    illus=H   lang=A    pages= 3  label words=  23  text words=  266
+    illus=H   lang=B    pages= 1  label words=   1  text words=   65
+
+EVEN/FIT section x language composition:
+    illus=Z   lang=None  pages= 8  label words= 245  text words=  665
+    illus=P   lang=A    pages= 8  label words=  99  text words=  955
+    illus=A   lang=None  pages= 3  label words=  68  text words=  180
+    illus=T   lang=B    pages= 2  label words=  60  text words=  853
+    illus=B   lang=B    pages= 5  label words=  58  text words= 1653
+    illus=H   lang=A    pages= 1  label words=   4  text words=   98
+    illus=C   lang=None  pages= 1  label words=   2  text words=  165
+
+=== initial units, per-page raw counts (TEST pages only) ===
+page       nlab   ntxt   qok(lab/txt)  q(lab/txt)  c(lab/txt)  daiin(lab/txt)
+f11v          1     48   0/3  0/3  0/4  0/1
+f17r          2     77   0/3  0/6  0/6  0/0
+f41v          1     65   0/5  0/3  0/2  0/3
+f49v         20    141   0/5  0/5  0/5  0/10
+f57v          5    171   0/1  0/0  0/4  0/2
+f67r2        64    126   0/3  1/6  1/0  1/3
+f67v2         8     51   0/1  0/0  0/1  0/1
+f67v1        16     57   0/3  0/0  0/0  0/1
+f69r         47    111   0/2  0/1  0/3  1/1
+f71r         17     72   0/0  0/0  0/0  0/1
+f71v         22     77   0/0  0/0  0/0  0/1
+f73r         30     65   0/0  0/1  0/0  0/1
+f73v         30     68   1/3  0/3  0/0  0/0
+f75v         36    323   1/59  2/32  0/3  0/4
+f77r         11    321   0/58  0/55  0/1  0/6
+f77v         10    321   0/69  0/32  0/0  0/7
+f81v          2    252   0/24  0/19  0/2  0/9
+f83r          4    338   0/55  0/29  0/2  0/4
+f83v          4    255   0/54  0/29  0/1  0/4
+f89r1        15    125   0/11  1/12  0/2  0/8
+f89r2        22    211   0/17  0/10  0/3  0/19
+f89v2        15    164   0/6  0/9  0/5  0/9
+f89v1         9    145   0/10  0/8  0/10  0/9
+f99r         35    158   0/13  0/5  0/17  0/8
+f99v         28    148   0/23  0/6  0/3  0/3
+f101v        18    182   0/10  0/12  0/13  0/7
+TOTAL       472   4072   2/438  4/286  1/87  2/122
+
+=== final units, per-page raw counts (TEST pages only) ===
+page       nlab   ntxt   n(lab/txt)  daiin(lab/txt)  chedy(lab/txt)  eey(lab/txt)
+f11v          1     48   0/1  0/1  0/0  0/1
+f17r          2     77   1/0  0/0  0/0  0/0
+f41v          1     65   0/0  0/4  0/2  0/3
+f49v         20    141   0/2  0/13  0/0  0/4
+f57v          5    171   0/0  0/3  0/0  0/1
+f67r2        64    126   2/1  1/9  0/0  1/2
+f67v2         8     51   0/0  0/2  0/0  0/1
+f67v1        16     57   0/0  0/3  0/0  0/9
+f69r         47    111   0/0  1/1  0/0  2/4
+f71r         17     72   0/0  0/1  0/0  0/3
+f71v         22     77   1/0  0/2  0/0  0/10
+f73r         30     65   0/0  0/1  0/1  1/10
+f73v         30     68   0/0  0/1  0/0  0/2
+f75v         36    323   0/0  0/4  0/20  2/12
+f77r         11    321   0/0  0/11  0/24  0/19
+f77v         10    321   0/0  0/7  0/32  0/11
+f81v          2    252   0/0  0/9  0/16  0/8
+f83r          4    338   0/0  0/8  0/41  0/10
+f83v          4    255   0/0  0/4  0/17  0/8
+f89r1        15    125   1/0  1/12  0/1  0/4
+f89r2        22    211   0/0  0/21  0/0  0/20
+f89v2        15    164   1/0  0/14  0/0  0/3
+f89v1         9    145   0/0  1/11  0/0  0/6
+f99r         35    158   0/0  0/9  0/0  0/16
+f99v         28    148   0/0  0/4  0/0  0/3
+f101v        18    182   1/0  0/11  0/0  0/15
+TOTAL       472   4072   7/4  4/166  0/154  6/185
+
+=== word-final "n": every word contributing, TEST pages ===
+  f11v     labels: [] | text: ['dan']
+  f17r     labels: ['oteeeon'] | text: []
+  f49v     labels: [] | text: ['dan', 'chokoran']
+  f67r2    labels: ['oeoldan', 'oran'] | text: ['dokan']
+  f71v     labels: ['dan'] | text: []
+  f89r1    labels: ['dan'] | text: []
+  f89v2    labels: ['dykaran'] | text: []
+  f101v    labels: ['olaran'] | text: []
+
+=== word-final "daiin": TEST label words ===
+  f67r2    ['daiin']
+  f69r     ['daiin']
+  f89r1    ['ararchodaiin']
+  f89v1    ['opaldaiin']
+
+=== word-initial q/qok/c/daiin: TEST label words ===
+  f67r2    ['qotoear', 'daiin', 'cpheey']
+  f69r     ['daiin']
+  f73v     ['qokeoly']
+  f75v     ['qokal', 'qoted', 'qotedy']
+  f89r1    ['qkol']
+
+=== repetition on each side (TEST pages) ===
+  label words: 472 tokens, 371 types, ttr=0.786
+  text  words: 4072 tokens, 1489 types, ttr=0.366
+  most frequent text tokens: [('daiin', 121), ('shedy', 74), ('ol', 72), ('chedy', 69), ('dal', 58), ('qokedy', 51), ('qokal', 49), ('s', 48), ('qokeedy', 46), ('qol', 46), ('aiin', 44), ('dar', 40), ('chey', 39), ('qokain', 38), ('qokaiin', 38)]
+  most frequent label tokens: [('y', 10), ('s', 7), ('o', 6), ('ar', 6), ('e', 4), ('dal', 4), ('dar', 4), ('okol', 4), ('otedy', 4), ('oky', 4)]

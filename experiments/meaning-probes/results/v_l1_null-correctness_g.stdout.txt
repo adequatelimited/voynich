@@ -1,0 +1,40 @@
+================================================================================================
+v_l1 G: EXACT conditional tail probabilities (no permutation, no
+        continuity correction) for the units the gate turns on.
+        T = number of label-side words carrying the unit, summed over the
+        matched (page x length) strata; null = independent hypergeometrics.
+================================================================================================
+
+### TEST odd
+  unit                                T_obs     E[T]  total    P(T<=obs)    P(T>=obs)
+  final n                                 7     1.79      8    1.000e+00    8.556e-05
+  final daiin (all)                       4    15.02     99    3.962e-05    1.000e+00
+  final daiin (len>=2 words)              2     5.35     38    6.482e-02    9.844e-01
+  final eey                               6    18.82    165    9.038e-05    1.000e+00
+  final in                                1     6.95     44    2.853e-03    9.997e-01
+  initial qok                             2    25.65    396    4.185e-11    1.000e+00
+  initial q                               4    21.95    252    1.144e-07    1.000e+00
+  initial q or qok (EVA q-)               6    47.61    648    2.610e-18    1.000e+00
+  initial c (benched gallows)             1    11.02     65    8.711e-06    1.000e+00
+  initial daiin (all)                     2     9.76     62    1.565e-04    1.000e+00
+  initial daiin (len>=2 words)            0     0.09      1    9.091e-01    1.000e+00
+  initial ot                             77    42.95    211    1.000e+00    8.125e-11
+
+### FIT even
+  unit                                T_obs     E[T]  total    P(T<=obs)    P(T>=obs)
+  final n                                 4     1.43     16    9.955e-01    3.203e-02
+  final daiin (all)                       7    10.80     57    9.889e-02    9.564e-01
+  final daiin (len>=2 words)              4     5.11     32    3.951e-01    7.894e-01
+  final eey                              11    22.45    187    1.621e-03    9.994e-01
+  final in                                2     3.95     22    1.901e-01    9.439e-01
+  initial qok                             1    22.60    397    1.100e-10    1.000e+00
+  initial q                               4    17.40    178    1.567e-05    1.000e+00
+  initial q or qok (EVA q-)               5    40.00    575    2.309e-15    1.000e+00
+  initial c (benched gallows)             6     9.19     44    1.382e-01    9.367e-01
+  initial daiin (all)                     5     5.91     28    4.173e-01    7.859e-01
+  initial daiin (len>=2 words)            2     0.22      3    9.996e-01    1.517e-02
+  initial ot                             95    77.87    354    9.968e-01    5.064e-03
+
+Read: a two-sided exact p is ~2*min(P(T<=obs), P(T>=obs)). Compare with
+the Bonferroni threshold 0.01/25 = 4.0e-4 for a one-family reading, or
+0.01/50 = 2.0e-4 if the added word-initial family is corrected honestly.

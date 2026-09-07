@@ -1,0 +1,54 @@
+=== v_l1_reimplementation_a — independent recomputation of L1 ===
+sha256 ZL3b-n.txt  = bf5b6d4ac1e3a51b1847a9c388318d609020441ccd56984c901c32b09beccafc
+sha256 pg49513.txt = d9bacb3247d798fcd2a8ce3b7c76222407fc0ac1c8d4242e9e8163508c10e968
+sha256 meaning_lib = aa1ee5a340923cf7bd3f5aa1d433d24c10b2db50da1e7b2da9256cd98ef42fb1
+
+pages with both label and text loci: 54
+split (PROTOCOL: FIT = EVEN folio, TEST = ODD folio)
+  FIT  pages: 28   TEST pages: 26
+  TEST label words used 466 / 472  | text words used 3098 / 4072 | strata 109 | pages 25
+  FIT  label words used 529 / 536  | text words used 3203 / 4569 | strata 126 | pages 28
+
+K=25 word-final units (all-pool): y, dy, ol, al, ar, or, aiin, eey, s, ain, chedy, o, daiin, m, r, d, l, in, g, n, a, k, f, t, e
+K=25 word-final units (TEST-pool): y, dy, ol, al, ar, aiin, s, or, eey, daiin, chedy, o, ain, m, r, d, in, l, g, k, e, n, t, a, f
+K=25 word-init  units (all-pool): qok, ch, ok, d, ot, q, che, she, ol, s, y, o, sh, l, k, daiin, t, r, c, or, chedy, al, ar, aiin, dy
+
+TEST / word-final : 2 units pass (|logOR|>=1 & Bonf p<0.01); pooled mean|logOR| 0.9734 rms 1.3338 max 2.8732
+    eey      logOR   -1.394  Bonf p 0.0050   lab 6 / txt 159
+    daiin    logOR   -1.629  Bonf p 0.0050   lab 4 / txt 95
+TEST / word-initial : 5 units pass (|logOR|>=1 & Bonf p<0.01); pooled mean|logOR| 0.9214 rms 1.2273 max 3.0529
+    qok      logOR   -3.053  Bonf p 0.0025   lab 2 / txt 394
+    ot       logOR   +1.017  Bonf p 0.0050   lab 77 / txt 134
+    q        logOR   -2.148  Bonf p 0.0025   lab 4 / txt 248
+    daiin    logOR   -2.043  Bonf p 0.0100   lab 2 / txt 60
+    c        logOR   -2.835  Bonf p 0.0025   lab 1 / txt 64
+  sensitivity (K picked on TEST pool), word-final: 2 pass
+FIT / word-final : 1 units pass (|logOR|>=1 & Bonf p<0.01); pooled mean|logOR| 0.9346 rms 1.3316 max 4.0308
+    chedy    logOR   -2.055  Bonf p 0.0050   lab 2 / txt 105
+FIT / word-initial : 6 units pass (|logOR|>=1 & Bonf p<0.01); pooled mean|logOR| 0.9265 rms 1.2114 max 3.3293
+    qok      logOR   -3.329  Bonf p 0.0025   lab 1 / txt 396
+    ch       logOR   -1.308  Bonf p 0.0025   lab 18 / txt 263
+    q        logOR   -1.561  Bonf p 0.0025   lab 4 / txt 174
+    che      logOR   -1.013  Bonf p 0.0050   lab 13 / txt 203
+    she      logOR   -2.602  Bonf p 0.0025   lab 2 / txt 205
+    o        logOR   +1.561  Bonf p 0.0025   lab 81 / txt 69
+  sensitivity (K picked on TEST pool), word-final: 1 pass
+
+Culpeper control: 525 entries, 1359 heading words / 56938 body words used, 1134 strata
+  control / char-final : 4 units pass; pooled mean|logOR| 0.8636 rms 1.1523 max 3.2704
+    r    logOR   +1.129  Bonf p 0.0025  lab 260 / txt 3913
+    o    logOR   -1.523  Bonf p 0.0025  lab 9 / txt 1756
+    g    logOR   -1.220  Bonf p 0.0025  lab 13 / txt 1518
+    p    logOR   +1.657  Bonf p 0.0025  lab 59 / txt 553
+  control / char-initial : 4 units pass; pooled mean|logOR| 0.4853 rms 0.7530 max 2.0729
+    o    logOR   +1.646  Bonf p 0.0025  lab 326 / txt 5364
+    i    logOR   -1.714  Bonf p 0.0025  lab 24 / txt 3736
+    d    logOR   -1.019  Bonf p 0.0025  lab 20 / txt 1863
+    u    logOR   -2.073  Bonf p 0.0025  lab 2 / txt 740
+
+GATE L1 on TEST : leg1 2 units (need >=3) -> FAIL ; leg2 ratios mean 1.127 rms 1.158 max 0.879 (need >=0.25, strictest 0.879) -> PASS ; GATE FAIL
+GATE L1 on FIT : leg1 1 units (need >=3) -> FAIL ; leg2 ratios mean 1.082 rms 1.156 max 1.232 (need >=0.25, strictest 1.082) -> PASS ; GATE FAIL
+control itself on leg1: 4 units pass
+
+FIT/TEST stability word-final : pearson r = 0.673, sign agreement 18/21
+FIT/TEST stability word-initial : pearson r = 0.723, sign agreement 21/24

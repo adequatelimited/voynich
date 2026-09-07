@@ -1,0 +1,55 @@
+==============================================================================
+V-Z4 part 2 — two-sidedness, MI bias, jackknife, power arithmetic
+==============================================================================
+
+[a] "two-sided" (deviation from null mean) vs one-sided upper tail,
+    all six registered TEST statistics, B=10000, t_z4 seeds (P1=408,P2=409)
+    statistic                     p_2sided   p_upper     ge_2s     ge_up
+    MI_P1_F1                       0.92231   0.42956      9223      4295
+    MI_P1_F2                       0.41126   0.78772      4112      7877
+    MI_P2_F1                       0.00160   0.00160        15        15
+    MI_P2_F2                       0.11929   0.07389      1192       738
+    CHI2_prefix_by_rankblock       0.96830   0.44696      9683      4469
+    CHI2_suffix_by_rankblock       0.53185   0.71633      5318      7163
+    -> for every statistic with a POSITIVE effect the "two-sided" p equals
+       the one-sided upper-tail p exactly: the extra conservatism claimed in
+       t_z4 ambiguity A3 costs nothing and buys nothing here.
+
+[b] MI small-sample bias: is the null mean doing the debiasing?
+    P2 x F1 (the passer)   R=3 C=19 n=147  Miller-Madow bias 0.1767  permutation null mean 0.1989
+    P1 x F1                R=3 C=19 n=147  Miller-Madow bias 0.1767  permutation null mean 0.1992
+    observed MI(P2;F1) = 0.2963, of which 67% is bias; debiased 0.0975 bits
+    H(ring third) = 1.5826 bits, so the debiased effect is 6.2% of the
+    position entropy.  The bias is handled correctly (null mean absorbs it).
+
+[c] jackknife of the passer on the z scale (comparable across n), B=20000 seed 777
+    full        n=147  MI=0.2963  debiased=+0.0977  z=+3.64  p=0.00155
+    -Virgo/r0           n=129  MI=0.2758  debiased=+0.0612  z=+2.06  p=0.03615 FAILS BONF
+    -Scorpius/r2        n=137  MI=0.2668  debiased=+0.0756  z=+2.62  p=0.01210 FAILS BONF
+    -Sagittarius/r1     n=131  MI=0.2928  debiased=+0.0839  z=+3.05  p=0.00615 FAILS BONF
+    -Libra/r0           n=129  MI=0.3078  debiased=+0.0937  z=+3.07  p=0.00465 FAILS BONF
+    -Sagittarius/r2     n=138  MI=0.2999  debiased=+0.0877  z=+3.11  p=0.00480 FAILS BONF
+    -Scorpius/r0        n=143  MI=0.2919  debiased=+0.0877  z=+3.25  p=0.00375 FAILS BONF
+    -Virgo/r1           n=135  MI=0.3036  debiased=+0.0987  z=+3.37  p=0.00235 FAILS BONF
+    -Libra/r1           n=137  MI=0.3134  debiased=+0.0997  z=+3.47  p=0.00200 FAILS BONF
+    -Leo/r0             n=129  MI=0.3096  debiased=+0.1093  z=+3.66  p=0.00165 
+    -Sagittarius/r0     n=143  MI=0.3084  debiased=+0.1041  z=+3.84  p=0.00100 
+    -Leo/r1             n=135  MI=0.3247  debiased=+0.1191  z=+4.24  p=0.00070 
+    -Scorpius/r1        n=131  MI=0.3557  debiased=+0.1449  z=+5.00  p=0.00010 
+    jackknife z range 2.06 .. 5.00 around a full-sample z of 3.64
+
+[d] audit of the power benchmark ("numeral median debiased effect")
+    MI_P1_F1   per-system debiased effects: -0.059, 0.000, 0.386, 0.708, 0.710, 0.756, 0.811, 1.132
+               t_z4 reports sorted[4] = 0.7097 as the "median"; the true median of 8 values is 0.7091
+    MI_P2_F1   per-system debiased effects: 0.000, 0.024, 0.059, 0.079, 0.113, 0.134, 0.205, 0.301
+               t_z4 reports sorted[4] = 0.1134 as the "median"; the true median of 8 values is 0.0964
+    (sorted[len//2] with an even n is the upper middle order statistic,
+     not the median.  It inflates the control benchmark, i.e. it is
+     conservative for the negative conclusion, but it is mislabelled.)
+
+[e] independent re-derivation of one non-passing p (MI_P1_F1)
+    t_z4: observed 0.20189721927326795  null_mean 0.19924154463071655  p 0.9223077692230777
+    here: observed 0.20189721927326792  null_mean 0.19924154463071655  p 0.9223077692230777
+
+[f] does anything else in the family come close?  min p over the six =
+    0.001600 (MI_P2_F1).  Second smallest = 0.119288 (MI_P2_F2).

@@ -1,0 +1,417 @@
+Z4 — positional morphology of the zodiac labels
+seed=408  B=10000  Bonferroni family=6  alpha=0.001667
+
+input data/corpora/ZL3b-n.txt                  bf5b6d4ac1e3a51b1847a9c388318d609020441ccd56984c901c32b09beccafc
+input data/corpora/GC2a-n.txt                  b09570cb6c993bc2d87134d115e60a978650a8a6495483ddbb1f6005a586096f
+input experiments/meaning-probes/meaning_lib.py aa1ee5a340923cf7bd3f5aa1d433d24c10b2db50da1e7b2da9256cd98ef42fb1
+
+ZL3b-n: 294 zodiac label loci with words
+  FIT signs Pisces,Aries,Taurus,Gemini,Cancer  n=147
+  TEST signs Leo,Virgo,Libra,Scorpius,Sagittarius  n=147
+
+ZL3b glyph-unit level — FIT
+  FIT                                              observed  null_mean   debiased         z         p bonf6<0.01?
+  MI_P1_F1                                           0.1610     0.1466    +0.0144     +0.58   0.56874 no
+  MI_P1_F2                                           0.1834     0.1742    +0.0092     +0.29   0.76792 no
+  MI_P2_F1                                           0.1656     0.1481    +0.0176     +0.69   0.49675 no
+  MI_P2_F2                                           0.1408     0.1733    -0.0324     -1.03   0.29687 no
+  CHI2_prefix_by_rankblock                          29.8172    26.9560    +2.8612     +0.67   0.50165 no
+  CHI2_suffix_by_rankblock                          33.0792    30.2068    +2.8724     +0.47   0.63834 no
+
+ZL3b glyph-unit level — TEST
+  TEST                                             observed  null_mean   debiased         z         p bonf6<0.01?
+  MI_P1_F1                                           0.2019     0.1992    +0.0027     +0.10   0.92231 no
+  MI_P1_F2                                           0.1628     0.1909    -0.0281     -0.82   0.41126 no
+  MI_P2_F1                                           0.2963     0.1989    +0.0975     +3.62   0.00160 PASS
+  MI_P2_F2                                           0.2404     0.1895    +0.0509     +1.54   0.11929 no
+  CHI2_prefix_by_rankblock                          36.1940    35.9995    +0.1945     +0.04   0.96830 no
+  CHI2_suffix_by_rankblock                          30.6347    34.2921    -3.6574     -0.62   0.53185 no
+
+ZL3b glyph-unit level — ALL
+  ALL                                              observed  null_mean   debiased         z         p bonf6<0.01?
+  MI_P1_F1                                           0.1438     0.1195    +0.0243     +1.56   0.10929 no
+  MI_P1_F2                                           0.1160     0.1176    -0.0016     -0.09   0.92981 no
+  MI_P2_F1                                           0.1672     0.1203    +0.0469     +2.98   0.00470 no
+  MI_P2_F2                                           0.1010     0.1166    -0.0156     -0.85   0.39236 no
+  CHI2_prefix_by_rankblock                          51.9611    42.9147    +9.0464     +1.57   0.10889 no
+  CHI2_suffix_by_rankblock                          42.1313    41.9752    +0.1561     +0.02   0.98130 no
+
+observed TEST table  ringthird x prefix (the one statistic that moves):
+  ringthird_0  {'ok': 20, 'o': 16, 'ot': 7, 'ch': 3, 'ee': 2, 'or': 1, 'l': 1, 'ai': 1, 'y': 1, 'she': 1}
+  ringthird_1  {'o': 11, 'ot': 10, 'y': 8, 'ok': 7, 'che': 5, 'she': 2, 'sh': 1, 'daiin': 1, 'ol': 1, 'aiin': 1}
+  ringthird_2  {'ok': 14, 'y': 10, 'o': 7, 'ot': 6, 'che': 3, 'ch': 1, 'd': 1, 'ar': 1, 'k': 1, 'ee': 1, 'or': 1, 'qok': 1}
+
+ZL3b RAW EVA character level — FIT
+  FIT                                              observed  null_mean   debiased         z         p bonf6<0.01?
+  MI_P1_F1                                           0.0526     0.0687    -0.0161     -0.84   0.37716 no
+  MI_P1_F2                                           0.1241     0.1148    +0.0093     +0.34   0.73593 no
+  MI_P2_F1                                           0.0685     0.0687    -0.0002     -0.01   0.99070 no
+  MI_P2_F2                                           0.0831     0.1142    -0.0311     -1.15   0.23828 no
+  CHI2_prefix_by_rankblock                           9.0220    11.9720    -2.9500     -0.88   0.37376 no
+  CHI2_suffix_by_rankblock                          23.6109    20.1365    +3.4744     +0.67   0.50365 no
+
+ZL3b RAW EVA character level — TEST
+  TEST                                             observed  null_mean   debiased         z         p bonf6<0.01?
+  MI_P1_F1                                           0.1400     0.1030    +0.0370     +1.62   0.10049 no
+  MI_P1_F2                                           0.0870     0.0986    -0.0116     -0.41   0.68953 no
+  MI_P2_F1                                           0.1426     0.1034    +0.0392     +1.71   0.08259 no
+  MI_P2_F2                                           0.1017     0.0975    +0.0042     +0.16   0.88441 no
+  CHI2_prefix_by_rankblock                          24.1271    17.9844    +6.1427     +1.47   0.13409 no
+  CHI2_suffix_by_rankblock                          16.8743    18.2068    -1.3325     -0.28   0.78412 no
+
+ZL3b glyph-unit, comma_split=False — TEST
+  TEST                                             observed  null_mean   debiased         z         p bonf6<0.01?
+  MI_P1_F1                                           0.2019     0.1992    +0.0027     +0.10   0.92231 no
+  MI_P1_F2                                           0.1628     0.1909    -0.0281     -0.82   0.41126 no
+  MI_P2_F1                                           0.2963     0.1989    +0.0975     +3.62   0.00160 PASS
+  MI_P2_F2                                           0.2404     0.1895    +0.0509     +1.54   0.11929 no
+  CHI2_prefix_by_rankblock                          36.1940    35.9995    +0.1945     +0.04   0.96830 no
+  CHI2_suffix_by_rankblock                          30.6347    34.2921    -3.6574     -0.62   0.53185 no
+
+ZL3b glyph-unit, P2 restricted to rings with >= 6 labels — TEST
+  TEST(ring>=6)                                    observed  null_mean   debiased         z         p bonf6<0.01?
+  MI_P1_F1                                           0.2019     0.1992    +0.0027     +0.10   0.92231 no
+  MI_P1_F2                                           0.1628     0.1909    -0.0281     -0.82   0.41126 no
+  MI_P2_F1                                           0.3050     0.2107    +0.0943     +3.42   0.00250 no
+  MI_P2_F2                                           0.2490     0.2013    +0.0478     +1.35   0.16928 no
+  CHI2_prefix_by_rankblock                          36.1940    35.9995    +0.1945     +0.04   0.96830 no
+  CHI2_suffix_by_rankblock                          30.6347    34.2921    -3.6574     -0.62   0.53185 no
+
+coverage ZL3b: 299 Lz loci, 294 survive the clean parser
+coverage GC2a: 299 Lz loci, 91 survive the clean parser
+  GC2a-n is the Glen Claston v101 alphabet (upper case + digits), not EVA;
+  the clean parser and the EVA-derived glyph-unit merges do not apply to it,
+  so the GC2a replication below is a coverage-crippled check, not a fair one.
+
+GC2a-n: 91 zodiac label loci with words
+GC2a glyph-unit level — FIT (n=65)
+  FIT                                              observed  null_mean   debiased         z         p bonf6<0.01?
+  MI_P1_F1                                           0.0836     0.0677    +0.0160     +0.52   0.58674 no
+  MI_P1_F2                                           0.1969     0.1240    +0.0729     +1.70   0.07839 no
+  MI_P2_F1                                           0.1722     0.1447    +0.0276     +0.85   0.39116 no
+  MI_P2_F2                                           0.1553     0.2382    -0.0829     -1.62   0.09449 no
+  CHI2_prefix_by_rankblock                           7.6607     5.3827    +2.2780     +0.75   0.41366 no
+  CHI2_suffix_by_rankblock                          17.2455    10.1599    +7.0856     +1.82   0.05919 no
+
+GC2a glyph-unit level — TEST (n=26)
+  TEST                                             observed  null_mean   debiased         z         p bonf6<0.01?
+  MI_P1_F1                                           0.0000     0.0000    +0.0000     +0.00   1.00000 no
+  MI_P1_F2                                           0.0000     0.0000    +0.0000     +0.00   1.00000 no
+  MI_P2_F1                                           0.0930     0.1433    -0.0503     -0.85   0.56604 no
+  MI_P2_F2                                           0.5027     0.4630    +0.0397     +0.33   0.74623 no
+  CHI2_prefix_by_rankblock                           0.0000     0.0000    +0.0000     +0.00   1.00000 no
+  CHI2_suffix_by_rankblock                           0.0000     0.0000    +0.0000     +0.00   1.00000 no
+
+POWER CALIBRATION — 8 numeral series in the observed sign/ring layout
+(what a real compositional numeral system looks like on this layout)
+
+numeral controls, unit level, FIT signs
+  English             
+  English                                          observed  null_mean   debiased         z         p bonf6<0.01?
+  MI_P1_F1                                           0.4412     0.0553    +0.3859    +15.71   0.00010 PASS
+  MI_P1_F2                                           0.4482     0.0774    +0.3708    +12.48   0.00010 PASS
+  MI_P2_F1                                           0.0633     0.0539    +0.0095     +0.39   0.69473 no
+  MI_P2_F2                                           0.0865     0.0789    +0.0076     +0.25   0.80422 no
+  CHI2_prefix_by_rankblock                          72.6091    10.3866   +62.2225    +14.04   0.00010 PASS
+  CHI2_suffix_by_rankblock                          74.5338    14.4679   +60.0659    +11.55   0.00010 PASS
+  Latin               
+  Latin                                            observed  null_mean   debiased         z         p bonf6<0.01?
+  MI_P1_F1                                           0.8019     0.0778    +0.7241    +25.16   0.00010 PASS
+  MI_P1_F2                                           0.5431     0.0777    +0.4654    +16.83   0.00010 PASS
+  MI_P2_F1                                           0.0735     0.0747    -0.0011     -0.04   0.96790 no
+  MI_P2_F2                                           0.0880     0.0769    +0.0110     +0.40   0.69843 no
+  CHI2_prefix_by_rankblock                         136.5328    14.5086  +122.0242    +23.48   0.00010 PASS
+  CHI2_suffix_by_rankblock                          85.8021    14.4767   +71.3255    +14.06   0.00010 PASS
+  Italian             
+  Italian                                          observed  null_mean   debiased         z         p bonf6<0.01?
+  MI_P1_F1                                           0.8609     0.0909    +0.7700    +24.71   0.00010 PASS
+  MI_P1_F2                                           0.2405     0.0333    +0.2072    +13.19   0.00010 PASS
+  MI_P2_F1                                           0.0888     0.0872    +0.0016     +0.05   0.96010 no
+  MI_P2_F2                                           0.0340     0.0322    +0.0018     +0.12   0.90651 no
+  CHI2_prefix_by_rankblock                         151.2328    16.5937  +134.6390    +24.57   0.00010 PASS
+  CHI2_suffix_by_rankblock                          47.9403     6.1834   +41.7569    +13.13   0.00010 PASS
+  German              
+  German                                           observed  null_mean   debiased         z         p bonf6<0.01?
+  MI_P1_F1                                           0.0123     0.0744    -0.0621     -2.19   0.03100 no
+  MI_P1_F2                                           1.0293     0.0682    +0.9612    +34.99   0.00010 PASS
+  MI_P2_F1                                           0.0594     0.0787    -0.0194     -0.64   0.52355 no
+  MI_P2_F2                                           0.1681     0.0603    +0.1078     +4.25   0.00060 PASS
+  CHI2_prefix_by_rankblock                           2.3991    14.5145   -12.1154     -2.28   0.02550 no
+  CHI2_suffix_by_rankblock                         185.2388    12.4722  +172.7666    +35.87   0.00010 PASS
+  French              
+  French                                           observed  null_mean   debiased         z         p bonf6<0.01?
+  MI_P1_F1                                           0.9289     0.1047    +0.8243    +24.87   0.00010 PASS
+  MI_P1_F2                                           0.3562     0.0648    +0.2914    +10.97   0.00010 PASS
+  MI_P2_F1                                           0.1157     0.1006    +0.0151     +0.47   0.64764 no
+  MI_P2_F2                                           0.0641     0.0658    -0.0017     -0.06   0.95240 no
+  CHI2_prefix_by_rankblock                         165.9328    18.6689  +147.2639    +25.62   0.00010 PASS
+  CHI2_suffix_by_rankblock                          57.1260    12.4179   +44.7081     +9.25   0.00010 PASS
+  Roman               
+  Roman                                            observed  null_mean   debiased         z         p bonf6<0.01?
+  MI_P1_F1                                           0.7291     0.0208    +0.7083    +47.97   0.00010 PASS
+  MI_P1_F2                                           0.0028     0.0208    -0.0180     -1.23   0.14459 no
+  MI_P2_F1                                           0.1164     0.0147    +0.1017     +8.71   0.00010 PASS
+  MI_P2_F2                                           0.0387     0.0215    +0.0173     +1.13   0.18478 no
+  CHI2_prefix_by_rankblock                         125.8147     4.1202  +121.6945    +42.58   0.00010 PASS
+  CHI2_suffix_by_rankblock                           0.5560     4.1472    -3.5912     -1.25   0.14039 no
+  GreekMilesian       
+  GreekMilesian                                    observed  null_mean   debiased         z         p bonf6<0.01?
+  MI_P1_F1                                           1.2653     0.1345    +1.1308    +31.62   0.00010 PASS
+  MI_P1_F2                                           0.1288     0.1123    +0.0165     +0.49   0.62044 no
+  MI_P2_F1                                           0.2492     0.1268    +0.1224     +3.53   0.00100 PASS
+  MI_P2_F2                                           0.1258     0.1162    +0.0096     +0.28   0.78222 no
+  CHI2_prefix_by_rankblock                         240.2355    22.7415  +217.4940    +35.94   0.00010 PASS
+  CHI2_suffix_by_rankblock                          23.7702    20.7060    +3.0642     +0.50   0.61894 no
+  LatinOrdinalAbbrev  
+  LatinOrdinalAbbrev                               observed  null_mean   debiased         z         p bonf6<0.01?
+  MI_P1_F1                                           0.0000     0.0000    +0.0000     +0.00   1.00000 no
+  MI_P1_F2                                           0.0028     0.0208    -0.0180     -1.23   0.14459 no
+  MI_P2_F1                                           0.0000     0.0000    +0.0000     +0.00   1.00000 no
+  MI_P2_F2                                           0.0387     0.0215    +0.0173     +1.13   0.18478 no
+  CHI2_prefix_by_rankblock                           0.0000     0.0000    +0.0000     +0.00   1.00000 no
+  CHI2_suffix_by_rankblock                           0.5560     4.1472    -3.5912     -1.25   0.14039 no
+
+numeral controls, unit level, TEST signs
+  English             
+  English                                          observed  null_mean   debiased         z         p bonf6<0.01?
+  MI_P1_F1                                           0.4412     0.0549    +0.3863    +15.82   0.00010 PASS
+  MI_P1_F2                                           0.4458     0.0773    +0.3686    +12.40   0.00010 PASS
+  MI_P2_F1                                           0.1102     0.0514    +0.0588     +2.54   0.01840 no
+  MI_P2_F2                                           0.3257     0.0780    +0.2477     +8.27   0.00010 PASS
+  CHI2_prefix_by_rankblock                          72.6091    10.3140   +62.2951    +14.07   0.00010 PASS
+  CHI2_suffix_by_rankblock                          73.4939    14.4661   +59.0278    +11.38   0.00010 PASS
+  Latin               
+  Latin                                            observed  null_mean   debiased         z         p bonf6<0.01?
+  MI_P1_F1                                           0.7871     0.0773    +0.7097    +24.73   0.00010 PASS
+  MI_P1_F2                                           0.5611     0.0775    +0.4836    +17.34   0.00010 PASS
+  MI_P2_F1                                           0.0955     0.0711    +0.0243     +0.88   0.36986 no
+  MI_P2_F2                                           0.3741     0.0779    +0.2963    +10.34   0.00010 PASS
+  CHI2_prefix_by_rankblock                         133.6475    14.4234  +119.2241    +22.92   0.00010 PASS
+  CHI2_suffix_by_rankblock                          89.2152    14.3798   +74.8354    +14.82   0.00010 PASS
+  Italian             
+  Italian                                          observed  null_mean   debiased         z         p bonf6<0.01?
+  MI_P1_F1                                           0.8461     0.0900    +0.7560    +24.26   0.00010 PASS
+  MI_P1_F2                                           0.2492     0.0334    +0.2158    +12.73   0.00010 PASS
+  MI_P2_F1                                           0.1636     0.0842    +0.0794     +2.63   0.01370 no
+  MI_P2_F2                                           0.0935     0.0331    +0.0603     +3.52   0.00460 no
+  CHI2_prefix_by_rankblock                         148.3475    16.4307  +131.9168    +24.04   0.00010 PASS
+  CHI2_suffix_by_rankblock                          49.6247     6.1697   +43.4550    +13.17   0.00010 PASS
+  German              
+  German                                           observed  null_mean   debiased         z         p bonf6<0.01?
+  MI_P1_F1                                           0.0155     0.0742    -0.0587     -2.07   0.03620 no
+  MI_P1_F2                                           1.0293     0.0677    +0.9616    +35.65   0.00010 PASS
+  MI_P2_F1                                           0.1905     0.0771    +0.1134     +3.88   0.00170 no
+  MI_P2_F2                                           0.3188     0.0589    +0.2599    +10.35   0.00010 PASS
+  CHI2_prefix_by_rankblock                           3.0860    14.4436   -11.3576     -2.16   0.03110 no
+  CHI2_suffix_by_rankblock                         185.2388    12.3786  +172.8603    +36.43   0.00010 PASS
+  French              
+  French                                           observed  null_mean   debiased         z         p bonf6<0.01?
+  MI_P1_F1                                           0.9141     0.1036    +0.8105    +24.52   0.00010 PASS
+  MI_P1_F2                                           0.3507     0.0651    +0.2856    +10.54   0.00010 PASS
+  MI_P2_F1                                           0.2316     0.0981    +0.1336     +4.15   0.00040 PASS
+  MI_P2_F2                                           0.3952     0.0666    +0.3286    +11.90   0.00010 PASS
+  CHI2_prefix_by_rankblock                         163.0475    18.4860  +144.5615    +25.17   0.00010 PASS
+  CHI2_suffix_by_rankblock                          55.6880    12.4557   +43.2323     +8.80   0.00010 PASS
+  Roman               
+  Roman                                            observed  null_mean   debiased         z         p bonf6<0.01?
+  MI_P1_F1                                           0.7291     0.0207    +0.7085    +48.25   0.00010 PASS
+  MI_P1_F2                                           0.0028     0.0208    -0.0180     -1.21   0.15098 no
+  MI_P2_F1                                           0.2210     0.0164    +0.2046    +16.99   0.00010 PASS
+  MI_P2_F2                                           0.0162     0.0210    -0.0047     -0.32   0.75282 no
+  CHI2_prefix_by_rankblock                         125.8147     4.0996  +121.7151    +42.72   0.00010 PASS
+  CHI2_suffix_by_rankblock                           0.5560     4.1451    -3.5890     -1.24   0.14639 no
+  GreekMilesian       
+  GreekMilesian                                    observed  null_mean   debiased         z         p bonf6<0.01?
+  MI_P1_F1                                           1.2664     0.1340    +1.1323    +31.30   0.00010 PASS
+  MI_P1_F2                                           0.1399     0.1124    +0.0275     +0.81   0.41346 no
+  MI_P2_F1                                           0.4291     0.1278    +0.3012     +8.39   0.00010 PASS
+  MI_P2_F2                                           0.2819     0.1151    +0.1668     +4.79   0.00020 PASS
+  CHI2_prefix_by_rankblock                         240.2974    22.6320  +217.6654    +35.65   0.00010 PASS
+  CHI2_suffix_by_rankblock                          25.8841    20.6643    +5.2198     +0.85   0.39206 no
+  LatinOrdinalAbbrev  
+  LatinOrdinalAbbrev                               observed  null_mean   debiased         z         p bonf6<0.01?
+  MI_P1_F1                                           0.0000     0.0000    +0.0000     +0.00   1.00000 no
+  MI_P1_F2                                           0.0028     0.0208    -0.0180     -1.21   0.15098 no
+  MI_P2_F1                                           0.0000     0.0000    +0.0000     +0.00   1.00000 no
+  MI_P2_F2                                           0.0162     0.0210    -0.0047     -0.32   0.75282 no
+  CHI2_prefix_by_rankblock                           0.0000     0.0000    +0.0000     +0.00   1.00000 no
+  CHI2_suffix_by_rankblock                           0.5560     4.1451    -3.5890     -1.24   0.14639 no
+
+numeral controls, raw level, FIT signs
+  English             
+  English                                          observed  null_mean   debiased         z         p bonf6<0.01?
+  MI_P1_F1                                           0.4412     0.0553    +0.3859    +15.71   0.00010 PASS
+  MI_P1_F2                                           0.4350     0.0661    +0.3689    +13.41   0.00010 PASS
+  MI_P2_F1                                           0.0633     0.0539    +0.0095     +0.39   0.69473 no
+  MI_P2_F2                                           0.0800     0.0671    +0.0129     +0.47   0.65043 no
+  CHI2_prefix_by_rankblock                          72.6091    10.3866   +62.2225    +14.04   0.00010 PASS
+  CHI2_suffix_by_rankblock                          73.8263    12.3807   +61.4456    +12.72   0.00010 PASS
+  Latin               
+  Latin                                            observed  null_mean   debiased         z         p bonf6<0.01?
+  MI_P1_F1                                           0.8019     0.0778    +0.7241    +25.16   0.00010 PASS
+  MI_P1_F2                                           0.5431     0.0777    +0.4654    +16.83   0.00010 PASS
+  MI_P2_F1                                           0.0735     0.0747    -0.0011     -0.04   0.96790 no
+  MI_P2_F2                                           0.0880     0.0769    +0.0110     +0.40   0.69843 no
+  CHI2_prefix_by_rankblock                         136.5328    14.5086  +122.0242    +23.48   0.00010 PASS
+  CHI2_suffix_by_rankblock                          85.8021    14.4767   +71.3255    +14.06   0.00010 PASS
+  Italian             
+  Italian                                          observed  null_mean   debiased         z         p bonf6<0.01?
+  MI_P1_F1                                           0.8609     0.0909    +0.7700    +24.71   0.00010 PASS
+  MI_P1_F2                                           0.2405     0.0333    +0.2072    +13.19   0.00010 PASS
+  MI_P2_F1                                           0.0888     0.0872    +0.0016     +0.05   0.96010 no
+  MI_P2_F2                                           0.0340     0.0322    +0.0018     +0.12   0.90651 no
+  CHI2_prefix_by_rankblock                         151.2328    16.5937  +134.6390    +24.57   0.00010 PASS
+  CHI2_suffix_by_rankblock                          47.9403     6.1834   +41.7569    +13.13   0.00010 PASS
+  German              
+  German                                           observed  null_mean   debiased         z         p bonf6<0.01?
+  MI_P1_F1                                           0.0123     0.0744    -0.0621     -2.19   0.03100 no
+  MI_P1_F2                                           1.0293     0.0682    +0.9612    +34.99   0.00010 PASS
+  MI_P2_F1                                           0.0594     0.0787    -0.0194     -0.64   0.52355 no
+  MI_P2_F2                                           0.1681     0.0603    +0.1078     +4.25   0.00060 PASS
+  CHI2_prefix_by_rankblock                           2.3991    14.5145   -12.1154     -2.28   0.02550 no
+  CHI2_suffix_by_rankblock                         185.2388    12.4722  +172.7666    +35.87   0.00010 PASS
+  French              
+  French                                           observed  null_mean   debiased         z         p bonf6<0.01?
+  MI_P1_F1                                           0.9289     0.1047    +0.8243    +24.87   0.00010 PASS
+  MI_P1_F2                                           0.3562     0.0648    +0.2914    +10.97   0.00010 PASS
+  MI_P2_F1                                           0.1157     0.1006    +0.0151     +0.47   0.64764 no
+  MI_P2_F2                                           0.0641     0.0658    -0.0017     -0.06   0.95240 no
+  CHI2_prefix_by_rankblock                         165.9328    18.6689  +147.2639    +25.62   0.00010 PASS
+  CHI2_suffix_by_rankblock                          57.1260    12.4179   +44.7081     +9.25   0.00010 PASS
+  Roman               
+  Roman                                            observed  null_mean   debiased         z         p bonf6<0.01?
+  MI_P1_F1                                           0.7291     0.0208    +0.7083    +47.97   0.00010 PASS
+  MI_P1_F2                                           0.0028     0.0208    -0.0180     -1.23   0.14459 no
+  MI_P2_F1                                           0.1164     0.0147    +0.1017     +8.71   0.00010 PASS
+  MI_P2_F2                                           0.0387     0.0215    +0.0173     +1.13   0.18478 no
+  CHI2_prefix_by_rankblock                         125.8147     4.1202  +121.6945    +42.58   0.00010 PASS
+  CHI2_suffix_by_rankblock                           0.5560     4.1472    -3.5912     -1.25   0.14039 no
+  GreekMilesian       
+  GreekMilesian                                    observed  null_mean   debiased         z         p bonf6<0.01?
+  MI_P1_F1                                           1.2653     0.1345    +1.1308    +31.62   0.00010 PASS
+  MI_P1_F2                                           0.1288     0.1123    +0.0165     +0.49   0.62044 no
+  MI_P2_F1                                           0.2492     0.1268    +0.1224     +3.53   0.00100 PASS
+  MI_P2_F2                                           0.1258     0.1162    +0.0096     +0.28   0.78222 no
+  CHI2_prefix_by_rankblock                         240.2355    22.7415  +217.4940    +35.94   0.00010 PASS
+  CHI2_suffix_by_rankblock                          23.7702    20.7060    +3.0642     +0.50   0.61894 no
+  LatinOrdinalAbbrev  
+  LatinOrdinalAbbrev                               observed  null_mean   debiased         z         p bonf6<0.01?
+  MI_P1_F1                                           0.0000     0.0000    +0.0000     +0.00   1.00000 no
+  MI_P1_F2                                           0.0028     0.0208    -0.0180     -1.23   0.14459 no
+  MI_P2_F1                                           0.0000     0.0000    +0.0000     +0.00   1.00000 no
+  MI_P2_F2                                           0.0387     0.0215    +0.0173     +1.13   0.18478 no
+  CHI2_prefix_by_rankblock                           0.0000     0.0000    +0.0000     +0.00   1.00000 no
+  CHI2_suffix_by_rankblock                           0.5560     4.1472    -3.5912     -1.25   0.14039 no
+
+numeral controls, raw level, TEST signs
+  English             
+  English                                          observed  null_mean   debiased         z         p bonf6<0.01?
+  MI_P1_F1                                           0.4412     0.0549    +0.3863    +15.82   0.00010 PASS
+  MI_P1_F2                                           0.4322     0.0660    +0.3662    +13.43   0.00010 PASS
+  MI_P2_F1                                           0.1102     0.0514    +0.0588     +2.54   0.01840 no
+  MI_P2_F2                                           0.3144     0.0665    +0.2479     +9.00   0.00010 PASS
+  CHI2_prefix_by_rankblock                          72.6091    10.3140   +62.2951    +14.07   0.00010 PASS
+  CHI2_suffix_by_rankblock                          72.7359    12.3844   +60.3515    +12.64   0.00010 PASS
+  Latin               
+  Latin                                            observed  null_mean   debiased         z         p bonf6<0.01?
+  MI_P1_F1                                           0.7871     0.0773    +0.7097    +24.73   0.00010 PASS
+  MI_P1_F2                                           0.5611     0.0775    +0.4836    +17.34   0.00010 PASS
+  MI_P2_F1                                           0.0955     0.0711    +0.0243     +0.88   0.36986 no
+  MI_P2_F2                                           0.3741     0.0779    +0.2963    +10.34   0.00010 PASS
+  CHI2_prefix_by_rankblock                         133.6475    14.4234  +119.2241    +22.92   0.00010 PASS
+  CHI2_suffix_by_rankblock                          89.2152    14.3798   +74.8354    +14.82   0.00010 PASS
+  Italian             
+  Italian                                          observed  null_mean   debiased         z         p bonf6<0.01?
+  MI_P1_F1                                           0.8461     0.0900    +0.7560    +24.26   0.00010 PASS
+  MI_P1_F2                                           0.2492     0.0334    +0.2158    +12.73   0.00010 PASS
+  MI_P2_F1                                           0.1636     0.0842    +0.0794     +2.63   0.01370 no
+  MI_P2_F2                                           0.0935     0.0331    +0.0603     +3.52   0.00460 no
+  CHI2_prefix_by_rankblock                         148.3475    16.4307  +131.9168    +24.04   0.00010 PASS
+  CHI2_suffix_by_rankblock                          49.6247     6.1697   +43.4550    +13.17   0.00010 PASS
+  German              
+  German                                           observed  null_mean   debiased         z         p bonf6<0.01?
+  MI_P1_F1                                           0.0155     0.0742    -0.0587     -2.07   0.03620 no
+  MI_P1_F2                                           1.0293     0.0677    +0.9616    +35.65   0.00010 PASS
+  MI_P2_F1                                           0.1905     0.0771    +0.1134     +3.88   0.00170 no
+  MI_P2_F2                                           0.3188     0.0589    +0.2599    +10.35   0.00010 PASS
+  CHI2_prefix_by_rankblock                           3.0860    14.4436   -11.3576     -2.16   0.03110 no
+  CHI2_suffix_by_rankblock                         185.2388    12.3786  +172.8603    +36.43   0.00010 PASS
+  French              
+  French                                           observed  null_mean   debiased         z         p bonf6<0.01?
+  MI_P1_F1                                           0.9141     0.1036    +0.8105    +24.52   0.00010 PASS
+  MI_P1_F2                                           0.3507     0.0651    +0.2856    +10.54   0.00010 PASS
+  MI_P2_F1                                           0.2316     0.0981    +0.1336     +4.15   0.00040 PASS
+  MI_P2_F2                                           0.3952     0.0666    +0.3286    +11.90   0.00010 PASS
+  CHI2_prefix_by_rankblock                         163.0475    18.4860  +144.5615    +25.17   0.00010 PASS
+  CHI2_suffix_by_rankblock                          55.6880    12.4557   +43.2323     +8.80   0.00010 PASS
+  Roman               
+  Roman                                            observed  null_mean   debiased         z         p bonf6<0.01?
+  MI_P1_F1                                           0.7291     0.0207    +0.7085    +48.25   0.00010 PASS
+  MI_P1_F2                                           0.0028     0.0208    -0.0180     -1.21   0.15098 no
+  MI_P2_F1                                           0.2210     0.0164    +0.2046    +16.99   0.00010 PASS
+  MI_P2_F2                                           0.0162     0.0210    -0.0047     -0.32   0.75282 no
+  CHI2_prefix_by_rankblock                         125.8147     4.0996  +121.7151    +42.72   0.00010 PASS
+  CHI2_suffix_by_rankblock                           0.5560     4.1451    -3.5890     -1.24   0.14639 no
+  GreekMilesian       
+  GreekMilesian                                    observed  null_mean   debiased         z         p bonf6<0.01?
+  MI_P1_F1                                           1.2664     0.1340    +1.1323    +31.30   0.00010 PASS
+  MI_P1_F2                                           0.1399     0.1124    +0.0275     +0.81   0.41346 no
+  MI_P2_F1                                           0.4291     0.1278    +0.3012     +8.39   0.00010 PASS
+  MI_P2_F2                                           0.2819     0.1151    +0.1668     +4.79   0.00020 PASS
+  CHI2_prefix_by_rankblock                         240.2974    22.6320  +217.6654    +35.65   0.00010 PASS
+  CHI2_suffix_by_rankblock                          25.8841    20.6643    +5.2198     +0.85   0.39206 no
+  LatinOrdinalAbbrev  
+  LatinOrdinalAbbrev                               observed  null_mean   debiased         z         p bonf6<0.01?
+  MI_P1_F1                                           0.0000     0.0000    +0.0000     +0.00   1.00000 no
+  MI_P1_F2                                           0.0028     0.0208    -0.0180     -1.21   0.15098 no
+  MI_P2_F1                                           0.0000     0.0000    +0.0000     +0.00   1.00000 no
+  MI_P2_F2                                           0.0162     0.0210    -0.0047     -0.32   0.75282 no
+  CHI2_prefix_by_rankblock                           0.0000     0.0000    +0.0000     +0.00   1.00000 no
+  CHI2_suffix_by_rankblock                           0.5560     4.1451    -3.5890     -1.24   0.14639 no
+
+MEASURED POWER (numeral positive controls clearing Bonferroni p<0.01)
+  unit FIT  MI_P1_F1                       6/8  median debiased effect 0.7241
+  unit FIT  MI_P1_F2                       5/8  median debiased effect 0.2914
+  unit FIT  MI_P2_F1                       2/8  median debiased effect 0.0095
+  unit FIT  MI_P2_F2                       1/8  median debiased effect 0.0110
+  unit FIT  CHI2_prefix_by_rankblock       6/8  median debiased effect 122.0242
+  unit FIT  CHI2_suffix_by_rankblock       5/8  median debiased effect 44.7081
+  unit TEST MI_P1_F1                       6/8  median debiased effect 0.7097
+  unit TEST MI_P1_F2                       5/8  median debiased effect 0.2856
+  unit TEST MI_P2_F1                       3/8  median debiased effect 0.1134
+  unit TEST MI_P2_F2                       5/8  median debiased effect 0.2477
+  unit TEST CHI2_prefix_by_rankblock       6/8  median debiased effect 121.7151
+  unit TEST CHI2_suffix_by_rankblock       5/8  median debiased effect 43.4550
+  raw  FIT  MI_P1_F1                       6/8  median debiased effect 0.7241
+  raw  FIT  MI_P1_F2                       5/8  median debiased effect 0.2914
+  raw  FIT  MI_P2_F1                       2/8  median debiased effect 0.0095
+  raw  FIT  MI_P2_F2                       1/8  median debiased effect 0.0129
+  raw  FIT  CHI2_prefix_by_rankblock       6/8  median debiased effect 122.0242
+  raw  FIT  CHI2_suffix_by_rankblock       5/8  median debiased effect 44.7081
+  raw  TEST MI_P1_F1                       6/8  median debiased effect 0.7097
+  raw  TEST MI_P1_F2                       5/8  median debiased effect 0.2856
+  raw  TEST MI_P2_F1                       3/8  median debiased effect 0.1134
+  raw  TEST MI_P2_F2                       5/8  median debiased effect 0.2479
+  raw  TEST CHI2_prefix_by_rankblock       6/8  median debiased effect 121.7151
+  raw  TEST CHI2_suffix_by_rankblock       5/8  median debiased effect 43.4550
+
+MONTE-CARLO STABILITY OF THE SMALLEST p ON TEST (MI_P2_F1) — diagnostic only
+  registered run: p = 0.00160, Monte-Carlo SE = 0.00040, threshold = 0.001667
+    seed 409  p=0.00160  pass
+    seed 410  p=0.00170  fail
+    seed 411  p=0.00210  fail
+    seed 412  p=0.00090  pass
+    seed 413  p=0.00140  pass
+    seed 414  p=0.00130  pass
+    seed 415  p=0.00200  fail
+    seed 416  p=0.00160  pass
+    seed 417  p=0.00140  pass
+    seed 418  p=0.00180  fail
+  high-precision rerun (B=200000, not the registered B): p = 0.001650 (MC SE 0.000091) -> clears the Bonferroni threshold
+  seed sensitivity at the registered B: 6 of 10 seeds clear it
+
+GATE Z4: PASS
+  smallest p over the family of 6 on TEST = 0.00160 (Bonferroni threshold 0.001667)
+  passing: MI_P2_F1
+  positive-control power on the same layout: 3/8 to 6/8 of the numeral
+  systems are detected across the six statistics (unit level, TEST signs).

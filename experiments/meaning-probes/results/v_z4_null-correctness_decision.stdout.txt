@@ -1,0 +1,55 @@
+==============================================================================
+V-Z4 part 3 — what the registered procedure would decide, on average
+==============================================================================
+
+High-precision estimates of the true permutation tail probability q for
+MI(ring third; first glyph unit), ZL3b TEST signs, glyph-unit level:
+  t_z4 diagnostic  B=200000 seed 409   ge=329  raw rate q = 0.001645
+     (that stream REUSES seed 409, so its first 10000 draws ARE the
+      registered draws; it is not independent of the gated number)
+  this verifier B=200000 seeds 10408/20408/30408/40408  ge=333
+     raw rate q = 0.001665  (SE 0.000091)
+  pooled 400000 draws: ge=662  q_hat = 0.001655  (SE 0.000064)
+  95% CI for q: [0.001529, 0.001781]
+
+The reported p is (1+ge)/(1+B) with B=10000.  Its expectation is
+  E[p] = (1 + B q)/(1 + B) = 0.001755  for q = 0.001655
+i.e. the +1 correction alone adds 0.000100 to the reported p, which is 1.5 times
+the 0.00007 margin by which the registered run cleared the threshold.
+
+Largest ge that still clears each threshold at B=10000:
+  Bonferroni/6 (family of six, used by t_z4)           ge <= 15
+    P(registered run declares PASS) = P(Bin(10000, 0.001655) <= 15) = 0.413
+  Bonferroni/4 (family of four, as PROTOCOL registers) ge <= 24
+    P(registered run declares PASS) = P(Bin(10000, 0.001655) <= 24) = 0.969
+
+  Sensitivity of that pass probability to q inside its 95%% CI (family of six):
+    q lower 95%  q=0.001529 -> P(PASS) = 0.538
+    q point est  q=0.001655 -> P(PASS) = 0.413
+    q upper 95%  q=0.001781 -> P(PASS) = 0.302
+
+OBSERVED seed behaviour (t_z4 diagnostic, seeds 409-418, one of which -- 409 --
+IS the registered stream): 6/10 pass.  Excluding the registered stream: 5/9.
+That is what a pass probability near 0.4-0.6 looks like.
+
+Cross-check of the reported p against the Bonferroni threshold arithmetic:
+  registered p  = 16/10001 = 0.0015998400
+  next p up     = 17/10001 = 0.0016998300
+  alpha/6       =          0.0016666667
+  -> the pass required ge <= 15; the unbiased expectation of ge is 16.6.
+
+Spot check of the power calibration bookkeeping (unit level, TEST signs):
+  MI_P1_F1                   6/8 detected: English, Latin, Italian, French, Roman, GreekMilesian
+    reported n_pass = 6, fraction 0.750
+  MI_P2_F1                   3/8 detected: French, Roman, GreekMilesian
+    reported n_pass = 3, fraction 0.375
+  CHI2_prefix_by_rankblock   6/8 detected: English, Latin, Italian, French, Roman, GreekMilesian
+    reported n_pass = 6, fraction 0.750
+
+Manuscript debiased effects on TEST vs those controls:
+  MI_P1_F1                   manuscript   +0.0027   numeral true median   +0.7091  p=0.92231
+  MI_P1_F2                   manuscript   -0.0281   numeral true median   +0.2507  p=0.41126
+  MI_P2_F1                   manuscript   +0.0975   numeral true median   +0.0964  p=0.00160
+  MI_P2_F2                   manuscript   +0.0509   numeral true median   +0.2073  p=0.11929
+  CHI2_prefix_by_rankblock   manuscript   +0.1945   numeral true median +120.4696  p=0.96830
+  CHI2_suffix_by_rankblock   manuscript   -3.6574   numeral true median  +43.3437  p=0.53185

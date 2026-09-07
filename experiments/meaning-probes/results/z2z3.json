@@ -1,0 +1,4846 @@
+{
+  "key": "z2z3",
+  "protocol": "experiments/meaning-probes/PROTOCOL.md",
+  "seed": 408,
+  "nperm": 10000,
+  "inputs": {
+    "ZL3b-n.txt": {
+      "path": "R:/Coding/LinearA/tmp/voynich_repo/data/corpora/ZL3b-n.txt",
+      "sha256": "bf5b6d4ac1e3a51b1847a9c388318d609020441ccd56984c901c32b09beccafc"
+    },
+    "GC2a-n.txt": {
+      "path": "R:/Coding/LinearA/tmp/voynich_repo/data/corpora/GC2a-n.txt",
+      "sha256": "b09570cb6c993bc2d87134d115e60a978650a8a6495483ddbb1f6005a586096f"
+    },
+    "pg49513.txt": {
+      "path": "R:/Coding/LinearA/tmp/voynich_lab/pg49513.txt",
+      "sha256": "d9bacb3247d798fcd2a8ce3b7c76222407fc0ac1c8d4242e9e8163508c10e968"
+    },
+    "Latin.xml": {
+      "path": "R:/Coding/LinearA/tmp/voynich_lab/bibles/Latin.xml",
+      "sha256": "5bba9f75c06858a28ebe7b2fcc19cc32b3fbf587d6bc237ceac6fe7addd3df31"
+    },
+    "meaning_lib.py": {
+      "path": "R:\\Coding\\LinearA\\tmp\\voynich_repo\\experiments\\meaning-probes\\meaning_lib.py",
+      "sha256": "aa1ee5a340923cf7bd3f5aa1d433d24c10b2db50da1e7b2da9256cd98ef42fb1"
+    },
+    "PROTOCOL.md": {
+      "path": "R:\\Coding\\LinearA\\tmp\\voynich_repo\\experiments\\meaning-probes\\PROTOCOL.md",
+      "sha256": "26847ad7f72579958ac48ee4d284aa275df0a5a6a0143b148b39ae9c759b83dd"
+    }
+  },
+  "ambiguities_resolved": [
+    "p-value two-sided (Z2 silent; Z1 says two-sided) - harder reading",
+    "gate denominator = MEDIAN effect over the 8 CLEAN numeral controls (degraded controls reported for sensitivity only) - harder reading",
+    "positive controls built so that same-slot identity holds under the convention being tested (numeral k at the k-th distinct slot value), maximising the control effect and so the 25% bar - harder reading",
+    "numeral controls run through the identical representation pipeline (the frozen 20 BPE merges applied to the numeral strings too); raw character level reported as the protocol robustness check",
+    "convention B ring rank = ring index in manuscript order, which the ZL ring comments confirm is outer-first on every zodiac folio",
+    "convention C rounding is half-up: floor(minutes/30+0.5) mod 24",
+    "multi-word labels concatenated into one sequence",
+    "Z3 \"same pages\" = the twelve zodiac folios (labels Lz, text P/C/R); the whole-manuscript version also reported",
+    "GC2a replication run with the frozen clean parser as-is; it keeps only 91/294 label loci and 0 clocks, and is reported as uninterpretable rather than as a failed replication"
+  ],
+  "zodiac_structure": {
+    "per_sign_ring_sizes": {
+      "Pisces": {
+        "0": 18,
+        "1": 10,
+        "2": 1
+      },
+      "Aries": {
+        "0": 10,
+        "1": 5,
+        "2": 10,
+        "3": 5
+      },
+      "Taurus": {
+        "0": 10,
+        "1": 5,
+        "2": 10,
+        "3": 5
+      },
+      "Gemini": {
+        "0": 5,
+        "1": 15,
+        "2": 9
+      },
+      "Cancer": {
+        "0": 11,
+        "1": 11,
+        "2": 7
+      },
+      "Leo": {
+        "0": 18,
+        "1": 12
+      },
+      "Virgo": {
+        "0": 18,
+        "1": 12
+      },
+      "Libra": {
+        "0": 18,
+        "1": 10
+      },
+      "Scorpius": {
+        "0": 4,
+        "1": 16,
+        "2": 10
+      },
+      "Sagittarius": {
+        "0": 4,
+        "1": 16,
+        "2": 9
+      }
+    },
+    "ring_group_comments": [
+      {
+        "sign": "Pisces",
+        "page": "f70v2",
+        "locus": 2,
+        "comment": "Nymph labels, outer ring:"
+      },
+      {
+        "sign": "Pisces",
+        "page": "f70v2",
+        "locus": 22,
+        "comment": "Inner ring:"
+      },
+      {
+        "sign": "Pisces",
+        "page": "f70v2",
+        "locus": 33,
+        "comment": "Central star:"
+      },
+      {
+        "sign": "Aries",
+        "page": "f70v1",
+        "locus": 2,
+        "comment": "Nymph labels, outer ring:"
+      },
+      {
+        "sign": "Aries",
+        "page": "f70v1",
+        "locus": 13,
+        "comment": "Inner ring:"
+      },
+      {
+        "sign": "Aries",
+        "page": "f71r",
+        "locus": 2,
+        "comment": "Nymph labels, outer ring"
+      },
+      {
+        "sign": "Aries",
+        "page": "f71r",
+        "locus": 13,
+        "comment": "Nymph labels, inner ring"
+      },
+      {
+        "sign": "Taurus",
+        "page": "f71v",
+        "locus": 2,
+        "comment": "Nymph labels, outer ring:"
+      },
+      {
+        "sign": "Taurus",
+        "page": "f71v",
+        "locus": 13,
+        "comment": "Nymph labels, inner ring:"
+      },
+      {
+        "sign": "Taurus",
+        "page": "f72r1",
+        "locus": 2,
+        "comment": "Nymph labels, outer ring"
+      },
+      {
+        "sign": "Taurus",
+        "page": "f72r1",
+        "locus": 13,
+        "comment": "Nymph labels, inner ring"
+      },
+      {
+        "sign": "Gemini",
+        "page": "f72r2",
+        "locus": 1,
+        "comment": "Top row of nymphs"
+      },
+      {
+        "sign": "Gemini",
+        "page": "f72r2",
+        "locus": 7,
+        "comment": "Nymph labels, second ring:"
+      },
+      {
+        "sign": "Gemini",
+        "page": "f72r2",
+        "locus": 23,
+        "comment": "Nymph labels, inner ring:"
+      },
+      {
+        "sign": "Cancer",
+        "page": "f72r3",
+        "locus": 2,
+        "comment": "Outer band of labels"
+      },
+      {
+        "sign": "Cancer",
+        "page": "f72r3",
+        "locus": 15,
+        "comment": "Middle band of labels"
+      },
+      {
+        "sign": "Cancer",
+        "page": "f72r3",
+        "locus": 27,
+        "comment": "Inner band of labels"
+      },
+      {
+        "sign": "Leo",
+        "page": "f72v3",
+        "locus": 2,
+        "comment": "Outer band of labels"
+      },
+      {
+        "sign": "Leo",
+        "page": "f72v3",
+        "locus": 21,
+        "comment": "Inner band of labels"
+      },
+      {
+        "sign": "Virgo",
+        "page": "f72v2",
+        "locus": 2,
+        "comment": "Outer band of labels"
+      },
+      {
+        "sign": "Virgo",
+        "page": "f72v2",
+        "locus": 21,
+        "comment": "Inner band of labels"
+      },
+      {
+        "sign": "Libra",
+        "page": "f72v1",
+        "locus": 2,
+        "comment": "Outer band of labels"
+      },
+      {
+        "sign": "Libra",
+        "page": "f72v1",
+        "locus": 23,
+        "comment": "Inner band of labels"
+      },
+      {
+        "sign": "Scorpius",
+        "page": "f73r",
+        "locus": 1,
+        "comment": "Top four nymphs with labels"
+      },
+      {
+        "sign": "Scorpius",
+        "page": "f73r",
+        "locus": 6,
+        "comment": "Outer full circle of labels"
+      },
+      {
+        "sign": "Scorpius",
+        "page": "f73r",
+        "locus": 23,
+        "comment": "Inner full circle of labels"
+      },
+      {
+        "sign": "Sagittarius",
+        "page": "f73v",
+        "locus": 1,
+        "comment": "Top four nymphs with labels"
+      },
+      {
+        "sign": "Sagittarius",
+        "page": "f73v",
+        "locus": 6,
+        "comment": "Outer full circle of labels"
+      },
+      {
+        "sign": "Sagittarius",
+        "page": "f73v",
+        "locus": 23,
+        "comment": "Inner full circle of labels"
+      }
+    ],
+    "FIT_signs": [
+      "Pisces",
+      "Aries",
+      "Taurus",
+      "Gemini",
+      "Cancer"
+    ],
+    "TEST_signs": [
+      "Leo",
+      "Virgo",
+      "Libra",
+      "Scorpius",
+      "Sagittarius"
+    ]
+  },
+  "Z2": {
+    "transcription": "ZL3b",
+    "conventions": {
+      "A": {
+        "description": "index within sign, manuscript order",
+        "reps": {
+          "unit": {
+            "FIT": {
+              "n_items": 147,
+              "n_signs": 5,
+              "n_same_pairs": 291,
+              "n_cross_pairs": 8643,
+              "mean_sim_same_slot": 0.2051751883316467,
+              "mean_sim_diff_slot": 0.2072497531516709,
+              "effect": -0.002074564820024216,
+              "null_mean": -0.00034728329266217665,
+              "null_sd": 0.009681096689792034,
+              "z": -0.17841796055846895,
+              "p_two_sided": 0.8355164483551645,
+              "p_one_sided": 0.5603439656034397,
+              "nperm": 10000,
+              "seed": 408
+            },
+            "TEST": {
+              "n_items": 147,
+              "n_signs": 5,
+              "n_same_pairs": 289,
+              "n_cross_pairs": 8642,
+              "mean_sim_same_slot": 0.20233726289089596,
+              "mean_sim_diff_slot": 0.20731795905385716,
+              "effect": -0.004980696162961207,
+              "null_mean": 2.47901193444498e-06,
+              "null_sd": 0.010578711951333902,
+              "z": -0.4710568921642023,
+              "p_two_sided": 0.6422357764223577,
+              "p_one_sided": 0.6708329167083291,
+              "nperm": 10000,
+              "seed": 408
+            },
+            "numeral_controls": {
+              "clean": {
+                "English": {
+                  "n_items": 147,
+                  "n_signs": 5,
+                  "n_same_pairs": 289,
+                  "n_cross_pairs": 8642,
+                  "mean_sim_same_slot": 1.0,
+                  "mean_sim_diff_slot": 0.3331325961148796,
+                  "effect": 0.6668674038851203,
+                  "null_mean": -0.00011882146642107103,
+                  "null_sd": 0.012416467033808994,
+                  "z": 53.71787510371461,
+                  "p_two_sided": 9.999000099990002e-05,
+                  "p_one_sided": 9.999000099990002e-05,
+                  "nperm": 10000,
+                  "seed": 408
+                },
+                "Latin": {
+                  "n_items": 147,
+                  "n_signs": 5,
+                  "n_same_pairs": 289,
+                  "n_cross_pairs": 8642,
+                  "mean_sim_same_slot": 1.0,
+                  "mean_sim_diff_slot": 0.3228402628352026,
+                  "effect": 0.6771597371647974,
+                  "null_mean": 1.661257652597784e-05,
+                  "null_sd": 0.013713288703417877,
+                  "z": 49.3786092623793,
+                  "p_two_sided": 9.999000099990002e-05,
+                  "p_one_sided": 9.999000099990002e-05,
+                  "nperm": 10000,
+                  "seed": 408
+                },
+                "Italian": {
+                  "n_items": 147,
+                  "n_signs": 5,
+                  "n_same_pairs": 289,
+                  "n_cross_pairs": 8642,
+                  "mean_sim_same_slot": 1.0,
+                  "mean_sim_diff_slot": 0.33404550356164553,
+                  "effect": 0.6659544964383545,
+                  "null_mean": -5.065829259371636e-05,
+                  "null_sd": 0.013156081136425893,
+                  "z": 50.62336936239674,
+                  "p_two_sided": 9.999000099990002e-05,
+                  "p_one_sided": 9.999000099990002e-05,
+                  "nperm": 10000,
+                  "seed": 408
+                },
+                "German": {
+                  "n_items": 147,
+                  "n_signs": 5,
+                  "n_same_pairs": 289,
+                  "n_cross_pairs": 8642,
+                  "mean_sim_same_slot": 1.0,
+                  "mean_sim_diff_slot": 0.3419512429859238,
+                  "effect": 0.6580487570140763,
+                  "null_mean": -7.444830998595699e-05,
+                  "null_sd": 0.013077770952522546,
+                  "z": 50.32380577036472,
+                  "p_two_sided": 9.999000099990002e-05,
+                  "p_one_sided": 9.999000099990002e-05,
+                  "nperm": 10000,
+                  "seed": 408
+                },
+                "French": {
+                  "n_items": 147,
+                  "n_signs": 5,
+                  "n_same_pairs": 289,
+                  "n_cross_pairs": 8642,
+                  "mean_sim_same_slot": 1.0,
+                  "mean_sim_diff_slot": 0.2689471097494146,
+                  "effect": 0.7310528902505854,
+                  "null_mean": -2.304062662000629e-05,
+                  "null_sd": 0.013742607671235734,
+                  "z": 53.19775899645304,
+                  "p_two_sided": 9.999000099990002e-05,
+                  "p_one_sided": 9.999000099990002e-05,
+                  "nperm": 10000,
+                  "seed": 408
+                },
+                "Roman": {
+                  "n_items": 147,
+                  "n_signs": 5,
+                  "n_same_pairs": 289,
+                  "n_cross_pairs": 8642,
+                  "mean_sim_same_slot": 1.0,
+                  "mean_sim_diff_slot": 0.5023165588950314,
+                  "effect": 0.49768344110496865,
+                  "null_mean": -2.530173038563363e-05,
+                  "null_sd": 0.012826542940069859,
+                  "z": 38.803030961719415,
+                  "p_two_sided": 9.999000099990002e-05,
+                  "p_one_sided": 9.999000099990002e-05,
+                  "nperm": 10000,
+                  "seed": 408
+                },
+                "GreekMilesian": {
+                  "n_items": 147,
+                  "n_signs": 5,
+                  "n_same_pairs": 289,
+                  "n_cross_pairs": 8642,
+                  "mean_sim_same_slot": 1.0,
+                  "mean_sim_diff_slot": 0.16227303563590206,
+                  "effect": 0.8377269643640979,
+                  "null_mean": -8.767516274341128e-05,
+                  "null_sd": 0.017044524203669743,
+                  "z": 49.15447503934765,
+                  "p_two_sided": 9.999000099990002e-05,
+                  "p_one_sided": 9.999000099990002e-05,
+                  "nperm": 10000,
+                  "seed": 408
+                },
+                "LatinOrdinalAbbrev": {
+                  "n_items": 147,
+                  "n_signs": 5,
+                  "n_same_pairs": 289,
+                  "n_cross_pairs": 8642,
+                  "mean_sim_same_slot": 1.0,
+                  "mean_sim_diff_slot": 0.6358804716041674,
+                  "effect": 0.3641195283958326,
+                  "null_mean": -2.6035365416514546e-05,
+                  "null_sd": 0.0093854131960433,
+                  "z": 38.79909772270501,
+                  "p_two_sided": 9.999000099990002e-05,
+                  "p_one_sided": 9.999000099990002e-05,
+                  "nperm": 10000,
+                  "seed": 408
+                }
+              },
+              "degraded30": {
+                "English": {
+                  "n_items": 147,
+                  "n_signs": 5,
+                  "n_same_pairs": 289,
+                  "n_cross_pairs": 8642,
+                  "mean_sim_same_slot": 0.6187316518375579,
+                  "mean_sim_diff_slot": 0.27248771630978375,
+                  "effect": 0.3462439355277741,
+                  "null_mean": -1.3690388178666024e-05,
+                  "null_sd": 0.010069584073675144,
+                  "z": 34.386487404298265,
+                  "p_two_sided": 9.999000099990002e-05,
+                  "p_one_sided": 9.999000099990002e-05,
+                  "nperm": 10000,
+                  "seed": 408
+                },
+                "Latin": {
+                  "n_items": 147,
+                  "n_signs": 5,
+                  "n_same_pairs": 289,
+                  "n_cross_pairs": 8642,
+                  "mean_sim_same_slot": 0.6178688652408266,
+                  "mean_sim_diff_slot": 0.2736972088464235,
+                  "effect": 0.3441716563944031,
+                  "null_mean": 6.783644404543225e-05,
+                  "null_sd": 0.010939380241343446,
+                  "z": 31.45551323372766,
+                  "p_two_sided": 9.999000099990002e-05,
+                  "p_one_sided": 9.999000099990002e-05,
+                  "nperm": 10000,
+                  "seed": 408
+                },
+                "Italian": {
+                  "n_items": 147,
+                  "n_signs": 5,
+                  "n_same_pairs": 289,
+                  "n_cross_pairs": 8642,
+                  "mean_sim_same_slot": 0.6254929645488417,
+                  "mean_sim_diff_slot": 0.283885036521996,
+                  "effect": 0.34160792802684575,
+                  "null_mean": 1.868606367919577e-05,
+                  "null_sd": 0.01063284681167782,
+                  "z": 32.12585002052382,
+                  "p_two_sided": 9.999000099990002e-05,
+                  "p_one_sided": 9.999000099990002e-05,
+                  "nperm": 10000,
+                  "seed": 408
+                },
+                "German": {
+                  "n_items": 147,
+                  "n_signs": 5,
+                  "n_same_pairs": 289,
+                  "n_cross_pairs": 8642,
+                  "mean_sim_same_slot": 0.614004596260271,
+                  "mean_sim_diff_slot": 0.2748766087074443,
+                  "effect": 0.33912798755282675,
+                  "null_mean": 4.2428335471387676e-05,
+                  "null_sd": 0.010740817660319696,
+                  "z": 31.569808737192787,
+                  "p_two_sided": 9.999000099990002e-05,
+                  "p_one_sided": 9.999000099990002e-05,
+                  "nperm": 10000,
+                  "seed": 408
+                },
+                "French": {
+                  "n_items": 147,
+                  "n_signs": 5,
+                  "n_same_pairs": 289,
+                  "n_cross_pairs": 8642,
+                  "mean_sim_same_slot": 0.6181325481337689,
+                  "mean_sim_diff_slot": 0.2380504026938733,
+                  "effect": 0.38008214543989566,
+                  "null_mean": 4.528455730728298e-05,
+                  "null_sd": 0.01080157262535415,
+                  "z": 35.18347504237867,
+                  "p_two_sided": 9.999000099990002e-05,
+                  "p_one_sided": 9.999000099990002e-05,
+                  "nperm": 10000,
+                  "seed": 408
+                },
+                "Roman": {
+                  "n_items": 147,
+                  "n_signs": 5,
+                  "n_same_pairs": 289,
+                  "n_cross_pairs": 8642,
+                  "mean_sim_same_slot": 0.5800696964764793,
+                  "mean_sim_diff_slot": 0.3116964217780416,
+                  "effect": 0.26837327469843775,
+                  "null_mean": 5.404601188328342e-05,
+                  "null_sd": 0.012189465222354742,
+                  "z": 22.012387237011286,
+                  "p_two_sided": 9.999000099990002e-05,
+                  "p_one_sided": 9.999000099990002e-05,
+                  "nperm": 10000,
+                  "seed": 408
+                },
+                "GreekMilesian": {
+                  "n_items": 147,
+                  "n_signs": 5,
+                  "n_same_pairs": 289,
+                  "n_cross_pairs": 8642,
+                  "mean_sim_same_slot": 0.5781144248896177,
+                  "mean_sim_diff_slot": 0.14567175604175853,
+                  "effect": 0.4324426688478592,
+                  "null_mean": -4.257773998888521e-05,
+                  "null_sd": 0.013130144197570933,
+                  "z": 32.938347064600976,
+                  "p_two_sided": 9.999000099990002e-05,
+                  "p_one_sided": 9.999000099990002e-05,
+                  "nperm": 10000,
+                  "seed": 408
+                },
+                "LatinOrdinalAbbrev": {
+                  "n_items": 147,
+                  "n_signs": 5,
+                  "n_same_pairs": 289,
+                  "n_cross_pairs": 8642,
+                  "mean_sim_same_slot": 0.590606886523991,
+                  "mean_sim_diff_slot": 0.3900931803618212,
+                  "effect": 0.20051370616216974,
+                  "null_mean": 1.8006414965726687e-05,
+                  "null_sd": 0.011029818653514475,
+                  "z": 18.177606182429777,
+                  "p_two_sided": 9.999000099990002e-05,
+                  "p_one_sided": 9.999000099990002e-05,
+                  "nperm": 10000,
+                  "seed": 408
+                }
+              }
+            },
+            "numeral_summary": {
+              "clean": {
+                "median_effect": 0.6664109501617375,
+                "max_effect": 0.8377269643640979,
+                "min_effect": 0.3641195283958326,
+                "n_series": 8,
+                "frac_p_lt_0.01": 1.0
+              },
+              "degraded30": {
+                "median_effect": 0.34288979221062443,
+                "max_effect": 0.4324426688478592,
+                "min_effect": 0.20051370616216974,
+                "n_series": 8,
+                "frac_p_lt_0.01": 1.0
+              }
+            },
+            "gate": {
+              "test_p_two_sided": 0.6422357764223577,
+              "test_effect": -0.004980696162961207,
+              "clean_control_median_effect": 0.6664109501617375,
+              "effect_ratio_to_control": -0.007473911048058853,
+              "passes_p": false,
+              "passes_effect": false,
+              "passes": false,
+              "measured_power_frac_controls_p_lt_0.01": 1.0
+            }
+          },
+          "char": {
+            "FIT": {
+              "n_items": 147,
+              "n_signs": 5,
+              "n_same_pairs": 291,
+              "n_cross_pairs": 8643,
+              "mean_sim_same_slot": 0.3982693465967432,
+              "mean_sim_diff_slot": 0.4039706389116799,
+              "effect": -0.005701292314936712,
+              "null_mean": -6.628152138470968e-05,
+              "null_sd": 0.0075503741378982235,
+              "z": -0.7463220617462812,
+              "p_two_sided": 0.45325467453254675,
+              "p_one_sided": 0.7673232676732327,
+              "nperm": 10000,
+              "seed": 408
+            },
+            "TEST": {
+              "n_items": 147,
+              "n_signs": 5,
+              "n_same_pairs": 289,
+              "n_cross_pairs": 8642,
+              "mean_sim_same_slot": 0.38564430175971004,
+              "mean_sim_diff_slot": 0.3848965522553853,
+              "effect": 0.0007477495043247129,
+              "null_mean": 3.286034445963684e-05,
+              "null_sd": 0.009755290368181154,
+              "z": 0.07328220205488001,
+              "p_two_sided": 0.9387061293870613,
+              "p_one_sided": 0.46355364463553644,
+              "nperm": 10000,
+              "seed": 408
+            },
+            "numeral_controls": {
+              "clean": {
+                "English": {
+                  "n_items": 147,
+                  "n_signs": 5,
+                  "n_same_pairs": 289,
+                  "n_cross_pairs": 8642,
+                  "mean_sim_same_slot": 1.0,
+                  "mean_sim_diff_slot": 0.37739194630705625,
+                  "effect": 0.6226080536929437,
+                  "null_mean": -9.872017162924616e-05,
+                  "null_sd": 0.011391633124490918,
+                  "z": 54.66352076646615,
+                  "p_two_sided": 9.999000099990002e-05,
+                  "p_one_sided": 9.999000099990002e-05,
+                  "nperm": 10000,
+                  "seed": 408
+                },
+                "Latin": {
+                  "n_items": 147,
+                  "n_signs": 5,
+                  "n_same_pairs": 289,
+                  "n_cross_pairs": 8642,
+                  "mean_sim_same_slot": 1.0,
+                  "mean_sim_diff_slot": 0.3409804634842169,
+                  "effect": 0.6590195365157832,
+                  "null_mean": 2.3602877751876007e-05,
+                  "null_sd": 0.013600452197695475,
+                  "z": 48.45397226937018,
+                  "p_two_sided": 9.999000099990002e-05,
+                  "p_one_sided": 9.999000099990002e-05,
+                  "nperm": 10000,
+                  "seed": 408
+                },
+                "Italian": {
+                  "n_items": 147,
+                  "n_signs": 5,
+                  "n_same_pairs": 289,
+                  "n_cross_pairs": 8642,
+                  "mean_sim_same_slot": 1.0,
+                  "mean_sim_diff_slot": 0.34821873859167957,
+                  "effect": 0.6517812614083205,
+                  "null_mean": -5.0848922986624465e-05,
+                  "null_sd": 0.012774392037460537,
+                  "z": 51.026468298438644,
+                  "p_two_sided": 9.999000099990002e-05,
+                  "p_one_sided": 9.999000099990002e-05,
+                  "nperm": 10000,
+                  "seed": 408
+                },
+                "German": {
+                  "n_items": 147,
+                  "n_signs": 5,
+                  "n_same_pairs": 289,
+                  "n_cross_pairs": 8642,
+                  "mean_sim_same_slot": 1.0,
+                  "mean_sim_diff_slot": 0.35244291769809044,
+                  "effect": 0.6475570823019096,
+                  "null_mean": -9.923876502597082e-05,
+                  "null_sd": 0.012874575080654578,
+                  "z": 50.30506381838638,
+                  "p_two_sided": 9.999000099990002e-05,
+                  "p_one_sided": 9.999000099990002e-05,
+                  "nperm": 10000,
+                  "seed": 408
+                },
+                "French": {
+                  "n_items": 147,
+                  "n_signs": 5,
+                  "n_same_pairs": 289,
+                  "n_cross_pairs": 8642,
+                  "mean_sim_same_slot": 1.0,
+                  "mean_sim_diff_slot": 0.3157139695542124,
+                  "effect": 0.6842860304457876,
+                  "null_mean": -1.1526429059214226e-05,
+                  "null_sd": 0.012748584352636405,
+                  "z": 53.67635636605677,
+                  "p_two_sided": 9.999000099990002e-05,
+                  "p_one_sided": 9.999000099990002e-05,
+                  "nperm": 10000,
+                  "seed": 408
+                },
+                "Roman": {
+                  "n_items": 147,
+                  "n_signs": 5,
+                  "n_same_pairs": 289,
+                  "n_cross_pairs": 8642,
+                  "mean_sim_same_slot": 1.0,
+                  "mean_sim_diff_slot": 0.5023165588950314,
+                  "effect": 0.49768344110496865,
+                  "null_mean": -2.530173038563363e-05,
+                  "null_sd": 0.012826542940069859,
+                  "z": 38.803030961719415,
+                  "p_two_sided": 9.999000099990002e-05,
+                  "p_one_sided": 9.999000099990002e-05,
+                  "nperm": 10000,
+                  "seed": 408
+                },
+                "GreekMilesian": {
+                  "n_items": 147,
+                  "n_signs": 5,
+                  "n_same_pairs": 289,
+                  "n_cross_pairs": 8642,
+                  "mean_sim_same_slot": 1.0,
+                  "mean_sim_diff_slot": 0.16227303563590206,
+                  "effect": 0.8377269643640979,
+                  "null_mean": -8.767516274341128e-05,
+                  "null_sd": 0.017044524203669743,
+                  "z": 49.15447503934765,
+                  "p_two_sided": 9.999000099990002e-05,
+                  "p_one_sided": 9.999000099990002e-05,
+                  "nperm": 10000,
+                  "seed": 408
+                },
+                "LatinOrdinalAbbrev": {
+                  "n_items": 147,
+                  "n_signs": 5,
+                  "n_same_pairs": 289,
+                  "n_cross_pairs": 8642,
+                  "mean_sim_same_slot": 1.0,
+                  "mean_sim_diff_slot": 0.6358804716041674,
+                  "effect": 0.3641195283958326,
+                  "null_mean": -2.6035365416514546e-05,
+                  "null_sd": 0.0093854131960433,
+                  "z": 38.79909772270501,
+                  "p_two_sided": 9.999000099990002e-05,
+                  "p_one_sided": 9.999000099990002e-05,
+                  "nperm": 10000,
+                  "seed": 408
+                }
+              },
+              "degraded30": {
+                "English": {
+                  "n_items": 147,
+                  "n_signs": 5,
+                  "n_same_pairs": 289,
+                  "n_cross_pairs": 8642,
+                  "mean_sim_same_slot": 0.6297772851072586,
+                  "mean_sim_diff_slot": 0.3040083405993124,
+                  "effect": 0.3257689445079462,
+                  "null_mean": 2.8008706163671e-05,
+                  "null_sd": 0.009652821957254514,
+                  "z": 33.74566911564904,
+                  "p_two_sided": 9.999000099990002e-05,
+                  "p_one_sided": 9.999000099990002e-05,
+                  "nperm": 10000,
+                  "seed": 408
+                },
+                "Latin": {
+                  "n_items": 147,
+                  "n_signs": 5,
+                  "n_same_pairs": 289,
+                  "n_cross_pairs": 8642,
+                  "mean_sim_same_slot": 0.6308834779620743,
+                  "mean_sim_diff_slot": 0.29370340095459724,
+                  "effect": 0.3371800770074771,
+                  "null_mean": 9.61727652939864e-05,
+                  "null_sd": 0.01083124623516446,
+                  "z": 31.121433021051143,
+                  "p_two_sided": 9.999000099990002e-05,
+                  "p_one_sided": 9.999000099990002e-05,
+                  "nperm": 10000,
+                  "seed": 408
+                },
+                "Italian": {
+                  "n_items": 147,
+                  "n_signs": 5,
+                  "n_same_pairs": 289,
+                  "n_cross_pairs": 8642,
+                  "mean_sim_same_slot": 0.6334169255023592,
+                  "mean_sim_diff_slot": 0.2997469105118677,
+                  "effect": 0.3336700149904915,
+                  "null_mean": 5.2839692655520776e-05,
+                  "null_sd": 0.010415099675915076,
+                  "z": 32.03206744812302,
+                  "p_two_sided": 9.999000099990002e-05,
+                  "p_one_sided": 9.999000099990002e-05,
+                  "nperm": 10000,
+                  "seed": 408
+                },
+                "German": {
+                  "n_items": 147,
+                  "n_signs": 5,
+                  "n_same_pairs": 289,
+                  "n_cross_pairs": 8642,
+                  "mean_sim_same_slot": 0.6246791740562352,
+                  "mean_sim_diff_slot": 0.2898707690762892,
+                  "effect": 0.33480840497994596,
+                  "null_mean": 4.985517388304211e-05,
+                  "null_sd": 0.010495697182540304,
+                  "z": 31.89483690163404,
+                  "p_two_sided": 9.999000099990002e-05,
+                  "p_one_sided": 9.999000099990002e-05,
+                  "nperm": 10000,
+                  "seed": 408
+                },
+                "French": {
+                  "n_items": 147,
+                  "n_signs": 5,
+                  "n_same_pairs": 289,
+                  "n_cross_pairs": 8642,
+                  "mean_sim_same_slot": 0.6326391699062912,
+                  "mean_sim_diff_slot": 0.2730106710451104,
+                  "effect": 0.3596284988611808,
+                  "null_mean": 3.8771492737659775e-05,
+                  "null_sd": 0.010291597936688868,
+                  "z": 34.94012587554839,
+                  "p_two_sided": 9.999000099990002e-05,
+                  "p_one_sided": 9.999000099990002e-05,
+                  "nperm": 10000,
+                  "seed": 408
+                },
+                "Roman": {
+                  "n_items": 147,
+                  "n_signs": 5,
+                  "n_same_pairs": 289,
+                  "n_cross_pairs": 8642,
+                  "mean_sim_same_slot": 0.5875689726962287,
+                  "mean_sim_diff_slot": 0.3187082623957274,
+                  "effect": 0.26886071030050124,
+                  "null_mean": 7.022943768234251e-05,
+                  "null_sd": 0.01214912951649327,
+                  "z": 22.124258408630634,
+                  "p_two_sided": 9.999000099990002e-05,
+                  "p_one_sided": 9.999000099990002e-05,
+                  "nperm": 10000,
+                  "seed": 408
+                },
+                "GreekMilesian": {
+                  "n_items": 147,
+                  "n_signs": 5,
+                  "n_same_pairs": 289,
+                  "n_cross_pairs": 8642,
+                  "mean_sim_same_slot": 0.580788441785838,
+                  "mean_sim_diff_slot": 0.1506209561953139,
+                  "effect": 0.4301674855905241,
+                  "null_mean": -3.569909028233499e-05,
+                  "null_sd": 0.013089884976239995,
+                  "z": 32.86531436003345,
+                  "p_two_sided": 9.999000099990002e-05,
+                  "p_one_sided": 9.999000099990002e-05,
+                  "nperm": 10000,
+                  "seed": 408
+                },
+                "LatinOrdinalAbbrev": {
+                  "n_items": 147,
+                  "n_signs": 5,
+                  "n_same_pairs": 289,
+                  "n_cross_pairs": 8642,
+                  "mean_sim_same_slot": 0.5972018767183471,
+                  "mean_sim_diff_slot": 0.3959436372956595,
+                  "effect": 0.2012582394226876,
+                  "null_mean": 2.319877807523898e-05,
+                  "null_sd": 0.011012424954478258,
+                  "z": 18.27345398279233,
+                  "p_two_sided": 9.999000099990002e-05,
+                  "p_one_sided": 9.999000099990002e-05,
+                  "nperm": 10000,
+                  "seed": 408
+                }
+              }
+            },
+            "numeral_summary": {
+              "clean": {
+                "median_effect": 0.6496691718551151,
+                "max_effect": 0.8377269643640979,
+                "min_effect": 0.3641195283958326,
+                "n_series": 8,
+                "frac_p_lt_0.01": 1.0
+              },
+              "degraded30": {
+                "median_effect": 0.3342392099852187,
+                "max_effect": 0.4301674855905241,
+                "min_effect": 0.2012582394226876,
+                "n_series": 8,
+                "frac_p_lt_0.01": 1.0
+              }
+            },
+            "gate": {
+              "test_p_two_sided": 0.9387061293870613,
+              "test_effect": 0.0007477495043247129,
+              "clean_control_median_effect": 0.6496691718551151,
+              "effect_ratio_to_control": 0.0011509696576636563,
+              "passes_p": false,
+              "passes_effect": false,
+              "passes": false,
+              "measured_power_frac_controls_p_lt_0.01": 1.0
+            }
+          }
+        }
+      },
+      "B": {
+        "description": "(ring rank outer-first, index within ring)",
+        "reps": {
+          "unit": {
+            "FIT": {
+              "n_items": 147,
+              "n_signs": 5,
+              "n_same_pairs": 205,
+              "n_cross_pairs": 8643,
+              "mean_sim_same_slot": 0.199151957559418,
+              "mean_sim_diff_slot": 0.20737494273851428,
+              "effect": -0.008222985179096282,
+              "null_mean": -0.0037514884823030142,
+              "null_sd": 0.012021197260703543,
+              "z": -0.371967666765629,
+              "p_two_sided": 0.5175482451754825,
+              "p_one_sided": 0.6425357464253575,
+              "nperm": 10000,
+              "seed": 408
+            },
+            "TEST": {
+              "n_items": 147,
+              "n_signs": 5,
+              "n_same_pairs": 207,
+              "n_cross_pairs": 8642,
+              "mean_sim_same_slot": 0.2002774466542581,
+              "mean_sim_diff_slot": 0.20732008885535347,
+              "effect": -0.007042642201095378,
+              "null_mean": 0.0008560285250694399,
+              "null_sd": 0.013116046529417938,
+              "z": -0.6022142959350529,
+              "p_two_sided": 0.5972402759724028,
+              "p_one_sided": 0.7174282571742826,
+              "nperm": 10000,
+              "seed": 408
+            },
+            "numeral_controls": {
+              "clean": {
+                "English": {
+                  "n_items": 147,
+                  "n_signs": 5,
+                  "n_same_pairs": 207,
+                  "n_cross_pairs": 8642,
+                  "mean_sim_same_slot": 1.0,
+                  "mean_sim_diff_slot": 0.32598488873173453,
+                  "effect": 0.6740151112682655,
+                  "null_mean": 0.0017358141686194713,
+                  "null_sd": 0.01605589724641429,
+                  "z": 41.87117585407965,
+                  "p_two_sided": 9.999000099990002e-05,
+                  "p_one_sided": 9.999000099990002e-05,
+                  "nperm": 10000,
+                  "seed": 408
+                },
+                "Latin": {
+                  "n_items": 147,
+                  "n_signs": 5,
+                  "n_same_pairs": 207,
+                  "n_cross_pairs": 8642,
+                  "mean_sim_same_slot": 1.0,
+                  "mean_sim_diff_slot": 0.31238180640128455,
+                  "effect": 0.6876181935987155,
+                  "null_mean": 0.00209856084968322,
+                  "null_sd": 0.016893084913155988,
+                  "z": 40.579896228140285,
+                  "p_two_sided": 9.999000099990002e-05,
+                  "p_one_sided": 9.999000099990002e-05,
+                  "nperm": 10000,
+                  "seed": 408
+                },
+                "Italian": {
+                  "n_items": 147,
+                  "n_signs": 5,
+                  "n_same_pairs": 207,
+                  "n_cross_pairs": 8642,
+                  "mean_sim_same_slot": 1.0,
+                  "mean_sim_diff_slot": 0.3326782791702888,
+                  "effect": 0.6673217208297112,
+                  "null_mean": 0.001463897813236782,
+                  "null_sd": 0.015819985799183815,
+                  "z": 42.08965996991144,
+                  "p_two_sided": 9.999000099990002e-05,
+                  "p_one_sided": 9.999000099990002e-05,
+                  "nperm": 10000,
+                  "seed": 408
+                },
+                "German": {
+                  "n_items": 147,
+                  "n_signs": 5,
+                  "n_same_pairs": 207,
+                  "n_cross_pairs": 8642,
+                  "mean_sim_same_slot": 1.0,
+                  "mean_sim_diff_slot": 0.33457916789524683,
+                  "effect": 0.6654208321047532,
+                  "null_mean": 0.0018311466726548052,
+                  "null_sd": 0.016450266426712244,
+                  "z": 40.33914516755481,
+                  "p_two_sided": 9.999000099990002e-05,
+                  "p_one_sided": 9.999000099990002e-05,
+                  "nperm": 10000,
+                  "seed": 408
+                },
+                "French": {
+                  "n_items": 147,
+                  "n_signs": 5,
+                  "n_same_pairs": 207,
+                  "n_cross_pairs": 8642,
+                  "mean_sim_same_slot": 1.0,
+                  "mean_sim_diff_slot": 0.27240159409808323,
+                  "effect": 0.7275984059019167,
+                  "null_mean": 0.0006597901060982055,
+                  "null_sd": 0.016728431613702226,
+                  "z": 43.45527617785665,
+                  "p_two_sided": 9.999000099990002e-05,
+                  "p_one_sided": 9.999000099990002e-05,
+                  "nperm": 10000,
+                  "seed": 408
+                },
+                "Roman": {
+                  "n_items": 147,
+                  "n_signs": 5,
+                  "n_same_pairs": 207,
+                  "n_cross_pairs": 8642,
+                  "mean_sim_same_slot": 1.0,
+                  "mean_sim_diff_slot": 0.4884479480211533,
+                  "effect": 0.5115520519788467,
+                  "null_mean": 0.0021513957247292713,
+                  "null_sd": 0.016963755534337266,
+                  "z": 30.02876663855546,
+                  "p_two_sided": 9.999000099990002e-05,
+                  "p_one_sided": 9.999000099990002e-05,
+                  "nperm": 10000,
+                  "seed": 408
+                },
+                "GreekMilesian": {
+                  "n_items": 147,
+                  "n_signs": 5,
+                  "n_same_pairs": 207,
+                  "n_cross_pairs": 8642,
+                  "mean_sim_same_slot": 1.0,
+                  "mean_sim_diff_slot": 0.1514838964631512,
+                  "effect": 0.8485161035368488,
+                  "null_mean": 0.0024341554809090217,
+                  "null_sd": 0.020217650498036303,
+                  "z": 41.84867812103676,
+                  "p_two_sided": 9.999000099990002e-05,
+                  "p_one_sided": 9.999000099990002e-05,
+                  "nperm": 10000,
+                  "seed": 408
+                },
+                "LatinOrdinalAbbrev": {
+                  "n_items": 147,
+                  "n_signs": 5,
+                  "n_same_pairs": 207,
+                  "n_cross_pairs": 8642,
+                  "mean_sim_same_slot": 1.0,
+                  "mean_sim_diff_slot": 0.6283808617122193,
+                  "effect": 0.3716191382877807,
+                  "null_mean": 0.0013140359640338446,
+                  "null_sd": 0.011953003273891021,
+                  "z": 30.980088755819665,
+                  "p_two_sided": 9.999000099990002e-05,
+                  "p_one_sided": 9.999000099990002e-05,
+                  "nperm": 10000,
+                  "seed": 408
+                }
+              },
+              "degraded30": {
+                "English": {
+                  "n_items": 147,
+                  "n_signs": 5,
+                  "n_same_pairs": 207,
+                  "n_cross_pairs": 8642,
+                  "mean_sim_same_slot": 0.6561021297601505,
+                  "mean_sim_diff_slot": 0.2755747734898335,
+                  "effect": 0.380527356270317,
+                  "null_mean": 0.0007093454775449635,
+                  "null_sd": 0.013146739674799068,
+                  "z": 28.890661881808125,
+                  "p_two_sided": 9.999000099990002e-05,
+                  "p_one_sided": 9.999000099990002e-05,
+                  "nperm": 10000,
+                  "seed": 408
+                },
+                "Latin": {
+                  "n_items": 147,
+                  "n_signs": 5,
+                  "n_same_pairs": 207,
+                  "n_cross_pairs": 8642,
+                  "mean_sim_same_slot": 0.6618985421356074,
+                  "mean_sim_diff_slot": 0.27080509463249225,
+                  "effect": 0.39109344750311514,
+                  "null_mean": 0.0006026382928997054,
+                  "null_sd": 0.01365461339115381,
+                  "z": 28.597719907851534,
+                  "p_two_sided": 9.999000099990002e-05,
+                  "p_one_sided": 9.999000099990002e-05,
+                  "nperm": 10000,
+                  "seed": 408
+                },
+                "Italian": {
+                  "n_items": 147,
+                  "n_signs": 5,
+                  "n_same_pairs": 207,
+                  "n_cross_pairs": 8642,
+                  "mean_sim_same_slot": 0.6662228537903286,
+                  "mean_sim_diff_slot": 0.2869658816058585,
+                  "effect": 0.37925697218447013,
+                  "null_mean": 0.0003386773741468629,
+                  "null_sd": 0.012935566904179737,
+                  "z": 29.292747478109156,
+                  "p_two_sided": 9.999000099990002e-05,
+                  "p_one_sided": 9.999000099990002e-05,
+                  "nperm": 10000,
+                  "seed": 408
+                },
+                "German": {
+                  "n_items": 147,
+                  "n_signs": 5,
+                  "n_same_pairs": 207,
+                  "n_cross_pairs": 8642,
+                  "mean_sim_same_slot": 0.6527226209139141,
+                  "mean_sim_diff_slot": 0.27658109167373013,
+                  "effect": 0.37614152924018396,
+                  "null_mean": 0.00020119584997336907,
+                  "null_sd": 0.013592242163255004,
+                  "z": 27.658448758845704,
+                  "p_two_sided": 9.999000099990002e-05,
+                  "p_one_sided": 9.999000099990002e-05,
+                  "nperm": 10000,
+                  "seed": 408
+                },
+                "French": {
+                  "n_items": 147,
+                  "n_signs": 5,
+                  "n_same_pairs": 207,
+                  "n_cross_pairs": 8642,
+                  "mean_sim_same_slot": 0.6573825355308421,
+                  "mean_sim_diff_slot": 0.23998404043949412,
+                  "effect": 0.417398495091348,
+                  "null_mean": 0.0003391911538707844,
+                  "null_sd": 0.013627997710823275,
+                  "z": 30.603124008910807,
+                  "p_two_sided": 9.999000099990002e-05,
+                  "p_one_sided": 9.999000099990002e-05,
+                  "nperm": 10000,
+                  "seed": 408
+                },
+                "Roman": {
+                  "n_items": 147,
+                  "n_signs": 5,
+                  "n_same_pairs": 207,
+                  "n_cross_pairs": 8642,
+                  "mean_sim_same_slot": 0.6197501812295776,
+                  "mean_sim_diff_slot": 0.2999987616326112,
+                  "effect": 0.3197514195969664,
+                  "null_mean": 0.0003517633121072069,
+                  "null_sd": 0.017143533836736766,
+                  "z": 18.63091118357522,
+                  "p_two_sided": 9.999000099990002e-05,
+                  "p_one_sided": 9.999000099990002e-05,
+                  "nperm": 10000,
+                  "seed": 408
+                },
+                "GreekMilesian": {
+                  "n_items": 147,
+                  "n_signs": 5,
+                  "n_same_pairs": 207,
+                  "n_cross_pairs": 8642,
+                  "mean_sim_same_slot": 0.6139748776281871,
+                  "mean_sim_diff_slot": 0.14067358620558623,
+                  "effect": 0.4733012914226009,
+                  "null_mean": 0.0015747918362061587,
+                  "null_sd": 0.015743440547037257,
+                  "z": 29.963367802419054,
+                  "p_two_sided": 9.999000099990002e-05,
+                  "p_one_sided": 9.999000099990002e-05,
+                  "nperm": 10000,
+                  "seed": 408
+                },
+                "LatinOrdinalAbbrev": {
+                  "n_items": 147,
+                  "n_signs": 5,
+                  "n_same_pairs": 207,
+                  "n_cross_pairs": 8642,
+                  "mean_sim_same_slot": 0.6320059411622346,
+                  "mean_sim_diff_slot": 0.38209672429868785,
+                  "effect": 0.24990921686354678,
+                  "null_mean": -8.045487979495225e-05,
+                  "null_sd": 0.016945935225852388,
+                  "z": 14.75219091844293,
+                  "p_two_sided": 9.999000099990002e-05,
+                  "p_one_sided": 9.999000099990002e-05,
+                  "nperm": 10000,
+                  "seed": 408
+                }
+              }
+            },
+            "numeral_summary": {
+              "clean": {
+                "median_effect": 0.6706684160489884,
+                "max_effect": 0.8485161035368488,
+                "min_effect": 0.3716191382877807,
+                "n_series": 8,
+                "frac_p_lt_0.01": 1.0
+              },
+              "degraded30": {
+                "median_effect": 0.3798921642273936,
+                "max_effect": 0.4733012914226009,
+                "min_effect": 0.24990921686354678,
+                "n_series": 8,
+                "frac_p_lt_0.01": 1.0
+              }
+            },
+            "gate": {
+              "test_p_two_sided": 0.5972402759724028,
+              "test_effect": -0.007042642201095378,
+              "clean_control_median_effect": 0.6706684160489884,
+              "effect_ratio_to_control": -0.010500930165438049,
+              "passes_p": false,
+              "passes_effect": false,
+              "passes": false,
+              "measured_power_frac_controls_p_lt_0.01": 1.0
+            }
+          },
+          "char": {
+            "FIT": {
+              "n_items": 147,
+              "n_signs": 5,
+              "n_same_pairs": 205,
+              "n_cross_pairs": 8643,
+              "mean_sim_same_slot": 0.40480666580110436,
+              "mean_sim_diff_slot": 0.4037537081726448,
+              "effect": 0.0010529576284595832,
+              "null_mean": -0.0025996280580913743,
+              "null_sd": 0.010159758483800747,
+              "z": 0.35951501134351094,
+              "p_two_sided": 0.9195080491950804,
+              "p_one_sided": 0.3528647135286471,
+              "nperm": 10000,
+              "seed": 408
+            },
+            "TEST": {
+              "n_items": 147,
+              "n_signs": 5,
+              "n_same_pairs": 207,
+              "n_cross_pairs": 8642,
+              "mean_sim_same_slot": 0.38473724343289584,
+              "mean_sim_diff_slot": 0.38492608118638777,
+              "effect": -0.00018883775349193277,
+              "null_mean": 0.0002524914299184551,
+              "null_sd": 0.012847056516516077,
+              "z": -0.03435255249659861,
+              "p_two_sided": 0.9878012198780122,
+              "p_one_sided": 0.5076492350764924,
+              "nperm": 10000,
+              "seed": 408
+            },
+            "numeral_controls": {
+              "clean": {
+                "English": {
+                  "n_items": 147,
+                  "n_signs": 5,
+                  "n_same_pairs": 207,
+                  "n_cross_pairs": 8642,
+                  "mean_sim_same_slot": 1.0,
+                  "mean_sim_diff_slot": 0.3644674621442319,
+                  "effect": 0.6355325378557681,
+                  "null_mean": 0.0021874518264981906,
+                  "null_sd": 0.01531701338442627,
+                  "z": 41.349124018735274,
+                  "p_two_sided": 9.999000099990002e-05,
+                  "p_one_sided": 9.999000099990002e-05,
+                  "nperm": 10000,
+                  "seed": 408
+                },
+                "Latin": {
+                  "n_items": 147,
+                  "n_signs": 5,
+                  "n_same_pairs": 207,
+                  "n_cross_pairs": 8642,
+                  "mean_sim_same_slot": 1.0,
+                  "mean_sim_diff_slot": 0.33182587801771446,
+                  "effect": 0.6681741219822855,
+                  "null_mean": 0.0019770886887350778,
+                  "null_sd": 0.016853390754428668,
+                  "z": 39.52896144169029,
+                  "p_two_sided": 9.999000099990002e-05,
+                  "p_one_sided": 9.999000099990002e-05,
+                  "nperm": 10000,
+                  "seed": 408
+                },
+                "Italian": {
+                  "n_items": 147,
+                  "n_signs": 5,
+                  "n_same_pairs": 207,
+                  "n_cross_pairs": 8642,
+                  "mean_sim_same_slot": 1.0,
+                  "mean_sim_diff_slot": 0.3445276907868336,
+                  "effect": 0.6554723092131665,
+                  "null_mean": 0.0015851984289299288,
+                  "null_sd": 0.015577266280048034,
+                  "z": 41.97701310542277,
+                  "p_two_sided": 9.999000099990002e-05,
+                  "p_one_sided": 9.999000099990002e-05,
+                  "nperm": 10000,
+                  "seed": 408
+                },
+                "German": {
+                  "n_items": 147,
+                  "n_signs": 5,
+                  "n_same_pairs": 207,
+                  "n_cross_pairs": 8642,
+                  "mean_sim_same_slot": 1.0,
+                  "mean_sim_diff_slot": 0.34767911000302765,
+                  "effect": 0.6523208899969724,
+                  "null_mean": 0.0015797619846580555,
+                  "null_sd": 0.016041221218333564,
+                  "z": 40.56680717479166,
+                  "p_two_sided": 9.999000099990002e-05,
+                  "p_one_sided": 9.999000099990002e-05,
+                  "nperm": 10000,
+                  "seed": 408
+                },
+                "French": {
+                  "n_items": 147,
+                  "n_signs": 5,
+                  "n_same_pairs": 207,
+                  "n_cross_pairs": 8642,
+                  "mean_sim_same_slot": 1.0,
+                  "mean_sim_diff_slot": 0.3145726460841682,
+                  "effect": 0.6854273539158318,
+                  "null_mean": 0.001008299276271396,
+                  "null_sd": 0.01568130609678499,
+                  "z": 43.64553886106982,
+                  "p_two_sided": 9.999000099990002e-05,
+                  "p_one_sided": 9.999000099990002e-05,
+                  "nperm": 10000,
+                  "seed": 408
+                },
+                "Roman": {
+                  "n_items": 147,
+                  "n_signs": 5,
+                  "n_same_pairs": 207,
+                  "n_cross_pairs": 8642,
+                  "mean_sim_same_slot": 1.0,
+                  "mean_sim_diff_slot": 0.4884479480211533,
+                  "effect": 0.5115520519788467,
+                  "null_mean": 0.0021513957247292713,
+                  "null_sd": 0.016963755534337266,
+                  "z": 30.02876663855546,
+                  "p_two_sided": 9.999000099990002e-05,
+                  "p_one_sided": 9.999000099990002e-05,
+                  "nperm": 10000,
+                  "seed": 408
+                },
+                "GreekMilesian": {
+                  "n_items": 147,
+                  "n_signs": 5,
+                  "n_same_pairs": 207,
+                  "n_cross_pairs": 8642,
+                  "mean_sim_same_slot": 1.0,
+                  "mean_sim_diff_slot": 0.1514838964631512,
+                  "effect": 0.8485161035368488,
+                  "null_mean": 0.0024341554809090217,
+                  "null_sd": 0.020217650498036303,
+                  "z": 41.84867812103676,
+                  "p_two_sided": 9.999000099990002e-05,
+                  "p_one_sided": 9.999000099990002e-05,
+                  "nperm": 10000,
+                  "seed": 408
+                },
+                "LatinOrdinalAbbrev": {
+                  "n_items": 147,
+                  "n_signs": 5,
+                  "n_same_pairs": 207,
+                  "n_cross_pairs": 8642,
+                  "mean_sim_same_slot": 1.0,
+                  "mean_sim_diff_slot": 0.6283808617122193,
+                  "effect": 0.3716191382877807,
+                  "null_mean": 0.0013140359640338446,
+                  "null_sd": 0.011953003273891021,
+                  "z": 30.980088755819665,
+                  "p_two_sided": 9.999000099990002e-05,
+                  "p_one_sided": 9.999000099990002e-05,
+                  "nperm": 10000,
+                  "seed": 408
+                }
+              },
+              "degraded30": {
+                "English": {
+                  "n_items": 147,
+                  "n_signs": 5,
+                  "n_same_pairs": 207,
+                  "n_cross_pairs": 8642,
+                  "mean_sim_same_slot": 0.6648480502786293,
+                  "mean_sim_diff_slot": 0.3031840734678919,
+                  "effect": 0.36166397681073736,
+                  "null_mean": 0.0008646853537730078,
+                  "null_sd": 0.012852807700300511,
+                  "z": 28.071632274442926,
+                  "p_two_sided": 9.999000099990002e-05,
+                  "p_one_sided": 9.999000099990002e-05,
+                  "nperm": 10000,
+                  "seed": 408
+                },
+                "Latin": {
+                  "n_items": 147,
+                  "n_signs": 5,
+                  "n_same_pairs": 207,
+                  "n_cross_pairs": 8642,
+                  "mean_sim_same_slot": 0.6709672150452604,
+                  "mean_sim_diff_slot": 0.2934491077035041,
+                  "effect": 0.3775181073417563,
+                  "null_mean": 0.0005890053785333009,
+                  "null_sd": 0.013499584602600359,
+                  "z": 27.92153337004288,
+                  "p_two_sided": 9.999000099990002e-05,
+                  "p_one_sided": 9.999000099990002e-05,
+                  "nperm": 10000,
+                  "seed": 408
+                },
+                "Italian": {
+                  "n_items": 147,
+                  "n_signs": 5,
+                  "n_same_pairs": 207,
+                  "n_cross_pairs": 8642,
+                  "mean_sim_same_slot": 0.6694379300614466,
+                  "mean_sim_diff_slot": 0.3019255122546807,
+                  "effect": 0.3675124178067659,
+                  "null_mean": 0.00023954066379518605,
+                  "null_sd": 0.012613896112998171,
+                  "z": 29.11652940953819,
+                  "p_two_sided": 9.999000099990002e-05,
+                  "p_one_sided": 9.999000099990002e-05,
+                  "nperm": 10000,
+                  "seed": 408
+                },
+                "German": {
+                  "n_items": 147,
+                  "n_signs": 5,
+                  "n_same_pairs": 207,
+                  "n_cross_pairs": 8642,
+                  "mean_sim_same_slot": 0.6628509153173469,
+                  "mean_sim_diff_slot": 0.29182175946336836,
+                  "effect": 0.3710291558539785,
+                  "null_mean": -4.3538465315200923e-05,
+                  "null_sd": 0.013158549764711808,
+                  "z": 28.20012090651699,
+                  "p_two_sided": 9.999000099990002e-05,
+                  "p_one_sided": 9.999000099990002e-05,
+                  "nperm": 10000,
+                  "seed": 408
+                },
+                "French": {
+                  "n_items": 147,
+                  "n_signs": 5,
+                  "n_same_pairs": 207,
+                  "n_cross_pairs": 8642,
+                  "mean_sim_same_slot": 0.6647968419916779,
+                  "mean_sim_diff_slot": 0.279802159792573,
+                  "effect": 0.3849946821991049,
+                  "null_mean": 9.967931265737924e-05,
+                  "null_sd": 0.012903475729025764,
+                  "z": 29.82878496997861,
+                  "p_two_sided": 9.999000099990002e-05,
+                  "p_one_sided": 9.999000099990002e-05,
+                  "nperm": 10000,
+                  "seed": 408
+                },
+                "Roman": {
+                  "n_items": 147,
+                  "n_signs": 5,
+                  "n_same_pairs": 207,
+                  "n_cross_pairs": 8642,
+                  "mean_sim_same_slot": 0.6319329045219164,
+                  "mean_sim_diff_slot": 0.30681402300498783,
+                  "effect": 0.3251188815169286,
+                  "null_mean": 0.0002906056286637547,
+                  "null_sd": 0.016927497715997754,
+                  "z": 19.189385303019584,
+                  "p_two_sided": 9.999000099990002e-05,
+                  "p_one_sided": 9.999000099990002e-05,
+                  "nperm": 10000,
+                  "seed": 408
+                },
+                "GreekMilesian": {
+                  "n_items": 147,
+                  "n_signs": 5,
+                  "n_same_pairs": 207,
+                  "n_cross_pairs": 8642,
+                  "mean_sim_same_slot": 0.6167007132027686,
+                  "mean_sim_diff_slot": 0.14534075594714907,
+                  "effect": 0.4713599572556196,
+                  "null_mean": 0.0013947912088767577,
+                  "null_sd": 0.01568434356892841,
+                  "z": 29.963967824434228,
+                  "p_two_sided": 9.999000099990002e-05,
+                  "p_one_sided": 9.999000099990002e-05,
+                  "nperm": 10000,
+                  "seed": 408
+                },
+                "LatinOrdinalAbbrev": {
+                  "n_items": 147,
+                  "n_signs": 5,
+                  "n_same_pairs": 207,
+                  "n_cross_pairs": 8642,
+                  "mean_sim_same_slot": 0.6426471034927227,
+                  "mean_sim_diff_slot": 0.3877501512333968,
+                  "effect": 0.2548969522593259,
+                  "null_mean": -8.88578217923836e-05,
+                  "null_sd": 0.01667187524912181,
+                  "z": 15.294368885980578,
+                  "p_two_sided": 9.999000099990002e-05,
+                  "p_one_sided": 9.999000099990002e-05,
+                  "nperm": 10000,
+                  "seed": 408
+                }
+              }
+            },
+            "numeral_summary": {
+              "clean": {
+                "median_effect": 0.6538965996050694,
+                "max_effect": 0.8485161035368488,
+                "min_effect": 0.3716191382877807,
+                "n_series": 8,
+                "frac_p_lt_0.01": 1.0
+              },
+              "degraded30": {
+                "median_effect": 0.3692707868303722,
+                "max_effect": 0.4713599572556196,
+                "min_effect": 0.2548969522593259,
+                "n_series": 8,
+                "frac_p_lt_0.01": 1.0
+              }
+            },
+            "gate": {
+              "test_p_two_sided": 0.9878012198780122,
+              "test_effect": -0.00018883775349193277,
+              "clean_control_median_effect": 0.6538965996050694,
+              "effect_ratio_to_control": -0.0002887884011110994,
+              "passes_p": false,
+              "passes_effect": false,
+              "passes": false,
+              "measured_power_frac_controls_p_lt_0.01": 1.0
+            }
+          }
+        }
+      },
+      "C": {
+        "description": "clock position rounded to nearest 30 minutes",
+        "reps": {
+          "unit": {
+            "FIT": {
+              "n_items": 146,
+              "n_signs": 5,
+              "n_same_pairs": 400,
+              "n_cross_pairs": 8525,
+              "mean_sim_same_slot": 0.19854869476928327,
+              "mean_sim_diff_slot": 0.2066237979447962,
+              "effect": -0.008075103175512938,
+              "null_mean": -7.920539150430742e-05,
+              "null_sd": 0.009359238100419208,
+              "z": -0.8543321259932993,
+              "p_two_sided": 0.38676132386761325,
+              "p_one_sided": 0.8001199880011999,
+              "nperm": 10000,
+              "seed": 408
+            },
+            "TEST": {
+              "n_items": 147,
+              "n_signs": 5,
+              "n_same_pairs": 379,
+              "n_cross_pairs": 8642,
+              "mean_sim_same_slot": 0.2224561864403555,
+              "mean_sim_diff_slot": 0.20644941138708012,
+              "effect": 0.016006775053275385,
+              "null_mean": -0.0009184233931370244,
+              "null_sd": 0.009902599568462116,
+              "z": 1.7091672069944066,
+              "p_two_sided": 0.10948905109489052,
+              "p_one_sided": 0.048095190480951906,
+              "nperm": 10000,
+              "seed": 408
+            },
+            "numeral_controls": {
+              "clean": {
+                "English": {
+                  "n_items": 147,
+                  "n_signs": 5,
+                  "n_same_pairs": 379,
+                  "n_cross_pairs": 8642,
+                  "mean_sim_same_slot": 1.0,
+                  "mean_sim_diff_slot": 0.30874117984919863,
+                  "effect": 0.6912588201508014,
+                  "null_mean": -0.00021449092519778423,
+                  "null_sd": 0.012124234921259405,
+                  "z": 57.03232538521057,
+                  "p_two_sided": 9.999000099990002e-05,
+                  "p_one_sided": 9.999000099990002e-05,
+                  "nperm": 10000,
+                  "seed": 408
+                },
+                "Latin": {
+                  "n_items": 147,
+                  "n_signs": 5,
+                  "n_same_pairs": 379,
+                  "n_cross_pairs": 8642,
+                  "mean_sim_same_slot": 1.0,
+                  "mean_sim_diff_slot": 0.30029930660468895,
+                  "effect": 0.699700693395311,
+                  "null_mean": -0.0003439469033914329,
+                  "null_sd": 0.012777862996300347,
+                  "z": 54.78573690306358,
+                  "p_two_sided": 9.999000099990002e-05,
+                  "p_one_sided": 9.999000099990002e-05,
+                  "nperm": 10000,
+                  "seed": 408
+                },
+                "Italian": {
+                  "n_items": 147,
+                  "n_signs": 5,
+                  "n_same_pairs": 379,
+                  "n_cross_pairs": 8642,
+                  "mean_sim_same_slot": 1.0,
+                  "mean_sim_diff_slot": 0.30986514337930543,
+                  "effect": 0.6901348566206946,
+                  "null_mean": -9.715189983895482e-05,
+                  "null_sd": 0.012191366254100418,
+                  "z": 56.61646070951091,
+                  "p_two_sided": 9.999000099990002e-05,
+                  "p_one_sided": 9.999000099990002e-05,
+                  "nperm": 10000,
+                  "seed": 408
+                },
+                "German": {
+                  "n_items": 147,
+                  "n_signs": 5,
+                  "n_same_pairs": 379,
+                  "n_cross_pairs": 8642,
+                  "mean_sim_same_slot": 1.0,
+                  "mean_sim_diff_slot": 0.32487586292879495,
+                  "effect": 0.6751241370712051,
+                  "null_mean": -5.640369543520285e-05,
+                  "null_sd": 0.011915991170365247,
+                  "z": 56.66171878725426,
+                  "p_two_sided": 9.999000099990002e-05,
+                  "p_one_sided": 9.999000099990002e-05,
+                  "nperm": 10000,
+                  "seed": 408
+                },
+                "French": {
+                  "n_items": 147,
+                  "n_signs": 5,
+                  "n_same_pairs": 379,
+                  "n_cross_pairs": 8642,
+                  "mean_sim_same_slot": 1.0,
+                  "mean_sim_diff_slot": 0.2364757636255687,
+                  "effect": 0.7635242363744312,
+                  "null_mean": -0.0002561357436362972,
+                  "null_sd": 0.01259810107645059,
+                  "z": 60.626626781538434,
+                  "p_two_sided": 9.999000099990002e-05,
+                  "p_one_sided": 9.999000099990002e-05,
+                  "nperm": 10000,
+                  "seed": 408
+                },
+                "Roman": {
+                  "n_items": 147,
+                  "n_signs": 5,
+                  "n_same_pairs": 379,
+                  "n_cross_pairs": 8642,
+                  "mean_sim_same_slot": 1.0,
+                  "mean_sim_diff_slot": 0.4700343278220551,
+                  "effect": 0.5299656721779449,
+                  "null_mean": -4.3151618175384045e-05,
+                  "null_sd": 0.013467743997302415,
+                  "z": 39.353942568427264,
+                  "p_two_sided": 9.999000099990002e-05,
+                  "p_one_sided": 9.999000099990002e-05,
+                  "nperm": 10000,
+                  "seed": 408
+                },
+                "GreekMilesian": {
+                  "n_items": 147,
+                  "n_signs": 5,
+                  "n_same_pairs": 379,
+                  "n_cross_pairs": 8642,
+                  "mean_sim_same_slot": 1.0,
+                  "mean_sim_diff_slot": 0.1378595344709367,
+                  "effect": 0.8621404655290633,
+                  "null_mean": -0.00031828989814082373,
+                  "null_sd": 0.015447763031142075,
+                  "z": 55.83065675518984,
+                  "p_two_sided": 9.999000099990002e-05,
+                  "p_one_sided": 9.999000099990002e-05,
+                  "nperm": 10000,
+                  "seed": 408
+                },
+                "LatinOrdinalAbbrev": {
+                  "n_items": 147,
+                  "n_signs": 5,
+                  "n_same_pairs": 379,
+                  "n_cross_pairs": 8642,
+                  "mean_sim_same_slot": 1.0,
+                  "mean_sim_diff_slot": 0.6211703662024378,
+                  "effect": 0.3788296337975622,
+                  "null_mean": -1.6391621660247547e-05,
+                  "null_sd": 0.009161386694954714,
+                  "z": 41.35247621714925,
+                  "p_two_sided": 9.999000099990002e-05,
+                  "p_one_sided": 9.999000099990002e-05,
+                  "nperm": 10000,
+                  "seed": 408
+                }
+              },
+              "degraded30": {
+                "English": {
+                  "n_items": 147,
+                  "n_signs": 5,
+                  "n_same_pairs": 379,
+                  "n_cross_pairs": 8642,
+                  "mean_sim_same_slot": 0.5591993441828349,
+                  "mean_sim_diff_slot": 0.2619808081205829,
+                  "effect": 0.297218536062252,
+                  "null_mean": -0.00019390419768818056,
+                  "null_sd": 0.010047563156044291,
+                  "z": 29.600454920358118,
+                  "p_two_sided": 9.999000099990002e-05,
+                  "p_one_sided": 9.999000099990002e-05,
+                  "nperm": 10000,
+                  "seed": 408
+                },
+                "Latin": {
+                  "n_items": 147,
+                  "n_signs": 5,
+                  "n_same_pairs": 379,
+                  "n_cross_pairs": 8642,
+                  "mean_sim_same_slot": 0.5728471621331334,
+                  "mean_sim_diff_slot": 0.2672661160204927,
+                  "effect": 0.30558104611264064,
+                  "null_mean": -0.00020482573774016765,
+                  "null_sd": 0.010470863735477752,
+                  "z": 29.203500262763068,
+                  "p_two_sided": 9.999000099990002e-05,
+                  "p_one_sided": 9.999000099990002e-05,
+                  "nperm": 10000,
+                  "seed": 408
+                },
+                "Italian": {
+                  "n_items": 147,
+                  "n_signs": 5,
+                  "n_same_pairs": 379,
+                  "n_cross_pairs": 8642,
+                  "mean_sim_same_slot": 0.5708984299553748,
+                  "mean_sim_diff_slot": 0.2733429012140563,
+                  "effect": 0.29755552874131846,
+                  "null_mean": -0.00020945574251516957,
+                  "null_sd": 0.01019666964182503,
+                  "z": 29.202180216023823,
+                  "p_two_sided": 9.999000099990002e-05,
+                  "p_one_sided": 9.999000099990002e-05,
+                  "nperm": 10000,
+                  "seed": 408
+                },
+                "German": {
+                  "n_items": 147,
+                  "n_signs": 5,
+                  "n_same_pairs": 379,
+                  "n_cross_pairs": 8642,
+                  "mean_sim_same_slot": 0.5786646814195128,
+                  "mean_sim_diff_slot": 0.26785986042749044,
+                  "effect": 0.31080482099202233,
+                  "null_mean": -0.0002158886958165807,
+                  "null_sd": 0.010270871452167539,
+                  "z": 30.281822836191946,
+                  "p_two_sided": 9.999000099990002e-05,
+                  "p_one_sided": 9.999000099990002e-05,
+                  "nperm": 10000,
+                  "seed": 408
+                },
+                "French": {
+                  "n_items": 147,
+                  "n_signs": 5,
+                  "n_same_pairs": 379,
+                  "n_cross_pairs": 8642,
+                  "mean_sim_same_slot": 0.5641532687908928,
+                  "mean_sim_diff_slot": 0.22484031336349522,
+                  "effect": 0.3393129554273976,
+                  "null_mean": -1.7276825944463277e-05,
+                  "null_sd": 0.01011280386966246,
+                  "z": 33.55451530819297,
+                  "p_two_sided": 9.999000099990002e-05,
+                  "p_one_sided": 9.999000099990002e-05,
+                  "nperm": 10000,
+                  "seed": 408
+                },
+                "Roman": {
+                  "n_items": 147,
+                  "n_signs": 5,
+                  "n_same_pairs": 379,
+                  "n_cross_pairs": 8642,
+                  "mean_sim_same_slot": 0.5288434071168405,
+                  "mean_sim_diff_slot": 0.29800351406068065,
+                  "effect": 0.23083989305615987,
+                  "null_mean": -0.0001908567493799119,
+                  "null_sd": 0.013671396972351462,
+                  "z": 16.898839984879967,
+                  "p_two_sided": 9.999000099990002e-05,
+                  "p_one_sided": 9.999000099990002e-05,
+                  "nperm": 10000,
+                  "seed": 408
+                },
+                "GreekMilesian": {
+                  "n_items": 147,
+                  "n_signs": 5,
+                  "n_same_pairs": 379,
+                  "n_cross_pairs": 8642,
+                  "mean_sim_same_slot": 0.5137698784588017,
+                  "mean_sim_diff_slot": 0.13713123228693294,
+                  "effect": 0.3766386461718688,
+                  "null_mean": -1.9217638465747542e-05,
+                  "null_sd": 0.012208414190736514,
+                  "z": 30.852316928773153,
+                  "p_two_sided": 9.999000099990002e-05,
+                  "p_one_sided": 9.999000099990002e-05,
+                  "nperm": 10000,
+                  "seed": 408
+                },
+                "LatinOrdinalAbbrev": {
+                  "n_items": 147,
+                  "n_signs": 5,
+                  "n_same_pairs": 379,
+                  "n_cross_pairs": 8642,
+                  "mean_sim_same_slot": 0.5410205896184073,
+                  "mean_sim_diff_slot": 0.3833408582663954,
+                  "effect": 0.15767973135201185,
+                  "null_mean": -0.0005637578472490876,
+                  "null_sd": 0.013804379196509776,
+                  "z": 11.463281828658427,
+                  "p_two_sided": 9.999000099990002e-05,
+                  "p_one_sided": 9.999000099990002e-05,
+                  "nperm": 10000,
+                  "seed": 408
+                }
+              }
+            },
+            "numeral_summary": {
+              "clean": {
+                "median_effect": 0.690696838385748,
+                "max_effect": 0.8621404655290633,
+                "min_effect": 0.3788296337975622,
+                "n_series": 8,
+                "frac_p_lt_0.01": 1.0
+              },
+              "degraded30": {
+                "median_effect": 0.30156828742697955,
+                "max_effect": 0.3766386461718688,
+                "min_effect": 0.15767973135201185,
+                "n_series": 8,
+                "frac_p_lt_0.01": 1.0
+              }
+            },
+            "gate": {
+              "test_p_two_sided": 0.10948905109489052,
+              "test_effect": 0.016006775053275385,
+              "clean_control_median_effect": 0.690696838385748,
+              "effect_ratio_to_control": 0.02317482021589296,
+              "passes_p": false,
+              "passes_effect": false,
+              "passes": false,
+              "measured_power_frac_controls_p_lt_0.01": 1.0
+            }
+          },
+          "char": {
+            "FIT": {
+              "n_items": 146,
+              "n_signs": 5,
+              "n_same_pairs": 400,
+              "n_cross_pairs": 8525,
+              "mean_sim_same_slot": 0.40017769595638286,
+              "mean_sim_diff_slot": 0.4031130728083189,
+              "effect": -0.0029353768519360113,
+              "null_mean": -0.0004903198096921195,
+              "null_sd": 0.00819277511974484,
+              "z": -0.29844063903953977,
+              "p_two_sided": 0.7268273172682732,
+              "p_one_sided": 0.6087391260873912,
+              "nperm": 10000,
+              "seed": 408
+            },
+            "TEST": {
+              "n_items": 147,
+              "n_signs": 5,
+              "n_same_pairs": 379,
+              "n_cross_pairs": 8642,
+              "mean_sim_same_slot": 0.40538303376655155,
+              "mean_sim_diff_slot": 0.38398304906211633,
+              "effect": 0.021399984704435215,
+              "null_mean": -0.0008621338987882825,
+              "null_sd": 0.010007246769627548,
+              "z": 2.2245997441364236,
+              "p_two_sided": 0.032396760323967606,
+              "p_one_sided": 0.0206979302069793,
+              "nperm": 10000,
+              "seed": 408
+            },
+            "numeral_controls": {
+              "clean": {
+                "English": {
+                  "n_items": 147,
+                  "n_signs": 5,
+                  "n_same_pairs": 379,
+                  "n_cross_pairs": 8642,
+                  "mean_sim_same_slot": 1.0,
+                  "mean_sim_diff_slot": 0.3701259314221605,
+                  "effect": 0.6298740685778395,
+                  "null_mean": -0.0002201448794583805,
+                  "null_sd": 0.011295151070006398,
+                  "z": 55.7844874806921,
+                  "p_two_sided": 9.999000099990002e-05,
+                  "p_one_sided": 9.999000099990002e-05,
+                  "nperm": 10000,
+                  "seed": 408
+                },
+                "Latin": {
+                  "n_items": 147,
+                  "n_signs": 5,
+                  "n_same_pairs": 379,
+                  "n_cross_pairs": 8642,
+                  "mean_sim_same_slot": 1.0,
+                  "mean_sim_diff_slot": 0.3169298372545323,
+                  "effect": 0.6830701627454677,
+                  "null_mean": -0.0003215025234782598,
+                  "null_sd": 0.012627520080171581,
+                  "z": 54.11923013625176,
+                  "p_two_sided": 9.999000099990002e-05,
+                  "p_one_sided": 9.999000099990002e-05,
+                  "nperm": 10000,
+                  "seed": 408
+                },
+                "Italian": {
+                  "n_items": 147,
+                  "n_signs": 5,
+                  "n_same_pairs": 379,
+                  "n_cross_pairs": 8642,
+                  "mean_sim_same_slot": 1.0,
+                  "mean_sim_diff_slot": 0.32414706826784717,
+                  "effect": 0.6758529317321529,
+                  "null_mean": -0.00011005270731033753,
+                  "null_sd": 0.01192955475390113,
+                  "z": 56.662884607526024,
+                  "p_two_sided": 9.999000099990002e-05,
+                  "p_one_sided": 9.999000099990002e-05,
+                  "nperm": 10000,
+                  "seed": 408
+                },
+                "German": {
+                  "n_items": 147,
+                  "n_signs": 5,
+                  "n_same_pairs": 379,
+                  "n_cross_pairs": 8642,
+                  "mean_sim_same_slot": 1.0,
+                  "mean_sim_diff_slot": 0.33874571406809667,
+                  "effect": 0.6612542859319033,
+                  "null_mean": -0.0001513339341512378,
+                  "null_sd": 0.011599453575394996,
+                  "z": 57.02041182948841,
+                  "p_two_sided": 9.999000099990002e-05,
+                  "p_one_sided": 9.999000099990002e-05,
+                  "nperm": 10000,
+                  "seed": 408
+                },
+                "French": {
+                  "n_items": 147,
+                  "n_signs": 5,
+                  "n_same_pairs": 379,
+                  "n_cross_pairs": 8642,
+                  "mean_sim_same_slot": 1.0,
+                  "mean_sim_diff_slot": 0.2868116866537841,
+                  "effect": 0.7131883133462159,
+                  "null_mean": -0.00021964349218830224,
+                  "null_sd": 0.011765775603185846,
+                  "z": 60.63416309293142,
+                  "p_two_sided": 9.999000099990002e-05,
+                  "p_one_sided": 9.999000099990002e-05,
+                  "nperm": 10000,
+                  "seed": 408
+                },
+                "Roman": {
+                  "n_items": 147,
+                  "n_signs": 5,
+                  "n_same_pairs": 379,
+                  "n_cross_pairs": 8642,
+                  "mean_sim_same_slot": 1.0,
+                  "mean_sim_diff_slot": 0.4700343278220551,
+                  "effect": 0.5299656721779449,
+                  "null_mean": -4.3151618175384045e-05,
+                  "null_sd": 0.013467743997302415,
+                  "z": 39.353942568427264,
+                  "p_two_sided": 9.999000099990002e-05,
+                  "p_one_sided": 9.999000099990002e-05,
+                  "nperm": 10000,
+                  "seed": 408
+                },
+                "GreekMilesian": {
+                  "n_items": 147,
+                  "n_signs": 5,
+                  "n_same_pairs": 379,
+                  "n_cross_pairs": 8642,
+                  "mean_sim_same_slot": 1.0,
+                  "mean_sim_diff_slot": 0.1378595344709367,
+                  "effect": 0.8621404655290633,
+                  "null_mean": -0.00031828989814082373,
+                  "null_sd": 0.015447763031142075,
+                  "z": 55.83065675518984,
+                  "p_two_sided": 9.999000099990002e-05,
+                  "p_one_sided": 9.999000099990002e-05,
+                  "nperm": 10000,
+                  "seed": 408
+                },
+                "LatinOrdinalAbbrev": {
+                  "n_items": 147,
+                  "n_signs": 5,
+                  "n_same_pairs": 379,
+                  "n_cross_pairs": 8642,
+                  "mean_sim_same_slot": 1.0,
+                  "mean_sim_diff_slot": 0.6211703662024378,
+                  "effect": 0.3788296337975622,
+                  "null_mean": -1.6391621660247547e-05,
+                  "null_sd": 0.009161386694954714,
+                  "z": 41.35247621714925,
+                  "p_two_sided": 9.999000099990002e-05,
+                  "p_one_sided": 9.999000099990002e-05,
+                  "nperm": 10000,
+                  "seed": 408
+                }
+              },
+              "degraded30": {
+                "English": {
+                  "n_items": 147,
+                  "n_signs": 5,
+                  "n_same_pairs": 379,
+                  "n_cross_pairs": 8642,
+                  "mean_sim_same_slot": 0.5780510197715245,
+                  "mean_sim_diff_slot": 0.30577129091054117,
+                  "effect": 0.27227972886098334,
+                  "null_mean": -0.00024541866117770613,
+                  "null_sd": 0.009841116127366897,
+                  "z": 27.692503979736927,
+                  "p_two_sided": 9.999000099990002e-05,
+                  "p_one_sided": 9.999000099990002e-05,
+                  "nperm": 10000,
+                  "seed": 408
+                },
+                "Latin": {
+                  "n_items": 147,
+                  "n_signs": 5,
+                  "n_same_pairs": 379,
+                  "n_cross_pairs": 8642,
+                  "mean_sim_same_slot": 0.5807148368716536,
+                  "mean_sim_diff_slot": 0.28512586929458195,
+                  "effect": 0.29558896757707165,
+                  "null_mean": -0.00027806773510369634,
+                  "null_sd": 0.01037623582682899,
+                  "z": 28.513908150311696,
+                  "p_two_sided": 9.999000099990002e-05,
+                  "p_one_sided": 9.999000099990002e-05,
+                  "nperm": 10000,
+                  "seed": 408
+                },
+                "Italian": {
+                  "n_items": 147,
+                  "n_signs": 5,
+                  "n_same_pairs": 379,
+                  "n_cross_pairs": 8642,
+                  "mean_sim_same_slot": 0.5794351950410671,
+                  "mean_sim_diff_slot": 0.28856129138800407,
+                  "effect": 0.29087390365306304,
+                  "null_mean": -0.0002772167014006075,
+                  "null_sd": 0.009936700901268835,
+                  "z": 29.300582079237792,
+                  "p_two_sided": 9.999000099990002e-05,
+                  "p_one_sided": 9.999000099990002e-05,
+                  "nperm": 10000,
+                  "seed": 408
+                },
+                "German": {
+                  "n_items": 147,
+                  "n_signs": 5,
+                  "n_same_pairs": 379,
+                  "n_cross_pairs": 8642,
+                  "mean_sim_same_slot": 0.5868600360156887,
+                  "mean_sim_diff_slot": 0.2842893627926391,
+                  "effect": 0.3025706732230496,
+                  "null_mean": -0.0003034797117931766,
+                  "null_sd": 0.009979282747981058,
+                  "z": 30.350292759879785,
+                  "p_two_sided": 9.999000099990002e-05,
+                  "p_one_sided": 9.999000099990002e-05,
+                  "nperm": 10000,
+                  "seed": 408
+                },
+                "French": {
+                  "n_items": 147,
+                  "n_signs": 5,
+                  "n_same_pairs": 379,
+                  "n_cross_pairs": 8642,
+                  "mean_sim_same_slot": 0.5767499183834255,
+                  "mean_sim_diff_slot": 0.26352314879689104,
+                  "effect": 0.31322676958653445,
+                  "null_mean": -0.0001738420645289723,
+                  "null_sd": 0.009616340281837958,
+                  "z": 32.590424471872325,
+                  "p_two_sided": 9.999000099990002e-05,
+                  "p_one_sided": 9.999000099990002e-05,
+                  "nperm": 10000,
+                  "seed": 408
+                },
+                "Roman": {
+                  "n_items": 147,
+                  "n_signs": 5,
+                  "n_same_pairs": 379,
+                  "n_cross_pairs": 8642,
+                  "mean_sim_same_slot": 0.5380617179119342,
+                  "mean_sim_diff_slot": 0.305027053629216,
+                  "effect": 0.23303466428271824,
+                  "null_mean": -0.00016959046573074895,
+                  "null_sd": 0.013481467304533687,
+                  "z": 17.298135987766308,
+                  "p_two_sided": 9.999000099990002e-05,
+                  "p_one_sided": 9.999000099990002e-05,
+                  "nperm": 10000,
+                  "seed": 408
+                },
+                "GreekMilesian": {
+                  "n_items": 147,
+                  "n_signs": 5,
+                  "n_same_pairs": 379,
+                  "n_cross_pairs": 8642,
+                  "mean_sim_same_slot": 0.5193574752010177,
+                  "mean_sim_diff_slot": 0.14211831906690295,
+                  "effect": 0.37723915613411474,
+                  "null_mean": -5.859862924013118e-05,
+                  "null_sd": 0.012169519676561625,
+                  "z": 31.003504229507648,
+                  "p_two_sided": 9.999000099990002e-05,
+                  "p_one_sided": 9.999000099990002e-05,
+                  "nperm": 10000,
+                  "seed": 408
+                },
+                "LatinOrdinalAbbrev": {
+                  "n_items": 147,
+                  "n_signs": 5,
+                  "n_same_pairs": 379,
+                  "n_cross_pairs": 8642,
+                  "mean_sim_same_slot": 0.5492524491631968,
+                  "mean_sim_diff_slot": 0.3891326838203285,
+                  "effect": 0.16011976534286831,
+                  "null_mean": -0.0005353037539900049,
+                  "null_sd": 0.013574998732183454,
+                  "z": 11.83462866305682,
+                  "p_two_sided": 9.999000099990002e-05,
+                  "p_one_sided": 9.999000099990002e-05,
+                  "nperm": 10000,
+                  "seed": 408
+                }
+              }
+            },
+            "numeral_summary": {
+              "clean": {
+                "median_effect": 0.6685536088320281,
+                "max_effect": 0.8621404655290633,
+                "min_effect": 0.3788296337975622,
+                "n_series": 8,
+                "frac_p_lt_0.01": 1.0
+              },
+              "degraded30": {
+                "median_effect": 0.29323143561506737,
+                "max_effect": 0.37723915613411474,
+                "min_effect": 0.16011976534286831,
+                "n_series": 8,
+                "frac_p_lt_0.01": 1.0
+              }
+            },
+            "gate": {
+              "test_p_two_sided": 0.032396760323967606,
+              "test_effect": 0.021399984704435215,
+              "clean_control_median_effect": 0.6685536088320281,
+              "effect_ratio_to_control": 0.0320093772911065,
+              "passes_p": false,
+              "passes_effect": false,
+              "passes": false,
+              "measured_power_frac_controls_p_lt_0.01": 1.0
+            }
+          }
+        }
+      }
+    },
+    "gate_Z2": {
+      "unit": {
+        "conventions_passing": [],
+        "passes": false,
+        "measured_power_by_convention": {
+          "A": 1.0,
+          "B": 1.0,
+          "C": 1.0
+        }
+      },
+      "char": {
+        "conventions_passing": [],
+        "passes": false,
+        "measured_power_by_convention": {
+          "A": 1.0,
+          "B": 1.0,
+          "C": 1.0
+        }
+      }
+    }
+  },
+  "Z3": {
+    "transcription": "ZL3b",
+    "n_label_loci": 294,
+    "n_distinct_label_strings": 258,
+    "distinct_over_total": 0.8775510204081632,
+    "gate_Z3_fixed_inventory_threshold": 0.5,
+    "gate_Z3_passes": false,
+    "n_label_word_tokens": 344,
+    "n_label_word_types": 277,
+    "label_word_TTR": 0.8052325581395349,
+    "repeated_label_strings": [
+      {
+        "string": "otaly",
+        "count": 5,
+        "n_distinct_signs": 4,
+        "scope": "both",
+        "occurrences": [
+          {
+            "sign": "Pisces",
+            "page": "f70v2",
+            "locus": 15,
+            "ring": 0,
+            "idx_in_sign": 12,
+            "clock": "04:30"
+          },
+          {
+            "sign": "Aries",
+            "page": "f70v1",
+            "locus": 6,
+            "ring": 0,
+            "idx_in_sign": 4,
+            "clock": "03:30"
+          },
+          {
+            "sign": "Leo",
+            "page": "f72v3",
+            "locus": 31,
+            "ring": 1,
+            "idx_in_sign": 28,
+            "clock": "08:30"
+          },
+          {
+            "sign": "Scorpius",
+            "page": "f73r",
+            "locus": 1,
+            "ring": 0,
+            "idx_in_sign": 0,
+            "clock": "11:15"
+          },
+          {
+            "sign": "Scorpius",
+            "page": "f73r",
+            "locus": 6,
+            "ring": 1,
+            "idx_in_sign": 4,
+            "clock": "11:00"
+          }
+        ]
+      },
+      {
+        "string": "okal",
+        "count": 4,
+        "n_distinct_signs": 3,
+        "scope": "both",
+        "occurrences": [
+          {
+            "sign": "Gemini",
+            "page": "f72r2",
+            "locus": 9,
+            "ring": 1,
+            "idx_in_sign": 7,
+            "clock": "11:45"
+          },
+          {
+            "sign": "Gemini",
+            "page": "f72r2",
+            "locus": 11,
+            "ring": 1,
+            "idx_in_sign": 9,
+            "clock": "01:00"
+          },
+          {
+            "sign": "Libra",
+            "page": "f72v1",
+            "locus": 16,
+            "ring": 0,
+            "idx_in_sign": 12,
+            "clock": "05:00"
+          },
+          {
+            "sign": "Sagittarius",
+            "page": "f73v",
+            "locus": 27,
+            "ring": 2,
+            "idx_in_sign": 23,
+            "clock": "02:30"
+          }
+        ]
+      },
+      {
+        "string": "okaly",
+        "count": 4,
+        "n_distinct_signs": 2,
+        "scope": "both",
+        "occurrences": [
+          {
+            "sign": "Gemini",
+            "page": "f72r2",
+            "locus": 10,
+            "ring": 1,
+            "idx_in_sign": 8,
+            "clock": "00:15"
+          },
+          {
+            "sign": "Gemini",
+            "page": "f72r2",
+            "locus": 18,
+            "ring": 1,
+            "idx_in_sign": 16,
+            "clock": "07:30"
+          },
+          {
+            "sign": "Leo",
+            "page": "f72v3",
+            "locus": 9,
+            "ring": 0,
+            "idx_in_sign": 7,
+            "clock": "02:00"
+          },
+          {
+            "sign": "Leo",
+            "page": "f72v3",
+            "locus": 17,
+            "ring": 0,
+            "idx_in_sign": 15,
+            "clock": "08:30"
+          }
+        ]
+      },
+      {
+        "string": "okeody",
+        "count": 3,
+        "n_distinct_signs": 3,
+        "scope": "across-sign only",
+        "occurrences": [
+          {
+            "sign": "Virgo",
+            "page": "f72v2",
+            "locus": 15,
+            "ring": 0,
+            "idx_in_sign": 13,
+            "clock": "07:00"
+          },
+          {
+            "sign": "Scorpius",
+            "page": "f73r",
+            "locus": 7,
+            "ring": 1,
+            "idx_in_sign": 5,
+            "clock": "11:30"
+          },
+          {
+            "sign": "Sagittarius",
+            "page": "f73v",
+            "locus": 6,
+            "ring": 1,
+            "idx_in_sign": 4,
+            "clock": "10:00"
+          }
+        ]
+      },
+      {
+        "string": "oky",
+        "count": 3,
+        "n_distinct_signs": 3,
+        "scope": "across-sign only",
+        "occurrences": [
+          {
+            "sign": "Leo",
+            "page": "f72v3",
+            "locus": 22,
+            "ring": 1,
+            "idx_in_sign": 19,
+            "clock": "11:30"
+          },
+          {
+            "sign": "Scorpius",
+            "page": "f73r",
+            "locus": 26,
+            "ring": 2,
+            "idx_in_sign": 23,
+            "clock": "03:00"
+          },
+          {
+            "sign": "Sagittarius",
+            "page": "f73v",
+            "locus": 25,
+            "ring": 2,
+            "idx_in_sign": 22,
+            "clock": "01:00"
+          }
+        ]
+      },
+      {
+        "string": "cheoldy",
+        "count": 2,
+        "n_distinct_signs": 1,
+        "scope": "within-sign only",
+        "occurrences": [
+          {
+            "sign": "Virgo",
+            "page": "f72v2",
+            "locus": 9,
+            "ring": 0,
+            "idx_in_sign": 7,
+            "clock": "03:00"
+          },
+          {
+            "sign": "Virgo",
+            "page": "f72v2",
+            "locus": 19,
+            "ring": 0,
+            "idx_in_sign": 17,
+            "clock": "09:30"
+          }
+        ]
+      },
+      {
+        "string": "chy",
+        "count": 2,
+        "n_distinct_signs": 2,
+        "scope": "across-sign only",
+        "occurrences": [
+          {
+            "sign": "Pisces",
+            "page": "f70v2",
+            "locus": 14,
+            "ring": 0,
+            "idx_in_sign": 11,
+            "clock": "04:00"
+          },
+          {
+            "sign": "Leo",
+            "page": "f72v3",
+            "locus": 23,
+            "ring": 1,
+            "idx_in_sign": 20,
+            "clock": "00:30"
+          }
+        ]
+      },
+      {
+        "string": "oeedy",
+        "count": 2,
+        "n_distinct_signs": 2,
+        "scope": "across-sign only",
+        "occurrences": [
+          {
+            "sign": "Leo",
+            "page": "f72v3",
+            "locus": 25,
+            "ring": 1,
+            "idx_in_sign": 22,
+            "clock": "02:00"
+          },
+          {
+            "sign": "Virgo",
+            "page": "f72v2",
+            "locus": 23,
+            "ring": 1,
+            "idx_in_sign": 20,
+            "clock": "00:30"
+          }
+        ]
+      },
+      {
+        "string": "oeeodaiin",
+        "count": 2,
+        "n_distinct_signs": 2,
+        "scope": "across-sign only",
+        "occurrences": [
+          {
+            "sign": "Cancer",
+            "page": "f72r3",
+            "locus": 10,
+            "ring": 0,
+            "idx_in_sign": 7,
+            "clock": "06:30"
+          },
+          {
+            "sign": "Virgo",
+            "page": "f72v2",
+            "locus": 3,
+            "ring": 0,
+            "idx_in_sign": 1,
+            "clock": "11:00"
+          }
+        ]
+      },
+      {
+        "string": "okalar",
+        "count": 2,
+        "n_distinct_signs": 2,
+        "scope": "across-sign only",
+        "occurrences": [
+          {
+            "sign": "Gemini",
+            "page": "f72r2",
+            "locus": 8,
+            "ring": 1,
+            "idx_in_sign": 6,
+            "clock": "11:00"
+          },
+          {
+            "sign": "Cancer",
+            "page": "f72r3",
+            "locus": 22,
+            "ring": 1,
+            "idx_in_sign": 18,
+            "clock": "06:30"
+          }
+        ]
+      },
+      {
+        "string": "okaldy",
+        "count": 2,
+        "n_distinct_signs": 2,
+        "scope": "across-sign only",
+        "occurrences": [
+          {
+            "sign": "Gemini",
+            "page": "f72r2",
+            "locus": 27,
+            "ring": 2,
+            "idx_in_sign": 24,
+            "clock": "03:30"
+          },
+          {
+            "sign": "Leo",
+            "page": "f72v3",
+            "locus": 18,
+            "ring": 0,
+            "idx_in_sign": 16,
+            "clock": "09:00"
+          }
+        ]
+      },
+      {
+        "string": "okam",
+        "count": 2,
+        "n_distinct_signs": 2,
+        "scope": "across-sign only",
+        "occurrences": [
+          {
+            "sign": "Gemini",
+            "page": "f72r2",
+            "locus": 25,
+            "ring": 2,
+            "idx_in_sign": 22,
+            "clock": "00:30"
+          },
+          {
+            "sign": "Leo",
+            "page": "f72v3",
+            "locus": 4,
+            "ring": 0,
+            "idx_in_sign": 2,
+            "clock": "11:30"
+          }
+        ]
+      },
+      {
+        "string": "okaram",
+        "count": 2,
+        "n_distinct_signs": 2,
+        "scope": "across-sign only",
+        "occurrences": [
+          {
+            "sign": "Pisces",
+            "page": "f70v2",
+            "locus": 27,
+            "ring": 1,
+            "idx_in_sign": 23,
+            "clock": "04:00"
+          },
+          {
+            "sign": "Gemini",
+            "page": "f72r2",
+            "locus": 3,
+            "ring": 0,
+            "idx_in_sign": 2,
+            "clock": "00:00"
+          }
+        ]
+      },
+      {
+        "string": "okary",
+        "count": 2,
+        "n_distinct_signs": 2,
+        "scope": "across-sign only",
+        "occurrences": [
+          {
+            "sign": "Leo",
+            "page": "f72v3",
+            "locus": 27,
+            "ring": 1,
+            "idx_in_sign": 24,
+            "clock": "04:00"
+          },
+          {
+            "sign": "Scorpius",
+            "page": "f73r",
+            "locus": 23,
+            "ring": 2,
+            "idx_in_sign": 20,
+            "clock": "11:30"
+          }
+        ]
+      },
+      {
+        "string": "okeey",
+        "count": 2,
+        "n_distinct_signs": 2,
+        "scope": "across-sign only",
+        "occurrences": [
+          {
+            "sign": "Libra",
+            "page": "f72v1",
+            "locus": 25,
+            "ring": 1,
+            "idx_in_sign": 20,
+            "clock": "11:30"
+          },
+          {
+            "sign": "Scorpius",
+            "page": "f73r",
+            "locus": 10,
+            "ring": 1,
+            "idx_in_sign": 8,
+            "clock": "01:00"
+          }
+        ]
+      },
+      {
+        "string": "okeey ary",
+        "count": 2,
+        "n_distinct_signs": 2,
+        "scope": "across-sign only",
+        "occurrences": [
+          {
+            "sign": "Taurus",
+            "page": "f72r1",
+            "locus": 16,
+            "ring": 3,
+            "idx_in_sign": 28,
+            "clock": "04:00"
+          },
+          {
+            "sign": "Gemini",
+            "page": "f72r2",
+            "locus": 12,
+            "ring": 1,
+            "idx_in_sign": 10,
+            "clock": "02:00"
+          }
+        ]
+      },
+      {
+        "string": "okeoly",
+        "count": 2,
+        "n_distinct_signs": 2,
+        "scope": "across-sign only",
+        "occurrences": [
+          {
+            "sign": "Pisces",
+            "page": "f70v2",
+            "locus": 18,
+            "ring": 0,
+            "idx_in_sign": 15,
+            "clock": "07:00"
+          },
+          {
+            "sign": "Libra",
+            "page": "f72v1",
+            "locus": 5,
+            "ring": 0,
+            "idx_in_sign": 3,
+            "clock": "10:30"
+          }
+        ]
+      },
+      {
+        "string": "okeos",
+        "count": 2,
+        "n_distinct_signs": 2,
+        "scope": "across-sign only",
+        "occurrences": [
+          {
+            "sign": "Scorpius",
+            "page": "f73r",
+            "locus": 20,
+            "ring": 1,
+            "idx_in_sign": 18,
+            "clock": "09:30"
+          },
+          {
+            "sign": "Sagittarius",
+            "page": "f73v",
+            "locus": 19,
+            "ring": 1,
+            "idx_in_sign": 17,
+            "clock": "07:30"
+          }
+        ]
+      },
+      {
+        "string": "okydy",
+        "count": 2,
+        "n_distinct_signs": 2,
+        "scope": "across-sign only",
+        "occurrences": [
+          {
+            "sign": "Pisces",
+            "page": "f70v2",
+            "locus": 19,
+            "ring": 0,
+            "idx_in_sign": 16,
+            "clock": "08:00"
+          },
+          {
+            "sign": "Libra",
+            "page": "f72v1",
+            "locus": 24,
+            "ring": 1,
+            "idx_in_sign": 19,
+            "clock": "10:00"
+          }
+        ]
+      },
+      {
+        "string": "otal",
+        "count": 2,
+        "n_distinct_signs": 2,
+        "scope": "across-sign only",
+        "occurrences": [
+          {
+            "sign": "Gemini",
+            "page": "f72r2",
+            "locus": 23,
+            "ring": 2,
+            "idx_in_sign": 20,
+            "clock": "10:30"
+          },
+          {
+            "sign": "Scorpius",
+            "page": "f73r",
+            "locus": 28,
+            "ring": 2,
+            "idx_in_sign": 25,
+            "clock": "06:00"
+          }
+        ]
+      },
+      {
+        "string": "otalaiin",
+        "count": 2,
+        "n_distinct_signs": 2,
+        "scope": "across-sign only",
+        "occurrences": [
+          {
+            "sign": "Aries",
+            "page": "f70v1",
+            "locus": 14,
+            "ring": 1,
+            "idx_in_sign": 11,
+            "clock": "00:00"
+          },
+          {
+            "sign": "Taurus",
+            "page": "f71v",
+            "locus": 15,
+            "ring": 1,
+            "idx_in_sign": 12,
+            "clock": "03:00"
+          }
+        ]
+      },
+      {
+        "string": "otaldar",
+        "count": 2,
+        "n_distinct_signs": 2,
+        "scope": "across-sign only",
+        "occurrences": [
+          {
+            "sign": "Pisces",
+            "page": "f70v2",
+            "locus": 11,
+            "ring": 0,
+            "idx_in_sign": 8,
+            "clock": "02:00"
+          },
+          {
+            "sign": "Aries",
+            "page": "f71r",
+            "locus": 17,
+            "ring": 3,
+            "idx_in_sign": 29,
+            "clock": "08:00"
+          }
+        ]
+      },
+      {
+        "string": "otaraldy",
+        "count": 2,
+        "n_distinct_signs": 2,
+        "scope": "across-sign only",
+        "occurrences": [
+          {
+            "sign": "Taurus",
+            "page": "f72r1",
+            "locus": 8,
+            "ring": 2,
+            "idx_in_sign": 21,
+            "clock": "03:30"
+          },
+          {
+            "sign": "Gemini",
+            "page": "f72r2",
+            "locus": 7,
+            "ring": 1,
+            "idx_in_sign": 5,
+            "clock": "10:00"
+          }
+        ]
+      },
+      {
+        "string": "otedy",
+        "count": 2,
+        "n_distinct_signs": 2,
+        "scope": "across-sign only",
+        "occurrences": [
+          {
+            "sign": "Scorpius",
+            "page": "f73r",
+            "locus": 3,
+            "ring": 0,
+            "idx_in_sign": 2,
+            "clock": "00:30"
+          },
+          {
+            "sign": "Sagittarius",
+            "page": "f73v",
+            "locus": 23,
+            "ring": 2,
+            "idx_in_sign": 20,
+            "clock": "09:30"
+          }
+        ]
+      },
+      {
+        "string": "oteody",
+        "count": 2,
+        "n_distinct_signs": 1,
+        "scope": "within-sign only",
+        "occurrences": [
+          {
+            "sign": "Sagittarius",
+            "page": "f73v",
+            "locus": 2,
+            "ring": 0,
+            "idx_in_sign": 1,
+            "clock": "11:45"
+          },
+          {
+            "sign": "Sagittarius",
+            "page": "f73v",
+            "locus": 13,
+            "ring": 1,
+            "idx_in_sign": 11,
+            "clock": "03:00"
+          }
+        ]
+      },
+      {
+        "string": "ykeedy",
+        "count": 2,
+        "n_distinct_signs": 2,
+        "scope": "across-sign only",
+        "occurrences": [
+          {
+            "sign": "Libra",
+            "page": "f72v1",
+            "locus": 21,
+            "ring": 0,
+            "idx_in_sign": 17,
+            "clock": "08:00"
+          },
+          {
+            "sign": "Scorpius",
+            "page": "f73r",
+            "locus": 9,
+            "ring": 1,
+            "idx_in_sign": 7,
+            "clock": "00:30"
+          }
+        ]
+      },
+      {
+        "string": "ykey",
+        "count": 2,
+        "n_distinct_signs": 1,
+        "scope": "within-sign only",
+        "occurrences": [
+          {
+            "sign": "Sagittarius",
+            "page": "f73v",
+            "locus": 28,
+            "ring": 2,
+            "idx_in_sign": 24,
+            "clock": "03:30"
+          },
+          {
+            "sign": "Sagittarius",
+            "page": "f73v",
+            "locus": 31,
+            "ring": 2,
+            "idx_in_sign": 27,
+            "clock": "07:30"
+          }
+        ]
+      }
+    ],
+    "n_repeated_strings": 27,
+    "n_strings_shared_by_ge2_signs": 24,
+    "n_strings_shared_by_ge3_signs": 4,
+    "n_strings_repeated_within_sign_only": 3,
+    "n_label_word_types_in_ge2_signs": 37,
+    "n_label_word_types_in_ge3_signs": 9,
+    "zodiac_pages": {
+      "n_pages": 12,
+      "n_label_tokens": 344,
+      "n_text_tokens": 947,
+      "n_distinct_glyph_units_labels": 38,
+      "n_distinct_glyph_units_text": 40,
+      "n_shared": 38,
+      "units_only_in_labels": [],
+      "units_only_in_text": [
+        "chedy",
+        "q"
+      ],
+      "label_unit_tokens": 1196,
+      "text_unit_tokens": 2814
+    },
+    "all_pages_with_both": {
+      "n_pages": 54,
+      "n_label_tokens": 1008,
+      "n_text_tokens": 8641,
+      "n_distinct_glyph_units_labels": 41,
+      "n_distinct_glyph_units_text": 45,
+      "n_shared": 41,
+      "units_only_in_labels": [],
+      "units_only_in_text": [
+        "b",
+        "j",
+        "u",
+        "v"
+      ]
+    },
+    "ttr_resample": {
+      "label_TTR": 0.8052325581395349,
+      "n_label_tokens": 344,
+      "resample_mean_TTR": 0.6610494186046512,
+      "resample_sd_TTR": 0.01761258475922904,
+      "resample_min": 0.6075581395348837,
+      "resample_max": 0.7151162790697675,
+      "z": 8.186370229351564,
+      "p_one_sided_label_higher": 0.000999000999000999,
+      "p_one_sided_label_lower": 1.0,
+      "p_two_sided": 0.001998001998001998,
+      "ndraw": 1000,
+      "seed": 408,
+      "exact_length_match_failures": 3
+    }
+  },
+  "replication_GC2a": {
+    "coverage_vs_ZL3b": 0.30952380952380953,
+    "n_label_loci": 91,
+    "n_with_clock": 0,
+    "Z2": {
+      "transcription": "GC2a",
+      "conventions": {
+        "A": {
+          "description": "index within sign, manuscript order",
+          "reps": {
+            "unit": {
+              "FIT": {
+                "n_items": 65,
+                "n_signs": 5,
+                "n_same_pairs": 123,
+                "n_cross_pairs": 1687,
+                "mean_sim_same_slot": 0.4072495481032064,
+                "mean_sim_diff_slot": 0.4079521692953852,
+                "effect": -0.0007026211921787873,
+                "null_mean": -0.0004397867079669047,
+                "null_sd": 0.013479600508464199,
+                "z": -0.01949868499788564,
+                "p_two_sided": 0.9559044095590441,
+                "p_one_sided": 0.49795020497950204,
+                "nperm": 10000,
+                "seed": 408
+              },
+              "TEST": {
+                "n_items": 26,
+                "n_signs": 5,
+                "n_same_pairs": 39,
+                "n_cross_pairs": 260,
+                "mean_sim_same_slot": 0.3587718549257012,
+                "mean_sim_diff_slot": 0.37573316577841503,
+                "effect": -0.01696131085271385,
+                "null_mean": -0.00228098616650689,
+                "null_sd": 0.03163001964112728,
+                "z": -0.46412632217018,
+                "p_two_sided": 0.6008399160083991,
+                "p_one_sided": 0.6604339566043396,
+                "nperm": 10000,
+                "seed": 408
+              },
+              "numeral_controls": {
+                "clean": {
+                  "English": {
+                    "n_items": 26,
+                    "n_signs": 5,
+                    "n_same_pairs": 39,
+                    "n_cross_pairs": 260,
+                    "mean_sim_same_slot": 1.0,
+                    "mean_sim_diff_slot": 0.1820548732313439,
+                    "effect": 0.8179451267686562,
+                    "null_mean": 0.021454439895616365,
+                    "null_sd": 0.06715852533922324,
+                    "z": 11.859859680508167,
+                    "p_two_sided": 9.999000099990002e-05,
+                    "p_one_sided": 9.999000099990002e-05,
+                    "nperm": 10000,
+                    "seed": 408
+                  },
+                  "Latin": {
+                    "n_items": 26,
+                    "n_signs": 5,
+                    "n_same_pairs": 39,
+                    "n_cross_pairs": 260,
+                    "mean_sim_same_slot": 1.0,
+                    "mean_sim_diff_slot": 0.21908066794944694,
+                    "effect": 0.7809193320505531,
+                    "null_mean": 0.01720462453584551,
+                    "null_sd": 0.0630336933660509,
+                    "z": 12.115975865155859,
+                    "p_two_sided": 9.999000099990002e-05,
+                    "p_one_sided": 9.999000099990002e-05,
+                    "nperm": 10000,
+                    "seed": 408
+                  },
+                  "Italian": {
+                    "n_items": 26,
+                    "n_signs": 5,
+                    "n_same_pairs": 39,
+                    "n_cross_pairs": 260,
+                    "mean_sim_same_slot": 1.0,
+                    "mean_sim_diff_slot": 0.27750223632576576,
+                    "effect": 0.7224977636742342,
+                    "null_mean": 0.015101266054207235,
+                    "null_sd": 0.06142845043875906,
+                    "z": 11.515779619498366,
+                    "p_two_sided": 9.999000099990002e-05,
+                    "p_one_sided": 9.999000099990002e-05,
+                    "nperm": 10000,
+                    "seed": 408
+                  },
+                  "German": {
+                    "n_items": 26,
+                    "n_signs": 5,
+                    "n_same_pairs": 39,
+                    "n_cross_pairs": 260,
+                    "mean_sim_same_slot": 1.0,
+                    "mean_sim_diff_slot": 0.26701990819637966,
+                    "effect": 0.7329800918036203,
+                    "null_mean": 0.02046497337085485,
+                    "null_sd": 0.058284918741896806,
+                    "z": 12.224690946006072,
+                    "p_two_sided": 9.999000099990002e-05,
+                    "p_one_sided": 9.999000099990002e-05,
+                    "nperm": 10000,
+                    "seed": 408
+                  },
+                  "French": {
+                    "n_items": 26,
+                    "n_signs": 5,
+                    "n_same_pairs": 39,
+                    "n_cross_pairs": 260,
+                    "mean_sim_same_slot": 1.0,
+                    "mean_sim_diff_slot": 0.1568875568875571,
+                    "effect": 0.8431124431124429,
+                    "null_mean": 0.01247822438998887,
+                    "null_sd": 0.06900314075912047,
+                    "z": 12.037629151143605,
+                    "p_two_sided": 9.999000099990002e-05,
+                    "p_one_sided": 9.999000099990002e-05,
+                    "nperm": 10000,
+                    "seed": 408
+                  },
+                  "Roman": {
+                    "n_items": 26,
+                    "n_signs": 5,
+                    "n_same_pairs": 39,
+                    "n_cross_pairs": 260,
+                    "mean_sim_same_slot": 1.0,
+                    "mean_sim_diff_slot": 0.48338720103426075,
+                    "effect": 0.5166127989657392,
+                    "null_mean": 0.009018042088629526,
+                    "null_sd": 0.056797826440440215,
+                    "z": 8.936869396039084,
+                    "p_two_sided": 9.999000099990002e-05,
+                    "p_one_sided": 9.999000099990002e-05,
+                    "nperm": 10000,
+                    "seed": 408
+                  },
+                  "GreekMilesian": {
+                    "n_items": 26,
+                    "n_signs": 5,
+                    "n_same_pairs": 39,
+                    "n_cross_pairs": 260,
+                    "mean_sim_same_slot": 1.0,
+                    "mean_sim_diff_slot": 0.0,
+                    "effect": 1.0,
+                    "null_mean": 0.0182262443438914,
+                    "null_sd": 0.07522451026023877,
+                    "z": 13.051248220289741,
+                    "p_two_sided": 9.999000099990002e-05,
+                    "p_one_sided": 9.999000099990002e-05,
+                    "nperm": 10000,
+                    "seed": 408
+                  },
+                  "LatinOrdinalAbbrev": {
+                    "n_items": 26,
+                    "n_signs": 5,
+                    "n_same_pairs": 39,
+                    "n_cross_pairs": 260,
+                    "mean_sim_same_slot": 1.0,
+                    "mean_sim_diff_slot": 0.6670473317532153,
+                    "effect": 0.3329526682467847,
+                    "null_mean": 0.0073584213172438765,
+                    "null_sd": 0.035326344194454726,
+                    "z": 9.216754644559293,
+                    "p_two_sided": 9.999000099990002e-05,
+                    "p_one_sided": 9.999000099990002e-05,
+                    "nperm": 10000,
+                    "seed": 408
+                  }
+                },
+                "degraded30": {
+                  "English": {
+                    "n_items": 26,
+                    "n_signs": 5,
+                    "n_same_pairs": 39,
+                    "n_cross_pairs": 260,
+                    "mean_sim_same_slot": 0.5282320880499017,
+                    "mean_sim_diff_slot": 0.18018556056324136,
+                    "effect": 0.3480465274866604,
+                    "null_mean": 0.004469075995064143,
+                    "null_sd": 0.04460485924708702,
+                    "z": 7.7026910809954865,
+                    "p_two_sided": 9.999000099990002e-05,
+                    "p_one_sided": 9.999000099990002e-05,
+                    "nperm": 10000,
+                    "seed": 408
+                  },
+                  "Latin": {
+                    "n_items": 26,
+                    "n_signs": 5,
+                    "n_same_pairs": 39,
+                    "n_cross_pairs": 260,
+                    "mean_sim_same_slot": 0.4897657111219863,
+                    "mean_sim_diff_slot": 0.21070038702563246,
+                    "effect": 0.2790653240963539,
+                    "null_mean": 0.0034455507845811604,
+                    "null_sd": 0.039938705271871024,
+                    "z": 6.901069311976238,
+                    "p_two_sided": 9.999000099990002e-05,
+                    "p_one_sided": 9.999000099990002e-05,
+                    "nperm": 10000,
+                    "seed": 408
+                  },
+                  "Italian": {
+                    "n_items": 26,
+                    "n_signs": 5,
+                    "n_same_pairs": 39,
+                    "n_cross_pairs": 260,
+                    "mean_sim_same_slot": 0.5195268331908006,
+                    "mean_sim_diff_slot": 0.24987166069916905,
+                    "effect": 0.26965517249163157,
+                    "null_mean": 5.147827421865943e-05,
+                    "null_sd": 0.039555765450640976,
+                    "z": 6.815787563353655,
+                    "p_two_sided": 9.999000099990002e-05,
+                    "p_one_sided": 9.999000099990002e-05,
+                    "nperm": 10000,
+                    "seed": 408
+                  },
+                  "German": {
+                    "n_items": 26,
+                    "n_signs": 5,
+                    "n_same_pairs": 39,
+                    "n_cross_pairs": 260,
+                    "mean_sim_same_slot": 0.48843370978998507,
+                    "mean_sim_diff_slot": 0.2637666978774112,
+                    "effect": 0.22466701191257388,
+                    "null_mean": 0.003005652632771136,
+                    "null_sd": 0.038422366918401084,
+                    "z": 5.76907090993516,
+                    "p_two_sided": 9.999000099990002e-05,
+                    "p_one_sided": 9.999000099990002e-05,
+                    "nperm": 10000,
+                    "seed": 408
+                  },
+                  "French": {
+                    "n_items": 26,
+                    "n_signs": 5,
+                    "n_same_pairs": 39,
+                    "n_cross_pairs": 260,
+                    "mean_sim_same_slot": 0.5188673786851924,
+                    "mean_sim_diff_slot": 0.1889669626704355,
+                    "effect": 0.3299004160147569,
+                    "null_mean": 0.0017216118453373735,
+                    "null_sd": 0.04451630876341896,
+                    "z": 7.372102793012765,
+                    "p_two_sided": 9.999000099990002e-05,
+                    "p_one_sided": 9.999000099990002e-05,
+                    "nperm": 10000,
+                    "seed": 408
+                  },
+                  "Roman": {
+                    "n_items": 26,
+                    "n_signs": 5,
+                    "n_same_pairs": 39,
+                    "n_cross_pairs": 260,
+                    "mean_sim_same_slot": 0.4903736501914639,
+                    "mean_sim_diff_slot": 0.3364132443927361,
+                    "effect": 0.15396040579872777,
+                    "null_mean": -0.00825023889484,
+                    "null_sd": 0.04449926453987273,
+                    "z": 3.64524327246402,
+                    "p_two_sided": 0.000999900009999,
+                    "p_one_sided": 0.000999900009999,
+                    "nperm": 10000,
+                    "seed": 408
+                  },
+                  "GreekMilesian": {
+                    "n_items": 26,
+                    "n_signs": 5,
+                    "n_same_pairs": 39,
+                    "n_cross_pairs": 260,
+                    "mean_sim_same_slot": 0.44390302679776367,
+                    "mean_sim_diff_slot": 0.06261519729152075,
+                    "effect": 0.3812878295062429,
+                    "null_mean": 0.010477978856908049,
+                    "null_sd": 0.04769248528979624,
+                    "z": 7.775016302802514,
+                    "p_two_sided": 9.999000099990002e-05,
+                    "p_one_sided": 9.999000099990002e-05,
+                    "nperm": 10000,
+                    "seed": 408
+                  },
+                  "LatinOrdinalAbbrev": {
+                    "n_items": 26,
+                    "n_signs": 5,
+                    "n_same_pairs": 39,
+                    "n_cross_pairs": 260,
+                    "mean_sim_same_slot": 0.49083387372861054,
+                    "mean_sim_diff_slot": 0.4157478866233057,
+                    "effect": 0.07508598710530484,
+                    "null_mean": -0.014868920464652536,
+                    "null_sd": 0.039113146677301217,
+                    "z": 2.2998637341076287,
+                    "p_two_sided": 0.0663933606639336,
+                    "p_one_sided": 0.0187981201879812,
+                    "nperm": 10000,
+                    "seed": 408
+                  }
+                }
+              },
+              "numeral_summary": {
+                "clean": {
+                  "median_effect": 0.7569497119270867,
+                  "max_effect": 1.0,
+                  "min_effect": 0.3329526682467847,
+                  "n_series": 8,
+                  "frac_p_lt_0.01": 1.0
+                },
+                "degraded30": {
+                  "median_effect": 0.27436024829399275,
+                  "max_effect": 0.3812878295062429,
+                  "min_effect": 0.07508598710530484,
+                  "n_series": 8,
+                  "frac_p_lt_0.01": 0.875
+                }
+              },
+              "gate": {
+                "test_p_two_sided": 0.6008399160083991,
+                "test_effect": -0.01696131085271385,
+                "clean_control_median_effect": 0.7569497119270867,
+                "effect_ratio_to_control": -0.022407447397704606,
+                "passes_p": false,
+                "passes_effect": false,
+                "passes": false,
+                "measured_power_frac_controls_p_lt_0.01": 1.0
+              }
+            },
+            "char": {
+              "FIT": {
+                "n_items": 65,
+                "n_signs": 5,
+                "n_same_pairs": 123,
+                "n_cross_pairs": 1687,
+                "mean_sim_same_slot": 0.46910988831059797,
+                "mean_sim_diff_slot": 0.46536706955599044,
+                "effect": 0.0037428187546075242,
+                "null_mean": -0.000588933558881626,
+                "null_sd": 0.012061890460956211,
+                "z": 0.3591271473995585,
+                "p_two_sided": 0.7556244375562444,
+                "p_one_sided": 0.34976502349765026,
+                "nperm": 10000,
+                "seed": 408
+              },
+              "TEST": {
+                "n_items": 26,
+                "n_signs": 5,
+                "n_same_pairs": 39,
+                "n_cross_pairs": 260,
+                "mean_sim_same_slot": 0.3688858150396613,
+                "mean_sim_diff_slot": 0.3907932690738126,
+                "effect": -0.02190745403415134,
+                "null_mean": -0.000872105722332517,
+                "null_sd": 0.03140618481568449,
+                "z": -0.6697836249538215,
+                "p_two_sided": 0.4871512848715128,
+                "p_one_sided": 0.7386261373862614,
+                "nperm": 10000,
+                "seed": 408
+              },
+              "numeral_controls": {
+                "clean": {
+                  "English": {
+                    "n_items": 26,
+                    "n_signs": 5,
+                    "n_same_pairs": 39,
+                    "n_cross_pairs": 260,
+                    "mean_sim_same_slot": 1.0,
+                    "mean_sim_diff_slot": 0.22257774904833766,
+                    "effect": 0.7774222509516624,
+                    "null_mean": 0.020980133591897952,
+                    "null_sd": 0.06151668471704259,
+                    "z": 12.296535823397512,
+                    "p_two_sided": 9.999000099990002e-05,
+                    "p_one_sided": 9.999000099990002e-05,
+                    "nperm": 10000,
+                    "seed": 408
+                  },
+                  "Latin": {
+                    "n_items": 26,
+                    "n_signs": 5,
+                    "n_same_pairs": 39,
+                    "n_cross_pairs": 260,
+                    "mean_sim_same_slot": 1.0,
+                    "mean_sim_diff_slot": 0.24795124433133536,
+                    "effect": 0.7520487556686646,
+                    "null_mean": 0.01816828313298849,
+                    "null_sd": 0.06249064608508774,
+                    "z": 11.743845175427037,
+                    "p_two_sided": 9.999000099990002e-05,
+                    "p_one_sided": 9.999000099990002e-05,
+                    "nperm": 10000,
+                    "seed": 408
+                  },
+                  "Italian": {
+                    "n_items": 26,
+                    "n_signs": 5,
+                    "n_same_pairs": 39,
+                    "n_cross_pairs": 260,
+                    "mean_sim_same_slot": 1.0,
+                    "mean_sim_diff_slot": 0.2718685035427121,
+                    "effect": 0.7281314964572879,
+                    "null_mean": 0.014441200261109413,
+                    "null_sd": 0.06158069615038987,
+                    "z": 11.589513286001722,
+                    "p_two_sided": 9.999000099990002e-05,
+                    "p_one_sided": 9.999000099990002e-05,
+                    "nperm": 10000,
+                    "seed": 408
+                  },
+                  "German": {
+                    "n_items": 26,
+                    "n_signs": 5,
+                    "n_same_pairs": 39,
+                    "n_cross_pairs": 260,
+                    "mean_sim_same_slot": 1.0,
+                    "mean_sim_diff_slot": 0.31699117875588506,
+                    "effect": 0.683008821244115,
+                    "null_mean": 0.02478811493517323,
+                    "null_sd": 0.05601401519001859,
+                    "z": 11.751000246563887,
+                    "p_two_sided": 9.999000099990002e-05,
+                    "p_one_sided": 9.999000099990002e-05,
+                    "nperm": 10000,
+                    "seed": 408
+                  },
+                  "French": {
+                    "n_items": 26,
+                    "n_signs": 5,
+                    "n_same_pairs": 39,
+                    "n_cross_pairs": 260,
+                    "mean_sim_same_slot": 1.0,
+                    "mean_sim_diff_slot": 0.19325902855314633,
+                    "effect": 0.8067409714468536,
+                    "null_mean": 0.01180181126063462,
+                    "null_sd": 0.06734988885555683,
+                    "z": 11.803125048819306,
+                    "p_two_sided": 9.999000099990002e-05,
+                    "p_one_sided": 9.999000099990002e-05,
+                    "nperm": 10000,
+                    "seed": 408
+                  },
+                  "Roman": {
+                    "n_items": 26,
+                    "n_signs": 5,
+                    "n_same_pairs": 39,
+                    "n_cross_pairs": 260,
+                    "mean_sim_same_slot": 1.0,
+                    "mean_sim_diff_slot": 0.48338720103426075,
+                    "effect": 0.5166127989657392,
+                    "null_mean": 0.009018042088629526,
+                    "null_sd": 0.056797826440440215,
+                    "z": 8.936869396039084,
+                    "p_two_sided": 9.999000099990002e-05,
+                    "p_one_sided": 9.999000099990002e-05,
+                    "nperm": 10000,
+                    "seed": 408
+                  },
+                  "GreekMilesian": {
+                    "n_items": 26,
+                    "n_signs": 5,
+                    "n_same_pairs": 39,
+                    "n_cross_pairs": 260,
+                    "mean_sim_same_slot": 1.0,
+                    "mean_sim_diff_slot": 0.0,
+                    "effect": 1.0,
+                    "null_mean": 0.0182262443438914,
+                    "null_sd": 0.07522451026023877,
+                    "z": 13.051248220289741,
+                    "p_two_sided": 9.999000099990002e-05,
+                    "p_one_sided": 9.999000099990002e-05,
+                    "nperm": 10000,
+                    "seed": 408
+                  },
+                  "LatinOrdinalAbbrev": {
+                    "n_items": 26,
+                    "n_signs": 5,
+                    "n_same_pairs": 39,
+                    "n_cross_pairs": 260,
+                    "mean_sim_same_slot": 1.0,
+                    "mean_sim_diff_slot": 0.6670473317532153,
+                    "effect": 0.3329526682467847,
+                    "null_mean": 0.0073584213172438765,
+                    "null_sd": 0.035326344194454726,
+                    "z": 9.216754644559293,
+                    "p_two_sided": 9.999000099990002e-05,
+                    "p_one_sided": 9.999000099990002e-05,
+                    "nperm": 10000,
+                    "seed": 408
+                  }
+                },
+                "degraded30": {
+                  "English": {
+                    "n_items": 26,
+                    "n_signs": 5,
+                    "n_same_pairs": 39,
+                    "n_cross_pairs": 260,
+                    "mean_sim_same_slot": 0.5308772056271459,
+                    "mean_sim_diff_slot": 0.21197539644123578,
+                    "effect": 0.31890180918591016,
+                    "null_mean": 0.0034570184046781157,
+                    "null_sd": 0.040632223668144625,
+                    "z": 7.763414411122631,
+                    "p_two_sided": 9.999000099990002e-05,
+                    "p_one_sided": 9.999000099990002e-05,
+                    "nperm": 10000,
+                    "seed": 408
+                  },
+                  "Latin": {
+                    "n_items": 26,
+                    "n_signs": 5,
+                    "n_same_pairs": 39,
+                    "n_cross_pairs": 260,
+                    "mean_sim_same_slot": 0.49754448338039664,
+                    "mean_sim_diff_slot": 0.2275854277468808,
+                    "effect": 0.26995905563351585,
+                    "null_mean": 0.0034790505622307086,
+                    "null_sd": 0.040523561792913804,
+                    "z": 6.575927516763432,
+                    "p_two_sided": 9.999000099990002e-05,
+                    "p_one_sided": 9.999000099990002e-05,
+                    "nperm": 10000,
+                    "seed": 408
+                  },
+                  "Italian": {
+                    "n_items": 26,
+                    "n_signs": 5,
+                    "n_same_pairs": 39,
+                    "n_cross_pairs": 260,
+                    "mean_sim_same_slot": 0.5364597996712783,
+                    "mean_sim_diff_slot": 0.25514666414670634,
+                    "effect": 0.281313135524572,
+                    "null_mean": 0.0007724699308429849,
+                    "null_sd": 0.039933048681619676,
+                    "z": 7.025275426137344,
+                    "p_two_sided": 9.999000099990002e-05,
+                    "p_one_sided": 9.999000099990002e-05,
+                    "nperm": 10000,
+                    "seed": 408
+                  },
+                  "German": {
+                    "n_items": 26,
+                    "n_signs": 5,
+                    "n_same_pairs": 39,
+                    "n_cross_pairs": 260,
+                    "mean_sim_same_slot": 0.5279530642414663,
+                    "mean_sim_diff_slot": 0.28120701434865925,
+                    "effect": 0.24674604989280702,
+                    "null_mean": 0.0077943621298707565,
+                    "null_sd": 0.037599456908920525,
+                    "z": 6.355189872602778,
+                    "p_two_sided": 9.999000099990002e-05,
+                    "p_one_sided": 9.999000099990002e-05,
+                    "nperm": 10000,
+                    "seed": 408
+                  },
+                  "French": {
+                    "n_items": 26,
+                    "n_signs": 5,
+                    "n_same_pairs": 39,
+                    "n_cross_pairs": 260,
+                    "mean_sim_same_slot": 0.5305333898987151,
+                    "mean_sim_diff_slot": 0.213457182185731,
+                    "effect": 0.3170762077129841,
+                    "null_mean": 0.001416691040129377,
+                    "null_sd": 0.04351541464076809,
+                    "z": 7.253970099531679,
+                    "p_two_sided": 9.999000099990002e-05,
+                    "p_one_sided": 9.999000099990002e-05,
+                    "nperm": 10000,
+                    "seed": 408
+                  },
+                  "Roman": {
+                    "n_items": 26,
+                    "n_signs": 5,
+                    "n_same_pairs": 39,
+                    "n_cross_pairs": 260,
+                    "mean_sim_same_slot": 0.48730254666787165,
+                    "mean_sim_diff_slot": 0.33690398720693115,
+                    "effect": 0.1503985594609405,
+                    "null_mean": -0.007254376367803272,
+                    "null_sd": 0.04503167999590178,
+                    "z": 3.5009339168134823,
+                    "p_two_sided": 0.0014998500149985001,
+                    "p_one_sided": 0.0014998500149985001,
+                    "nperm": 10000,
+                    "seed": 408
+                  },
+                  "GreekMilesian": {
+                    "n_items": 26,
+                    "n_signs": 5,
+                    "n_same_pairs": 39,
+                    "n_cross_pairs": 260,
+                    "mean_sim_same_slot": 0.44309860246392757,
+                    "mean_sim_diff_slot": 0.06357020685957543,
+                    "effect": 0.37952839560435214,
+                    "null_mean": 0.011514642011170636,
+                    "null_sd": 0.04793465444566828,
+                    "z": 7.677404955746748,
+                    "p_two_sided": 9.999000099990002e-05,
+                    "p_one_sided": 9.999000099990002e-05,
+                    "nperm": 10000,
+                    "seed": 408
+                  },
+                  "LatinOrdinalAbbrev": {
+                    "n_items": 26,
+                    "n_signs": 5,
+                    "n_same_pairs": 39,
+                    "n_cross_pairs": 260,
+                    "mean_sim_same_slot": 0.48812024748557237,
+                    "mean_sim_diff_slot": 0.4165530962678048,
+                    "effect": 0.07156715121776758,
+                    "null_mean": -0.013846487742267379,
+                    "null_sd": 0.03980341080404819,
+                    "z": 2.1458874311180387,
+                    "p_two_sided": 0.0846915308469153,
+                    "p_one_sided": 0.025597440255974404,
+                    "nperm": 10000,
+                    "seed": 408
+                  }
+                }
+              },
+              "numeral_summary": {
+                "clean": {
+                  "median_effect": 0.7400901260629762,
+                  "max_effect": 1.0,
+                  "min_effect": 0.3329526682467847,
+                  "n_series": 8,
+                  "frac_p_lt_0.01": 1.0
+                },
+                "degraded30": {
+                  "median_effect": 0.2756360955790439,
+                  "max_effect": 0.37952839560435214,
+                  "min_effect": 0.07156715121776758,
+                  "n_series": 8,
+                  "frac_p_lt_0.01": 0.875
+                }
+              },
+              "gate": {
+                "test_p_two_sided": 0.4871512848715128,
+                "test_effect": -0.02190745403415134,
+                "clean_control_median_effect": 0.7400901260629762,
+                "effect_ratio_to_control": -0.029601062441802092,
+                "passes_p": false,
+                "passes_effect": false,
+                "passes": false,
+                "measured_power_frac_controls_p_lt_0.01": 1.0
+              }
+            }
+          }
+        },
+        "B": {
+          "description": "(ring rank outer-first, index within ring)",
+          "reps": {
+            "unit": {
+              "FIT": {
+                "n_items": 65,
+                "n_signs": 5,
+                "n_same_pairs": 88,
+                "n_cross_pairs": 1687,
+                "mean_sim_same_slot": 0.3997961634325268,
+                "mean_sim_diff_slot": 0.4083469823718665,
+                "effect": -0.008550818939339733,
+                "null_mean": -0.0025495478930597894,
+                "null_sd": 0.01727024586065143,
+                "z": -0.34749192887596664,
+                "p_two_sided": 0.6317368263173683,
+                "p_one_sided": 0.6226377362263774,
+                "nperm": 10000,
+                "seed": 408
+              },
+              "TEST": {
+                "n_items": 26,
+                "n_signs": 5,
+                "n_same_pairs": 27,
+                "n_cross_pairs": 260,
+                "mean_sim_same_slot": 0.4013482402371292,
+                "mean_sim_diff_slot": 0.3699258776511999,
+                "effect": 0.03142236258592929,
+                "null_mean": -0.00295514890979872,
+                "null_sd": 0.037533892987650065,
+                "z": 0.9159058322844205,
+                "p_two_sided": 0.41445855414458554,
+                "p_one_sided": 0.18118188181181882,
+                "nperm": 10000,
+                "seed": 408
+              },
+              "numeral_controls": {
+                "clean": {
+                  "English": {
+                    "n_items": 26,
+                    "n_signs": 5,
+                    "n_same_pairs": 27,
+                    "n_cross_pairs": 260,
+                    "mean_sim_same_slot": 1.0,
+                    "mean_sim_diff_slot": 0.20940273365166082,
+                    "effect": 0.7905972663483392,
+                    "null_mean": 0.015552961066027231,
+                    "null_sd": 0.0684671463807711,
+                    "z": 11.319944619453016,
+                    "p_two_sided": 9.999000099990002e-05,
+                    "p_one_sided": 9.999000099990002e-05,
+                    "nperm": 10000,
+                    "seed": 408
+                  },
+                  "Latin": {
+                    "n_items": 26,
+                    "n_signs": 5,
+                    "n_same_pairs": 27,
+                    "n_cross_pairs": 260,
+                    "mean_sim_same_slot": 1.0,
+                    "mean_sim_diff_slot": 0.23352651163810006,
+                    "effect": 0.7664734883619,
+                    "null_mean": 0.016795398404029348,
+                    "null_sd": 0.06317558475227457,
+                    "z": 11.866579358110007,
+                    "p_two_sided": 9.999000099990002e-05,
+                    "p_one_sided": 9.999000099990002e-05,
+                    "nperm": 10000,
+                    "seed": 408
+                  },
+                  "Italian": {
+                    "n_items": 26,
+                    "n_signs": 5,
+                    "n_same_pairs": 27,
+                    "n_cross_pairs": 260,
+                    "mean_sim_same_slot": 1.0,
+                    "mean_sim_diff_slot": 0.242220678701366,
+                    "effect": 0.757779321298634,
+                    "null_mean": 0.025651258670857477,
+                    "null_sd": 0.06574815699519929,
+                    "z": 11.135339697525424,
+                    "p_two_sided": 9.999000099990002e-05,
+                    "p_one_sided": 9.999000099990002e-05,
+                    "nperm": 10000,
+                    "seed": 408
+                  },
+                  "German": {
+                    "n_items": 26,
+                    "n_signs": 5,
+                    "n_same_pairs": 27,
+                    "n_cross_pairs": 260,
+                    "mean_sim_same_slot": 1.0,
+                    "mean_sim_diff_slot": 0.2942747524292593,
+                    "effect": 0.7057252475707407,
+                    "null_mean": 0.016154797469436964,
+                    "null_sd": 0.06019123875893454,
+                    "z": 11.456325942435381,
+                    "p_two_sided": 9.999000099990002e-05,
+                    "p_one_sided": 9.999000099990002e-05,
+                    "nperm": 10000,
+                    "seed": 408
+                  },
+                  "French": {
+                    "n_items": 26,
+                    "n_signs": 5,
+                    "n_same_pairs": 27,
+                    "n_cross_pairs": 260,
+                    "mean_sim_same_slot": 1.0,
+                    "mean_sim_diff_slot": 0.1419482996736215,
+                    "effect": 0.8580517003263786,
+                    "null_mean": 0.014141390286359348,
+                    "null_sd": 0.07419820081264397,
+                    "z": 11.373730101231917,
+                    "p_two_sided": 9.999000099990002e-05,
+                    "p_one_sided": 9.999000099990002e-05,
+                    "nperm": 10000,
+                    "seed": 408
+                  },
+                  "Roman": {
+                    "n_items": 26,
+                    "n_signs": 5,
+                    "n_same_pairs": 27,
+                    "n_cross_pairs": 260,
+                    "mean_sim_same_slot": 1.0,
+                    "mean_sim_diff_slot": 0.38724708767627275,
+                    "effect": 0.6127529123237272,
+                    "null_mean": 0.016039204911021232,
+                    "null_sd": 0.07986957497092073,
+                    "z": 7.471101575662074,
+                    "p_two_sided": 9.999000099990002e-05,
+                    "p_one_sided": 9.999000099990002e-05,
+                    "nperm": 10000,
+                    "seed": 408
+                  },
+                  "GreekMilesian": {
+                    "n_items": 26,
+                    "n_signs": 5,
+                    "n_same_pairs": 27,
+                    "n_cross_pairs": 260,
+                    "mean_sim_same_slot": 1.0,
+                    "mean_sim_diff_slot": 0.03218884120171671,
+                    "effect": 0.9678111587982833,
+                    "null_mean": 0.01587818576802843,
+                    "null_sd": 0.07716877547682179,
+                    "z": 12.335727334641652,
+                    "p_two_sided": 9.999000099990002e-05,
+                    "p_one_sided": 9.999000099990002e-05,
+                    "nperm": 10000,
+                    "seed": 408
+                  },
+                  "LatinOrdinalAbbrev": {
+                    "n_items": 26,
+                    "n_signs": 5,
+                    "n_same_pairs": 27,
+                    "n_cross_pairs": 260,
+                    "mean_sim_same_slot": 1.0,
+                    "mean_sim_diff_slot": 0.623547244362696,
+                    "effect": 0.37645275563730396,
+                    "null_mean": 0.01417408719435332,
+                    "null_sd": 0.045402363088520394,
+                    "z": 7.979291028015891,
+                    "p_two_sided": 9.999000099990002e-05,
+                    "p_one_sided": 9.999000099990002e-05,
+                    "nperm": 10000,
+                    "seed": 408
+                  }
+                },
+                "degraded30": {
+                  "English": {
+                    "n_items": 26,
+                    "n_signs": 5,
+                    "n_same_pairs": 27,
+                    "n_cross_pairs": 260,
+                    "mean_sim_same_slot": 0.49540541762763984,
+                    "mean_sim_diff_slot": 0.21023849369927572,
+                    "effect": 0.2851669239283641,
+                    "null_mean": 0.005124045790367279,
+                    "null_sd": 0.04510748841559639,
+                    "z": 6.208345620084869,
+                    "p_two_sided": 9.999000099990002e-05,
+                    "p_one_sided": 9.999000099990002e-05,
+                    "nperm": 10000,
+                    "seed": 408
+                  },
+                  "Latin": {
+                    "n_items": 26,
+                    "n_signs": 5,
+                    "n_same_pairs": 27,
+                    "n_cross_pairs": 260,
+                    "mean_sim_same_slot": 0.4673721340388007,
+                    "mean_sim_diff_slot": 0.21400061561337938,
+                    "effect": 0.25337151842542127,
+                    "null_mean": 0.0023276057383563257,
+                    "null_sd": 0.041314126143367255,
+                    "z": 6.0764667226870195,
+                    "p_two_sided": 9.999000099990002e-05,
+                    "p_one_sided": 9.999000099990002e-05,
+                    "nperm": 10000,
+                    "seed": 408
+                  },
+                  "Italian": {
+                    "n_items": 26,
+                    "n_signs": 5,
+                    "n_same_pairs": 27,
+                    "n_cross_pairs": 260,
+                    "mean_sim_same_slot": 0.5044046488490933,
+                    "mean_sim_diff_slot": 0.2411089164404384,
+                    "effect": 0.2632957324086549,
+                    "null_mean": 0.012271430073690656,
+                    "null_sd": 0.04447097026049946,
+                    "z": 5.6446778845734356,
+                    "p_two_sided": 9.999000099990002e-05,
+                    "p_one_sided": 9.999000099990002e-05,
+                    "nperm": 10000,
+                    "seed": 408
+                  },
+                  "German": {
+                    "n_items": 26,
+                    "n_signs": 5,
+                    "n_same_pairs": 27,
+                    "n_cross_pairs": 260,
+                    "mean_sim_same_slot": 0.49948693282026624,
+                    "mean_sim_diff_slot": 0.258002472686431,
+                    "effect": 0.24148446013383523,
+                    "null_mean": 0.003052478010048565,
+                    "null_sd": 0.04024488281687705,
+                    "z": 5.92452916830952,
+                    "p_two_sided": 9.999000099990002e-05,
+                    "p_one_sided": 9.999000099990002e-05,
+                    "nperm": 10000,
+                    "seed": 408
+                  },
+                  "French": {
+                    "n_items": 26,
+                    "n_signs": 5,
+                    "n_same_pairs": 27,
+                    "n_cross_pairs": 260,
+                    "mean_sim_same_slot": 0.4334961334961335,
+                    "mean_sim_diff_slot": 0.190754949108435,
+                    "effect": 0.24274118438769848,
+                    "null_mean": -0.002384202535954456,
+                    "null_sd": 0.04781112245517729,
+                    "z": 5.126953192815267,
+                    "p_two_sided": 9.999000099990002e-05,
+                    "p_one_sided": 9.999000099990002e-05,
+                    "nperm": 10000,
+                    "seed": 408
+                  },
+                  "Roman": {
+                    "n_items": 26,
+                    "n_signs": 5,
+                    "n_same_pairs": 27,
+                    "n_cross_pairs": 260,
+                    "mean_sim_same_slot": 0.46764470097803434,
+                    "mean_sim_diff_slot": 0.2498299942349823,
+                    "effect": 0.21781470674305203,
+                    "null_mean": 0.008077576778709853,
+                    "null_sd": 0.05517287138771517,
+                    "z": 3.801453951715886,
+                    "p_two_sided": 0.0007999200079992001,
+                    "p_one_sided": 0.0007999200079992001,
+                    "nperm": 10000,
+                    "seed": 408
+                  },
+                  "GreekMilesian": {
+                    "n_items": 26,
+                    "n_signs": 5,
+                    "n_same_pairs": 27,
+                    "n_cross_pairs": 260,
+                    "mean_sim_same_slot": 0.47138581583026024,
+                    "mean_sim_diff_slot": 0.08692456394757779,
+                    "effect": 0.38446125188268243,
+                    "null_mean": 0.013023186456126873,
+                    "null_sd": 0.049563091075689236,
+                    "z": 7.494247379755263,
+                    "p_two_sided": 9.999000099990002e-05,
+                    "p_one_sided": 9.999000099990002e-05,
+                    "nperm": 10000,
+                    "seed": 408
+                  },
+                  "LatinOrdinalAbbrev": {
+                    "n_items": 26,
+                    "n_signs": 5,
+                    "n_same_pairs": 27,
+                    "n_cross_pairs": 260,
+                    "mean_sim_same_slot": 0.47554914221580885,
+                    "mean_sim_diff_slot": 0.36678852449823407,
+                    "effect": 0.10876061771757478,
+                    "null_mean": 0.002749820866594894,
+                    "null_sd": 0.05071160528696761,
+                    "z": 2.09046422906718,
+                    "p_two_sided": 0.03189681031896811,
+                    "p_one_sided": 0.0268973102689731,
+                    "nperm": 10000,
+                    "seed": 408
+                  }
+                }
+              },
+              "numeral_summary": {
+                "clean": {
+                  "median_effect": 0.762126404830267,
+                  "max_effect": 0.9678111587982833,
+                  "min_effect": 0.37645275563730396,
+                  "n_series": 8,
+                  "frac_p_lt_0.01": 1.0
+                },
+                "degraded30": {
+                  "median_effect": 0.24805635140655988,
+                  "max_effect": 0.38446125188268243,
+                  "min_effect": 0.10876061771757478,
+                  "n_series": 8,
+                  "frac_p_lt_0.01": 0.875
+                }
+              },
+              "gate": {
+                "test_p_two_sided": 0.41445855414458554,
+                "test_effect": 0.03142236258592929,
+                "clean_control_median_effect": 0.762126404830267,
+                "effect_ratio_to_control": 0.041229856867283525,
+                "passes_p": false,
+                "passes_effect": false,
+                "passes": false,
+                "measured_power_frac_controls_p_lt_0.01": 1.0
+              }
+            },
+            "char": {
+              "FIT": {
+                "n_items": 65,
+                "n_signs": 5,
+                "n_same_pairs": 88,
+                "n_cross_pairs": 1687,
+                "mean_sim_same_slot": 0.4616044290676641,
+                "mean_sim_diff_slot": 0.46586205333947356,
+                "effect": -0.004257624271809479,
+                "null_mean": -0.0027487663884698077,
+                "null_sd": 0.0162664019266226,
+                "z": -0.09275916641836947,
+                "p_two_sided": 0.8017198280171983,
+                "p_one_sided": 0.5243475652434757,
+                "nperm": 10000,
+                "seed": 408
+              },
+              "TEST": {
+                "n_items": 26,
+                "n_signs": 5,
+                "n_same_pairs": 27,
+                "n_cross_pairs": 260,
+                "mean_sim_same_slot": 0.4079619968508858,
+                "mean_sim_diff_slot": 0.3851368469394225,
+                "effect": 0.022825149911463283,
+                "null_mean": -0.0072026058347951566,
+                "null_sd": 0.03698396714206114,
+                "z": 0.81191278455654,
+                "p_two_sided": 0.5520447955204479,
+                "p_one_sided": 0.20657934206579343,
+                "nperm": 10000,
+                "seed": 408
+              },
+              "numeral_controls": {
+                "clean": {
+                  "English": {
+                    "n_items": 26,
+                    "n_signs": 5,
+                    "n_same_pairs": 27,
+                    "n_cross_pairs": 260,
+                    "mean_sim_same_slot": 1.0,
+                    "mean_sim_diff_slot": 0.22814193436511054,
+                    "effect": 0.7718580656348895,
+                    "null_mean": 0.010960839014391488,
+                    "null_sd": 0.06668900108823779,
+                    "z": 11.409635985006537,
+                    "p_two_sided": 9.999000099990002e-05,
+                    "p_one_sided": 9.999000099990002e-05,
+                    "nperm": 10000,
+                    "seed": 408
+                  },
+                  "Latin": {
+                    "n_items": 26,
+                    "n_signs": 5,
+                    "n_same_pairs": 27,
+                    "n_cross_pairs": 260,
+                    "mean_sim_same_slot": 1.0,
+                    "mean_sim_diff_slot": 0.24429173592263773,
+                    "effect": 0.7557082640773622,
+                    "null_mean": 0.01760436941853199,
+                    "null_sd": 0.06441026712062636,
+                    "z": 11.459413656467577,
+                    "p_two_sided": 9.999000099990002e-05,
+                    "p_one_sided": 9.999000099990002e-05,
+                    "nperm": 10000,
+                    "seed": 408
+                  },
+                  "Italian": {
+                    "n_items": 26,
+                    "n_signs": 5,
+                    "n_same_pairs": 27,
+                    "n_cross_pairs": 260,
+                    "mean_sim_same_slot": 1.0,
+                    "mean_sim_diff_slot": 0.24800180744386785,
+                    "effect": 0.7519981925561321,
+                    "null_mean": 0.022775205343588404,
+                    "null_sd": 0.06516117556173298,
+                    "z": 11.191065552856482,
+                    "p_two_sided": 9.999000099990002e-05,
+                    "p_one_sided": 9.999000099990002e-05,
+                    "nperm": 10000,
+                    "seed": 408
+                  },
+                  "German": {
+                    "n_items": 26,
+                    "n_signs": 5,
+                    "n_same_pairs": 27,
+                    "n_cross_pairs": 260,
+                    "mean_sim_same_slot": 1.0,
+                    "mean_sim_diff_slot": 0.3274696691005708,
+                    "effect": 0.6725303308994293,
+                    "null_mean": 0.020560405219393844,
+                    "null_sd": 0.057246265448719684,
+                    "z": 11.388863894782096,
+                    "p_two_sided": 9.999000099990002e-05,
+                    "p_one_sided": 9.999000099990002e-05,
+                    "nperm": 10000,
+                    "seed": 408
+                  },
+                  "French": {
+                    "n_items": 26,
+                    "n_signs": 5,
+                    "n_same_pairs": 27,
+                    "n_cross_pairs": 260,
+                    "mean_sim_same_slot": 1.0,
+                    "mean_sim_diff_slot": 0.21057695285163117,
+                    "effect": 0.7894230471483689,
+                    "null_mean": 0.017417009021109917,
+                    "null_sd": 0.0691781202282612,
+                    "z": 11.159685108238499,
+                    "p_two_sided": 9.999000099990002e-05,
+                    "p_one_sided": 9.999000099990002e-05,
+                    "nperm": 10000,
+                    "seed": 408
+                  },
+                  "Roman": {
+                    "n_items": 26,
+                    "n_signs": 5,
+                    "n_same_pairs": 27,
+                    "n_cross_pairs": 260,
+                    "mean_sim_same_slot": 1.0,
+                    "mean_sim_diff_slot": 0.38724708767627275,
+                    "effect": 0.6127529123237272,
+                    "null_mean": 0.016039204911021232,
+                    "null_sd": 0.07986957497092073,
+                    "z": 7.471101575662074,
+                    "p_two_sided": 9.999000099990002e-05,
+                    "p_one_sided": 9.999000099990002e-05,
+                    "nperm": 10000,
+                    "seed": 408
+                  },
+                  "GreekMilesian": {
+                    "n_items": 26,
+                    "n_signs": 5,
+                    "n_same_pairs": 27,
+                    "n_cross_pairs": 260,
+                    "mean_sim_same_slot": 1.0,
+                    "mean_sim_diff_slot": 0.03218884120171671,
+                    "effect": 0.9678111587982833,
+                    "null_mean": 0.01587818576802843,
+                    "null_sd": 0.07716877547682179,
+                    "z": 12.335727334641652,
+                    "p_two_sided": 9.999000099990002e-05,
+                    "p_one_sided": 9.999000099990002e-05,
+                    "nperm": 10000,
+                    "seed": 408
+                  },
+                  "LatinOrdinalAbbrev": {
+                    "n_items": 26,
+                    "n_signs": 5,
+                    "n_same_pairs": 27,
+                    "n_cross_pairs": 260,
+                    "mean_sim_same_slot": 1.0,
+                    "mean_sim_diff_slot": 0.623547244362696,
+                    "effect": 0.37645275563730396,
+                    "null_mean": 0.01417408719435332,
+                    "null_sd": 0.045402363088520394,
+                    "z": 7.979291028015891,
+                    "p_two_sided": 9.999000099990002e-05,
+                    "p_one_sided": 9.999000099990002e-05,
+                    "nperm": 10000,
+                    "seed": 408
+                  }
+                },
+                "degraded30": {
+                  "English": {
+                    "n_items": 26,
+                    "n_signs": 5,
+                    "n_same_pairs": 27,
+                    "n_cross_pairs": 260,
+                    "mean_sim_same_slot": 0.49483191705413926,
+                    "mean_sim_diff_slot": 0.22595466846852055,
+                    "effect": 0.2688772485856187,
+                    "null_mean": 0.0015340299138377803,
+                    "null_sd": 0.0444223994658538,
+                    "z": 6.018207523375224,
+                    "p_two_sided": 9.999000099990002e-05,
+                    "p_one_sided": 9.999000099990002e-05,
+                    "nperm": 10000,
+                    "seed": 408
+                  },
+                  "Latin": {
+                    "n_items": 26,
+                    "n_signs": 5,
+                    "n_same_pairs": 27,
+                    "n_cross_pairs": 260,
+                    "mean_sim_same_slot": 0.4777277914532816,
+                    "mean_sim_diff_slot": 0.2270197001089651,
+                    "effect": 0.2507080913443165,
+                    "null_mean": 0.0044155047696004136,
+                    "null_sd": 0.043170479335392496,
+                    "z": 5.705115865433483,
+                    "p_two_sided": 9.999000099990002e-05,
+                    "p_one_sided": 9.999000099990002e-05,
+                    "nperm": 10000,
+                    "seed": 408
+                  },
+                  "Italian": {
+                    "n_items": 26,
+                    "n_signs": 5,
+                    "n_same_pairs": 27,
+                    "n_cross_pairs": 260,
+                    "mean_sim_same_slot": 0.5135589477092743,
+                    "mean_sim_diff_slot": 0.2566800624607664,
+                    "effect": 0.25687888524850794,
+                    "null_mean": 0.013051629801272677,
+                    "null_sd": 0.04475012610265391,
+                    "z": 5.448638399094368,
+                    "p_two_sided": 9.999000099990002e-05,
+                    "p_one_sided": 9.999000099990002e-05,
+                    "nperm": 10000,
+                    "seed": 408
+                  },
+                  "German": {
+                    "n_items": 26,
+                    "n_signs": 5,
+                    "n_same_pairs": 27,
+                    "n_cross_pairs": 260,
+                    "mean_sim_same_slot": 0.5477886311219646,
+                    "mean_sim_diff_slot": 0.279378113238848,
+                    "effect": 0.26841051788311665,
+                    "null_mean": 0.008116267145594797,
+                    "null_sd": 0.04028147653771705,
+                    "z": 6.461884546208197,
+                    "p_two_sided": 9.999000099990002e-05,
+                    "p_one_sided": 9.999000099990002e-05,
+                    "nperm": 10000,
+                    "seed": 408
+                  },
+                  "French": {
+                    "n_items": 26,
+                    "n_signs": 5,
+                    "n_same_pairs": 27,
+                    "n_cross_pairs": 260,
+                    "mean_sim_same_slot": 0.46484503151169815,
+                    "mean_sim_diff_slot": 0.22838635695171125,
+                    "effect": 0.2364586745599869,
+                    "null_mean": 0.0024525826994513046,
+                    "null_sd": 0.04668197452897305,
+                    "z": 5.01277193652767,
+                    "p_two_sided": 9.999000099990002e-05,
+                    "p_one_sided": 9.999000099990002e-05,
+                    "nperm": 10000,
+                    "seed": 408
+                  },
+                  "Roman": {
+                    "n_items": 26,
+                    "n_signs": 5,
+                    "n_same_pairs": 27,
+                    "n_cross_pairs": 260,
+                    "mean_sim_same_slot": 0.46801881246325694,
+                    "mean_sim_diff_slot": 0.24991556829410097,
+                    "effect": 0.21810324416915597,
+                    "null_mean": 0.00853555848615663,
+                    "null_sd": 0.055562739411164984,
+                    "z": 3.771730622066629,
+                    "p_two_sided": 0.0010998900109989002,
+                    "p_one_sided": 0.0010998900109989002,
+                    "nperm": 10000,
+                    "seed": 408
+                  },
+                  "GreekMilesian": {
+                    "n_items": 26,
+                    "n_signs": 5,
+                    "n_same_pairs": 27,
+                    "n_cross_pairs": 260,
+                    "mean_sim_same_slot": 0.47175992731548283,
+                    "mean_sim_diff_slot": 0.08702345325606327,
+                    "effect": 0.3847364740594196,
+                    "null_mean": 0.013597733136600142,
+                    "null_sd": 0.049909865270361044,
+                    "z": 7.436179979897082,
+                    "p_two_sided": 9.999000099990002e-05,
+                    "p_one_sided": 9.999000099990002e-05,
+                    "nperm": 10000,
+                    "seed": 408
+                  },
+                  "LatinOrdinalAbbrev": {
+                    "n_items": 26,
+                    "n_signs": 5,
+                    "n_same_pairs": 27,
+                    "n_cross_pairs": 260,
+                    "mean_sim_same_slot": 0.4764815431482098,
+                    "mean_sim_diff_slot": 0.36714049882375316,
+                    "effect": 0.10934104432445663,
+                    "null_mean": 0.003311088048523971,
+                    "null_sd": 0.05107818298316937,
+                    "z": 2.0758364938484655,
+                    "p_two_sided": 0.033096690330966905,
+                    "p_one_sided": 0.028097190280971903,
+                    "nperm": 10000,
+                    "seed": 408
+                  }
+                }
+              },
+              "numeral_summary": {
+                "clean": {
+                  "median_effect": 0.7538532283167472,
+                  "max_effect": 0.9678111587982833,
+                  "min_effect": 0.37645275563730396,
+                  "n_series": 8,
+                  "frac_p_lt_0.01": 1.0
+                },
+                "degraded30": {
+                  "median_effect": 0.25379348829641224,
+                  "max_effect": 0.3847364740594196,
+                  "min_effect": 0.10934104432445663,
+                  "n_series": 8,
+                  "frac_p_lt_0.01": 0.875
+                }
+              },
+              "gate": {
+                "test_p_two_sided": 0.5520447955204479,
+                "test_effect": 0.022825149911463283,
+                "clean_control_median_effect": 0.7538532283167472,
+                "effect_ratio_to_control": 0.030277975942915005,
+                "passes_p": false,
+                "passes_effect": false,
+                "passes": false,
+                "measured_power_frac_controls_p_lt_0.01": 1.0
+              }
+            }
+          }
+        },
+        "C": {
+          "description": "clock position rounded to nearest 30 minutes",
+          "reps": {
+            "unit": {
+              "FIT": {
+                "effect": null,
+                "note": "no design"
+              },
+              "TEST": {
+                "effect": null,
+                "note": "no design"
+              },
+              "numeral_controls": {
+                "clean": {
+                  "English": {
+                    "effect": null
+                  },
+                  "Latin": {
+                    "effect": null
+                  },
+                  "Italian": {
+                    "effect": null
+                  },
+                  "German": {
+                    "effect": null
+                  },
+                  "French": {
+                    "effect": null
+                  },
+                  "Roman": {
+                    "effect": null
+                  },
+                  "GreekMilesian": {
+                    "effect": null
+                  },
+                  "LatinOrdinalAbbrev": {
+                    "effect": null
+                  }
+                },
+                "degraded30": {
+                  "English": {
+                    "effect": null
+                  },
+                  "Latin": {
+                    "effect": null
+                  },
+                  "Italian": {
+                    "effect": null
+                  },
+                  "German": {
+                    "effect": null
+                  },
+                  "French": {
+                    "effect": null
+                  },
+                  "Roman": {
+                    "effect": null
+                  },
+                  "GreekMilesian": {
+                    "effect": null
+                  },
+                  "LatinOrdinalAbbrev": {
+                    "effect": null
+                  }
+                }
+              },
+              "numeral_summary": {
+                "clean": {
+                  "median_effect": null,
+                  "max_effect": null,
+                  "min_effect": null,
+                  "n_series": 0,
+                  "frac_p_lt_0.01": null
+                },
+                "degraded30": {
+                  "median_effect": null,
+                  "max_effect": null,
+                  "min_effect": null,
+                  "n_series": 0,
+                  "frac_p_lt_0.01": null
+                }
+              },
+              "gate": {
+                "test_p_two_sided": null,
+                "test_effect": null,
+                "clean_control_median_effect": null,
+                "effect_ratio_to_control": null,
+                "passes_p": false,
+                "passes_effect": false,
+                "passes": false,
+                "measured_power_frac_controls_p_lt_0.01": null
+              }
+            },
+            "char": {
+              "FIT": {
+                "effect": null,
+                "note": "no design"
+              },
+              "TEST": {
+                "effect": null,
+                "note": "no design"
+              },
+              "numeral_controls": {
+                "clean": {
+                  "English": {
+                    "effect": null
+                  },
+                  "Latin": {
+                    "effect": null
+                  },
+                  "Italian": {
+                    "effect": null
+                  },
+                  "German": {
+                    "effect": null
+                  },
+                  "French": {
+                    "effect": null
+                  },
+                  "Roman": {
+                    "effect": null
+                  },
+                  "GreekMilesian": {
+                    "effect": null
+                  },
+                  "LatinOrdinalAbbrev": {
+                    "effect": null
+                  }
+                },
+                "degraded30": {
+                  "English": {
+                    "effect": null
+                  },
+                  "Latin": {
+                    "effect": null
+                  },
+                  "Italian": {
+                    "effect": null
+                  },
+                  "German": {
+                    "effect": null
+                  },
+                  "French": {
+                    "effect": null
+                  },
+                  "Roman": {
+                    "effect": null
+                  },
+                  "GreekMilesian": {
+                    "effect": null
+                  },
+                  "LatinOrdinalAbbrev": {
+                    "effect": null
+                  }
+                }
+              },
+              "numeral_summary": {
+                "clean": {
+                  "median_effect": null,
+                  "max_effect": null,
+                  "min_effect": null,
+                  "n_series": 0,
+                  "frac_p_lt_0.01": null
+                },
+                "degraded30": {
+                  "median_effect": null,
+                  "max_effect": null,
+                  "min_effect": null,
+                  "n_series": 0,
+                  "frac_p_lt_0.01": null
+                }
+              },
+              "gate": {
+                "test_p_two_sided": null,
+                "test_effect": null,
+                "clean_control_median_effect": null,
+                "effect_ratio_to_control": null,
+                "passes_p": false,
+                "passes_effect": false,
+                "passes": false,
+                "measured_power_frac_controls_p_lt_0.01": null
+              }
+            }
+          }
+        }
+      },
+      "gate_Z2": {
+        "unit": {
+          "conventions_passing": [],
+          "passes": false,
+          "measured_power_by_convention": {
+            "A": 1.0,
+            "B": 1.0,
+            "C": null
+          }
+        },
+        "char": {
+          "conventions_passing": [],
+          "passes": false,
+          "measured_power_by_convention": {
+            "A": 1.0,
+            "B": 1.0,
+            "C": null
+          }
+        }
+      }
+    },
+    "Z3": {
+      "transcription": "GC2a",
+      "n_label_loci": 91,
+      "n_distinct_label_strings": 78,
+      "distinct_over_total": 0.8571428571428571,
+      "gate_Z3_fixed_inventory_threshold": 0.5,
+      "gate_Z3_passes": false,
+      "n_label_word_tokens": 110,
+      "n_label_word_types": 81,
+      "label_word_TTR": 0.7363636363636363,
+      "repeated_label_strings": [
+        {
+          "string": "ohae",
+          "count": 4,
+          "n_distinct_signs": 2,
+          "scope": "both",
+          "occurrences": [
+            {
+              "sign": "Gemini",
+              "page": "f72r2",
+              "locus": 9,
+              "ring": 1,
+              "idx_in_sign": 4,
+              "clock": null
+            },
+            {
+              "sign": "Gemini",
+              "page": "f72r2",
+              "locus": 11,
+              "ring": 1,
+              "idx_in_sign": 5,
+              "clock": null
+            },
+            {
+              "sign": "Sagittarius",
+              "page": "f73v",
+              "locus": 1,
+              "ring": 0,
+              "idx_in_sign": 0,
+              "clock": null
+            },
+            {
+              "sign": "Sagittarius",
+              "page": "f73v",
+              "locus": 27,
+              "ring": 2,
+              "idx_in_sign": 4,
+              "clock": null
+            }
+          ]
+        },
+        {
+          "string": "ay",
+          "count": 3,
+          "n_distinct_signs": 3,
+          "scope": "across-sign only",
+          "occurrences": [
+            {
+              "sign": "Pisces",
+              "page": "f70v2",
+              "locus": 7,
+              "ring": 0,
+              "idx_in_sign": 1,
+              "clock": null
+            },
+            {
+              "sign": "Taurus",
+              "page": "f72r1",
+              "locus": 4,
+              "ring": 2,
+              "idx_in_sign": 9,
+              "clock": null
+            },
+            {
+              "sign": "Scorpius",
+              "page": "f73r",
+              "locus": 30,
+              "ring": 2,
+              "idx_in_sign": 3,
+              "clock": null
+            }
+          ]
+        },
+        {
+          "string": "ohcos",
+          "count": 3,
+          "n_distinct_signs": 2,
+          "scope": "both",
+          "occurrences": [
+            {
+              "sign": "Scorpius",
+              "page": "f73r",
+              "locus": 20,
+              "ring": 1,
+              "idx_in_sign": 1,
+              "clock": null
+            },
+            {
+              "sign": "Scorpius",
+              "page": "f73r",
+              "locus": 32,
+              "ring": 2,
+              "idx_in_sign": 4,
+              "clock": null
+            },
+            {
+              "sign": "Sagittarius",
+              "page": "f73v",
+              "locus": 19,
+              "ring": 1,
+              "idx_in_sign": 3,
+              "clock": null
+            }
+          ]
+        },
+        {
+          "string": "okae",
+          "count": 3,
+          "n_distinct_signs": 3,
+          "scope": "across-sign only",
+          "occurrences": [
+            {
+              "sign": "Aries",
+              "page": "f71r",
+              "locus": 17,
+              "ring": 3,
+              "idx_in_sign": 10,
+              "clock": null
+            },
+            {
+              "sign": "Gemini",
+              "page": "f72r2",
+              "locus": 23,
+              "ring": 2,
+              "idx_in_sign": 9,
+              "clock": null
+            },
+            {
+              "sign": "Scorpius",
+              "page": "f73r",
+              "locus": 28,
+              "ring": 2,
+              "idx_in_sign": 2,
+              "clock": null
+            }
+          ]
+        },
+        {
+          "string": "okay",
+          "count": 3,
+          "n_distinct_signs": 3,
+          "scope": "across-sign only",
+          "occurrences": [
+            {
+              "sign": "Pisces",
+              "page": "f70v2",
+              "locus": 4,
+              "ring": 0,
+              "idx_in_sign": 0,
+              "clock": null
+            },
+            {
+              "sign": "Taurus",
+              "page": "f71v",
+              "locus": 16,
+              "ring": 1,
+              "idx_in_sign": 8,
+              "clock": null
+            },
+            {
+              "sign": "Gemini",
+              "page": "f72r2",
+              "locus": 7,
+              "ring": 1,
+              "idx_in_sign": 2,
+              "clock": null
+            }
+          ]
+        },
+        {
+          "string": "oham",
+          "count": 2,
+          "n_distinct_signs": 2,
+          "scope": "across-sign only",
+          "occurrences": [
+            {
+              "sign": "Cancer",
+              "page": "f72r3",
+              "locus": 12,
+              "ring": 0,
+              "idx_in_sign": 5,
+              "clock": null
+            },
+            {
+              "sign": "Virgo",
+              "page": "f72v2",
+              "locus": 21,
+              "ring": 1,
+              "idx_in_sign": 4,
+              "clock": null
+            }
+          ]
+        },
+        {
+          "string": "okaeam",
+          "count": 2,
+          "n_distinct_signs": 2,
+          "scope": "across-sign only",
+          "occurrences": [
+            {
+              "sign": "Aries",
+              "page": "f70v1",
+              "locus": 14,
+              "ring": 1,
+              "idx_in_sign": 3,
+              "clock": null
+            },
+            {
+              "sign": "Taurus",
+              "page": "f71v",
+              "locus": 15,
+              "ring": 1,
+              "idx_in_sign": 7,
+              "clock": null
+            }
+          ]
+        }
+      ],
+      "n_repeated_strings": 7,
+      "n_strings_shared_by_ge2_signs": 7,
+      "n_strings_shared_by_ge3_signs": 3,
+      "n_strings_repeated_within_sign_only": 0,
+      "n_label_word_types_in_ge2_signs": 11,
+      "n_label_word_types_in_ge3_signs": 4,
+      "zodiac_pages": {
+        "n_pages": 12,
+        "n_label_tokens": 110,
+        "n_text_tokens": 336,
+        "n_distinct_glyph_units_labels": 21,
+        "n_distinct_glyph_units_text": 21,
+        "n_shared": 18,
+        "units_only_in_labels": [
+          "i",
+          "u",
+          "x"
+        ],
+        "units_only_in_text": [
+          "ai",
+          "b",
+          "ch"
+        ],
+        "label_unit_tokens": 452,
+        "text_unit_tokens": 1061
+      },
+      "all_pages_with_both": {
+        "n_pages": 46,
+        "n_label_tokens": 297,
+        "n_text_tokens": 1801,
+        "n_distinct_glyph_units_labels": 24,
+        "n_distinct_glyph_units_text": 26,
+        "n_shared": 23,
+        "units_only_in_labels": [
+          "w"
+        ],
+        "units_only_in_text": [
+          "ai",
+          "q",
+          "sh"
+        ]
+      },
+      "ttr_resample": {
+        "label_TTR": 0.7363636363636363,
+        "n_label_tokens": 110,
+        "resample_mean_TTR": 0.5034818181818181,
+        "resample_sd_TTR": 0.02882307242700249,
+        "resample_min": 0.4090909090909091,
+        "resample_max": 0.5818181818181818,
+        "z": 8.079701384077504,
+        "p_one_sided_label_higher": 0.000999000999000999,
+        "p_one_sided_label_lower": 1.0,
+        "p_two_sided": 0.001998001998001998,
+        "ndraw": 1000,
+        "seed": 408,
+        "exact_length_match_failures": 12
+      }
+    }
+  },
+  "verdict": {
+    "Z2_gate": "FAIL",
+    "Z2_gate_char_level": "FAIL",
+    "Z3_gate": "FAIL"
+  }
+}

@@ -1,0 +1,146 @@
+==============================================================================
+A. R1(a) independent recomputation + the LENGTH confound
+==============================================================================
+TEST_even openers 0.8955 (n=134, meanlen 6.78) | line-init 0.0553 (n=380, meanlen 5.30) | all 0.0783 (n=5056, meanlen 5.25)
+          LENGTH-MATCHED null (same-length section tokens): obs 0.8955 vs 0.0962 +/- 0.0252 -> 31.8 SD p=0.00010
+          LENGTH-MATCHED null (same-length LINE-INITIAL tokens): 40.9 SD p=0.00010
+FIT_odd   openers 0.8609 (n=151, meanlen 6.36) | line-init 0.0597 (n=419, meanlen 5.22) | all 0.0927 (n=5780, meanlen 5.18)
+          LENGTH-MATCHED null (same-length section tokens): obs 0.8609 vs 0.1050 +/- 0.0246 -> 30.7 SD p=0.00010
+          LENGTH-MATCHED null (same-length LINE-INITIAL tokens): 46.0 SD p=0.00010
+ALL       openers 0.8772 (n=285, meanlen 6.56) | line-init 0.0576 (n=799, meanlen 5.26) | all 0.0860 (n=10836, meanlen 5.21)
+          LENGTH-MATCHED null (same-length section tokens): obs 0.8772 vs 0.0987 +/- 0.0177 -> 43.9 SD p=0.00010
+          LENGTH-MATCHED null (same-length LINE-INITIAL tokens): 57.7 SD p=0.00010
+
+  gallows rate by word length, all Recipes-B tokens:
+    {"1": [299, 0.0067], "2": [632, 0.0174], "3": [705, 0.1262], "4": [1761, 0.0835], "5": [2691, 0.0933], "6": [2363, 0.0838], "7": [1446, 0.0864], "8": [590, 0.0898], "9": [240, 0.1542], "10": [71, 0.1972], "11": [26, 0.1538], "12": [8, 0.125], "13": [3, 0.0], "14": [1, 0.0]}
+
+==============================================================================
+B. Does the clean parser DROP tokens more often at paragraph-initial position?  (illegible ?, extended @nnn, digits)
+==============================================================================
+TEST_even paragraph-first token dropped 1/134 (0.007) | internal-line-first dropped 5/380 (0.013) | overall kept 0.994
+FIT_odd   paragraph-first token dropped 2/151 (0.013) | internal-line-first dropped 2/419 (0.005) | overall kept 0.995
+ALL       paragraph-first token dropped 3/285 (0.011) | internal-line-first dropped 7/799 (0.009) | overall kept 0.995
+
+==============================================================================
+C. Scribe (hand $H), Currier language ($L) and page composition, FIT vs TEST
+==============================================================================
+TEST_even pages=11 hands(page)={'3': 11} langs(page)={'B': 11} hands(par)={'3': 134}
+FIT_odd   pages=12 hands(page)={'3': 11, '@': 1} langs(page)={'B': 12} hands(par)={'3': 138, '@': 13}
+ALL       pages=23 hands(page)={'3': 22, '@': 1} langs(page)={'B': 23} hands(par)={'3': 272, '@': 13}
+
+==============================================================================
+D. R1(b) anatomy: control-cell sparsity, attestation-vs-length curve, and what the SUPPLEMENTARY relaxed match actually substitutes
+==============================================================================
+TEST_even gallows openers 120  exact-matched 92  dropped 28
+          control cell size for matched openers: mean 8.8 median 5 ; 0.054 of openers sit in a 1-token cell ; 0.315 in a <=3-type cell
+          relaxed match hands the DROPPED openers a control that is on average -1.03 EVA chars SHORTER/LONGER than the opener
+          control-pool residue attestation by opener length: {"2": [2, 1.0], "3": [29, 0.9655], "4": [48, 0.5625], "5": [99, 0.7475], "6": [63, 0.5238], "7": [24, 0.375], "8": [9, 0.5556], "9": [2, 0.5]}
+FIT_odd   gallows openers 130  exact-matched 126  dropped 4
+          control cell size for matched openers: mean 10.8 median 6 ; 0.087 of openers sit in a 1-token cell ; 0.198 in a <=3-type cell
+          relaxed match hands the DROPPED openers a control that is on average -2.00 EVA chars SHORTER/LONGER than the opener
+          control-pool residue attestation by opener length: {"1": [2, 0.0], "2": [7, 1.0], "3": [47, 0.8936], "4": [86, 0.7907], "5": [122, 0.8033], "6": [80, 0.675], "7": [35, 0.6], "8": [11, 0.7273], "9": [8, 0.125], "10": [6, 0.1667], "11": [2, 0.0]}
+ALL       gallows openers 250  exact-matched 242  dropped 8
+          control cell size for matched openers: mean 17.4 median 11 ; 0.132 of openers sit in a 1-token cell ; 0.194 in a <=3-type cell
+          relaxed match hands the DROPPED openers a control that is on average -1.37 EVA chars SHORTER/LONGER than the opener
+          control-pool residue attestation by opener length: {"1": [2, 0.0], "2": [9, 1.0], "3": [76, 0.9211], "4": [134, 0.709], "5": [221, 0.7783], "6": [143, 0.6084], "7": [59, 0.5085], "8": [20, 0.65], "9": [10, 0.2], "10": [6, 0.1667], "11": [2, 0.0]}
+
+==============================================================================
+E. R1(b) FREQUENCY confound. The pre-registered control is drawn from
+   TOKEN positions, so it is frequency-weighted; the openers are one per
+   paragraph and far more type-diverse. Frequent words have frequent
+   residues. Below: (E1) how big the frequency gap is, (E2) the same test
+   with the control additionally matched on the word's own section
+   frequency band, (E3) the same test with a TYPE-drawn control.
+==============================================================================
+TEST_even E1 mean log2 section-freq: openers 0.689 vs matched control 0.894 +/- 0.104 -> -2.0 SD (p=0.0465); frac freq<=2: openers 0.761 vs ctrl 0.698 (1.6 SD)
+          E2 gallows+length+FREQ-BIN matched: n=82 (dropped 38) obs 0.5976 vs 0.5843 +/- 0.0338 -> 0.39 SD p=0.7207
+          E3 TYPE-drawn control (gallows+length): n=92 obs 0.6413 vs 0.6097 +/- 0.0422 -> 0.75 SD p=0.5273
+          E4 relaxed match with control length >= opener length (kills the short-control artefact): n=98 obs 0.6633 vs 0.6646 -> -0.03 SD p=1.0000
+FIT_odd   E1 mean log2 section-freq: openers 0.724 vs matched control 0.975 +/- 0.089 -> -2.8 SD (p=0.0045); frac freq<=2: openers 0.754 vs ctrl 0.659 (2.5 SD)
+          E2 gallows+length+FREQ-BIN matched: n=120 (dropped 10) obs 0.7000 vs 0.7748 +/- 0.0278 -> -2.68 SD p=0.0102
+          E3 TYPE-drawn control (gallows+length): n=126 obs 0.7143 vs 0.7751 +/- 0.0305 -> -1.99 SD p=0.0537
+          E4 relaxed match with control length >= opener length (kills the short-control artefact): n=127 obs 0.7165 vs 0.8044 -> -3.06 SD p=0.0031
+ALL       E1 mean log2 section-freq: openers 0.664 vs matched control 0.882 +/- 0.061 -> -3.6 SD (p=0.0010); frac freq<=2: openers 0.773 vs ctrl 0.703 (2.9 SD)
+          E2 gallows+length+FREQ-BIN matched: n=229 (dropped 21) obs 0.6463 vs 0.7069 +/- 0.0216 -> -2.81 SD p=0.0049
+          E3 TYPE-drawn control (gallows+length): n=242 obs 0.6653 vs 0.6896 +/- 0.0243 -> -1.00 SD p=0.3419
+          E4 relaxed match with control length >= opener length (kills the short-control artefact): n=244 obs 0.6680 vs 0.7350 -> -2.89 SD p=0.0040
+
+==============================================================================
+F. R2: is "tail" (and dotted/points) a property of the STAR or of the
+   PAGE / of the transcriber's commenting habit?
+==============================================================================
+TEST_even star paragraphs 130 over 13 pages; pages all-or-nothing: tail 13/13 dotted 2/13 8-point 3/13
+FIT_odd   star paragraphs 141 over 12 pages; pages all-or-nothing: tail 10/12 dotted 1/12 8-point 0/12
+ALL       star paragraphs 271 over 25 pages; pages all-or-nothing: tail 23/25 dotted 3/25 8-point 3/25
+
+  per-page star attribute table (ALL Recipes pages):
+    f58r    n=2   tail=0   dotted=0   8pt=0   7pt=1   unc=0   lang=A hand=3
+    f58v    n=1   tail=1   dotted=0   8pt=0   7pt=0   unc=0   lang=A hand=3
+    f103r   n=16  tail=1   dotted=0   8pt=8   7pt=8   unc=1   lang=B hand=3
+    f103v   n=13  tail=0   dotted=7   8pt=4   7pt=8   unc=0   lang=B hand=3
+    f104r   n=12  tail=12  dotted=2   8pt=4   7pt=6   unc=1   lang=B hand=3
+    f104v   n=12  tail=12  dotted=7   8pt=11  7pt=0   unc=1   lang=B hand=3
+    f105r   n=8   tail=8   dotted=5   8pt=2   7pt=6   unc=0   lang=B hand=3
+    f105v   n=8   tail=8   dotted=5   8pt=1   7pt=7   unc=0   lang=B hand=3
+    f106r   n=15  tail=15  dotted=8   8pt=7   7pt=7   unc=0   lang=B hand=3
+    f106v   n=14  tail=14  dotted=7   8pt=9   7pt=3   unc=1   lang=B hand=3
+    f107r   n=14  tail=14  dotted=7   8pt=2   7pt=12  unc=1   lang=B hand=3
+    f107v   n=14  tail=14  dotted=7   8pt=6   7pt=6   unc=2   lang=B hand=3
+    f108r   n=14  tail=14  dotted=1   8pt=0   7pt=14  unc=1   lang=B hand=3
+    f108v   n=7   tail=7   dotted=4   8pt=3   7pt=4   unc=0   lang=B hand=3
+    f111r   n=6   tail=6   dotted=4   8pt=2   7pt=4   unc=0   lang=B hand=3
+    f111v   n=8   tail=3   dotted=5   8pt=4   7pt=4   unc=1   lang=B hand=3
+    f112r   n=10  tail=10  dotted=5   8pt=2   7pt=8   unc=0   lang=B hand=3
+    f112v   n=13  tail=13  dotted=7   8pt=3   7pt=9   unc=4   lang=B hand=3
+    f113r   n=14  tail=14  dotted=6   8pt=4   7pt=9   unc=1   lang=B hand=3
+    f113v   n=15  tail=15  dotted=8   8pt=4   7pt=11  unc=0   lang=B hand=3
+    f114r   n=12  tail=12  dotted=7   8pt=2   7pt=8   unc=1   lang=B hand=3
+    f114v   n=12  tail=12  dotted=6   8pt=1   7pt=11  unc=0   lang=B hand=3
+    f115r   n=13  tail=13  dotted=7   8pt=9   7pt=3   unc=0   lang=B hand=@
+    f115v   n=12  tail=12  dotted=6   8pt=10  7pt=1   unc=1   lang=B hand=3
+    f116r   n=6   tail=0   dotted=3   8pt=1   7pt=4   unc=0   lang=B hand=3
+
+  raw ZL comment wording per page (distinct comment strings, first 3):
+    f58v    2 comments, 2 distinct | Above line seems to have been scribbled in afterwards || Six-pointed star with tail at start of this paragraph
+    f58r    3 comments, 3 distinct | Most lines in para seem to have extra first char || Seven-pointed star at start of this paragraph || Six-pointed star at start of this paragraph
+    f103r   16 comments, 6 distinct | Dark star, 7 points || Dark star, 8 points || Darkish star, 7 points
+    f103v   13 comments, 6 distinct | Light star, 7 points || Light star, 8 points || Light star, dotted, 6 points
+    f104r   13 comments, 10 distinct | Currier's language B, hand X || Darkish star, 7 points, tail || Darkish star, 8 points, tail
+    f104v   12 comments, 3 distinct | Light star, 8 points, tail || Light star, dotted, 7? points, tail || Light star, dotted, 8 points, tail
+    f105v   8 comments, 3 distinct | Light star, 7 points, tail || Light star, 8 points, tail || Light star, dotted, 7 points, tail
+    f105r   8 comments, 4 distinct | Light star, 7 points, tail || Light star, 8 points, tail || Light star, dotted, 7 points, tail
+    f106v   14 comments, 6 distinct | Light star, 7 points, tail || Light star, 8 points, tail || Light star, 9 points, tail
+    f106r   15 comments, 6 distinct | Light star, 7 points, tail || Light star, 8 points, tail || Light star, dotted, 7 points, tail
+    f107r   14 comments, 5 distinct | Light star, 7 points, tail || Light star, 7/8 points, tail || Light star, 8 points, tail
+    f107v   14 comments, 8 distinct | Light star, 7 points, tail || Light star, 8 points, tail || Light star, 8 points, tail?
+    f108v   7 comments, 5 distinct | Light star, 7 points, tail || Light star, 8 points, tail || Light star, dotted, 7 points, long tail
+    f108r   14 comments, 3 distinct | Dark star, 7 points, tail || Light star, 7 points, tail || Light star, dotted?, 7 points, tail
+    f111v   8 comments, 7 distinct | Light star, 7 points || Light star, 7 points, tail? || Light star, 8 points
+    f111r   6 comments, 4 distinct | Light star, 7 points, tail || Light star, 8 points, tail || Light star, dotted, 7 points, tail
+    f112v   13 comments, 9 distinct | Light star, 6 points, tail || Light star, 7 points, tail || Light star, 7 points, tail?
+    f112r   10 comments, 4 distinct | Light star, 7 points, tail || Light star, 8 points, tail || Light star, dotted, 7 points, tail
+    f113r   14 comments, 5 distinct | Light star, 7 points, tail || Light star, 7? points, tail || Light star, 8 points, tail
+    f113v   15 comments, 3 distinct | Light star, 7 points, tail || Light star, 8 points, tail || Light star, dotted, 7 points, tail
+    f114r   12 comments, 7 distinct | Light star, 6/7 points, tail || Light star, 7 points, tail || Light star, 7/8 points, tail
+    f114v   12 comments, 4 distinct | Light star, 7 points, tail || Light star, 7/8 points, tail || Light star, dotted, 7 points, tail
+    f115v   12 comments, 4 distinct | Light star, 7 points, tail(?) || Light star, 8 points, tail || Light star, dotted, 8 points, tail
+    f115r   13 comments, 5 distinct | Light star, 7/8 points, tail || Light star, 8 points, tail || Light star, dotted, 7 points, tail
+    f116r   6 comments, 4 distinct | Light star, 7 points || Light star, 8 points || Light star, dotted, 6/7 points
+  TEST_even paragraphs 141 | with comment 133 | parsed as star 130 | with point count 126 | transcriber marked uncertain 9
+  FIT_odd   paragraphs 151 | with comment 141 | parsed as star 141 | with point count 140 | transcriber marked uncertain 7
+  ALL       paragraphs 292 | with comment 274 | parsed as star 271 | with point count 266 | transcriber marked uncertain 16
+
+  cross-check: within-page variance of "tail" on TEST pages
+    f58r    tail 0/2
+    f58v    tail 1/1
+    f104r   tail 12/12
+    f104v   tail 12/12
+    f106r   tail 15/15
+    f106v   tail 14/14
+    f108r   tail 14/14
+    f108v   tail 7/7
+    f112r   tail 10/10
+    f112v   tail 13/13
+    f114r   tail 12/12
+    f114v   tail 12/12
+    f116r   tail 0/6

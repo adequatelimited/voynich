@@ -1,0 +1,64 @@
+=== Z4 INDEPENDENT REIMPLEMENTATION (verifier) ===
+ZL3b sha256      : bf5b6d4ac1e3a51b1847a9c388318d609020441ccd56984c901c32b09beccafc
+GC2a sha256      : b09570cb6c993bc2d87134d115e60a978650a8a6495483ddbb1f6005a586096f
+meaning_lib sha  : aa1ee5a340923cf7bd3f5aa1d433d24c10b2db50da1e7b2da9256cd98ef42fb1
+labels all/FIT/TEST: 294/147/147
+rings on TEST    : 12   first-unit types 19  last-unit types 18
+block marginal   : {'0': 50, '1': 50, '2': 47}
+third marginal   : {'0': 53, '1': 47, '2': 47}
+
+TEST signs, glyph-unit level, comma_split=True:
+statistic                                obs  nullmean    debias       p+1   p_plain
+MI(block;first)                       0.2019    0.1985   +0.0034   0.41426   0.41420
+MI(block;last)                        0.1628    0.1909   -0.0280   0.79302   0.79300
+MI(third;first)                       0.2963    0.1989   +0.0974   0.00150   0.00140
+MI(third;last)                        0.2404    0.1897   +0.0507   0.07749   0.07740
+chi2(first inventory x block)        36.1940   35.8885   +0.3056   0.43746   0.43740
+chi2(last inventory x block)         30.6347   34.2931   -3.6584   0.72143   0.72140
+
+Bonferroni (protocol literal, 4 combos): 0.0025000
+Bonferroni (registered family of 6)    : 0.0016667
+passers, family of 6: ['MI(third;first)']
+passers, MI-only family of 4: ['MI(third;first)']
+
+FIT signs (same statistics):
+MI(block;first)                       0.1610    0.1466   +0.0144   0.25677
+MI(block;last)                        0.1834    0.1744   +0.0089   0.36316
+MI(third;first)                       0.1656    0.1480   +0.0177   0.23128
+MI(third;last)                        0.1408    0.1729   -0.0321   0.85331
+
+Robustness -- raw EVA character level, TEST:
+MI(block;first)                       0.1400    0.1028   +0.0373   0.06309
+MI(block;last)                        0.0870    0.0981   -0.0110   0.60954
+MI(third;first)                       0.1426    0.1036   +0.0390   0.05569
+MI(third;last)                        0.1017    0.0976   +0.0041   0.39226
+
+Robustness -- comma_split=False, TEST, units:
+MI(block;first)                       0.2019    0.1985   +0.0034   0.41426
+MI(block;last)                        0.1628    0.1909   -0.0280   0.79302
+MI(third;first)                       0.2963    0.1989   +0.0974   0.00150
+MI(third;last)                        0.2404    0.1897   +0.0507   0.07749
+
+seed stability MI(third;first): p over seeds [0.0015, 0.0008, 0.0015, 0.0015, 0.0021, 0.002, 0.0025, 0.0017, 0.0011, 0.0019, 0.0019]
+  5/11 below the 6-family threshold 0.0016667
+
+first-unit x ring-third contingency (TEST):
+  ok     [20, 7, 14]
+  o      [16, 11, 7]
+  ot     [7, 10, 6]
+  y      [1, 8, 10]
+  che    [0, 5, 3]
+  ch     [3, 0, 1]
+  ee     [2, 0, 1]
+  she    [1, 2, 0]
+  or     [1, 0, 1]
+  ai     [1, 0, 0]
+  aiin   [0, 1, 0]
+  ar     [0, 0, 1]
+  d      [0, 0, 1]
+  daiin  [0, 1, 0]
+  k      [0, 0, 1]
+  l      [1, 0, 0]
+  ol     [0, 1, 0]
+  qok    [0, 0, 1]
+  sh     [0, 1, 0]

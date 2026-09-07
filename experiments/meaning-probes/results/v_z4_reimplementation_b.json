@@ -1,0 +1,120 @@
+{
+  "high_precision": {
+    "408": {
+      "debiased": 0.09760372773645787,
+      "null_mean": 0.19873975087640167,
+      "null_sd": 0.02689269879392767,
+      "observed": 0.29634347861285953,
+      "p_one_sided_upper_addone": 0.0016299918500407497,
+      "p_one_sided_upper_plain": 0.001625,
+      "p_two_sided_absdev_addone": 0.0016299918500407497,
+      "p_two_sided_absdev_plain": 0.001625,
+      "p_two_sided_min2x": 0.00325
+    },
+    "999": {
+      "debiased": 0.09747088637335921,
+      "null_mean": 0.19887259223950032,
+      "null_sd": 0.026819612761008537,
+      "observed": 0.29634347861285953,
+      "p_one_sided_upper_addone": 0.0015749921250393748,
+      "p_one_sided_upper_plain": 0.00157,
+      "p_two_sided_absdev_addone": 0.0015749921250393748,
+      "p_two_sided_absdev_plain": 0.00157,
+      "p_two_sided_min2x": 0.00314
+    }
+  },
+  "p_definitions_TEST": {
+    "MI(block;first)": {
+      "debiased": 0.00342391340670381,
+      "null_mean": 0.19847330586656411,
+      "null_sd": 0.026783821175057815,
+      "observed": 0.20189721927326792,
+      "p_one_sided_upper_addone": 0.41425857414258577,
+      "p_one_sided_upper_plain": 0.4142,
+      "p_two_sided_absdev_addone": 0.8982101789821018,
+      "p_two_sided_absdev_plain": 0.8982,
+      "p_two_sided_min2x": 0.8284
+    },
+    "MI(block;last)": {
+      "debiased": -0.028026015333230514,
+      "null_mean": 0.19086545527407342,
+      "null_sd": 0.03362120423992255,
+      "observed": 0.1628394399408429,
+      "p_one_sided_upper_addone": 0.793020697930207,
+      "p_one_sided_upper_plain": 0.793,
+      "p_two_sided_absdev_addone": 0.39986001399860016,
+      "p_two_sided_absdev_plain": 0.3998,
+      "p_two_sided_min2x": 0.414
+    },
+    "MI(third;first)": {
+      "debiased": 0.0974329912600169,
+      "null_mean": 0.19891048735284264,
+      "null_sd": 0.026741417961982726,
+      "observed": 0.29634347861285953,
+      "p_one_sided_upper_addone": 0.0014998500149985001,
+      "p_one_sided_upper_plain": 0.0014,
+      "p_two_sided_absdev_addone": 0.0014998500149985001,
+      "p_two_sided_absdev_plain": 0.0014,
+      "p_two_sided_min2x": 0.0028
+    },
+    "MI(third;last)": {
+      "debiased": 0.050684103141479475,
+      "null_mean": 0.1897142435184949,
+      "null_sd": 0.0337700028938091,
+      "observed": 0.24039834665997437,
+      "p_one_sided_upper_addone": 0.07749225077492251,
+      "p_one_sided_upper_plain": 0.0774,
+      "p_two_sided_absdev_addone": 0.12638736126387362,
+      "p_two_sided_absdev_plain": 0.1263,
+      "p_two_sided_min2x": 0.1548
+    },
+    "chi2(first x block)": {
+      "debiased": 0.30557101623075056,
+      "null_mean": 35.88846889737308,
+      "null_sd": 4.965564273823914,
+      "observed": 36.19403991360383,
+      "p_one_sided_upper_addone": 0.43745625437456254,
+      "p_one_sided_upper_plain": 0.4374,
+      "p_two_sided_absdev_addone": 0.9493050694930507,
+      "p_two_sided_absdev_plain": 0.9493,
+      "p_two_sided_min2x": 0.8748
+    },
+    "chi2(last x block)": {
+      "debiased": -3.6583761116820526,
+      "null_mean": 34.29307569685535,
+      "null_sd": 5.792149021752698,
+      "observed": 30.634699585173294,
+      "p_one_sided_upper_addone": 0.7214278572142786,
+      "p_one_sided_upper_plain": 0.7214,
+      "p_two_sided_absdev_addone": 0.5228477152284772,
+      "p_two_sided_absdev_plain": 0.5228,
+      "p_two_sided_min2x": 0.5572
+    }
+  },
+  "power": {
+    "MI(block;first)": {
+      "detected": 6,
+      "median_debiased": 0.7090567679516527,
+      "of": 8
+    },
+    "MI(block;last)": {
+      "detected": 5,
+      "median_debiased": 0.2508869059931804,
+      "of": 8
+    },
+    "MI(third;first)": {
+      "detected": 3,
+      "median_debiased": 0.09631159990065274,
+      "of": 8
+    },
+    "MI(third;last)": {
+      "detected": 5,
+      "median_debiased": 0.2073290509280686,
+      "of": 8
+    }
+  },
+  "sha256": {
+    "GC2a-n.txt": "b09570cb6c993bc2d87134d115e60a978650a8a6495483ddbb1f6005a586096f",
+    "ZL3b-n.txt": "bf5b6d4ac1e3a51b1847a9c388318d609020441ccd56984c901c32b09beccafc"
+  }
+}

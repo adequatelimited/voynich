@@ -1,0 +1,93 @@
+==============================================================================
+V-Z4  null-correctness verification
+==============================================================================
+sha256 ZL3b-n.txt   bf5b6d4ac1e3a51b1847a9c388318d609020441ccd56984c901c32b09beccafc
+sha256 meaning_lib  aa1ee5a340923cf7bd3f5aa1d433d24c10b2db50da1e7b2da9256cd98ef42fb1
+sha256 t_z4.py      3e55dee956ae3485ae969fae8c4ceb207f2776e44ef11fd93ea7b91310fc9991
+
+[0] implementation cross-check on a hand table
+    MI([[10,0],[0,10]])   = 1.0000000000   (exact 1.0)
+    chi2([[10,0],[0,10]]) = 20.0000000000   (exact 20.0)
+    chi2([[3,1],[1,3]])   = 2.0000000000   (hand 2.0000000000)
+    MI([[3,1],[1,3]])     = 0.1887218755   (hand 0.1887218755)
+
+[1] TEST stratum: 147 label loci  (all 294, FIT 147)
+    ring sizes (P2 segments): [18, 12, 18, 12, 18, 10, 4, 16, 10, 4, 16, 9]
+    ringthird marginal {0: 53, 1: 47, 2: 47} ; rankblock marginal {0: 50, 1: 50, 2: 47}
+    prefix types 19 ; suffix types 18
+    labels in singleton rings (permutation is a no-op for them): 0
+
+[2] independent recomputation of the six registered TEST statistics
+    observed MI(P1;F1) = 0.20189721927327   (t_z4: 0.20189721927326795)
+    observed MI(P1;F2) = 0.16283943994084   (t_z4: 0.16283943994084282)
+    observed MI(P2;F1) = 0.29634347861286   (t_z4: 0.29634347861285965)
+    observed MI(P2;F2) = 0.24039834665997   (t_z4: 0.24039834665997450)
+    observed chi2 prefix x rankblock = 36.194039913604  (t_z4: 36.194039913603845)
+    observed chi2 suffix x rankblock = 30.634699585173  (t_z4: 30.634699585173290)
+
+[3] the single passer MI(ring-third; first unit), registered stream
+    NOTE: t_z4 runs the P2 permutation with seed = SEED+1 = 409.
+    PROTOCOL registers seed 408.  Both are computed here.
+    seed 409 : null_mean 0.1988591290  null_sd 0.0269152006
+              two-sided(mean-dev) p = 0.0015998  (count ge = 15)  -> PASS
+              one-sided upper     p = 0.0015998  (count ge = 15)  -> PASS
+    seed 408 : null_mean 0.1988104159  null_sd 0.0267595072
+              two-sided(mean-dev) p = 0.0008999  (count ge = 8)  -> PASS
+              one-sided upper     p = 0.0008999  (count ge = 8)  -> PASS
+
+[4] attainable p-values around the Bonferroni threshold at B = 10000
+    p = (1+ge)/10001 .  threshold alpha/6 = 0.001666667
+      ge = 13 -> p = 0.0013999  PASS
+      ge = 14 -> p = 0.0014999  PASS
+      ge = 15 -> p = 0.0015998  PASS
+      ge = 16 -> p = 0.0016998  FAIL
+      ge = 17 -> p = 0.0017998  FAIL
+    => the verdict is decided by whether ge is 15 or 16: ONE draw in 10000.
+
+[5] high-precision p for MI(P2;F1), streams INDEPENDENT of seed 409
+    (t_z4's B=200000 rerun reuses seed 409, so its first 10000 draws are
+     literally the registered draws -- it is not an independent check.)
+    seed 10408  B=50000  ge=  87  p=0.0017600  FAIL
+    seed 20408  B=50000  ge=  79  p=0.0016000  PASS
+    seed 30408  B=50000  ge=  83  p=0.0016800  FAIL
+    seed 40408  B=50000  ge=  84  p=0.0017000  FAIL
+    POOLED  B=200000  ge=333  p_hat = 0.0016700  (MC SE 0.0000913)
+    Bonferroni/6 threshold 0.0016667  -> true p is -0.04 MC SE from it
+    Bonferroni/4 threshold 0.0025000 (the family the PROTOCOL registers)
+
+[6] where the effect lives: drop one ring at a time, rerun (B=20000, seed 777)
+    full 12 rings                 n=147  MI=0.2963  p=0.001550
+    drop Virgo/r0               n=129  MI=0.2758  p=0.036148  FAIL
+    drop Scorpius/r2            n=137  MI=0.2668  p=0.012099  FAIL
+    drop Sagittarius/r1         n=131  MI=0.2928  p=0.006150  FAIL
+    drop Sagittarius/r2         n=138  MI=0.2999  p=0.004800  FAIL
+    drop Libra/r0               n=129  MI=0.3078  p=0.004650  FAIL
+    drop Scorpius/r0            n=143  MI=0.2919  p=0.003750  FAIL
+    drop Virgo/r1               n=135  MI=0.3036  p=0.002350  FAIL
+    drop Libra/r1               n=137  MI=0.3134  p=0.002000  FAIL
+    drop Leo/r0                 n=129  MI=0.3096  p=0.001650  
+    drop Sagittarius/r0         n=143  MI=0.3084  p=0.001000  
+    drop Leo/r1                 n=135  MI=0.3247  p=0.000700  
+    drop Scorpius/r1            n=131  MI=0.3557  p=0.000100  
+
+[7] the contingency structure behind the passer
+    prefix   third0/53  third1/47  third2/47   total
+    ok          20         7        14       41
+    o           16        11         7       34
+    ot           7        10         6       23
+    y            1         8        10       19
+    che          0         5         3        8
+    ch           3         0         1        4
+    ee           2         0         1        3
+    she          1         2         0        3
+    (all other prefixes have total < 3)
+
+[8] multiplicity audit
+    registered family in PROTOCOL: FOUR MI combinations -> alpha 0.0025000
+    family actually used by t_z4 : SIX (4 MI + 2 chi2) -> alpha 0.0016667
+    Statistics NOT counted in the family but reported and inspected:
+      FIT split (6), ALL split (6), raw-EVA level FIT+TEST (12),
+      comma_split=False TEST (6), ring>=6 TEST (6), GC2a FIT+TEST (12).
+    Only the 6 TEST/unit ones are gated, which matches the pre-registration.
+    But the P2 seed (409) is NOT the registered seed (408); the seed is a
+    free parameter that flips this particular verdict (see [3]).

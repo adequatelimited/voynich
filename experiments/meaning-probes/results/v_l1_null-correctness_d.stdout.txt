@@ -1,0 +1,34 @@
+==============================================================================
+v_l1 D: gate leg 1 counts units, not facts (TEST = odd folios, 10000 perms)
+==============================================================================
+(0) reproduce the four word-initial passers as single binary tests
+  qok- (first glyph unit == qok)                 log-odds= -1.5732  raw p=0.00010  bonf(x25)=0.00250  support 2 label / 394 text  strata=52
+  q- (first glyph unit == q)                     log-odds= -1.2133  raw p=0.00010  bonf(x25)=0.00250  support 4 label / 248 text  strata=58
+  c- (first glyph unit == c)                     log-odds= -1.4960  raw p=0.00010  bonf(x25)=0.00250  support 1 label / 64 text  strata=22
+  daiin- (first glyph unit == daiin)             log-odds= -1.5489  raw p=0.00020  bonf(x25)=0.00500  support 2 label / 60 text  strata=11
+
+(1) q- and qok- merged: word begins with EVA letter q
+  EVA q-initial (qok- and q- pooled)             log-odds= -1.6874  raw p=0.00010  bonf(x25)=0.00250  support 6 label / 642 text  strata=69
+    -> the two units the family counts separately are one phenomenon:
+       every q- and qok- word begins with the same EVA character.
+
+(2) daiin: is it an ENDING/PREFIX, or one word type?
+    121 of the 122 TEST text tokens with daiin-initial are the bare word
+    "daiin" (glyph-unit length 1), which is also its own final unit.
+  daiin FINAL, all lengths                       log-odds= -1.1019  raw p=0.00020  bonf(x25)=0.00500  support 4 label / 95 text  strata=30
+  daiin FINAL, glyph-unit length >= 2 only       log-odds= -0.6759  raw p=0.06889  bonf(x25)=1.00000  support 2 label / 36 text  strata=20
+  daiin INITIAL, all lengths                     log-odds= -1.5489  raw p=0.00020  bonf(x25)=0.00500  support 2 label / 60 text  strata=11
+  daiin INITIAL, glyph-unit length >= 2 only     log-odds= -0.7618  raw p=1.00000  bonf(x25)=1.00000  support 0 label / 1 text  strata=1
+
+(3) c- leave-one-out (its only label token is cpheey on f67r2)
+  c- with that single label token removed        log-odds= -1.8216  raw p=0.00010  bonf(x25)=0.00250  support 0 label / 64 text  strata=21
+
+(4) how much of the word-FINAL passer daiin survives without the bare word
+    (see (2)); and n-final leave-one-out on its 7 label tokens
+  n-final without label token oteeeon@f17r       log-odds=  1.4398  raw p=0.00150  bonf(x25)=0.03748  support 6 label / 1 text  strata=7
+  n-final without label token oeoldan@f67r2      log-odds=  1.5961  raw p=0.00050  bonf(x25)=0.01249  support 6 label / 1 text  strata=7
+  n-final without label token oran@f67r2         log-odds=  1.5823  raw p=0.00050  bonf(x25)=0.01249  support 6 label / 1 text  strata=7
+  n-final without label token dan@f71v           log-odds=  1.5388  raw p=0.00100  bonf(x25)=0.02499  support 6 label / 1 text  strata=7
+  n-final without label token dan@f89r1          log-odds=  1.4844  raw p=0.00050  bonf(x25)=0.01249  support 6 label / 1 text  strata=7
+  n-final without label token dykaran@f89v2      log-odds=  1.4712  raw p=0.00100  bonf(x25)=0.02499  support 6 label / 1 text  strata=7
+  n-final without label token olaran@f101v       log-odds=  1.5344  raw p=0.00050  bonf(x25)=0.01249  support 6 label / 1 text  strata=7

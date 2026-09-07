@@ -1,0 +1,33 @@
+==============================================================================
+F1  FORM PROFILE BY RING POSITION (ZL locus order)
+    idx 0 only   n= 12  {'o': 4, 'ok': 4, 'ot': 3, 'ch': 1}
+    idx 0-2      n= 36  {'ok': 12, 'o': 10, 'ot': 8, 'ch': 3, 'or': 1, 'she': 1, 'ee': 1}
+    idx >=3      n=111  {'ok': 29, 'o': 24, 'y': 19, 'ot': 15, 'che': 8, 'she': 2, 'ee': 2, 'sh': 1}
+
+F2  DROP THE 12 RING-INITIAL LABELS AND RE-RUN THE REGISTERED STATISTIC
+    n=135  MI=0.2978  debiased=+0.0810  p=0.00800  fail
+    (thirds kept exactly as t_z4 assigned them; only the labels are dropped)
+
+F3  WHICH LABELS MOVE BETWEEN floor AND ceil
+    12 of 147 labels change third (8.2%):
+      Libra          ring1 size10 idx 3  third 0 -> 1  first unit o      oiiny
+      Libra          ring1 size10 idx 6  third 1 -> 2  first unit y      ypaim
+      Scorpius       ring0 size 4 idx 1  third 0 -> 1  first unit ch     chockhy
+      Scorpius       ring0 size 4 idx 2  third 1 -> 2  first unit ot     otedy
+      Scorpius       ring1 size16 idx 5  third 0 -> 1  first unit ok     okeedy
+      Scorpius       ring1 size16 idx10  third 1 -> 2  first unit ok     okedal
+      Scorpius       ring2 size10 idx 3  third 0 -> 1  first unit ok     oky
+      Scorpius       ring2 size10 idx 6  third 1 -> 2  first unit che    chek
+      Sagittarius    ring0 size 4 idx 1  third 0 -> 1  first unit ot     oteody
+      Sagittarius    ring0 size 4 idx 2  third 1 -> 2  first unit ot     oteedy
+      Sagittarius    ring1 size16 idx 5  third 0 -> 1  first unit o      ofals
+      Sagittarius    ring1 size16 idx10  third 1 -> 2  first unit o      ofcheesy
+
+F4  THE DESCRIPTIVE CLAIMS IN THE TEST'S CAVEATS
+    y    by third [1, 8, 10]  of [53, 47, 47]  -> rates ['0.019', '0.170', '0.213']
+    ot   by third [7, 10, 6]  of [53, 47, 47]  -> rates ['0.132', '0.213', '0.128']
+    ok   by third [20, 7, 14]  of [53, 47, 47]  -> rates ['0.377', '0.149', '0.298']
+    o    by third [16, 11, 7]  of [53, 47, 47]  -> rates ['0.302', '0.234', '0.149']
+    The report says "'ot' is depleted in the first third". 7/53 = 0.132 vs
+    10/47 = 0.213 and 6/47 = 0.128: third 1 is ENRICHED, third 0 and third 2
+    are level. The one-vs-rest permutation p for 'ot' is 0.903.

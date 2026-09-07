@@ -1,0 +1,88 @@
+==============================================================================
+v_l1 null-correctness: independent re-derivation + leg-2 null floor
+==============================================================================
+pages odd=26 even=28
+
+--- ZL3b TEST odd, final : 109 strata, 466 label / 3098 text words
+    chedy    logodds= -1.8623  p_perm=0.01199  bonf=0.29970
+    daiin    logodds= -1.1019  p_perm=0.00200  bonf=0.04995
+    ot       logodds= -1.0635  p_perm=0.58442  bonf=1.00000
+    in       logodds= -1.0153  p_perm=0.00200  bonf=0.04995
+    a        logodds= -0.9149  p_perm=0.53247  bonf=1.00000
+    eey      logodds= -0.8976  p_perm=0.00100  bonf=0.02498
+    sh       logodds= -0.7691  p_perm=1.00000  bonf=1.00000
+    ol       logodds= -0.4838  p_perm=0.00400  bonf=0.09990
+    or       logodds= -0.2214  p_perm=0.23477  bonf=1.00000
+    aiin     logodds= -0.1572  p_perm=0.50450  bonf=1.00000
+    r        logodds= -0.1374  p_perm=0.58242  bonf=1.00000
+    dy       logodds= -0.1271  p_perm=0.36464  bonf=1.00000
+    s        logodds=  0.0020  p_perm=0.97902  bonf=1.00000
+    ain      logodds=  0.0616  p_perm=0.85614  bonf=1.00000
+    o        logodds=  0.1001  p_perm=0.59940  bonf=1.00000
+    y        logodds=  0.1795  p_perm=0.12388  bonf=1.00000
+    g        logodds=  0.2655  p_perm=0.43457  bonf=1.00000
+    ar       logodds=  0.3294  p_perm=0.04496  bonf=1.00000
+    m        logodds=  0.3378  p_perm=0.10689  bonf=1.00000
+    al       logodds=  0.3436  p_perm=0.04895  bonf=1.00000
+    d        logodds=  0.5122  p_perm=0.06893  bonf=1.00000
+    t        logodds=  1.0800  p_perm=0.09890  bonf=1.00000
+    l        logodds=  1.1148  p_perm=0.00799  bonf=0.19980
+    k        logodds=  1.4906  p_perm=0.02198  bonf=0.54945
+    n        logodds=  1.5857  p_perm=0.00100  bonf=0.02498
+    pooled mean|logodds| OBS = 0.6462
+    pooled mean|logodds| NULL mean = 0.3168  sd=0.0446  95% [0.2345, 0.4064]
+    excess over null floor = 0.3294
+
+--- ZL3b TEST odd, initial : 109 strata, 466 label / 3098 text words
+    chedy    logodds= -2.6151  p_perm=0.17483  bonf=1.00000
+    qok      logodds= -1.5732  p_perm=0.00100  bonf=0.02498
+    daiin    logodds= -1.5489  p_perm=0.00100  bonf=0.02498
+    c        logodds= -1.4960  p_perm=0.00100  bonf=0.02498
+    q        logodds= -1.2133  p_perm=0.00100  bonf=0.02498
+    aiin     logodds= -0.7544  p_perm=0.10689  bonf=1.00000
+    che      logodds= -0.5928  p_perm=0.00599  bonf=0.14985
+    she      logodds= -0.5883  p_perm=0.01998  bonf=0.49950
+    t        logodds= -0.5530  p_perm=0.02198  bonf=0.54945
+    sh       logodds= -0.4326  p_perm=0.09291  bonf=1.00000
+    p        logodds= -0.3723  p_perm=0.33067  bonf=1.00000
+    al       logodds= -0.3571  p_perm=0.20979  bonf=1.00000
+    ch       logodds= -0.3322  p_perm=0.03497  bonf=0.87413
+    k        logodds= -0.1564  p_perm=0.36963  bonf=1.00000
+    l        logodds= -0.0115  p_perm=0.84216  bonf=1.00000
+    ol       logodds=  0.0925  p_perm=0.66334  bonf=1.00000
+    s        logodds=  0.2058  p_perm=0.25375  bonf=1.00000
+    o        logodds=  0.2977  p_perm=0.07293  bonf=1.00000
+    d        logodds=  0.3145  p_perm=0.04795  bonf=1.00000
+    ok       logodds=  0.3514  p_perm=0.02498  bonf=0.62438
+    r        logodds=  0.4215  p_perm=0.36763  bonf=1.00000
+    y        logodds=  0.4446  p_perm=0.00699  bonf=0.17483
+    or       logodds=  0.5527  p_perm=0.12987  bonf=1.00000
+    ot       logodds=  0.8438  p_perm=0.00100  bonf=0.02498
+    ar       logodds=  0.8443  p_perm=0.00799  bonf=0.19980
+    pooled mean|logodds| OBS = 0.6786
+    pooled mean|logodds| NULL mean = 0.2340  sd=0.0468  95% [0.1594, 0.3417]
+    excess over null floor = 0.4447
+
+Culpeper entries=525 words=245730
+
+--- Culpeper final : 1134 strata, 1359 head / 56938 body words
+    pooled mean|logodds| OBS = 0.6497
+    pooled mean|logodds| NULL mean = 0.2459  sd=0.0410  95% [0.1886, 0.3505]
+    excess over null floor = 0.4038
+
+--- Culpeper initial : 1134 strata, 1359 head / 56938 body words
+    pooled mean|logodds| OBS = 0.3595
+    pooled mean|logodds| NULL mean = 0.1475  sd=0.0215  95% [0.1126, 0.1946]
+    excess over null floor = 0.2120
+
+==============================================================================
+LEG 2 RECOMPUTED
+==============================================================================
+  final : raw ratio = 0.9945
+     null floors: voynich 0.3168  culpeper 0.2459
+     null-corrected ratio (excess/excess) = 0.3294 / 0.4038 = 0.8157
+     -> leg 2 (>=0.25) raw PASS ; null-corrected PASS
+  initial : raw ratio = 1.8875
+     null floors: voynich 0.2340  culpeper 0.1475
+     null-corrected ratio (excess/excess) = 0.4447 / 0.2120 = 2.0974
+     -> leg 2 (>=0.25) raw PASS ; null-corrected PASS

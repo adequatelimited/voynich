@@ -1,0 +1,133 @@
+==========================================================================
+Z2 / Z3  --  meaning-probes, seed 408, 10000 permutation draws
+==========================================================================
+  input ZL3b-n.txt       sha256 bf5b6d4ac1e3a51b1847a9c388318d609020441ccd56984c901c32b09beccafc
+  input GC2a-n.txt       sha256 b09570cb6c993bc2d87134d115e60a978650a8a6495483ddbb1f6005a586096f
+  input pg49513.txt      sha256 d9bacb3247d798fcd2a8ce3b7c76222407fc0ac1c8d4242e9e8163508c10e968
+  input Latin.xml        sha256 5bba9f75c06858a28ebe7b2fcc19cc32b3fbf587d6bc237ceac6fe7addd3df31
+  input meaning_lib.py   sha256 aa1ee5a340923cf7bd3f5aa1d433d24c10b2db50da1e7b2da9256cd98ef42fb1
+  input PROTOCOL.md      sha256 26847ad7f72579958ac48ee4d284aa275df0a5a6a0143b148b39ae9c759b83dd
+  noise pool for degraded controls: 4000 Latin Vulgate types (len 3-12)
+
+ZL3b zodiac labels: 294 loci over 10 signs
+  Pisces       rings {'0': 18, '1': 10, '2': 1}  total 29
+  Aries        rings {'0': 10, '1': 5, '2': 10, '3': 5}  total 30
+  Taurus       rings {'0': 10, '1': 5, '2': 10, '3': 5}  total 30
+  Gemini       rings {'0': 5, '1': 15, '2': 9}  total 29
+  Cancer       rings {'0': 11, '1': 11, '2': 7}  total 29
+  Leo          rings {'0': 18, '1': 12}  total 30
+  Virgo        rings {'0': 18, '1': 12}  total 30
+  Libra        rings {'0': 18, '1': 10}  total 28
+  Scorpius     rings {'0': 4, '1': 16, '2': 10}  total 30
+  Sagittarius  rings {'0': 4, '1': 16, '2': 9}  total 29
+
+--------------------------------------------------------------------------
+Z2  same slot across signs
+--------------------------------------------------------------------------
+
+convention A  (index within sign, manuscript order)
+  unit FIT   n=147  same-slot pairs  291  same 0.2052  diff 0.2072  effect -0.00207  z=-0.18  p2=0.8355
+  unit TEST  n=147  same-slot pairs  289  same 0.2023  diff 0.2073  effect -0.00498  z=-0.47  p2=0.6422
+  unit numeral controls (clean)     median effect +0.66641  power(p<0.01) 1.00
+  unit numeral controls (30% noise) median effect +0.34289  power(p<0.01) 1.00
+  unit GATE: p=0.6422 (<0.01? False)   effect/control = -0.007 (>=0.25? False)  -> FAIL
+  char FIT   n=147  same-slot pairs  291  same 0.3983  diff 0.4040  effect -0.00570  z=-0.75  p2=0.4533
+  char TEST  n=147  same-slot pairs  289  same 0.3856  diff 0.3849  effect +0.00075  z=+0.07  p2=0.9387
+  char numeral controls (clean)     median effect +0.64967  power(p<0.01) 1.00
+  char numeral controls (30% noise) median effect +0.33424  power(p<0.01) 1.00
+  char GATE: p=0.9387 (<0.01? False)   effect/control = 0.001 (>=0.25? False)  -> FAIL
+
+convention B  ((ring rank outer-first, index within ring))
+  unit FIT   n=147  same-slot pairs  205  same 0.1992  diff 0.2074  effect -0.00822  z=-0.37  p2=0.5175
+  unit TEST  n=147  same-slot pairs  207  same 0.2003  diff 0.2073  effect -0.00704  z=-0.60  p2=0.5972
+  unit numeral controls (clean)     median effect +0.67067  power(p<0.01) 1.00
+  unit numeral controls (30% noise) median effect +0.37989  power(p<0.01) 1.00
+  unit GATE: p=0.5972 (<0.01? False)   effect/control = -0.011 (>=0.25? False)  -> FAIL
+  char FIT   n=147  same-slot pairs  205  same 0.4048  diff 0.4038  effect +0.00105  z=+0.36  p2=0.9195
+  char TEST  n=147  same-slot pairs  207  same 0.3847  diff 0.3849  effect -0.00019  z=-0.03  p2=0.9878
+  char numeral controls (clean)     median effect +0.65390  power(p<0.01) 1.00
+  char numeral controls (30% noise) median effect +0.36927  power(p<0.01) 1.00
+  char GATE: p=0.9878 (<0.01? False)   effect/control = -0.000 (>=0.25? False)  -> FAIL
+
+convention C  (clock position rounded to nearest 30 minutes)
+  unit FIT   n=146  same-slot pairs  400  same 0.1985  diff 0.2066  effect -0.00808  z=-0.85  p2=0.3868
+  unit TEST  n=147  same-slot pairs  379  same 0.2225  diff 0.2064  effect +0.01601  z=+1.71  p2=0.1095
+  unit numeral controls (clean)     median effect +0.69070  power(p<0.01) 1.00
+  unit numeral controls (30% noise) median effect +0.30157  power(p<0.01) 1.00
+  unit GATE: p=0.1095 (<0.01? False)   effect/control = 0.023 (>=0.25? False)  -> FAIL
+  char FIT   n=146  same-slot pairs  400  same 0.4002  diff 0.4031  effect -0.00294  z=-0.30  p2=0.7268
+  char TEST  n=147  same-slot pairs  379  same 0.4054  diff 0.3840  effect +0.02140  z=+2.22  p2=0.0324
+  char numeral controls (clean)     median effect +0.66855  power(p<0.01) 1.00
+  char numeral controls (30% noise) median effect +0.29323  power(p<0.01) 1.00
+  char GATE: p=0.0324 (<0.01? False)   effect/control = 0.032 (>=0.25? False)  -> FAIL
+
+Z2 GATE (unit level): FAIL  conventions passing: none
+
+Z2 GATE (char level): FAIL  conventions passing: none
+
+--------------------------------------------------------------------------
+Z3  inventory
+--------------------------------------------------------------------------
+  label loci                 294
+  distinct label strings     258
+  distinct/total             0.8776   (gate: < 0.5 -> FAIL)
+  label word tokens/types    344 / 277  (TTR 0.8052)
+  repeated label strings     27  (>=2 signs: 24, >=3 signs: 4, within-sign only: 3)
+  label word types in >=2 signs 37, >=3 signs 9
+  zodiac pages: 344 label tokens vs 947 text tokens; distinct glyph units 38 (labels) vs 40 (text), 38 shared
+    units only in labels: none
+    units only in text  : ['chedy', 'q']
+  all 54 pages with both: 1008 vs 8641 tokens; units 41 vs 45, 41 shared
+  label TTR 0.8052 vs length-matched running text 0.6610 +- 0.0176  (z=+8.19, p2=0.0020, 1000 draws, 3 exact-length misses)
+  repeated label strings, full list:
+    otaly                  x5  both               Pisces/f70v2#15, Aries/f70v1#6, Leo/f72v3#31, Scorpius/f73r#1, Scorpius/f73r#6
+    okal                   x4  both               Gemini/f72r2#9, Gemini/f72r2#11, Libra/f72v1#16, Sagittarius/f73v#27
+    okaly                  x4  both               Gemini/f72r2#10, Gemini/f72r2#18, Leo/f72v3#9, Leo/f72v3#17
+    okeody                 x3  across-sign only   Virgo/f72v2#15, Scorpius/f73r#7, Sagittarius/f73v#6
+    oky                    x3  across-sign only   Leo/f72v3#22, Scorpius/f73r#26, Sagittarius/f73v#25
+    cheoldy                x2  within-sign only   Virgo/f72v2#9, Virgo/f72v2#19
+    chy                    x2  across-sign only   Pisces/f70v2#14, Leo/f72v3#23
+    oeedy                  x2  across-sign only   Leo/f72v3#25, Virgo/f72v2#23
+    oeeodaiin              x2  across-sign only   Cancer/f72r3#10, Virgo/f72v2#3
+    okalar                 x2  across-sign only   Gemini/f72r2#8, Cancer/f72r3#22
+    okaldy                 x2  across-sign only   Gemini/f72r2#27, Leo/f72v3#18
+    okam                   x2  across-sign only   Gemini/f72r2#25, Leo/f72v3#4
+    okaram                 x2  across-sign only   Pisces/f70v2#27, Gemini/f72r2#3
+    okary                  x2  across-sign only   Leo/f72v3#27, Scorpius/f73r#23
+    okeey                  x2  across-sign only   Libra/f72v1#25, Scorpius/f73r#10
+    okeey ary              x2  across-sign only   Taurus/f72r1#16, Gemini/f72r2#12
+    okeoly                 x2  across-sign only   Pisces/f70v2#18, Libra/f72v1#5
+    okeos                  x2  across-sign only   Scorpius/f73r#20, Sagittarius/f73v#19
+    okydy                  x2  across-sign only   Pisces/f70v2#19, Libra/f72v1#24
+    otal                   x2  across-sign only   Gemini/f72r2#23, Scorpius/f73r#28
+    otalaiin               x2  across-sign only   Aries/f70v1#14, Taurus/f71v#15
+    otaldar                x2  across-sign only   Pisces/f70v2#11, Aries/f71r#17
+    otaraldy               x2  across-sign only   Taurus/f72r1#8, Gemini/f72r2#7
+    otedy                  x2  across-sign only   Scorpius/f73r#3, Sagittarius/f73v#23
+    oteody                 x2  within-sign only   Sagittarius/f73v#2, Sagittarius/f73v#13
+    ykeedy                 x2  across-sign only   Libra/f72v1#21, Scorpius/f73r#9
+    ykey                   x2  within-sign only   Sagittarius/f73v#28, Sagittarius/f73v#31
+
+--------------------------------------------------------------------------
+Replication on GC2a-n.txt
+--------------------------------------------------------------------------
+  GC2a zodiac label loci surviving the frozen clean parser: 91 (31.0% of the 294 in ZL3b)
+  GC2a labels carrying a clock annotation: 0 -> convention C is empty
+  CAUSE: the clean parser drops any token containing a digit; GC2a is
+  written in a v101-family alphabet that uses digits as glyphs. The
+  surviving subset is the digit-free tail, not a random sample. The
+  replication below is reported but is NOT evidence in either direction.
+  conv A unit TEST: n=26 same-slot pairs 39 effect -0.01696 p2=0.6008
+  conv A char TEST: n=26 same-slot pairs 39 effect -0.02191 p2=0.4872
+  conv B unit TEST: n=26 same-slot pairs 27 effect +0.03142 p2=0.4145
+  conv B char TEST: n=26 same-slot pairs 27 effect +0.02283 p2=0.5520
+  conv C unit TEST: not defined (no design)
+  conv C char TEST: not defined (no design)
+  GC2a Z3: 91 loci, 78 distinct, distinct/total 0.8571 -> gate FAIL
+
+==========================================================================
+GATE Z2 (glyph-unit level, primary): FAIL
+  measured power of the test (fraction of the 8 clean numeral controls
+  reaching p<0.01 at the observed TEST slot structure): {'A': 1.0, 'B': 1.0, 'C': 1.0}
+GATE Z3 (fixed inventory, distinct/total < 0.5): FAIL  (observed 0.8776)
+==========================================================================

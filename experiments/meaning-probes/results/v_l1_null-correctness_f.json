@@ -1,0 +1,52 @@
+{
+ "final": {
+  "kappa0.5": [
+   "daiin",
+   "eey",
+   "n"
+  ],
+  "kappa1.0": [
+   "daiin",
+   "n"
+  ],
+  "kappa2.0": [
+   "n"
+  ],
+  "flatHA0.5": [
+   "n"
+  ],
+  "uncorrected": [
+   "daiin",
+   "eey"
+  ]
+ },
+ "initial": {
+  "kappa0.5": [
+   "qok",
+   "daiin",
+   "c",
+   "q"
+  ],
+  "kappa1.0": [
+   "qok",
+   "daiin",
+   "c",
+   "q"
+  ],
+  "kappa2.0": [
+   "qok",
+   "daiin",
+   "c"
+  ],
+  "flatHA0.5": [
+   "ot"
+  ],
+  "uncorrected": [
+   "qok",
+   "daiin",
+   "c",
+   "q",
+   "ot"
+  ]
+ }
+}

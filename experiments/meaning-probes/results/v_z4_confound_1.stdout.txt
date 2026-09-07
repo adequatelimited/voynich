@@ -1,0 +1,109 @@
+==========================================================================
+C0  reproduce  MI(ring third; first glyph unit), TEST, ZL3b, unit level
+  n=147  rings=12  prefix types=19
+  seed 409 (the seed t_z4 actually used for P2): MI=0.2963  debiased=+0.0975  p=0.00160  PASS
+  exact replay through t_z4.mi_focus(seed=409): MI=0.296343 p=0.00160 (reported 0.0015998)
+  NOTE my own RNG stream differs from t_z4's, so p differs in the last
+  digits; the observed statistic is identical, which is the thing that
+  matters. Every number below uses my stream consistently.
+
+C1  THE REGISTERED SEED. PROTOCOL: "Permutation tests use 10,000 draws
+    and seed 408 unless stated." t_z4.analyse() calls run_position(...,
+    seed+1) for P2, i.e. seed 409. Re-run the same statistic at 408:
+  seed 408 (the registered seed): p=0.00090  PASS
+  40 seeds 400..439 at the registered B=10000: 20/40 clear the threshold
+  p range over those seeds: 0.00090 .. 0.00260
+
+==========================================================================
+C2  LENGTH CONFOUND
+  mean glyph-unit length by ring third:
+    third 0  n= 53  mean units 3.491  mean raw chars 5.396
+    third 1  n= 47  mean units 3.894  mean raw chars 5.979
+    third 2  n= 47  mean units 3.830  mean raw chars 5.915
+  MI(ring third; glyph-unit length capped at 6): MI=0.0730 debiased=+0.0211 p=0.28967
+  MI(ring third; raw char length capped at 9):   MI=0.0872 debiased=+0.0113 p=0.64594
+  length-stratified null (permute only within ring x equal length):
+    135 of 147 labels are exchangeable at all (35 blocks of size>1)
+    MI=0.2963  null_mean=0.2157  debiased=+0.0806  p=0.00760  FAIL
+    NOTE: this null is strictly weaker (fewer exchangeable items), so a
+    failure here is NOT by itself proof of a length confound.
+
+==========================================================================
+C3  EDITORIAL RING ORIGIN — rotation null
+  ZL fixes where each ring starts (locus with pos char "@"). A drawn ring
+  has no intrinsic first label. Under a rotation null the cyclic order of
+  the labels is preserved exactly and only the origin is randomised.
+  observed MI=0.2963   rotation-null mean=0.2012   debiased=+0.0952   p=0.00230  FAIL
+  power of the rotation null on the 8 numeral series in the same layout:
+    English              MI=0.1102  null_mean=0.0444  debiased=+0.0657  p=0.01370  -
+    Latin                MI=0.0955  null_mean=0.0629  debiased=+0.0325  p=0.29467  -
+    Italian              MI=0.1636  null_mean=0.0810  debiased=+0.0826  p=0.04500  -
+    German               MI=0.1905  null_mean=0.0652  debiased=+0.1253  p=0.00560  -
+    French               MI=0.2316  null_mean=0.0977  debiased=+0.1340  p=0.01700  -
+    Roman                MI=0.2210  null_mean=0.0506  debiased=+0.1704  p=0.00190  -
+    GreekMilesian        MI=0.4291  null_mean=0.1445  debiased=+0.2846  p=0.00160  detected
+    LatinOrdinalAbbrev   MI=0.0000  null_mean=0.0000  debiased=+0.0000  p=1.00000  -
+  rotation-null power: 1/8 numeral systems detected
+
+==========================================================================
+C4  DROPPED ILLEGIBLE LOCI SHIFT THE RING INDEX
+  TEST signs: 150 Lz loci, 3 dropped by the clean parser (2.0%)
+  dropped loci by full-slot ring third: {1: 2, 0: 1}
+  thirds recomputed with dropped loci keeping their slot:
+    n=147  MI=0.2994  null_mean=0.1987  debiased=+0.1007  p=0.00120  PASS
+    1 of 147 labels change ring third under this reading
+
+==========================================================================
+C5  FRAGILITY
+  leave-one-sign-out (TEST signs):
+    drop Leo          n=117  debiased=+0.1427  p=0.00020  PASS
+    drop Virgo        n=117  debiased=+0.0613  p=0.05189  FAIL
+    drop Libra        n=119  debiased=+0.0956  p=0.00680  FAIL
+    drop Scorpius     n=117  debiased=+0.1085  p=0.00310  FAIL
+    drop Sagittarius  n=118  debiased=+0.0832  p=0.01280  FAIL
+  leave-one-ring-out (12 TEST rings):
+    drop Leo/ring0              n=129  debiased=+0.1094  p=0.00220  FAIL
+    drop Leo/ring1              n=135  debiased=+0.1195  p=0.00080  PASS
+    drop Libra/ring0            n=129  debiased=+0.0938  p=0.00400  FAIL
+    drop Libra/ring1            n=137  debiased=+0.0997  p=0.00250  FAIL
+    drop Sagittarius/ring0      n=143  debiased=+0.1042  p=0.00070  PASS
+    drop Sagittarius/ring1      n=131  debiased=+0.0843  p=0.00660  FAIL
+    drop Sagittarius/ring2      n=138  debiased=+0.0871  p=0.00520  FAIL
+    drop Scorpius/ring0         n=143  debiased=+0.0876  p=0.00390  FAIL
+    drop Scorpius/ring1         n=131  debiased=+0.1444  p=0.00030  PASS
+    drop Scorpius/ring2         n=137  debiased=+0.0756  p=0.01140  FAIL
+    drop Virgo/ring0            n=129  debiased=+0.0611  p=0.03650  FAIL
+    drop Virgo/ring1            n=135  debiased=+0.0989  p=0.00250  FAIL
+  leave-one-ring-out: 3 of 12 drops still clear the threshold
+
+==========================================================================
+C6  IS IT THE FROZEN MERGE LIST? first n raw EVA characters as the form
+  first 1 raw char(s): types=10  MI=0.1426  debiased=+0.0392  p=0.08259  FAIL
+  first 2 raw char(s): types=26  MI=0.3645  debiased=+0.0762  p=0.03960  FAIL
+  first 3 raw char(s): types=45  MI=0.6005  debiased=+0.1081  p=0.00670  FAIL
+  (t_z4 registered robustness check = first 1 raw char, p=0.08259)
+
+==========================================================================
+C7  WHICH CELLS CARRY IT — per-form-type contribution and its multiplicity
+  one-vs-rest permutation p for every prefix type (same null, seed 409):
+    y        n= 19  by third [1, 8, 10]  p=0.00310  <-- 
+    che      n=  8  by third [0, 5, 3]  p=0.03550  <-- 
+    ok       n= 41  by third [20, 7, 14]  p=0.03730  <-- 
+    o        n= 34  by third [16, 11, 7]  p=0.39286  
+    she      n=  3  by third [1, 2, 0]  p=0.75142  
+    ch       n=  4  by third [3, 0, 1]  p=0.77392  
+    ot       n= 23  by third [7, 10, 6]  p=0.90311  
+    ee       n=  3  by third [2, 0, 1]  p=1.00000  
+  8 types tested; a Bonferroni-corrected 0.01 over them is 0.00125
+
+==========================================================================
+C8  RING-THIRD BOUNDARY CONVENTION
+  floor (registered)   marginal {0: 53, 1: 47, 2: 47}  MI=0.2963  debiased=+0.0975  p=0.00160  PASS
+  nearest              marginal {0: 32, 1: 53, 2: 62}  MI=0.2309  debiased=+0.0364  p=0.18508  FAIL
+  ceil                 marginal {0: 47, 1: 47, 2: 53}  MI=0.2549  debiased=+0.0560  p=0.03910  FAIL
+
+==========================================================================
+C9  SURVIVORSHIP / SAMPLE SHAPE
+  TEST ring sizes: [4, 4, 9, 10, 10, 12, 12, 16, 16, 18, 18, 18]
+  FIT n=%d, TEST n=%d; Capricorn and Aquarius are lost, so 10 of 12 signs
+  survive and the "rank block 21-30" cell is thin everywhere.

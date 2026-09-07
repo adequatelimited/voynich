@@ -1,0 +1,309 @@
+{
+  "coverage_GC2a": {
+    "Lz_loci": 299,
+    "TEST": 26,
+    "records": 91,
+    "survive": 91
+  },
+  "coverage_ZL3b": {
+    "Lz_loci": 299,
+    "TEST": 147,
+    "records": 294,
+    "survive": 294
+  },
+  "high_precision_own_code": {
+    "408": {
+      "debiased": 0.09755765625230323,
+      "observed": 0.29634347861285965,
+      "p": 0.0015749921250393748,
+      "se": 8.867106418797055e-05
+    },
+    "409": {
+      "debiased": 0.09762859698452503,
+      "observed": 0.29634347861285965,
+      "p": 0.0016499917500412498,
+      "se": 9.075431883018146e-05
+    }
+  },
+  "jackknife_drop_ring": [
+    {
+      "debiased": 0.10941981858113031,
+      "dropped_ring": "Leo#0",
+      "n": 129,
+      "p": 0.0021997800219978004,
+      "pass4": true,
+      "pass6": false
+    },
+    {
+      "debiased": 0.11954057332052212,
+      "dropped_ring": "Leo#1",
+      "n": 135,
+      "p": 0.0007999200079992001,
+      "pass4": true,
+      "pass6": true
+    },
+    {
+      "debiased": 0.09381431592530137,
+      "dropped_ring": "Libra#0",
+      "n": 129,
+      "p": 0.003999600039996,
+      "pass4": false,
+      "pass6": false
+    },
+    {
+      "debiased": 0.09966295665605052,
+      "dropped_ring": "Libra#1",
+      "n": 137,
+      "p": 0.0024997500249975004,
+      "pass4": true,
+      "pass6": false
+    },
+    {
+      "debiased": 0.10420893319990576,
+      "dropped_ring": "Sagittarius#0",
+      "n": 143,
+      "p": 0.0006999300069993001,
+      "pass4": true,
+      "pass6": true
+    },
+    {
+      "debiased": 0.08433038618934671,
+      "dropped_ring": "Sagittarius#1",
+      "n": 131,
+      "p": 0.0065993400659934,
+      "pass4": false,
+      "pass6": false
+    },
+    {
+      "debiased": 0.0871120205287331,
+      "dropped_ring": "Sagittarius#2",
+      "n": 138,
+      "p": 0.0051994800519948,
+      "pass4": false,
+      "pass6": false
+    },
+    {
+      "debiased": 0.08764172768236364,
+      "dropped_ring": "Scorpius#0",
+      "n": 143,
+      "p": 0.0038996100389961006,
+      "pass4": false,
+      "pass6": false
+    },
+    {
+      "debiased": 0.1444233221042302,
+      "dropped_ring": "Scorpius#1",
+      "n": 131,
+      "p": 0.00029997000299970003,
+      "pass4": true,
+      "pass6": true
+    },
+    {
+      "debiased": 0.07557415981655746,
+      "dropped_ring": "Scorpius#2",
+      "n": 137,
+      "p": 0.011398860113988602,
+      "pass4": false,
+      "pass6": false
+    },
+    {
+      "debiased": 0.06114035695712969,
+      "dropped_ring": "Virgo#0",
+      "n": 129,
+      "p": 0.0364963503649635,
+      "pass4": false,
+      "pass6": false
+    },
+    {
+      "debiased": 0.09890521931459523,
+      "dropped_ring": "Virgo#1",
+      "n": 135,
+      "p": 0.0024997500249975004,
+      "pass4": true,
+      "pass6": false
+    }
+  ],
+  "jackknife_drop_sign": [
+    {
+      "debiased": 0.14266498389926652,
+      "dropped_sign": "Leo",
+      "n": 117,
+      "p": 0.00019998000199980003,
+      "pass4": true,
+      "pass6": true
+    },
+    {
+      "debiased": 0.06131354812972692,
+      "dropped_sign": "Virgo",
+      "n": 117,
+      "p": 0.051894810518948106,
+      "pass4": false,
+      "pass6": false
+    },
+    {
+      "debiased": 0.0956345331358062,
+      "dropped_sign": "Libra",
+      "n": 119,
+      "p": 0.006799320067993201,
+      "pass4": false,
+      "pass6": false
+    },
+    {
+      "debiased": 0.1085081482183719,
+      "dropped_sign": "Scorpius",
+      "n": 117,
+      "p": 0.0030996900309969004,
+      "pass4": false,
+      "pass6": false
+    },
+    {
+      "debiased": 0.08323068533439226,
+      "dropped_sign": "Sagittarius",
+      "n": 118,
+      "p": 0.012798720127987202,
+      "pass4": false,
+      "pass6": false
+    }
+  ],
+  "seed_sweep_MI_P2_F1": [
+    {
+      "debiased": 0.09753306269663989,
+      "obs": 0.29634347861285965,
+      "p": 0.0008999100089991,
+      "pass4": true,
+      "pass6": true,
+      "seed": 408
+    },
+    {
+      "debiased": 0.09748434963605074,
+      "obs": 0.29634347861285965,
+      "p": 0.0015998400159984002,
+      "pass4": true,
+      "pass6": true,
+      "seed": 409
+    },
+    {
+      "debiased": 0.09807288944848541,
+      "obs": 0.29634347861285965,
+      "p": 0.0016998300169983002,
+      "pass4": true,
+      "pass6": false,
+      "seed": 410
+    },
+    {
+      "debiased": 0.09745806209859151,
+      "obs": 0.29634347861285965,
+      "p": 0.0020997900209979003,
+      "pass4": true,
+      "pass6": false,
+      "seed": 411
+    },
+    {
+      "debiased": 0.09807641570312586,
+      "obs": 0.29634347861285965,
+      "p": 0.0008999100089991,
+      "pass4": true,
+      "pass6": true,
+      "seed": 412
+    },
+    {
+      "debiased": 0.09792580264067835,
+      "obs": 0.29634347861285965,
+      "p": 0.0013998600139986002,
+      "pass4": true,
+      "pass6": true,
+      "seed": 413
+    },
+    {
+      "debiased": 0.09745152416824768,
+      "obs": 0.29634347861285965,
+      "p": 0.0012998700129987,
+      "pass4": true,
+      "pass6": true,
+      "seed": 414
+    },
+    {
+      "debiased": 0.09762700579827102,
+      "obs": 0.29634347861285965,
+      "p": 0.001999800019998,
+      "pass4": true,
+      "pass6": false,
+      "seed": 415
+    },
+    {
+      "debiased": 0.09751007482380827,
+      "obs": 0.29634347861285965,
+      "p": 0.0015998400159984002,
+      "pass4": true,
+      "pass6": true,
+      "seed": 416
+    },
+    {
+      "debiased": 0.0976171532870555,
+      "obs": 0.29634347861285965,
+      "p": 0.0013998600139986002,
+      "pass4": true,
+      "pass6": true,
+      "seed": 417
+    },
+    {
+      "debiased": 0.09771798971048515,
+      "obs": 0.29634347861285965,
+      "p": 0.0017998200179982,
+      "pass4": true,
+      "pass6": false,
+      "seed": 418
+    },
+    {
+      "debiased": 0.09805352796060904,
+      "obs": 0.29634347861285965,
+      "p": 0.0014998500149985001,
+      "pass4": true,
+      "pass6": true,
+      "seed": 419
+    },
+    {
+      "debiased": 0.09778928041189192,
+      "obs": 0.29634347861285965,
+      "p": 0.0013998600139986002,
+      "pass4": true,
+      "pass6": true,
+      "seed": 420
+    },
+    {
+      "debiased": 0.0977139487864443,
+      "obs": 0.29634347861285965,
+      "p": 0.001999800019998,
+      "pass4": true,
+      "pass6": false,
+      "seed": 421
+    },
+    {
+      "debiased": 0.09785559226660873,
+      "obs": 0.29634347861285965,
+      "p": 0.0011998800119988001,
+      "pass4": true,
+      "pass6": true,
+      "seed": 422
+    },
+    {
+      "debiased": 0.0977138564898129,
+      "obs": 0.29634347861285965,
+      "p": 0.0014998500149985001,
+      "pass4": true,
+      "pass6": true,
+      "seed": 423
+    }
+  ],
+  "seed_sweep_pass_counts": {
+    "family4": 16,
+    "family6": 11,
+    "n_seeds": 16
+  },
+  "sha256": {
+    "GC2a": "b09570cb6c993bc2d87134d115e60a978650a8a6495483ddbb1f6005a586096f",
+    "ZL3b": "bf5b6d4ac1e3a51b1847a9c388318d609020441ccd56984c901c32b09beccafc",
+    "meaning_lib.py": "aa1ee5a340923cf7bd3f5aa1d433d24c10b2db50da1e7b2da9256cd98ef42fb1",
+    "t_z4.py": "3e55dee956ae3485ae969fae8c4ceb207f2776e44ef11fd93ea7b91310fc9991"
+  }
+}

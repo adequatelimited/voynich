@@ -1,0 +1,57 @@
+{
+ "verifier": "v_l1_reimplementation_b",
+ "observed_corrected_diff": {
+  "TEST word-final": {
+   "max_abs_diff_vs_t_l1": 4.7857091130865115e-05,
+   "pass_corrected": [
+    "daiin",
+    "n"
+   ],
+   "pass_uncorrected": [
+    "daiin",
+    "eey"
+   ]
+  },
+  "TEST word-initial": {
+   "max_abs_diff_vs_t_l1": 4.984180989264786e-05,
+   "pass_corrected": [
+    "c",
+    "daiin",
+    "q",
+    "qok"
+   ],
+   "pass_uncorrected": [
+    "c",
+    "ot",
+    "q",
+    "qok"
+   ]
+  },
+  "Culpeper char-final": {
+   "max_abs_diff_vs_t_l1": 4.891923822580857e-05,
+   "pass_corrected": [
+    "p"
+   ],
+   "pass_uncorrected": [
+    "g",
+    "o",
+    "p",
+    "r"
+   ]
+  },
+  "Culpeper char-initial": {
+   "max_abs_diff_vs_t_l1": 4.831003087688024e-05,
+   "pass_corrected": [
+    "i",
+    "o"
+   ],
+   "pass_uncorrected": [
+    "d",
+    "i",
+    "o",
+    "u"
+   ]
+  }
+ },
+ "corrected_perm_TEST_final_npass": 2
+}
