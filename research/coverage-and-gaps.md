@@ -14,6 +14,6 @@ The initial seed contains 24 annotated source records, two fully retrieved indep
 | Original Takahashi restrictions | Original site requests notice before saving and permission before republication | Resolve its terms separately from the host's CC0 claim on converted copies; no permission asserted |
 | Modern and historical language diversity | One English novel and authored controls are available | Add several justified genre/script comparators with recorded selection rules and rights |
 | Material science | Custodian links exist; no primary chemistry or radiocarbon dataset inspected here | Locate the actual reports and distinguish parchment age from date of writing |
-| Model grading and seed tiers | No real evaluator profile or human reference calibration has run | Resolve all unassessed seed-family baselines before dependent competitive credit |
+| Model grading and seed tiers | No ranked evaluator profile or frozen AI-reference calibration has completed | Resolve all unassessed seed-family baselines before dependent competitive credit |
 
 No inaccessible source has been filled with invented data. Raw source syntax is preserved and external source rights remain separate from project-authored licenses. Literature/source acquisition and scientific confidence must remain separate from workflow approval and leaderboard rank.

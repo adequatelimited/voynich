@@ -7,12 +7,34 @@ import { parseRecord } from '../src/cli.ts';
 import { assessment, contribution, gradingInput } from './fixtures.ts';
 function runner(responses = [assessment(), assessment()]): StageRunner & { calls: string[]; payloads: string[] } { const calls: string[] = []; const payloads: string[] = []; return { calls, payloads, async run(request) { calls.push(request.stage); payloads.push(request.payload); return { text: JSON.stringify(responses[calls.length - 1]), provider: 'anthropic', model: 'synthetic-test-model', exposed_version: 'synthetic-test', usage: { test_calls: 1 }, receipt_ref: `test-receipt-${calls.length}` }; } }; }
 test('valid useful direction metadata needs no executed result', () => assert.equal(validateContribution(contribution).valid, true));
+test('held provisional tiers may be adjudicated but cannot create credit or bypass final gates', async () => {
+  const input = await gradingInput();
+  const held = assessment(); held.admission_action = 'needs_revision'; held.score_status = 'held';
+  held.outcomes[0]!.gate_evidence[1]!.status = 'unknown';
+  assert.deepEqual(validateStageJudgment(held, input), []);
+  const stalled = await runGrading(input, runner([held, held]));
+  assert.equal(stalled.status, 'held'); assert.equal(stalled.expected_score, null); assert.equal(stalled.official_proposed_score, null);
+  const resolved = runner([assessment(), held, assessment()]);
+  assert.equal((await runGrading(input, resolved)).status, 'complete');
+  assert.deepEqual(resolved.calls, ['assessor', 'adversary', 'adjudicator']);
+  const unsafe = structuredClone(held); unsafe.admission_action = 'accept'; unsafe.score_status = 'proposed';
+  assert.ok(validateStageJudgment(unsafe, input).length);
+  assert.equal((await runGrading(input, runner([assessment(), held, unsafe]))).expected_score, null);
+});
 test('malformed shares and claimed totals are rejected before any model', () => { const copy = structuredClone(contribution); copy.outcomes[0]!.attribution[0]!.share_basis_points = 9999; copy.claimed_total_points = 20; const result = validateContribution(copy); assert.equal(result.valid, false); if (!result.valid) assert.deepEqual(result.issues.map(i => i.code), ['shares', 'claim_arithmetic']); });
 test('unknown model version is allowed; missing AI disclosure is not', () => { const copy = structuredClone(contribution); copy.ai_usage = { status: 'assisted', tools: [{ provider: 'provider', model_id: 'model', model_version: 'unknown', accessed_at: '2026-09-06', tasks: ['Drafting'], human_verification: 'Inspected the source.' }], reproducibility_notes: 'Version not exposed.' }; assert.equal(validateContribution(copy).valid, true); copy.ai_usage.tools = []; assert.equal(validateContribution(copy).valid, false); });
 test('paths reject traversal, Windows devices, drives and alternate data streams', () => { for (const path of ['../secret', 'a/../../b', 'C:/secret', '/secret', 'a\\b', '.git/config', 'a/NUL.txt', 'a/file:secret', 'a/trailing.']) assert.equal(isSafeRepositoryPath(path), false, path); assert.equal(isSafeRepositoryPath('research/folios/f1r.md'), true); });
 test('duplicate YAML keys fail instead of changing authority silently', () => assert.throws(() => parseRecord('id: a\nid: b\n'), /Invalid YAML/));
 test('artifact link must be HTTPS without embedded credentials', () => { const data = { schema_version: '1.0', id: 'test', origin: 'https://user:secret@example.com/a', sha256: 'a'.repeat(64), byte_length: 1, media_type: 'text/plain', source_id: 'source-test', rights: 'Test only.', redistribution: 'unknown', state: 'awaiting_transfer', attribution: 'Test fixture.', retention: 'Test fixture.' }; assert.equal(validateArtifact(data).valid, false); });
 test('unconfigured profile invokes zero model sessions and produces hold', async () => { const input = await gradingInput(); input.profile = DEFAULT_PROFILE; const model = runner(); const report = await runGrading(input, model); assert.equal(model.calls.length, 0); assert.equal(report.status, 'held'); assert.equal(report.expected_score, null); });
+
+test('local previews include the published profile response contract in the bounded stage request', async () => {
+  const input = await gradingInput(); input.profile.settings = { response_contract: 'Synthetic public serialization instructions.' };
+  const request = await buildStageRequest(input, 'assessor');
+  assert.ok(request.developer.endsWith('Synthetic public serialization instructions.'));
+  input.profile.max_input_bytes = 1;
+  await assert.rejects(() => buildStageRequest(input, 'assessor'), /input_limit/);
+});
 test('two isolated agreeing stages complete useful suggestion estimate', async () => { const input = await gradingInput(); const model = runner(); const report = await runGrading(input, model); assert.deepEqual(model.calls, ['assessor', 'adversary']); assert.equal(report.expected_score, 2); assert.equal(report.awarded_score, null); assert.equal(model.payloads[1]!.includes('previous_reports'), false); });
 test('material disagreement invokes one adjudication and no averaging', async () => { const input = await gradingInput(); const model = runner([assessment(2), assessment(5), assessment(2)]); const report = await runGrading(input, model); assert.deepEqual(model.calls, ['assessor', 'adversary', 'adjudicator']); assert.equal(report.expected_score, 2); });
 test('claim20 with valid10 evidence gets10 and cannot mandate expert point approval', async () => { const input = await gradingInput(); input.contribution.outcomes[0]!.claimed_cumulative_tier = 20; input.contribution.outcomes[0]!.claimed_incremental_points = 20; input.contribution.claimed_total_points = 20; const model = runner([assessment(10), assessment(10)]); const report = await runGrading(input, model); assert.equal(report.expected_score, 10); assert.equal(report.status, 'complete'); });

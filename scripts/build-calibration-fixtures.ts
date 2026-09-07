@@ -2,7 +2,7 @@ import { mkdir, writeFile, readFile } from 'node:fs/promises';
 import { contribution, gradingInput } from '../tests/fixtures.ts';
 import { sha256 } from '../src/hash.ts';
 import { DEFAULT_PROFILE } from '../src/grading.ts';
-// Synthetic boundary corpus only. These are author-proposed labels, not human-calibrated references.
+// Synthetic boundary corpus only. These are author-proposed labels, not frozen AI references.
 const routes: [string, string, number, string, string][] = [
   ['literature', 'sources_history', 2, 'An original source annotation corrects a specific reversed attribution in the existing synthetic catalog. It quotes the relevant short locus, preserves source author credit, records a bounded search and explains the changed research decision.', 'Twenty URLs and copied abstracts are submitted with no checked claim, original synthesis, rights record or marginal-value statement.'],
   ['acquisition', 'corpus_annotations', 5, 'A previously unavailable synthetic resource is now lawfully supplied with explicit permission, preserved originals, checked hashes, documented encoding and a worked parser example. It removes a documented research access obstacle.', 'The submitter purchased access to a document and claims research points for the payment, without inspectable licensed material or a new scholarly artifact.'],
@@ -32,10 +32,10 @@ for (const [route, category, tier, eligible, ineligible] of routes) for (const [
   input.contribution.summary = 'SYNTHETIC EVALUATION FIXTURE. No manuscript discovery, production contributor or award is represented.';
   input.contribution.outcomes[0]!.family_id = `family-${id}`; input.contribution.outcomes[0]!.claimed_cumulative_tier = 5; input.contribution.outcomes[0]!.claimed_incremental_points = 5; input.contribution.claimed_total_points = 5;
   input.context.families = []; input.context.credit_high_water_tiers = {};
-  const content = `# Synthetic evaluation evidence\n\n${scenario}\n\nAll people, case facts and example results in this fixture are invented for evaluating the published rubric. A qualified reference panel must inspect whether this case contains enough evidence before labeling it. It is not a real scientific contribution.\n`;
+  const content = `# Synthetic evaluation evidence\n\n${scenario}\n\nAll people, case facts and example results in this fixture are invented for evaluating the published rubric. Separate AI reference contexts must inspect whether this case contains enough evidence before freezing a label. It is not a real scientific contribution.\n`;
   input.files[0] = { ...input.files[0]!, content, byte_length: new TextEncoder().encode(content).byteLength, sha256: await sha256(content) };
-  const item = { id, fixture_only: true, route, category, boundary, scenario, reference_status: 'unreviewed_author_draft', author_proposed_tier: boundary === 'ineligible' ? 0 : tier, reason: 'Apply the relevant public atlas anchor and all universal gates. The proposed label is not an official or reconciled human judgment.', human_reference_labels: [], model_trials: [], input };
+  const item = { id, fixture_only: true, route, category, boundary, scenario, reference_status: 'unreviewed_author_draft', author_proposed_tier: boundary === 'ineligible' ? 0 : tier, reason: 'Apply the relevant public atlas anchor and all universal gates. The proposed label is not an official or frozen AI judgment.', ai_reference_runs: [], model_trials: [], input };
   await writeFile(`grading/fixtures/${id}.json`, JSON.stringify(item, null, 2) + '\n'); cases.push({ id, route, boundary, file: `grading/fixtures/${id}.json`, reference_status: item.reference_status });
 }
 await writeFile('scoring/calibration/cases.json', JSON.stringify({ schema_version: '1.0', status: 'unreviewed_draft_no_actual_model_trials', cases }, null, 2) + '\n');
-process.stdout.write(`Created ${cases.length} synthetic draft boundaries. Human reference review and live calibration remain incomplete.\n`);
+process.stdout.write(`Created ${cases.length} synthetic draft boundaries. AI reference generation and live calibration remain incomplete.\n`);
