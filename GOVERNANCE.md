@@ -1,6 +1,8 @@
 # Governance and delegated automation
 
-The confirmed founding operator is **adequatelimited**, GitHub numeric ID **226906489**. Backup operator, uninvolved appeal reviewer, qualified reference calibrators and domain advisers are **unfilled launch roles** until named and consented. AI personas cannot fill independent scientific evidence requirements.
+The founding scored launch uses the explicit bootstrap authorization and AI-only pilot conditions in [the 2026-09-07 release](grading/releases/2026-09-07-ai-pilot.md). That release makes its calibration limitations public and grants no research points by itself.
+
+The confirmed founding operator is **adequatelimited**, GitHub numeric ID **226906489**. Backup operator, uninvolved appeal reviewer and domain advisers are unfilled operational roles until named and consented. Calibration requires no human appointments: its references and evaluation are fully AI operated under [the public procedure](scoring/calibration/README.md). AI personas cannot fill independent scientific evidence requirements.
 
 All official grades and regrades come from the public AI method. The narrow broker verifies receipts, current state, delegated authority and deterministic arithmetic before feedback, permitted repairs, research merges and decision merges. Contributors and their agents cannot authorize their own awards. Humans govern prospective rules and resolve contested facts, rights, identity, attribution and serious incidents; no operator endpoint accepts replacement points, hidden bonuses or a mutable total.
 

@@ -1,13 +1,13 @@
 schema_version: "1.0"
-status: unconfigured
+status: founding_ai_scored_pilot
 primary_operator:
   github_id: 226906489
   github_login: adequatelimited
 backup_operator: null
 appeal_reviewer: null
 governance_approvers: []
-github_app_id: null
-installation_id: null
-receipt_verification_keys: []
-official_grading_enabled: false
-note: "Bootstrap authorization must be verified outside candidate PR control. This draft grants no runtime authority."
+github_app_id: 4852859
+installation_id: 159580006
+receipt_verification_keys: ["voynich-2026-09-06"]
+official_grading_enabled: true
+note: "Founding operator-authorized AI-scored pilot; see grading/releases/2026-09-07-ai-pilot.md. Runtime receipt verification and exact-head checks remain mandatory."
