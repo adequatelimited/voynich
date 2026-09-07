@@ -1,3 +1,11 @@
+## Current output-correction release (2026-09-07)
+
+The active v2 founding profile supersedes the historical three-call/no-repair transport limit below with **at most four calls**, one per stage: independent assessor, blind adversary, adjudicator when they disagree or contain validation errors, and one corrector only if the adjudicator response fails schema/evidence validation. All four calls are reserved before inference. Valid final judgments, including valid holds, never trigger correction. Raw first responses and their receipts remain immutable; errors are supplied as data to the next authorized stage, never patched by operator code.
+
+The corrector receives the same evidence, all original proposals and exact validator errors. It cannot add/increase positive credit, release held credit, promote a held/rejected admission, remove a known blocker or remove restricted handling. The corrected response must pass the full schema, evidence, gate and correction checks, or the submission remains held. There is no fifth call. The public package and official service use the same procedure and profile; the merge broker replays it from original receipts. This is output correction, not a merit appeal or a new score sample. Timeouts/unknown provider usage still stop inference without an automatic retry.
+
+A submitted run file is an ordinary evidence citation. It is never an authenticated execution receipt merely because it has a run-like filename. All execution and external-assessment receipt references must be exact members of the trusted context arrays, at every tier.
+
 **voynich.win — public AI grading contract**
 
 Current launch qualification: [the founding AI-scored pilot](grading/releases/2026-09-07-ai-pilot.md) permits best-effort official grades before completion of the larger calibration cohort. It does not claim that cohort passed. The effective published profile and response contract govern both local previews and official stages.

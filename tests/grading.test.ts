@@ -5,7 +5,7 @@ import { validateContribution, validateArtifact, isSafeRepositoryPath } from '..
 import { sha256 } from '../src/hash.ts';
 import { parseRecord } from '../src/cli.ts';
 import { assessment, contribution, gradingInput } from './fixtures.ts';
-function runner(responses = [assessment(), assessment()]): StageRunner & { calls: string[]; payloads: string[] } { const calls: string[] = []; const payloads: string[] = []; return { calls, payloads, async run(request) { calls.push(request.stage); payloads.push(request.payload); return { text: JSON.stringify(responses[calls.length - 1]), provider: 'anthropic', model: 'synthetic-test-model', exposed_version: 'synthetic-test', usage: { test_calls: 1 }, receipt_ref: `test-receipt-${calls.length}` }; } }; }
+function runner(responses: unknown[] = [assessment(), assessment()]): StageRunner & { calls: string[]; payloads: string[] } { const calls: string[] = []; const payloads: string[] = []; return { calls, payloads, async run(request) { calls.push(request.stage); payloads.push(request.payload); return { text: JSON.stringify(responses[calls.length - 1]), provider: 'anthropic', model: 'synthetic-test-model', exposed_version: 'synthetic-test', usage: { test_calls: 1 }, receipt_ref: `test-receipt-${calls.length}` }; } }; }
 test('valid useful direction metadata needs no executed result', () => assert.equal(validateContribution(contribution).valid, true));
 test('proposal citation and coverage errors reach one adjudicator while an invalid final cannot award', async () => {
   const input = await gradingInput(); const bad = assessment();
@@ -74,3 +74,44 @@ test('runtime substitution fails closed', async () => { const input = await grad
 test('blind stage request refuses earlier report andadjudicator requiresboth', async () => { const input = await gradingInput(); await assert.rejects(() => buildStageRequest(input, 'adversary', [assessment()]), /cannot see/); await assert.rejects(() => buildStageRequest(input, 'adjudicator', []), /exactly two/); });
 test('gate and scope disagreement remains material', () => { const first = assessment(); const second = assessment(); second.outcomes[0]!.scope += ' Expanded question.'; assert.equal(assessmentsAgree(first, second), false); });
 test('actual assessed20 requires trusted external evidence, not two AI personas', async () => { const input = await gradingInput(); const value = assessment(20); assert.ok(validateStageJudgment(value, input).some(x => x.includes('Tier 20'))); value.outcomes[0]!.validation_evidence = { execution_receipt_refs: [], external_assessment_receipt_refs: ['external-test-receipt'], independent_inspection_refs: [] }; input.context.external_assessment_receipts = ['external-test-receipt']; assert.equal(validateStageJudgment(value, input).length, 0); });
+
+
+test('four-stage profile preserves malformed proposals and corrects missing final fields once', async () => {
+  const input = await gradingInput(); input.profile.max_stages = 4;
+  const held = assessment(); held.admission_action = 'needs_revision'; held.score_status = 'held';
+  held.findings = [{ rule_id_or_gate: 'G2', severity: 'blocker', path_or_locus: 'research/example.md', evidence_refs: ['research/example.md'], reason: 'Missing evidence.', required_change: 'Supply evidence.', verification_step: 'Inspect evidence.', blocks_merge_or_credit: true }];
+  const malformed = structuredClone(held) as any; delete malformed.findings[0].blocks_merge_or_credit;
+  const model = runner([null, assessment(), malformed, held]); const cache = new MemoryGradingCache();
+  const result = await runGrading(input, model, cache);
+  assert.equal(result.assessment?.admission_action, 'needs_revision'); assert.equal(result.expected_score, null);
+  assert.deepEqual(model.calls, ['assessor', 'adversary', 'adjudicator', 'corrector']);
+  assert.ok(model.payloads[3]!.includes('blocks_merge_or_credit'));
+  assert.ok(!model.payloads[1]!.includes('previous_reports'));
+  await runGrading(input, model, cache); assert.equal(model.calls.length, 4, 'All raw first responses, including malformed ones, must be cached.');
+});
+test('bounded correction may remove a false receipt claim but cannot create evidence or improve merit', async () => {
+  const input = await gradingInput(); input.profile.max_stages = 4;
+  const invalid = assessment(); invalid.outcomes[0]!.validation_evidence = { execution_receipt_refs: ['research/example.md'], external_assessment_receipt_refs: [], independent_inspection_refs: [] };
+  const result = await runGrading(input, runner([invalid, assessment(), invalid, assessment()]));
+  assert.equal(result.status, 'complete'); assert.equal(result.expected_score, 2); assert.equal(result.stages.length, 4);
+  const inflation = await runGrading(input, runner([invalid, assessment(), invalid, assessment(5)]));
+  assert.equal(inflation.expected_score, null); assert.ok(inflation.holds.some(x => x.includes('increase')));
+  const stillInvalid = runner([invalid, assessment(), invalid, invalid]);
+  assert.equal((await runGrading(input, stillInvalid)).expected_score, null); assert.equal(stillInvalid.calls.length, 4);
+});
+test('correction cannot promote held admission, release credit or erase an existing blocker', async () => {
+  const input = await gradingInput(); input.profile.max_stages = 4;
+  const held = assessment(); held.admission_action = 'hold'; held.score_status = 'held';
+  held.outcomes[0]!.validation_evidence = { execution_receipt_refs: ['fake'], external_assessment_receipt_refs: [], independent_inspection_refs: [] };
+  const result = await runGrading(input, runner([held, assessment(), held, assessment()]));
+  assert.equal(result.expected_score, null); assert.ok(result.holds.some(x => x.includes('cannot promote')));
+});
+test('a valid final judgment cannot buy a correction and every gate and receipt namespace is checked', async () => {
+  const input = await gradingInput(); input.profile.max_stages = 4;
+  const model = runner(); assert.equal((await runGrading(input, model)).status, 'complete'); assert.equal(model.calls.length, 2);
+  await assert.rejects(buildStageRequest(input, 'corrector', [assessment(), assessment(), assessment()]), /invalid final/);
+  const repeated = assessment(); repeated.outcomes[0]!.gate_evidence.push(repeated.outcomes[0]!.gate_evidence[0]!);
+  assert.ok(validateStageJudgment(repeated, input).some(x => x.includes('Exactly one')));
+  const falseExpert = assessment(); falseExpert.outcomes[0]!.validation_evidence = { execution_receipt_refs: [], external_assessment_receipt_refs: ['fake'], independent_inspection_refs: [] };
+  assert.ok(validateStageJudgment(falseExpert, input).some(x => x.includes('External assessment')));
+});
