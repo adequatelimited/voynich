@@ -34,7 +34,7 @@ ai_usage:
       human_verification: >-
         The re-run was requested by Vasily Gnuchev after the critique ("of course re-run, yes").
         The protocol was committed before the script ran. All numbers are from the recorded
-        run output; the self-contained branch reproduces results.json byte-for-byte.
+        run output; the self-contained branch reproduces every metric in results.json (only the recorded runtimes differ).
   reproducibility_notes: >-
     Deterministic: python clean_rerun.py --repo ../.. --lab <dir with bibles/Latin.xml and
     pg49513.txt> --out results/. Stdlib only. critique_lib.py is a verbatim copy of the
