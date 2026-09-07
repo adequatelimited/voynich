@@ -13,6 +13,14 @@ test('paths reject traversal, Windows devices, drives and alternate data streams
 test('duplicate YAML keys fail instead of changing authority silently', () => assert.throws(() => parseRecord('id: a\nid: b\n'), /Invalid YAML/));
 test('artifact link must be HTTPS without embedded credentials', () => { const data = { schema_version: '1.0', id: 'test', origin: 'https://user:secret@example.com/a', sha256: 'a'.repeat(64), byte_length: 1, media_type: 'text/plain', source_id: 'source-test', rights: 'Test only.', redistribution: 'unknown', state: 'awaiting_transfer', attribution: 'Test fixture.', retention: 'Test fixture.' }; assert.equal(validateArtifact(data).valid, false); });
 test('unconfigured profile invokes zero model sessions and produces hold', async () => { const input = await gradingInput(); input.profile = DEFAULT_PROFILE; const model = runner(); const report = await runGrading(input, model); assert.equal(model.calls.length, 0); assert.equal(report.status, 'held'); assert.equal(report.expected_score, null); });
+
+test('local previews include the published profile response contract in the bounded stage request', async () => {
+  const input = await gradingInput(); input.profile.settings = { response_contract: 'Synthetic public serialization instructions.' };
+  const request = await buildStageRequest(input, 'assessor');
+  assert.ok(request.developer.endsWith('Synthetic public serialization instructions.'));
+  input.profile.max_input_bytes = 1;
+  await assert.rejects(() => buildStageRequest(input, 'assessor'), /input_limit/);
+});
 test('two isolated agreeing stages complete useful suggestion estimate', async () => { const input = await gradingInput(); const model = runner(); const report = await runGrading(input, model); assert.deepEqual(model.calls, ['assessor', 'adversary']); assert.equal(report.expected_score, 2); assert.equal(report.awarded_score, null); assert.equal(model.payloads[1]!.includes('previous_reports'), false); });
 test('material disagreement invokes one adjudication and no averaging', async () => { const input = await gradingInput(); const model = runner([assessment(2), assessment(5), assessment(2)]); const report = await runGrading(input, model); assert.deepEqual(model.calls, ['assessor', 'adversary', 'adjudicator']); assert.equal(report.expected_score, 2); });
 test('claim20 with valid10 evidence gets10 and cannot mandate expert point approval', async () => { const input = await gradingInput(); input.contribution.outcomes[0]!.claimed_cumulative_tier = 20; input.contribution.outcomes[0]!.claimed_incremental_points = 20; input.contribution.claimed_total_points = 20; const model = runner([assessment(10), assessment(10)]); const report = await runGrading(input, model); assert.equal(report.expected_score, 10); assert.equal(report.status, 'complete'); });
