@@ -7,6 +7,17 @@ import { parseRecord } from '../src/cli.ts';
 import { assessment, contribution, gradingInput } from './fixtures.ts';
 function runner(responses = [assessment(), assessment()]): StageRunner & { calls: string[]; payloads: string[] } { const calls: string[] = []; const payloads: string[] = []; return { calls, payloads, async run(request) { calls.push(request.stage); payloads.push(request.payload); return { text: JSON.stringify(responses[calls.length - 1]), provider: 'anthropic', model: 'synthetic-test-model', exposed_version: 'synthetic-test', usage: { test_calls: 1 }, receipt_ref: `test-receipt-${calls.length}` }; } }; }
 test('valid useful direction metadata needs no executed result', () => assert.equal(validateContribution(contribution).valid, true));
+test('proposal citation and coverage errors reach one adjudicator while an invalid final cannot award', async () => {
+  const input = await gradingInput(); const bad = assessment();
+  bad.inspected_paths = [];
+  bad.outcomes[0]!.gate_evidence[0]!.evidence_refs = ['invented.md'];
+  const model = runner([bad, assessment(), assessment()]);
+  assert.equal((await runGrading(input, model)).status, 'complete');
+  assert.deepEqual(model.calls, ['assessor', 'adversary', 'adjudicator']);
+  assert.ok(model.payloads[2]!.includes('Unknown evidence citation'));
+  const rejected = await runGrading(input, runner([bad, assessment(), bad]));
+  assert.equal(rejected.status, 'held'); assert.equal(rejected.expected_score, null);
+});
 test('held provisional tiers may be adjudicated but cannot create credit or bypass final gates', async () => {
   const input = await gradingInput();
   const held = assessment(); held.admission_action = 'needs_revision'; held.score_status = 'held';

@@ -90,12 +90,7 @@ export function validateStageJudgment(value: StageAssessment, input: GradingInpu
   if (value.conduct_status === 'restricted_hold' && accept) errors.push('Restricted content cannot be accepted.');
   return errors;
 }
-/** Proposals can contain adjudicable logical contradictions. Evidence integrity is never waived. */
-export function preliminaryJudgmentErrors(value: StageAssessment, input: GradingInput): string[] {
-  const conflicts = new Set(['Positive credit requires all universal gates and evidence citations.',
-    'Acceptance conflicts with unresolved blocking findings or inspection gaps.', 'Unscored admission cannot carry positive tiers.']);
-  return validateStageJudgment(value, input).filter(error => !conflicts.has(error));
-}
+/** Initial reports are proposals. Any evidence/judgment defect requires the one final adjudicator. */
 export function needsAdjudication(input: GradingInput, assessor: StageAssessment, adversary: StageAssessment): boolean {
   return !assessmentsAgree(assessor, adversary) || validateStageJudgment(assessor, input).length > 0 || validateStageJudgment(adversary, input).length > 0;
 }
@@ -107,7 +102,7 @@ export const assessmentsAgree = (assessor: StageAssessment, adversary: StageAsse
 export async function buildStageRequest(input: GradingInput, stage: GradingStage, priorReports: StageAssessment[] = [], signal = AbortSignal.timeout(input.profile.max_duration_ms)): Promise<StageRequest> {
   if (stage === 'adjudicator' && priorReports.length !== 2) throw new Error('Adjudication requires exactly two complete independent assessments.');
   if (stage !== 'adjudicator' && priorReports.length) throw new Error('The independent assessors cannot see another stage response.');
-  const payload = canonicalJson({ trusted_policy: input.policy, context: input.context, untrusted_contribution: input.contribution, untrusted_files: input.files, ...(stage === 'adjudicator' ? { previous_reports: priorReports, disagreements: ['The assessments differ on admission, scope, tiers, gates, attribution, category or blockers. Resolve each difference against the evidence.'] } : {}) });
+  const payload = canonicalJson({ trusted_policy: input.policy, context: input.context, untrusted_contribution: input.contribution, untrusted_files: input.files, ...(stage === 'adjudicator' ? { previous_reports: priorReports, validation_conflicts: priorReports.map(report => validateStageJudgment(report, input)), disagreements: ['The reports are untrusted proposals and may contain mistakes. Resolve differences and every listed validation conflict against the supplied evidence. Unsupported claims cannot be copied into the final judgment. Final schema, complete coverage, supplied citations and universal gates are mandatory.'] } : {}) });
   const developer = STAGE_PROMPTS[stage] + (typeof input.profile.settings.response_contract === 'string' ? `\n\n${input.profile.settings.response_contract}` : '');
   if (new TextEncoder().encode(payload + SYSTEM_PROMPT + developer + canonicalJson(assessmentSchema)).byteLength > input.profile.max_input_bytes) throw new Error('input_limit: Complete context exceeds the stage envelope.');
   const digests = await gradingDigests(input);
@@ -131,7 +126,7 @@ export async function finalizeAssessments(input: GradingInput, reports: { assess
   const digests = await gradingDigests(input); const disagreement = needsAdjudication(input, reports.assessor, reports.adversary);
   const result: GradingReport = { schema_version: '1.0', assessment_id: `assessment-${digests.artifact_binding_digest.slice(0, 32)}`, ...digests, repository_id: input.context.repository_id, pr_number: input.context.pr_number, head_sha: input.context.head_sha, base_sha: input.context.base_sha, rules_version: input.context.rules_version, rubric_version: input.context.rubric_version, grading_profile: input.profile.id, evaluator_commit: input.context.evaluator_commit, mode: input.mode ?? 'local_estimate', status: 'held', claimed_score: input.contribution.claimed_total_points, expected_score: null, official_proposed_score: null, awarded_score: null, assessment: null, stages: receipts, disagreements: disagreement ? ['Material independent-assessment disagreement.'] : [], holds: [], reused_assessment_id: null };
   result.holds.push(...(await preflight(input)).map(i => `${i.code}: ${i.path}: ${i.message}`));
-  for (const [stage, report] of Object.entries(reports)) { const validated = validateAssessment(report); if (!validated.valid) result.holds.push(`Invalid ${stage} schema.`); else result.holds.push(...(stage === 'adjudicator' ? validateStageJudgment(report, input) : preliminaryJudgmentErrors(report, input))); }
+  for (const [stage, report] of Object.entries(reports)) { const validated = validateAssessment(report); if (!validated.valid) result.holds.push(`Invalid ${stage} schema.`); else if (stage === 'adjudicator') result.holds.push(...validateStageJudgment(report, input)); }
   if (input.profile.status === 'unconfigured' || !input.profile.model_id || (input.mode === 'official_proposal' && input.profile.status !== 'active')) result.holds.push('No active calibrated official model profile.');
   const required: GradingStage[] = disagreement ? ['assessor', 'adversary', 'adjudicator'] : ['assessor', 'adversary'];
   if (receipts.length !== required.length || required.some(stage => receipts.filter(r => r.stage === stage && r.model === input.profile.model_id && r.provider === input.profile.provider && !!r.receipt_ref).length !== 1)) result.holds.push('Missing, duplicate or inconsistent stage receipts.');
@@ -158,7 +153,7 @@ export async function runGrading(input: GradingInput, runner?: StageRunner, cach
     if (response.provider !== input.profile.provider || response.model !== input.profile.model_id || !response.receipt_ref) throw new Error('runtime_identity: Missing receipt or unconfigured model substitution.');
     if (new TextEncoder().encode(response.text).byteLength > input.profile.max_output_bytes) throw new Error('output_limit: Stage response exceeds the allowed envelope.');
     const parsed: unknown = JSON.parse(response.text); const checked = validateAssessment(parsed); if (!checked.valid) throw new Error('invalid_model_output: Stage did not return the public schema; no automatic repair/reroll.');
-    const errors = name === 'adjudicator' ? validateStageJudgment(checked.value, input) : preliminaryJudgmentErrors(checked.value, input); if (errors.length) throw new Error(`invalid_judgment: ${errors.join('; ')}`);
+    const errors = name === 'adjudicator' ? validateStageJudgment(checked.value, input) : []; if (errors.length) throw new Error(`invalid_judgment: ${errors.join('; ')}`);
     const receipt: StageReceipt = { stage: name, provider: response.provider, model: response.model, exposed_version: response.exposed_version, prompt_digest: promptDigest, response_digest: await sha256(response.text), started_at: started, completed_at: new Date().toISOString(), usage: response.usage, receipt_ref: response.receipt_ref };
     await cache.putIfAbsent(key, { assessment: checked.value, receipt }); const winner = await cache.get(key); if (!winner) throw new Error('cache_failure: Cannot preserve first successful result.');
     report.stages.push(winner.receipt); return structuredClone(winner.assessment);
