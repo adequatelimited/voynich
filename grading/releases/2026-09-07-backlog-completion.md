@@ -1,0 +1,10 @@
+## Current v5 artifact and response-completeness release
+
+The active profile supports 8,000,000 original bytes per file, 24,000,000 total source bytes and 160 files. Full manifests, rights statements, reports and executable code plus deterministic data views may occupy up to 1,000,000 evidence-content bytes, within a 1,200,000-byte complete stage envelope. Small submissions use only their actual evidence; this is a ceiling, not padding. Sonnet, at most four calls, one active job/session, unchanged qualitative tiers and aggregate operating ceilings remain in force. No usage counters or prior awards reset.
+
+XML joins the UTF-8 data allowlist. The established saxes parser validates the entire document and counts elements, without evaluating code or retrieving external resources. DTDs and entity declarations are prohibited. Video and all archives/compressed containers remain prohibited. Larger datasets retain explicit partial semantic coverage; all code, prose reports, provenance and manifests remain fully supplied. Earlier v4 profiles retain their original evidence allocation through the versioned model_evidence_bytes setting.
+
+Response-completeness instructions prefer concise gate/outcome explanations over redundant informational findings. Every included finding still requires an explicit blocks_merge_or_credit boolean; nothing is inferred or repaired by the server. Invalid prior responses remain immutable and do not authorize points. The new published profile can assess the still-pending evidence afresh; valid judgments under an unchanged profile cannot be rerolled. This release is operator-authorized to clear actual artifact and pipeline blockers and does not claim calibration passed.
+
+
+Scientific result JSON containing nonfinite values (Infinity, -Infinity, NaN) is inspected with the established JSON5 parser when strict JSON fails. Original bytes and values are preserved; derived views disclose scientific_json5 and the count of nonfinite numbers. These are numerical limitations to assess, not permission to invent finite results. Manifests and trusted policy records retain their existing strict validation.

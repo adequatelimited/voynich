@@ -28,7 +28,7 @@ export async function loadBundle(root: string, manifestPath: string, context: Gr
   const paths = new Set([manifestPath, contribution.rights_manifest, ...contribution.changes.map(c => c.path), ...contribution.outcomes.flatMap(o => o.evidence)]);
   if (paths.size > profile.max_files) throw new Error('Bundle exceeds the public file limit.');
   const files: EvidenceFile[] = [];
-  const budgets = profile.settings.artifact_handling === 'bounded-text-v1' ? artifactBudgets(await Promise.all([...paths].map(async path => ({ path, byte_length: (await lstat(resolve(root, path))).size })))) : new Map<string, number>();
+  const budgets = profile.settings.artifact_handling === 'bounded-text-v1' ? artifactBudgets(await Promise.all([...paths].map(async path => ({ path, byte_length: (await lstat(resolve(root, path))).size }))), Number(profile.settings.model_evidence_bytes ?? 96000)) : new Map<string, number>();
   for (const path of paths) {
     const bytes = await safeRead(root, path, profile.max_file_bytes); const media_type = mediaType(path);
     if (profile.settings.artifact_handling === 'bounded-text-v1') { files.push(await inspectTextArtifact(path, bytes, budgets.get(path)!)); continue; }
