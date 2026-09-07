@@ -1,0 +1,52 @@
+{
+ "voynich": {
+  "entries": 226,
+  "tokens": 34986,
+  "types": 10120,
+  "ttr": 0.2893,
+  "entry_tokens_mean": 154.8,
+  "jaccard_adjacent": 0.0804,
+  "jaccard_distant": 0.0422,
+  "entry_unique_share": 0.3024
+ },
+ "culpeper_encyclopedia": {
+  "entries": 138,
+  "tokens": 242235,
+  "types": 9336,
+  "ttr": 0.0385,
+  "entry_tokens_mean": 1755.3,
+  "jaccard_adjacent": 0.2135,
+  "jaccard_distant": 0.1556,
+  "entry_unique_share": 0.0281
+ },
+ "alice_narrative_chunks": {
+  "entries": 165,
+  "tokens": 25575,
+  "types": 2550,
+  "ttr": 0.0997,
+  "entry_tokens_mean": 155.0,
+  "jaccard_adjacent": 0.1964,
+  "jaccard_distant": 0.1583,
+  "entry_unique_share": 0.072
+ },
+ "devils_dictionary": {
+  "entries": 878,
+  "tokens": 55500,
+  "types": 10663,
+  "ttr": 0.1921,
+  "entry_tokens_mean": 63.2,
+  "jaccard_adjacent": 0.0634,
+  "jaccard_distant": 0.0611,
+  "entry_unique_share": 0.1383
+ },
+ "wonder_book_kids_encyclopedia": {
+  "entries": 164,
+  "tokens": 147099,
+  "types": 11479,
+  "ttr": 0.078,
+  "entry_tokens_mean": 896.9,
+  "jaccard_adjacent": 0.0962,
+  "jaccard_distant": 0.0939,
+  "entry_unique_share": 0.0801
+ }
+}

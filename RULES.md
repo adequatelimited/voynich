@@ -26,7 +26,7 @@ Negative and inconclusive results can be valuable. A suggestion does not require
 
 Provide the access/redistribution rights, source attribution and consent records required for the submitted material. Do not expose credentials, unauthorized private information, doxxing material or content the project cannot lawfully receive or host. An accessible URL alone does not establish redistribution rights.
 
-Missing essential rights evidence requires revision or a hold. Suspected illegal or privacy-sensitive content uses restricted incident handling; the bot must not reproduce it in a public accusation or report. Uncertain legal classification is not an AI finding of criminal conduct. Appropriate references or redacted artifacts may be used when the underlying material cannot be redistributed.
+Apply rights requirements to the bytes actually submitted. Attributed external catalog references do not redistribute linked bytes; applicable upstream open-license/public-domain provenance does not require separate mirror permission or identity attestation. Concrete unauthorized redistribution blocks inclusion. Unverified remote details are limitations, not automatic admission failures. Suspected illegal or privacy-sensitive content uses restricted incident handling; the bot must not reproduce it in a public accusation or report. Uncertain legal classification is not an AI finding of criminal conduct. Appropriate references or redacted artifacts may be used when the underlying material cannot be redistributed.
 
 **R5 — Maintain respectful scholarly conduct**
 
@@ -61,3 +61,12 @@ The automated system can accept and merge eligible work, assign official scores,
 Unresolved facts or serious abuse questions may trigger an operational hold and accountable human investigation. Permanent bans, public accusations of deliberate misconduct, contested account linkage and disputed sanctions require the documented operator process. Humans resolve factual, policy, rights, attribution or conduct disputes; all point assignments and regrades are produced by the AI grader under the published rules, without discretionary human point edits.
 
 PR feedback includes a readable summary and machine-readable findings so a contributor's agent can fix the local branch and push again. Never echo secrets, harmful personal data or prohibited material into that feedback. Keep an appeal route and a history of corrected automated decisions. Model failures, unavailable evidence and exhausted budgets are visible holds, not automatic score zero or silent approval.
+
+## Inclusion-first launch interpretation
+
+The operator-authorized [2026-09-07 inclusion-first policy](grading/releases/2026-09-07-inclusion-first.md) governs admission and tier-specific evidence for profile v3. Relevant, attributable work is accepted at its supported tier, including zero credit, unless concrete prohibited content or an actual safe-inspection failure prevents acceptance.
+
+
+## Artifact admission
+
+Video and archive/compressed content of any kind are prohibited, including renamed or embedded payloads. This includes ZIP, TAR, GZIP, RAR, 7z, compression-only formats and archive-based documents such as DOCX, XLSX, EPUB and NPZ. Animated formats are excluded; GIF is conservatively excluded entirely. Submit unpacked supported research files with provenance and rights. Unknown binary formats are not admitted by renaming them. See the current large-artifact release in GRADING.md.
