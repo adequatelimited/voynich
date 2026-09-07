@@ -13,3 +13,7 @@ Substantive rubric/methodology/profile/trusted-code changes require a governance
 Appeals identify exact artifacts, criteria and evidence, normally within 30 days; later material evidence may reopen. An uninvolved person resolves contested facts, then the AI regrades from that authenticated finding. Permanent bans, public accusations, serious contested sanctions and disputed account linkage need accountable process. Temporary quarantine/resource protection may be immediate. Shared models, IPs or unpopular hypotheses alone do not establish guilt or identity.
 
 Operators disclose conflicts, recuse where necessary, document appointments/removal and retain custody through authenticated key/delegation rotation. Required role coverage and private reporting routes are launch gates. Target supported-submission feedback is within 30 minutes when budget permits and escalated acknowledgment within three business days; these are service objectives to measure, not verified guarantees.
+
+## Operator-directed inclusion-first release
+
+The explicit [2026-09-07 inclusion-first authorization](grading/releases/2026-09-07-inclusion-first.md) supersedes the seven-day/two-human-approval requirement for this launch correction only. Publish the reviewed governance PR through the trusted operator check and ordinary branch protections. It cannot assign research points, erase old judgments, or bypass CI.
