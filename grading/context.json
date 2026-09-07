@@ -190,17 +190,6 @@
       "seed_baseline": 0
     },
     {
-      "id": "family-generative-falsification",
-      "rubric_version": "0.1",
-      "scope": "Pilot 4 in the generative-mechanism falsification family: implements the Cardan table-and-grille device (M5a independent-column, M5b row-coupled) built from the pinned ZL3b corpus, measures composite distance against real manuscript statistics across 28 configurations plus multi-seed stability, and narrows the residual gap to two local metrics (conditional bigram entropy, word-final predictability), extending outcome-m4-template-doodler-pilot.",
-      "acceptance_test": "Run the documented command; confirm results.json matches the recorded output and that every M5b variant beats every M5a variant on composite distance, with the best M5b at <= 0.55, Zipf <= -0.75, and adjacent-page Jaccard within 0.01 of the corpus.",
-      "aliases": [],
-      "predecessor_family_ids": [],
-      "excluded_overlap": [],
-      "seed": false,
-      "seed_baseline": 0
-    },
-    {
       "id": "family-generative-falsification-word-grammar-template",
       "rubric_version": "0.1",
       "scope": "A distinct generative-mechanism falsification pilot implementing Stolfi's published 2000 word grammar (core/mantle/crust unimodal-hill slot structure) as a template generator embedded in an entry/topic-carryover engine, and measuring two real-language positive controls (Culpeper's Complete Herbal 1653, Alice in Wonderland) with the identical metric suite against the pinned ZL3b corpus across 12 grid variants, showing (a) real language differs from the manuscript on conditional entropy, final-char entropy and entry-private vocabulary share, reframing prior 'unmatched by content-free generators' results away from a linguistic-content reading, and (b) the published grammar covers 86% of corpus word types with zero fitting and jointly reproduces vocabulary size, ttr, word length and page-sharing, leaving a residual mechanical-repetition signature (H2|1, final-char entropy, Zipf slope, entry-unique overshoot).",
@@ -214,16 +203,48 @@
       ],
       "seed": false,
       "seed_baseline": 0
+    },
+    {
+      "id": "family-generative-falsification",
+      "rubric_version": "0.1",
+      "scope": "Pilot 4 in the generative-mechanism falsification family: implements the Cardan table-and-grille device (M5a independent-column, M5b row-coupled) built from the pinned ZL3b corpus, measures composite distance against real manuscript statistics across 28 configurations plus multi-seed stability, and narrows the residual gap to two local metrics (conditional bigram entropy, word-final predictability), extending outcome-m4-template-doodler-pilot.",
+      "acceptance_test": "Run the documented command; confirm results.json matches the recorded output and that every M5b variant beats every M5a variant on composite distance, with the best M5b at <= 0.55, Zipf <= -0.75, and adjacent-page Jaccard within 0.01 of the corpus.",
+      "aliases": [],
+      "predecessor_family_ids": [],
+      "excluded_overlap": [],
+      "seed": false,
+      "seed_baseline": 0
+    },
+    {
+      "id": "family-generative-falsification-controls-entry-ladder",
+      "rubric_version": "0.1",
+      "scope": "A bounded diagnostic control extending the existing entry-structure metric suite (entry-private vocabulary share, adjacent/distant page Jaccard, ttr, entry token length) to two new real-text genres (Devil's Dictionary, Wonder Book of Knowledge) alongside the previously measured Culpeper/Alice controls, showing the manuscript's entry-private vocabulary is genre- and entry-length-dependent and lies on a continuum with short-entry real genres rather than being an order-of-magnitude outlier, with a documented correction to an earlier interpretive emphasis about device-overshoot.",
+      "acceptance_test": "Run `python controls_entry.py --corpus ../../data/corpora/ZL3b-n.txt --culpeper ../../data/corpora/pg49513.txt --alice ../../data/corpora/pg11.txt --devil ../../data/corpora/pg972.txt --wonder ../../data/corpora/pg41111.txt --out results/`; confirm results.json matches the recorded output showing devils_dictionary entry_unique_share=0.1383 and wonder_book_kids_encyclopedia entry_unique_share=0.0801, both between culpeper_encyclopedia (0.0281) and voynich (0.3024), and devils_dictionary jaccard_adjacent (0.0634) within 0.02 of voynich's 0.0804.",
+      "aliases": [],
+      "predecessor_family_ids": [
+        "family-generative-falsification",
+        "family-generative-falsification-word-grammar-template"
+      ],
+      "excluded_overlap": [
+        "Does not claim credit for the Cardan table-and-grille (M5a/M5b) mechanism experiment credited under family-generative-falsification.",
+        "Does not claim the M3 per-page entry/topic-carryover generator credited under family-generative-falsification-entry-doodler.",
+        "Does not claim the Stolfi word-grammar template generator or the original Culpeper/Alice real-language control measurement credited under family-generative-falsification-word-grammar-template; reuses those two texts' bytes only as baseline rows recomputed alongside the two new genres.",
+        "Does not claim credit for the pinned ZL3b corpus/parser (seed-corpus-parser) or local harness workflow (seed-local-harness), used only as inputs.",
+        "Does not claim credit for MS408 mirror registration (family-ms408-data-access)."
+      ],
+      "seed": false,
+      "seed_baseline": 0
     }
   ],
   "credit_high_water_tiers": {
     "family-ms408-data-access": 5,
     "family-generative-falsification-doodler": 5,
     "family-generative-falsification-entry-doodler": 5,
+    "family-generative-falsification-word-grammar-template": 5,
     "family-generative-falsification": 5,
-    "family-generative-falsification-word-grammar-template": 5
+    "family-generative-falsification-controls-entry-ladder": 2
   },
-  "ledger_digest": "08f0e479e0ff9ba8a867d55c4b7f2d196e1dbd5fbc4faa6c5699f9d1987bd93a",
+  "ledger_digest": "97a6d3762a20b835e2590794ad6ffe243c6da061fc09ab094f6bdffd041b64c3",
   "public_evidence": [
     {
       "path": "research/context-index.json",
