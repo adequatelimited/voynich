@@ -8,7 +8,9 @@ How sensitive is a token-frequency concentration statistic to a specific boundar
 
 ## Bounded prior-work and overlap check
 
-The initial fixture asserted novelty only within its isolated context; that does not establish novelty in Voynich scholarship. This revised direction makes no claim of field-wide novelty. Its next step is to compare the public research tree and source catalog for an existing segmentation-sensitivity outcome family. If an equivalent direction is occupied, consolidate this card into that family with no duplicate increment. This proposal remains a fixture and should not be merged into the research corpus.
+Checked the supplied `research/context-index.json` at public commit 0cf74b53770bda05ec82dcd68181ddb55be7f3c3. The index contains the corpus-integrity branch question, "Which uncertainty and segmentation choices change downstream conclusions?" It also contains direction-uncertainty-ranking (family seed-direction-uncertainty-ranking), whose question is "Which claimed effects change most when uncertain reading and spacing policies are varied?", and task-08-segmentation-protocol, "Propose a bounded segmentation comparison".
+
+The synthetic boundary comparison is an instance of that already proposed scope, not an independently novel research direction. This revision withdraws the hypothetical positive-point claim (2 becomes 0) and records the existing seed family as related work. No credit is requested for restating its question, providing a fixture, or performing routine grading administration. This bounded check inspected the supplied index only; it does not claim an exhaustive literature search or verification of the seed's underlying study artifacts. The fixture is still relevant as a noncompetitive integration test of duplicate/overlap handling.
 
 ## Fixed proposed control and procedure
 
@@ -25,3 +27,5 @@ This tiny constructed example tests an analysis harness assumption, not Voynich 
 ## Revision record
 
 This revision replaces an unspecified statistic and transformation with exact proposed controls and acceptance checks. It also removes the implication that an isolated-fixture novelty check establishes research novelty. The previous live assessment returned invalid output; these changes are operator-authored test improvements, not findings attributed to that model. Both revisions remain unranked and unmerged.
+
+The second model response was retained but failed deterministic review validation. Its overlap observation was independently checked against the supplied index before this revision. Its suggestion to remove honest fixture framing was not adopted. The controls remain unexecuted, the public rules remain unchanged, and this PR must remain unmerged.

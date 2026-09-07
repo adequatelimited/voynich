@@ -3,7 +3,7 @@
   "id": "pilot-unique-direction",
   "kind": "direction",
   "title": "[UNRANKED PILOT FIXTURE] unique-direction",
-  "summary": "Specify a proposed synthetic boundary-sensitivity control with explicit novelty and execution limits.",
+  "summary": "Document bounded overlap with the existing uncertainty-ranking seed and withdraw hypothetical positive credit.",
   "branch_ids": [],
   "contributors": [
     {
@@ -33,7 +33,8 @@
         "model_version": "not exposed",
         "accessed_at": "2026-09-07T04:11:00Z",
         "tasks": [
-          "Revised synthetic controls and disclosed limitations for pipeline integration testing"
+          "Revised synthetic controls and disclosed limitations for pipeline integration testing",
+          "Independently checked supplied context-index overlap and withdrew hypothetical positive credit after inspecting an invalid model response."
         ],
         "human_verification": "Operator authorized integration testing; no scientific verification or human review of these proposed controls is asserted."
       }
@@ -43,7 +44,7 @@
   "changes": [
     {
       "path": "contributions/pilot-unique-direction/proposal.md",
-      "improvement": "Specify a proposed synthetic boundary-sensitivity control with explicit novelty and execution limits."
+      "improvement": "Document bounded overlap with the existing uncertainty-ranking seed and withdraw hypothetical positive credit."
     }
   ],
   "outcomes": [
@@ -51,15 +52,17 @@
       "id": "outcome-pilot-unique-direction",
       "family_id": "family-pilot-boundary-direction",
       "before": "No occupied proposal in the isolated synthetic context.",
-      "after": "Specify a proposed synthetic boundary-sensitivity control with explicit novelty and execution limits.",
+      "after": "Document bounded overlap with the existing uncertainty-ranking seed and withdraw hypothetical positive credit.",
       "acceptance_test": "Inspect the fixed controls, concentration statistic, character-invariance check, overlap-check step, and explicit no-execution limitation.",
       "evidence": [
         "contributions/pilot-unique-direction/proposal.md"
       ],
-      "related_outcomes": [],
-      "claimed_cumulative_tier": 2,
-      "claimed_incremental_points": 2,
-      "claim_rationale": "Synthetic forecast exercise only; not a claim on the live leaderboard.",
+      "related_outcomes": [
+        "seed-direction-uncertainty-ranking"
+      ],
+      "claimed_cumulative_tier": 0,
+      "claimed_incremental_points": 0,
+      "claim_rationale": "Existing direction overlap is documented; this routine integration fixture claims no research credit.",
       "attribution": [
         {
           "github_id": 226906489,
@@ -68,7 +71,7 @@
       ]
     }
   ],
-  "claimed_total_points": 2,
+  "claimed_total_points": 0,
   "rubric_version": "0.1",
   "conflicts": [],
   "limitations": [
