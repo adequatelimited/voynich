@@ -2,7 +2,7 @@
 
 Read [RULES.md](RULES.md), [SCORING.md](SCORING.md) and [GRADING.md](GRADING.md). **No Score Gaming:** improve shared research and claim the corresponding earned credit. Running the public grader, choosing useful work, improving evidence and appealing mistakes are encouraged. Negative findings and unconventional hypotheses receive the same evidence standards.
 
-Ranked intake remains disabled until live-model and integration gates pass. You can prepare inspectable research now; the prelaunch package promises no points.
+Ranked intake is active under the published best-effort AI grading profile. Supported contributions receive official scores; calibration remains incomplete.
 
 ## Fork, change, submit and revise
 
