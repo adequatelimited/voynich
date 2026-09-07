@@ -71,7 +71,8 @@ export function validateStageJudgment(value: StageAssessment, input: GradingInpu
   for (const outcome of value.outcomes) {
     if (families.has(outcome.family_id)) errors.push('Duplicate canonical outcome family.'); families.add(outcome.family_id);
     const gates = new Set(outcome.gate_evidence.map(g => g.gate)); for (let i = 1; i <= 7; i++) if (!gates.has(`G${i}`)) errors.push(`Missing gate G${i}.`);
-    if (outcome.assessed_tier > 0 && outcome.gate_evidence.some(g => g.status !== 'pass' || !g.evidence_refs.length)) errors.push('Positive credit requires all universal gates and evidence citations.');
+    if (outcome.assessed_tier > 0 && !['hold', 'needs_revision'].includes(value.admission_action)
+      && outcome.gate_evidence.some(g => g.status !== 'pass' || !g.evidence_refs.length)) errors.push('Positive credit requires all universal gates and evidence citations.');
     if (outcome.assessed_tier === 20) {
       const refs = outcome.validation_evidence?.external_assessment_receipt_refs ?? [];
       if (!refs.length || refs.some(ref => !input.context.external_assessment_receipts?.includes(ref))) errors.push('Tier 20 requires supplied authenticated nonconflicted external assessment evidence; AI personas and claimed receipts do not qualify.');
