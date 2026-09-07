@@ -15,14 +15,7 @@ summary: >-
   the only gate it fails. (5) The "2x neighbouring-page sharing" is a Currier-language and
   section artefact (within-block ratio 1.14); the "30% page-private" figure is 19% after
   decontamination, of which 17 points are expected from hapax richness alone. (6) Middle
-  English orthography does not reach the manuscript's type ratio. (7) A pre-registered clean
-  re-run of all five generators (habit tables from a FIT half, selection on FIT, scoring on a
-  held-out TEST half, both uncertain-space treatments) reverses the family's ranking: the
-  simplest model (M2) is best, the flagship grille (M5b) drops from composite 0.50 to
-  0.84-1.14, no model matches more than 3 of 9 properties and none matches the entropy, Zipf
-  or hapax-share residues; a dead parameter in pilot 1's grid is documented. (8) Twelve
-  untuned ciphers with corrected five-way gates reproduce the entropy residues but not the
-  joint fingerprint: short words, 70% hapax share and H2|1 ~2.1 are not delivered together.
+  English orthography does not reach the manuscript's type ratio.
 branch_ids: ["generative-mechanisms", "statistical-structure"]
 contributors:
   - github_id: 859355
@@ -40,7 +33,6 @@ ai_usage:
         - "Design of PROTOCOL.md (adverse hypotheses, frozen decision rules) and its pre-registration commit"
         - "Implementation of adversarial_critique.py (clean parser, alphabet merges, ciphers, permutation nulls, confound controls)"
         - "Retrieval of the two Chaucer control editions; drafting of REPORT.md, this manifest and the rights record"
-        - "Design and pre-registration of the clean re-run protocol; vendoring of the pilots' generators unchanged; implementation of clean_rerun.py (held-out split, FIT-only tables, exact-semantics M2 speed-up with equivalence check, corrected-gate cipher grid) and its report"
       human_verification: >-
         The request to act as critic and set adverse experiments came from Vasily Gnuchev
         (2026-09-07), who also raised the overfitting concern that motivated it. The protocol
@@ -65,18 +57,6 @@ changes:
     improvement: "Sha256 of every input, including the two new Chaucer controls."
   - path: "experiments/runs/2026-09-07T013500Z-adversarial-critique/run.json"
     improvement: "Run record with verdicts, seeds, protocol commit and agent disclosure."
-  - path: "experiments/clean-rerun/PROTOCOL.md"
-    improvement: "Pre-registered held-out re-run design and frozen rules R5.1-R5.4, R6.1."
-  - path: "experiments/clean-rerun/clean_rerun.py"
-    improvement: "Clean-target, FIT-only-table, held-out re-run of M2, M3, M4, M5, M5b with the family's grids; corrected-gate cipher grid."
-  - path: "experiments/clean-rerun/family_generators.py"
-    improvement: "The pilots' generators vendored unchanged with per-function provenance."
-  - path: "experiments/clean-rerun/REPORT.md"
-    improvement: "Held-out tables for both treatments, ranking reversal, dead-parameter finding, cipher constraint, deviations."
-  - path: "experiments/clean-rerun/results/results.json"
-    improvement: "Full numeric record including every grid point's FIT composite."
-  - path: "experiments/runs/2026-09-07T093000Z-clean-rerun/run.json"
-    improvement: "Run record for the re-run."
 outcomes:
   - id: "outcome-adversarial-critique"
     family_id: "family-generative-falsification"
@@ -93,26 +73,14 @@ outcomes:
       and page-private structure claims are relabelled as language/section and hapax-richness
       artefacts by pre-registered rules; an untuned verbose cipher of Latin reproduces both
       entropy residues. The family's probability judgments are shown to rest on measurements
-      that were partly artefacts. The clean held-out re-run then reverses the family's model
-      ranking (M2 best, M4 worst; M5b 0.50 -> 0.84-1.14), shows no content-free model matches
-      more than 3 of 9 properties or any entropy/Zipf/hapax residue out of sample, exposes a
-      dead grid parameter in pilot 1, and shows that simple verbose ciphers fail the joint
-      fingerprint (word length vs type ratio) under corrected gates.
+      that were partly artefacts.
     acceptance_test: >-
       Run the documented command; confirm results.json verdicts: R0.1 CONTAMINATED, R0.2
       RICHEST SURVIVES, R1.1 ALPHABET-ROBUST, R1.2 ALPHABET-DEPENDENT, R2.1 NOT REPRODUCED BY
       TESTED CIPHERS, R3.1 LANGUAGE/SECTION ARTEFACT, R3.2 HAPAX-RICHNESS CONSEQUENCE, R4.1
       SURVIVES; clean types 7,734 (comma=space) / 8,804 (comma=no space); within-class
-      adjacency ratio 1.137; page-private 0.193 vs null 0.166. For the re-run: TEST composites
-      under S M2 0.694, M3 0.765, M5b 1.136, M5 1.429, M4 1.874; held-out match counts
-      3/2/2/1/1; R6.1 no cipher passes all five gates.
+      adjacency ratio 1.137; page-private 0.193 vs null 0.166.
     evidence:
-      - "experiments/clean-rerun/PROTOCOL.md"
-      - "experiments/clean-rerun/clean_rerun.py"
-      - "experiments/clean-rerun/family_generators.py"
-      - "experiments/clean-rerun/REPORT.md"
-      - "experiments/clean-rerun/results/results.json"
-      - "experiments/runs/2026-09-07T093000Z-clean-rerun/run.json"
       - "experiments/adversarial-critique/PROTOCOL.md"
       - "experiments/adversarial-critique/adversarial_critique.py"
       - "experiments/adversarial-critique/REPORT.md"
@@ -140,6 +108,4 @@ limitations:
   - "Level (c) glyph identities (iin/in/ii/ee as single glyphs) are an assumption, stated, not established."
   - "Skeat's Middle English edition regularises spelling; a diplomatic transcription would be a stronger orthography control."
   - "Size-matched control comparisons remain confounded by entry length."
-  - "The alternating page split makes FIT and TEST halves statistically near-identical, so R5.3 (selection optimism) has little power; the held-out design mainly tests the FIT-only habit tables."
-  - "gen_m2 was replaced by an exact-semantics Fenwick-tree version for speed; equality with the vendored original is asserted at start-up on 3,000 tokens."
 rights_manifest: "contributions/adversarial-critique/rights.md"
