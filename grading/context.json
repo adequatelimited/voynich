@@ -171,7 +171,7 @@
     "family-ms408-data-access": 5,
     "family-generative-falsification": 5
   },
-  "ledger_digest": "7c8c02f796832e2a13e504d62553bf4034c08c2d4b2f21b1f1a13b59021f73bc",
+  "ledger_digest": "9cdbbc0ea5b9322d34468b8e31b0022f654f309875effac01b742506dc0a6ae5",
   "public_evidence": [
     {
       "path": "research/context-index.json",
