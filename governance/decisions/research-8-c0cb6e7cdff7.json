@@ -1,0 +1,264 @@
+{
+  "schema_version": "1.0",
+  "research_pr": 8,
+  "merge_sha": "258f2788887b0fdd29d0160ce84fe8064f07061d",
+  "events": [
+    {
+      "schema_version": "1.0",
+      "id": "decision-8-family-generative-falsification-c0cb6e7cdff7",
+      "sequence": 7,
+      "kind": "upgrade",
+      "family_id": "family-generative-falsification",
+      "rubric_version": "0.1",
+      "category": "experiments",
+      "repository_id": 1359336540,
+      "pr_number": 8,
+      "milestone_id": "milestone-1359336540-8-family-generative-falsification",
+      "earned_at": "2026-09-07T22:00:44Z",
+      "assessment_id": "assessment-b8a169ee8c7c497b9048948268307351",
+      "artifact_binding_digest": "c0cb6e7cdff7192fe3f2e0edc78b361b9dbb3d31f0c48947fb0339c7df653d43",
+      "authority_receipt_ref": "receipt:job-c0cb6e7cdff7192fe3f2e0edc78b361b9dbb3d31",
+      "cumulative_tier": 2,
+      "reason": "Both prior reports independently converged on tier 2 as the highest fully supported tier, consistent with the rubric's Experiments row: 'small verified diagnostic observation' (2) is satisfied by one new hashed public-domain control corpus, one deterministic script and one bounded finding closing an alternative explanation; 'informative controlled pilot' (5) is not fully supported absent independent reproduction, external assessment, or a trusted execution receipt, and the increment is narrowly scoped to a single English verse genre without a device-line comparison. The claimant's own claim_rationale argues for the 2-point increment, matching this assessment. G7 is resolved as pass rather than unknown: the report discloses a result running against the favored narrative and no fabrication indicators exist; independent third-party reproduction is a separate, higher-tier concern already reflected in the tier-2 ceiling, not a G7 failure. The family's cumulative high-water tier (5) and this outcome's marginal increment are separate broker calculations; this assessment addresses only the marginal tier of the new increment."
+    }
+  ],
+  "families_added": [],
+  "milestones": [
+    {
+      "id": "milestone-1359336540-8-family-generative-falsification",
+      "family_id": "family-generative-falsification",
+      "repository_id": 1359336540,
+      "pr_number": 8,
+      "earned_at": "2026-09-07T22:00:44Z",
+      "depends_on": []
+    }
+  ],
+  "assessment": {
+    "schema_version": "1.0",
+    "assessment_id": "assessment-b8a169ee8c7c497b9048948268307351",
+    "artifact_binding_digest": "b8a169ee8c7c497b9048948268307351f7bd0422717b86943ddc539b109c4515",
+    "merit_evidence_digest": "078ae3b71746ed8ec2a10cc0035938b31f4de75ff2e20fd36cdd3d7e8a246673",
+    "repository_id": 1359336540,
+    "pr_number": 8,
+    "head_sha": "039b1d764be6845fb86367426ebbd61847ae3057",
+    "base_sha": "43e1743c255320d9c9a974d859d96368d31ee24c",
+    "rules_version": "0.1",
+    "rubric_version": "0.1",
+    "grading_profile": "voynich-sonnet-ai-pilot-2026-09-07-v6",
+    "evaluator_commit": "b12ac52a2b2c89056aff705f0cd187014c86606c",
+    "mode": "official_proposal",
+    "status": "complete",
+    "claimed_score": 2,
+    "expected_score": 0,
+    "official_proposed_score": 0,
+    "awarded_score": null,
+    "assessment": {
+      "schema_version": "1.0",
+      "admission_action": "accept",
+      "score_status": "proposed",
+      "conduct_status": "clear",
+      "findings": [
+        {
+          "rule_id_or_gate": "G3",
+          "severity": "info",
+          "path_or_locus": "experiments/poetry-control/poetry_control.py",
+          "evidence_refs": [
+            "experiments/poetry-control/poetry_control.py",
+            "experiments/poetry-control/results/results.json"
+          ],
+          "reason": "Submitted code, documented command and results.json are ordinary inspectable evidence; context.execution_receipts is empty, so no independently authenticated execution receipt exists or is claimed.",
+          "required_change": "",
+          "verification_step": "Rerun the documented command locally against the pinned corpora and compare to results.json.",
+          "blocks_merge_or_credit": false
+        },
+        {
+          "rule_id_or_gate": "R3/limitations",
+          "severity": "info",
+          "path_or_locus": "experiments/poetry-control/report.md",
+          "evidence_refs": [
+            "experiments/poetry-control/report.md"
+          ],
+          "reason": "Only one English rhymed-verse corpus tested; medieval/Latin/troubadour verse forms and a line-aware device-model comparison remain unexamined. Disclosed as nonblocking limitations by the contributor.",
+          "required_change": "",
+          "verification_step": "Future work could add a medieval/Latin verse control and a line-aware generator comparison to test for a tier-5 upgrade.",
+          "blocks_merge_or_credit": false
+        }
+      ],
+      "outcomes": [
+        {
+          "family_id": "family-generative-falsification",
+          "scope": "Adds a poetry/rhyme control experiment (Shakespeare's Sonnets vs Voynich real lines vs prose pseudo-lines) testing and excluding versification as an explanation of the manuscript's word-final entropy residue, within the existing generative-mechanism falsification family (pilot 4 controls ladder).",
+          "category": "experiments",
+          "predecessors": [
+            "outcome-controls-entry-ladder",
+            "outcome-m5-grille-pilot"
+          ],
+          "aliases": [],
+          "claimed_tier": 5,
+          "assessed_tier": 2,
+          "gate_evidence": [
+            {
+              "gate": "G1",
+              "status": "pass",
+              "evidence_refs": [
+                "experiments/poetry-control/report.md",
+                "research/context-index.json"
+              ],
+              "reason": "Directly addresses the standing generative-mechanisms/statistical-structure question of whether an alternative real-language mechanism (versification) explains the manuscript's word-final entropy residue."
+            },
+            {
+              "gate": "G2",
+              "status": "pass",
+              "evidence_refs": [
+                "data/manifests/pg1041.json",
+                "contributions/poetry-control/rights.md",
+                "data/corpora/pg1041.txt"
+              ],
+              "reason": "Shakespeare's Sonnets (PG eBook 1041) declared public domain in the USA per PG header (visible in the derived excerpt); manifest records source hash and rights; Voynich ZL3b corpus is the already-pinned repo source."
+            },
+            {
+              "gate": "G3",
+              "status": "pass",
+              "evidence_refs": [
+                "experiments/poetry-control/poetry_control.py",
+                "experiments/poetry-control/results/results.json"
+              ],
+              "reason": "Deterministic stdlib-only script, documented command and complete results.json are inspectable ordinary submitted-run evidence; no independently authenticated execution receipt is supplied or required at this tier."
+            },
+            {
+              "gate": "G4",
+              "status": "pass",
+              "evidence_refs": [
+                "experiments/poetry-control/report.md"
+              ],
+              "reason": "Report explicitly states scope (single English verse genre), uncertainty and limitations regarding untested medieval/Latin verse forms and unmeasured device-vs-manuscript line metrics."
+            },
+            {
+              "gate": "G5",
+              "status": "pass",
+              "evidence_refs": [
+                "contributions/poetry-control/contribution.yaml"
+              ],
+              "reason": "Human hypothesis attribution (Vasily Gnuchev, github_id 859355) and AI-assistance disclosure (Kimi Code CLI/kimi-k3) with tasks and human-verification note are both present."
+            },
+            {
+              "gate": "G6",
+              "status": "pass",
+              "evidence_refs": [
+                "experiments/poetry-control/report.md",
+                "contributions/poetry-control/contribution.yaml"
+              ],
+              "reason": "Adds a genuinely new real-language control (rhymed verse) not previously present in the family's control ladder, closing one alternative explanation; overlap with predecessors is disclosed via extends/related_outcomes."
+            },
+            {
+              "gate": "G7",
+              "status": "pass",
+              "evidence_refs": [
+                "experiments/poetry-control/results/results.json",
+                "experiments/poetry-control/poetry_control.py"
+              ],
+              "reason": "All four sources are reported together including a side observation (line-final anti-constraint) running counter to the paper's favored narrative; no evidence of fabrication or concealed selection."
+            }
+          ],
+          "attribution_status": "verified",
+          "reason": "Both prior reports independently converged on tier 2 as the highest fully supported tier, consistent with the rubric's Experiments row: 'small verified diagnostic observation' (2) is satisfied by one new hashed public-domain control corpus, one deterministic script and one bounded finding closing an alternative explanation; 'informative controlled pilot' (5) is not fully supported absent independent reproduction, external assessment, or a trusted execution receipt, and the increment is narrowly scoped to a single English verse genre without a device-line comparison. The claimant's own claim_rationale argues for the 2-point increment, matching this assessment. G7 is resolved as pass rather than unknown: the report discloses a result running against the favored narrative and no fabrication indicators exist; independent third-party reproduction is a separate, higher-tier concern already reflected in the tier-2 ceiling, not a G7 failure. The family's cumulative high-water tier (5) and this outcome's marginal increment are separate broker calculations; this assessment addresses only the marginal tier of the new increment."
+        }
+      ],
+      "inspected_paths": [
+        "contributions/poetry-control/contribution.yaml",
+        "contributions/poetry-control/rights.md",
+        "data/corpora/pg1041.txt",
+        "data/manifests/pg1041.json",
+        "experiments/poetry-control/poetry_control.py",
+        "experiments/poetry-control/report.md",
+        "experiments/poetry-control/results/results.json",
+        "research/context-index.json"
+      ],
+      "inspection_gaps": [],
+      "next_action": "Accept as a tier-2 marginal increment within family-generative-falsification. No contributor action required for admission. Optional future work to strengthen toward tier 5: add a non-English/medieval verse control and a line-aware device-model comparison; the broker computes the exact new-credit units against the recorded family high-water baseline.",
+      "appeal_route": "If the contributor believes independent reproduction, external assessment, or a trusted execution receipt (per context.execution_receipts) already exists to support tier 5, submit that evidence via a revision PR referencing this assessment for re-review under rubric version 0.1 and the same family scope; unresolved disagreement proceeds to the documented adjudication stage per RULES.md."
+    },
+    "stages": [
+      {
+        "stage": "adjudicator",
+        "provider": "anthropic",
+        "model": "claude-sonnet-5",
+        "exposed_version": "claude-sonnet-5",
+        "prompt_digest": "7464fc6be755b8086d568a2274be257201bab93ff00fc4eee3cf9b363276fc20",
+        "response_digest": "6217cf54a04aaa4103dd2638a9195604410d6fb2e62596579e588c2b91f9071f",
+        "started_at": "2026-09-07T21:59:38.835Z",
+        "completed_at": "2026-09-07T22:00:22.494Z",
+        "usage": {
+          "sessions": 1,
+          "input_bytes": 175137,
+          "output_bytes": 32833,
+          "runtime_ms": 42749
+        },
+        "receipt_ref": "stage-results/job-c0cb6e7cdff7192fe3f2e0edc78b361b9dbb3d31/adjudicator.json"
+      },
+      {
+        "stage": "adversary",
+        "provider": "anthropic",
+        "model": "claude-sonnet-5",
+        "exposed_version": "claude-sonnet-5",
+        "prompt_digest": "adcef023afec1e4673e923283a6097bbd582096c1df1961818374c46bb048c19",
+        "response_digest": "14428d9f7dba30ca474c4190509ce8e4fa711eddf8e0bea40a98a17ac8feca23",
+        "started_at": "2026-09-07T21:57:56.527Z",
+        "completed_at": "2026-09-07T21:58:38.007Z",
+        "usage": {
+          "sessions": 1,
+          "input_bytes": 163243,
+          "output_bytes": 28937,
+          "runtime_ms": 40856
+        },
+        "receipt_ref": "stage-results/job-c0cb6e7cdff7192fe3f2e0edc78b361b9dbb3d31/adversary.json"
+      },
+      {
+        "stage": "assessor",
+        "provider": "anthropic",
+        "model": "claude-sonnet-5",
+        "exposed_version": "claude-sonnet-5",
+        "prompt_digest": "6d854e7538d838bef494421347341c88da50107d569f26aa705c6a1f7e3125a5",
+        "response_digest": "b79ada943c175dbaed155b219279e5004802e9f02e3a5b1c299df5478fadf7b0",
+        "started_at": "2026-09-07T21:56:14.910Z",
+        "completed_at": "2026-09-07T21:57:01.047Z",
+        "usage": {
+          "sessions": 1,
+          "input_bytes": 163124,
+          "output_bytes": 31003,
+          "runtime_ms": 45420
+        },
+        "receipt_ref": "stage-results/job-c0cb6e7cdff7192fe3f2e0edc78b361b9dbb3d31/assessor.json"
+      }
+    ],
+    "disagreements": [
+      "Material independent-assessment disagreement or invalid proposal."
+    ],
+    "holds": [],
+    "reused_assessment_id": null
+  },
+  "receipt": {
+    "schema_version": "1.0",
+    "id": "receipt:job-c0cb6e7cdff7192fe3f2e0edc78b361b9dbb3d31",
+    "key_id": "voynich-2026-09-06",
+    "issued_at": "2026-09-07T22:01:00.685Z",
+    "payload": {
+      "repository_id": 1359336540,
+      "events_digest": "6ddd462200347c620c0a6f771cd0c802bd73d7ca3bb2934db27129e1fb0a5890",
+      "milestones_digest": "ac047fa32690960917c471405fef683961950c1ae1492a38f7d762fb1397f877",
+      "families_digest": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+      "merge_sha": "258f2788887b0fdd29d0160ce84fe8064f07061d",
+      "assessed_head": "039b1d764be6845fb86367426ebbd61847ae3057",
+      "artifact_digest": "c0cb6e7cdff7192fe3f2e0edc78b361b9dbb3d31f0c48947fb0339c7df653d43",
+      "profile_digest": "76e50193e26bbdea4f7cbaaa07093d2aa5b526ac50d1c4f5dad8aeb59ae476c1",
+      "report_digest": "dd6dedde68ecbaa406d31939be3827371f29f48f020b5251323647924538e473",
+      "stage_receipt_refs": [
+        "stage-results/job-c0cb6e7cdff7192fe3f2e0edc78b361b9dbb3d31/adjudicator.json",
+        "stage-results/job-c0cb6e7cdff7192fe3f2e0edc78b361b9dbb3d31/adversary.json",
+        "stage-results/job-c0cb6e7cdff7192fe3f2e0edc78b361b9dbb3d31/assessor.json"
+      ]
+    },
+    "payload_digest": "97349a0c1e797e39409a6e4f1cee6aa1bb1dc46016f6d783150dca5b6af12df0",
+    "signature": "gMX3VBi9wvJKuA92IQlRfdJWRJYix5qtRB9dl0WuNkfThY0tBv2h03KyD5LVldVv-du61Sa5kZ326CY4Sa56CA"
+  }
+}
