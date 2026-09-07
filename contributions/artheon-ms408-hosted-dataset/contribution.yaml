@@ -20,8 +20,8 @@ ai_usage:
   status: assisted
   tools:
     - provider: "Moonshot AI"
-      model_id: "kimi-k2"
-      model_version: "kimi-k2 (Kimi Code CLI, 2026-09)"
+      model_id: "kimi-k3"
+      model_version: "kimi-code/k3 (Kimi Code CLI; model string from local CLI config, 2026-09)"
       accessed_at: "2026-09-06"
       tasks:
         - "Download orchestration for scans and transliterations from public origins"
