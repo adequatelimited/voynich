@@ -23,17 +23,6 @@ summary: >-
   or hapax-share residues; a dead parameter in pilot 1's grid is documented. (8) Twelve
   untuned ciphers with corrected five-way gates reproduce the entropy residues but not the
   joint fingerprint: short words, 70% hapax share and H2|1 ~2.1 are not delivered together.
-  (9) Two further pre-registered tests: data-chosen re-segmentation (hypothesis by Vasily
-  Gnuchev: two EVA symbols are one glyph) shows the letter-pair anomaly is
-  SEGMENTATION-DEPENDENT by the frozen rule - twenty frequency-chosen merges (ch, dy, ai, ok,
-  ol, ee, sh, in, che, aiin, ...) bring the manuscript to the lowest language's H2|1 at the
-  same alphabet size (45; Greek, whose raw alphabet already has 45 symbols), with the gap to
-  Latin/Finnish/English still 0.2-0.6 bits at 45-60 symbols and under 0.1 bit after 60 merges;
-  and an illustration-linked-vocabulary test (same-plant herbal/pharmaceutical pairs and
-  plant-identification pairs) that is UNDERPOWERED by its own gate because its positive
-  control (Culpeper related-plant entries) shows no whole-entry excess; an exploratory
-  size-corrected content-word variant gives the control power and shows no excess in the
-  manuscript, queued for pre-registration as T1 v2.
 branch_ids: ["generative-mechanisms", "statistical-structure"]
 contributors:
   - github_id: 859355
@@ -52,7 +41,6 @@ ai_usage:
         - "Implementation of adversarial_critique.py (clean parser, alphabet merges, ciphers, permutation nulls, confound controls)"
         - "Retrieval of the two Chaucer control editions; drafting of REPORT.md, this manifest and the rights record"
         - "Design and pre-registration of the clean re-run protocol; vendoring of the pilots' generators unchanged; implementation of clean_rerun.py (held-out split, FIT-only tables, exact-semantics M2 speed-up with equivalence check, corrected-gate cipher grid) and its report"
-        - "Design and pre-registration of the discriminating-tests protocol; implementation of discriminating_tests.py (pharmaceutical row parsing, plant-identification pairing, permutation and distance-matched nulls, byte-pair re-segmentation curves) and its report; the re-segmentation hypothesis itself was contributed by Vasily Gnuchev"
       human_verification: >-
         The request to act as critic and set adverse experiments came from Vasily Gnuchev
         (2026-09-07), who also raised the overfitting concern that motivated it. The protocol
@@ -89,18 +77,6 @@ changes:
     improvement: "Full numeric record including every grid point's FIT composite."
   - path: "experiments/runs/2026-09-07T093000Z-clean-rerun/run.json"
     improvement: "Run record for the re-run."
-  - path: "experiments/discriminating-tests/PROTOCOL.md"
-    improvement: "Pre-registered illustration-linked-vocabulary test (T1) and data-chosen re-segmentation test (T2) with frozen rules R7, R8."
-  - path: "experiments/discriminating-tests/discriminating_tests.py"
-    improvement: "Implementation: same-plant herbal/pharmaceutical pairs, plant-identification pairs, Culpeper positive control, byte-pair and association merging curves for 13 corpora."
-  - path: "experiments/discriminating-tests/exploratory_contentwords.py"
-    improvement: "Labelled exploratory: size-corrected lift with frequent words removed."
-  - path: "experiments/discriminating-tests/REPORT.md"
-    improvement: "Verdicts, tables, the two caveats on the crossover, deviations, and the T1 v2 proposal."
-  - path: "experiments/discriminating-tests/results/results.json"
-    improvement: "Full numeric record including every merge curve."
-  - path: "experiments/runs/2026-09-07T110000Z-discriminating-tests/run.json"
-    improvement: "Run record with hypothesis credit."
 outcomes:
   - id: "outcome-adversarial-critique"
     family_id: "family-generative-falsification"
@@ -121,11 +97,7 @@ outcomes:
       ranking (M2 best, M4 worst; M5b 0.50 -> 0.84-1.14), shows no content-free model matches
       more than 3 of 9 properties or any entropy/Zipf/hapax residue out of sample, exposes a
       dead grid parameter in pilot 1, and shows that simple verbose ciphers fail the joint
-      fingerprint (word length vs type ratio) under corrected gates. The re-segmentation test
-      (hypothesis: Vasily Gnuchev) then shows the letter-pair anomaly is concentrated in a few
-      dozen fixed letter groups and is language-like at a 45-60-symbol inventory, so the
-      family's strongest residue must be restated at glyph level; the illustration test is
-      underpowered by its own control and is queued for a v2 with a size-corrected statistic.
+      fingerprint (word length vs type ratio) under corrected gates.
     acceptance_test: >-
       Run the documented command; confirm results.json verdicts: R0.1 CONTAMINATED, R0.2
       RICHEST SURVIVES, R1.1 ALPHABET-ROBUST, R1.2 ALPHABET-DEPENDENT, R2.1 NOT REPRODUCED BY
@@ -133,15 +105,8 @@ outcomes:
       SURVIVES; clean types 7,734 (comma=space) / 8,804 (comma=no space); within-class
       adjacency ratio 1.137; page-private 0.193 vs null 0.166. For the re-run: TEST composites
       under S M2 0.694, M3 0.765, M5b 1.136, M5 1.429, M4 1.874; held-out match counts
-      3/2/2/1/1; R6.1 no cipher passes all five gates. For the discriminating tests: R7
-      UNDERPOWERED (control N3 p 0.44); R8.1 SEGMENTATION-DEPENDENT with gaps 0.65/0.15/0.07/0.09
-      at alphabet sizes 30/40/50/60 and crossover at 45 symbols.
+      3/2/2/1/1; R6.1 no cipher passes all five gates.
     evidence:
-      - "experiments/discriminating-tests/PROTOCOL.md"
-      - "experiments/discriminating-tests/discriminating_tests.py"
-      - "experiments/discriminating-tests/REPORT.md"
-      - "experiments/discriminating-tests/results/results.json"
-      - "experiments/runs/2026-09-07T110000Z-discriminating-tests/run.json"
       - "experiments/clean-rerun/PROTOCOL.md"
       - "experiments/clean-rerun/clean_rerun.py"
       - "experiments/clean-rerun/family_generators.py"
@@ -177,7 +142,4 @@ limitations:
   - "Size-matched control comparisons remain confounded by entry length."
   - "The alternating page split makes FIT and TEST halves statistically near-identical, so R5.3 (selection optimism) has little power; the held-out design mainly tests the FIT-only habit tables."
   - "gen_m2 was replaced by an exact-semantics Fenwick-tree version for speed; equality with the vendored original is asserted at start-up on 3,000 tokens."
-  - "The re-segmentation crossover at 45 symbols is against Greek, whose raw alphabet already has 45 symbols because accented vowels are separate letters; against Latin, Finnish, Italian and English the gap at 45-60 symbols is still 0.2-0.6 bits. The association-criterion sensitivity closes the gap less (0.21 bits)."
-  - "The illustration test's positive control fails with the pre-registered whole-entry Jaccard statistic; the size-corrected content-word variant that gives it power is exploratory and not yet pre-registered."
-  - "Plant identifications are published proposals compiled in the ZL3b comments, uncertain and sometimes multiple; 'same plant' cross-references are marked '?' in most cases."
 rights_manifest: "contributions/adversarial-critique/rights.md"
