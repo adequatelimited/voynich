@@ -2,10 +2,15 @@
 
 ## In plain words
 
-**IDEA**
+**IDEA** (hypothesis contributed by Vasily Gnuchev, 2026-09-06)
 - The Voynich writer was not writing a real language.
-- He was drawing fake text the way artists draw fake letters in decorations.
+- He was drawing fake text the way artists draw fake letters in decorations
+  (asemic/pseudo-script practice has direct medieval precedent, e.g. pseudo-Kufic).
 - Words were made up on the spot, following personal habits.
+- Independent observation by the challenge organizer (adequatelimited), 2026-09-06:
+  the terminal 9-shaped glyph (EVA `y`) ends nearly half of all words and one word
+  family dominates the first page's first section — verified in the corpus: 40% of
+  tokens end in `y`; `daiin`/`chol` lead f1r (7x each in 205 tokens).
 
 **TEST METHOD**
 - We built 3 computer programs that write fake text with no meaning.
