@@ -1,0 +1,87 @@
+schema_version: "1.0"
+id: "entry-doodler-pilot"
+kind: research
+title: "The encyclopedia doodler: content-free per-page entry structure vs the Voynich page-level fingerprint"
+summary: >-
+  Second executed pilot in the generative-falsification family, extending
+  outcome-generative-doodler-pilot. New real-corpus measurements establish that the
+  manuscript is encyclopedia-structured: adjacent pages share 2x more vocabulary than
+  distant pages (0.0804 vs 0.0422) and 30% of each page's word types are page-unique.
+  A content-free entry-based generator (M3: per-page topic words with carry-over drift,
+  preferential reuse, habit-driven invention) reproduces all three page-level metrics
+  (0.075/0.035/0.279) plus vocabulary size, while the character-level residue from pilot 1
+  (H2|1, word-final entropy, Zipf slope, word length) persists. The unexplained structure
+  is localized to word-internal grammar.
+branch_ids: ["generative-mechanisms", "statistical-structure", "layout-paleography"]
+contributors:
+  - github_id: 859355
+    github_login: "gnuchev"
+    roles: ["Conceptualization", "Formal analysis", "Investigation"]
+ai_usage:
+  status: assisted
+  tools:
+    - provider: "Moonshot AI"
+      model_id: "kimi-k2"
+      model_version: "kimi-k2 (Kimi Code CLI, 2026-09)"
+      accessed_at: "2026-09-06"
+      tasks:
+        - "Implementation of entry_doodler.py (model, page metrics, grid)"
+        - "Drafting of report.md and this manifest"
+      human_verification: >-
+        The experiment was executed locally; all numbers in report.md come from the
+        recorded run output (experiments/runs/2026-09-06T201500Z-entry-doodler-pilot/output.json).
+        Corpus hash re-verified against data/manifests/zl3b.json. The encyclopedia hypothesis
+        itself was proposed by the human contributor (artistic-background reasoning about
+        document type), not by the AI.
+  reproducibility_notes: >-
+    Deterministic: python entry_doodler.py --corpus ../../data/corpora/ZL3b-n.txt --out
+    results/ --seed 408 reproduces results.json. Stdlib only.
+changes:
+  - path: "experiments/entry-doodler/entry_doodler.py"
+    improvement: "New entry-based content-free generator with page-level metric suite."
+  - path: "experiments/entry-doodler/report.md"
+    improvement: "Pilot-2 findings incl. the first quantitative page-structure measurements of the corpus in this repo."
+  - path: "experiments/entry-doodler/results/results.json"
+    improvement: "Full metric table for corpus and all 24 grid variants."
+  - path: "experiments/runs/2026-09-06T201500Z-entry-doodler-pilot/run.json"
+    improvement: "Run record: command, seed, corpus hash, environment."
+outcomes:
+  - id: "outcome-entry-doodler-pilot"
+    family_id: "family-generative-falsification"
+    extends: "outcome-generative-doodler-pilot"
+    before: >-
+      Pilot 1 tested content-free generation against global text statistics only; document
+      structure (per-page entries, topical ordering) was unmeasured and unmodeled.
+    after: >-
+      The corpus' page-level structure is now quantified (adjacent/distant Jaccard,
+      page-unique vocabulary share) and shown reproducible by a content-free entry model;
+      the unexplained residue is narrowed to word-internal grammar, sharpening the target
+      for a discriminating template-model test.
+    acceptance_test: >-
+      Run the documented command; confirm results.json matches the recorded output and that
+      the best M3 variant matches adjacent/distant/page-unique metrics within +-0.01 while
+      remaining >=0.4 bits above corpus H2|1 and shallower on Zipf slope.
+    evidence:
+      - "experiments/entry-doodler/entry_doodler.py"
+      - "experiments/entry-doodler/report.md"
+      - "experiments/entry-doodler/results/results.json"
+      - "experiments/runs/2026-09-06T201500Z-entry-doodler-pilot/output.json"
+    related_outcomes: ["outcome-generative-doodler-pilot"]
+    claimed_cumulative_tier: 5
+    claimed_incremental_points: 2
+    claim_rationale: >-
+      Same family as pilot 1; incremental claim is a bounded verified improvement (2):
+      new page-level measurements of the pinned corpus plus an extended harness that
+      localizes the unexplained residue. Family cumulative stays at the pilot tier (5);
+      not 10 — single seed/corpus, no independent execution.
+    attribution:
+      - github_id: 859355
+        share_basis_points: 10000
+claimed_total_points: 2
+rubric_version: "0.1"
+conflicts: []
+limitations:
+  - "Single corpus (ZL3b), single seed, heuristic composite distance; foldout adjacency inflates neighbor similarity slightly in both real and model data."
+  - "Habit set is corpus-derived (content-free but not corpus-free); misses occur despite this advantage."
+  - "carry/topic parameters fitted, not derived from paleographic evidence; GC2a cross-check pending."
+rights_manifest: "contributions/entry-doodler-pilot/rights.md"
