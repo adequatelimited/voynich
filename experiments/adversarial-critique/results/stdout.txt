@@ -1,0 +1,15 @@
+{
+ "R0.1": "CONTAMINATED",
+ "R0.2": "RICHEST SURVIVES",
+ "R1.1": "ALPHABET-ROBUST",
+ "R1.2": "ALPHABET-DEPENDENT",
+ "R2.1": "NOT REPRODUCED BY TESTED CIPHERS",
+ "R3.1": "LANGUAGE/SECTION ARTEFACT",
+ "R3.2": "HAPAX-RICHNESS CONSEQUENCE",
+ "R4.1": "SURVIVES this control"
+}
+A0 family vs clean: 10120 7734 0.2025
+A1 gates: {'voynich_b_det': 2.291, 'lowest_language_det': (3.089, 'Greek'), 'gap': 0.798} {'voynich_level_c_final_H': 2.711, 'lowest_language_raw_final_H': (2.794, 'Finnish'), 'gap': 0.083}
+A2 hits: []
+A3: {'pages': 226, 'jaccard_adjacent': 0.1093, 'jaccard_distant': 0.0625, 'page_unique_share': 0.1932} {'mean': 0.1045, 'sd': 0.0013, 'p2.5': 0.1022, 'p97.5': 0.107} {'mean': 0.1661, 'sd': 0.0021, 'p2.5': 0.1622, 'p97.5': 0.1709} 1.137
+A4: 0.1369 0.1327
