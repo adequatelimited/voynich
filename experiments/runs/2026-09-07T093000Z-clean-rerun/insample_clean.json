@@ -1,0 +1,362 @@
+{
+ "S": {
+  "real_all": {
+   "tokens": 38184,
+   "types": 7734,
+   "ttr": 0.2025,
+   "hapax_share_of_types": 0.6831,
+   "H1": 3.867,
+   "H2_given_1": 2.132,
+   "first_char_H": 3.201,
+   "last_char_H": 2.523,
+   "zipf_slope": -1.078,
+   "word_len_mean": 4.96,
+   "pages": 226,
+   "jaccard_adjacent": 0.1093,
+   "jaccard_distant": 0.0625,
+   "page_unique_share": 0.1932
+  },
+  "models": {
+   "M2": {
+    "selected": "pnew=0.05,rec=2.0,verbatim=0.6",
+    "composite": 0.8188,
+    "metrics": {
+     "tokens": 38184,
+     "types": 6499,
+     "ttr": 0.1702,
+     "hapax_share_of_types": 0.4784,
+     "H1": 3.393,
+     "H2_given_1": 2.796,
+     "first_char_H": 2.639,
+     "last_char_H": 2.964,
+     "zipf_slope": -0.859,
+     "word_len_mean": 3.78,
+     "pages": 226,
+     "jaccard_adjacent": 0.1059,
+     "jaccard_distant": 0.0786,
+     "page_unique_share": 0.081
+    },
+    "matches": {
+     "ttr": false,
+     "H2_given_1": false,
+     "last_char_H": false,
+     "zipf_slope": false,
+     "word_len_mean": false,
+     "jaccard_adjacent": true,
+     "jaccard_distant": false,
+     "page_unique_share": false,
+     "hapax_share_of_types": false
+    },
+    "match_count": 1
+   },
+   "M3": {
+    "selected": "carry=0.5,topic=30,prime=2,reuse=0.6",
+    "composite": 0.756,
+    "metrics": {
+     "tokens": 38184,
+     "types": 5980,
+     "ttr": 0.1566,
+     "hapax_share_of_types": 0.386,
+     "H1": 3.782,
+     "H2_given_1": 2.78,
+     "first_char_H": 3.338,
+     "last_char_H": 3.726,
+     "zipf_slope": -0.689,
+     "word_len_mean": 3.94,
+     "pages": 226,
+     "jaccard_adjacent": 0.1154,
+     "jaccard_distant": 0.0532,
+     "page_unique_share": 0.2023
+    },
+    "matches": {
+     "ttr": false,
+     "H2_given_1": false,
+     "last_char_H": false,
+     "zipf_slope": false,
+     "word_len_mean": false,
+     "jaccard_adjacent": true,
+     "jaccard_distant": true,
+     "page_unique_share": true,
+     "hapax_share_of_types": false
+    },
+    "match_count": 3
+   },
+   "M4": {
+    "selected": "carry=0.5,topic=60,reuse=0.7",
+    "composite": 1.6892,
+    "metrics": {
+     "tokens": 38184,
+     "types": 11175,
+     "ttr": 0.2927,
+     "hapax_share_of_types": 0.5184,
+     "H1": 3.742,
+     "H2_given_1": 3.062,
+     "first_char_H": 3.59,
+     "last_char_H": 3.178,
+     "zipf_slope": -0.656,
+     "word_len_mean": 5.1,
+     "pages": 226,
+     "jaccard_adjacent": 0.0725,
+     "jaccard_distant": 0.021,
+     "page_unique_share": 0.4442
+    },
+    "matches": {
+     "ttr": false,
+     "H2_given_1": false,
+     "last_char_H": false,
+     "zipf_slope": false,
+     "word_len_mean": true,
+     "jaccard_adjacent": false,
+     "jaccard_distant": false,
+     "page_unique_share": false,
+     "hapax_share_of_types": false
+    },
+    "match_count": 1
+   },
+   "M5": {
+    "selected": "K=40,carry=0.5,reuse=0.6",
+    "composite": 1.227,
+    "metrics": {
+     "tokens": 38184,
+     "types": 9957,
+     "ttr": 0.2608,
+     "hapax_share_of_types": 0.4626,
+     "H1": 3.854,
+     "H2_given_1": 2.905,
+     "first_char_H": 3.533,
+     "last_char_H": 3.122,
+     "zipf_slope": -0.676,
+     "word_len_mean": 5.08,
+     "pages": 226,
+     "jaccard_adjacent": 0.0694,
+     "jaccard_distant": 0.0221,
+     "page_unique_share": 0.3357
+    },
+    "matches": {
+     "ttr": false,
+     "H2_given_1": false,
+     "last_char_H": false,
+     "zipf_slope": false,
+     "word_len_mean": true,
+     "jaccard_adjacent": false,
+     "jaccard_distant": false,
+     "page_unique_share": false,
+     "hapax_share_of_types": false
+    },
+    "match_count": 1
+   },
+   "M5b": {
+    "selected": "K=1000,o=(0,2),reuse=0.6",
+    "composite": 1.0274,
+    "metrics": {
+     "tokens": 38184,
+     "types": 8905,
+     "ttr": 0.2332,
+     "hapax_share_of_types": 0.4774,
+     "H1": 3.839,
+     "H2_given_1": 2.909,
+     "first_char_H": 3.474,
+     "last_char_H": 3.128,
+     "zipf_slope": -0.877,
+     "word_len_mean": 5.14,
+     "pages": 226,
+     "jaccard_adjacent": 0.0873,
+     "jaccard_distant": 0.0536,
+     "page_unique_share": 0.36
+    },
+    "matches": {
+     "ttr": false,
+     "H2_given_1": false,
+     "last_char_H": false,
+     "zipf_slope": false,
+     "word_len_mean": true,
+     "jaccard_adjacent": false,
+     "jaccard_distant": true,
+     "page_unique_share": false,
+     "hapax_share_of_types": false
+    },
+    "match_count": 2
+   }
+  }
+ },
+ "M": {
+  "real_all": {
+   "tokens": 35492,
+   "types": 8804,
+   "ttr": 0.2481,
+   "hapax_share_of_types": 0.7168,
+   "H1": 3.882,
+   "H2_given_1": 2.147,
+   "first_char_H": 3.145,
+   "last_char_H": 2.457,
+   "zipf_slope": -1.042,
+   "word_len_mean": 5.34,
+   "pages": 226,
+   "jaccard_adjacent": 0.0904,
+   "jaccard_distant": 0.0494,
+   "page_unique_share": 0.2381
+  },
+  "models": {
+   "M2": {
+    "selected": "pnew=0.05,rec=2.0,verbatim=0.6",
+    "composite": 0.6756,
+    "metrics": {
+     "tokens": 35492,
+     "types": 8453,
+     "ttr": 0.2382,
+     "hapax_share_of_types": 0.5112,
+     "H1": 3.527,
+     "H2_given_1": 2.497,
+     "first_char_H": 2.515,
+     "last_char_H": 2.571,
+     "zipf_slope": -0.748,
+     "word_len_mean": 5.52,
+     "pages": 226,
+     "jaccard_adjacent": 0.0748,
+     "jaccard_distant": 0.0529,
+     "page_unique_share": 0.1072
+    },
+    "matches": {
+     "ttr": true,
+     "H2_given_1": false,
+     "last_char_H": true,
+     "zipf_slope": false,
+     "word_len_mean": true,
+     "jaccard_adjacent": false,
+     "jaccard_distant": true,
+     "page_unique_share": false,
+     "hapax_share_of_types": false
+    },
+    "match_count": 4
+   },
+   "M3": {
+    "selected": "carry=0.3,topic=30,prime=2,reuse=0.6",
+    "composite": 0.7755,
+    "metrics": {
+     "tokens": 35492,
+     "types": 6630,
+     "ttr": 0.1868,
+     "hapax_share_of_types": 0.3988,
+     "H1": 3.799,
+     "H2_given_1": 2.756,
+     "first_char_H": 3.31,
+     "last_char_H": 3.705,
+     "zipf_slope": -0.659,
+     "word_len_mean": 4.18,
+     "pages": 226,
+     "jaccard_adjacent": 0.0835,
+     "jaccard_distant": 0.0437,
+     "page_unique_share": 0.2392
+    },
+    "matches": {
+     "ttr": false,
+     "H2_given_1": false,
+     "last_char_H": false,
+     "zipf_slope": false,
+     "word_len_mean": false,
+     "jaccard_adjacent": true,
+     "jaccard_distant": true,
+     "page_unique_share": true,
+     "hapax_share_of_types": false
+    },
+    "match_count": 3
+   },
+   "M4": {
+    "selected": "carry=0.5,topic=60,reuse=0.7",
+    "composite": 1.2679,
+    "metrics": {
+     "tokens": 35492,
+     "types": 10625,
+     "ttr": 0.2994,
+     "hapax_share_of_types": 0.5155,
+     "H1": 3.738,
+     "H2_given_1": 3.052,
+     "first_char_H": 3.585,
+     "last_char_H": 3.168,
+     "zipf_slope": -0.653,
+     "word_len_mean": 5.15,
+     "pages": 226,
+     "jaccard_adjacent": 0.0729,
+     "jaccard_distant": 0.0194,
+     "page_unique_share": 0.445
+    },
+    "matches": {
+     "ttr": false,
+     "H2_given_1": false,
+     "last_char_H": false,
+     "zipf_slope": false,
+     "word_len_mean": true,
+     "jaccard_adjacent": false,
+     "jaccard_distant": false,
+     "page_unique_share": false,
+     "hapax_share_of_types": false
+    },
+    "match_count": 1
+   },
+   "M5": {
+    "selected": "K=40,carry=0.5,reuse=0.6",
+    "composite": 1.0026,
+    "metrics": {
+     "tokens": 35492,
+     "types": 9937,
+     "ttr": 0.28,
+     "hapax_share_of_types": 0.4822,
+     "H1": 3.852,
+     "H2_given_1": 2.862,
+     "first_char_H": 3.521,
+     "last_char_H": 2.995,
+     "zipf_slope": -0.67,
+     "word_len_mean": 5.29,
+     "pages": 226,
+     "jaccard_adjacent": 0.0643,
+     "jaccard_distant": 0.0202,
+     "page_unique_share": 0.3617
+    },
+    "matches": {
+     "ttr": false,
+     "H2_given_1": false,
+     "last_char_H": false,
+     "zipf_slope": false,
+     "word_len_mean": true,
+     "jaccard_adjacent": false,
+     "jaccard_distant": false,
+     "page_unique_share": false,
+     "hapax_share_of_types": false
+    },
+    "match_count": 1
+   },
+   "M5b": {
+    "selected": "K=1000,o=(0,2),reuse=0.6",
+    "composite": 0.7353,
+    "metrics": {
+     "tokens": 35492,
+     "types": 8614,
+     "ttr": 0.2427,
+     "hapax_share_of_types": 0.4855,
+     "H1": 3.854,
+     "H2_given_1": 2.888,
+     "first_char_H": 3.458,
+     "last_char_H": 3.134,
+     "zipf_slope": -0.851,
+     "word_len_mean": 5.29,
+     "pages": 226,
+     "jaccard_adjacent": 0.08,
+     "jaccard_distant": 0.0478,
+     "page_unique_share": 0.3679
+    },
+    "matches": {
+     "ttr": true,
+     "H2_given_1": false,
+     "last_char_H": false,
+     "zipf_slope": false,
+     "word_len_mean": true,
+     "jaccard_adjacent": true,
+     "jaccard_distant": true,
+     "page_unique_share": false,
+     "hapax_share_of_types": false
+    },
+    "match_count": 4
+   }
+  }
+ }
+}

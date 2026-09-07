@@ -80,6 +80,7 @@ analysis remains exploratory and separate.
 python clean_rerun.py --repo ../.. --lab <dir with bibles/ and pg49513.txt> --out results/
 ```
 
-Stdlib only; deterministic; imports the critique's parser and metric code from
-`../adversarial-critique/adversarial_critique.py` and the family's generators, vendored
-unchanged in `family_generators.py` with per-function provenance comments.
+Stdlib only; deterministic; uses `critique_lib.py` (a verbatim copy of the critique's parser and metric code,
+`experiments/adversarial-critique/adversarial_critique.py` in PR #10, so that this branch
+is self-contained) and the family's generators, vendored unchanged in
+`family_generators.py` with per-function provenance comments.
