@@ -34,7 +34,7 @@ test('code, rights and manifests are fully allocated; budget allocation is order
   assert.equal(budget.get('tool.py'),15000); assert.equal(budget.get('contributions/x/contribution.json'),9000);
   assert.ok([...budget.values()].reduce((a,b)=>a+b,0)<=96000);
   await assert.rejects(inspectTextArtifact('tool.py', bytes('x'.repeat(10000)),2000), /requires_full_text/);
-  await assert.rejects(inspectTextArtifact('data.txt',new Uint8Array(4000001)),/storage_limit/);
+  await assert.rejects(inspectTextArtifact('data.txt',new Uint8Array(8000001)),/storage_limit/);
 });
 test('derived views require profile opt-in and source/representation integrity', async () => {
   const input = await gradingInput(); const file = await inspectTextArtifact('data/corpus.txt', bytes('abc\n'.repeat(30000)), 3000); input.files.push(file);
@@ -48,3 +48,12 @@ test('notebook attachments and embedded visual payloads stay blocked; plain note
   assert.equal((await inspectTextArtifact('study.ipynb', bytes(JSON.stringify({cells:[{source:['print(1)'],outputs:[]}]})))).inspection,'complete');
 });
 
+
+test('XML is fully parsed without DTD/entity expansion and can be represented within a published budget', async () => {
+ const xml = bytes('<root>' + '<word>test &amp; evidence</word>'.repeat(50000) + '</root>');
+ const view = await inspectTextArtifact('data/control.xml', xml, 3000);assert.equal(JSON.parse(view.content!).structure.elements, 50001);
+ await assert.rejects(inspectTextArtifact('data/control.xml',bytes('<!DOCTYPE x [<!ENTITY a SYSTEM "file:///secret">]><x>&a;</x>')), /dtd_prohibited/);
+ await assert.rejects(inspectTextArtifact('data/control.xml',bytes('<root><bad></root>')), /invalid_xml/);
+ assert.equal(artifactBudgets([{path:'report.md',byte_length:100000}],1000000).get('report.md'),100000);
+ assert.throws(()=>artifactBudgets([{path:'report.md',byte_length:100000}]),/model_evidence_limit/);
+});

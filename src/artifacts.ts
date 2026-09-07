@@ -1,19 +1,21 @@
+import { SaxesParser } from 'saxes';
 import { fileTypeFromBuffer } from 'file-type';
 import { parse as parseCSV } from 'csv-parse/sync';
 import type { EvidenceFile } from './contracts.ts';
 import { sha256 } from './hash.ts';
 
 export const ARTIFACT_METHOD = 'bounded-text-v1';
-export const MAX_ARTIFACT_BYTES = 4_000_000;
+export const MAX_ARTIFACT_BYTES = 8_000_000;
 export const MAX_ARTIFACT_TOTAL = 24_000_000;
 export const MODEL_EVIDENCE_BYTES = 96_000;
 // Manifests, prose reports and executable source remain fully visible to the AI.
-export function canSummarize(path: string): boolean { return /\.(?:txt|csv|tsv|jsonl|ndjson|json)$/i.test(path) && !/(?:^|\/)(?:contribution\.json|rights[^/]*|profiles\/|manifests\/)/i.test(path); }
-export function artifactBudgets(files: Array<{ path: string; byte_length: number }>): Map<string, number> {
+export function canSummarize(path: string): boolean { return /\.(?:txt|csv|tsv|jsonl|ndjson|json|xml)$/i.test(path) && !/(?:^|\/)(?:contribution\.json|rights[^/]*|profiles\/|manifests\/)/i.test(path); }
+export function artifactBudgets(files: Array<{ path: string; byte_length: number }>, limit = MODEL_EVIDENCE_BYTES): Map<string, number> {
+  if (!Number.isSafeInteger(limit) || limit < 96000 || limit > 1000000) throw new Error('artifact_invalid_model_budget');
   const ordered = [...files].sort((a, b) => a.path.localeCompare(b.path, 'en'));
   const budgets = new Map(ordered.map(f => [f.path, canSummarize(f.path) && f.byte_length > 8000 ? 2000 : f.byte_length]));
-  let remaining = MODEL_EVIDENCE_BYTES - [...budgets.values()].reduce((a, b) => a + b, 0);
-  if (remaining < 0) throw new Error('model_evidence_limit: full manifests, reports and code plus artifact summaries exceed 96000 bytes');
+  let remaining = limit - [...budgets.values()].reduce((a, b) => a + b, 0);
+  if (remaining < 0) throw new Error('model_evidence_limit: full manifests, reports and code plus artifact summaries exceed the published model evidence budget');
   const large = ordered.filter(f => budgets.get(f.path)! < f.byte_length);
   for (let i = 0; i < large.length; i++) {
     const file = large[i]!, current = budgets.get(file.path)!;
@@ -34,7 +36,7 @@ export function excludedArtifact(path: string, bytes?: Uint8Array): string | nul
     || new TextDecoder().decode(bytes.subarray(257, 262)) === 'ustar') return 'archive_content_prohibited';
   return null;
 }
-const textPath = /\.(?:txt|md|csv|tsv|json|jsonl|ndjson|ya?ml|toml|ini|py|r|js|mjs|cjs|ts|tsx|jsx|c|h|cpp|rs|go|jl|ipynb|bib|tex)$/i;
+const textPath = /\.(?:txt|md|csv|tsv|xml|json|jsonl|ndjson|ya?ml|toml|ini|py|r|js|mjs|cjs|ts|tsx|jsx|c|h|cpp|rs|go|jl|ipynb|bib|tex)$/i;
 const secret = /-----BEGIN (?:RSA |EC |OPENSSH )?PRIVATE KEY-----|\bgh[pousr]_[A-Za-z0-9_]{30,}\b|\bgithub_pat_[A-Za-z0-9_]{40,}\b|\bsk-ant-[A-Za-z0-9_-]{32,}\b/;
 function samples(bytes: Uint8Array, budget: number): Array<{ start_byte: number; end_byte: number; text: string }> {
   const width = Math.max(16, Math.floor(budget / 24));
@@ -50,7 +52,7 @@ function samples(bytes: Uint8Array, budget: number): Array<{ start_byte: number;
 }
 /** Inert full-byte structural inspection with an explicitly partial model representation. */
 export async function inspectTextArtifact(path: string, bytes: Uint8Array, textBudget = 64_000): Promise<EvidenceFile> {
-  if (!Number.isSafeInteger(textBudget) || textBudget < 0 || textBudget > MODEL_EVIDENCE_BYTES) throw new Error('artifact_invalid_budget');
+  if (!Number.isSafeInteger(textBudget) || textBudget < 0 || textBudget > 1000000) throw new Error('artifact_invalid_budget');
   const prohibited = excludedArtifact(path, bytes); if (prohibited) throw new Error(prohibited);
   if (bytes.length > MAX_ARTIFACT_BYTES) throw new Error('artifact_storage_limit');
   let kind: Awaited<ReturnType<typeof fileTypeFromBuffer>>;
@@ -67,7 +69,14 @@ export async function inspectTextArtifact(path: string, bytes: Uint8Array, textB
   if (secret.test(text)) throw new Error('restricted_secret_artifact');
   if (/data:(?:video\/|application\/(?:zip|gzip|x-(?:tar|rar|7z)))/i.test(text)) throw new Error('embedded_prohibited_artifact');
   const structure: Record<string, unknown> = { lines: text.split('\n').length, utf8_valid: true, secret_scan: 'entire source', execution_performed: false };
-  if (/\.(?:json|ipynb)$/.test(path)) {
+  if (/\.xml$/i.test(path)) {
+    if (/<!\s*(?:DOCTYPE|ENTITY)/i.test(text)) throw new Error('artifact_xml_dtd_prohibited');
+    let elements = 0; const parser = new SaxesParser({ xmlns: true });
+    parser.on('opentag', () => { elements++; });
+    parser.on('error', () => { throw new Error('artifact_invalid_xml'); });
+    parser.on('doctype', () => { throw new Error('artifact_xml_dtd_prohibited'); });
+    parser.write(text).close(); structure.elements = elements;
+  } else if (/\.(?:json|ipynb)$/.test(path)) {
     let value: unknown; try { value = JSON.parse(text.replace(/^\uFEFF/, '')); } catch { throw new Error('artifact_invalid_json'); }
     structure.json_type = Array.isArray(value) ? 'array' : typeof value;
     structure.json_entries = Array.isArray(value) ? value.length : value && typeof value === 'object' ? Object.keys(value).length : 1;
