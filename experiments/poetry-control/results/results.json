@@ -1,0 +1,127 @@
+{
+ "voynich_real_lines": {
+  "source": "voynich",
+  "lines": 5216,
+  "tokens": 34986,
+  "mean_line_words": 6.71,
+  "wordfinal_char_H_all": 2.585,
+  "linefinal_wordfinal_char_H": 2.985,
+  "lineinitial_firstchar_H": 3.126,
+  "top5_linefinal_words": [
+   [
+    "daiin",
+    0.017
+   ],
+   [
+    "dy",
+    0.011
+   ],
+   [
+    "dam",
+    0.008
+   ],
+   [
+    "dal",
+    0.008
+   ],
+   [
+    "s",
+    0.007
+   ]
+  ]
+ },
+ "sonnets_rhymed_verse": {
+  "source": "sonnets",
+  "lines": 2296,
+  "tokens": 17261,
+  "mean_line_words": 7.52,
+  "wordfinal_char_H_all": 3.699,
+  "linefinal_wordfinal_char_H": 3.5,
+  "lineinitial_firstchar_H": 3.842,
+  "top5_linefinal_words": [
+   [
+    "thee",
+    0.021
+   ],
+   [
+    "me",
+    0.014
+   ],
+   [
+    "be",
+    0.01
+   ],
+   [
+    "heart",
+    0.007
+   ],
+   [
+    "sight",
+    0.007
+   ]
+  ]
+ },
+ "culpeper_pseudo_lines": {
+  "source": "culpeper",
+  "lines": 35293,
+  "tokens": 247051,
+  "mean_line_words": 7.0,
+  "wordfinal_char_H_all": 3.641,
+  "linefinal_wordfinal_char_H": 3.643,
+  "lineinitial_firstchar_H": 4.076,
+  "top5_linefinal_words": [
+   [
+    "the",
+    0.074
+   ],
+   [
+    "and",
+    0.053
+   ],
+   [
+    "of",
+    0.046
+   ],
+   [
+    "in",
+    0.022
+   ],
+   [
+    "it",
+    0.022
+   ]
+  ]
+ },
+ "alice_pseudo_lines": {
+  "source": "alice",
+  "lines": 3674,
+  "tokens": 25718,
+  "mean_line_words": 7.0,
+  "wordfinal_char_H_all": 3.585,
+  "linefinal_wordfinal_char_H": 3.61,
+  "lineinitial_firstchar_H": 4.096,
+  "top5_linefinal_words": [
+   [
+    "the",
+    0.06
+   ],
+   [
+    "and",
+    0.036
+   ],
+   [
+    "to",
+    0.027
+   ],
+   [
+    "it",
+    0.026
+   ],
+   [
+    "of",
+    0.022
+   ]
+  ]
+ },
+ "note": "prose pseudo-lines use the Voynich mean line length (7 words)"
+}
