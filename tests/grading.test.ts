@@ -7,6 +7,20 @@ import { parseRecord } from '../src/cli.ts';
 import { assessment, contribution, gradingInput } from './fixtures.ts';
 function runner(responses = [assessment(), assessment()]): StageRunner & { calls: string[]; payloads: string[] } { const calls: string[] = []; const payloads: string[] = []; return { calls, payloads, async run(request) { calls.push(request.stage); payloads.push(request.payload); return { text: JSON.stringify(responses[calls.length - 1]), provider: 'anthropic', model: 'synthetic-test-model', exposed_version: 'synthetic-test', usage: { test_calls: 1 }, receipt_ref: `test-receipt-${calls.length}` }; } }; }
 test('valid useful direction metadata needs no executed result', () => assert.equal(validateContribution(contribution).valid, true));
+test('held provisional tiers may be adjudicated but cannot create credit or bypass final gates', async () => {
+  const input = await gradingInput();
+  const held = assessment(); held.admission_action = 'needs_revision'; held.score_status = 'held';
+  held.outcomes[0]!.gate_evidence[1]!.status = 'unknown';
+  assert.deepEqual(validateStageJudgment(held, input), []);
+  const stalled = await runGrading(input, runner([held, held]));
+  assert.equal(stalled.status, 'held'); assert.equal(stalled.expected_score, null); assert.equal(stalled.official_proposed_score, null);
+  const resolved = runner([assessment(), held, assessment()]);
+  assert.equal((await runGrading(input, resolved)).status, 'complete');
+  assert.deepEqual(resolved.calls, ['assessor', 'adversary', 'adjudicator']);
+  const unsafe = structuredClone(held); unsafe.admission_action = 'accept'; unsafe.score_status = 'proposed';
+  assert.ok(validateStageJudgment(unsafe, input).length);
+  assert.equal((await runGrading(input, runner([assessment(), held, unsafe]))).expected_score, null);
+});
 test('malformed shares and claimed totals are rejected before any model', () => { const copy = structuredClone(contribution); copy.outcomes[0]!.attribution[0]!.share_basis_points = 9999; copy.claimed_total_points = 20; const result = validateContribution(copy); assert.equal(result.valid, false); if (!result.valid) assert.deepEqual(result.issues.map(i => i.code), ['shares', 'claim_arithmetic']); });
 test('unknown model version is allowed; missing AI disclosure is not', () => { const copy = structuredClone(contribution); copy.ai_usage = { status: 'assisted', tools: [{ provider: 'provider', model_id: 'model', model_version: 'unknown', accessed_at: '2026-09-06', tasks: ['Drafting'], human_verification: 'Inspected the source.' }], reproducibility_notes: 'Version not exposed.' }; assert.equal(validateContribution(copy).valid, true); copy.ai_usage.tools = []; assert.equal(validateContribution(copy).valid, false); });
 test('paths reject traversal, Windows devices, drives and alternate data streams', () => { for (const path of ['../secret', 'a/../../b', 'C:/secret', '/secret', 'a\\b', '.git/config', 'a/NUL.txt', 'a/file:secret', 'a/trailing.']) assert.equal(isSafeRepositoryPath(path), false, path); assert.equal(isSafeRepositoryPath('research/folios/f1r.md'), true); });
