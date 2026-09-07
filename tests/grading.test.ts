@@ -7,6 +7,17 @@ import { parseRecord } from '../src/cli.ts';
 import { assessment, contribution, gradingInput } from './fixtures.ts';
 function runner(responses = [assessment(), assessment()]): StageRunner & { calls: string[]; payloads: string[] } { const calls: string[] = []; const payloads: string[] = []; return { calls, payloads, async run(request) { calls.push(request.stage); payloads.push(request.payload); return { text: JSON.stringify(responses[calls.length - 1]), provider: 'anthropic', model: 'synthetic-test-model', exposed_version: 'synthetic-test', usage: { test_calls: 1 }, receipt_ref: `test-receipt-${calls.length}` }; } }; }
 test('valid useful direction metadata needs no executed result', () => assert.equal(validateContribution(contribution).valid, true));
+test('proposal citation and coverage errors reach one adjudicator while an invalid final cannot award', async () => {
+  const input = await gradingInput(); const bad = assessment();
+  bad.inspected_paths = [];
+  bad.outcomes[0]!.gate_evidence[0]!.evidence_refs = ['invented.md'];
+  const model = runner([bad, assessment(), assessment()]);
+  assert.equal((await runGrading(input, model)).status, 'complete');
+  assert.deepEqual(model.calls, ['assessor', 'adversary', 'adjudicator']);
+  assert.ok(model.payloads[2]!.includes('Unknown evidence citation'));
+  const rejected = await runGrading(input, runner([bad, assessment(), bad]));
+  assert.equal(rejected.status, 'held'); assert.equal(rejected.expected_score, null);
+});
 test('held provisional tiers may be adjudicated but cannot create credit or bypass final gates', async () => {
   const input = await gradingInput();
   const held = assessment(); held.admission_action = 'needs_revision'; held.score_status = 'held';
@@ -20,6 +31,17 @@ test('held provisional tiers may be adjudicated but cannot create credit or bypa
   const unsafe = structuredClone(held); unsafe.admission_action = 'accept'; unsafe.score_status = 'proposed';
   assert.ok(validateStageJudgment(unsafe, input).length);
   assert.equal((await runGrading(input, runner([assessment(), held, unsafe]))).expected_score, null);
+});
+test('logical conflicts require adjudication even when both proposals match; final conflicts cannot award', async () => {
+  const input = await gradingInput(); const conflicting = assessment(); conflicting.inspection_gaps = ['A stated unresolved limitation.'];
+  const model = runner([conflicting, conflicting, assessment()]);
+  assert.equal((await runGrading(input, model)).status, 'complete');
+  assert.deepEqual(model.calls, ['assessor', 'adversary', 'adjudicator']);
+  assert.equal((await runGrading(input, runner([conflicting, conflicting, conflicting]))).expected_score, null);
+  const annotated = assessment(); annotated.outcomes[0]!.gate_evidence[0]!.evidence_refs = ['research/example.md (question and first step)'];
+  assert.deepEqual(validateStageJudgment(annotated, input), []);
+  annotated.outcomes[0]!.gate_evidence[0]!.evidence_refs = ['research/missing.md (question and first step)'];
+  assert.ok(validateStageJudgment(annotated, input).some(error => error.startsWith('Unknown evidence citation')));
 });
 test('malformed shares and claimed totals are rejected before any model', () => { const copy = structuredClone(contribution); copy.outcomes[0]!.attribution[0]!.share_basis_points = 9999; copy.claimed_total_points = 20; const result = validateContribution(copy); assert.equal(result.valid, false); if (!result.valid) assert.deepEqual(result.issues.map(i => i.code), ['shares', 'claim_arithmetic']); });
 test('unknown model version is allowed; missing AI disclosure is not', () => { const copy = structuredClone(contribution); copy.ai_usage = { status: 'assisted', tools: [{ provider: 'provider', model_id: 'model', model_version: 'unknown', accessed_at: '2026-09-06', tasks: ['Drafting'], human_verification: 'Inspected the source.' }], reproducibility_notes: 'Version not exposed.' }; assert.equal(validateContribution(copy).valid, true); copy.ai_usage.tools = []; assert.equal(validateContribution(copy).valid, false); });
