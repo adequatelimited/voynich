@@ -1,4 +1,5 @@
 #!/usr/bin/env node
+import { inspectTextArtifact, artifactBudgets } from './artifacts.ts';
 import { readFile, readdir, lstat, mkdir, writeFile, open } from 'node:fs/promises';
 import { resolve, join, relative, extname, dirname } from 'node:path';
 import { pathToFileURL, fileURLToPath } from 'node:url';
@@ -27,8 +28,10 @@ export async function loadBundle(root: string, manifestPath: string, context: Gr
   const paths = new Set([manifestPath, contribution.rights_manifest, ...contribution.changes.map(c => c.path), ...contribution.outcomes.flatMap(o => o.evidence)]);
   if (paths.size > profile.max_files) throw new Error('Bundle exceeds the public file limit.');
   const files: EvidenceFile[] = [];
+  const budgets = profile.settings.artifact_handling === 'bounded-text-v1' ? artifactBudgets(await Promise.all([...paths].map(async path => ({ path, byte_length: (await lstat(resolve(root, path))).size })))) : new Map<string, number>();
   for (const path of paths) {
     const bytes = await safeRead(root, path, profile.max_file_bytes); const media_type = mediaType(path);
+    if (profile.settings.artifact_handling === 'bounded-text-v1') { files.push(await inspectTextArtifact(path, bytes, budgets.get(path)!)); continue; }
     let content: string | undefined; try { content = new TextDecoder('utf-8', { fatal: true }).decode(bytes); } catch { /* Mark unsupported, never silently replace bytes. */ }
     const supported = media_type !== 'application/octet-stream' && content !== undefined;
     files.push({ path, sha256: await sha256(bytes), byte_length: bytes.length, media_type, inspection: supported ? 'complete' : 'unsupported', ...(content !== undefined ? { content } : {}) });
