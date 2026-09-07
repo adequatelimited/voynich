@@ -1,0 +1,15 @@
+{
+  "id": "2026-09-06T201500Z-entry-doodler-pilot",
+  "experiment": "experiments/entry-doodler",
+  "command": "python entry_doodler.py --corpus ../../data/corpora/ZL3b-n.txt --out results/ --seed 408",
+  "seed": 408,
+  "corpus": {
+    "path": "data/corpora/ZL3b-n.txt",
+    "sha256": "bf5b6d4ac1e3a51b1847a9c388318d609020441ccd56984c901c32b09beccafc",
+    "bytes": 411671
+  },
+  "code": "experiments/entry-doodler/entry_doodler.py",
+  "environment": "CPython 3.12, stdlib only, Windows 11",
+  "started": "2026-09-06T20:15:00Z",
+  "status": "completed"
+}
