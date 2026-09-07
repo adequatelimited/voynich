@@ -88,12 +88,12 @@ export interface GradingContext {
 export interface GradingProfile {
   schema_version: '1.0'; id: string; status: 'unconfigured' | 'calibration' | 'active';
   provider: string; model_id: string | null; exposed_version: string; runtime: string;
-  rules_version: string; rubric_version: string; max_stages: 3; max_attempts_per_stage: 1;
+  rules_version: string; rubric_version: string; max_stages: 3 | 4; max_attempts_per_stage: 1;
   max_input_bytes: number; max_output_bytes: number; max_duration_ms: number;
   max_files: number; max_file_bytes: number; max_total_bytes: number;
   settings: Record<string, string | number | boolean | null>; tool_access: 'none';
 }
-export type GradingStage = 'assessor' | 'adversary' | 'adjudicator';
+export type GradingStage = 'assessor' | 'adversary' | 'adjudicator' | 'corrector';
 export interface StageReceipt {
   stage: GradingStage; provider: string; model: string; exposed_version: string;
   prompt_digest: string; response_digest: string; started_at: string; completed_at: string;

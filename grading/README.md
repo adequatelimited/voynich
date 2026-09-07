@@ -6,6 +6,8 @@ The [active profile](profiles/active.json) describes the founding Sonnet AI-scor
 
 The runtime sequence is deterministic preflight → assessor → blind adversary → one adjudicator only on material disagreement → output/evidence validation → proposed deterministic increment. Official receipt authentication and current repository authority are verified by the separate broker before action or settlement. A local estimate has `awarded_score: null` forever.
 
+The active v2 profile adds one pre-reserved, conservative output corrector only after an invalid adjudication. See [the output reliability release](releases/2026-09-07-output-correction.md). Raw proposals and errors remain immutable; valid decisions cannot trigger another sample. Final schema, receipt namespaces and evidence checks remain mandatory.
+
 ## Portable API
 
 ```ts
