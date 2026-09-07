@@ -72,3 +72,8 @@ Rights, privacy, safety and honest evidence are universal gates. Missing tier-20
 Appeal through a linked PR in `governance/appeals/` identifying the artifact/head, disputed criterion and evidence, ordinarily within 30 days; later material evidence may reopen a case. An AI regrade corrects points audibly. Unchanged dissatisfaction is not another random sample. Humans resolve contested facts/rights/attribution/incidents without setting replacement points. Protected changes follow [GOVERNANCE.md](GOVERNANCE.md).
 
 By submitting, certify your authority to contribute under the declared rights, scholarly attribution and AI disclosure, and accept the public review/credit process. Do not include credentials or sensitive private information. Public Git history and clones may persist; see [PRIVACY.md](PRIVACY.md).
+
+
+## Large research artifacts
+
+Submit unpacked files through the same fork / branch / pull-request workflow. Video and archives/compressed content are prohibited, including ZIP-based documents and renamed payloads. The active v4 profile allows 160 files, 4 MB per original and 24 MB total; full reports/code plus bounded data representations must fit 96 KB of model evidence. Include a concise report explaining provenance, rights, intended use, method and results. Large TXT/CSV/TSV/JSON/JSONL data can use the published deterministic inspection representation; source bytes remain hash-bound in Git. PDF/image inspection is not enabled by this release. Run local preflight with `--profile grading/profiles/active.json`. See GRADING.md for exact coverage and limits.
