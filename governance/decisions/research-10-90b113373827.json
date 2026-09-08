@@ -1,0 +1,373 @@
+{
+  "schema_version": "1.0",
+  "research_pr": 10,
+  "merge_sha": "be2cc5f28f91bbaf5e14d8a4c6fd8f74845a31f2",
+  "events": [
+    {
+      "schema_version": "1.0",
+      "id": "decision-10-family-generative-falsification-adversarial-audit-90b113373827",
+      "sequence": 14,
+      "kind": "award",
+      "family_id": "family-generative-falsification-adversarial-audit",
+      "rubric_version": "0.1",
+      "category": "replications_audits",
+      "repository_id": 1359336540,
+      "pr_number": 10,
+      "milestone_id": "milestone-1359336540-10-family-generative-falsification-adversarial-audit",
+      "earned_at": "2026-09-08T00:27:41Z",
+      "assessment_id": "assessment-3aa494ac29945279964d8ad8be106bfc",
+      "artifact_binding_digest": "90b1133738271f9ceef209e88da4a1989fc6ffa2f50467c99c150e472d455a48",
+      "authority_receipt_ref": "receipt:job-90b1133738271f9ceef209e88da4a1989fc6ffa2",
+      "cumulative_tier": 10,
+      "allocation_shares": [
+        {
+          "github_id": 859355,
+          "share_basis_points": 10000,
+          "status": "paid",
+          "acknowledgment_receipt_ref": "github-pr:1359336540:10:28fea2407ca25829f93560cfdeae2b3f3f0483b7:7a8fc77bb6678751584414be21b6d893156005fc97dfb6c16a8368936c69b1ec:421cb58951e034171933c4f0688adfe5ad81d008236c431061c3a05e3d185c72"
+        }
+      ],
+      "reason": "This is a genuinely new, independently useful outcome under CREDIT_IS_NOT_LINEAGE_V1 and INDEPENDENT_OUTCOME_CREDIT v1: a controlled, pre-registered adversarial audit that discovers a parser contamination bug affecting all prior sibling pilots, restates headline numbers, and applies alphabet/cipher/permutation-null controls that materially reframe two of the family's prior structural claims. This is a substantive independent replication/failure-analysis result changing confidence in prior claims (tier-10 anchor for replications_audits), exceeding a bounded 2-point diagnostic. It does not reach tier 20 since the critique's author works within the same codebase/data (not an independent second team, no trusted external_assessment_receipts), and only five untuned cipher families were tested (explicitly weak by design). The contributor's declared 'extends: outcome-languages-control' and family_id='family-generative-falsification' in the raw metadata are untrusted claimant labels; per FAMILY_IDENTITY_GUARD_V1 and CREDIT_IS_NOT_LINEAGE_V1 these do not bind this result into that occupied family's ladder, since the actual delivered capability is substantively different from the table-and-grille mechanism scope recorded for family-generative-falsification."
+    }
+  ],
+  "families_added": [
+    {
+      "id": "family-generative-falsification-adversarial-audit",
+      "rubric_version": "0.1",
+      "scope": "A pre-registered, frozen-decision-rule adversarial audit of six prior generative-falsification family claims: (1) discovery and quantification that the shared corpus parser used by prior pilots leaves IVTFF markup inside ~24% of published types, requiring restatement of all headline manuscript metrics under a newly implemented clean parser (with two uncertain-space treatment variants); (2) an alphabet-confound test showing the H2|1 anomaly is robust to EVA multigraph/determinism-merge alphabet normalization but the final-glyph anomaly is alphabet-dependent (0.08-0.27 bit gap depending on glyph-identity assumptions); (3) five untuned cipher constructions applied to real Latin/Culpeper plaintexts, showing a plain verbose cipher of Latin reproduces both entropy residues and fails only a type-ratio gate calibrated to the contaminated parser count; (4) permutation-null and Currier-language/section confound analysis showing the 'neighbouring-page 2x sharing' and '30% page-private' structural claims are largely artefacts of language/section confounding and hapax richness; (5) a new medieval-orthography control (two Chaucer editions) testing whether the vocabulary-richness anomaly survives non-standardized spelling.",
+      "acceptance_test": "Run `python adversarial_critique.py --repo ../.. --lab <dir with bibles/, pg49513.txt and the two Chaucer texts> --out results/`; confirm results.json verdicts match exactly: R0.1 CONTAMINATED, R0.2 RICHEST SURVIVES, R1.1 ALPHABET-ROBUST, R1.2 ALPHABET-DEPENDENT, R2.1 NOT REPRODUCED BY TESTED CIPHERS, R3.1 LANGUAGE/SECTION ARTEFACT, R3.2 HAPAX-RICHNESS CONSEQUENCE, R4.1 SURVIVES this control; clean types 7,734/8,804; within-class adjacency ratio 1.137; page-private 0.193 vs null 0.166.",
+      "aliases": [],
+      "predecessor_family_ids": [
+        "family-generative-falsification",
+        "family-generative-falsification-word-grammar-template",
+        "family-generative-falsification-controls-entry-ladder",
+        "family-generative-falsification-poetry-control",
+        "family-generative-falsification-languages-control"
+      ],
+      "excluded_overlap": [
+        "Does not claim credit for the pinned ZL3b corpus/parser (seed-corpus-parser) itself; audits and documents its known contamination instead.",
+        "Does not claim or duplicate the M5a/M5b table-and-grille mechanism experiment credited under family-generative-falsification.",
+        "Does not claim or duplicate the Stolfi word-grammar template generator credited under family-generative-falsification-word-grammar-template.",
+        "Does not claim or duplicate the entry-genre-ladder controls credited under family-generative-falsification-controls-entry-ladder.",
+        "Does not claim or duplicate the rhyme/line-structure poetry control credited under family-generative-falsification-poetry-control.",
+        "Does not claim or duplicate the nine-Bible languages-control final-glyph/H2|1 comparison credited under family-generative-falsification-languages-control; reuses those nine corpora only as inputs to a new alphabet-normalization test.",
+        "Does not claim credit for MS408 mirror registration (family-ms408-data-access)."
+      ],
+      "seed": false,
+      "seed_baseline": 0
+    }
+  ],
+  "milestones": [
+    {
+      "id": "milestone-1359336540-10-family-generative-falsification-adversarial-audit",
+      "family_id": "family-generative-falsification-adversarial-audit",
+      "repository_id": 1359336540,
+      "pr_number": 10,
+      "earned_at": "2026-09-08T00:27:41Z",
+      "depends_on": []
+    }
+  ],
+  "assessment": {
+    "schema_version": "1.0",
+    "assessment_id": "assessment-3aa494ac29945279964d8ad8be106bfc",
+    "artifact_binding_digest": "3aa494ac29945279964d8ad8be106bfc1b8e3ae42b890cbc2f95c34b635aeca0",
+    "merit_evidence_digest": "82b157faeb5e1f3a030444b5fd11b7e52917f382bc8f74c937676698c90fa848",
+    "repository_id": 1359336540,
+    "pr_number": 10,
+    "head_sha": "28fea2407ca25829f93560cfdeae2b3f3f0483b7",
+    "base_sha": "058b459d137175fb36c36a2f60d7a32f849f60ba",
+    "rules_version": "0.1",
+    "rubric_version": "0.1",
+    "grading_profile": "voynich-sonnet-ai-pilot-2026-09-07-v9",
+    "evaluator_commit": "a26c63625881b3fcb1326cea69d4b1f8430692b0",
+    "mode": "official_proposal",
+    "status": "complete",
+    "claimed_score": 2,
+    "expected_score": 10,
+    "official_proposed_score": 10,
+    "awarded_score": null,
+    "assessment": {
+      "schema_version": "1.0",
+      "admission_action": "accept",
+      "score_status": "proposed",
+      "conduct_status": "clear",
+      "findings": [
+        {
+          "blocks_merge_or_credit": false,
+          "rule_id_or_gate": "G6",
+          "severity": "info",
+          "path_or_locus": "experiments/adversarial-critique/REPORT.md",
+          "evidence_refs": [
+            "experiments/adversarial-critique/REPORT.md"
+          ],
+          "reason": "Contributor labels this a modest tier-2 critique, but it delivers a pre-registered, code-level parser contamination audit affecting all prior family pilots, an alphabet-confound test, an untuned cipher-advocate test and structure-vs-null/confound tests, each with frozen decision rules and verdicts.",
+          "required_change": "",
+          "verification_step": "Run adversarial_critique.py and compare results.json to the recorded verdicts."
+        },
+        {
+          "blocks_merge_or_credit": false,
+          "rule_id_or_gate": "R3",
+          "severity": "info",
+          "path_or_locus": "contributions/adversarial-critique/rights.md",
+          "evidence_refs": [
+            "contributions/adversarial-critique/rights.md"
+          ],
+          "reason": "Chaucer control texts are referenced by sha256 and not redistributed; disclosed honestly and not a rights blocker.",
+          "required_change": "",
+          "verification_step": "Confirm rights.md discloses non-redistribution and sha256 references for the two new Chaucer editions."
+        }
+      ],
+      "outcomes": [
+        {
+          "family_id": "family-generative-falsification-adversarial-audit",
+          "scope": "A pre-registered, frozen-decision-rule adversarial audit of six prior generative-falsification family claims: (1) discovery and quantification that the shared corpus parser used by prior pilots leaves IVTFF markup inside ~24% of published types, requiring restatement of all headline manuscript metrics under a newly implemented clean parser (with two uncertain-space treatment variants); (2) an alphabet-confound test showing the H2|1 anomaly is robust to EVA multigraph/determinism-merge alphabet normalization but the final-glyph anomaly is alphabet-dependent (0.08-0.27 bit gap depending on glyph-identity assumptions); (3) five untuned cipher constructions applied to real Latin/Culpeper plaintexts, showing a plain verbose cipher of Latin reproduces both entropy residues and fails only a type-ratio gate calibrated to the contaminated parser count; (4) permutation-null and Currier-language/section confound analysis showing the 'neighbouring-page 2x sharing' and '30% page-private' structural claims are largely artefacts of language/section confounding and hapax richness; (5) a new medieval-orthography control (two Chaucer editions) testing whether the vocabulary-richness anomaly survives non-standardized spelling.",
+          "category": "replications_audits",
+          "predecessors": [
+            "family-generative-falsification",
+            "family-generative-falsification-word-grammar-template",
+            "family-generative-falsification-controls-entry-ladder",
+            "family-generative-falsification-poetry-control",
+            "family-generative-falsification-languages-control"
+          ],
+          "aliases": [],
+          "claimed_tier": 5,
+          "assessed_tier": 10,
+          "gate_evidence": [
+            {
+              "gate": "G1",
+              "status": "pass",
+              "evidence_refs": [
+                "experiments/adversarial-critique/PROTOCOL.md"
+              ],
+              "reason": "Directly targets named claims across the generative-mechanisms and statistical-structure branches with a clear falsification/replication question."
+            },
+            {
+              "gate": "G2",
+              "status": "pass",
+              "evidence_refs": [
+                "contributions/adversarial-critique/rights.md",
+                "experiments/adversarial-critique/results/source_hashes.json"
+              ],
+              "reason": "Uses pinned repo corpora and previously-cited controls plus two new Chaucer editions referenced by sha256, not redistributed, public domain in the USA per rights.md."
+            },
+            {
+              "gate": "G3",
+              "status": "pass",
+              "evidence_refs": [
+                "experiments/adversarial-critique/adversarial_critique.py",
+                "experiments/adversarial-critique/results/results.json",
+                "experiments/adversarial-critique/results/stdout.txt",
+                "experiments/runs/2026-09-07T013500Z-adversarial-critique/run.json"
+              ],
+              "reason": "Full inspectable deterministic code, exact command, seeds, complete numeric output and run record are ordinary evidence; no trusted execution receipt exists in context.execution_receipts (empty array), so independent authenticated execution is not claimed, only ordinary submitted-run evidence, which suffices at tier 10 per the applicable anchor."
+            },
+            {
+              "gate": "G4",
+              "status": "pass",
+              "evidence_refs": [
+                "experiments/adversarial-critique/REPORT.md",
+                "contributions/adversarial-critique/contribution.yaml"
+              ],
+              "reason": "Explicit scope, frozen decision rules, and stated limitations (weak cipher-space coverage, calibration caveat, orthography-control caveat, entry-length confound) are disclosed in REPORT.md and the manifest's limitations list."
+            },
+            {
+              "gate": "G5",
+              "status": "pass",
+              "evidence_refs": [
+                "contributions/adversarial-critique/contribution.yaml",
+                "contributions/adversarial-critique/rights.md"
+              ],
+              "reason": "Human attribution to github_id 859355 with role disclosure; AI usage (Claude Fable 5.1) disclosed with tasks and human-verification note."
+            },
+            {
+              "gate": "G6",
+              "status": "pass",
+              "evidence_refs": [
+                "experiments/adversarial-critique/REPORT.md"
+              ],
+              "reason": "Distinct from every prior sibling pilot: this audits/critiques them rather than proposing a new generative device or control; excluded_overlap is enumerated explicitly against each sibling family's credited scope."
+            },
+            {
+              "gate": "G7",
+              "status": "pass",
+              "evidence_refs": [
+                "experiments/adversarial-critique/REPORT.md"
+              ],
+              "reason": "Deviations (parser crash fix, tokeniser bug fix, sample-size correction, editorial-note leakage fix) are disclosed transparently in a 'Deviations' section; frozen vs post-hoc findings are clearly separated; no fabricated results detected in the numeric record."
+            }
+          ],
+          "attribution_status": "verified",
+          "reason": "This is a genuinely new, independently useful outcome under CREDIT_IS_NOT_LINEAGE_V1 and INDEPENDENT_OUTCOME_CREDIT v1: a controlled, pre-registered adversarial audit that discovers a parser contamination bug affecting all prior sibling pilots, restates headline numbers, and applies alphabet/cipher/permutation-null controls that materially reframe two of the family's prior structural claims. This is a substantive independent replication/failure-analysis result changing confidence in prior claims (tier-10 anchor for replications_audits), exceeding a bounded 2-point diagnostic. It does not reach tier 20 since the critique's author works within the same codebase/data (not an independent second team, no trusted external_assessment_receipts), and only five untuned cipher families were tested (explicitly weak by design). The contributor's declared 'extends: outcome-languages-control' and family_id='family-generative-falsification' in the raw metadata are untrusted claimant labels; per FAMILY_IDENTITY_GUARD_V1 and CREDIT_IS_NOT_LINEAGE_V1 these do not bind this result into that occupied family's ladder, since the actual delivered capability is substantively different from the table-and-grille mechanism scope recorded for family-generative-falsification.",
+          "family_decision": "new",
+          "family_comparisons": [
+            {
+              "family_id": "family-generative-falsification",
+              "existing_scope": "Pilot 4 in the generative-mechanism falsification family: implements the Cardan table-and-grille device (M5a independent-column, M5b row-coupled) built from the pinned ZL3b corpus, measures composite distance against real manuscript statistics across 28 configurations plus multi-seed stability, and narrows the residual gap to two local metrics (conditional bigram entropy, word-final predictability), extending outcome-m4-template-doodler-pilot.",
+              "relationship": "distinct_outcome",
+              "reason": "This submission does not build or test a new generative device model; it audits the shared parser and re-tests structural/content claims via ciphers, alphabet confounds and permutation nulls. It references the family's prior claims but delivers a different capability (an audit instrument) rather than the credited table-and-grille mechanism result; the contributor's own 'extends' metadata is untrusted lineage, not evidence of same delivered result per CREDIT_IS_NOT_LINEAGE_V1."
+            },
+            {
+              "family_id": "family-generative-falsification-word-grammar-template",
+              "existing_scope": "A distinct generative-mechanism falsification pilot implementing Stolfi's published 2000 word grammar (core/mantle/crust unimodal-hill slot structure) as a template generator embedded in an entry/topic-carryover engine, and measuring two real-language positive controls (Culpeper's Complete Herbal 1653, Alice in Wonderland) with the identical metric suite against the pinned ZL3b corpus across 12 grid variants, showing (a) real language differs from the manuscript on conditional entropy, final-char entropy and entry-private vocabulary share, reframing prior 'unmatched by content-free generators' results away from a linguistic-content reading, and (b) the published grammar covers 86% of corpus word types with zero fitting and jointly reproduces vocabulary size, ttr, word length and page-sharing, leaving a residual mechanical-repetition signature (H2|1, final-char entropy, Zipf slope, entry-unique overshoot).",
+              "relationship": "distinct_outcome",
+              "reason": "Reuses Culpeper/Alice bytes as baseline inputs for new cipher/orthography tests; does not implement or claim the word-grammar template generator or its coverage-percentage finding."
+            },
+            {
+              "family_id": "family-generative-falsification-controls-entry-ladder",
+              "existing_scope": "A bounded diagnostic control extending the existing entry-structure metric suite (entry-private vocabulary share, adjacent/distant page Jaccard, ttr, entry token length) to two new real-text genres (Devil's Dictionary, Wonder Book of Knowledge) alongside the previously measured Culpeper/Alice controls, showing the manuscript's entry-private vocabulary is genre- and entry-length-dependent and lies on a continuum with short-entry real genres rather than being an order-of-magnitude outlier, with a documented correction to an earlier interpretive emphasis about device-overshoot.",
+              "relationship": "distinct_outcome",
+              "reason": "Does not add new genre controls; instead re-derives page-jaccard/page-unique metrics using permutation nulls and language/section confound partitioning on a newly cleaned parser -- a different diagnostic instrument and different genre scope."
+            },
+            {
+              "family_id": "family-generative-falsification-poetry-control",
+              "existing_scope": "A new bounded diagnostic control in the generative-falsification research area: measures line-structured metrics (word-final char entropy, line-final word final-char entropy, line-initial first-char entropy, top-5 line-final word rhyme concentration) across the pinned ZL3b corpus's real lines, a newly added rhymed-verse control (Shakespeare's Sonnets, PG 1041), and existing Culpeper/Alice prose pseudo-line baselines, showing that rhyme (even at its most ending-constrained, 3.50 bits) does not approach the manuscript's every-word final-char entropy (2.59 bits), excluding versification as the mechanism behind the residual word-ending discipline, plus a side finding that the manuscript's line-final position is less constrained than its average word (2.99 vs 2.59), opposite of rhyme.",
+              "relationship": "distinct_outcome",
+              "reason": "No line/rhyme metrics used here; unrelated mechanism and evidence base."
+            },
+            {
+              "family_id": "family-generative-falsification-languages-control",
+              "existing_scope": "A bounded diagnostic control extending the generative-falsification metric suite (final-glyph entropy, conditional bigram entropy H2|1, type/token diversity, word length) to nine same-text (Bible) translations at equal 35k-token samples, testing whether a morphologically rich real language naturally reproduces the manuscript's word-ending discipline. Finds no tested language reaches the manuscript on either final-glyph entropy or H2|1; Finnish is nearest on endings (2.80 vs 2.58) but not close on H2|1; Russian, despite rich inflection, has the least predictable endings, refuting a simple morphology-based explanation; manuscript retains highest type diversity of all ten texts.",
+              "relationship": "distinct_outcome",
+              "reason": "The contributor's own manifest declares 'extends: outcome-languages-control', but per CREDIT_IS_NOT_LINEAGE_V1 that does not bind this critique into the languages-control family; this submission reuses the nine bible corpora only as inputs to a new alphabet-confound methodology (EVA multigraph/determinism merging) the original languages-control pilot did not perform, and reaches new information beyond the credited scope."
+            }
+          ],
+          "source_outcome_ids": [
+            "outcome-adversarial-critique"
+          ],
+          "acceptance_test": "Run `python adversarial_critique.py --repo ../.. --lab <dir with bibles/, pg49513.txt and the two Chaucer texts> --out results/`; confirm results.json verdicts match exactly: R0.1 CONTAMINATED, R0.2 RICHEST SURVIVES, R1.1 ALPHABET-ROBUST, R1.2 ALPHABET-DEPENDENT, R2.1 NOT REPRODUCED BY TESTED CIPHERS, R3.1 LANGUAGE/SECTION ARTEFACT, R3.2 HAPAX-RICHNESS CONSEQUENCE, R4.1 SURVIVES this control; clean types 7,734/8,804; within-class adjacency ratio 1.137; page-private 0.193 vs null 0.166.",
+          "excluded_overlap": [
+            "Does not claim credit for the pinned ZL3b corpus/parser (seed-corpus-parser) itself; audits and documents its known contamination instead.",
+            "Does not claim or duplicate the M5a/M5b table-and-grille mechanism experiment credited under family-generative-falsification.",
+            "Does not claim or duplicate the Stolfi word-grammar template generator credited under family-generative-falsification-word-grammar-template.",
+            "Does not claim or duplicate the entry-genre-ladder controls credited under family-generative-falsification-controls-entry-ladder.",
+            "Does not claim or duplicate the rhyme/line-structure poetry control credited under family-generative-falsification-poetry-control.",
+            "Does not claim or duplicate the nine-Bible languages-control final-glyph/H2|1 comparison credited under family-generative-falsification-languages-control; reuses those nine corpora only as inputs to a new alphabet-normalization test.",
+            "Does not claim credit for MS408 mirror registration (family-ms408-data-access)."
+          ],
+          "validation_evidence": {
+            "execution_receipt_refs": [],
+            "external_assessment_receipt_refs": [],
+            "independent_inspection_refs": []
+          }
+        }
+      ],
+      "inspected_paths": [
+        "contributions/adversarial-critique/contribution.yaml",
+        "contributions/adversarial-critique/rights.md",
+        "experiments/adversarial-critique/PROTOCOL.md",
+        "experiments/adversarial-critique/REPORT.md",
+        "experiments/adversarial-critique/adversarial_critique.py",
+        "experiments/adversarial-critique/results/results.json",
+        "experiments/adversarial-critique/results/source_hashes.json",
+        "experiments/adversarial-critique/results/stdout.txt",
+        "experiments/runs/2026-09-07T013500Z-adversarial-critique/run.json",
+        "experiments/runs/2026-09-07T013500Z-adversarial-critique/output.json",
+        "experiments/runs/2026-09-07T013500Z-adversarial-critique/stdout.txt",
+        "research/context-index.json"
+      ],
+      "inspection_gaps": [],
+      "next_action": "Accept and settle at assessed tier 10 for the new family family-generative-falsification-adversarial-audit (no prior high-water occupancy for this family); the deterministic broker computes the exact credit increment.",
+      "appeal_route": "File a revision comment citing the specific acceptance_test criterion or family-comparison rationale in dispute, referencing REPORT.md's frozen verdicts, results.json, and the exact family scope text quoted in family_comparisons above; a maintainer or adjudication stage may revisit the family placement or tier with additional evidence."
+    },
+    "stages": [
+      {
+        "stage": "adjudicator",
+        "provider": "anthropic",
+        "model": "claude-sonnet-5",
+        "exposed_version": "claude-sonnet-5",
+        "prompt_digest": "a7d23a55c2e255f47829341838bb6a36e06afca6fd5b2556da938465f7f69b8b",
+        "response_digest": "ecdd2ffd9593cd5b2e532df431e9a494f982ca4ff791207bc1545a363de5b7a5",
+        "started_at": "2026-09-08T00:22:59.437Z",
+        "completed_at": "2026-09-08T00:24:49.065Z",
+        "usage": {
+          "sessions": 1,
+          "input_bytes": 324162,
+          "output_bytes": 41585,
+          "runtime_ms": 108786
+        },
+        "receipt_ref": "stage-results/job-90b1133738271f9ceef209e88da4a1989fc6ffa2/adjudicator.json"
+      },
+      {
+        "stage": "adversary",
+        "provider": "anthropic",
+        "model": "claude-sonnet-5",
+        "exposed_version": "claude-sonnet-5",
+        "prompt_digest": "2489940d382d1de1e88ef35419aae1ad4c478697c1bd9dff72605ddfafed218e",
+        "response_digest": "c523901b0d09de6c902e3f080ab91fef0e373eed8e9ea99ad8cb35cdc5a09684",
+        "started_at": "2026-09-08T00:20:36.877Z",
+        "completed_at": "2026-09-08T00:22:09.933Z",
+        "usage": {
+          "sessions": 1,
+          "input_bytes": 298250,
+          "output_bytes": 54575,
+          "runtime_ms": 92105
+        },
+        "receipt_ref": "stage-results/job-90b1133738271f9ceef209e88da4a1989fc6ffa2/adversary.json"
+      },
+      {
+        "stage": "assessor",
+        "provider": "anthropic",
+        "model": "claude-sonnet-5",
+        "exposed_version": "claude-sonnet-5",
+        "prompt_digest": "0076f9fc2f300d5bf58453b5bdd7f981256569a98017408322a48b5a3a5db202",
+        "response_digest": "580160ad0bb3d928f0957fc798ff11e8891b643a6a0268f4764564abe0121fef",
+        "started_at": "2026-09-08T00:18:14.375Z",
+        "completed_at": "2026-09-08T00:19:49.275Z",
+        "usage": {
+          "sessions": 1,
+          "input_bytes": 298131,
+          "output_bytes": 55692,
+          "runtime_ms": 93984
+        },
+        "receipt_ref": "stage-results/job-90b1133738271f9ceef209e88da4a1989fc6ffa2/assessor.json"
+      },
+      {
+        "stage": "corrector",
+        "provider": "anthropic",
+        "model": "claude-sonnet-5",
+        "exposed_version": "claude-sonnet-5",
+        "prompt_digest": "1a02d73da511fb64f2e515e1f16fbfb698229b7845b311d9fb676fb892939c03",
+        "response_digest": "317492d5e853ce9f7752b588d76580332ea6c43e00c2f07cf1b053821e23de47",
+        "started_at": "2026-09-08T00:25:41.528Z",
+        "completed_at": "2026-09-08T00:27:20.000Z",
+        "usage": {
+          "sessions": 1,
+          "input_bytes": 340919,
+          "output_bytes": 68809,
+          "runtime_ms": 97655
+        },
+        "receipt_ref": "stage-results/job-90b1133738271f9ceef209e88da4a1989fc6ffa2/corrector.json"
+      }
+    ],
+    "disagreements": [
+      "Material independent-assessment disagreement or invalid proposal."
+    ],
+    "holds": [],
+    "reused_assessment_id": null
+  },
+  "receipt": {
+    "schema_version": "1.0",
+    "id": "receipt:job-90b1133738271f9ceef209e88da4a1989fc6ffa2",
+    "key_id": "voynich-2026-09-06",
+    "issued_at": "2026-09-08T00:28:09.218Z",
+    "payload": {
+      "repository_id": 1359336540,
+      "events_digest": "3a3c9e21686c0bcd5e1fb5407b2cf39ae630301450c697fbb8af98c2482f1f57",
+      "milestones_digest": "b6898fbcc4adfd3485ef599e655f114c327632d4d648ab87969bbca22e40ddd1",
+      "families_digest": "dd333bc4763136b478bdaa758285604fbfb72495fe2f1a60b4f0df4f29faa2e0",
+      "merge_sha": "be2cc5f28f91bbaf5e14d8a4c6fd8f74845a31f2",
+      "assessed_head": "28fea2407ca25829f93560cfdeae2b3f3f0483b7",
+      "artifact_digest": "90b1133738271f9ceef209e88da4a1989fc6ffa2f50467c99c150e472d455a48",
+      "profile_digest": "2f8d18abf176f95380df7e809a525db1c36186a0f8bfe46ce106d8b228a28a93",
+      "report_digest": "eb39953137295c70a46bffc1a988b1689ce02392e90144127c14b2c33baf642e",
+      "stage_receipt_refs": [
+        "stage-results/job-90b1133738271f9ceef209e88da4a1989fc6ffa2/adjudicator.json",
+        "stage-results/job-90b1133738271f9ceef209e88da4a1989fc6ffa2/adversary.json",
+        "stage-results/job-90b1133738271f9ceef209e88da4a1989fc6ffa2/assessor.json",
+        "stage-results/job-90b1133738271f9ceef209e88da4a1989fc6ffa2/corrector.json"
+      ]
+    },
+    "payload_digest": "46936f360eae75862f86b2d4ed098e167b59ca8726e86a02eca09abd5f72e8ce",
+    "signature": "aZ1ECOU7QbKGkHhRhpMerWmSvbVNYe4IEVmaf4fe1F_42XWv_d_ZbCiwKZR0UnOj1EjchG_cjpJEBTVKTwYTDg"
+  }
+}
