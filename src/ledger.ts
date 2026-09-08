@@ -70,7 +70,17 @@ export function replayLedger(events: DecisionEvent[], registry: FamilyRecord[], 
       const milestone = milestones.find(m => m.id === event.milestone_id);
       demand(milestone, 'MERGE_HISTORY', 'A trusted accepted-research milestone is required.');
       demand(canonical(milestone.family_id) === familyId && milestone.repository_id === event.repository_id && milestone.pr_number === event.pr_number && milestone.earned_at === event.earned_at, 'MERGE_BINDING', 'Decision must bind the trusted research merge, family and original earning date.');
-      demand(!family.settled_milestones.includes(event.milestone_id), 'REPLAY', 'This milestone has already settled.');
+      const zeroTarget = event.target_event_id ? state.awards[event.target_event_id] : undefined;
+      if (event.target_event_id) {
+        demand(event.kind === 'upgrade' && zeroTarget && zeroTarget.original_units === 0
+          && zeroTarget.event.milestone_id === event.milestone_id && canonical(zeroTarget.event.family_id) === familyId
+          && zeroTarget.event.repository_id === event.repository_id && zeroTarget.event.pr_number === event.pr_number
+          && zeroTarget.event.earned_at === event.earned_at && zeroTarget.event.assessment_id !== event.assessment_id
+          && zeroTarget.event.artifact_binding_digest !== event.artifact_binding_digest
+          && event.cumulative_tier > family.credit_high_water_tier
+          && !Object.values(state.awards).some(award => award.event.target_event_id === event.target_event_id),
+        'ZERO_REGRADE', 'An authenticated regrade may upgrade an uncredited milestone once, preserving prior awards and original earning date.');
+      } else demand(!family.settled_milestones.includes(event.milestone_id), 'REPLAY', 'This milestone has already settled.');
       for (const previous of milestones) {
         if (previous.id === milestone.id) break;
         if (canonical(previous.family_id) === familyId || milestone.depends_on.includes(previous.id)) demand(Object.values(state.families).some(f => f.settled_milestones.includes(previous.id)), 'PREDECESSOR_PENDING', `Settle earlier accepted milestone ${previous.id} before ${milestone.id}.`);
@@ -86,7 +96,7 @@ export function replayLedger(events: DecisionEvent[], registry: FamilyRecord[], 
       } else demand(!event.allocation_shares?.length, 'DUPLICATE_CREDIT', 'No increment is available; do not allocate consumed credit.');
       family.current_evidence_tier = Math.max(family.current_evidence_tier, event.cumulative_tier) as Tier;
       family.credit_high_water_tier = Math.max(family.credit_high_water_tier, event.cumulative_tier) as Tier;
-      family.settled_milestones.push(event.milestone_id);
+      if (!zeroTarget) family.settled_milestones.push(event.milestone_id);
       state.awards[event.id] = { event, original_units: increment * 10000, allocations, history: [event.id] };
     } else {
       const target = event.target_event_id ? state.awards[event.target_event_id] : undefined;
