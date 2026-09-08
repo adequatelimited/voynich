@@ -1,0 +1,9 @@
+# Distinct diagnostic results
+
+V9 restored credit to the earlier distinct experiments and controls. The PR11 review nevertheless treated new held-out re-scoring, ranking reversal, dead-parameter and cipher-fingerprint findings as one previously occupied model-comparison research thread, while copying the earlier M5 in-sample experiment's scope. It also invoked absence of an independent execution receipt as a tier-10 barrier. Those rationales illustrate remaining overly broad grouping and an invented universal evidence requirement.
+
+V10 requires the assessment to describe the actual submitted result and compare the specific new information against the prior credited finding and acceptance test. A new substantive held-out diagnostic, reversal, confound or failure-mode finding can qualify separately even with existing code and data. Routine repeats, cosmetic variants and repairs of the original acceptance failure do not automatically earn extra points. The model must distinguish these cases and choose the highest supported tier; no positive score is predetermined.
+
+The already-merged, zero-credit PR11 may receive one review under this clarified interpretation. Earlier reports and signed zero records remain immutable; existing positive awards are preserved. This is an explicitly published methodology correction under the founding operator's authorization to remedy overly broad family grouping, not a valid-result reroll under an unchanged profile. Other settled positive contributions cannot use this exception.
+
+Sonnet-only execution, four bounded stages, 180 seconds and 12,000 output tokens per invocation, and existing inspection/attribution/settlement safeguards remain. Operating capacity is separately recorded by the attendant; counters are not reset by this release. Calibration remains incomplete, and public best-effort AI scoring continues.
