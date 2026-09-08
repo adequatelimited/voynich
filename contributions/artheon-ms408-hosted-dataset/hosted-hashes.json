@@ -1,0 +1,36 @@
+{
+  "note": "Hashes computed from bytes actually fetched over anonymous HTTPS on 2026-09-06 (UTC). Every object in the dataset is listed with per-file SHA-256 in the hosted catalogue.",
+  "dataset": {
+    "name": "Artheon Museum Lab public Beinecke MS 408 dataset",
+    "base_url": "https://lab.artheonmuseum.org/voynich/",
+    "access": "anonymous HTTPS GET; no credentials required",
+    "objects": 230,
+    "scans": 213,
+    "total_bytes_approx": 567000000
+  },
+  "key_artifacts": {
+    "https://lab.artheonmuseum.org/voynich/catalogue.json": {
+      "byte_length": 104415,
+      "sha256": "cebe6617db3292a6c295304c895024d95bd0986aa747cbc736ad2db164c5b931",
+      "note": "Index evolves; this pins the 2026-09-06 bytes. Per-file hashes inside are the integrity anchor."
+    },
+    "https://lab.artheonmuseum.org/voynich/transcriptions/RF1b-e.txt": {
+      "byte_length": 362373,
+      "sha256": "e7d3238e35743e06c63367a933909ec37b1e2de7ada3a1b449447eafa1918782"
+    },
+    "https://lab.artheonmuseum.org/voynich/transcriptions/IT2a-n.txt": {
+      "byte_length": 342104,
+      "sha256": "7f27a8b0feed8f6de0a99900df6bf912dd1d295c38e5f830bac8b41c3f536fb5"
+    },
+    "https://lab.artheonmuseum.org/voynich/transcriptions/voynich_reference_EVA_clean.txt": {
+      "byte_length": 330189,
+      "sha256": "2e4f9e423fbc9d8133f97ce0050da58e2201aa4fc55d64ff1311853d0ca6f013"
+    },
+    "https://lab.artheonmuseum.org/voynich/transcriptions/ZL3b-n.txt": {
+      "byte_length": 411671,
+      "sha256": "bf5b6d4ac1e3a51b1847a9c388318d609020441ccd56984c901c32b09beccafc",
+      "note": "Byte-identical to data/manifests/zl3b.json in this repository (cross-check 2026-09-06)."
+    }
+  },
+  "verification": "python download_dataset.py (hosted at base_url) downloads and SHA-256-verifies every file against the catalogue."
+}

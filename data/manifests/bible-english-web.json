@@ -1,0 +1,15 @@
+{
+  "schema_version": "1.0",
+  "id": "bible-english-web",
+  "path": "data/corpora/bible-english-web.xml",
+  "origin": "https://github.com/christos-c/bible-corpus (bibles/English-WEB.xml)",
+  "sha256": "7be852c5f574bfa0a2865bf9563472e6f09cec38a3f123b1700ba098745fc284",
+  "byte_length": 5491929,
+  "media_type": "application/xml",
+  "source_id": "bible-english-web",
+  "rights": "World English Bible; underlying text public domain. Corpus packaging: Christodoulopoulos & Steedman bible-corpus. Retrieved 2026-09-07.",
+  "redistribution": "permitted",
+  "state": "verified",
+  "attribution": "World English Bible; bible-corpus by Christos Christodoulopoulos and Mark Steedman",
+  "retention": "Versioned immutable research source; public-domain English control."
+}

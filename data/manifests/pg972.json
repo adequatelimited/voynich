@@ -1,0 +1,15 @@
+{
+  "schema_version": "1.0",
+  "id": "pg972",
+  "path": "data/corpora/pg972.txt",
+  "origin": "https://www.gutenberg.org/ebooks/972",
+  "sha256": "7647d34ce676ad30d3e7d9545d535c5f6d936e1f7d71492747d1fa81a5102976",
+  "byte_length": 394033,
+  "media_type": "text/plain",
+  "source_id": "pg972",
+  "rights": "Project Gutenberg eBook 972, The Devil's Dictionary by Ambrose Bierce (1906); public domain in the USA per the included Project Gutenberg license header. Wrapper and terms retained unchanged.",
+  "redistribution": "permitted",
+  "state": "verified",
+  "attribution": "Ambrose Bierce; Project Gutenberg transcription",
+  "retention": "Versioned immutable research source; dictionary control: shortest real entries with headwords."
+}

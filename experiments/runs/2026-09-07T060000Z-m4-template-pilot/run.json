@@ -1,0 +1,24 @@
+{
+  "id": "2026-09-07T060000Z-m4-template-pilot",
+  "experiment": "experiments/m4-template-doodler",
+  "command": "python m4_doodler.py --corpus ../../data/corpora/ZL3b-n.txt --alice ../../data/corpora/pg11.txt --culpeper ../../data/corpora/pg49513.txt --out results/ --seed 408",
+  "seed": 408,
+  "corpora": {
+    "voynich": {
+      "path": "data/corpora/ZL3b-n.txt",
+      "sha256": "bf5b6d4ac1e3a51b1847a9c388318d609020441ccd56984c901c32b09beccafc"
+    },
+    "culpeper": {
+      "path": "data/corpora/pg49513.txt",
+      "sha256": "d9bacb3247d798fcd2a8ce3b7c76222407fc0ac1c8d4242e9e8163508c10e968"
+    },
+    "alice": {
+      "path": "data/corpora/pg11.txt",
+      "sha256": "see data/manifests/alice-english.json"
+    }
+  },
+  "code": "experiments/m4-template-doodler/m4_doodler.py",
+  "environment": "CPython 3.12, stdlib only, Windows 11",
+  "started": "2026-09-07T06:00:00Z",
+  "status": "completed"
+}

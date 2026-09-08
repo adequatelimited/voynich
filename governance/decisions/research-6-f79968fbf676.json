@@ -1,0 +1,307 @@
+{
+  "schema_version": "1.0",
+  "research_pr": 6,
+  "merge_sha": "9a962030bb5408b51183088f960be19ee5a971c2",
+  "events": [
+    {
+      "schema_version": "1.0",
+      "id": "decision-6-family-generative-falsification-f79968fbf676",
+      "sequence": 1,
+      "kind": "award",
+      "family_id": "family-generative-falsification",
+      "rubric_version": "0.1",
+      "category": "experiments",
+      "repository_id": 1359336540,
+      "pr_number": 6,
+      "milestone_id": "milestone-1359336540-6-family-generative-falsification",
+      "earned_at": "2026-09-07T16:41:11Z",
+      "assessment_id": "assessment-6b458ff2af8981d9fbfd5b66a4c77af2",
+      "artifact_binding_digest": "f79968fbf6767eae274af99b15af52ccbc644eb6b73450875750f4ac8fd953bc",
+      "authority_receipt_ref": "receipt:job-f79968fbf6767eae274af99b15af52ccbc644eb6",
+      "cumulative_tier": 5,
+      "allocation_shares": [
+        {
+          "github_id": 859355,
+          "share_basis_points": 10000,
+          "status": "paid",
+          "acknowledgment_receipt_ref": "github-pr:1359336540:6:ed369575907693f1eb1427aacb96e4488bbbdada:d6ff8a6b00e8a7c77554fa57a34f161c34d4ac3dec1c7cf0665927388bcf3a78:37cf251a19de31a8f1a4ec6ec4ae04421445eb6291c51edb2c725e9bfe68534d"
+        }
+      ],
+      "reason": "Resolving the listed disagreement: both underlying reports independently reached the same substantive conclusion (accept, tier 5, family-generative-falsification, same seven gates passing, same G3 limitation regarding absent trusted execution receipts). The only material defect was a schema validation error in both reports' first two findings, which omitted required evidence_refs. This corrected assessment restates the same substantive judgment with valid evidence_refs attached to every finding. The pilot is a well-scoped, transparently limited, non-fragmented extension of an existing experiment family. It correctly self-limits to tier 5 rather than claiming tier 10, since independent execution/replication is absent from the trusted context and the corpus-derived table construction is explicitly disclosed as giving the device a built-in fitting advantage. No fabrication, concealed selection, or omitted independently useful outcome was identified; supporting code/report/results/run-record are properly bundled into this single outcome rather than fragmented."
+    }
+  ],
+  "families_added": [
+    {
+      "id": "family-generative-falsification",
+      "rubric_version": "0.1",
+      "scope": "Pilot 4 in the generative-mechanism falsification family: implements the Cardan table-and-grille device (M5a independent-column, M5b row-coupled) built from the pinned ZL3b corpus, measures composite distance against real manuscript statistics across 28 configurations plus multi-seed stability, and narrows the residual gap to two local metrics (conditional bigram entropy, word-final predictability), extending outcome-m4-template-doodler-pilot.",
+      "acceptance_test": "Run the documented command; confirm results.json matches the recorded output and that every M5b variant beats every M5a variant on composite distance, with the best M5b at <= 0.55, Zipf <= -0.75, and adjacent-page Jaccard within 0.01 of the corpus.",
+      "aliases": [],
+      "predecessor_family_ids": [],
+      "excluded_overlap": [],
+      "seed": false,
+      "seed_baseline": 0
+    }
+  ],
+  "milestones": [
+    {
+      "id": "milestone-1359336540-6-family-generative-falsification",
+      "family_id": "family-generative-falsification",
+      "repository_id": 1359336540,
+      "pr_number": 6,
+      "earned_at": "2026-09-07T16:41:11Z",
+      "depends_on": []
+    }
+  ],
+  "assessment": {
+    "schema_version": "1.0",
+    "assessment_id": "assessment-6b458ff2af8981d9fbfd5b66a4c77af2",
+    "artifact_binding_digest": "6b458ff2af8981d9fbfd5b66a4c77af26e240664426d633260851a7460616948",
+    "merit_evidence_digest": "c271223808e2d11558cc5f33b0b9e4f08c0b89a929a71088b93b77bfdedd78b1",
+    "repository_id": 1359336540,
+    "pr_number": 6,
+    "head_sha": "ed369575907693f1eb1427aacb96e4488bbbdada",
+    "base_sha": "621a35a64117e02e948cf8cdb68e5ba8873d68c3",
+    "rules_version": "0.1",
+    "rubric_version": "0.1",
+    "grading_profile": "voynich-sonnet-ai-pilot-2026-09-07-v2",
+    "evaluator_commit": "eb48df050e27fd0f5c7cbd24247fd05eaacaa712",
+    "mode": "official_proposal",
+    "status": "complete",
+    "claimed_score": 2,
+    "expected_score": 5,
+    "official_proposed_score": 5,
+    "awarded_score": null,
+    "assessment": {
+      "schema_version": "1.0",
+      "admission_action": "accept",
+      "score_status": "proposed",
+      "conduct_status": "clear",
+      "findings": [
+        {
+          "rule_id_or_gate": "G3",
+          "severity": "info",
+          "path_or_locus": "experiments/m5-grille/results/results.json; experiments/runs/2026-09-07T064500Z-m5-grille-pilot/run.json; experiments/runs/2026-09-07T064500Z-m5-grille-pilot/output.json",
+          "evidence_refs": [
+            "experiments/m5-grille/results/results.json",
+            "experiments/runs/2026-09-07T064500Z-m5-grille-pilot/run.json",
+            "experiments/runs/2026-09-07T064500Z-m5-grille-pilot/output.json"
+          ],
+          "reason": "Both prior reports agreed the submitted run.json/output.json are ordinary author-supplied artifacts, not trusted execution receipts, since context.execution_receipts is empty. This is confirmed: the trusted context supplies no execution_receipts array entries at all, so no submitted file can be cited as one. The code, command, seed and corpus hash are internally consistent and inspectable, supporting the claimed tier 5 but not independent-execution-dependent tier 10.",
+          "required_change": "None required for tier 5. For a future tier-10 claim, obtain an independent re-execution or a trusted receipt placed in context.execution_receipts.",
+          "verification_step": "A third party can rerun `python m5_grille.py --corpus ../../data/corpora/ZL3b-n.txt --out results/ --seed 408` against the pinned corpus hash bf5b6d4ac1e3a51b1847a9c388318d609020441ccd56984c901c32b09beccafc and diff results.json.",
+          "blocks_merge_or_credit": false
+        },
+        {
+          "rule_id_or_gate": "R3",
+          "severity": "info",
+          "path_or_locus": "contributions/m5-grille-pilot/contribution.yaml; contributions/m5-grille-pilot/rights.md",
+          "evidence_refs": [
+            "contributions/m5-grille-pilot/contribution.yaml",
+            "contributions/m5-grille-pilot/rights.md"
+          ],
+          "reason": "Minor inconsistency in AI model version naming: contribution.yaml states model_id \"kimi-k3\", rights.md states \"kimi-k2\". Both disclose AI assistance and a human-verification statement; this is a nonblocking honesty/consistency issue previously noted by report 2 and not disputed by report 1.",
+          "required_change": "Reconcile the exact model version string across contribution.yaml and rights.md in a future revision.",
+          "verification_step": "Compare ai_usage.tools[].model_id in contribution.yaml against the AI assistance line in rights.md.",
+          "blocks_merge_or_credit": false
+        },
+        {
+          "rule_id_or_gate": "G2",
+          "severity": "info",
+          "path_or_locus": "contributions/m5-grille-pilot/rights.md",
+          "evidence_refs": [
+            "contributions/m5-grille-pilot/rights.md"
+          ],
+          "reason": "Rights basis rests on the already-cleared repo-pinned ZL3b corpus plus original code/prose and cited prior literature (Rugg 2004; Zandbergen 2021; Stolfi 2000a); no new third-party redistributed material requiring separate clearance is introduced.",
+          "required_change": "None.",
+          "verification_step": "Confirm data/corpora/RIGHTS.md governs ZL3b-n.txt reuse as claimed (already an accepted seed corpus).",
+          "blocks_merge_or_credit": false
+        }
+      ],
+      "outcomes": [
+        {
+          "family_id": "family-generative-falsification",
+          "scope": "Pilot 4 in the generative-mechanism falsification family: implements the Cardan table-and-grille device (M5a independent-column, M5b row-coupled) built from the pinned ZL3b corpus, measures composite distance against real manuscript statistics across 28 configurations plus multi-seed stability, and narrows the residual gap to two local metrics (conditional bigram entropy, word-final predictability), extending outcome-m4-template-doodler-pilot.",
+          "category": "experiments",
+          "predecessors": [
+            "outcome-m4-template-doodler-pilot",
+            "outcome-entry-doodler-pilot",
+            "outcome-generative-doodler-pilot"
+          ],
+          "aliases": [],
+          "claimed_tier": 5,
+          "assessed_tier": 5,
+          "attribution_status": "verified",
+          "gate_evidence": [
+            {
+              "gate": "G1",
+              "status": "pass",
+              "evidence_refs": [
+                "research/context-index.json",
+                "experiments/m5-grille/report.md"
+              ],
+              "reason": "Directly addresses the generative-mechanisms/statistical-structure branch question ('Which bounded cipher or pseudotext families jointly predict held-out diagnostics?') and extends the existing credited generative-falsification family with a named literature mechanism (Rugg 2004; Zandbergen 2021)."
+            },
+            {
+              "gate": "G2",
+              "status": "pass",
+              "evidence_refs": [
+                "contributions/m5-grille-pilot/rights.md",
+                "contributions/m5-grille-pilot/contribution.yaml"
+              ],
+              "reason": "Uses the repo-pinned rights-cleared ZL3b corpus, original code/report authorship, and cites prior mechanism literature without redistributing third-party material needing separate clearance."
+            },
+            {
+              "gate": "G3",
+              "status": "pass",
+              "evidence_refs": [
+                "experiments/m5-grille/m5_grille.py",
+                "experiments/m5-grille/results/results.json",
+                "experiments/runs/2026-09-07T064500Z-m5-grille-pilot/run.json",
+                "experiments/runs/2026-09-07T064500Z-m5-grille-pilot/output.json"
+              ],
+              "reason": "Full deterministic stdlib-only code, documented command/seed/corpus hash, and complete internally-consistent numeric results across 28 configurations plus a multi-seed stability block are supplied. This is inspectable evidence appropriate to an executed diagnostic experiment; however, per resolved disagreement, no file here is a trusted execution receipt since context.execution_receipts is empty, so this supports tier 5 (informative pilot) but not the independent-execution requirement for tier 10."
+            },
+            {
+              "gate": "G4",
+              "status": "pass",
+              "evidence_refs": [
+                "experiments/m5-grille/report.md",
+                "contributions/m5-grille-pilot/contribution.yaml"
+              ],
+              "reason": "Report and manifest explicitly disclose limitations: the table is corpus-derived giving the device maximal built-in advantage, ZL3b-only, a small offset grid, no line-position modeling, and named unresolved residual metrics rather than a claim of full success."
+            },
+            {
+              "gate": "G5",
+              "status": "pass",
+              "evidence_refs": [
+                "contributions/m5-grille-pilot/contribution.yaml",
+                "contributions/m5-grille-pilot/rights.md"
+              ],
+              "reason": "Single named human contributor (gnuchev, github_id 859355) with full attribution share and AI-assistance disclosure (Moonshot AI / Kimi Code CLI) including a human-verification statement, despite a minor unresolved model-version-string discrepancy between the two documents noted in a nonblocking finding."
+            },
+            {
+              "gate": "G6",
+              "status": "pass",
+              "evidence_refs": [
+                "experiments/m5-grille/report.md",
+                "contributions/m5-grille-pilot/contribution.yaml"
+              ],
+              "reason": "Report explicitly compares against M2/M3/M4 prior pilots in the same family with a cross-pilot metrics table, discloses the extends/related_outcomes links, and identifies the specific narrowed residue rather than restating prior results, avoiding double counting."
+            },
+            {
+              "gate": "G7",
+              "status": "pass",
+              "evidence_refs": [
+                "experiments/m5-grille/results/results.json",
+                "experiments/m5-grille/report.md"
+              ],
+              "reason": "All 28 tested model configurations (12 M5a + 16 M5b) are reported including worse-performing ones, plus a multi-seed stability block; interpretive percentages are explicitly labeled informal judgment rather than computed fact; no evidence of cherry-picking or concealment."
+            }
+          ],
+          "reason": "Resolving the listed disagreement: both underlying reports independently reached the same substantive conclusion (accept, tier 5, family-generative-falsification, same seven gates passing, same G3 limitation regarding absent trusted execution receipts). The only material defect was a schema validation error in both reports' first two findings, which omitted required evidence_refs. This corrected assessment restates the same substantive judgment with valid evidence_refs attached to every finding. The pilot is a well-scoped, transparently limited, non-fragmented extension of an existing experiment family. It correctly self-limits to tier 5 rather than claiming tier 10, since independent execution/replication is absent from the trusted context and the corpus-derived table construction is explicitly disclosed as giving the device a built-in fitting advantage. No fabrication, concealed selection, or omitted independently useful outcome was identified; supporting code/report/results/run-record are properly bundled into this single outcome rather than fragmented.",
+          "validation_evidence": {
+            "execution_receipt_refs": [],
+            "external_assessment_receipt_refs": [],
+            "independent_inspection_refs": []
+          }
+        }
+      ],
+      "inspected_paths": [
+        "research/context-index.json",
+        "contributions/m5-grille-pilot/contribution.yaml",
+        "contributions/m5-grille-pilot/rights.md",
+        "experiments/m5-grille/m5_grille.py",
+        "experiments/m5-grille/report.md",
+        "experiments/m5-grille/results/results.json",
+        "experiments/runs/2026-09-07T064500Z-m5-grille-pilot/output.json",
+        "experiments/runs/2026-09-07T064500Z-m5-grille-pilot/run.json"
+      ],
+      "inspection_gaps": [],
+      "next_action": "Accept and settle family-generative-falsification at cumulative tier 5 with a +2 increment for this pilot, per the deterministic broker's family high-water calculation. No contributor action is required for this submission as-is. Optionally reconcile the minor AI-model-version-string inconsistency between contribution.yaml (kimi-k3) and rights.md (kimi-k2) in a future revision; this does not block current credit. Future work seeking tier 10 should pursue independent re-execution/replication placed in the trusted execution_receipts namespace and address the two remaining residual properties (conditional bigram entropy, word-final predictability) named as limitations.",
+      "appeal_route": "If the contributor or another party disputes the assessed tier, the family high-water baseline, or the overlap determination, they may open a follow-up PR citing the specific rubric anchor (SCORING.md section 5, Experiments row) or evidence gate in dispute, per RULES.md R8's collaboration process and GRADING.md section 5's appeal path; unresolved disagreements proceed to the published adjudication stage against the same evidence, and this corrector's judgment is final for the currently reported validation defects."
+    },
+    "stages": [
+      {
+        "stage": "adjudicator",
+        "provider": "anthropic",
+        "model": "claude-sonnet-5",
+        "exposed_version": "claude-sonnet-5",
+        "prompt_digest": "75895c598ba1cb76ccedd6dcf60d1682b40ce47b0e3edcb455abf9a54f1fd84e",
+        "response_digest": "e71fd6cb3888f37c906608c3b2758070ca5668334c5da49f0c8f107e9f2f95a1",
+        "started_at": "2026-09-07T16:32:50.592Z",
+        "completed_at": "2026-09-07T16:33:27.665Z",
+        "usage": {
+          "sessions": 1,
+          "input_bytes": 181370,
+          "output_bytes": 11604,
+          "runtime_ms": 33990
+        },
+        "receipt_ref": "stage-results/job-58d92aad7a308d132e6ba1e96f380a19894dd432/adjudicator.json"
+      },
+      {
+        "stage": "adversary",
+        "provider": "anthropic",
+        "model": "claude-sonnet-5",
+        "exposed_version": "claude-sonnet-5",
+        "prompt_digest": "c9fce1c65cd10cd04d7cc25175a3f77926895166eb100404eef16ce89c8dab66",
+        "response_digest": "0f5f86572e4f54315c5a5cd2ef81644e515dcc73b0073630c03c45da21b8ff1c",
+        "started_at": "2026-09-07T16:30:28.128Z",
+        "completed_at": "2026-09-07T16:31:02.021Z",
+        "usage": {
+          "sessions": 1,
+          "input_bytes": 165310,
+          "output_bytes": 10107,
+          "runtime_ms": 33118
+        },
+        "receipt_ref": "stage-results/job-58d92aad7a308d132e6ba1e96f380a19894dd432/adversary.json"
+      },
+      {
+        "stage": "assessor",
+        "provider": "anthropic",
+        "model": "claude-sonnet-5",
+        "exposed_version": "claude-sonnet-5",
+        "prompt_digest": "576c3b02f98e4cbf5211339a935320bde2bb28f0283aa5d6aadb328922dc8f34",
+        "response_digest": "55c2200330bd8093195295de30b3eb4a4c019163051b73834e6e3b1a021cc866",
+        "started_at": "2026-09-07T16:29:06.447Z",
+        "completed_at": "2026-09-07T16:29:40.964Z",
+        "usage": {
+          "sessions": 1,
+          "input_bytes": 165191,
+          "output_bytes": 9144,
+          "runtime_ms": 33771
+        },
+        "receipt_ref": "stage-results/job-58d92aad7a308d132e6ba1e96f380a19894dd432/assessor.json"
+      }
+    ],
+    "disagreements": [
+      "Material independent-assessment disagreement or invalid proposal."
+    ],
+    "holds": [],
+    "reused_assessment_id": "assessment-cea40546436ba0f628a0a71efa732745"
+  },
+  "receipt": {
+    "schema_version": "1.0",
+    "id": "receipt:job-f79968fbf6767eae274af99b15af52ccbc644eb6",
+    "key_id": "voynich-2026-09-06",
+    "issued_at": "2026-09-07T16:53:47.593Z",
+    "payload": {
+      "repository_id": 1359336540,
+      "events_digest": "b13d767b52f1b87d78fe50027f1447df0d6fdfbbc4d44065e8008684e99b8e0b",
+      "milestones_digest": "3289d1ce060bf32cf1a76102b3ed3fbc2d2289e42fdab4f4202dd8201dafbd37",
+      "families_digest": "55fb9606b2084105cac6116d8fb4c66412f99ec2cba7c78b3807bf3d34e2cc28",
+      "merge_sha": "9a962030bb5408b51183088f960be19ee5a971c2",
+      "assessed_head": "ed369575907693f1eb1427aacb96e4488bbbdada",
+      "artifact_digest": "f79968fbf6767eae274af99b15af52ccbc644eb6b73450875750f4ac8fd953bc",
+      "profile_digest": "a1dbe4f71e918162e6d401f1005d582c80e55647ad52883b5fc8d5e2ecca8260",
+      "report_digest": "aea4019bd8b7bad325113e869e851e9cbb0066bff1e30003794013e35699720b",
+      "stage_receipt_refs": [
+        "stage-results/job-58d92aad7a308d132e6ba1e96f380a19894dd432/adjudicator.json",
+        "stage-results/job-58d92aad7a308d132e6ba1e96f380a19894dd432/adversary.json",
+        "stage-results/job-58d92aad7a308d132e6ba1e96f380a19894dd432/assessor.json"
+      ]
+    },
+    "payload_digest": "7bcf8c276422e097f3531339663f0a957820ad281d90a07ae22f8a54424bbd69",
+    "signature": "-WU37oXGafaDvoBLIO6N2uiqByNGNwLSX84bDKjw64fYl76anLjvxVJen9vaPuISUAEHtBmTK08Z5LCGzCEtBg"
+  }
+}

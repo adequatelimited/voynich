@@ -1,0 +1,317 @@
+{
+  "schema_version": "1.0",
+  "research_pr": 9,
+  "merge_sha": "376cb90d5040be93ca41cc418fc3b6700d782929",
+  "events": [
+    {
+      "schema_version": "1.0",
+      "id": "decision-9-family-generative-falsification-languages-control-9e4cd11ad9d2",
+      "sequence": 13,
+      "kind": "award",
+      "family_id": "family-generative-falsification-languages-control",
+      "rubric_version": "0.1",
+      "category": "experiments",
+      "repository_id": 1359336540,
+      "pr_number": 9,
+      "milestone_id": "milestone-1359336540-9-family-generative-falsification-languages-control",
+      "earned_at": "2026-09-08T00:08:44Z",
+      "assessment_id": "assessment-e5ac5dc7d2495ce85acd948afe2020c7",
+      "artifact_binding_digest": "9e4cd11ad9d25ac064bfa388f7115a9b31dde6ea464aeea00a2c82b284d26091",
+      "authority_receipt_ref": "receipt:job-9e4cd11ad9d25ac064bfa388f7115a9b31dde6ea",
+      "cumulative_tier": 2,
+      "allocation_shares": [
+        {
+          "github_id": 859355,
+          "share_basis_points": 10000,
+          "status": "paid",
+          "acknowledgment_receipt_ref": "github-pr:1359336540:9:1e05fc9dcfb851150f53549b3471e16b80c31105:0c809157a08d65da57f5d66bcfcbc3135c0b3728688bced5440f8b896d30a021:8e8242e7794d82fcf07a8d6cc1ff9dff16bff9d202d00b90aa37ee64fb2fdb86"
+        }
+      ],
+      "reason": "Resolving the disagreement between the two prior reports: report 1 correctly created a new family (family-generative-falsification-languages-control) because this submission's delivered capability (a same-text nine-language cross-linguistic morphology sweep) is not the Cardan table-and-grille mechanism experiment nor any other occupied family's scope; it only shares the metric suite and Voynich baseline as inputs, which per CREDIT_IS_NOT_LINEAGE_V1 does not bind it into family-generative-falsification's ladder despite the contributor's own 'extends' declaration. Report 2 incorrectly folded it into family-generative-falsification as an 'extension,' relying on the contributor's declared family_id and treating it as analogous in kind to poetry-control/controls-entry-ladder (which are themselves separately registered families, not sub-ladder entries of family-generative-falsification) -- this is the FAMILY_IDENTITY_GUARD_V1 error the methodology warns against: a claimant-supplied family_id is not binding, and the existing family-generative-falsification scope (Cardan grille mechanism) does not cover a no-mechanism, real-language control. This is a genuinely useful bounded diagnostic (one new axis: cross-linguistic morphology) answering one named objection with a disconfirming counter-example (Russian), structurally analogous to the already-independently-registered poetry-control and controls-entry-ladder families, each assessed at tier 2 for a single fixed metric suite applied across one systematic sweep. It does not meet tier 5's 'informative controlled pilot' threshold as a fully new reusable capability since it reuses the pre-existing metric suite/baseline verbatim and 7/9 language rows are not independently inspectable from supplied bytes (reference_only). Award tier 2."
+    }
+  ],
+  "families_added": [
+    {
+      "id": "family-generative-falsification-languages-control",
+      "rubric_version": "0.1",
+      "scope": "A bounded diagnostic control extending the generative-falsification metric suite (final-glyph entropy, conditional bigram entropy H2|1, type/token diversity, word length) to nine same-text (Bible) translations at equal 35k-token samples, testing whether a morphologically rich real language naturally reproduces the manuscript's word-ending discipline. Finds no tested language reaches the manuscript on either final-glyph entropy or H2|1; Finnish is nearest on endings (2.80 vs 2.58) but not close on H2|1; Russian, despite rich inflection, has the least predictable endings, refuting a simple morphology-based explanation; manuscript retains highest type diversity of all ten texts.",
+      "acceptance_test": "Run `python languages_control.py --corpus ../../data/corpora/ZL3b-n.txt --bibles <dir with the nine bible-corpus XMLs> --out results/`; confirm results.json matches the recorded output showing every language's word-final entropy above the manuscript's 2.585 (nearest Finnish 2.803) and every language's H2|1 above 2.261 (nearest Greek 3.143), with manuscript ttr (0.2893) highest among all ten texts; independently reproduce the Latin and English-WEB rows from the two committed corpora.",
+      "aliases": [],
+      "predecessor_family_ids": [],
+      "excluded_overlap": [
+        "Does not claim or extend the Cardan table-and-grille (M5a/M5b) mechanism experiment credited under family-generative-falsification.",
+        "Does not claim the rhyme/versification line-structure control credited under family-generative-falsification-poetry-control.",
+        "Does not claim the entry-structure genre-ladder metrics credited under family-generative-falsification-controls-entry-ladder.",
+        "Does not claim credit for the pinned ZL3b corpus/parser (seed-corpus-parser) or local harness workflow (seed-local-harness), used only as inputs."
+      ],
+      "seed": false,
+      "seed_baseline": 0
+    }
+  ],
+  "milestones": [
+    {
+      "id": "milestone-1359336540-9-family-generative-falsification-languages-control",
+      "family_id": "family-generative-falsification-languages-control",
+      "repository_id": 1359336540,
+      "pr_number": 9,
+      "earned_at": "2026-09-08T00:08:44Z",
+      "depends_on": []
+    }
+  ],
+  "assessment": {
+    "schema_version": "1.0",
+    "assessment_id": "assessment-e5ac5dc7d2495ce85acd948afe2020c7",
+    "artifact_binding_digest": "e5ac5dc7d2495ce85acd948afe2020c739f5d3b436a5728d48741e2d6f956c91",
+    "merit_evidence_digest": "4f85febd3831cd6ce9e15c94463eda4041fdcb4046affa59334affa16cec63b7",
+    "repository_id": 1359336540,
+    "pr_number": 9,
+    "head_sha": "1e05fc9dcfb851150f53549b3471e16b80c31105",
+    "base_sha": "c042e34a49fdb2360eb487cc94fcdb7cbd9e95b5",
+    "rules_version": "0.1",
+    "rubric_version": "0.1",
+    "grading_profile": "voynich-sonnet-ai-pilot-2026-09-07-v9",
+    "evaluator_commit": "a26c63625881b3fcb1326cea69d4b1f8430692b0",
+    "mode": "official_proposal",
+    "status": "complete",
+    "claimed_score": 2,
+    "expected_score": 2,
+    "official_proposed_score": 2,
+    "awarded_score": null,
+    "assessment": {
+      "schema_version": "1.0",
+      "admission_action": "accept",
+      "score_status": "proposed",
+      "conduct_status": "clear",
+      "findings": [
+        {
+          "rule_id_or_gate": "G2",
+          "severity": "info",
+          "path_or_locus": "experiments/languages-control/source_hashes.json",
+          "evidence_refs": [
+            "experiments/languages-control/source_hashes.json",
+            "contributions/languages-control/rights.md"
+          ],
+          "reason": "Seven of nine bible translations are reference_only (hash-recorded, not redistributed); only Latin Vulgate and English WEB bytes are committed and inspected. This is a disclosed, honest limitation consistent with rights policy for attributed external references, not a redistribution violation.",
+          "required_change": "",
+          "verification_step": "Confirm source_hashes.json marks the seven languages reference_only and rights.md explains the basis; independently reproduce only the Latin/English rows from supplied bytes.",
+          "blocks_merge_or_credit": false
+        }
+      ],
+      "outcomes": [
+        {
+          "family_id": "family-generative-falsification-languages-control",
+          "scope": "A bounded diagnostic control extending the generative-falsification metric suite (final-glyph entropy, conditional bigram entropy H2|1, type/token diversity, word length) to nine same-text (Bible) translations at equal 35k-token samples, testing whether a morphologically rich real language naturally reproduces the manuscript's word-ending discipline. Finds no tested language reaches the manuscript on either final-glyph entropy or H2|1; Finnish is nearest on endings (2.80 vs 2.58) but not close on H2|1; Russian, despite rich inflection, has the least predictable endings, refuting a simple morphology-based explanation; manuscript retains highest type diversity of all ten texts.",
+          "category": "experiments",
+          "predecessors": [
+            "outcome-poetry-control",
+            "outcome-controls-entry-ladder"
+          ],
+          "aliases": [],
+          "claimed_tier": 5,
+          "assessed_tier": 2,
+          "gate_evidence": [
+            {
+              "gate": "G1",
+              "status": "pass",
+              "evidence_refs": [
+                "experiments/languages-control/report.md"
+              ],
+              "reason": "Directly addresses a named research objection (morphology) within the generative-mechanisms/statistical-structure branches."
+            },
+            {
+              "gate": "G2",
+              "status": "pass",
+              "evidence_refs": [
+                "contributions/languages-control/rights.md",
+                "data/manifests/bible-latin-vulgate.json",
+                "data/manifests/bible-english-web.json",
+                "experiments/languages-control/source_hashes.json"
+              ],
+              "reason": "Public-domain Vulgate/WEB committed with manifests; other seven languages referenced by hash only, consistent with disclosed rights scoping under inclusion-first policy for attributed external references."
+            },
+            {
+              "gate": "G3",
+              "status": "pass",
+              "evidence_refs": [
+                "experiments/languages-control/languages_control.py",
+                "experiments/languages-control/results/results.json"
+              ],
+              "reason": "Deterministic command, code and output table are inspectable ordinary evidence; no trusted execution receipt exists in context.execution_receipts (empty array) and none is required at tier 2."
+            },
+            {
+              "gate": "G4",
+              "status": "pass",
+              "evidence_refs": [
+                "experiments/languages-control/report.md"
+              ],
+              "reason": "Limitations disclosed: Bible register only, non-verse-aligned prefix samples, missing Russian primer control, translation-rights scoping."
+            },
+            {
+              "gate": "G5",
+              "status": "pass",
+              "evidence_refs": [
+                "contributions/languages-control/contribution.yaml"
+              ],
+              "reason": "Human hypothesis attribution (Gnuchev) and AI tool disclosure (Kimi k3) present with verification notes."
+            },
+            {
+              "gate": "G6",
+              "status": "pass",
+              "evidence_refs": [
+                "contributions/languages-control/contribution.yaml"
+              ],
+              "reason": "Declared as extending prior controls within family-generative-falsification; this assessment instead places it in a new family since its delivered result (cross-language morphology sweep) is not covered by any existing occupied family's scope, per credit-is-not-lineage guidance."
+            },
+            {
+              "gate": "G7",
+              "status": "pass",
+              "evidence_refs": [
+                "experiments/languages-control/results/results.json"
+              ],
+              "reason": "No evidence of fabrication; all nine languages' results reported including the counter-intuitive Russian finding, arguing against selective reporting."
+            }
+          ],
+          "attribution_status": "verified",
+          "reason": "Resolving the disagreement between the two prior reports: report 1 correctly created a new family (family-generative-falsification-languages-control) because this submission's delivered capability (a same-text nine-language cross-linguistic morphology sweep) is not the Cardan table-and-grille mechanism experiment nor any other occupied family's scope; it only shares the metric suite and Voynich baseline as inputs, which per CREDIT_IS_NOT_LINEAGE_V1 does not bind it into family-generative-falsification's ladder despite the contributor's own 'extends' declaration. Report 2 incorrectly folded it into family-generative-falsification as an 'extension,' relying on the contributor's declared family_id and treating it as analogous in kind to poetry-control/controls-entry-ladder (which are themselves separately registered families, not sub-ladder entries of family-generative-falsification) -- this is the FAMILY_IDENTITY_GUARD_V1 error the methodology warns against: a claimant-supplied family_id is not binding, and the existing family-generative-falsification scope (Cardan grille mechanism) does not cover a no-mechanism, real-language control. This is a genuinely useful bounded diagnostic (one new axis: cross-linguistic morphology) answering one named objection with a disconfirming counter-example (Russian), structurally analogous to the already-independently-registered poetry-control and controls-entry-ladder families, each assessed at tier 2 for a single fixed metric suite applied across one systematic sweep. It does not meet tier 5's 'informative controlled pilot' threshold as a fully new reusable capability since it reuses the pre-existing metric suite/baseline verbatim and 7/9 language rows are not independently inspectable from supplied bytes (reference_only). Award tier 2.",
+          "family_decision": "new",
+          "family_comparisons": [
+            {
+              "family_id": "family-generative-falsification",
+              "existing_scope": "Pilot 4 in the generative-mechanism falsification family: implements the Cardan table-and-grille device (M5a independent-column, M5b row-coupled) built from the pinned ZL3b corpus, measures composite distance against real manuscript statistics across 28 configurations plus multi-seed stability, and narrows the residual gap to two local metrics (conditional bigram entropy, word-final predictability), extending outcome-m4-template-doodler-pilot.",
+              "relationship": "distinct_outcome",
+              "reason": "That family credits a specific generative mechanism (Cardan grille device) experiment; this submission tests no generative mechanism at all, instead testing real natural languages against the manuscript on entropy/diversity metrics. Different capability/result; only shares the metric suite and corpus as inputs, which per credit-is-not-lineage guidance does not bind it into that family."
+            },
+            {
+              "family_id": "family-generative-falsification-poetry-control",
+              "existing_scope": "A new bounded diagnostic control in the generative-falsification research area: measures line-structured metrics (word-final char entropy, line-final word final-char entropy, line-initial first-char entropy, top-5 line-final word rhyme concentration) across the pinned ZL3b corpus's real lines, a newly added rhymed-verse control (Shakespeare's Sonnets, PG 1041), and existing Culpeper/Alice prose pseudo-line baselines, showing that rhyme (even at its most ending-constrained, 3.50 bits) does not approach the manuscript's every-word final-char entropy (2.59 bits), excluding versification as the mechanism behind the residual word-ending discipline, plus a side finding that the manuscript's line-final position is less constrained than its average word (2.99 vs 2.59), opposite of rhyme.",
+              "relationship": "distinct_outcome",
+              "reason": "Poetry-control excludes versification via rhyme-structure metrics on English/prose baselines; this submission excludes morphology via a nine-language same-text sweep with a different corpus (bible-corpus) and different metric focus (final-glyph entropy/H2|1/diversity across languages, not line-structure). Both are same-style bounded controls answering distinct named objections but neither's scope covers the other's actual delivered result."
+            },
+            {
+              "family_id": "family-generative-falsification-controls-entry-ladder",
+              "existing_scope": "A bounded diagnostic control extending the existing entry-structure metric suite (entry-private vocabulary share, adjacent/distant page Jaccard, ttr, entry token length) to two new real-text genres (Devil's Dictionary, Wonder Book of Knowledge) alongside the previously measured Culpeper/Alice controls, showing the manuscript's entry-private vocabulary is genre- and entry-length-dependent and lies on a continuum with short-entry real genres rather than being an order-of-magnitude outlier, with a documented correction to an earlier interpretive emphasis about device-overshoot.",
+              "relationship": "distinct_outcome",
+              "reason": "Entry-ladder tests entry-structure/genre metrics on English-genre texts; this submission tests cross-language morphology on Bible translations with entropy/diversity metrics. Different axis, different corpus, different named objection answered."
+            }
+          ],
+          "source_outcome_ids": [
+            "outcome-languages-control"
+          ],
+          "acceptance_test": "Run `python languages_control.py --corpus ../../data/corpora/ZL3b-n.txt --bibles <dir with the nine bible-corpus XMLs> --out results/`; confirm results.json matches the recorded output showing every language's word-final entropy above the manuscript's 2.585 (nearest Finnish 2.803) and every language's H2|1 above 2.261 (nearest Greek 3.143), with manuscript ttr (0.2893) highest among all ten texts; independently reproduce the Latin and English-WEB rows from the two committed corpora.",
+          "excluded_overlap": [
+            "Does not claim or extend the Cardan table-and-grille (M5a/M5b) mechanism experiment credited under family-generative-falsification.",
+            "Does not claim the rhyme/versification line-structure control credited under family-generative-falsification-poetry-control.",
+            "Does not claim the entry-structure genre-ladder metrics credited under family-generative-falsification-controls-entry-ladder.",
+            "Does not claim credit for the pinned ZL3b corpus/parser (seed-corpus-parser) or local harness workflow (seed-local-harness), used only as inputs."
+          ],
+          "validation_evidence": {
+            "execution_receipt_refs": [],
+            "external_assessment_receipt_refs": [],
+            "independent_inspection_refs": [
+              "data/corpora/bible-latin-vulgate.xml",
+              "data/corpora/bible-english-web.xml"
+            ]
+          }
+        }
+      ],
+      "inspected_paths": [
+        "contributions/languages-control/contribution.yaml",
+        "contributions/languages-control/rights.md",
+        "data/corpora/bible-english-web.xml",
+        "data/corpora/bible-latin-vulgate.xml",
+        "data/manifests/bible-english-web.json",
+        "data/manifests/bible-latin-vulgate.json",
+        "experiments/languages-control/languages_control.py",
+        "experiments/languages-control/report.md",
+        "experiments/languages-control/results/results.json",
+        "experiments/languages-control/source_hashes.json",
+        "research/context-index.json"
+      ],
+      "inspection_gaps": [],
+      "next_action": "Accept for admission and credit at tier 2 under new family family-generative-falsification-languages-control, which does not draw on family-generative-falsification's existing high-water tier of 5 since its delivered result (a no-mechanism cross-language control) is not covered by that family's Cardan-grille scope. If the contributor believes the multilingual control constitutes a reusable checked capability meeting tier 5 (e.g., a general same-text cross-language control harness extensible to further objections with more committed-byte language corpora), they may resubmit with evidence of that broader reusability for reassessment.",
+      "appeal_route": "Reply on the PR citing the specific gate or family-comparison the contributor disputes, with pointers to the exact evidence paths; a fresh assessment stage may be triggered per the effective methodology if material new evidence or context is supplied. Disputes about family-boundary judgment should reference the acceptance-test text of the family the contributor believes applies, and should address why the delivered result (not the declared family_id or 'extends' link) matches that family's existing scope."
+    },
+    "stages": [
+      {
+        "stage": "adjudicator",
+        "provider": "anthropic",
+        "model": "claude-sonnet-5",
+        "exposed_version": "claude-sonnet-5",
+        "prompt_digest": "bf87bc274e916939702cc630aafc985a4425b90e5f7b19fc887f6857779f8c61",
+        "response_digest": "a159b1627d4579e784d2127d3ab38ca08945c6df473ca256480da4cb82644112",
+        "started_at": "2026-09-08T00:06:58.294Z",
+        "completed_at": "2026-09-08T00:08:14.331Z",
+        "usage": {
+          "sessions": 1,
+          "input_bytes": 236671,
+          "output_bytes": 55679,
+          "runtime_ms": 75244
+        },
+        "receipt_ref": "stage-results/job-9e4cd11ad9d25ac064bfa388f7115a9b31dde6ea/adjudicator.json"
+      },
+      {
+        "stage": "adversary",
+        "provider": "anthropic",
+        "model": "claude-sonnet-5",
+        "exposed_version": "claude-sonnet-5",
+        "prompt_digest": "f689f79110999cffa8a872c560037e5a3d4b38cb4689acc64ae0eac34916d073",
+        "response_digest": "26d0b994e5a35db8fa39777a3b42f60a8289be9ba0d729ca727dea1a5c35c801",
+        "started_at": "2026-09-08T00:04:55.761Z",
+        "completed_at": "2026-09-08T00:06:06.736Z",
+        "usage": {
+          "sessions": 1,
+          "input_bytes": 216340,
+          "output_bytes": 45572,
+          "runtime_ms": 70098
+        },
+        "receipt_ref": "stage-results/job-9e4cd11ad9d25ac064bfa388f7115a9b31dde6ea/adversary.json"
+      },
+      {
+        "stage": "assessor",
+        "provider": "anthropic",
+        "model": "claude-sonnet-5",
+        "exposed_version": "claude-sonnet-5",
+        "prompt_digest": "8beaff95f717dd9f1e383fcfa4e5ee8dd64cbccd0787d36a52017ef32761f82a",
+        "response_digest": "b3ea9d7d6e18e07ee01dda6125d352d397b86868a12b614394bf63c78097151b",
+        "started_at": "2026-09-08T00:02:53.509Z",
+        "completed_at": "2026-09-08T00:04:08.158Z",
+        "usage": {
+          "sessions": 1,
+          "input_bytes": 216221,
+          "output_bytes": 49597,
+          "runtime_ms": 73473
+        },
+        "receipt_ref": "stage-results/job-9e4cd11ad9d25ac064bfa388f7115a9b31dde6ea/assessor.json"
+      }
+    ],
+    "disagreements": [
+      "Material independent-assessment disagreement or invalid proposal."
+    ],
+    "holds": [],
+    "reused_assessment_id": null
+  },
+  "receipt": {
+    "schema_version": "1.0",
+    "id": "receipt:job-9e4cd11ad9d25ac064bfa388f7115a9b31dde6ea",
+    "key_id": "voynich-2026-09-06",
+    "issued_at": "2026-09-08T00:09:12.120Z",
+    "payload": {
+      "repository_id": 1359336540,
+      "events_digest": "b530f277087c8b16a0b5443f9435eaa5a7a80008a784b2ec411a34a494a0048a",
+      "milestones_digest": "9481b0599590791dc718fe98ca2cac916052c233297cd8e95d8bb557c2776885",
+      "families_digest": "09af5d98f077e6c0a09103ea2dc1d357c283b66f5be0e348a825e3abdd0eabaa",
+      "merge_sha": "376cb90d5040be93ca41cc418fc3b6700d782929",
+      "assessed_head": "1e05fc9dcfb851150f53549b3471e16b80c31105",
+      "artifact_digest": "9e4cd11ad9d25ac064bfa388f7115a9b31dde6ea464aeea00a2c82b284d26091",
+      "profile_digest": "2f8d18abf176f95380df7e809a525db1c36186a0f8bfe46ce106d8b228a28a93",
+      "report_digest": "d392f06c2259c900a3d80f1aff25835a747a79d157f2e1640c515a098cf5c41e",
+      "stage_receipt_refs": [
+        "stage-results/job-9e4cd11ad9d25ac064bfa388f7115a9b31dde6ea/adjudicator.json",
+        "stage-results/job-9e4cd11ad9d25ac064bfa388f7115a9b31dde6ea/adversary.json",
+        "stage-results/job-9e4cd11ad9d25ac064bfa388f7115a9b31dde6ea/assessor.json"
+      ]
+    },
+    "payload_digest": "5368657cf5e28ce27be5c7b527fb9dd9a22094517816b60779051ee95d7ce6d5",
+    "signature": "ptKw0Iz_-uUhhyuNVtO6HkHsD8R4yVUgP74DaDuE2JItNYry09UjGLBlMd2gJzOAlbiZ-qOvRF2XJNUVxgggCw"
+  }
+}
