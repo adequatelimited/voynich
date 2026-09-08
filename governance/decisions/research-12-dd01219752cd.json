@@ -1,0 +1,314 @@
+{
+  "schema_version": "1.0",
+  "research_pr": 12,
+  "merge_sha": "d4623f1f63c41725a8bca77638d7ac2b45b55b24",
+  "events": [
+    {
+      "schema_version": "1.0",
+      "id": "decision-12-family-generative-falsification-dd01219752cd",
+      "sequence": 16,
+      "kind": "upgrade",
+      "family_id": "family-generative-falsification",
+      "rubric_version": "0.1",
+      "category": "experiments",
+      "repository_id": 1359336540,
+      "pr_number": 12,
+      "milestone_id": "milestone-1359336540-12-family-generative-falsification",
+      "earned_at": "2026-09-08T00:55:33Z",
+      "assessment_id": "assessment-b0dd1a1aaebada304c407fe109179ef2",
+      "artifact_binding_digest": "dd01219752cd28b6795c9b0d7e34e7fb64bdcd9e8fc5d21a4cbcdd93bbacb262",
+      "authority_receipt_ref": "receipt:job-dd01219752cd28b6795c9b0d7e34e7fb64bdcd9e",
+      "cumulative_tier": 5,
+      "reason": "Genuinely informative diagnostic pair: a pre-registered frozen-rule test of a contributor hypothesis (EVA over-segmentation) that restates the family's strongest residue claim from 'far beyond any language' to 'language-like at 45-60 symbols, dependent on comparison language/criterion', plus the first executed content-vs-device discriminator (illustration-linked vocabulary) returning an honest UNDERPOWERED verdict with a diagnosed path to power. This matches a tier-2 bounded diagnostic/correction anchor layered onto the existing family; the contributor's own claim (incremental 2, cumulative 5) does not exceed the family's already-recorded high-water tier of 5, so no new marginal credit is owed beyond current occupancy, though the work is legitimate and admissible."
+    }
+  ],
+  "families_added": [],
+  "milestones": [
+    {
+      "id": "milestone-1359336540-12-family-generative-falsification",
+      "family_id": "family-generative-falsification",
+      "repository_id": 1359336540,
+      "pr_number": 12,
+      "earned_at": "2026-09-08T00:55:33Z",
+      "depends_on": []
+    }
+  ],
+  "assessment": {
+    "schema_version": "1.0",
+    "assessment_id": "assessment-b0dd1a1aaebada304c407fe109179ef2",
+    "artifact_binding_digest": "b0dd1a1aaebada304c407fe109179ef2a7d414318d2526831d42f31dbd3ff9a1",
+    "merit_evidence_digest": "1cb2bc505f6d43781e59db26c89bb577898a1f04f487b094fd7ecc6c4a5ffbbe",
+    "repository_id": 1359336540,
+    "pr_number": 12,
+    "head_sha": "51aa2dc00f93f2ba3480f1545fd9072ade387540",
+    "base_sha": "303df4685bd7eec2aaa1837f9cfdba779312fbac",
+    "rules_version": "0.1",
+    "rubric_version": "0.1",
+    "grading_profile": "voynich-sonnet-ai-pilot-2026-09-07-v9",
+    "evaluator_commit": "a26c63625881b3fcb1326cea69d4b1f8430692b0",
+    "mode": "official_proposal",
+    "status": "complete",
+    "claimed_score": 2,
+    "expected_score": 0,
+    "official_proposed_score": 0,
+    "awarded_score": null,
+    "assessment": {
+      "schema_version": "1.0",
+      "admission_action": "accept",
+      "score_status": "proposed",
+      "conduct_status": "clear",
+      "findings": [
+        {
+          "rule_id_or_gate": "G5",
+          "severity": "info",
+          "path_or_locus": "contributions/discriminating-tests/contribution.yaml",
+          "evidence_refs": [
+            "contributions/discriminating-tests/contribution.yaml"
+          ],
+          "reason": "AI usage and hypothesis-source attribution disclosed with named human contributor (Vasily Gnuchev) credited for the re-segmentation hypothesis and for requesting the illustration test.",
+          "required_change": "",
+          "verification_step": "Confirm ai_usage.tools[0].human_verification names the contributor and date.",
+          "blocks_merge_or_credit": false
+        },
+        {
+          "rule_id_or_gate": "G6",
+          "severity": "info",
+          "path_or_locus": "experiments/discriminating-tests/REPORT.md",
+          "evidence_refs": [
+            "experiments/discriminating-tests/REPORT.md",
+            "experiments/discriminating-tests/PROTOCOL.md"
+          ],
+          "reason": "Candidly documents an underpowered illustration test and a caveat-laden segmentation result; a well-scoped negative/mixed finding, not overclaiming.",
+          "required_change": "",
+          "verification_step": "Check REPORT.md verdict table against results.json values (R7 UNDERPOWERED, R8.1 SEGMENTATION-DEPENDENT).",
+          "blocks_merge_or_credit": false
+        }
+      ],
+      "outcomes": [
+        {
+          "acceptance_test": "Run `python discriminating_tests.py --repo ../.. --lab <dir with bibles/ and pg49513.txt> --out results/`; confirm results.json: R8 gaps 0.652/0.151/0.065/0.089 at alphabet sizes 30/40/50/60, crossover at 45 symbols (k=20, 3.089); R7 control N3 p about 0.44, T1a N1 p about 0.85, T1b N3 p about 0.21 and N4 p about 0.996.",
+          "aliases": [],
+          "assessed_tier": 5,
+          "attribution_status": "verified",
+          "category": "experiments",
+          "claimed_tier": 5,
+          "excluded_overlap": [
+            "Does not claim or duplicate the M5a/M5b Cardan table-and-grille mechanism experiment credited under family-generative-falsification's existing tier-5 occupancy.",
+            "Does not claim the earlier adversarial-critique parser/alphabet/cipher/structure/orthography findings credited under family-generative-falsification-adversarial-audit; reuses critique_lib.py verbatim only as a dependency for a self-contained branch.",
+            "Does not claim the nine-Bible languages-control comparison credited under family-generative-falsification-languages-control; reuses those corpora only as additional inputs to the new byte-pair merge-curve test.",
+            "Does not claim credit for the pinned ZL3b corpus/parser (seed-corpus-parser), used only as input."
+          ],
+          "family_comparisons": [
+            {
+              "existing_scope": "Pilot 4 in the generative-mechanism falsification family: implements the Cardan table-and-grille device (M5a independent-column, M5b row-coupled) built from the pinned ZL3b corpus, measures composite distance against real manuscript statistics across 28 configurations plus multi-seed stability, and narrows the residual gap to two local metrics (conditional bigram entropy, word-final predictability), extending outcome-m4-template-doodler-pilot.",
+              "family_id": "family-generative-falsification",
+              "reason": "The contributor filed this diagnostic pair under family-generative-falsification with a claimed cumulative tier of 5, matching the family's already-recorded high-water occupancy; it restates/refines the family's existing H2|1 residue claim (now segmentation-dependent) and executes a previously-named-but-unrun test (illustration linkage, returning UNDERPOWERED) rather than establishing an independently distinct capability with its own higher ceiling. This does not duplicate the M5a/M5b table-and-grille mechanism itself (excluded_overlap), but as a diagnostic continuation of the same family's ladder at the same tier, it is treated as the same occupied outcome rather than a new family, consistent with both prior reports' conclusion that no new marginal credit beyond the existing tier-5 high-water is owed.",
+              "relationship": "same_outcome"
+            }
+          ],
+          "family_decision": "extension",
+          "family_id": "family-generative-falsification",
+          "gate_evidence": [
+            {
+              "evidence_refs": [
+                "experiments/discriminating-tests/PROTOCOL.md"
+              ],
+              "gate": "G1",
+              "reason": "Tests two named research questions in statistical-structure/generative-mechanisms branches: whether letter-pair predictability is a segmentation artefact, and whether text tracks illustrated content.",
+              "status": "pass"
+            },
+            {
+              "evidence_refs": [
+                "contributions/discriminating-tests/rights.md"
+              ],
+              "gate": "G2",
+              "reason": "Uses repo-pinned ZL3b corpus and previously rights-cleared controls; rights record documents provenance without claiming to redistribute the external mirror's bytes.",
+              "status": "pass"
+            },
+            {
+              "evidence_refs": [
+                "experiments/discriminating-tests/discriminating_tests.py",
+                "experiments/discriminating-tests/results/results.json",
+                "experiments/discriminating-tests/REPORT.md",
+                "experiments/runs/2026-09-07T110000Z-discriminating-tests/run.json"
+              ],
+              "gate": "G3",
+              "reason": "Ordinary inspectable evidence: code, documented deterministic command, and full results/run records supplied; not an independently authenticated execution receipt, none required at tier 5.",
+              "status": "pass"
+            },
+            {
+              "evidence_refs": [
+                "experiments/discriminating-tests/REPORT.md",
+                "contributions/discriminating-tests/contribution.yaml"
+              ],
+              "gate": "G4",
+              "reason": "Limitations explicitly enumerated (Greek's inflated raw alphabet, persisting gap against other languages, illustration test's own power failure, uncertain plant identifications).",
+              "status": "pass"
+            },
+            {
+              "evidence_refs": [
+                "contributions/discriminating-tests/contribution.yaml",
+                "contributions/discriminating-tests/rights.md"
+              ],
+              "gate": "G5",
+              "reason": "Contributor and hypothesis-source attribution and AI-assistance disclosure present and specific.",
+              "status": "pass"
+            },
+            {
+              "evidence_refs": [
+                "experiments/discriminating-tests/REPORT.md"
+              ],
+              "gate": "G6",
+              "reason": "Extends but does not duplicate prior family outcomes; restates rather than repeats the prior 'far beyond any language' claim, and runs the previously unexecuted illustration test.",
+              "status": "pass"
+            },
+            {
+              "evidence_refs": [
+                "experiments/discriminating-tests/REPORT.md",
+                "experiments/discriminating-tests/results/results.json"
+              ],
+              "gate": "G7",
+              "reason": "Deviations disclosed as deviations rather than concealed; no fabrication detected in supplied excerpts.",
+              "status": "pass"
+            }
+          ],
+          "predecessors": [
+            "outcome-clean-rerun",
+            "outcome-adversarial-critique",
+            "outcome-languages-control"
+          ],
+          "reason": "Genuinely informative diagnostic pair: a pre-registered frozen-rule test of a contributor hypothesis (EVA over-segmentation) that restates the family's strongest residue claim from 'far beyond any language' to 'language-like at 45-60 symbols, dependent on comparison language/criterion', plus the first executed content-vs-device discriminator (illustration-linked vocabulary) returning an honest UNDERPOWERED verdict with a diagnosed path to power. This matches a tier-2 bounded diagnostic/correction anchor layered onto the existing family; the contributor's own claim (incremental 2, cumulative 5) does not exceed the family's already-recorded high-water tier of 5, so no new marginal credit is owed beyond current occupancy, though the work is legitimate and admissible.",
+          "scope": "Pilot 4 in the generative-mechanism falsification family: implements the Cardan table-and-grille device (M5a independent-column, M5b row-coupled) built from the pinned ZL3b corpus, measures composite distance against real manuscript statistics across 28 configurations plus multi-seed stability, and narrows the residual gap to two local metrics (conditional bigram entropy, word-final predictability), extending outcome-m4-template-doodler-pilot.",
+          "source_outcome_ids": [
+            "outcome-discriminating-tests"
+          ],
+          "validation_evidence": {
+            "execution_receipt_refs": [],
+            "external_assessment_receipt_refs": [],
+            "independent_inspection_refs": []
+          }
+        }
+      ],
+      "inspected_paths": [
+        "contributions/discriminating-tests/contribution.yaml",
+        "contributions/discriminating-tests/rights.md",
+        "experiments/discriminating-tests/PROTOCOL.md",
+        "experiments/discriminating-tests/REPORT.md",
+        "experiments/discriminating-tests/critique_lib.py",
+        "experiments/discriminating-tests/discriminating_tests.py",
+        "experiments/discriminating-tests/exploratory_contentwords.py",
+        "experiments/discriminating-tests/results/exploratory_contentwords.json",
+        "experiments/discriminating-tests/results/results.json",
+        "experiments/discriminating-tests/results/stdout.txt",
+        "experiments/runs/2026-09-07T110000Z-discriminating-tests/exploratory_contentwords.json",
+        "experiments/runs/2026-09-07T110000Z-discriminating-tests/output.json",
+        "experiments/runs/2026-09-07T110000Z-discriminating-tests/run.json",
+        "experiments/runs/2026-09-07T110000Z-discriminating-tests/stdout.txt",
+        "research/context-index.json"
+      ],
+      "inspection_gaps": [],
+      "next_action": "No contributor action required for admission; the deterministic ledger computes marginal credit against the existing family-generative-falsification high-water tier of 5 (likely zero new points since the claimed cumulative does not exceed the recorded high-water). Contributor may optionally pre-register the T1 v2 size-corrected lift statistic in a follow-up PR to pursue additional credit with a more powerful illustration-vocabulary test.",
+      "appeal_route": "If the contributor believes this diagnostic pair constitutes a materially distinct capability warranting a new family ID beyond existing family-generative-falsification occupancy, they may resubmit with an explicit new family_id, a distinct acceptance test not overlapping the M5a/M5b scope, and an explanation of why the result is not already covered by the family's existing tier-5 occupancy; this would be reassessed under the credit-is-not-lineage v9 clarification and family-identity guard rules against the current registry state."
+    },
+    "stages": [
+      {
+        "stage": "adjudicator",
+        "provider": "anthropic",
+        "model": "claude-sonnet-5",
+        "exposed_version": "claude-sonnet-5",
+        "prompt_digest": "75ea60d05b4feb18b5d7d43636f8c4379676dcd29818e356ada456d9027b73c7",
+        "response_digest": "ede64740fee2f4df37f3000aea6a8f640f13f57ebfd56c414d6f8ecbd49098fa",
+        "started_at": "2026-09-08T00:52:01.812Z",
+        "completed_at": "2026-09-08T00:53:11.055Z",
+        "usage": {
+          "sessions": 1,
+          "input_bytes": 343690,
+          "output_bytes": 27550,
+          "runtime_ms": 68348
+        },
+        "receipt_ref": "stage-results/job-dd01219752cd28b6795c9b0d7e34e7fb64bdcd9e/adjudicator.json"
+      },
+      {
+        "stage": "adversary",
+        "provider": "anthropic",
+        "model": "claude-sonnet-5",
+        "exposed_version": "claude-sonnet-5",
+        "prompt_digest": "8e66c4b045378112bbd841abafd9fb608a3bdcb9d206b8a3edac29b189141fd9",
+        "response_digest": "c93e20e44c479d3160d680eec56f88fad92b3fdcc772131741eb14c51eb97384",
+        "started_at": "2026-09-08T00:49:59.456Z",
+        "completed_at": "2026-09-08T00:51:14.369Z",
+        "usage": {
+          "sessions": 1,
+          "input_bytes": 325685,
+          "output_bytes": 42873,
+          "runtime_ms": 74152
+        },
+        "receipt_ref": "stage-results/job-dd01219752cd28b6795c9b0d7e34e7fb64bdcd9e/adversary.json"
+      },
+      {
+        "stage": "assessor",
+        "provider": "anthropic",
+        "model": "claude-sonnet-5",
+        "exposed_version": "claude-sonnet-5",
+        "prompt_digest": "e88d6d44f10623014f18a8f21a9594762c5feaf95e6b040508e179dbd2e2f467",
+        "response_digest": "fd4ba6607fa8ba275e5736ed4109a0d2db65aac90ca55c7dd42a6f7da4d0c48f",
+        "started_at": "2026-09-08T00:47:37.777Z",
+        "completed_at": "2026-09-08T00:48:56.642Z",
+        "usage": {
+          "sessions": 1,
+          "input_bytes": 325566,
+          "output_bytes": 46314,
+          "runtime_ms": 78096
+        },
+        "receipt_ref": "stage-results/job-dd01219752cd28b6795c9b0d7e34e7fb64bdcd9e/assessor.json"
+      },
+      {
+        "stage": "corrector",
+        "provider": "anthropic",
+        "model": "claude-sonnet-5",
+        "exposed_version": "claude-sonnet-5",
+        "prompt_digest": "f9c2ac787966d4de29163e11f9573a91c5f2e0af47827f4c12d15cb39f913203",
+        "response_digest": "a083b5cc6ed412babfc1bf11db3a66953ebdf4120f89fa27b6ea0190f042ccef",
+        "started_at": "2026-09-08T00:54:03.728Z",
+        "completed_at": "2026-09-08T00:55:12.554Z",
+        "usage": {
+          "sessions": 1,
+          "input_bytes": 354468,
+          "output_bytes": 44171,
+          "runtime_ms": 68088
+        },
+        "receipt_ref": "stage-results/job-dd01219752cd28b6795c9b0d7e34e7fb64bdcd9e/corrector.json"
+      }
+    ],
+    "disagreements": [
+      "Material independent-assessment disagreement or invalid proposal."
+    ],
+    "holds": [],
+    "reused_assessment_id": null
+  },
+  "receipt": {
+    "schema_version": "1.0",
+    "id": "receipt:job-dd01219752cd28b6795c9b0d7e34e7fb64bdcd9e",
+    "key_id": "voynich-2026-09-06",
+    "issued_at": "2026-09-08T00:58:53.177Z",
+    "payload": {
+      "repository_id": 1359336540,
+      "events_digest": "cb2fcce1a8fbf1ff7729b48e3e17f1fa7ba21dcc34de05893df407e9616bf02a",
+      "milestones_digest": "10eaa0f917a3c24127378d409e5e2130991027f10a6b6525bc4ddf31d85ef27e",
+      "families_digest": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+      "merge_sha": "d4623f1f63c41725a8bca77638d7ac2b45b55b24",
+      "assessed_head": "51aa2dc00f93f2ba3480f1545fd9072ade387540",
+      "artifact_digest": "dd01219752cd28b6795c9b0d7e34e7fb64bdcd9e8fc5d21a4cbcdd93bbacb262",
+      "profile_digest": "2f8d18abf176f95380df7e809a525db1c36186a0f8bfe46ce106d8b228a28a93",
+      "report_digest": "f4a6faaa9c4f978d66e4ef0376caaa518dd5545cc3239487ed6d1db7114d8a37",
+      "stage_receipt_refs": [
+        "stage-results/job-dd01219752cd28b6795c9b0d7e34e7fb64bdcd9e/adjudicator.json",
+        "stage-results/job-dd01219752cd28b6795c9b0d7e34e7fb64bdcd9e/adversary.json",
+        "stage-results/job-dd01219752cd28b6795c9b0d7e34e7fb64bdcd9e/assessor.json",
+        "stage-results/job-dd01219752cd28b6795c9b0d7e34e7fb64bdcd9e/corrector.json"
+      ]
+    },
+    "payload_digest": "eea0bdabdcd1cc937f593039c7162aad47a3a7117f13350784ae050e97fde5cb",
+    "signature": "V5bLpXAvgmqKkVEuianIzLGuu_sx-6yhBeszbylOVfs-zZKvY73iQjjz_AGeGfsejwkDEYBLfhkPvVO-rnVfAA"
+  }
+}
