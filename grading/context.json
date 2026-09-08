@@ -306,7 +306,7 @@
     "family-generative-falsification-poetry-control": 2,
     "family-generative-falsification-languages-control": 2
   },
-  "ledger_digest": "37dde499fd7c0c602205128b52150d4f45d83b142dade2d2caac37a321deb1a5",
+  "ledger_digest": "03858d252727a56981ad82aabdd2a290749d67ef23110e360f2a6afb6aba173f",
   "public_evidence": [
     {
       "path": "research/context-index.json",
