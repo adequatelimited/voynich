@@ -1,0 +1,111 @@
+schema_version: "1.0"
+id: "adversarial-critique-generative-family"
+kind: research
+title: "Adversarial critique of the generative-falsification family: parser contamination, alphabet confound, cipher advocate, structure nulls"
+summary: >-
+  Pre-registered adverse experiments against the family's own claims (PRs #3-#9), with
+  frozen decision rules committed before the run. Findings: (1) the shared corpus parser
+  leaves IVTFF mark-up inside tokens, so 2,454 of the published 10,120 types are artefacts;
+  every headline number must be restated (clean: 7,252 or 8,746 types at 35k tokens
+  depending on uncertain-space treatment, versus Latin 7,144). (2) The letter-pair
+  constraint (H2|1) is robust to transcription alphabet (0.80 bits below every language after
+  identical glyph and determinism merging). (3) The final-glyph anomaly is alphabet-dependent
+  (0.27 to 0.08 bits against Finnish). (4) An untuned verbose cipher of real Latin reproduces
+  both entropy residues; the frozen type-ratio gate, calibrated to the contaminated count, is
+  the only gate it fails. (5) The "2x neighbouring-page sharing" is a Currier-language and
+  section artefact (within-block ratio 1.14); the "30% page-private" figure is 19% after
+  decontamination, of which 17 points are expected from hapax richness alone. (6) Middle
+  English orthography does not reach the manuscript's type ratio.
+branch_ids: ["generative-mechanisms", "statistical-structure"]
+contributors:
+  - github_id: 859355
+    github_login: "gnuchev"
+    roles: ["Conceptualization", "Supervision"]
+ai_usage:
+  status: assisted
+  tools:
+    - provider: "Anthropic"
+      model_id: "claude-fable-5-1"
+      model_version: "Claude Code agent (Claude Fable 5.1), 2026-09"
+      accessed_at: "2026-09-07"
+      tasks:
+        - "Critical reading of the family's code and reports; identification of the parser contamination"
+        - "Design of PROTOCOL.md (adverse hypotheses, frozen decision rules) and its pre-registration commit"
+        - "Implementation of adversarial_critique.py (clean parser, alphabet merges, ciphers, permutation nulls, confound controls)"
+        - "Retrieval of the two Chaucer control editions; drafting of REPORT.md, this manifest and the rights record"
+      human_verification: >-
+        The request to act as critic and set adverse experiments came from Vasily Gnuchev
+        (2026-09-07), who also raised the overfitting concern that motivated it. The protocol
+        was committed (15b6999) before the script ran. Deviations between the first and final
+        runs are listed in REPORT.md. All numbers are from the recorded run output; none were
+        hand-edited.
+  reproducibility_notes: >-
+    Deterministic: python adversarial_critique.py --repo ../.. --lab <dir with bibles/,
+    pg49513.txt and the two Chaucer texts> --out results/. Stdlib only. Input hashes in
+    results/source_hashes.json. Chaucer editions (PG 22120, PG 2383) are referenced by hash
+    and not redistributed.
+changes:
+  - path: "experiments/adversarial-critique/PROTOCOL.md"
+    improvement: "Pre-registered adverse hypotheses and frozen decision rules for eight named family claims."
+  - path: "experiments/adversarial-critique/adversarial_critique.py"
+    improvement: "Clean IVTFF parser, family-parser audit, alphabet-level and determinism merges, five untuned cipher families, permutation nulls, language/section confound controls, medieval-orthography control."
+  - path: "experiments/adversarial-critique/REPORT.md"
+    improvement: "Verdicts by frozen rules, critic's memo on the family's methodology, restated numbers, deviations, proposed follow-ups."
+  - path: "experiments/adversarial-critique/results/results.json"
+    improvement: "Full numeric record for every block."
+  - path: "experiments/adversarial-critique/results/source_hashes.json"
+    improvement: "Sha256 of every input, including the two new Chaucer controls."
+  - path: "experiments/runs/2026-09-07T013500Z-adversarial-critique/run.json"
+    improvement: "Run record with verdicts, seeds, protocol commit and agent disclosure."
+outcomes:
+  - id: "outcome-adversarial-critique"
+    family_id: "family-generative-falsification"
+    extends: "outcome-languages-control"
+    before: >-
+      The family's headline numbers (10,120 types, ttr 0.289, H2|1 2.26, final-glyph 2.58,
+      adjacent/distant Jaccard 0.080/0.042, 30% page-private) were taken as measured facts;
+      "encyclopedia structure" was called ~90% confirmed; the residue was described as what
+      device models cannot fake; no experiment had been run for the content side.
+    after: >-
+      The shared parser is shown to be contaminated (24% of types are artefacts) and every
+      number is restated on a clean parse. The letter-pair constraint survives an alphabet
+      confound test; the final-glyph anomaly does not survive it cleanly; the neighbouring-page
+      and page-private structure claims are relabelled as language/section and hapax-richness
+      artefacts by pre-registered rules; an untuned verbose cipher of Latin reproduces both
+      entropy residues. The family's probability judgments are shown to rest on measurements
+      that were partly artefacts.
+    acceptance_test: >-
+      Run the documented command; confirm results.json verdicts: R0.1 CONTAMINATED, R0.2
+      RICHEST SURVIVES, R1.1 ALPHABET-ROBUST, R1.2 ALPHABET-DEPENDENT, R2.1 NOT REPRODUCED BY
+      TESTED CIPHERS, R3.1 LANGUAGE/SECTION ARTEFACT, R3.2 HAPAX-RICHNESS CONSEQUENCE, R4.1
+      SURVIVES; clean types 7,734 (comma=space) / 8,804 (comma=no space); within-class
+      adjacency ratio 1.137; page-private 0.193 vs null 0.166.
+    evidence:
+      - "experiments/adversarial-critique/PROTOCOL.md"
+      - "experiments/adversarial-critique/adversarial_critique.py"
+      - "experiments/adversarial-critique/REPORT.md"
+      - "experiments/adversarial-critique/results/results.json"
+      - "experiments/adversarial-critique/results/source_hashes.json"
+      - "experiments/runs/2026-09-07T013500Z-adversarial-critique/run.json"
+    related_outcomes: ["outcome-generative-doodler-pilot", "outcome-entry-doodler-pilot", "outcome-m4-template-doodler-pilot", "outcome-m5-grille-pilot", "outcome-controls-entry-ladder", "outcome-poetry-control", "outcome-languages-control"]
+    claimed_cumulative_tier: 5
+    claimed_incremental_points: 2
+    claim_rationale: >-
+      Atlas "Experiments": bounded verified improvement (2) — a pre-registered critique that
+      corrects the family's shared measurement, re-labels two structural claims by frozen
+      rules, and gives the content side its first executed test. Family cumulative stays 5.
+      Points for a critique that reduces earlier claims are for maintainers to set; the claim
+      is deliberately modest.
+    attribution:
+      - github_id: 859355
+        share_basis_points: 10000
+claimed_total_points: 2
+rubric_version: "0.1"
+conflicts: []
+limitations:
+  - "The R2.1 type-ratio gate was calibrated to the contaminated count; the verdict is reported as frozen and the post-hoc reading is labelled."
+  - "Only five untuned cipher families were tried; failure to reproduce is weak evidence by design."
+  - "Level (c) glyph identities (iin/in/ii/ee as single glyphs) are an assumption, stated, not established."
+  - "Skeat's Middle English edition regularises spelling; a diplomatic transcription would be a stronger orthography control."
+  - "Size-matched control comparisons remain confounded by entry length."
+rights_manifest: "contributions/adversarial-critique/rights.md"
