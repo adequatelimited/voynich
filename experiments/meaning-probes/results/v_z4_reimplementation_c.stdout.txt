@@ -1,0 +1,63 @@
+=== 1. seed used for the passing statistic ===
+t_z4.analyse() calls run_position(..., P1, seed) and run_position(..., P2, seed+1).
+The passer MI_P2_F1 therefore runs on seed 409, not the registered 408.
+  seed 408: p = 0.00090   debiased +0.09753   family6 PASS   family4 PASS
+  seed 409: p = 0.00160   debiased +0.09748   family6 PASS   family4 PASS
+  seed 410: p = 0.00170   debiased +0.09807   family6 fail   family4 PASS
+  seed 411: p = 0.00210   debiased +0.09746   family6 fail   family4 PASS
+  seed 412: p = 0.00090   debiased +0.09808   family6 PASS   family4 PASS
+  seed 413: p = 0.00140   debiased +0.09793   family6 PASS   family4 PASS
+  seed 414: p = 0.00130   debiased +0.09745   family6 PASS   family4 PASS
+  seed 415: p = 0.00200   debiased +0.09763   family6 fail   family4 PASS
+  seed 416: p = 0.00160   debiased +0.09751   family6 PASS   family4 PASS
+  seed 417: p = 0.00140   debiased +0.09762   family6 PASS   family4 PASS
+  seed 418: p = 0.00180   debiased +0.09772   family6 fail   family4 PASS
+  seed 419: p = 0.00150   debiased +0.09805   family6 PASS   family4 PASS
+  seed 420: p = 0.00140   debiased +0.09779   family6 PASS   family4 PASS
+  seed 421: p = 0.00200   debiased +0.09771   family6 fail   family4 PASS
+  seed 422: p = 0.00120   debiased +0.09786   family6 PASS   family4 PASS
+  seed 423: p = 0.00150   debiased +0.09771   family6 PASS   family4 PASS
+  -> 11/16 seeds clear the 6-family threshold 0.0016667
+  -> 16/16 seeds clear the protocol-literal 4-family threshold 0.0025000
+
+=== 2. high-precision p through the test's own mi_focus, B=200000 ===
+  seed 408: p = 0.001575 (MC SE 0.000089)  obs 0.2963  debiased +0.0976
+           vs family6 0.0016667 -> clears ; vs family4 0.0025000 -> clears
+  seed 409: p = 0.001650 (MC SE 0.000091)  obs 0.2963  debiased +0.0976
+           vs family6 0.0016667 -> clears ; vs family4 0.0025000 -> clears
+
+=== 3. jackknife: drop one ring at a time from the TEST set ===
+  12 rings on TEST; sizes: [18, 12, 18, 10, 4, 16, 9, 4, 16, 10, 18, 12]
+  drop Leo          ring0  n=129  p=0.00220  deb +0.1094  f6 fail  f4 PASS
+  drop Leo          ring1  n=135  p=0.00080  deb +0.1195  f6 PASS  f4 PASS
+  drop Libra        ring0  n=129  p=0.00400  deb +0.0938  f6 fail  f4 fail
+  drop Libra        ring1  n=137  p=0.00250  deb +0.0997  f6 fail  f4 PASS
+  drop Sagittarius  ring0  n=143  p=0.00070  deb +0.1042  f6 PASS  f4 PASS
+  drop Sagittarius  ring1  n=131  p=0.00660  deb +0.0843  f6 fail  f4 fail
+  drop Sagittarius  ring2  n=138  p=0.00520  deb +0.0871  f6 fail  f4 fail
+  drop Scorpius     ring0  n=143  p=0.00390  deb +0.0876  f6 fail  f4 fail
+  drop Scorpius     ring1  n=131  p=0.00030  deb +0.1444  f6 PASS  f4 PASS
+  drop Scorpius     ring2  n=137  p=0.01140  deb +0.0756  f6 fail  f4 fail
+  drop Virgo        ring0  n=129  p=0.03650  deb +0.0611  f6 fail  f4 fail
+  drop Virgo        ring1  n=135  p=0.00250  deb +0.0989  f6 fail  f4 PASS
+  -> passes family6 in 3/12 leave-one-ring-out sets
+  -> passes family4 in 6/12 leave-one-ring-out sets
+
+=== 3b. jackknife: drop one SIGN at a time from the TEST set ===
+  drop Leo          n=117  p=0.00020  deb +0.1427  f6 PASS  f4 PASS
+  drop Virgo        n=117  p=0.05189  deb +0.0613  f6 fail  f4 fail
+  drop Libra        n=119  p=0.00680  deb +0.0956  f6 fail  f4 fail
+  drop Scorpius     n=117  p=0.00310  deb +0.1085  f6 fail  f4 fail
+  drop Sagittarius  n=118  p=0.01280  deb +0.0832  f6 fail  f4 fail
+
+=== 4. GC2a coverage ===
+  ZL3b: 299 Lz loci, 294 survive clean parser, 294 label records, 147 on TEST
+  GC2a: 299 Lz loci, 91 survive clean parser, 91 label records, 26 on TEST
+
+=== 5. what drives the passer: first-unit x ring-third on TEST ===
+  third totals: [53, 47, 47]
+  ok     obs [20, 7, 14]  exp [14.8, 13.1, 13.1]
+  o      obs [16, 11, 7]  exp [12.3, 10.9, 10.9]
+  ot     obs [7, 10, 6]  exp [8.3, 7.4, 7.4]
+  y      obs [1, 8, 10]  exp [6.9, 6.1, 6.1]
+  che    obs [0, 5, 3]  exp [2.9, 2.6, 2.6]

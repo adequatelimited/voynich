@@ -1,0 +1,56 @@
+==============================================================================
+v_z1_confound_3  --  ordering / pooling / length / duplicates / measure
+sha256 ZL3b  bf5b6d4ac1e3a51b1847a9c388318d609020441ccd56984c901c32b09beccafc
+seed 408 perms 10000
+==============================================================================
+
+--- G. ordering: ZL locus order vs ZL clock order ---
+  locus order (as tested)  Delta = +0.00612  p = 0.5616
+  every TEST label carries a clock position: True
+  clock order (12:00 first) Delta = -0.00050  p = 0.8414
+  clock order, rotated to the first-written label:  Delta = +0.00260  p = 0.6982
+  rings whose order actually changes under the clock reading: see part 1
+  (only Libra r0 is non-monotone in clock)
+
+--- H. pooling: per-ring Delta, and max-over-rings with its own null ---
+  Leo r0           n=18  Delta = -0.04892  p = 0.2925
+  Leo r1           n=12  Delta = +0.08725  p = 0.2035
+  Virgo r0         n=18  Delta = +0.03952  p = 0.3780
+  Virgo r1         n=12  Delta = -0.00213  p = 0.9712
+  Libra r0         n=18  Delta = +0.07934  p = 0.0910
+  Libra r1         n=10  Delta = -0.09632  p = 0.2177
+  Scorpius r1      n=16  Delta = -0.04925  p = 0.3929
+  Scorpius r2      n=10  Delta = +0.10194  p = 0.2314
+  Sagittarius r1   n=16  Delta = -0.01053  p = 0.8619
+  Sagittarius r2   n= 9  Delta = -0.01634  p = 0.8640
+  max over the 10 rings = +0.10194, multiplicity-corrected p = 0.4731
+  -> no single ring carries a gradient that pooling could be hiding.
+
+--- I. label length: is it coupled to ring position? ---
+  Leo r0           mean len 3.83  Spearman(position, length) = +0.167
+  Leo r1           mean len 3.58  Spearman(position, length) = +0.588
+  Virgo r0         mean len 4.50  Spearman(position, length) = -0.118
+  Virgo r1         mean len 3.83  Spearman(position, length) = +0.184
+  Libra r0         mean len 3.89  Spearman(position, length) = +0.237
+  Libra r1         mean len 3.30  Spearman(position, length) = +0.178
+  Scorpius r1      mean len 3.56  Spearman(position, length) = -0.094
+  Scorpius r2      mean len 2.80  Spearman(position, length) = -0.409
+  Sagittarius r1   mean len 3.88  Spearman(position, length) = +0.350
+  Sagittarius r2   mean len 3.22  Spearman(position, length) = +0.508
+  mean over rings = +0.1592
+  mean |length difference|:  gap 1 = 1.0388   gap>=3 = 1.0677  (diff -0.0289)
+  Delta on EXACTLY length-matched pairs only: +0.05206  p = 0.2144  (g1 pairs kept: 36)
+
+--- J. duplicate label strings ---
+  identical pairs inside a TEST ring: 3, at gaps [3, 8, 10]
+  Delta with identical pairs excluded: +0.00946  p = 0.4442
+
+--- K. is the null an artefact of normalised LCS? ---
+  lcs     units  Delta = +0.00612  p = 0.5757  (2,000 draws)
+  lcs     chars  Delta = +0.01240  p = 0.3018  (2,000 draws)
+  edit    units  Delta = -0.00611  p = 0.8346  (2,000 draws)
+  edit    chars  Delta = +0.01955  p = 0.1309  (2,000 draws)
+  prefix  units  Delta = -0.00618  p = 0.4938  (2,000 draws)
+  prefix  chars  Delta = -0.00664  p = 0.4988  (2,000 draws)
+  suffix  units  Delta = +0.01239  p = 0.2529  (2,000 draws)
+  suffix  chars  Delta = +0.01393  p = 0.2744  (2,000 draws)

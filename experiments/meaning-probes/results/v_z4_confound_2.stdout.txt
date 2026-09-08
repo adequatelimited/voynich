@@ -1,0 +1,34 @@
+==============================================================================
+D1  "THIRDS OF THE RING": WHERE DOES THE REMAINDER GO?
+    TEST ring sizes [4, 4, 9, 10, 10, 12, 12, 16, 16, 18, 18, 18]
+    B = %d draws per cell (2x the registered B, to take Monte-Carlo noise
+    off the table); seeds 408 and 409 both shown.
+
+    convention         marginal              MI   debiased    p(408)  p(409)
+    floor(registered)  53/47/47          0.2963    +0.0975   0.00130 PASS / 0.00155 PASS
+    midpoint           47/53/47          0.2609    +0.0619   0.02425 fail / 0.02230 fail
+    ceil               47/47/53          0.2549    +0.0559   0.03540 fail / 0.03680 fail
+
+D2  IS THAT DIFFERENCE A PROPERTY OF THE CONVENTION OR OF THE MANUSCRIPT?
+    Same three conventions, same null, run on the 8 numeral positive
+    controls laid out in the identical sign/ring geometry. If a convention
+    were intrinsically blind, it would miss the numerals too.
+    floor(registered)  numerals detected 8/8   median debiased +0.1135   [French Roman GreekMilesian]
+    midpoint           numerals detected 8/8   median debiased +0.1108   [French Roman GreekMilesian]
+    ceil               numerals detected 8/8   median debiased +0.1294   [Italian French Roman GreekMilesian]
+
+D3  NUMBER OF BLOCKS (the protocol says "thirds"; 2 and 4 for reference)
+    2 blocks (floor): MI=0.1347  debiased=+0.0211  p=0.30943  fail
+    3 blocks (floor): MI=0.2963  debiased=+0.0975  p=0.00130  PASS
+    4 blocks (floor): MI=0.2932  debiased=+0.0224  p=0.46243  fail
+    6 blocks (floor): MI=0.4317  debiased=+0.0423  p=0.23764  fail
+
+D4  CLOCK POSITIONS (an independent, non-ordinal reading of "position in
+    the ring" that ZL records directly)
+    TEST labels carrying a clock annotation: 147 / 147
+    MI(clock third of the dial; first unit) n=147  debiased=-0.0143  p=0.59682  fail
+
+D5  THE SAME THREE CONVENTIONS ON THE FIT SIGNS (out-of-sample)
+    floor(registered)  FIT n=147  debiased=+0.0175  p=0.49233  fail
+    midpoint           FIT n=147  debiased=-0.0013  p=0.95875  fail
+    ceil               FIT n=147  debiased=-0.0028  p=0.91155  fail

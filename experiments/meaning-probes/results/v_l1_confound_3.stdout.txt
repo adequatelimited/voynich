@@ -1,0 +1,94 @@
+  sha256 ZL3b-n.txt         bf5b6d4ac1e3a51b1847a9c388318d609020441ccd56984c901c32b09beccafc
+  sha256 meaning_lib.py     aa1ee5a340923cf7bd3f5aa1d433d24c10b2db50da1e7b2da9256cd98ef42fb1
+  sha256 t_l1.py            86cd9b504ee62cbff9c3164ebfe578422729e33c808a633e8c04c492987b2576
+  sha256 results/l1.json    e9f9b5cc651fb75185e8fdece4e24e7f7f9e3ce14dcac83ff78ecc97f1dbb666
+
+==============================================================================
+D1 SYMMETRIC position control: first word of every locus, both sides
+    pages=26 label tokens=385 text tokens=491
+==============================================================================
+--- D1 symmetric first-word [final]
+    strata=79 label=323 text=332 pooled mean|lo|=0.6354  passers(|lo|>=1 & bonf p<.01)=0
+    passers: (none)
+      in     lo= -1.844  bonf p= 0.77242  lab=   0 txt=    6  strata=  4 
+      daiin  lo= -1.456  bonf p= 0.06499  lab=   1 txt=    8  strata=  8 
+      chedy  lo= -1.243  bonf p= 1.00000  lab=   0 txt=   10  strata=  6 
+      eey    lo= -0.733  bonf p= 0.45745  lab=   5 txt=   19  strata= 19 
+      n      lo=  0.517  bonf p= 1.00000  lab=   3 txt=    1  strata=  4 
+
+--- D1 symmetric first-word [initial]
+    strata=79 label=323 text=332 pooled mean|lo|=0.8132  passers(|lo|>=1 & bonf p<.01)=3
+    passers: qok, t, ot
+      daiin  lo= -3.593  bonf p= 0.02000  lab=   0 txt=    4  strata=  4 
+      qok    lo= -1.690  bonf p= 0.00250  lab=   1 txt=   45  strata= 19 PASS
+      q      lo= -0.715  bonf p= 0.77992  lab=   4 txt=   25  strata= 16 
+      ot     lo=  1.066  bonf p= 0.00250  lab=  59 txt=   13  strata= 41 PASS
+      c      lo=  1.095  bonf p= 1.00000  lab=   1 txt=    0  strata=  1 
+
+==============================================================================
+D2 RAW EVA CHARACTER level: baseline vs the same symmetric position control
+==============================================================================
+--- D2a rawchar baseline [initial]
+    strata=121 label=459 text=2504 pooled mean|lo|=0.3026  passers(|lo|>=1 & bonf p<.01)=1
+    passers: q
+      q      lo= -1.579  bonf p= 0.00220  lab=   6 txt=  470  strata= 68 PASS
+      c      lo= -0.695  bonf p= 0.00220  lab=  38 txt=  469  strata= 95 
+      s      lo= -0.329  bonf p= 0.52355  lab=  37 txt=  314  strata= 88 
+      a      lo= -0.058  bonf p= 1.00000  lab=  31 txt=  107  strata= 49 
+      d      lo=  0.254  bonf p= 1.00000  lab=  53 txt=  281  strata= 88 
+      y      lo=  0.435  bonf p= 0.25078  lab=  49 txt=  103  strata= 63 
+      o      lo=  0.784  bonf p= 0.00220  lab= 205 txt=  525  strata=111 
+
+--- D2b rawchar symmetric first-word [initial]
+    strata=74 label=250 text=271 pooled mean|lo|=0.4540  passers(|lo|>=1 & bonf p<.01)=1
+    passers: q
+      q      lo= -1.247  bonf p= 0.00220  lab=   6 txt=   46  strata= 25 PASS
+      s      lo= -0.400  bonf p= 1.00000  lab=  21 txt=   43  strata= 37 
+      y      lo= -0.236  bonf p= 1.00000  lab=  26 txt=   33  strata= 32 
+      c      lo=  0.095  bonf p= 1.00000  lab=  16 txt=   11  strata= 20 
+      d      lo=  0.190  bonf p= 1.00000  lab=  37 txt=   41  strata= 42 
+      o      lo=  0.839  bonf p= 0.00220  lab= 121 txt=   48  strata= 64 
+      a      lo=  1.348  bonf p= 1.00000  lab=   4 txt=    0  strata=  3 
+
+--- D2a rawchar baseline [final]
+    strata=121 label=459 text=2504 pooled mean|lo|=0.4903  passers(|lo|>=1 & bonf p<.01)=0
+    passers: (none)
+      n      lo= -0.556  bonf p= 0.00720  lab=  33 txt=  390  strata= 82 
+      s      lo= -0.067  bonf p= 1.00000  lab=  32 txt=   98  strata= 66 
+      l      lo= -0.029  bonf p= 1.00000  lab=  67 txt=  438  strata= 93 
+      y      lo= -0.018  bonf p= 1.00000  lab= 176 txt= 1093  strata=118 
+      r      lo=  0.025  bonf p= 1.00000  lab=  73 txt=  309  strata=101 
+      m      lo=  0.739  bonf p= 0.02160  lab=  25 txt=   48  strata= 49 
+
+--- D2b rawchar symmetric first-word [final]
+    strata=74 label=250 text=271 pooled mean|lo|=0.4246  passers(|lo|>=1 & bonf p<.01)=0
+    passers: (none)
+      n      lo= -0.626  bonf p= 0.10319  lab=  18 txt=   52  strata= 34 
+      s      lo= -0.200  bonf p= 1.00000  lab=  17 txt=   16  strata= 23 
+      l      lo= -0.100  bonf p= 1.00000  lab=  44 txt=   48  strata= 50 
+      r      lo= -0.025  bonf p= 1.00000  lab=  39 txt=   42  strata= 47 
+      y      lo=  0.257  bonf p= 1.00000  lab=  94 txt=   92  strata= 63 
+      m      lo=  1.012  bonf p= 0.09599  lab=  14 txt=    2  strata= 16 
+
+==============================================================================
+D3 text side = page-hapax tokens only (frequency channel removed)
+    pages=26 label tokens=472 text tokens=2209
+==============================================================================
+--- D3 page-hapax text [final]
+    strata=109 label=466 text=1744 pooled mean|lo|=0.5626  passers(|lo|>=1 & bonf p<.01)=1
+    passers: in
+      chedy  lo= -1.455  bonf p= 0.43496  lab=   0 txt=   34  strata= 15 
+      in     lo= -1.008  bonf p= 0.00750  lab=   1 txt=   39  strata= 28 PASS
+      eey    lo= -0.772  bonf p= 0.01000  lab=   6 txt=   71  strata= 45 
+      daiin  lo= -0.559  bonf p= 1.00000  lab=   4 txt=   29  strata= 24 
+      n      lo=  1.530  bonf p= 0.01500  lab=   7 txt=    1  strata=  8 
+
+--- D3 page-hapax text [initial]
+    strata=109 label=466 text=1744 pooled mean|lo|=0.5299  passers(|lo|>=1 & bonf p<.01)=4
+    passers: c, qok, q, ar
+      c      lo= -1.283  bonf p= 0.00500  lab=   1 txt=   44  strata= 21 PASS
+      qok    lo= -1.164  bonf p= 0.00250  lab=   2 txt=  103  strata= 52 PASS
+      q      lo= -1.121  bonf p= 0.00250  lab=   4 txt=  141  strata= 54 PASS
+      daiin  lo= -0.455  bonf p= 1.00000  lab=   2 txt=    4  strata=  5 
+      ot     lo=  0.814  bonf p= 0.00250  lab=  77 txt=  104  strata= 69 
+

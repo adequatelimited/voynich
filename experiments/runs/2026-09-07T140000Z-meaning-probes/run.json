@@ -1,0 +1,22 @@
+{
+  "id": "2026-09-07T140000Z-meaning-probes",
+  "experiment": "experiments/meaning-probes",
+  "protocol": "experiments/meaning-probes/PROTOCOL.md",
+  "protocol_commit": "9cb0a18",
+  "protocol_sha256": "26847ad7f72579958ac48ee4d284aa275df0a5a6a0143b148b39ae9c759b83dd",
+  "commands": ["python smoke.py", "python t_z1.py", "python t_z2z3.py", "python t_z4.py", "python t_r1r2.py", "python t_l1.py", "verifier scripts v_<key>_<lens>_*.py"],
+  "seed": 408,
+  "seed_deviations": "t_z4.py ring-third permutation family uses 409 (disclosed in REPORT.md section 6)",
+  "corpora": {
+    "ZL3b-n.txt": "bf5b6d4ac1e3a51b1847a9c388318d609020441ccd56984c901c32b09beccafc",
+    "GC2a-n.txt": "b09570cb6c993bc2d87134d115e60a978650a8a6495483ddbb1f6005a586096f (replication not runnable, see REPORT.md 2.8)"
+  },
+  "controls": {"Culpeper pg49513.txt": "d9bacb3247d798fcd2a8ce3b7c76222407fc0ac1c8d4242e9e8163508c10e968", "numeral series": "eight systems built into meaning_lib.py"},
+  "glyph_units": "frozen 20 byte-pair merges from PR #12 (protocol 318a679): ch dy ai ok ol ee sh in che aiin ot ar al qok or she eey ain daiin chedy",
+  "environment": "CPython 3.12, stdlib only, Windows 11",
+  "status": "completed",
+  "verdicts": {"Z1": "FAIL", "Z2": "FAIL", "Z3": "FAIL", "Z4": "FAIL (JSON records PASS; overridden by erratum)", "R1a": "PASS, no meaning claim attached", "R1b": "NOT MEASURABLE", "R1c": "FAIL", "R2": "FAIL", "L1": "FAIL", "new_verified_meanings": 0},
+  "observation_outside_registered_families": "labels depleted in EVA q-initial forms, merged log-odds -1.687, exact conditional P 2.6e-18 on TEST; not claimed",
+  "ai_agents": "tests, verification and report: Claude Code multi-agent workflow, model claude-opus-5; plan, manifest, run record and PR body: Claude Code, model claude-fable-5-1",
+  "direction_credit": "Vasily Gnuchev asked how to obtain even minor meaning after PR #12; the glyph-unit level is his re-segmentation hypothesis"
+}

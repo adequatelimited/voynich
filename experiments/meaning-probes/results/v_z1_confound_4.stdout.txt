@@ -1,0 +1,31 @@
+==============================================================================
+v_z1_confound_4  --  null calibration and dilution
+sha256 ZL3b  bf5b6d4ac1e3a51b1847a9c388318d609020441ccd56984c901c32b09beccafc
+==============================================================================
+
+--- L. negative control WITHOUT series reuse (139 distinct words) ---
+  Vulgate word types available: 42114
+  30 types reused (as in t_z1.py):    Delta = +0.03471  p = 0.0007  (null mean -0.00059 sd 0.01005)
+  139 distinct types, seed 1000      Delta = -0.01147  p = 0.4306  (null mean -0.00370 sd 0.00968)
+  139 distinct types, seed 1001      Delta = -0.00205  p = 0.8472  (null mean +0.00019 sd 0.00991)
+  139 distinct types, seed 1002      Delta = +0.01218  p = 0.1878  (null mean -0.00100 sd 0.01013)
+  139 distinct types, seed 1003      Delta = +0.01643  p = 0.1139  (null mean +0.00061 sd 0.01000)
+  139 distinct types, seed 1004      Delta = +0.00235  p = 0.9421  (null mean +0.00170 sd 0.00947)
+  ... 40 replicates. p<0.01 in 0/40 (0.000), p<0.05 in 1/40 (0.025); median p = 0.479
+  -> with distinct items per ring the null is calibrated; the two
+     significant negative controls in t_z1.py are indeed the reuse
+     artefact it names, and the Voynich run (10 distinct rings) is clean.
+
+--- M. how diluted could a real numeral system be and still hide? ---
+  real TEST rings: Delta = +0.00612 p = 0.5616 ; detection boundary Delta >= +0.04252
+  q = fraction of each ring replaced by consecutive numerals of the synthetic system
+  q      Delta      detected? 
+  0.1     +0.00476  0.00
+  0.2     +0.01217  0.05
+  0.3     +0.01620  0.15
+  0.4     +0.02726  0.30
+  0.5     +0.04732  0.40
+  0.7     +0.10013  1.00
+  1.0     +0.22122  1.00
+  (numerals are inserted AT their ring positions, so the ordinal
+   information is real; the rest of the ring stays genuine Voynich.)

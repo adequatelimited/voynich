@@ -1,0 +1,29 @@
+=== p-definition diagnosis, TEST signs, glyph units, B=10000, seed 408 ===
+statistic                           obs   debias    1sidUp  2s_min2x  2s_absdev
+MI(block;first)                  0.2019  +0.0034   0.41420   0.82840    0.89820
+MI(block;last)                   0.1628  -0.0280   0.79300   0.41400    0.39980
+MI(third;first)                  0.2963  +0.0974   0.00140   0.00280    0.00140
+MI(third;last)                   0.2404  +0.0507   0.07740   0.15480    0.12630
+chi2(first x block)             36.1940  +0.3056   0.43740   0.87480    0.94930
+chi2(last x block)              30.6347  -3.6584   0.72140   0.55720    0.52280
+
+reported by the test agent, for comparison:
+  MI(block;first)                reported   0.92231   absdev_plain   0.89820   absdev+1   0.89821
+  MI(block;last)                 reported   0.41126   absdev_plain   0.39980   absdev+1   0.39986
+  MI(third;first)                reported   0.00160   absdev_plain   0.00140   absdev+1   0.00150
+  MI(third;last)                 reported   0.11929   absdev_plain   0.12630   absdev+1   0.12639
+  chi2(first x block)            reported   0.96830   absdev_plain   0.94930   absdev+1   0.94931
+  chi2(last x block)             reported   0.53185   absdev_plain   0.52280   absdev+1   0.52285
+
+=== high-precision rerun, MI(third;first), TEST, B=200000 ===
+  seed 408: one-sided p=0.001625 (SE 0.000090)  two-sided absdev p=0.001625 (SE 0.000090)
+           null mean 0.19874 sd 0.02689 debiased +0.09760
+  seed 999: one-sided p=0.001570 (SE 0.000089)  two-sided absdev p=0.001570 (SE 0.000089)
+           null mean 0.19887 sd 0.02682 debiased +0.09747
+  Bonferroni thresholds: 6-family 0.0016667, 4-family 0.0025000
+
+=== power replication: 8 numeral systems in the observed TEST geometry ===
+  MI(block;first):  detected 6/8   median debiased +0.7091 bits
+  MI(block;last):  detected 5/8   median debiased +0.2509 bits
+  MI(third;first):  detected 3/8   median debiased +0.0963 bits
+  MI(third;last):  detected 5/8   median debiased +0.2073 bits

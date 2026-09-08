@@ -1,0 +1,55 @@
+==============================================================================
+v_z1_confound_2  --  adversarial confound audit of Z1
+sha256 ZL3b  bf5b6d4ac1e3a51b1847a9c388318d609020441ccd56984c901c32b09beccafc
+sha256 lib   aa1ee5a340923cf7bd3f5aa1d433d24c10b2db50da1e7b2da9256cd98ef42fb1
+seed 408 perms 10000
+==============================================================================
+
+--- A. independent recompute of the headline statistic ---
+  TEST | units | comma_split=True
+  Delta = +0.00612   p = 0.5616   null mean -0.00423 sd 0.01810  (g1 pairs 129, g>=3 pairs 709)
+  t_z1.py reported     Delta = +0.00612   p = 0.5616   null mean -0.00423 sd 0.01810
+  agreement on Delta: |diff| = 1.11e-16
+
+--- B. DYNAMIC RANGE: what Delta could these 139 strings produce? ---
+  best ordering  (greedy+2opt) Delta = +0.34187
+  worst ordering (greedy+2opt) Delta = -0.20462
+  null max over 10000 draws        Delta = +0.05839
+  OBSERVED                     Delta = +0.00612
+  -> the statistic is not floored/ceilinged: the same label multiset can
+     produce Delta up to +0.3419, which is 222% of the numeral median.
+
+--- C. MINIMUM DETECTABLE EFFECT (the null is ordering-independent) ---
+  permutation null: mean -0.00423 sd 0.01810
+  two-sided 1% critical |Delta - mu| = 0.04660  ->  any true ordering with
+     Delta >= +0.04237 would have been detected at p < 0.01.
+  numeral-control median Delta = 0.15396 ; gate (ii) threshold = 0.03849
+  minimum detectable Delta as a fraction of the numeral median: 27.5%
+  power AT THE GATE THRESHOLD itself (Delta = 0.03849), normal approx:
+     0.42   (the pre-registered power figure of 1.00 is measured at the
+     numeral effect size 0.1540, ~25x the gate threshold, not at the bar
+     the gate itself sets.)
+  observed Delta +0.00612, 95% interval -0.02935 .. +0.04159
+
+--- D. dropped illegible loci: true slots instead of renumbering ---
+  true-slot gaps   Delta = +0.00211  p = 0.6348  (null mean -0.00642 sd 0.01829)
+  renumbered gaps  Delta = +0.00612  p = 0.5616
+
+--- E. wrap-around: the ring treated as circular ---
+  circular gaps    Delta = +0.00165  p = 0.6297  (null mean -0.00676 sd 0.01757)
+
+--- F. ordinal systems built IN THE VOYNICH ALPHABET at Voynich length ---
+  Voynich label char alphabet (19): oeyakdlithscrnpfmgq
+  observed mean label length: 5.75 chars / 3.73 glyph units
+  ring sizes [18, 12, 18, 12, 18, 10, 16, 10, 16, 9] (identical to the test), 10000 perms, seed 408
+  system                         mean len  CHAR level               GLYPH-UNIT level        
+  VoyPositional_3+3 (6 chars)      6.00   D=+0.2457 p=0.0001 * D=+0.2521 p=0.0001 *
+  VoyPositional_2+2 (4 chars)      4.00   D=+0.2489 p=0.0001 * D=+0.2469 p=0.0001 *
+  VoyPositional_2+3 (5 chars)      5.00   D=+0.1256 p=0.0001 * D=+0.1256 p=0.0001 *
+  VoySuffix_stem+suffix            5.00   D=+0.2976 p=0.0001 * D=+0.2715 p=0.0001 *
+  VoyTally_roman-like              3.60   D=+0.1840 p=0.0001 * D=+0.1840 p=0.0001 *
+  NEG_real_Voynich_labels          5.20   D=-0.0010 p=0.7589   D=-0.0000 p=0.8780  
+  * = detected at p<0.01 in the ordinal direction.
+  (These are what a numeral system would look like if it were written in
+   the manuscript's own alphabet at the manuscript's own label length,
+   with the frozen 20 merges applied in the glyph-unit column.)

@@ -1,0 +1,146 @@
+schema_version: "1.0"
+id: "meaning-probes-zodiac-numerals-opener-labels"
+kind: research
+title: "Meaning probes: zodiac labels are not a numeral system (three well-powered nulls), no entry formula in the Recipes openers, no ending-based name/grammar split; 0 new meanings"
+summary: >-
+  First pass in the family that tries to read something rather than to fake it. Six
+  pre-registered gates at the glyph-unit level fixed by PR #12 (the frozen 20-merge list),
+  each with held-out splits, calibrated positive controls and three adversarial verifiers.
+  Nothing passed; new verified word meanings: 0. Three of the failures are results because
+  they carry measured detection floors. (1) The 294 zodiac nymph labels are not a written
+  numeral system: neighbours share no material (delta +0.006, p 0.56, 0.15 of a detection
+  floor that all eight real numeral systems exceed by 2.6-5.9x), no same-slot correspondence
+  across signs under three conventions or any rotation (implanted numbering is detected at
+  5% of labels), no positional morphology; and 258 of 294 label strings are distinct where a
+  restarting series predicts about 0.10. (2) The Recipes paragraph openers are 89.6%
+  gallows-initial against 5.5% for line openers inside paragraphs (31.8 SD), but no opener
+  word type reaches 3% where an Item/Take/Recipe formula would need 10%, so there is no
+  lexical entry formula; whether the opener gallows is an ornament is NOT MEASURABLE with
+  the registered statistic (invalid resampling null and an unfrozen control-pool scope,
+  disclosed). (3) No ending-based name/grammar split: 2 of 25 word-final glyph units clear
+  the gate where the Culpeper heading-vs-body control clears 4, and both dissolve under
+  type-level deduplication. (4) The drawn stars do not index the text. One observation
+  outside every registered family is reported without a claim: label words are strongly
+  depleted in EVA q-initial forms relative to length-matched running text on the same page
+  (log-odds -1.687, exact P 2.6e-18 held-out), proposed as the next pre-registered gate.
+branch_ids: ["statistical-structure", "layout-paleography"]
+contributors:
+  - github_id: 859355
+    github_login: "gnuchev"
+    roles: ["Conceptualization", "Supervision"]
+ai_usage:
+  status: primarily_generated
+  tools:
+    - provider: "Anthropic"
+      model_id: "claude-opus-5"
+      model_version: "Claude Code multi-agent workflow (5 test agents, 3 adversarial verifiers per test, synthesis, completeness critic), 2026-09"
+      accessed_at: "2026-09-07"
+      tasks:
+        - "Reconnaissance counts, PROTOCOL.md with frozen gates and held-out splits (committed before any statistic)"
+        - "Implementation of meaning_lib.py and the five test scripts; 34 verifier scripts (null correctness, confounds, independent re-implementation)"
+        - "REPORT.md synthesis, errata against the tests' own JSON (Z4 PASS overridden to FAIL), completeness audit"
+      human_verification: >-
+        Vasily Gnuchev approved the probe plan and reviewed the verdict summary; the
+        protocol commit (9cb0a18) precedes every result commit; every gate result was checked
+        by three adversarial verifier agents whose corrections are recorded in REPORT.md
+        section 3, and two unregistered analysis choices that decided a gate are disclosed
+        with the affected PASS overridden to FAIL. No number was hand-edited.
+    - provider: "Anthropic"
+      model_id: "claude-fable-5-1"
+      model_version: "Claude Code agent (Claude Fable 5.1), 2026-09"
+      accessed_at: "2026-09-07"
+      tasks:
+        - "The probe plan (numerals first, the opener formula, the name/grammar split) in answer to the contributor's question"
+        - "This manifest, the rights record, the run record and the PR body"
+      human_verification: >-
+        Vasily Gnuchev asked, after the re-segmentation result (PR #12), how one would now
+        try to obtain even minor meaning, and approved the plan; the glyph-unit level is his
+        re-segmentation hypothesis. The protocol was committed before any statistic was
+        computed (9cb0a18). Every gate result in REPORT.md was checked by three adversarial
+        verifiers, which corrected or withdrew a number in every test; two unregistered
+        analysis choices that decided a gate (Z4 remainder rule, L1 continuity constant) are
+        disclosed and the affected PASS is overridden to FAIL. No number was hand-edited.
+  reproducibility_notes: >-
+    Deterministic. Scripts t_z1.py, t_z2z3.py, t_z4.py, t_r1r2.py, t_l1.py in experiments/meaning-probes,
+    run from that directory against the repo-pinned corpora and the Culpeper control; smoke.py
+    checks the shared corpus objects. The GC2a replication could not be run for any test: the
+    frozen [a-z]+ tokeniser destroys 70-77% of that v101-based transcription and all of its
+    zodiac ring structure (REPORT.md section 2.8).
+changes:
+  - path: "experiments/meaning-probes/PROTOCOL.md"
+    improvement: "Pre-registered six gates (Z1-Z4 zodiac numerals, R1-R2 Recipes openers and stars, L1 label register) with held-out splits and calibrated controls."
+  - path: "experiments/meaning-probes/meaning_lib.py"
+    improvement: "Shared corpus objects: clean parser with the critique's semantics, zodiac ring/clock positions, star descriptions, glyph-unit merging, eight numeral series."
+  - path: "experiments/meaning-probes/t_z1.py"
+    improvement: "Ordinal-gradient test with power calibrated on eight numeral systems cut to the observed ring sizes."
+  - path: "experiments/meaning-probes/t_z2z3.py"
+    improvement: "Same-slot correspondence under three conventions plus rotation-invariant arm; inventory test."
+  - path: "experiments/meaning-probes/t_z4.py"
+    improvement: "Positional morphology test (tens morpheme, ordinal suffix) with rank-block statistics calibrated on the numeral series."
+  - path: "experiments/meaning-probes/t_r1r2.py"
+    improvement: "Paragraph-opener tests (gallows rate, ornament, lexical formula) and star-indexing test."
+  - path: "experiments/meaning-probes/t_l1.py"
+    improvement: "Label-register vs running-text morphology, within page, calibrated on Culpeper headings vs bodies."
+  - path: "experiments/meaning-probes/REPORT.md"
+    improvement: "Verdicts by frozen gates, measured detection floors, what survived adversarial review, errata, open questions."
+  - path: "experiments/meaning-probes/results/completeness_critic.md"
+    improvement: "Completeness audit of the pass against its own protocol; test JSON, stdout and 34 verifier outputs sit alongside it in the same directory."
+  - path: "experiments/runs/2026-09-07T140000Z-meaning-probes/run.json"
+    improvement: "Run record."
+outcomes:
+  - id: "outcome-meaning-probes"
+    family_id: "family-generative-falsification"
+    extends: "outcome-discriminating-tests"
+    before: >-
+      No pass in the repository had attempted to read anything; the zodiac labels, the
+      Recipes paragraph openers and the label register had never been tested for
+      numerals, an entry formula or a name/grammar split with calibrated power.
+    after: >-
+      The zodiac labels are excluded as a written numeral system down to about a quarter of
+      real numeral strength (three independent probes, all calibrated); the Recipes openers
+      carry no lexical entry formula; the drawn stars do not index the text; no
+      ending-based name/grammar split exists at the level the Culpeper control detects.
+      The ornament-versus-word question about the opener gallows is identified as not
+      measurable with the registered design. The q-initial depletion of labels is stated as
+      the next hypothesis. New verified meanings: 0.
+    acceptance_test: >-
+      Run the four test scripts; confirm results/: Z1 delta +0.00612 p 0.5616 on TEST with
+      all eight numeral controls at p 0.0001; Z2 convention A effect -0.00498 p 0.64; Z3
+      distinct/total 0.878; R1a 89.6% vs 5.5%; R1c top opener type 4 of 134; L1 2 of 25
+      units vs control 4 of 25; R2 nothing survives Bonferroni; q-initial merged log-odds
+      about -1.69 with exact conditional P about 2.6e-18 on TEST.
+    evidence:
+      - "experiments/meaning-probes/PROTOCOL.md"
+      - "experiments/meaning-probes/meaning_lib.py"
+      - "experiments/meaning-probes/t_z1.py"
+      - "experiments/meaning-probes/t_z2z3.py"
+      - "experiments/meaning-probes/t_z4.py"
+      - "experiments/meaning-probes/t_r1r2.py"
+      - "experiments/meaning-probes/t_l1.py"
+      - "experiments/meaning-probes/REPORT.md"
+      - "experiments/meaning-probes/results/z1.json"
+      - "experiments/meaning-probes/results/z2z3.json"
+      - "experiments/meaning-probes/results/r1r2.json"
+      - "experiments/meaning-probes/results/l1.json"
+      - "experiments/runs/2026-09-07T140000Z-meaning-probes/run.json"
+    related_outcomes: ["outcome-discriminating-tests", "outcome-clean-rerun", "outcome-adversarial-critique"]
+    claimed_cumulative_tier: 5
+    claimed_incremental_points: 2
+    claim_rationale: >-
+      Atlas "Experiments": bounded verified improvement (2) — three calibrated negative
+      results with measured detection floors that close the numeral, entry-formula and
+      ending-split hypotheses for these positions, plus an honest identification of a
+      non-measurable design. Family cumulative stays 5.
+    attribution:
+      - github_id: 859355
+        share_basis_points: 10000
+claimed_total_points: 2
+rubric_version: "0.1"
+conflicts: []
+limitations:
+  - "Not transcription-replicated: the GC2a (v101-based) replication cannot be run with the frozen tokeniser; a v101-aware parse is needed."
+  - "The ornament-versus-word branch of R1 is not measurable with the registered statistic; it needs a rebuilt design."
+  - "Two unregistered analysis choices (Z4 remainder rule, L1 continuity constant) each decided a gate outcome; both are disclosed and Z4's JSON PASS is overridden to FAIL in the report."
+  - "Power against a numeral system covering under half a ring is low (detection 0.40 at 50% coverage)."
+  - "The q-initial depletion is an observation outside every registered family and is not claimed."
+rights_manifest: "contributions/meaning-probes/rights.md"

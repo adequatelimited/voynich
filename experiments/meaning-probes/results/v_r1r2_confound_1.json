@@ -1,0 +1,1788 @@
+{
+ "inputs": {
+  "ZL3b-n.txt": "bf5b6d4ac1e3a51b1847a9c388318d609020441ccd56984c901c32b09beccafc",
+  "meaning_lib.py": "aa1ee5a340923cf7bd3f5aa1d433d24c10b2db50da1e7b2da9256cd98ef42fb1",
+  "t_r1r2.py": "2929fa7da5808539d39356fa6d34d10287ade54e8d47022294bb6fc1e8342445",
+  "results/r1r2.json": "5609bed542e5b02378d7a23f79522c2ac17a3bf67aecb15578417c7ef1540f51",
+  "PROTOCOL.md": "26847ad7f72579958ac48ee4d284aa275df0a5a6a0143b148b39ae9c759b83dd"
+ },
+ "seed": 408,
+ "n_draws": 10000,
+ "A_r1a_length": {
+  "TEST_even": {
+   "n_paragraphs": 134,
+   "n_openers": 134,
+   "rate_openers": 0.8955223880597015,
+   "n_line_initial": 380,
+   "rate_line_initial": 0.05526315789473684,
+   "n_all": 5056,
+   "rate_all": 0.07832278481012658,
+   "mean_len_openers": 6.7835820895522385,
+   "mean_len_line_initial": 5.302631578947368,
+   "mean_len_all": 5.2505933544303796,
+   "gallows_rate_by_length_allwords": {
+    "1": [
+     135,
+     0.0
+    ],
+    "2": [
+     286,
+     0.014
+    ],
+    "3": [
+     317,
+     0.1041
+    ],
+    "4": [
+     824,
+     0.0667
+    ],
+    "5": [
+     1252,
+     0.0879
+    ],
+    "6": [
+     1076,
+     0.0809
+    ],
+    "7": [
+     700,
+     0.0743
+    ],
+    "8": [
+     290,
+     0.1
+    ],
+    "9": [
+     132,
+     0.1667
+    ],
+    "10": [
+     25,
+     0.12
+    ],
+    "11": [
+     13,
+     0.0769
+    ],
+    "12": [
+     3,
+     0.0
+    ],
+    "13": [
+     2,
+     0.0
+    ],
+    "14": [
+     1,
+     0.0
+    ]
+   },
+   "length_matched_null": {
+    "obs": 0.8955223880597015,
+    "null_mean": 0.09620298507462686,
+    "null_sd": 0.025165856327197866,
+    "sd_units": 31.762058584162478,
+    "p_two_sided": 9.999000099990002e-05
+   },
+   "length_matched_null_vs_line_initial": {
+    "n_used": 134,
+    "obs": 0.8955223880597015,
+    "null_mean": 0.06184776119402985,
+    "null_sd": 0.020380694135108447,
+    "sd_units": 40.905114484278364,
+    "p_two_sided": 9.999000099990002e-05
+   }
+  },
+  "FIT_odd": {
+   "n_paragraphs": 151,
+   "n_openers": 151,
+   "rate_openers": 0.8609271523178808,
+   "n_line_initial": 419,
+   "rate_line_initial": 0.059665871121718374,
+   "n_all": 5780,
+   "rate_all": 0.09273356401384084,
+   "mean_len_openers": 6.364238410596027,
+   "mean_len_line_initial": 5.219570405727923,
+   "mean_len_all": 5.182525951557094,
+   "gallows_rate_by_length_allwords": {
+    "1": [
+     164,
+     0.0122
+    ],
+    "2": [
+     346,
+     0.0202
+    ],
+    "3": [
+     388,
+     0.1443
+    ],
+    "4": [
+     937,
+     0.0982
+    ],
+    "5": [
+     1439,
+     0.098
+    ],
+    "6": [
+     1287,
+     0.0862
+    ],
+    "7": [
+     746,
+     0.0979
+    ],
+    "8": [
+     300,
+     0.08
+    ],
+    "9": [
+     108,
+     0.1389
+    ],
+    "10": [
+     46,
+     0.2391
+    ],
+    "11": [
+     13,
+     0.2308
+    ],
+    "12": [
+     5,
+     0.2
+    ],
+    "13": [
+     1,
+     0.0
+    ]
+   },
+   "length_matched_null": {
+    "obs": 0.8609271523178808,
+    "null_mean": 0.10499867549668875,
+    "null_sd": 0.024638877847230886,
+    "sd_units": 30.68031269557795,
+    "p_two_sided": 9.999000099990002e-05
+   },
+   "length_matched_null_vs_line_initial": {
+    "n_used": 150,
+    "obs": 0.86,
+    "null_mean": 0.051734,
+    "null_sd": 0.01758034684822728,
+    "sd_units": 45.975543428001345,
+    "p_two_sided": 9.999000099990002e-05
+   }
+  },
+  "ALL": {
+   "n_paragraphs": 285,
+   "n_openers": 285,
+   "rate_openers": 0.8771929824561403,
+   "n_line_initial": 799,
+   "rate_line_initial": 0.057571964956195244,
+   "n_all": 10836,
+   "rate_all": 0.08600959763750461,
+   "mean_len_openers": 6.56140350877193,
+   "mean_len_line_initial": 5.259073842302879,
+   "mean_len_all": 5.214285714285714,
+   "gallows_rate_by_length_allwords": {
+    "1": [
+     299,
+     0.0067
+    ],
+    "2": [
+     632,
+     0.0174
+    ],
+    "3": [
+     705,
+     0.1262
+    ],
+    "4": [
+     1761,
+     0.0835
+    ],
+    "5": [
+     2691,
+     0.0933
+    ],
+    "6": [
+     2363,
+     0.0838
+    ],
+    "7": [
+     1446,
+     0.0864
+    ],
+    "8": [
+     590,
+     0.0898
+    ],
+    "9": [
+     240,
+     0.1542
+    ],
+    "10": [
+     71,
+     0.1972
+    ],
+    "11": [
+     26,
+     0.1538
+    ],
+    "12": [
+     8,
+     0.125
+    ],
+    "13": [
+     3,
+     0.0
+    ],
+    "14": [
+     1,
+     0.0
+    ]
+   },
+   "length_matched_null": {
+    "obs": 0.8771929824561403,
+    "null_mean": 0.09872210526315789,
+    "null_sd": 0.017716243520178695,
+    "sd_units": 43.94108019040881,
+    "p_two_sided": 9.999000099990002e-05
+   },
+   "length_matched_null_vs_line_initial": {
+    "n_used": 284,
+    "obs": 0.8767605633802817,
+    "null_mean": 0.06023943661971831,
+    "null_sd": 0.014153769737000147,
+    "sd_units": 57.68930411705446,
+    "p_two_sided": 9.999000099990002e-05
+   }
+  }
+ },
+ "B_parser_dropping": {
+  "TEST_even": {
+   "n_paragraph_first_loci": 134,
+   "n_paragraph_first_token_dropped": 1,
+   "frac_paragraph_first_dropped": 0.007462686567164179,
+   "n_internal_line_loci": 380,
+   "n_internal_line_first_token_dropped": 5,
+   "frac_internal_line_first_dropped": 0.013157894736842105,
+   "raw_tokens": 5086,
+   "kept_tokens": 5056,
+   "kept_fraction": 0.9941014549744397
+  },
+  "FIT_odd": {
+   "n_paragraph_first_loci": 151,
+   "n_paragraph_first_token_dropped": 2,
+   "frac_paragraph_first_dropped": 0.013245033112582781,
+   "n_internal_line_loci": 419,
+   "n_internal_line_first_token_dropped": 2,
+   "frac_internal_line_first_dropped": 0.00477326968973747,
+   "raw_tokens": 5807,
+   "kept_tokens": 5780,
+   "kept_fraction": 0.9953504391251937
+  },
+  "ALL": {
+   "n_paragraph_first_loci": 285,
+   "n_paragraph_first_token_dropped": 3,
+   "frac_paragraph_first_dropped": 0.010526315789473684,
+   "n_internal_line_loci": 799,
+   "n_internal_line_first_token_dropped": 7,
+   "frac_internal_line_first_dropped": 0.008760951188986232,
+   "raw_tokens": 10893,
+   "kept_tokens": 10836,
+   "kept_fraction": 0.9947672817405674
+  }
+ },
+ "C_hand_lang": {
+  "TEST_even": {
+   "pages": [
+    "f104r",
+    "f104v",
+    "f106r",
+    "f106v",
+    "f108r",
+    "f108v",
+    "f112r",
+    "f112v",
+    "f114r",
+    "f114v",
+    "f116r"
+   ],
+   "hands_by_page": {
+    "3": 11
+   },
+   "langs_by_page": {
+    "B": 11
+   },
+   "hands_by_paragraph": {
+    "3": 134
+   },
+   "paragraphs_per_page": {
+    "f104r": 13,
+    "f104v": 13,
+    "f106r": 15,
+    "f106v": 15,
+    "f108r": 14,
+    "f108v": 7,
+    "f112r": 11,
+    "f112v": 13,
+    "f114r": 13,
+    "f114v": 12,
+    "f116r": 8
+   }
+  },
+  "FIT_odd": {
+   "pages": [
+    "f103r",
+    "f103v",
+    "f105r",
+    "f105v",
+    "f107r",
+    "f107v",
+    "f111r",
+    "f111v",
+    "f113r",
+    "f113v",
+    "f115r",
+    "f115v"
+   ],
+   "hands_by_page": {
+    "3": 11,
+    "@": 1
+   },
+   "langs_by_page": {
+    "B": 12
+   },
+   "hands_by_paragraph": {
+    "3": 138,
+    "@": 13
+   },
+   "paragraphs_per_page": {
+    "f103r": 18,
+    "f103v": 13,
+    "f105r": 10,
+    "f105v": 10,
+    "f107r": 14,
+    "f107v": 15,
+    "f111r": 6,
+    "f111v": 8,
+    "f113r": 16,
+    "f113v": 15,
+    "f115r": 13,
+    "f115v": 13
+   }
+  },
+  "ALL": {
+   "pages": [
+    "f103r",
+    "f103v",
+    "f104r",
+    "f104v",
+    "f105r",
+    "f105v",
+    "f106r",
+    "f106v",
+    "f107r",
+    "f107v",
+    "f108r",
+    "f108v",
+    "f111r",
+    "f111v",
+    "f112r",
+    "f112v",
+    "f113r",
+    "f113v",
+    "f114r",
+    "f114v",
+    "f115r",
+    "f115v",
+    "f116r"
+   ],
+   "hands_by_page": {
+    "3": 22,
+    "@": 1
+   },
+   "langs_by_page": {
+    "B": 23
+   },
+   "hands_by_paragraph": {
+    "3": 272,
+    "@": 13
+   },
+   "paragraphs_per_page": {
+    "f103r": 18,
+    "f103v": 13,
+    "f104r": 13,
+    "f104v": 13,
+    "f105r": 10,
+    "f105v": 10,
+    "f106r": 15,
+    "f106v": 15,
+    "f107r": 14,
+    "f107v": 15,
+    "f108r": 14,
+    "f108v": 7,
+    "f111r": 6,
+    "f111v": 8,
+    "f112r": 11,
+    "f112v": 13,
+    "f113r": 16,
+    "f113v": 15,
+    "f114r": 13,
+    "f114v": 12,
+    "f115r": 13,
+    "f115v": 13,
+    "f116r": 8
+   }
+  }
+ },
+ "D_b_anatomy": {
+  "TEST_even": {
+   "n_gallows_openers": 120,
+   "n_matched_exact": 92,
+   "n_dropped_exact": 28,
+   "mean_control_cell_tokens": 8.793478260869565,
+   "median_control_cell_tokens": 5,
+   "frac_openers_whose_cell_has_1_token": 0.05434782608695652,
+   "frac_openers_whose_cell_has_le3_types": 0.31521739130434784,
+   "attest_rate_by_length_controlpool": {
+    "2": [
+     2,
+     1.0
+    ],
+    "3": [
+     29,
+     0.9655
+    ],
+    "4": [
+     48,
+     0.5625
+    ],
+    "5": [
+     99,
+     0.7475
+    ],
+    "6": [
+     63,
+     0.5238
+    ],
+    "7": [
+     24,
+     0.375
+    ],
+    "8": [
+     9,
+     0.5556
+    ],
+    "9": [
+     2,
+     0.5
+    ]
+   },
+   "mean_control_minus_opener_length_relaxed": -0.23923611111111112,
+   "relaxed_substitution_for_exact_dropped_openers": [
+    [
+     "polchechy",
+     9,
+     8.0,
+     1.0
+    ],
+    [
+     "pcheodair",
+     9,
+     8.0,
+     1.0
+    ],
+    [
+     "psheodalo",
+     9,
+     8.0,
+     1.0
+    ],
+    [
+     "pshodaiin",
+     9,
+     8.0,
+     1.0
+    ],
+    [
+     "pshodalos",
+     9,
+     8.0,
+     1.0
+    ],
+    [
+     "pchodaiin",
+     9,
+     8.0,
+     1.0
+    ],
+    [
+     "py",
+     2,
+     3.0,
+     1.0
+    ],
+    [
+     "fcheokair",
+     9,
+     5.67,
+     0.833
+    ],
+    [
+     "folaiin",
+     7,
+     6.0,
+     1.0
+    ],
+    [
+     "poro",
+     4,
+     4.33,
+     1.0
+    ],
+    [
+     "pchedaiin",
+     9,
+     8.0,
+     1.0
+    ],
+    [
+     "polkeedal",
+     9,
+     8.0,
+     1.0
+    ],
+    [
+     "polshedaiin",
+     11,
+     5.96,
+     0.75
+    ],
+    [
+     "folchey",
+     7,
+     6.0,
+     1.0
+    ],
+    [
+     "poar",
+     4,
+     4.33,
+     1.0
+    ],
+    [
+     "pcholkeedy",
+     10,
+     8.0,
+     1.0
+    ],
+    [
+     "pair",
+     4,
+     4.33,
+     1.0
+    ],
+    [
+     "pair",
+     4,
+     4.33,
+     1.0
+    ],
+    [
+     "pcheokeey",
+     9,
+     8.0,
+     1.0
+    ],
+    [
+     "pchoraiin",
+     9,
+     8.0,
+     1.0
+    ],
+    [
+     "poly",
+     4,
+     4.33,
+     1.0
+    ],
+    [
+     "fdeechdy",
+     8,
+     6.0,
+     1.0
+    ],
+    [
+     "pchedairs",
+     9,
+     8.0,
+     1.0
+    ],
+    [
+     "tcheodaiin",
+     10,
+     9.0,
+     1.0
+    ],
+    [
+     "pchedchdy",
+     9,
+     8.0,
+     1.0
+    ],
+    [
+     "pcholchdy",
+     9,
+     8.0,
+     1.0
+    ],
+    [
+     "pcharalor",
+     9,
+     8.0,
+     1.0
+    ],
+    [
+     "pchallarar",
+     10,
+     8.0,
+     1.0
+    ]
+   ],
+   "mean_control_minus_opener_length_relaxed_for_dropped": -1.0257142857142856,
+   "opener_attest_matched": 0.6413043478260869,
+   "opener_attest_dropped": 0.5
+  },
+  "FIT_odd": {
+   "n_gallows_openers": 130,
+   "n_matched_exact": 126,
+   "n_dropped_exact": 4,
+   "mean_control_cell_tokens": 10.80952380952381,
+   "median_control_cell_tokens": 6,
+   "frac_openers_whose_cell_has_1_token": 0.0873015873015873,
+   "frac_openers_whose_cell_has_le3_types": 0.1984126984126984,
+   "attest_rate_by_length_controlpool": {
+    "1": [
+     2,
+     0.0
+    ],
+    "2": [
+     7,
+     1.0
+    ],
+    "3": [
+     47,
+     0.8936
+    ],
+    "4": [
+     86,
+     0.7907
+    ],
+    "5": [
+     122,
+     0.8033
+    ],
+    "6": [
+     80,
+     0.675
+    ],
+    "7": [
+     35,
+     0.6
+    ],
+    "8": [
+     11,
+     0.7273
+    ],
+    "9": [
+     8,
+     0.125
+    ],
+    "10": [
+     6,
+     0.1667
+    ],
+    "11": [
+     2,
+     0.0
+    ]
+   },
+   "mean_control_minus_opener_length_relaxed": -0.0615897435897436,
+   "relaxed_substitution_for_exact_dropped_openers": [
+    [
+     "pcholkchdy",
+     10,
+     9.0,
+     1.0
+    ],
+    [
+     "polcheolkain",
+     12,
+     5.66,
+     0.9
+    ],
+    [
+     "pcheodaiin",
+     10,
+     9.0,
+     1.0
+    ],
+    [
+     "fdar",
+     4,
+     4.33,
+     0.833
+    ]
+   ],
+   "mean_control_minus_opener_length_relaxed_for_dropped": -2.0025,
+   "opener_attest_matched": 0.7142857142857143,
+   "opener_attest_dropped": 0.5
+  },
+  "ALL": {
+   "n_gallows_openers": 250,
+   "n_matched_exact": 242,
+   "n_dropped_exact": 8,
+   "mean_control_cell_tokens": 17.425619834710744,
+   "median_control_cell_tokens": 11,
+   "frac_openers_whose_cell_has_1_token": 0.1322314049586777,
+   "frac_openers_whose_cell_has_le3_types": 0.19421487603305784,
+   "attest_rate_by_length_controlpool": {
+    "1": [
+     2,
+     0.0
+    ],
+    "2": [
+     9,
+     1.0
+    ],
+    "3": [
+     76,
+     0.9211
+    ],
+    "4": [
+     134,
+     0.709
+    ],
+    "5": [
+     221,
+     0.7783
+    ],
+    "6": [
+     143,
+     0.6084
+    ],
+    "7": [
+     59,
+     0.5085
+    ],
+    "8": [
+     20,
+     0.65
+    ],
+    "9": [
+     10,
+     0.2
+    ],
+    "10": [
+     6,
+     0.1667
+    ],
+    "11": [
+     2,
+     0.0
+    ]
+   },
+   "mean_control_minus_opener_length_relaxed": -0.043972972972972965,
+   "relaxed_substitution_for_exact_dropped_openers": [
+    [
+     "pcholkchdy",
+     10,
+     9.0,
+     1.0
+    ],
+    [
+     "py",
+     2,
+     2.75,
+     0.875
+    ],
+    [
+     "polcheolkain",
+     12,
+     5.76,
+     0.851
+    ],
+    [
+     "polshedaiin",
+     11,
+     9.0,
+     1.0
+    ],
+    [
+     "pcholkeedy",
+     10,
+     9.0,
+     1.0
+    ],
+    [
+     "pcheodaiin",
+     10,
+     9.0,
+     1.0
+    ],
+    [
+     "fdar",
+     4,
+     4.5,
+     0.75
+    ],
+    [
+     "pchallarar",
+     10,
+     9.0,
+     1.0
+    ]
+   ],
+   "mean_control_minus_opener_length_relaxed_for_dropped": -1.37375,
+   "opener_attest_matched": 0.6652892561983471,
+   "opener_attest_dropped": 0.5
+  }
+ },
+ "E_b_frequency": {
+  "TEST_even": {
+   "E1_mean_log2_freq_openers": 0.6886888863546285,
+   "E1_mean_log2_freq_control": 0.8935014623636166,
+   "E1_control_sd": 0.10436140422356492,
+   "E1_sd_units": -1.9625318146374764,
+   "E1_p": 0.046476761619190406,
+   "E1_frac_openers_freq_le2": 0.7608695652173914,
+   "E1_frac_control_freq_le2": 0.6979619565217391,
+   "E1_frac_le2_sd_units": 1.6177980893458888,
+   "E2_n_matched": 82,
+   "E2_n_dropped": 38,
+   "E2_obs": 0.5975609756097561,
+   "E2_control_mean": 0.5842585365853659,
+   "E2_control_sd": 0.03381486366705799,
+   "E2_sd_units": 0.3933902900028332,
+   "E2_p": 0.7207279272072793,
+   "E3_n_matched": 92,
+   "E3_obs": 0.6413043478260869,
+   "E3_control_mean": 0.6097032608695652,
+   "E3_control_sd": 0.04218653589013201,
+   "E3_sd_units": 0.7490799206368036,
+   "E3_p": 0.5273472652734726,
+   "E4_n_matched": 98,
+   "E4_obs": 0.6632653061224489,
+   "E4_control_mean": 0.6645622448979591,
+   "E4_control_sd": 0.03899562394767145,
+   "E4_sd_units": -0.033258572224682294,
+   "E4_p": 1.0
+  },
+  "FIT_odd": {
+   "E1_mean_log2_freq_openers": 0.7240083250974148,
+   "E1_mean_log2_freq_control": 0.9748651406594746,
+   "E1_control_sd": 0.08922448944652091,
+   "E1_sd_units": -2.8115242476385096,
+   "E1_p": 0.004497751124437781,
+   "E1_frac_openers_freq_le2": 0.753968253968254,
+   "E1_frac_control_freq_le2": 0.659420634920635,
+   "E1_frac_le2_sd_units": 2.528933100446245,
+   "E2_n_matched": 120,
+   "E2_n_dropped": 10,
+   "E2_obs": 0.7,
+   "E2_control_mean": 0.7747583333333333,
+   "E2_control_sd": 0.027844403297043123,
+   "E2_sd_units": -2.68486031235125,
+   "E2_p": 0.010198980101989802,
+   "E3_n_matched": 126,
+   "E3_obs": 0.7142857142857143,
+   "E3_control_mean": 0.7750531746031746,
+   "E3_control_sd": 0.03049739023956479,
+   "E3_sd_units": -1.9925462421576519,
+   "E3_p": 0.05369463053694631,
+   "E4_n_matched": 127,
+   "E4_obs": 0.7165354330708661,
+   "E4_control_mean": 0.8043952755905511,
+   "E4_control_sd": 0.028720739001662225,
+   "E4_sd_units": -3.059108002569158,
+   "E4_p": 0.0030996900309969004
+  },
+  "ALL": {
+   "E1_mean_log2_freq_openers": 0.6642741797865389,
+   "E1_mean_log2_freq_control": 0.8824305998701261,
+   "E1_control_sd": 0.0614140580566228,
+   "E1_sd_units": -3.5522228458254683,
+   "E1_p": 0.0009995002498750624,
+   "E1_frac_openers_freq_le2": 0.7727272727272727,
+   "E1_frac_control_freq_le2": 0.7029545454545455,
+   "E1_frac_le2_sd_units": 2.888208932055467,
+   "E2_n_matched": 229,
+   "E2_n_dropped": 21,
+   "E2_obs": 0.6462882096069869,
+   "E2_control_mean": 0.7069174672489082,
+   "E2_control_sd": 0.021572807175581788,
+   "E2_sd_units": -2.8104482253263505,
+   "E2_p": 0.004899510048995101,
+   "E3_n_matched": 242,
+   "E3_obs": 0.6652892561983471,
+   "E3_control_mean": 0.689561570247934,
+   "E3_control_sd": 0.02431531552237029,
+   "E3_sd_units": -0.998231506691991,
+   "E3_p": 0.3418658134186581,
+   "E4_n_matched": 244,
+   "E4_obs": 0.6680327868852459,
+   "E4_control_mean": 0.7350491803278688,
+   "E4_control_sd": 0.023211959807615066,
+   "E4_sd_units": -2.887149297089385,
+   "E4_p": 0.003999600039996
+  }
+ },
+ "F_r2_page_transcriber": {
+  "TEST_even": {
+   "n_star_paragraphs": 130,
+   "per_page": {
+    "f58r": {
+     "n": 2,
+     "tail": 0,
+     "dotted": 0,
+     "pt8": 0,
+     "pt7": 1,
+     "uncertain": 0
+    },
+    "f58v": {
+     "n": 1,
+     "tail": 1,
+     "dotted": 0,
+     "pt8": 0,
+     "pt7": 0,
+     "uncertain": 0
+    },
+    "f104r": {
+     "n": 12,
+     "tail": 12,
+     "dotted": 2,
+     "pt8": 4,
+     "pt7": 6,
+     "uncertain": 1
+    },
+    "f104v": {
+     "n": 12,
+     "tail": 12,
+     "dotted": 7,
+     "pt8": 11,
+     "pt7": 0,
+     "uncertain": 1
+    },
+    "f106r": {
+     "n": 15,
+     "tail": 15,
+     "dotted": 8,
+     "pt8": 7,
+     "pt7": 7,
+     "uncertain": 0
+    },
+    "f106v": {
+     "n": 14,
+     "tail": 14,
+     "dotted": 7,
+     "pt8": 9,
+     "pt7": 3,
+     "uncertain": 1
+    },
+    "f108r": {
+     "n": 14,
+     "tail": 14,
+     "dotted": 1,
+     "pt8": 0,
+     "pt7": 14,
+     "uncertain": 1
+    },
+    "f108v": {
+     "n": 7,
+     "tail": 7,
+     "dotted": 4,
+     "pt8": 3,
+     "pt7": 4,
+     "uncertain": 0
+    },
+    "f112r": {
+     "n": 10,
+     "tail": 10,
+     "dotted": 5,
+     "pt8": 2,
+     "pt7": 8,
+     "uncertain": 0
+    },
+    "f112v": {
+     "n": 13,
+     "tail": 13,
+     "dotted": 7,
+     "pt8": 3,
+     "pt7": 9,
+     "uncertain": 4
+    },
+    "f114r": {
+     "n": 12,
+     "tail": 12,
+     "dotted": 7,
+     "pt8": 2,
+     "pt7": 8,
+     "uncertain": 1
+    },
+    "f114v": {
+     "n": 12,
+     "tail": 12,
+     "dotted": 6,
+     "pt8": 1,
+     "pt7": 11,
+     "uncertain": 0
+    },
+    "f116r": {
+     "n": 6,
+     "tail": 0,
+     "dotted": 3,
+     "pt8": 1,
+     "pt7": 4,
+     "uncertain": 0
+    }
+   },
+   "pages_all_or_nothing_tail": 13,
+   "pages_all_or_nothing_dotted": 2,
+   "pages_all_or_nothing_pt8": 3,
+   "n_pages": 13,
+   "lang_of_pages": {
+    "f58r": "A",
+    "f58v": "A",
+    "f104r": "B",
+    "f104v": "B",
+    "f106r": "B",
+    "f106v": "B",
+    "f108r": "B",
+    "f108v": "B",
+    "f112r": "B",
+    "f112v": "B",
+    "f114r": "B",
+    "f114v": "B",
+    "f116r": "B"
+   },
+   "hand_of_pages": {
+    "f58r": "3",
+    "f58v": "3",
+    "f104r": "3",
+    "f104v": "3",
+    "f106r": "3",
+    "f106v": "3",
+    "f108r": "3",
+    "f108v": "3",
+    "f112r": "3",
+    "f112v": "3",
+    "f114r": "3",
+    "f114v": "3",
+    "f116r": "3"
+   }
+  },
+  "FIT_odd": {
+   "n_star_paragraphs": 141,
+   "per_page": {
+    "f103r": {
+     "n": 16,
+     "tail": 1,
+     "dotted": 0,
+     "pt8": 8,
+     "pt7": 8,
+     "uncertain": 1
+    },
+    "f103v": {
+     "n": 13,
+     "tail": 0,
+     "dotted": 7,
+     "pt8": 4,
+     "pt7": 8,
+     "uncertain": 0
+    },
+    "f105r": {
+     "n": 8,
+     "tail": 8,
+     "dotted": 5,
+     "pt8": 2,
+     "pt7": 6,
+     "uncertain": 0
+    },
+    "f105v": {
+     "n": 8,
+     "tail": 8,
+     "dotted": 5,
+     "pt8": 1,
+     "pt7": 7,
+     "uncertain": 0
+    },
+    "f107r": {
+     "n": 14,
+     "tail": 14,
+     "dotted": 7,
+     "pt8": 2,
+     "pt7": 12,
+     "uncertain": 1
+    },
+    "f107v": {
+     "n": 14,
+     "tail": 14,
+     "dotted": 7,
+     "pt8": 6,
+     "pt7": 6,
+     "uncertain": 2
+    },
+    "f111r": {
+     "n": 6,
+     "tail": 6,
+     "dotted": 4,
+     "pt8": 2,
+     "pt7": 4,
+     "uncertain": 0
+    },
+    "f111v": {
+     "n": 8,
+     "tail": 3,
+     "dotted": 5,
+     "pt8": 4,
+     "pt7": 4,
+     "uncertain": 1
+    },
+    "f113r": {
+     "n": 14,
+     "tail": 14,
+     "dotted": 6,
+     "pt8": 4,
+     "pt7": 9,
+     "uncertain": 1
+    },
+    "f113v": {
+     "n": 15,
+     "tail": 15,
+     "dotted": 8,
+     "pt8": 4,
+     "pt7": 11,
+     "uncertain": 0
+    },
+    "f115r": {
+     "n": 13,
+     "tail": 13,
+     "dotted": 7,
+     "pt8": 9,
+     "pt7": 3,
+     "uncertain": 0
+    },
+    "f115v": {
+     "n": 12,
+     "tail": 12,
+     "dotted": 6,
+     "pt8": 10,
+     "pt7": 1,
+     "uncertain": 1
+    }
+   },
+   "pages_all_or_nothing_tail": 10,
+   "pages_all_or_nothing_dotted": 1,
+   "pages_all_or_nothing_pt8": 0,
+   "n_pages": 12,
+   "lang_of_pages": {
+    "f103r": "B",
+    "f103v": "B",
+    "f105r": "B",
+    "f105v": "B",
+    "f107r": "B",
+    "f107v": "B",
+    "f111r": "B",
+    "f111v": "B",
+    "f113r": "B",
+    "f113v": "B",
+    "f115r": "B",
+    "f115v": "B"
+   },
+   "hand_of_pages": {
+    "f103r": "3",
+    "f103v": "3",
+    "f105r": "3",
+    "f105v": "3",
+    "f107r": "3",
+    "f107v": "3",
+    "f111r": "3",
+    "f111v": "3",
+    "f113r": "3",
+    "f113v": "3",
+    "f115r": "@",
+    "f115v": "3"
+   }
+  },
+  "ALL": {
+   "n_star_paragraphs": 271,
+   "per_page": {
+    "f58r": {
+     "n": 2,
+     "tail": 0,
+     "dotted": 0,
+     "pt8": 0,
+     "pt7": 1,
+     "uncertain": 0
+    },
+    "f58v": {
+     "n": 1,
+     "tail": 1,
+     "dotted": 0,
+     "pt8": 0,
+     "pt7": 0,
+     "uncertain": 0
+    },
+    "f103r": {
+     "n": 16,
+     "tail": 1,
+     "dotted": 0,
+     "pt8": 8,
+     "pt7": 8,
+     "uncertain": 1
+    },
+    "f103v": {
+     "n": 13,
+     "tail": 0,
+     "dotted": 7,
+     "pt8": 4,
+     "pt7": 8,
+     "uncertain": 0
+    },
+    "f104r": {
+     "n": 12,
+     "tail": 12,
+     "dotted": 2,
+     "pt8": 4,
+     "pt7": 6,
+     "uncertain": 1
+    },
+    "f104v": {
+     "n": 12,
+     "tail": 12,
+     "dotted": 7,
+     "pt8": 11,
+     "pt7": 0,
+     "uncertain": 1
+    },
+    "f105r": {
+     "n": 8,
+     "tail": 8,
+     "dotted": 5,
+     "pt8": 2,
+     "pt7": 6,
+     "uncertain": 0
+    },
+    "f105v": {
+     "n": 8,
+     "tail": 8,
+     "dotted": 5,
+     "pt8": 1,
+     "pt7": 7,
+     "uncertain": 0
+    },
+    "f106r": {
+     "n": 15,
+     "tail": 15,
+     "dotted": 8,
+     "pt8": 7,
+     "pt7": 7,
+     "uncertain": 0
+    },
+    "f106v": {
+     "n": 14,
+     "tail": 14,
+     "dotted": 7,
+     "pt8": 9,
+     "pt7": 3,
+     "uncertain": 1
+    },
+    "f107r": {
+     "n": 14,
+     "tail": 14,
+     "dotted": 7,
+     "pt8": 2,
+     "pt7": 12,
+     "uncertain": 1
+    },
+    "f107v": {
+     "n": 14,
+     "tail": 14,
+     "dotted": 7,
+     "pt8": 6,
+     "pt7": 6,
+     "uncertain": 2
+    },
+    "f108r": {
+     "n": 14,
+     "tail": 14,
+     "dotted": 1,
+     "pt8": 0,
+     "pt7": 14,
+     "uncertain": 1
+    },
+    "f108v": {
+     "n": 7,
+     "tail": 7,
+     "dotted": 4,
+     "pt8": 3,
+     "pt7": 4,
+     "uncertain": 0
+    },
+    "f111r": {
+     "n": 6,
+     "tail": 6,
+     "dotted": 4,
+     "pt8": 2,
+     "pt7": 4,
+     "uncertain": 0
+    },
+    "f111v": {
+     "n": 8,
+     "tail": 3,
+     "dotted": 5,
+     "pt8": 4,
+     "pt7": 4,
+     "uncertain": 1
+    },
+    "f112r": {
+     "n": 10,
+     "tail": 10,
+     "dotted": 5,
+     "pt8": 2,
+     "pt7": 8,
+     "uncertain": 0
+    },
+    "f112v": {
+     "n": 13,
+     "tail": 13,
+     "dotted": 7,
+     "pt8": 3,
+     "pt7": 9,
+     "uncertain": 4
+    },
+    "f113r": {
+     "n": 14,
+     "tail": 14,
+     "dotted": 6,
+     "pt8": 4,
+     "pt7": 9,
+     "uncertain": 1
+    },
+    "f113v": {
+     "n": 15,
+     "tail": 15,
+     "dotted": 8,
+     "pt8": 4,
+     "pt7": 11,
+     "uncertain": 0
+    },
+    "f114r": {
+     "n": 12,
+     "tail": 12,
+     "dotted": 7,
+     "pt8": 2,
+     "pt7": 8,
+     "uncertain": 1
+    },
+    "f114v": {
+     "n": 12,
+     "tail": 12,
+     "dotted": 6,
+     "pt8": 1,
+     "pt7": 11,
+     "uncertain": 0
+    },
+    "f115r": {
+     "n": 13,
+     "tail": 13,
+     "dotted": 7,
+     "pt8": 9,
+     "pt7": 3,
+     "uncertain": 0
+    },
+    "f115v": {
+     "n": 12,
+     "tail": 12,
+     "dotted": 6,
+     "pt8": 10,
+     "pt7": 1,
+     "uncertain": 1
+    },
+    "f116r": {
+     "n": 6,
+     "tail": 0,
+     "dotted": 3,
+     "pt8": 1,
+     "pt7": 4,
+     "uncertain": 0
+    }
+   },
+   "pages_all_or_nothing_tail": 23,
+   "pages_all_or_nothing_dotted": 3,
+   "pages_all_or_nothing_pt8": 3,
+   "n_pages": 25,
+   "lang_of_pages": {
+    "f58r": "A",
+    "f58v": "A",
+    "f103r": "B",
+    "f103v": "B",
+    "f104r": "B",
+    "f104v": "B",
+    "f105r": "B",
+    "f105v": "B",
+    "f106r": "B",
+    "f106v": "B",
+    "f107r": "B",
+    "f107v": "B",
+    "f108r": "B",
+    "f108v": "B",
+    "f111r": "B",
+    "f111v": "B",
+    "f112r": "B",
+    "f112v": "B",
+    "f113r": "B",
+    "f113v": "B",
+    "f114r": "B",
+    "f114v": "B",
+    "f115r": "B",
+    "f115v": "B",
+    "f116r": "B"
+   },
+   "hand_of_pages": {
+    "f58r": "3",
+    "f58v": "3",
+    "f103r": "3",
+    "f103v": "3",
+    "f104r": "3",
+    "f104v": "3",
+    "f105r": "3",
+    "f105v": "3",
+    "f106r": "3",
+    "f106v": "3",
+    "f107r": "3",
+    "f107v": "3",
+    "f108r": "3",
+    "f108v": "3",
+    "f111r": "3",
+    "f111v": "3",
+    "f112r": "3",
+    "f112v": "3",
+    "f113r": "3",
+    "f113v": "3",
+    "f114r": "3",
+    "f114v": "3",
+    "f115r": "@",
+    "f115v": "3",
+    "f116r": "3"
+   }
+  },
+  "comment_wording_by_page": {
+   "f58v": {
+    "n_para_start_with_comment": 2,
+    "n_distinct": 2,
+    "examples": [
+     "Above line seems to have been scribbled in afterwards",
+     "Six-pointed star with tail at start of this paragraph"
+    ]
+   },
+   "f58r": {
+    "n_para_start_with_comment": 3,
+    "n_distinct": 3,
+    "examples": [
+     "Most lines in para seem to have extra first char",
+     "Seven-pointed star at start of this paragraph",
+     "Six-pointed star at start of this paragraph"
+    ]
+   },
+   "f103r": {
+    "n_para_start_with_comment": 16,
+    "n_distinct": 6,
+    "examples": [
+     "Dark star, 7 points",
+     "Dark star, 8 points",
+     "Darkish star, 7 points"
+    ]
+   },
+   "f103v": {
+    "n_para_start_with_comment": 13,
+    "n_distinct": 6,
+    "examples": [
+     "Light star, 7 points",
+     "Light star, 8 points",
+     "Light star, dotted, 6 points"
+    ]
+   },
+   "f104r": {
+    "n_para_start_with_comment": 13,
+    "n_distinct": 10,
+    "examples": [
+     "Currier's language B, hand X",
+     "Darkish star, 7 points, tail",
+     "Darkish star, 8 points, tail"
+    ]
+   },
+   "f104v": {
+    "n_para_start_with_comment": 12,
+    "n_distinct": 3,
+    "examples": [
+     "Light star, 8 points, tail",
+     "Light star, dotted, 7? points, tail",
+     "Light star, dotted, 8 points, tail"
+    ]
+   },
+   "f105v": {
+    "n_para_start_with_comment": 8,
+    "n_distinct": 3,
+    "examples": [
+     "Light star, 7 points, tail",
+     "Light star, 8 points, tail",
+     "Light star, dotted, 7 points, tail"
+    ]
+   },
+   "f105r": {
+    "n_para_start_with_comment": 8,
+    "n_distinct": 4,
+    "examples": [
+     "Light star, 7 points, tail",
+     "Light star, 8 points, tail",
+     "Light star, dotted, 7 points, tail"
+    ]
+   },
+   "f106v": {
+    "n_para_start_with_comment": 14,
+    "n_distinct": 6,
+    "examples": [
+     "Light star, 7 points, tail",
+     "Light star, 8 points, tail",
+     "Light star, 9 points, tail"
+    ]
+   },
+   "f106r": {
+    "n_para_start_with_comment": 15,
+    "n_distinct": 6,
+    "examples": [
+     "Light star, 7 points, tail",
+     "Light star, 8 points, tail",
+     "Light star, dotted, 7 points, tail"
+    ]
+   },
+   "f107r": {
+    "n_para_start_with_comment": 14,
+    "n_distinct": 5,
+    "examples": [
+     "Light star, 7 points, tail",
+     "Light star, 7/8 points, tail",
+     "Light star, 8 points, tail"
+    ]
+   },
+   "f107v": {
+    "n_para_start_with_comment": 14,
+    "n_distinct": 8,
+    "examples": [
+     "Light star, 7 points, tail",
+     "Light star, 8 points, tail",
+     "Light star, 8 points, tail?"
+    ]
+   },
+   "f108v": {
+    "n_para_start_with_comment": 7,
+    "n_distinct": 5,
+    "examples": [
+     "Light star, 7 points, tail",
+     "Light star, 8 points, tail",
+     "Light star, dotted, 7 points, long tail"
+    ]
+   },
+   "f108r": {
+    "n_para_start_with_comment": 14,
+    "n_distinct": 3,
+    "examples": [
+     "Dark star, 7 points, tail",
+     "Light star, 7 points, tail",
+     "Light star, dotted?, 7 points, tail"
+    ]
+   },
+   "f111v": {
+    "n_para_start_with_comment": 8,
+    "n_distinct": 7,
+    "examples": [
+     "Light star, 7 points",
+     "Light star, 7 points, tail?",
+     "Light star, 8 points"
+    ]
+   },
+   "f111r": {
+    "n_para_start_with_comment": 6,
+    "n_distinct": 4,
+    "examples": [
+     "Light star, 7 points, tail",
+     "Light star, 8 points, tail",
+     "Light star, dotted, 7 points, tail"
+    ]
+   },
+   "f112v": {
+    "n_para_start_with_comment": 13,
+    "n_distinct": 9,
+    "examples": [
+     "Light star, 6 points, tail",
+     "Light star, 7 points, tail",
+     "Light star, 7 points, tail?"
+    ]
+   },
+   "f112r": {
+    "n_para_start_with_comment": 10,
+    "n_distinct": 4,
+    "examples": [
+     "Light star, 7 points, tail",
+     "Light star, 8 points, tail",
+     "Light star, dotted, 7 points, tail"
+    ]
+   },
+   "f113r": {
+    "n_para_start_with_comment": 14,
+    "n_distinct": 5,
+    "examples": [
+     "Light star, 7 points, tail",
+     "Light star, 7? points, tail",
+     "Light star, 8 points, tail"
+    ]
+   },
+   "f113v": {
+    "n_para_start_with_comment": 15,
+    "n_distinct": 3,
+    "examples": [
+     "Light star, 7 points, tail",
+     "Light star, 8 points, tail",
+     "Light star, dotted, 7 points, tail"
+    ]
+   },
+   "f114r": {
+    "n_para_start_with_comment": 12,
+    "n_distinct": 7,
+    "examples": [
+     "Light star, 6/7 points, tail",
+     "Light star, 7 points, tail",
+     "Light star, 7/8 points, tail"
+    ]
+   },
+   "f114v": {
+    "n_para_start_with_comment": 12,
+    "n_distinct": 4,
+    "examples": [
+     "Light star, 7 points, tail",
+     "Light star, 7/8 points, tail",
+     "Light star, dotted, 7 points, tail"
+    ]
+   },
+   "f115v": {
+    "n_para_start_with_comment": 12,
+    "n_distinct": 4,
+    "examples": [
+     "Light star, 7 points, tail(?)",
+     "Light star, 8 points, tail",
+     "Light star, dotted, 8 points, tail"
+    ]
+   },
+   "f115r": {
+    "n_para_start_with_comment": 13,
+    "n_distinct": 5,
+    "examples": [
+     "Light star, 7/8 points, tail",
+     "Light star, 8 points, tail",
+     "Light star, dotted, 7 points, tail"
+    ]
+   },
+   "f116r": {
+    "n_para_start_with_comment": 6,
+    "n_distinct": 4,
+    "examples": [
+     "Light star, 7 points",
+     "Light star, 8 points",
+     "Light star, dotted, 6/7 points"
+    ]
+   }
+  },
+  "star_annotation_coverage": {
+   "TEST_even": {
+    "n_paragraphs": 141,
+    "with_any_comment": 133,
+    "with_star": 130,
+    "with_point_count": 126,
+    "star_marked_uncertain": 9
+   },
+   "FIT_odd": {
+    "n_paragraphs": 151,
+    "with_any_comment": 141,
+    "with_star": 141,
+    "with_point_count": 140,
+    "star_marked_uncertain": 7
+   },
+   "ALL": {
+    "n_paragraphs": 292,
+    "with_any_comment": 274,
+    "with_star": 271,
+    "with_point_count": 266,
+    "star_marked_uncertain": 16
+   }
+  }
+ },
+ "F_tail_by_page_TEST": {
+  "f58r": [
+   0,
+   2
+  ],
+  "f58v": [
+   1,
+   1
+  ],
+  "f104r": [
+   12,
+   12
+  ],
+  "f104v": [
+   12,
+   12
+  ],
+  "f106r": [
+   15,
+   15
+  ],
+  "f106v": [
+   14,
+   14
+  ],
+  "f108r": [
+   14,
+   14
+  ],
+  "f108v": [
+   7,
+   7
+  ],
+  "f112r": [
+   10,
+   10
+  ],
+  "f112v": [
+   13,
+   13
+  ],
+  "f114r": [
+   12,
+   12
+  ],
+  "f114v": [
+   12,
+   12
+  ],
+  "f116r": [
+   0,
+   6
+  ]
+ }
+}

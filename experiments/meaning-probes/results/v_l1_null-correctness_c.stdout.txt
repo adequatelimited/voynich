@@ -1,0 +1,103 @@
+==========================================================================
+TEST (odd folios): words whose final glyph unit is 'n'
+  LABEL side: 7 tokens, 6 distinct types, 7 distinct loci, 6 distinct pages
+     f17r     locus  13 @Lx   oteeeon        len=5
+     f67r2    locus  34 +L0   oeoldan        len=6
+     f67r2    locus  71 &L0   oran           len=3
+     f71v     locus  10 &Lz   dan            len=3
+     f89r1    locus  14 @Lf   dan            len=3
+     f89v2    locus  13 @Lf   dykaran        len=5
+     f101v    locus  18 @Lf   olaran         len=4
+  TEXT side: 4 tokens, 3 distinct types, 3 distinct pages
+     top text types: [('dan', 2), ('chokoran', 1), ('dokan', 1)]
+     text length distribution: [(3, 2), (4, 1), (5, 1)]
+     label length distribution: [(3, 3), (4, 1), (5, 2), (6, 1)]
+
+==========================================================================
+TEST (odd folios): words whose final glyph unit is 'daiin'
+  LABEL side: 4 tokens, 3 distinct types, 4 distinct loci, 4 distinct pages
+     f67r2    locus  56 &Ls   daiin          len=1
+     f69r     locus  19 &L0   daiin          len=1
+     f89r1    locus   5 @Lf   ararchodaiin   len=5
+     f89v1    locus  24 @Lf   opaldaiin      len=4
+  TEXT side: 166 tokens, 25 distinct types, 25 distinct pages
+     top text types: [('daiin', 121), ('chedaiin', 7), ('chodaiin', 5), ('oldaiin', 4), ('odaiin', 4), ('ydaiin', 3)]
+     text length distribution: [(1, 121), (2, 21), (3, 15), (4, 8), (5, 1)]
+     label length distribution: [(1, 2), (4, 1), (5, 1)]
+
+==========================================================================
+TEST (odd folios): words whose initial glyph unit is 'qok'
+  LABEL side: 2 tokens, 2 distinct types, 2 distinct loci, 2 distinct pages
+     f73v     locus  21 &Lz   qokeoly        len=4
+     f75v     locus  25 +Ln   qokal          len=2
+  TEXT side: 438 tokens, 69 distinct types, 23 distinct pages
+     top text types: [('qokedy', 51), ('qokal', 49), ('qokeedy', 46), ('qokain', 38), ('qokaiin', 38), ('qokeey', 31)]
+     text length distribution: [(1, 1), (2, 225), (3, 182), (4, 24), (5, 5), (6, 1)]
+     label length distribution: [(2, 1), (4, 1)]
+
+==========================================================================
+TEST (odd folios): words whose initial glyph unit is 'q'
+  LABEL side: 4 tokens, 4 distinct types, 4 distinct loci, 3 distinct pages
+     f67r2    locus  52 @Ls   qotoear        len=5
+     f75v     locus  33 +Ln   qoted          len=4
+     f75v     locus  56 +Lt   qotedy         len=4
+     f89r1    locus   2 @Lf   qkol           len=3
+  TEXT side: 286 tokens, 125 distinct types, 21 distinct pages
+     top text types: [('qol', 46), ('qoteedy', 18), ('qotedy', 17), ('qotal', 10), ('qoty', 8), ('qockhy', 6)]
+     text length distribution: [(2, 57), (3, 81), (4, 97), (5, 25), (6, 16), (7, 9), (8, 1)]
+     label length distribution: [(3, 1), (4, 2), (5, 1)]
+
+==========================================================================
+TEST (odd folios): words whose initial glyph unit is 'c'
+  LABEL side: 1 tokens, 1 distinct types, 1 distinct loci, 1 distinct pages
+     f67r2    locus  66 &L0   cpheey         len=4
+  TEXT side: 87 tokens, 40 distinct types, 19 distinct pages
+     top text types: [('cthey', 11), ('ckhey', 7), ('ckhy', 5), ('cthy', 4), ('cthol', 4), ('c', 4)]
+     text length distribution: [(1, 4), (4, 35), (5, 42), (6, 4), (7, 2)]
+     label length distribution: [(4, 1)]
+
+==========================================================================
+TEST (odd folios): words whose initial glyph unit is 'daiin'
+  LABEL side: 2 tokens, 1 distinct types, 2 distinct loci, 2 distinct pages
+     f67r2    locus  56 &Ls   daiin          len=1
+     f69r     locus  19 &L0   daiin          len=1
+  TEXT side: 122 tokens, 2 distinct types, 24 distinct pages
+     top text types: [('daiin', 121), ('daiinody', 1)]
+     text length distribution: [(1, 121), (3, 1)]
+     label length distribution: [(1, 2)]
+
+==========================================================================
+BONFERRONI FAMILY ACCOUNTING
+==========================================================================
+  protocol pre-registers ONE family: word-final glyph units, K=25.
+  t_l1.py additionally reports a word-INITIAL family of 25 on the same
+  TEST split and corrects it over 25, not over the 50 tests actually run
+  on TEST. Raw p and Bonferroni p under K=25 vs K=50:
+    final   daiin    raw p=0.00020   x25=0.00500 sig   x50=0.01000    
+    final   eey      raw p=0.00020   x25=0.00500 sig   x50=0.01000    
+    final   n        raw p=0.00010   x25=0.00250 sig   x50=0.00500 sig
+    initial qok      raw p=0.00010   x25=0.00250 sig   x50=0.00500 sig
+    initial daiin    raw p=0.00020   x25=0.00500 sig   x50=0.01000    
+    initial c        raw p=0.00010   x25=0.00250 sig   x50=0.00500 sig
+    initial q        raw p=0.00010   x25=0.00250 sig   x50=0.00500 sig
+    initial ot       raw p=0.00010   x25=0.00250 sig   x50=0.00500 sig
+
+  minimum attainable raw p with 10,000 draws = 1/10001 = 0.000100
+  gate needs Bonferroni p < 0.01 -> raw p < 0.0004 -> at most 3 of 10,000
+  draws may equal or exceed the observed value. Only 4 attainable p-levels
+  sit below the gate threshold.
+
+==========================================================================
+REPORT CLAIMS vs results/l1.json
+==========================================================================
+  report: "Culpeper word-initial control: 0 of 25 clear it"
+  json  : gate.control_units_passing_initial = 2
+          passing control unit 'i' log-odds=-1.249 bonf p=0.00250
+          passing control unit 'o' log-odds=1.328 bonf p=0.00250
+
+  json.estimator field says: 'Mantel-Haenszel pooled log odds ratio over (page x glyph-unit-length) strata, Haldane-Anscombe corrected (0.5 added to e'
+  ...but t_l1.py KAPPA correction adds kappa*m1/n to the two label cells
+  and kappa*m0/n to the two text cells (a MARGINAL correction), not 0.5
+  to every cell. The JSON estimator string is wrong.
+
+  n_units_bonferroni_significant, TEST final = 3 (chedy is NOT among them)

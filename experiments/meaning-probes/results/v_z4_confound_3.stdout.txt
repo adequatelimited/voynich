@@ -1,0 +1,49 @@
+==============================================================================
+E5  IS THE RING EVENLY SPACED? (if it were, ordinal thirds == angular
+    thirds and the distinction below would not exist)
+    Leo/ring0              n=18  smallest gap  30 min  largest gap  60 min  (even = 40)
+    Leo/ring1              n=12  smallest gap  30 min  largest gap  90 min  (even = 60)
+    Virgo/ring0            n=18  smallest gap  30 min  largest gap  60 min  (even = 40)
+    Virgo/ring1            n=12  smallest gap  30 min  largest gap  90 min  (even = 60)
+    Libra/ring0            n=18  smallest gap  30 min  largest gap 675 min  (even = 40)
+    Libra/ring1            n=10  smallest gap  30 min  largest gap 120 min  (even = 72)
+    Scorpius/ring0         n= 4  smallest gap  30 min  largest gap  45 min  (even = 180)
+    Scorpius/ring1         n=16  smallest gap  30 min  largest gap  60 min  (even = 45)
+    Scorpius/ring2         n=10  smallest gap  60 min  largest gap  90 min  (even = 72)
+    Sagittarius/ring0      n= 4  smallest gap  30 min  largest gap  45 min  (even = 180)
+    Sagittarius/ring1      n=16  smallest gap  30 min  largest gap  60 min  (even = 45)
+    Sagittarius/ring2      n= 9  smallest gap  60 min  largest gap 120 min  (even = 80)
+
+==============================================================================
+E1  RING-RELATIVE ANGULAR THIRD (same origin as t_z4, geometric metric)
+    marginal {0: 60, 1: 41, 2: 46}   10 of 147 labels land in a different third than under
+    t_z4's count-based thirds.
+    MI=0.2760  null_mean=0.2006  debiased=+0.0754  p(408)=0.00985 fail  p(409)=0.01030 fail
+
+    power of the angular reading on the 8 numeral series (same layout):
+      English              debiased=+0.0349  p=0.11629  -
+      Latin                debiased=+0.0235  p=0.38758  -
+      Italian              debiased=+0.0660  p=0.02695  -
+      German               debiased=+0.1126  p=0.00200  -
+      French               debiased=+0.0922  p=0.00730  -
+      Roman                debiased=+0.2621  p=0.00005  detected
+      GreekMilesian        debiased=+0.3129  p=0.00005  detected
+      LatinOrdinalAbbrev   debiased=+0.0000  p=1.00000  -
+    angular reading detects 2/8 numeral systems (t_z4 count-based: 3/8)
+
+==============================================================================
+E2  ABSOLUTE DIAL THIRD (0-4h / 4-8h / 8-12h), no ring-specific origin
+    marginal {2: 53, 0: 51, 1: 43}  MI=0.1855  debiased=-0.0143  p=0.59682  fail
+
+==============================================================================
+E3  CORRECTED POWER TABLE FOR THE THREE REMAINDER CONVENTIONS
+    floor(registered)  numerals detected 3/8  median debiased +0.1135  [French Roman GreekMilesian]
+    midpoint           numerals detected 3/8  median debiased +0.1108  [French Roman GreekMilesian]
+    ceil               numerals detected 4/8  median debiased +0.1294  [Italian French Roman GreekMilesian]
+
+==============================================================================
+E4  POWER OF THE k-BLOCK VARIANTS (so the k=2/4/6 failures can be read)
+    k=2  manuscript debiased=+0.0211 p=0.30943 fail   numerals detected 4/8
+    k=3  manuscript debiased=+0.0975 p=0.00130 PASS   numerals detected 3/8
+    k=4  manuscript debiased=+0.0224 p=0.46243 fail   numerals detected 6/8
+    k=6  manuscript debiased=+0.0423 p=0.23764 fail   numerals detected 7/8

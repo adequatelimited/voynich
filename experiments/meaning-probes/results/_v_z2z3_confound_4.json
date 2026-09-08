@@ -1,0 +1,26 @@
+{
+ "Z3a_comma_split=True (frozen)": {
+  "distinct_over_total": 0.8775510204081632
+ },
+ "Z3a_comma_split=False": {
+  "distinct_over_total": 0.8775510204081632
+ },
+ "Z3b": {
+  "label_units": 38,
+  "text_units": 40,
+  "rarefied_text_units_mean": 37.999,
+  "rarefied_text_units_sd": 1.0830507836662138
+ },
+ "Z3c_frequency-weighted (the test's null)": {
+  "mean": 0.6610494186046512,
+  "sd": 0.01761258475922904,
+  "z": 8.186370229351564,
+  "p_label_higher": 0.000999000999000999
+ },
+ "Z3c_type-uniform (frequency skew removed)": {
+  "mean": 0.6782383720930233,
+  "sd": 0.018113382123513183,
+  "z": 7.011069781477144,
+  "p_label_higher": 0.000999000999000999
+ }
+}

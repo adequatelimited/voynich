@@ -1,0 +1,2071 @@
+{
+  "key": "z1",
+  "test": "Z1 -- ordinal gradient inside a zodiac ring",
+  "protocol": "experiments/meaning-probes/PROTOCOL.md, section Z1",
+  "seed": 408,
+  "n_perm": 10000,
+  "min_ring_size": 8,
+  "inputs": {
+    "ZL3b-n.txt": {
+      "path": "R:\\Coding\\LinearA\\tmp\\voynich_repo\\data\\corpora\\ZL3b-n.txt",
+      "sha256": "bf5b6d4ac1e3a51b1847a9c388318d609020441ccd56984c901c32b09beccafc"
+    },
+    "GC2a-n.txt": {
+      "path": "R:\\Coding\\LinearA\\tmp\\voynich_repo\\data\\corpora\\GC2a-n.txt",
+      "sha256": "b09570cb6c993bc2d87134d115e60a978650a8a6495483ddbb1f6005a586096f"
+    },
+    "pg49513.txt (Culpeper)": {
+      "path": "R:\\Coding\\LinearA\\tmp\\voynich_lab\\pg49513.txt",
+      "sha256": "d9bacb3247d798fcd2a8ce3b7c76222407fc0ac1c8d4242e9e8163508c10e968"
+    },
+    "Latin.xml (Vulgate)": {
+      "path": "R:\\Coding\\LinearA\\tmp\\voynich_lab\\bibles\\Latin.xml",
+      "sha256": "5bba9f75c06858a28ebe7b2fcc19cc32b3fbf587d6bc237ceac6fe7addd3df31"
+    },
+    "meaning_lib.py": {
+      "path": "R:\\Coding\\LinearA\\tmp\\voynich_repo\\experiments\\meaning-probes\\meaning_lib.py",
+      "sha256": "aa1ee5a340923cf7bd3f5aa1d433d24c10b2db50da1e7b2da9256cd98ef42fb1"
+    },
+    "t_z1.py": {
+      "path": "R:\\Coding\\LinearA\\tmp\\voynich_repo\\experiments\\meaning-probes\\t_z1.py",
+      "sha256": "8dde40b058511d60e82129afb9adcbda8c1317fc5c852b6b7716df97650f8711"
+    }
+  },
+  "ambiguities_resolved": [
+    "Two statistics are defined (Delta and rho_bar) but gate (i) says only 'permutation p < 0.01'. Harder reading taken: BOTH statistics must reach p < 0.01, in the ordinal-like direction (Delta > 0 and rho_bar < 0). The per-statistic p-values and the outcome under the laxer 'either one' reading are both reported.",
+    "'Delta pooled over rings weighted by pair count' is read as pooling every pair across rings (mean of all g=1 pairs minus mean of all g>=3 pairs), which is exactly a pair-count weighting. The alternative reading (mean of per-ring Deltas weighted by that ring's pair count) is computed and reported as delta_alt with its own p.",
+    "Gap g = |i - j| in linear ring order, no wrap-around, as instructed; the ring is not treated as circular.",
+    "Numeral controls are 30 items but the observed TEST ring sizes sum to 139, so the series must be reused. Primary construction: cut the series cyclically (ring boundaries walk through 1..30 and wrap). Alternative construction reported: every ring of size k is the contiguous run 1..k. For gate (ii) the threshold uses the LARGER of the two median control Deltas (the harder threshold).",
+    "Two-sided permutation p = (1 + #{|null - mean(null)| >= |obs - mean(null)|}) / (NPERM + 1); never rounded down.",
+    "Rings with fewer than 8 legible labels are dropped entirely (they are not merged into neighbouring rings).",
+    "Controls in Latin script have no byte-pair merges, so their 'glyph unit' level and their raw-character level are identical by construction; the numeral-control numbers therefore serve both robustness levels.",
+    "The pre-registered negative control '30 random Voynich herbal-section label words' is degenerate: the herbal section contains only 32 label loci / 31 clean label word tokens, most of them the single-character marginal glyphs of f49v, so the 'random sample of 30' is very nearly the whole population and its sequences are 1-2 units long. It is run exactly as pre-registered and reported, and a non-degenerate supplementary negative control (30 random non-zodiac label word types, seed 408) is added and flagged as supplementary, outside the gate.",
+    "The observed TEST ring sizes sum to 139 while every control series has 30 items, so any matched-size control must reuse its series across rings. Reuse correlates the control's rings while the permutation null re-randomises each ring independently, which inflates the controls' significance. The pre-registered power figure is reported as specified, and alongside it the negative-control false-positive rate under the same construction and a reuse-free power figure on rings [18, 12] (each series item used exactly once). The Voynich statistic is not affected -- its ten rings are ten distinct arrangements, which is what the null assumes.",
+    "Replication on GC2a-n.txt is not runnable: GC2a is in the v101 alphabet, whose glyphs include digits and capitals, and the frozen clean parser keeps only pure [a-z]+ tokens. 208 of its 299 zodiac label loci lose every token, and no TEST-sign ring reaches the 8-label minimum. Rather than re-implement the frozen tokeniser for one corpus, the replication is reported as NOT RUN with those diagnostics. The protocol requires replication only of gates that pass on ZL3b."
+  ],
+  "test_ring_sizes_used_for_controls": [
+    18,
+    12,
+    18,
+    12,
+    18,
+    10,
+    16,
+    10,
+    16,
+    9
+  ],
+  "results": {
+    "observed": {
+      "FIT|units|comma_split=True": {
+        "label": "FIT|units|comma_split=True",
+        "n_rings": 10,
+        "ring_sizes": [
+          18,
+          10,
+          10,
+          10,
+          10,
+          10,
+          15,
+          9,
+          11,
+          11
+        ],
+        "n_labels": 114,
+        "n_pairs": 629,
+        "delta": 0.00422575589929472,
+        "delta_p": 0.5660433956604339,
+        "delta_null_mean": -0.007817321602704319,
+        "delta_null_sd": 0.020933765315377155,
+        "delta_z": 0.5752943782718654,
+        "delta_alt": 0.017325060638621315,
+        "delta_alt_p": 0.45265473452654736,
+        "rho_bar": -0.00468562367693193,
+        "rho_bar_p": 0.9187081291870813,
+        "rho_null_mean": 0.0001170496316420969,
+        "rho_null_sd": 0.04516167818041657,
+        "rho_z": -0.10634399566348726,
+        "mean_sim_g1": 0.24814033691296133,
+        "mean_sim_g3plus": 0.2439145810136666,
+        "ordinal_like_direction": true,
+        "p_strict": 0.9187081291870813,
+        "p_lax": 0.5660433956604339,
+        "rings_meta": [
+          {
+            "sign": "Pisces",
+            "ring": 0,
+            "n": 18
+          },
+          {
+            "sign": "Pisces",
+            "ring": 1,
+            "n": 10
+          },
+          {
+            "sign": "Aries",
+            "ring": 0,
+            "n": 10
+          },
+          {
+            "sign": "Aries",
+            "ring": 2,
+            "n": 10
+          },
+          {
+            "sign": "Taurus",
+            "ring": 0,
+            "n": 10
+          },
+          {
+            "sign": "Taurus",
+            "ring": 2,
+            "n": 10
+          },
+          {
+            "sign": "Gemini",
+            "ring": 1,
+            "n": 15
+          },
+          {
+            "sign": "Gemini",
+            "ring": 2,
+            "n": 9
+          },
+          {
+            "sign": "Cancer",
+            "ring": 0,
+            "n": 11
+          },
+          {
+            "sign": "Cancer",
+            "ring": 1,
+            "n": 11
+          }
+        ]
+      },
+      "TEST|units|comma_split=True": {
+        "label": "TEST|units|comma_split=True",
+        "n_rings": 10,
+        "ring_sizes": [
+          18,
+          12,
+          18,
+          12,
+          18,
+          10,
+          16,
+          10,
+          16,
+          9
+        ],
+        "n_labels": 139,
+        "n_pairs": 957,
+        "delta": 0.006122202742073507,
+        "delta_p": 0.5616438356164384,
+        "delta_null_mean": -0.004230834475171074,
+        "delta_null_sd": 0.018098302567921453,
+        "delta_z": 0.5720446532701328,
+        "delta_alt": 0.009205252840683487,
+        "delta_alt_p": 0.6029397060293971,
+        "rho_bar": -0.0028008225064961745,
+        "rho_bar_p": 0.9338066193380662,
+        "rho_null_mean": 0.0003500546914890654,
+        "rho_null_sd": 0.038288844808195964,
+        "rho_z": -0.08229230246483632,
+        "mean_sim_g1": 0.22153036455362035,
+        "mean_sim_g3plus": 0.21540816181154684,
+        "ordinal_like_direction": true,
+        "p_strict": 0.9338066193380662,
+        "p_lax": 0.5616438356164384,
+        "rings_meta": [
+          {
+            "sign": "Leo",
+            "ring": 0,
+            "n": 18
+          },
+          {
+            "sign": "Leo",
+            "ring": 1,
+            "n": 12
+          },
+          {
+            "sign": "Virgo",
+            "ring": 0,
+            "n": 18
+          },
+          {
+            "sign": "Virgo",
+            "ring": 1,
+            "n": 12
+          },
+          {
+            "sign": "Libra",
+            "ring": 0,
+            "n": 18
+          },
+          {
+            "sign": "Libra",
+            "ring": 1,
+            "n": 10
+          },
+          {
+            "sign": "Scorpius",
+            "ring": 1,
+            "n": 16
+          },
+          {
+            "sign": "Scorpius",
+            "ring": 2,
+            "n": 10
+          },
+          {
+            "sign": "Sagittarius",
+            "ring": 1,
+            "n": 16
+          },
+          {
+            "sign": "Sagittarius",
+            "ring": 2,
+            "n": 9
+          }
+        ]
+      },
+      "FIT|units|comma_split=False": {
+        "label": "FIT|units|comma_split=False",
+        "n_rings": 10,
+        "ring_sizes": [
+          18,
+          10,
+          10,
+          10,
+          10,
+          10,
+          15,
+          9,
+          11,
+          11
+        ],
+        "n_labels": 114,
+        "n_pairs": 629,
+        "delta": 0.00422575589929472,
+        "delta_p": 0.5660433956604339,
+        "delta_null_mean": -0.007817321602704319,
+        "delta_null_sd": 0.020933765315377155,
+        "delta_z": 0.5752943782718654,
+        "delta_alt": 0.017325060638621315,
+        "delta_alt_p": 0.45265473452654736,
+        "rho_bar": -0.00468562367693193,
+        "rho_bar_p": 0.9187081291870813,
+        "rho_null_mean": 0.0001170496316420969,
+        "rho_null_sd": 0.04516167818041657,
+        "rho_z": -0.10634399566348726,
+        "mean_sim_g1": 0.24814033691296133,
+        "mean_sim_g3plus": 0.2439145810136666,
+        "ordinal_like_direction": true,
+        "p_strict": 0.9187081291870813,
+        "p_lax": 0.5660433956604339,
+        "rings_meta": [
+          {
+            "sign": "Pisces",
+            "ring": 0,
+            "n": 18
+          },
+          {
+            "sign": "Pisces",
+            "ring": 1,
+            "n": 10
+          },
+          {
+            "sign": "Aries",
+            "ring": 0,
+            "n": 10
+          },
+          {
+            "sign": "Aries",
+            "ring": 2,
+            "n": 10
+          },
+          {
+            "sign": "Taurus",
+            "ring": 0,
+            "n": 10
+          },
+          {
+            "sign": "Taurus",
+            "ring": 2,
+            "n": 10
+          },
+          {
+            "sign": "Gemini",
+            "ring": 1,
+            "n": 15
+          },
+          {
+            "sign": "Gemini",
+            "ring": 2,
+            "n": 9
+          },
+          {
+            "sign": "Cancer",
+            "ring": 0,
+            "n": 11
+          },
+          {
+            "sign": "Cancer",
+            "ring": 1,
+            "n": 11
+          }
+        ]
+      },
+      "TEST|units|comma_split=False": {
+        "label": "TEST|units|comma_split=False",
+        "n_rings": 10,
+        "ring_sizes": [
+          18,
+          12,
+          18,
+          12,
+          18,
+          10,
+          16,
+          10,
+          16,
+          9
+        ],
+        "n_labels": 139,
+        "n_pairs": 957,
+        "delta": 0.006122202742073507,
+        "delta_p": 0.5616438356164384,
+        "delta_null_mean": -0.004230834475171074,
+        "delta_null_sd": 0.018098302567921453,
+        "delta_z": 0.5720446532701328,
+        "delta_alt": 0.009205252840683487,
+        "delta_alt_p": 0.6029397060293971,
+        "rho_bar": -0.0028008225064961745,
+        "rho_bar_p": 0.9338066193380662,
+        "rho_null_mean": 0.0003500546914890654,
+        "rho_null_sd": 0.038288844808195964,
+        "rho_z": -0.08229230246483632,
+        "mean_sim_g1": 0.22153036455362035,
+        "mean_sim_g3plus": 0.21540816181154684,
+        "ordinal_like_direction": true,
+        "p_strict": 0.9338066193380662,
+        "p_lax": 0.5616438356164384,
+        "rings_meta": [
+          {
+            "sign": "Leo",
+            "ring": 0,
+            "n": 18
+          },
+          {
+            "sign": "Leo",
+            "ring": 1,
+            "n": 12
+          },
+          {
+            "sign": "Virgo",
+            "ring": 0,
+            "n": 18
+          },
+          {
+            "sign": "Virgo",
+            "ring": 1,
+            "n": 12
+          },
+          {
+            "sign": "Libra",
+            "ring": 0,
+            "n": 18
+          },
+          {
+            "sign": "Libra",
+            "ring": 1,
+            "n": 10
+          },
+          {
+            "sign": "Scorpius",
+            "ring": 1,
+            "n": 16
+          },
+          {
+            "sign": "Scorpius",
+            "ring": 2,
+            "n": 10
+          },
+          {
+            "sign": "Sagittarius",
+            "ring": 1,
+            "n": 16
+          },
+          {
+            "sign": "Sagittarius",
+            "ring": 2,
+            "n": 9
+          }
+        ]
+      },
+      "FIT|chars|comma_split=True": {
+        "label": "FIT|chars|comma_split=True",
+        "n_rings": 10,
+        "ring_sizes": [
+          18,
+          10,
+          10,
+          10,
+          10,
+          10,
+          15,
+          9,
+          11,
+          11
+        ],
+        "n_labels": 114,
+        "n_pairs": 629,
+        "delta": 0.010212440898949515,
+        "delta_p": 0.32026797320267975,
+        "delta_null_mean": -0.004728814909118103,
+        "delta_null_sd": 0.015098738867082854,
+        "delta_z": 0.9895697872251723,
+        "delta_alt": 0.013680932958807807,
+        "delta_alt_p": 0.40535946405359463,
+        "rho_bar": 0.014993362400729404,
+        "rho_bar_p": 0.7419258074192581,
+        "rho_null_mean": 1.9396748757930006e-05,
+        "rho_null_sd": 0.045784671831796735,
+        "rho_z": 0.32705193797135157,
+        "mean_sim_g1": 0.4524757366899518,
+        "mean_sim_g3plus": 0.4422632957910023,
+        "ordinal_like_direction": false,
+        "p_strict": 0.7419258074192581,
+        "p_lax": 0.32026797320267975,
+        "rings_meta": [
+          {
+            "sign": "Pisces",
+            "ring": 0,
+            "n": 18
+          },
+          {
+            "sign": "Pisces",
+            "ring": 1,
+            "n": 10
+          },
+          {
+            "sign": "Aries",
+            "ring": 0,
+            "n": 10
+          },
+          {
+            "sign": "Aries",
+            "ring": 2,
+            "n": 10
+          },
+          {
+            "sign": "Taurus",
+            "ring": 0,
+            "n": 10
+          },
+          {
+            "sign": "Taurus",
+            "ring": 2,
+            "n": 10
+          },
+          {
+            "sign": "Gemini",
+            "ring": 1,
+            "n": 15
+          },
+          {
+            "sign": "Gemini",
+            "ring": 2,
+            "n": 9
+          },
+          {
+            "sign": "Cancer",
+            "ring": 0,
+            "n": 11
+          },
+          {
+            "sign": "Cancer",
+            "ring": 1,
+            "n": 11
+          }
+        ]
+      },
+      "TEST|chars|comma_split=True": {
+        "label": "TEST|chars|comma_split=True",
+        "n_rings": 10,
+        "ring_sizes": [
+          18,
+          12,
+          18,
+          12,
+          18,
+          10,
+          16,
+          10,
+          16,
+          9
+        ],
+        "n_labels": 139,
+        "n_pairs": 957,
+        "delta": 0.01240351045851562,
+        "delta_p": 0.2786721327867213,
+        "delta_null_mean": -0.004569455013347496,
+        "delta_null_sd": 0.015717885349128186,
+        "delta_z": 1.0798504439278498,
+        "delta_alt": 0.0199820528610987,
+        "delta_alt_p": 0.20487951204879512,
+        "rho_bar": 0.01817011095682095,
+        "rho_bar_p": 0.6508349165083491,
+        "rho_null_mean": 0.0003082239383619263,
+        "rho_null_sd": 0.03833876887829165,
+        "rho_z": 0.46589620744376226,
+        "mean_sim_g1": 0.39877002589040894,
+        "mean_sim_g3plus": 0.3863665154318934,
+        "ordinal_like_direction": false,
+        "p_strict": 0.6508349165083491,
+        "p_lax": 0.2786721327867213,
+        "rings_meta": [
+          {
+            "sign": "Leo",
+            "ring": 0,
+            "n": 18
+          },
+          {
+            "sign": "Leo",
+            "ring": 1,
+            "n": 12
+          },
+          {
+            "sign": "Virgo",
+            "ring": 0,
+            "n": 18
+          },
+          {
+            "sign": "Virgo",
+            "ring": 1,
+            "n": 12
+          },
+          {
+            "sign": "Libra",
+            "ring": 0,
+            "n": 18
+          },
+          {
+            "sign": "Libra",
+            "ring": 1,
+            "n": 10
+          },
+          {
+            "sign": "Scorpius",
+            "ring": 1,
+            "n": 16
+          },
+          {
+            "sign": "Scorpius",
+            "ring": 2,
+            "n": 10
+          },
+          {
+            "sign": "Sagittarius",
+            "ring": 1,
+            "n": 16
+          },
+          {
+            "sign": "Sagittarius",
+            "ring": 2,
+            "n": 9
+          }
+        ]
+      },
+      "FIT|chars|comma_split=False": {
+        "label": "FIT|chars|comma_split=False",
+        "n_rings": 10,
+        "ring_sizes": [
+          18,
+          10,
+          10,
+          10,
+          10,
+          10,
+          15,
+          9,
+          11,
+          11
+        ],
+        "n_labels": 114,
+        "n_pairs": 629,
+        "delta": 0.010212440898949515,
+        "delta_p": 0.32026797320267975,
+        "delta_null_mean": -0.004728814909118103,
+        "delta_null_sd": 0.015098738867082854,
+        "delta_z": 0.9895697872251723,
+        "delta_alt": 0.013680932958807807,
+        "delta_alt_p": 0.40535946405359463,
+        "rho_bar": 0.014993362400729404,
+        "rho_bar_p": 0.7419258074192581,
+        "rho_null_mean": 1.9396748757930006e-05,
+        "rho_null_sd": 0.045784671831796735,
+        "rho_z": 0.32705193797135157,
+        "mean_sim_g1": 0.4524757366899518,
+        "mean_sim_g3plus": 0.4422632957910023,
+        "ordinal_like_direction": false,
+        "p_strict": 0.7419258074192581,
+        "p_lax": 0.32026797320267975,
+        "rings_meta": [
+          {
+            "sign": "Pisces",
+            "ring": 0,
+            "n": 18
+          },
+          {
+            "sign": "Pisces",
+            "ring": 1,
+            "n": 10
+          },
+          {
+            "sign": "Aries",
+            "ring": 0,
+            "n": 10
+          },
+          {
+            "sign": "Aries",
+            "ring": 2,
+            "n": 10
+          },
+          {
+            "sign": "Taurus",
+            "ring": 0,
+            "n": 10
+          },
+          {
+            "sign": "Taurus",
+            "ring": 2,
+            "n": 10
+          },
+          {
+            "sign": "Gemini",
+            "ring": 1,
+            "n": 15
+          },
+          {
+            "sign": "Gemini",
+            "ring": 2,
+            "n": 9
+          },
+          {
+            "sign": "Cancer",
+            "ring": 0,
+            "n": 11
+          },
+          {
+            "sign": "Cancer",
+            "ring": 1,
+            "n": 11
+          }
+        ]
+      },
+      "TEST|chars|comma_split=False": {
+        "label": "TEST|chars|comma_split=False",
+        "n_rings": 10,
+        "ring_sizes": [
+          18,
+          12,
+          18,
+          12,
+          18,
+          10,
+          16,
+          10,
+          16,
+          9
+        ],
+        "n_labels": 139,
+        "n_pairs": 957,
+        "delta": 0.01240351045851562,
+        "delta_p": 0.2786721327867213,
+        "delta_null_mean": -0.004569455013347496,
+        "delta_null_sd": 0.015717885349128186,
+        "delta_z": 1.0798504439278498,
+        "delta_alt": 0.0199820528610987,
+        "delta_alt_p": 0.20487951204879512,
+        "rho_bar": 0.01817011095682095,
+        "rho_bar_p": 0.6508349165083491,
+        "rho_null_mean": 0.0003082239383619263,
+        "rho_null_sd": 0.03833876887829165,
+        "rho_z": 0.46589620744376226,
+        "mean_sim_g1": 0.39877002589040894,
+        "mean_sim_g3plus": 0.3863665154318934,
+        "ordinal_like_direction": false,
+        "p_strict": 0.6508349165083491,
+        "p_lax": 0.2786721327867213,
+        "rings_meta": [
+          {
+            "sign": "Leo",
+            "ring": 0,
+            "n": 18
+          },
+          {
+            "sign": "Leo",
+            "ring": 1,
+            "n": 12
+          },
+          {
+            "sign": "Virgo",
+            "ring": 0,
+            "n": 18
+          },
+          {
+            "sign": "Virgo",
+            "ring": 1,
+            "n": 12
+          },
+          {
+            "sign": "Libra",
+            "ring": 0,
+            "n": 18
+          },
+          {
+            "sign": "Libra",
+            "ring": 1,
+            "n": 10
+          },
+          {
+            "sign": "Scorpius",
+            "ring": 1,
+            "n": 16
+          },
+          {
+            "sign": "Scorpius",
+            "ring": 2,
+            "n": 10
+          },
+          {
+            "sign": "Sagittarius",
+            "ring": 1,
+            "n": 16
+          },
+          {
+            "sign": "Sagittarius",
+            "ring": 2,
+            "n": 9
+          }
+        ]
+      }
+    },
+    "numeral_controls": {
+      "English|cyclic": {
+        "label": "English|cyclic",
+        "n_rings": 10,
+        "ring_sizes": [
+          18,
+          12,
+          18,
+          12,
+          18,
+          10,
+          16,
+          10,
+          16,
+          9
+        ],
+        "n_labels": 139,
+        "n_pairs": 957,
+        "delta": 0.12239731656164643,
+        "delta_p": 9.999000099990002e-05,
+        "delta_null_mean": 0.033710394171060115,
+        "delta_null_sd": 0.012989264824540124,
+        "delta_z": 6.827709157413858,
+        "delta_alt": 0.08894908206065871,
+        "delta_alt_p": 9.999000099990002e-05,
+        "rho_bar": -0.2158615419089469,
+        "rho_bar_p": 9.999000099990002e-05,
+        "rho_null_mean": 0.0004871629370446064,
+        "rho_null_sd": 0.039433996776020816,
+        "rho_z": -5.4863499146388754,
+        "mean_sim_g1": 0.48693145866088483,
+        "mean_sim_g3plus": 0.3645341420992384,
+        "ordinal_like_direction": true,
+        "p_strict": 9.999000099990002e-05,
+        "p_lax": 9.999000099990002e-05
+      },
+      "Latin|cyclic": {
+        "label": "Latin|cyclic",
+        "n_rings": 10,
+        "ring_sizes": [
+          18,
+          12,
+          18,
+          12,
+          18,
+          10,
+          16,
+          10,
+          16,
+          9
+        ],
+        "n_labels": 139,
+        "n_pairs": 957,
+        "delta": 0.16318010363216284,
+        "delta_p": 9.999000099990002e-05,
+        "delta_null_mean": 0.03847946256242679,
+        "delta_null_sd": 0.014017260073912977,
+        "delta_z": 8.896220831474189,
+        "delta_alt": 0.12766376979727936,
+        "delta_alt_p": 9.999000099990002e-05,
+        "rho_bar": -0.301510538346752,
+        "rho_bar_p": 9.999000099990002e-05,
+        "rho_null_mean": 0.0003174986687689239,
+        "rho_null_sd": 0.038108536614345205,
+        "rho_z": -7.920221132340823,
+        "mean_sim_g1": 0.5256988784323955,
+        "mean_sim_g3plus": 0.3625187748002324,
+        "ordinal_like_direction": true,
+        "p_strict": 9.999000099990002e-05,
+        "p_lax": 9.999000099990002e-05
+      },
+      "Italian|cyclic": {
+        "label": "Italian|cyclic",
+        "n_rings": 10,
+        "ring_sizes": [
+          18,
+          12,
+          18,
+          12,
+          18,
+          10,
+          16,
+          10,
+          16,
+          9
+        ],
+        "n_labels": 139,
+        "n_pairs": 957,
+        "delta": 0.1622774144073808,
+        "delta_p": 9.999000099990002e-05,
+        "delta_null_mean": 0.027922018816003452,
+        "delta_null_sd": 0.015638134158015925,
+        "delta_z": 8.591523402586256,
+        "delta_alt": 0.14056279279635792,
+        "delta_alt_p": 9.999000099990002e-05,
+        "rho_bar": -0.27330956231471515,
+        "rho_bar_p": 9.999000099990002e-05,
+        "rho_null_mean": 0.00021370660649132662,
+        "rho_null_sd": 0.03828979066259005,
+        "rho_z": -7.143503899812244,
+        "mean_sim_g1": 0.5105709805467512,
+        "mean_sim_g3plus": 0.34829356613937057,
+        "ordinal_like_direction": true,
+        "p_strict": 9.999000099990002e-05,
+        "p_lax": 9.999000099990002e-05
+      },
+      "German|cyclic": {
+        "label": "German|cyclic",
+        "n_rings": 10,
+        "ring_sizes": [
+          18,
+          12,
+          18,
+          12,
+          18,
+          10,
+          16,
+          10,
+          16,
+          9
+        ],
+        "n_labels": 139,
+        "n_pairs": 957,
+        "delta": 0.11967182678503319,
+        "delta_p": 9.999000099990002e-05,
+        "delta_null_mean": 0.030944682712255353,
+        "delta_null_sd": 0.013818658074462054,
+        "delta_z": 6.420822021550157,
+        "delta_alt": 0.08710048348694921,
+        "delta_alt_p": 9.999000099990002e-05,
+        "rho_bar": -0.262244948841842,
+        "rho_bar_p": 9.999000099990002e-05,
+        "rho_null_mean": 0.0003278567819195076,
+        "rho_null_sd": 0.03956581686901519,
+        "rho_z": -6.636354975129749,
+        "mean_sim_g1": 0.4918854710933689,
+        "mean_sim_g3plus": 0.37221364430833564,
+        "ordinal_like_direction": true,
+        "p_strict": 9.999000099990002e-05,
+        "p_lax": 9.999000099990002e-05
+      },
+      "French|cyclic": {
+        "label": "French|cyclic",
+        "n_rings": 10,
+        "ring_sizes": [
+          18,
+          12,
+          18,
+          12,
+          18,
+          10,
+          16,
+          10,
+          16,
+          9
+        ],
+        "n_labels": 139,
+        "n_pairs": 957,
+        "delta": 0.10761397784781906,
+        "delta_p": 9.999000099990002e-05,
+        "delta_null_mean": 0.03055010823809953,
+        "delta_null_sd": 0.014908413524666679,
+        "delta_z": 5.169152940533458,
+        "delta_alt": 0.07454057271926823,
+        "delta_alt_p": 9.999000099990002e-05,
+        "rho_bar": -0.16728028192756034,
+        "rho_bar_p": 0.00019998000199980003,
+        "rho_null_mean": -8.396561382619414e-05,
+        "rho_null_sd": 0.03849140388786268,
+        "rho_z": -4.3437313120827845,
+        "mean_sim_g1": 0.4249422143150993,
+        "mean_sim_g3plus": 0.31732823646728026,
+        "ordinal_like_direction": true,
+        "p_strict": 0.00019998000199980003,
+        "p_lax": 9.999000099990002e-05
+      },
+      "Roman|cyclic": {
+        "label": "Roman|cyclic",
+        "n_rings": 10,
+        "ring_sizes": [
+          18,
+          12,
+          18,
+          12,
+          18,
+          10,
+          16,
+          10,
+          16,
+          9
+        ],
+        "n_labels": 139,
+        "n_pairs": 957,
+        "delta": 0.24836472221587197,
+        "delta_p": 9.999000099990002e-05,
+        "delta_null_mean": 0.02614238599880758,
+        "delta_null_sd": 0.01821137819618863,
+        "delta_z": 12.202389836897254,
+        "delta_alt": 0.23173408933373119,
+        "delta_alt_p": 9.999000099990002e-05,
+        "rho_bar": -0.271626808852209,
+        "rho_bar_p": 9.999000099990002e-05,
+        "rho_null_mean": 0.0007922604247262054,
+        "rho_null_sd": 0.03780070782618599,
+        "rho_z": -7.206718734727505,
+        "mean_sim_g1": 0.7325324116021791,
+        "mean_sim_g3plus": 0.48416768938630717,
+        "ordinal_like_direction": true,
+        "p_strict": 9.999000099990002e-05,
+        "p_lax": 9.999000099990002e-05
+      },
+      "GreekMilesian|cyclic": {
+        "label": "GreekMilesian|cyclic",
+        "n_rings": 10,
+        "ring_sizes": [
+          18,
+          12,
+          18,
+          12,
+          18,
+          10,
+          16,
+          10,
+          16,
+          9
+        ],
+        "n_labels": 139,
+        "n_pairs": 957,
+        "delta": 0.14563657369443433,
+        "delta_p": 9.999000099990002e-05,
+        "delta_null_mean": 0.0298815190445472,
+        "delta_null_sd": 0.01849709313376095,
+        "delta_z": 6.258013289591469,
+        "delta_alt": 0.117574255246669,
+        "delta_alt_p": 9.999000099990002e-05,
+        "rho_bar": -0.21191593545350243,
+        "rho_bar_p": 9.999000099990002e-05,
+        "rho_null_mean": 0.0003455390515229598,
+        "rho_null_sd": 0.038998579668895084,
+        "rho_z": -5.442800130342266,
+        "mean_sim_g1": 0.320671834625323,
+        "mean_sim_g3plus": 0.1750352609308886,
+        "ordinal_like_direction": true,
+        "p_strict": 9.999000099990002e-05,
+        "p_lax": 9.999000099990002e-05
+      },
+      "LatinOrdinalAbbrev|cyclic": {
+        "label": "LatinOrdinalAbbrev|cyclic",
+        "n_rings": 10,
+        "ring_sizes": [
+          18,
+          12,
+          18,
+          12,
+          18,
+          10,
+          16,
+          10,
+          16,
+          9
+        ],
+        "n_labels": 139,
+        "n_pairs": 957,
+        "delta": 0.17541061330217378,
+        "delta_p": 9.999000099990002e-05,
+        "delta_null_mean": 0.014761178690913505,
+        "delta_null_sd": 0.013100779252747222,
+        "delta_z": 12.262586179945917,
+        "delta_alt": 0.1665403133905896,
+        "delta_alt_p": 9.999000099990002e-05,
+        "rho_bar": -0.27252823681076344,
+        "rho_bar_p": 9.999000099990002e-05,
+        "rho_null_mean": 0.0007347328211906963,
+        "rho_null_sd": 0.03760634465131002,
+        "rho_z": -7.266406032430886,
+        "mean_sim_g1": 0.80830977807722,
+        "mean_sim_g3plus": 0.6328991647750463,
+        "ordinal_like_direction": true,
+        "p_strict": 9.999000099990002e-05,
+        "p_lax": 9.999000099990002e-05
+      },
+      "English|prefix": {
+        "label": "English|prefix",
+        "n_rings": 10,
+        "ring_sizes": [
+          18,
+          12,
+          18,
+          12,
+          18,
+          10,
+          16,
+          10,
+          16,
+          9
+        ],
+        "n_labels": 139,
+        "n_pairs": 957,
+        "delta": 0.06865790300373786,
+        "delta_p": 9.999000099990002e-05,
+        "delta_null_mean": -0.014857498870483104,
+        "delta_null_sd": 0.014323780451945543,
+        "delta_z": 5.830541884833022,
+        "delta_alt": 0.08676710993607961,
+        "delta_alt_p": 9.999000099990002e-05,
+        "rho_bar": -0.08309924062779975,
+        "rho_bar_p": 0.035096490350964904,
+        "rho_null_mean": -0.00045235692856232263,
+        "rho_null_sd": 0.039308830508426,
+        "rho_z": -2.1025017185775026,
+        "mean_sim_g1": 0.35888722414030205,
+        "mean_sim_g3plus": 0.29022932113656413,
+        "ordinal_like_direction": true,
+        "p_strict": 0.035096490350964904,
+        "p_lax": 9.999000099990002e-05
+      },
+      "Latin|prefix": {
+        "label": "Latin|prefix",
+        "n_rings": 10,
+        "ring_sizes": [
+          18,
+          12,
+          18,
+          12,
+          18,
+          10,
+          16,
+          10,
+          16,
+          9
+        ],
+        "n_labels": 139,
+        "n_pairs": 957,
+        "delta": 0.10379632680314949,
+        "delta_p": 9.999000099990002e-05,
+        "delta_null_mean": -0.012904373776095395,
+        "delta_null_sd": 0.015269892308078186,
+        "delta_z": 7.642535927873378,
+        "delta_alt": 0.12121753485551186,
+        "delta_alt_p": 9.999000099990002e-05,
+        "rho_bar": -0.2702948548395489,
+        "rho_bar_p": 9.999000099990002e-05,
+        "rho_null_mean": 2.2861628526347383e-05,
+        "rho_null_sd": 0.03811803859029746,
+        "rho_z": -7.0915956451358895,
+        "mean_sim_g1": 0.39228607029415924,
+        "mean_sim_g3plus": 0.2884897434910098,
+        "ordinal_like_direction": true,
+        "p_strict": 9.999000099990002e-05,
+        "p_lax": 9.999000099990002e-05
+      },
+      "Italian|prefix": {
+        "label": "Italian|prefix",
+        "n_rings": 10,
+        "ring_sizes": [
+          18,
+          12,
+          18,
+          12,
+          18,
+          10,
+          16,
+          10,
+          16,
+          9
+        ],
+        "n_labels": 139,
+        "n_pairs": 957,
+        "delta": 0.14228379543091418,
+        "delta_p": 9.999000099990002e-05,
+        "delta_null_mean": -0.008501717306804546,
+        "delta_null_sd": 0.018237832173826688,
+        "delta_z": 8.267732222808403,
+        "delta_alt": 0.15464248549547172,
+        "delta_alt_p": 9.999000099990002e-05,
+        "rho_bar": -0.19019680769524833,
+        "rho_bar_p": 9.999000099990002e-05,
+        "rho_null_mean": 0.0003690184450055688,
+        "rho_null_sd": 0.03742508934426055,
+        "rho_z": -5.09192708632715,
+        "mean_sim_g1": 0.4294544784500865,
+        "mean_sim_g3plus": 0.28717068301917237,
+        "ordinal_like_direction": true,
+        "p_strict": 9.999000099990002e-05,
+        "p_lax": 9.999000099990002e-05
+      },
+      "German|prefix": {
+        "label": "German|prefix",
+        "n_rings": 10,
+        "ring_sizes": [
+          18,
+          12,
+          18,
+          12,
+          18,
+          10,
+          16,
+          10,
+          16,
+          9
+        ],
+        "n_labels": 139,
+        "n_pairs": 957,
+        "delta": 0.03779492734336537,
+        "delta_p": 0.00019998000199980003,
+        "delta_null_mean": -0.009546112799969754,
+        "delta_null_sd": 0.013320705215691574,
+        "delta_z": 3.553943982452832,
+        "delta_alt": 0.051511935618536314,
+        "delta_alt_p": 0.00019998000199980003,
+        "rho_bar": -0.019039156875147095,
+        "rho_bar_p": 0.6254374562543745,
+        "rho_null_mean": 1.0206318977670576e-05,
+        "rho_null_sd": 0.03898839592733462,
+        "rho_z": -0.48859058550724643,
+        "mean_sim_g1": 0.3543502084883753,
+        "mean_sim_g3plus": 0.31655528114500986,
+        "ordinal_like_direction": true,
+        "p_strict": 0.6254374562543745,
+        "p_lax": 0.00019998000199980003
+      },
+      "French|prefix": {
+        "label": "French|prefix",
+        "n_rings": 10,
+        "ring_sizes": [
+          18,
+          12,
+          18,
+          12,
+          18,
+          10,
+          16,
+          10,
+          16,
+          9
+        ],
+        "n_labels": 139,
+        "n_pairs": 957,
+        "delta": 0.03501887932136882,
+        "delta_p": 0.0091990800919908,
+        "delta_null_mean": -0.00836839049056863,
+        "delta_null_sd": 0.01644226111058451,
+        "delta_z": 2.6387654058119425,
+        "delta_alt": 0.046243761959755623,
+        "delta_alt_p": 0.007799220077992201,
+        "rho_bar": -0.0004936967276711945,
+        "rho_bar_p": 0.986001399860014,
+        "rho_null_mean": 0.0003808748265616191,
+        "rho_null_sd": 0.03726991196116343,
+        "rho_z": -0.023465887312643728,
+        "mean_sim_g1": 0.28933856840833583,
+        "mean_sim_g3plus": 0.25431968908696695,
+        "ordinal_like_direction": true,
+        "p_strict": 0.986001399860014,
+        "p_lax": 0.0091990800919908
+      },
+      "Roman|prefix": {
+        "label": "Roman|prefix",
+        "n_rings": 10,
+        "ring_sizes": [
+          18,
+          12,
+          18,
+          12,
+          18,
+          10,
+          16,
+          10,
+          16,
+          9
+        ],
+        "n_labels": 139,
+        "n_pairs": 957,
+        "delta": 0.25011029941984125,
+        "delta_p": 9.999000099990002e-05,
+        "delta_null_mean": -0.006342883572718924,
+        "delta_null_sd": 0.020694698721343576,
+        "delta_z": 12.392216308424244,
+        "delta_alt": 0.25778381580105725,
+        "delta_alt_p": 9.999000099990002e-05,
+        "rho_bar": -0.21759434503689098,
+        "rho_bar_p": 9.999000099990002e-05,
+        "rho_null_mean": 0.00013053406453347873,
+        "rho_null_sd": 0.03776119185424848,
+        "rho_z": -5.765837051484073,
+        "mean_sim_g1": 0.686452565522333,
+        "mean_sim_g3plus": 0.43634226610249177,
+        "ordinal_like_direction": true,
+        "p_strict": 9.999000099990002e-05,
+        "p_lax": 9.999000099990002e-05
+      },
+      "GreekMilesian|prefix": {
+        "label": "GreekMilesian|prefix",
+        "n_rings": 10,
+        "ring_sizes": [
+          18,
+          12,
+          18,
+          12,
+          18,
+          10,
+          16,
+          10,
+          16,
+          9
+        ],
+        "n_labels": 139,
+        "n_pairs": 957,
+        "delta": 0.09766603616113244,
+        "delta_p": 9.999000099990002e-05,
+        "delta_null_mean": -0.01706391540292221,
+        "delta_null_sd": 0.018496264394717913,
+        "delta_z": 6.202871515873159,
+        "delta_alt": 0.11828780096021473,
+        "delta_alt_p": 9.999000099990002e-05,
+        "rho_bar": -0.18444265399808363,
+        "rho_bar_p": 9.999000099990002e-05,
+        "rho_null_mean": -0.00025894562259232867,
+        "rho_null_sd": 0.03872507213364008,
+        "rho_z": -4.756187612507835,
+        "mean_sim_g1": 0.20956072351421187,
+        "mean_sim_g3plus": 0.11189468735307946,
+        "ordinal_like_direction": true,
+        "p_strict": 9.999000099990002e-05,
+        "p_lax": 9.999000099990002e-05
+      },
+      "LatinOrdinalAbbrev|prefix": {
+        "label": "LatinOrdinalAbbrev|prefix",
+        "n_rings": 10,
+        "ring_sizes": [
+          18,
+          12,
+          18,
+          12,
+          18,
+          10,
+          16,
+          10,
+          16,
+          9
+        ],
+        "n_labels": 139,
+        "n_pairs": 957,
+        "delta": 0.16760315742176868,
+        "delta_p": 9.999000099990002e-05,
+        "delta_null_mean": -0.001546727937784931,
+        "delta_null_sd": 0.014048248990831198,
+        "delta_z": 12.04063833648961,
+        "delta_alt": 0.17136444291915262,
+        "delta_alt_p": 9.999000099990002e-05,
+        "rho_bar": -0.21665392784326992,
+        "rho_bar_p": 9.999000099990002e-05,
+        "rho_null_mean": 0.0001125404080732615,
+        "rho_null_sd": 0.03749955498198166,
+        "rho_z": -5.780507751505273,
+        "mean_sim_g1": 0.7851874223967247,
+        "mean_sim_g3plus": 0.6175842649749561,
+        "ordinal_like_direction": true,
+        "p_strict": 9.999000099990002e-05,
+        "p_lax": 9.999000099990002e-05
+      }
+    },
+    "negative_controls": {
+      "Culpeper30|cyclic": {
+        "label": "Culpeper30|cyclic",
+        "n_rings": 10,
+        "ring_sizes": [
+          18,
+          12,
+          18,
+          12,
+          18,
+          10,
+          16,
+          10,
+          16,
+          9
+        ],
+        "n_labels": 139,
+        "n_pairs": 957,
+        "delta": 0.023178444587583946,
+        "delta_p": 0.007899210078992101,
+        "delta_null_mean": -0.0029754090298950496,
+        "delta_null_sd": 0.009588848345972898,
+        "delta_z": 2.7275281320371523,
+        "delta_alt": 0.028543094881450386,
+        "delta_alt_p": 0.0052994700529947,
+        "rho_bar": 0.02024887937635921,
+        "rho_bar_p": 0.5952404759524048,
+        "rho_null_mean": -0.0003633222293048476,
+        "rho_null_sd": 0.03840550552990585,
+        "rho_z": 0.5366991352219961,
+        "mean_sim_g1": 0.3134073015957961,
+        "mean_sim_g3plus": 0.29022885700821216,
+        "ordinal_like_direction": false,
+        "p_strict": 0.5952404759524048,
+        "p_lax": 0.007899210078992101
+      },
+      "VoynichHerbalLabels30|cyclic": {
+        "label": "VoynichHerbalLabels30|cyclic",
+        "n_rings": 10,
+        "ring_sizes": [
+          18,
+          12,
+          18,
+          12,
+          18,
+          10,
+          16,
+          10,
+          16,
+          9
+        ],
+        "n_labels": 139,
+        "n_pairs": 957,
+        "delta": -0.011138149342957968,
+        "delta_p": 0.5946405359464053,
+        "delta_null_mean": 0.0010081903313397056,
+        "delta_null_sd": 0.022745829218730345,
+        "delta_z": -0.5340029399453863,
+        "delta_alt": -0.008259299263926831,
+        "delta_alt_p": 0.7343265673432656,
+        "rho_bar": -0.07156537086155886,
+        "rho_bar_p": 0.06529347065293471,
+        "rho_null_mean": -0.0004515540992760001,
+        "rho_null_sd": 0.03857688470965115,
+        "rho_z": -1.8434307823848626,
+        "mean_sim_g1": 0.08776301218161682,
+        "mean_sim_g3plus": 0.09890116152457479,
+        "ordinal_like_direction": false,
+        "p_strict": 0.5946405359464053,
+        "p_lax": 0.06529347065293471
+      },
+      "VulgateTypes30|cyclic": {
+        "label": "VulgateTypes30|cyclic",
+        "n_rings": 10,
+        "ring_sizes": [
+          18,
+          12,
+          18,
+          12,
+          18,
+          10,
+          16,
+          10,
+          16,
+          9
+        ],
+        "n_labels": 139,
+        "n_pairs": 957,
+        "delta": 0.03471079076771344,
+        "delta_p": 0.0006999300069993001,
+        "delta_null_mean": -0.000592419631595636,
+        "delta_null_sd": 0.010048289758077521,
+        "delta_z": 3.5133551329896586,
+        "delta_alt": 0.039652789543308344,
+        "delta_alt_p": 9.999000099990002e-05,
+        "rho_bar": -0.02176595486414501,
+        "rho_bar_p": 0.5767423257674232,
+        "rho_null_mean": -0.0004071833752889364,
+        "rho_null_sd": 0.03823029642926525,
+        "rho_z": -0.5586870488533788,
+        "mean_sim_g1": 0.34113406270962926,
+        "mean_sim_g3plus": 0.30642327194191576,
+        "ordinal_like_direction": true,
+        "p_strict": 0.5767423257674232,
+        "p_lax": 0.0006999300069993001
+      },
+      "SUPP_VoynichNonZodiacLabels30|cyclic": {
+        "label": "SUPP_VoynichNonZodiacLabels30|cyclic",
+        "n_rings": 10,
+        "ring_sizes": [
+          18,
+          12,
+          18,
+          12,
+          18,
+          10,
+          16,
+          10,
+          16,
+          9
+        ],
+        "n_labels": 139,
+        "n_pairs": 957,
+        "delta": -0.000865145321798988,
+        "delta_p": 0.957004299570043,
+        "delta_null_mean": -0.00011081101166563743,
+        "delta_null_sd": 0.014389997882797151,
+        "delta_z": -0.05242073809024923,
+        "delta_alt": 0.002049491223808289,
+        "delta_alt_p": 0.8904109589041096,
+        "rho_bar": 0.01812858799950951,
+        "rho_bar_p": 0.6392360763923608,
+        "rho_null_mean": 0.00010325457965070101,
+        "rho_null_sd": 0.038220883261609995,
+        "rho_z": 0.4716095464482346,
+        "mean_sim_g1": 0.12987851941340314,
+        "mean_sim_g3plus": 0.13074366473520213,
+        "ordinal_like_direction": false,
+        "p_strict": 0.957004299570043,
+        "p_lax": 0.6392360763923608
+      },
+      "Culpeper30|prefix": {
+        "label": "Culpeper30|prefix",
+        "n_rings": 10,
+        "ring_sizes": [
+          18,
+          12,
+          18,
+          12,
+          18,
+          10,
+          16,
+          10,
+          16,
+          9
+        ],
+        "n_labels": 139,
+        "n_pairs": 957,
+        "delta": 0.01645432895181098,
+        "delta_p": 0.0458954104589541,
+        "delta_null_mean": -0.002993218724192729,
+        "delta_null_sd": 0.009769220732640296,
+        "delta_z": 1.9906959017751342,
+        "delta_alt": 0.020942440545702865,
+        "delta_alt_p": 0.0352964703529647,
+        "rho_bar": 0.03608529280367416,
+        "rho_bar_p": 0.36076392360763926,
+        "rho_null_mean": 0.00023794856634092642,
+        "rho_null_sd": 0.039214852499839,
+        "rho_z": 0.9141267135323385,
+        "mean_sim_g1": 0.3127660526681335,
+        "mean_sim_g3plus": 0.2963117237163225,
+        "ordinal_like_direction": false,
+        "p_strict": 0.36076392360763926,
+        "p_lax": 0.0458954104589541
+      },
+      "VoynichHerbalLabels30|prefix": {
+        "label": "VoynichHerbalLabels30|prefix",
+        "n_rings": 10,
+        "ring_sizes": [
+          18,
+          12,
+          18,
+          12,
+          18,
+          10,
+          16,
+          10,
+          16,
+          9
+        ],
+        "n_labels": 139,
+        "n_pairs": 957,
+        "delta": 0.006748908329910069,
+        "delta_p": 0.9122087791220878,
+        "delta_null_mean": 0.003961840897403926,
+        "delta_null_sd": 0.025386648126564056,
+        "delta_z": 0.10978477420931418,
+        "delta_alt": 0.0009576397876890357,
+        "delta_alt_p": 0.9738026197380262,
+        "rho_bar": -0.03247387067862843,
+        "rho_bar_p": 0.3952604739526047,
+        "rho_null_mean": -0.0003314369270927735,
+        "rho_null_sd": 0.038039422786062954,
+        "rho_z": -0.8449769054674546,
+        "mean_sim_g1": 0.1125876707272056,
+        "mean_sim_g3plus": 0.10583876239729555,
+        "ordinal_like_direction": true,
+        "p_strict": 0.9122087791220878,
+        "p_lax": 0.3952604739526047
+      },
+      "VulgateTypes30|prefix": {
+        "label": "VulgateTypes30|prefix",
+        "n_rings": 10,
+        "ring_sizes": [
+          18,
+          12,
+          18,
+          12,
+          18,
+          10,
+          16,
+          10,
+          16,
+          9
+        ],
+        "n_labels": 139,
+        "n_pairs": 957,
+        "delta": 0.0576474966187393,
+        "delta_p": 9.999000099990002e-05,
+        "delta_null_mean": 0.002400963584448705,
+        "delta_null_sd": 0.010330444804806748,
+        "delta_z": 5.347933615461014,
+        "delta_alt": 0.05553787961197435,
+        "delta_alt_p": 9.999000099990002e-05,
+        "rho_bar": -0.034684132744082954,
+        "rho_bar_p": 0.3722627737226277,
+        "rho_null_mean": 2.395120658213711e-05,
+        "rho_null_sd": 0.038520434090934266,
+        "rho_z": -0.9010304470798679,
+        "mean_sim_g1": 0.36604807288950514,
+        "mean_sim_g3plus": 0.3084005762707659,
+        "ordinal_like_direction": true,
+        "p_strict": 0.3722627737226277,
+        "p_lax": 9.999000099990002e-05
+      },
+      "SUPP_VoynichNonZodiacLabels30|prefix": {
+        "label": "SUPP_VoynichNonZodiacLabels30|prefix",
+        "n_rings": 10,
+        "ring_sizes": [
+          18,
+          12,
+          18,
+          12,
+          18,
+          10,
+          16,
+          10,
+          16,
+          9
+        ],
+        "n_labels": 139,
+        "n_pairs": 957,
+        "delta": 0.03181970353223676,
+        "delta_p": 0.025697430256974303,
+        "delta_null_mean": 0.0028932977966164286,
+        "delta_null_sd": 0.013052522983494116,
+        "delta_z": 2.216154361283249,
+        "delta_alt": 0.027044112921296094,
+        "delta_alt_p": 0.0458954104589541,
+        "rho_bar": -0.07840837833897733,
+        "rho_bar_p": 0.0352964703529647,
+        "rho_null_mean": 0.0007587664858888227,
+        "rho_null_sd": 0.03785733675143617,
+        "rho_z": -2.0911968885889167,
+        "mean_sim_g1": 0.15960267123057822,
+        "mean_sim_g3plus": 0.12778296769834144,
+        "ordinal_like_direction": true,
+        "p_strict": 0.0352964703529647,
+        "p_lax": 0.025697430256974303
+      },
+      "VoynichHerbalLabels30_chars|cyclic": {
+        "label": "VoynichHerbalLabels30_chars|cyclic",
+        "n_rings": 10,
+        "ring_sizes": [
+          18,
+          12,
+          18,
+          12,
+          18,
+          10,
+          16,
+          10,
+          16,
+          9
+        ],
+        "n_labels": 139,
+        "n_pairs": 957,
+        "delta": -0.006541037651018974,
+        "delta_p": 0.6957304269573042,
+        "delta_null_mean": 0.002423998604666427,
+        "delta_null_sd": 0.023150123254120126,
+        "delta_z": -0.387256523746147,
+        "delta_alt": -0.005248027212872716,
+        "delta_alt_p": 0.8328167183281672,
+        "rho_bar": -0.0697908566722306,
+        "rho_bar_p": 0.07139286071392861,
+        "rho_null_mean": -0.0005144156935111083,
+        "rho_null_sd": 0.03873037034096594,
+        "rho_z": -1.7886852196051508,
+        "mean_sim_g1": 0.09739141134489972,
+        "mean_sim_g3plus": 0.10393244899591866,
+        "ordinal_like_direction": false,
+        "p_strict": 0.6957304269573042,
+        "p_lax": 0.07139286071392861
+      },
+      "VoynichHerbalLabels30_chars|prefix": {
+        "label": "VoynichHerbalLabels30_chars|prefix",
+        "n_rings": 10,
+        "ring_sizes": [
+          18,
+          12,
+          18,
+          12,
+          18,
+          10,
+          16,
+          10,
+          16,
+          9
+        ],
+        "n_labels": 139,
+        "n_pairs": 957,
+        "delta": 0.004010747212767757,
+        "delta_p": 0.9392060793920608,
+        "delta_null_mean": 0.002174127270896383,
+        "delta_null_sd": 0.025680203655919647,
+        "delta_z": 0.07151890095887176,
+        "delta_alt": -1.5695849947792514e-05,
+        "delta_alt_p": 0.9999000099990001,
+        "rho_bar": -0.030849772737665017,
+        "rho_bar_p": 0.42195780421957807,
+        "rho_null_mean": -0.000296743083506446,
+        "rho_null_sd": 0.03807637751692026,
+        "rho_z": -0.8024142958605113,
+        "mean_sim_g1": 0.11412575366063739,
+        "mean_sim_g3plus": 0.11011500644786965,
+        "ordinal_like_direction": true,
+        "p_strict": 0.9392060793920608,
+        "p_lax": 0.42195780421957807
+      }
+    },
+    "supplementary_no_reuse": {
+      "English": {
+        "label": "English|onepass",
+        "n_rings": 2,
+        "ring_sizes": [
+          18,
+          12
+        ],
+        "n_labels": 30,
+        "n_pairs": 219,
+        "delta": 0.11784580734105277,
+        "delta_p": 0.0007999200079992001,
+        "delta_null_mean": 0.031450431555390596,
+        "delta_null_sd": 0.025995351755108892,
+        "delta_z": 3.3234932383126075,
+        "delta_alt": 0.08879581690966641,
+        "delta_alt_p": 0.0017998200179982,
+        "rho_bar": -0.1938376745765173,
+        "rho_bar_p": 0.012798720127987202,
+        "rho_null_mean": 0.000303376197847195,
+        "rho_null_sd": 0.08088080478109745,
+        "rho_z": -2.4003352995782374,
+        "mean_sim_g1": 0.5087844587595803,
+        "mean_sim_g3plus": 0.39093865141852757,
+        "ordinal_like_direction": true,
+        "p_strict": 0.012798720127987202,
+        "p_lax": 0.0007999200079992001
+      },
+      "Latin": {
+        "label": "Latin|onepass",
+        "n_rings": 2,
+        "ring_sizes": [
+          18,
+          12
+        ],
+        "n_labels": 30,
+        "n_pairs": 219,
+        "delta": 0.14105650960131577,
+        "delta_p": 0.00019998000199980003,
+        "delta_null_mean": 0.03969396093397908,
+        "delta_null_sd": 0.027400781144676856,
+        "delta_z": 3.6992576281727048,
+        "delta_alt": 0.10800073033916148,
+        "delta_alt_p": 0.00019998000199980003,
+        "rho_bar": -0.27621908965270436,
+        "rho_bar_p": 0.0005999400059994001,
+        "rho_null_mean": 0.0003957459725223417,
+        "rho_null_sd": 0.07906975458619728,
+        "rho_z": -3.4983646663994286,
+        "mean_sim_g1": 0.5436336660769088,
+        "mean_sim_g3plus": 0.402577156475593,
+        "ordinal_like_direction": true,
+        "p_strict": 0.0005999400059994001,
+        "p_lax": 0.00019998000199980003
+      },
+      "Italian": {
+        "label": "Italian|onepass",
+        "n_rings": 2,
+        "ring_sizes": [
+          18,
+          12
+        ],
+        "n_labels": 30,
+        "n_pairs": 219,
+        "delta": 0.1580416953966296,
+        "delta_p": 0.00019998000199980003,
+        "delta_null_mean": 0.027627634449757806,
+        "delta_null_sd": 0.03316384065438223,
+        "delta_z": 3.932417306728286,
+        "delta_alt": 0.13839151569208324,
+        "delta_alt_p": 0.00019998000199980003,
+        "rho_bar": -0.245791232420838,
+        "rho_bar_p": 0.0015998400159984002,
+        "rho_null_mean": 3.366100571173979e-05,
+        "rho_null_sd": 0.07845513142952992,
+        "rho_z": -3.1333182284877683,
+        "mean_sim_g1": 0.5256202706715178,
+        "mean_sim_g3plus": 0.36757857527488824,
+        "ordinal_like_direction": true,
+        "p_strict": 0.0015998400159984002,
+        "p_lax": 0.00019998000199980003
+      },
+      "German": {
+        "label": "German|onepass",
+        "n_rings": 2,
+        "ring_sizes": [
+          18,
+          12
+        ],
+        "n_labels": 30,
+        "n_pairs": 219,
+        "delta": 0.09827783824724101,
+        "delta_p": 0.013798620137986202,
+        "delta_null_mean": 0.033415454995534014,
+        "delta_null_sd": 0.026256597011718348,
+        "delta_z": 2.470327103804002,
+        "delta_alt": 0.06571141727029438,
+        "delta_alt_p": 0.0207979202079792,
+        "rho_bar": -0.1967501211053439,
+        "rho_bar_p": 0.010498950104989501,
+        "rho_null_mean": -0.00018086729093043564,
+        "rho_null_sd": 0.08120415012886696,
+        "rho_z": -2.420679897547943,
+        "mean_sim_g1": 0.5087022977020382,
+        "mean_sim_g3plus": 0.4104244594547972,
+        "ordinal_like_direction": true,
+        "p_strict": 0.013798620137986202,
+        "p_lax": 0.010498950104989501
+      },
+      "French": {
+        "label": "French|onepass",
+        "n_rings": 2,
+        "ring_sizes": [
+          18,
+          12
+        ],
+        "n_labels": 30,
+        "n_pairs": 219,
+        "delta": 0.09688510012883778,
+        "delta_p": 0.041995800419958006,
+        "delta_null_mean": 0.03465845418133629,
+        "delta_null_sd": 0.030626585076840504,
+        "delta_z": 2.0317853195639697,
+        "delta_alt": 0.06273047222919634,
+        "delta_alt_p": 0.058394160583941604,
+        "rho_bar": -0.09787492230375355,
+        "rho_bar_p": 0.21127887211278873,
+        "rho_null_mean": 0.0003664622966764343,
+        "rho_null_sd": 0.07801336183729558,
+        "rho_z": -1.2592892074734825,
+        "mean_sim_g1": 0.4412590075902769,
+        "mean_sim_g3plus": 0.34437390746143914,
+        "ordinal_like_direction": true,
+        "p_strict": 0.21127887211278873,
+        "p_lax": 0.041995800419958006
+      },
+      "Roman": {
+        "label": "Roman|onepass",
+        "n_rings": 2,
+        "ring_sizes": [
+          18,
+          12
+        ],
+        "n_labels": 30,
+        "n_pairs": 219,
+        "delta": 0.2334026098961166,
+        "delta_p": 9.999000099990002e-05,
+        "delta_null_mean": 0.024136380744676167,
+        "delta_null_sd": 0.03743949384605066,
+        "delta_z": 5.589451342796802,
+        "delta_alt": 0.21792084247563714,
+        "delta_alt_p": 9.999000099990002e-05,
+        "rho_bar": -0.24926083954427036,
+        "rho_bar_p": 0.0017998200179982,
+        "rho_null_mean": 0.0007267810619305228,
+        "rho_null_sd": 0.07609988299279852,
+        "rho_z": -3.2849934950604025,
+        "mean_sim_g1": 0.7528756957328387,
+        "mean_sim_g3plus": 0.5194730858367221,
+        "ordinal_like_direction": true,
+        "p_strict": 0.0017998200179982,
+        "p_lax": 9.999000099990002e-05
+      },
+      "GreekMilesian": {
+        "label": "GreekMilesian|onepass",
+        "n_rings": 2,
+        "ring_sizes": [
+          18,
+          12
+        ],
+        "n_labels": 30,
+        "n_pairs": 219,
+        "delta": 0.13268398268398265,
+        "delta_p": 0.005499450054994501,
+        "delta_null_mean": 0.0239486753246753,
+        "delta_null_sd": 0.039219211326281395,
+        "delta_z": 2.7725011208076524,
+        "delta_alt": 0.11231735159817346,
+        "delta_alt_p": 0.007399260073992601,
+        "rho_bar": -0.21162110955347574,
+        "rho_bar_p": 0.006999300069993001,
+        "rho_null_mean": -0.000321873651057751,
+        "rho_null_sd": 0.07964805642853943,
+        "rho_z": -2.6529113876368915,
+        "mean_sim_g1": 0.3357142857142857,
+        "mean_sim_g3plus": 0.20303030303030303,
+        "ordinal_like_direction": true,
+        "p_strict": 0.006999300069993001,
+        "p_lax": 0.005499450054994501
+      },
+      "LatinOrdinalAbbrev": {
+        "label": "LatinOrdinalAbbrev|onepass",
+        "n_rings": 2,
+        "ring_sizes": [
+          18,
+          12
+        ],
+        "n_labels": 30,
+        "n_pairs": 219,
+        "delta": 0.163928195421702,
+        "delta_p": 9.999000099990002e-05,
+        "delta_null_mean": 0.013464692876267574,
+        "delta_null_sd": 0.026768966074308054,
+        "delta_z": 5.620818604938357,
+        "delta_alt": 0.1556652420807673,
+        "delta_alt_p": 9.999000099990002e-05,
+        "rho_bar": -0.24170366720642678,
+        "rho_bar_p": 0.0025997400259974,
+        "rho_null_mean": 0.0007637877574787276,
+        "rho_null_sd": 0.07539711204673281,
+        "rho_z": -3.215871913152572,
+        "mean_sim_g1": 0.8215930894502324,
+        "mean_sim_g3plus": 0.6576648940285303,
+        "ordinal_like_direction": true,
+        "p_strict": 0.0025997400259974,
+        "p_lax": 9.999000099990002e-05
+      },
+      "Culpeper30": {
+        "label": "Culpeper30|onepass",
+        "n_rings": 2,
+        "ring_sizes": [
+          18,
+          12
+        ],
+        "n_labels": 30,
+        "n_pairs": 219,
+        "delta": 0.01954280383442164,
+        "delta_p": 0.2796720327967203,
+        "delta_null_mean": -0.0029415308103874997,
+        "delta_null_sd": 0.020723361392471575,
+        "delta_z": 1.0849752710956098,
+        "delta_alt": 0.023247630941619565,
+        "delta_alt_p": 0.26247375262473754,
+        "rho_bar": 0.009127348731479572,
+        "rho_bar_p": 0.9093090690930907,
+        "rho_null_mean": -8.025555592322981e-05,
+        "rho_null_sd": 0.07706614183605451,
+        "rho_z": 0.11947664782532465,
+        "mean_sim_g1": 0.3128556299139006,
+        "mean_sim_g3plus": 0.29331282607947895,
+        "ordinal_like_direction": false,
+        "p_strict": 0.9093090690930907,
+        "p_lax": 0.2796720327967203
+      },
+      "VoynichHerbalLabels30": {
+        "label": "VoynichHerbalLabels30|onepass",
+        "n_rings": 2,
+        "ring_sizes": [
+          18,
+          12
+        ],
+        "n_labels": 30,
+        "n_pairs": 219,
+        "delta": -0.012000446643303797,
+        "delta_p": 0.7441255874412559,
+        "delta_null_mean": 0.004581928777571635,
+        "delta_null_sd": 0.04918249865100471,
+        "delta_z": -0.33716008490220706,
+        "delta_alt": -0.010748773888043309,
+        "delta_alt_p": 0.8252174782521747,
+        "rho_bar": -0.07304809600911104,
+        "rho_bar_p": 0.34006599340065996,
+        "rho_null_mean": -0.0005495337315512152,
+        "rho_null_sd": 0.07658708325498559,
+        "rho_z": -0.9466160505967616,
+        "mean_sim_g1": 0.08886054421768706,
+        "mean_sim_g3plus": 0.10086099086099086,
+        "ordinal_like_direction": false,
+        "p_strict": 0.7441255874412559,
+        "p_lax": 0.34006599340065996
+      },
+      "VulgateTypes30": {
+        "label": "VulgateTypes30|onepass",
+        "n_rings": 2,
+        "ring_sizes": [
+          18,
+          12
+        ],
+        "n_labels": 30,
+        "n_pairs": 219,
+        "delta": 0.04202131258268493,
+        "delta_p": 0.0522947705229477,
+        "delta_null_mean": 0.00048721920080511456,
+        "delta_null_sd": 0.02134559682910277,
+        "delta_z": 1.9457920860405216,
+        "delta_alt": 0.04548698295427122,
+        "delta_alt_p": 0.038696130386961305,
+        "rho_bar": 0.015306263026857114,
+        "rho_bar_p": 0.8467153284671532,
+        "rho_null_mean": 0.0007068861466090347,
+        "rho_null_sd": 0.07537129024052949,
+        "rho_z": 0.19369944223666136,
+        "mean_sim_g1": 0.345969622520134,
+        "mean_sim_g3plus": 0.3039483099374491,
+        "ordinal_like_direction": false,
+        "p_strict": 0.8467153284671532,
+        "p_lax": 0.0522947705229477
+      },
+      "SUPP_VoynichNonZodiacLabels30": {
+        "label": "SUPP_VoynichNonZodiacLabels30|onepass",
+        "n_rings": 2,
+        "ring_sizes": [
+          18,
+          12
+        ],
+        "n_labels": 30,
+        "n_pairs": 219,
+        "delta": -0.009236411736411723,
+        "delta_p": 0.8183181681831817,
+        "delta_null_mean": -0.002262118030958939,
+        "delta_null_sd": 0.030603847886558073,
+        "delta_z": -0.22788943832504335,
+        "delta_alt": -0.0031672646227440733,
+        "delta_alt_p": 0.919008099190081,
+        "rho_bar": 0.049545455082589424,
+        "rho_bar_p": 0.5091490850914908,
+        "rho_null_mean": -0.000206679374594953,
+        "rho_null_sd": 0.07470646903386241,
+        "rho_z": 0.6659682233761187,
+        "mean_sim_g1": 0.1189935064935065,
+        "mean_sim_g3plus": 0.12822991822991822,
+        "ordinal_like_direction": false,
+        "p_strict": 0.8183181681831817,
+        "p_lax": 0.5091490850914908
+      }
+    },
+    "replication_GC2a": {
+      "status": "NOT RUN",
+      "reason": "GC2a-n.txt is transcribed in the v101 alphabet, whose glyphs include digits and capital letters. The frozen clean parser keeps only pure [a-z]+ tokens, so most zodiac label loci yield no token and no TEST-sign ring reaches the 8-label minimum. Re-implementing the frozen tokeniser for this corpus was not done.",
+      "zodiac_Lz_loci": 299,
+      "loci_with_at_least_one_clean_token": 91,
+      "test_sign_ring_sizes_after_clean_parse": {
+        "Leo": [
+          2,
+          2
+        ],
+        "Virgo": [
+          4,
+          5
+        ],
+        "Libra": [
+          2,
+          1
+        ],
+        "Scorpius": [
+          2,
+          3
+        ],
+        "Sagittarius": [
+          1,
+          3,
+          1
+        ]
+      },
+      "largest_test_ring": 5,
+      "min_ring_required": 8,
+      "protocol_note": "The protocol requires replication only of gates that pass on ZL3b; Z1 did not pass."
+    },
+    "gate": {
+      "statistic_used": "TEST signs, glyph units, comma_split=True",
+      "delta": 0.006122202742073507,
+      "delta_p": 0.5616438356164384,
+      "delta_alt": 0.009205252840683487,
+      "delta_alt_p": 0.6029397060293971,
+      "rho_bar": -0.0028008225064961745,
+      "rho_bar_p": 0.9338066193380662,
+      "ordinal_like_direction": true,
+      "numeral_median_delta_by_cut": {
+        "cyclic": 0.15395699405090757,
+        "prefix": 0.10073118148214097
+      },
+      "numeral_median_delta_used": 0.15395699405090757,
+      "threshold_25pct": 0.03848924851272689,
+      "cond_i_p_strict_both_stats": false,
+      "cond_i_p_lax_either_stat": false,
+      "cond_ii_delta_ge_threshold": false,
+      "measured_power_strict_by_cut": {
+        "cyclic": 1.0,
+        "prefix": 0.625
+      },
+      "measured_power_delta_only_by_cut": {
+        "cyclic": 1.0,
+        "prefix": 1.0
+      },
+      "measured_power_used": 1.0,
+      "measured_power_delta_only_used": 1.0,
+      "negative_control_false_positive_rate_same_construction": {
+        "cyclic": 0.0,
+        "cyclic_delta_only": 0.5,
+        "prefix": 0.0,
+        "prefix_delta_only": 0.25
+      },
+      "supplementary_no_reuse_power_strict": 0.625,
+      "supplementary_no_reuse_power_delta_only": 0.75,
+      "supplementary_no_reuse_negative_control_fp": 0.0,
+      "power_caveat": "The pre-registered power figure uses control series cut to the observed ring sizes, which sum to 139 while each series has only 30 items, so the series is reused across rings. Reuse correlates the rings while the permutation null re-randomises each ring independently, inflating the controls p-values. The negative-control false-positive rate under the same construction and the reuse-free [18, 12] power figures are given so the inflation is visible. The Voynich statistic itself is unaffected: its ten rings are ten distinct arrangements, exactly what the null assumes.",
+      "underpowered": false,
+      "outcome": "FAIL"
+    }
+  }
+}

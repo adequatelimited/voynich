@@ -1,0 +1,108 @@
+sha256 ZL3b   bf5b6d4ac1e3a51b1847a9c388318d609020441ccd56984c901c32b09beccafc
+sha256 lib    aa1ee5a340923cf7bd3f5aa1d433d24c10b2db50da1e7b2da9256cd98ef42fb1
+
+=== zodiac page metadata (hand / language / illustration) ===
+  Pisces       f70v2    $I=Z $L=None $H=4 $Q=J  loci=33
+  Aries        f70v1    $I=Z $L=None $H=4 $Q=J  loci=17
+  Aries        f71r     $I=Z $L=None $H=4 $Q=K  loci=18
+  Taurus       f71v     $I=Z $L=None $H=4 $Q=K  loci=18
+  Taurus       f72r1    $I=Z $L=None $H=4 $Q=K  loci=18
+  Gemini       f72r2    $I=Z $L=None $H=4 $Q=K  loci=32
+  Cancer       f72r3    $I=Z $L=None $H=4 $Q=K  loci=34
+  Leo          f72v3    $I=Z $L=None $H=4 $Q=K  loci=33
+  Virgo        f72v2    $I=Z $L=None $H=4 $Q=K  loci=33
+  Libra        f72v1    $I=Z $L=None $H=4 $Q=K  loci=33
+  Scorpius     f73r     $I=Z $L=None $H=4 $Q=L  loci=33
+  Sagittarius  f73v     $I=Z $L=None $H=4 $Q=L  loci=33
+
+=== ring blocks as meaning_lib segments them (all 10 signs) ===
+  sign / folio / ring : kept  dropped  | ZL comment on first locus
+  Pisces       f70v2   r0  :  18    1 drop@2             | Nymph labels, outer ring:
+  Pisces       f70v2   r1  :  10    0                    | Inner ring:
+  Pisces       f70v2   r2  :   1    0                    | Central star:
+  Aries        f70v1   r0  :  10    0                    | Nymph labels, outer ring:
+  Aries        f70v1   r1  :   5    0                    | Inner ring:
+  Aries        f71r    r2  :  10    0                    | Nymph labels, outer ring
+  Aries        f71r    r3  :   5    0                    | Nymph labels, inner ring
+  Taurus       f71v    r0  :  10    0                    | Nymph labels, outer ring:
+  Taurus       f71v    r1  :   5    0                    | Nymph labels, inner ring:
+  Taurus       f72r1   r2  :  10    0                    | Nymph labels, outer ring
+  Taurus       f72r1   r3  :   5    0                    | Nymph labels, inner ring
+  Gemini       f72r2   r0  :   5    0                    | Top row of nymphs
+  Gemini       f72r2   r1  :  15    0                    | Nymph labels, second ring:
+  Gemini       f72r2   r2  :   9    0                    | Nymph labels, inner ring:
+  Cancer       f72r3   r0  :  11    1 drop@4             | Outer band of labels
+  Cancer       f72r3   r1  :  11    0                    | Middle band of labels
+  Cancer       f72r3   r2  :   7    0                    | Inner band of labels
+  Leo          f72v3   r0  :  18    0                    | Outer band of labels
+  Leo          f72v3   r1  :  12    0                    | Inner band of labels
+  Virgo        f72v2   r0  :  18    0                    | Outer band of labels
+  Virgo        f72v2   r1  :  12    0                    | Inner band of labels
+  Libra        f72v1   r0  :  18    2 drop@10,13         | Outer band of labels
+  Libra        f72v1   r1  :  10    0                    | Inner band of labels
+  Scorpius     f73r    r0  :   4    0                    | Top four nymphs with labels
+  Scorpius     f73r    r1  :  16    0                    | Outer full circle of labels
+  Scorpius     f73r    r2  :  10    0                    | Inner full circle of labels
+  Sagittarius  f73v    r0  :   4    0                    | Top four nymphs with labels
+  Sagittarius  f73v    r1  :  16    0                    | Outer full circle of labels
+  Sagittarius  f73v    r2  :   9    1 drop@3             | Inner full circle of labels
+
+  TEST signs: 147 loci kept, 3 dropped for having no clean [a-z]+ token
+  Every dropped locus CONTRACTS the gaps of all later pairs in its ring:
+  a true gap-2 pair spanning a dropped locus is scored as gap 1.
+
+=== ring ORDER: does locus order agree with the ZL clock position? ===
+  sign / ring : n  n_with_clock  monotone_in_clock?  clock sequence
+  Pisces       r0  : 18  18  YES              09:00,10:00,11:00,11:30,00:00,00:30,01:00,01:30,02:00,02:45,03:15,04:0
+  Pisces       r1  : 10  10  YES              10:00,11:00,00:00,01:30,03:00,04:00,05:00,06:30,08:00,09:00
+  Pisces       r2  :  1   0  n/a              --
+  Aries        r0  : 10  10  YES              10:30,00:00,01:00,02:30,03:30,04:30,06:00,07:00,08:00,09:00
+  Aries        r1  :  5   5  YES              10:30,00:00,02:00,05:00,08:00
+  Aries        r2  : 10  10  YES              10:00,11:00,00:00,01:00,02:00,03:00,04:30,05:30,07:00,08:30
+  Aries        r3  :  5   5  YES              11:00,00:30,03:30,05:30,08:00
+  Taurus       r0  : 10  10  YES              10:00,11:00,00:00,01:00,02:00,03:00,04:30,05:30,07:00,09:00
+  Taurus       r1  :  5   5  YES              10:00,00:00,03:00,05:30,08:30
+  Taurus       r2  : 10  10  YES              09:30,10:30,00:00,01:00,02:00,03:00,03:30,05:00,07:00,08:30
+  Taurus       r3  :  5   5  YES              09:00,00:00,02:00,04:00,07:00
+  Gemini       r0  :  5   5  YES              10:30,11:00,00:00,00:30,01:00
+  Gemini       r1  : 15  15  YES              10:00,11:00,11:45,00:15,01:00,02:00,03:00,04:00,05:00,06:00,06:30,07:3
+  Gemini       r2  :  9   9  YES              10:30,11:30,00:30,02:00,03:30,05:00,06:30,08:00,09:00
+  Cancer       r0  : 11  11  YES              10:30,11:00,00:00,01:00,02:30,04:00,05:00,06:30,07:00,07:00,10:00
+  Cancer       r1  : 11  11  YES              11:00,00:00,01:00,01:30,02:30,03:30,05:00,06:30,08:00,09:00,10:00
+  Cancer       r2  :  7   7  YES              10:30,00:00,01:30,03:00,06:00,07:30,09:00
+  Leo          r0  : 18  18  YES              10:00,11:00,11:30,00:00,00:30,01:00,01:30,02:00,02:45,03:30,04:00,05:0
+  Leo          r1  : 12  12  YES              10:30,11:30,00:30,01:00,02:00,03:00,04:00,05:00,06:30,07:30,08:30,09:3
+  Virgo        r0  : 18  18  YES              10:00,11:00,11:45,00:30,01:00,02:00,02:30,03:00,04:00,04:30,05:30,06:0
+  Virgo        r1  : 12  12  YES              10:30,11:30,00:30,01:00,02:00,03:00,04:00,05:00,06:30,07:30,08:30,09:3
+  Libra        r0  : 18  18  NO(2 descents)   08:45,09:30,10:00,10:30,11:00,11:30,01:45,01:00,01:30,02:00,03:15,03:4  <<<
+  Libra        r1  : 10  10  YES              08:45,10:00,11:30,00:00,01:00,03:00,04:30,05:30,06:30,07:30
+  Scorpius     r0  :  4   4  YES              11:15,11:45,00:30,01:00
+  Scorpius     r1  : 16  16  YES              11:00,11:30,00:00,00:30,01:00,02:00,02:30,03:30,04:30,05:30,06:30,07:0
+  Scorpius     r2  : 10  10  YES              11:30,01:00,02:00,03:00,04:30,06:00,07:00,08:30,09:30,10:30
+  Sagittarius  r0  :  4   4  YES              11:00,11:45,00:30,01:00
+  Sagittarius  r1  : 16  16  YES              10:00,10:30,11:30,00:00,01:00,01:30,02:00,03:00,03:30,04:00,05:00,06:0
+  Sagittarius  r2  :  9   9  YES              09:30,11:00,01:00,02:30,03:30,05:00,06:00,07:30,08:30
+  rings whose locus order is NOT monotone in clock: 1
+
+=== label geometry vs the numeral controls the power claim uses ===
+  Voynich TEST (glyph units)   n=139  len mean=3.73 min=1 max=6  alphabet=36
+  Voynich TEST (raw chars)     n=139  len mean=5.75 min=2 max=10  alphabet=19
+  numeral: English             n= 30  len mean=6.93 min=3 max=11  alphabet=16
+  numeral: Latin               n= 30  len mean=8.57 min=3 max=15  alphabet=17
+  numeral: Italian             n= 30  len mean=6.93 min=3 max=12  alphabet=13
+  numeral: German              n= 30  len mean=8.47 min=3 max=16  alphabet=19
+  numeral: French              n= 30  len mean=6.27 min=2 max=11  alphabet=19
+  numeral: Roman               n= 30  len mean=3.10 min=1 max=6  alphabet=3
+  numeral: GreekMilesian       n= 30  len mean=1.80 min=1 max=3  alphabet=12
+  numeral: LatinOrdinalAbbrev  n= 30  len mean=4.10 min=2 max=7  alphabet=4
+
+  words per label locus (TEST): {1: 133, 2: 6}
+  distinct label strings (TEST): 125 of 139
+
+=== most repeated TEST label strings ===
+  oky                          x3
+  okeody                       x3
+  okaly                        x2
+  oeedy                        x2
+  okary                        x2
+  otaly                        x2

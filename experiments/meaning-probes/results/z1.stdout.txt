@@ -1,0 +1,111 @@
+==============================================================================
+Z1 -- ordinal gradient inside a zodiac ring
+seed 408 | permutations 10000 | min ring size 8
+==============================================================================
+  sha256 ZL3b-n.txt               bf5b6d4ac1e3a51b1847a9c388318d609020441ccd56984c901c32b09beccafc
+  sha256 GC2a-n.txt               b09570cb6c993bc2d87134d115e60a978650a8a6495483ddbb1f6005a586096f
+  sha256 pg49513.txt (Culpeper)   d9bacb3247d798fcd2a8ce3b7c76222407fc0ac1c8d4242e9e8163508c10e968
+  sha256 Latin.xml (Vulgate)      5bba9f75c06858a28ebe7b2fcc19cc32b3fbf587d6bc237ceac6fe7addd3df31
+  sha256 meaning_lib.py           aa1ee5a340923cf7bd3f5aa1d433d24c10b2db50da1e7b2da9256cd98ef42fb1
+  sha256 t_z1.py                  8dde40b058511d60e82129afb9adcbda8c1317fc5c852b6b7716df97650f8711
+
+--- ZL3b-n.txt: FIT signs and TEST signs, 4 configurations ---
+  FIT|units|comma_split=True         rings=10 n=114 pairs= 629  Delta=+0.00423 p=0.5660  rho_bar=-0.0047 p=0.9187
+  TEST|units|comma_split=True        rings=10 n=139 pairs= 957  Delta=+0.00612 p=0.5616  rho_bar=-0.0028 p=0.9338
+  FIT|units|comma_split=False        rings=10 n=114 pairs= 629  Delta=+0.00423 p=0.5660  rho_bar=-0.0047 p=0.9187
+  TEST|units|comma_split=False       rings=10 n=139 pairs= 957  Delta=+0.00612 p=0.5616  rho_bar=-0.0028 p=0.9338
+  FIT|chars|comma_split=True         rings=10 n=114 pairs= 629  Delta=+0.01021 p=0.3203  rho_bar=+0.0150 p=0.7419
+  TEST|chars|comma_split=True        rings=10 n=139 pairs= 957  Delta=+0.01240 p=0.2787  rho_bar=+0.0182 p=0.6508
+  FIT|chars|comma_split=False        rings=10 n=114 pairs= 629  Delta=+0.01021 p=0.3203  rho_bar=+0.0150 p=0.7419
+  TEST|chars|comma_split=False       rings=10 n=139 pairs= 957  Delta=+0.01240 p=0.2787  rho_bar=+0.0182 p=0.6508
+  TEST-sign ring sizes used for all controls: [18, 12, 18, 12, 18, 10, 16, 10, 16, 9] (sum 139)
+  TEST rings: Leo r0 n=18, Leo r1 n=12, Virgo r0 n=18, Virgo r1 n=12, Libra r0 n=18, Libra r1 n=10, Scorpius r1 n=16, Scorpius r2 n=10, Sagittarius r1 n=16, Sagittarius r2 n=9
+
+--- numeral controls (power calibration) at matched ring sizes ---
+  English [cyclic]         Delta=+0.12240 p=0.0001  rho_bar=-0.2159 p=0.0001  sim(g=1)=0.487 sim(g>=3)=0.365
+  Latin [cyclic]           Delta=+0.16318 p=0.0001  rho_bar=-0.3015 p=0.0001  sim(g=1)=0.526 sim(g>=3)=0.363
+  Italian [cyclic]         Delta=+0.16228 p=0.0001  rho_bar=-0.2733 p=0.0001  sim(g=1)=0.511 sim(g>=3)=0.348
+  German [cyclic]          Delta=+0.11967 p=0.0001  rho_bar=-0.2622 p=0.0001  sim(g=1)=0.492 sim(g>=3)=0.372
+  French [cyclic]          Delta=+0.10761 p=0.0001  rho_bar=-0.1673 p=0.0002  sim(g=1)=0.425 sim(g>=3)=0.317
+  Roman [cyclic]           Delta=+0.24836 p=0.0001  rho_bar=-0.2716 p=0.0001  sim(g=1)=0.733 sim(g>=3)=0.484
+  GreekMilesian [cyclic]   Delta=+0.14564 p=0.0001  rho_bar=-0.2119 p=0.0001  sim(g=1)=0.321 sim(g>=3)=0.175
+  LatinOrdinalAbbrev [cyclic] Delta=+0.17541 p=0.0001  rho_bar=-0.2725 p=0.0001  sim(g=1)=0.808 sim(g>=3)=0.633
+  English [prefix]         Delta=+0.06866 p=0.0001  rho_bar=-0.0831 p=0.0351  sim(g=1)=0.359 sim(g>=3)=0.290
+  Latin [prefix]           Delta=+0.10380 p=0.0001  rho_bar=-0.2703 p=0.0001  sim(g=1)=0.392 sim(g>=3)=0.288
+  Italian [prefix]         Delta=+0.14228 p=0.0001  rho_bar=-0.1902 p=0.0001  sim(g=1)=0.429 sim(g>=3)=0.287
+  German [prefix]          Delta=+0.03779 p=0.0002  rho_bar=-0.0190 p=0.6254  sim(g=1)=0.354 sim(g>=3)=0.317
+  French [prefix]          Delta=+0.03502 p=0.0092  rho_bar=-0.0005 p=0.9860  sim(g=1)=0.289 sim(g>=3)=0.254
+  Roman [prefix]           Delta=+0.25011 p=0.0001  rho_bar=-0.2176 p=0.0001  sim(g=1)=0.686 sim(g>=3)=0.436
+  GreekMilesian [prefix]   Delta=+0.09767 p=0.0001  rho_bar=-0.1844 p=0.0001  sim(g=1)=0.210 sim(g>=3)=0.112
+  LatinOrdinalAbbrev [prefix] Delta=+0.16760 p=0.0001  rho_bar=-0.2167 p=0.0001  sim(g=1)=0.785 sim(g>=3)=0.618
+
+--- negative controls ---
+  Culpeper headings available: 525, using first 30; e.g. ['formingcomplete', 'andgeneralindex', 'cowslip']
+  Voynich herbal label word tokens available: 31, sampled 30 (seed 408); e.g. ['e', 'e', 's']
+  Vulgate word types: 42114, sampled 30 (seed 408); e.g. ['peristi', 'gloriosique', 'solacii']
+  SUPPLEMENTARY (not pre-registered, outside the gate): non-zodiac label word types available: 508, sampled 30 (seed 408); e.g. ['rals', 'otoeeo', 'okeeeody']
+  NOTE: the pre-registered herbal-label control is degenerate -- only 31 clean herbal label word tokens exist, mean length 2.17 chars.
+  Culpeper30 [cyclic]                Delta=+0.02318 p=0.0079  rho_bar=+0.0202 p=0.5952
+  VoynichHerbalLabels30 [cyclic]     Delta=-0.01114 p=0.5946  rho_bar=-0.0716 p=0.0653
+  VulgateTypes30 [cyclic]            Delta=+0.03471 p=0.0007  rho_bar=-0.0218 p=0.5767
+  SUPP_VoynichNonZodiacLabels30 [cyclic] Delta=-0.00087 p=0.9570  rho_bar=+0.0181 p=0.6392
+  Culpeper30 [prefix]                Delta=+0.01645 p=0.0459  rho_bar=+0.0361 p=0.3608
+  VoynichHerbalLabels30 [prefix]     Delta=+0.00675 p=0.9122  rho_bar=-0.0325 p=0.3953
+  VulgateTypes30 [prefix]            Delta=+0.05765 p=0.0001  rho_bar=-0.0347 p=0.3723
+  SUPP_VoynichNonZodiacLabels30 [prefix] Delta=+0.03182 p=0.0257  rho_bar=-0.0784 p=0.0353
+  VoynichHerbalLabels30 chars [cyclic] Delta=-0.00654 p=0.6957  rho_bar=-0.0698 p=0.0714
+  VoynichHerbalLabels30 chars [prefix] Delta=+0.00401 p=0.9392  rho_bar=-0.0308 p=0.4220
+
+--- SUPPLEMENTARY: reuse-free power, rings [18, 12] (each series item used exactly once) ---
+  English                  Delta=+0.11785 p=0.0008  rho_bar=-0.1938 p=0.0128
+  Latin                    Delta=+0.14106 p=0.0002  rho_bar=-0.2762 p=0.0006
+  Italian                  Delta=+0.15804 p=0.0002  rho_bar=-0.2458 p=0.0016
+  German                   Delta=+0.09828 p=0.0138  rho_bar=-0.1968 p=0.0105
+  French                   Delta=+0.09689 p=0.0420  rho_bar=-0.0979 p=0.2113
+  Roman                    Delta=+0.23340 p=0.0001  rho_bar=-0.2493 p=0.0018
+  GreekMilesian            Delta=+0.13268 p=0.0055  rho_bar=-0.2116 p=0.0070
+  LatinOrdinalAbbrev       Delta=+0.16393 p=0.0001  rho_bar=-0.2417 p=0.0026
+  Culpeper30               Delta=+0.01954 p=0.2797  rho_bar=+0.0091 p=0.9093
+  VoynichHerbalLabels30    Delta=-0.01200 p=0.7441  rho_bar=-0.0730 p=0.3401
+  VulgateTypes30           Delta=+0.04202 p=0.0523  rho_bar=+0.0153 p=0.8467
+  SUPP_VoynichNonZodiacLab Delta=-0.00924 p=0.8183  rho_bar=+0.0495 p=0.5091
+
+--- replication: GC2a-n.txt, TEST signs, units, comma_split=True ---
+  NOT RUN. GC2a is v101: 299 zodiac label loci, only 91 keep any [a-z]+ token under the frozen parser.
+  TEST-sign ring sizes after the clean parse: {'Leo': [2, 2], 'Virgo': [4, 5], 'Libra': [2, 1], 'Scorpius': [2, 3], 'Sagittarius': [1, 3, 1]} -> largest 5 < 8.
+  The protocol requires replication only of gates that pass; Z1 did not pass.
+
+==============================================================================
+GATE Z1  (TEST signs, glyph units, comma_split=True)
+  Delta            = +0.00612   p = 0.5616   (null mean -0.00423 sd 0.01810, z=+0.57)
+  Delta (alt pool) = +0.00921   p = 0.6029
+  rho_bar          = -0.00280   p = 0.9338   (null mean +0.00035 sd 0.03829, z=-0.08)
+  mean sim(g=1) = 0.2215   mean sim(g>=3) = 0.2154
+  ordinal-like direction (Delta>0 and rho_bar<0): True
+  numeral-control median Delta: cyclic 0.15396 / prefix 0.10073 -> using 0.15396
+  gate threshold (25%)  = 0.03849    observed Delta = +0.00612  -> cond(ii) NOT MET
+  cond(i) p<0.01 (both statistics, harder reading): False
+  cond(i) p<0.01 (either statistic, laxer reading):  False
+  measured power (numeral controls clearing p<0.01, both stats): 1.00 cyclic / 0.62 prefix
+  measured power (Delta only):                                  1.00 cyclic / 1.00 prefix
+  CAVEAT on that power figure: matched ring sizes sum to 139 but each control series has 30 items,
+    so the series is reused across rings; reuse correlates the rings and inflates control p-values.
+    negative-control false-positive rate, same construction, p<0.01: 0.00 cyclic / 0.00 prefix (both stats), 0.50 / 0.25 (Delta only)
+    reuse-free power, rings [18,12]: 0.62 (both stats) / 0.75 (Delta only); negative-control FP 0.00
+    The Voynich statistic is not affected: its ten rings are ten distinct arrangements.
+  OUTCOME: FAIL
+==============================================================================
+
+Ambiguity resolutions (harder reading taken in each case):
+  - Two statistics are defined (Delta and rho_bar) but gate (i) says only 'permutation p < 0.01'. Harder reading taken: BOTH statistics must reach p < 0.01, in the ordinal-like direction (Delta > 0 and rho_bar < 0). The per-statistic p-values and the outcome under the laxer 'either one' reading are both reported.
+  - 'Delta pooled over rings weighted by pair count' is read as pooling every pair across rings (mean of all g=1 pairs minus mean of all g>=3 pairs), which is exactly a pair-count weighting. The alternative reading (mean of per-ring Deltas weighted by that ring's pair count) is computed and reported as delta_alt with its own p.
+  - Gap g = |i - j| in linear ring order, no wrap-around, as instructed; the ring is not treated as circular.
+  - Numeral controls are 30 items but the observed TEST ring sizes sum to 139, so the series must be reused. Primary construction: cut the series cyclically (ring boundaries walk through 1..30 and wrap). Alternative construction reported: every ring of size k is the contiguous run 1..k. For gate (ii) the threshold uses the LARGER of the two median control Deltas (the harder threshold).
+  - Two-sided permutation p = (1 + #{|null - mean(null)| >= |obs - mean(null)|}) / (NPERM + 1); never rounded down.
+  - Rings with fewer than 8 legible labels are dropped entirely (they are not merged into neighbouring rings).
+  - Controls in Latin script have no byte-pair merges, so their 'glyph unit' level and their raw-character level are identical by construction; the numeral-control numbers therefore serve both robustness levels.
+  - The pre-registered negative control '30 random Voynich herbal-section label words' is degenerate: the herbal section contains only 32 label loci / 31 clean label word tokens, most of them the single-character marginal glyphs of f49v, so the 'random sample of 30' is very nearly the whole population and its sequences are 1-2 units long. It is run exactly as pre-registered and reported, and a non-degenerate supplementary negative control (30 random non-zodiac label word types, seed 408) is added and flagged as supplementary, outside the gate.
+  - The observed TEST ring sizes sum to 139 while every control series has 30 items, so any matched-size control must reuse its series across rings. Reuse correlates the control's rings while the permutation null re-randomises each ring independently, which inflates the controls' significance. The pre-registered power figure is reported as specified, and alongside it the negative-control false-positive rate under the same construction and a reuse-free power figure on rings [18, 12] (each series item used exactly once). The Voynich statistic is not affected -- its ten rings are ten distinct arrangements, which is what the null assumes.
+  - Replication on GC2a-n.txt is not runnable: GC2a is in the v101 alphabet, whose glyphs include digits and capitals, and the frozen clean parser keeps only pure [a-z]+ tokens. 208 of its 299 zodiac label loci lose every token, and no TEST-sign ring reaches the 8-label minimum. Rather than re-implement the frozen tokeniser for one corpus, the replication is reported as NOT RUN with those diagnostics. The protocol requires replication only of gates that pass on ZL3b.
+
+wrote R:\Coding\LinearA\tmp\voynich_repo\experiments\meaning-probes\results\z1.json

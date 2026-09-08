@@ -1,0 +1,525 @@
+==============================================================================
+L1 -- label register vs running text
+==============================================================================
+  sha256 ZL3b-n.txt       bf5b6d4ac1e3a51b1847a9c388318d609020441ccd56984c901c32b09beccafc
+  sha256 GC2a-n.txt       b09570cb6c993bc2d87134d115e60a978650a8a6495483ddbb1f6005a586096f
+  sha256 pg49513.txt      d9bacb3247d798fcd2a8ce3b7c76222407fc0ac1c8d4242e9e8163508c10e968
+  sha256 meaning_lib.py   aa1ee5a340923cf7bd3f5aa1d433d24c10b2db50da1e7b2da9256cd98ef42fb1
+
+### POSITIVE CONTROL: Culpeper, entry headings vs entry bodies (character level)
+    entries used: 525 ; total words: 245730
+--- culpeper_final_char 
+    strata=1134  label words matched=1359  text words matched=56938
+    pooled mean|log-odds|=0.6497  rms=0.8638  max=2.6740
+    units Bonferroni-significant=6 ; units passing gate leg 1 (|lo|>=1 AND bonf p<0.01)=1 ; same on uncorrected estimator=4
+    unit        log-odds       SE     p_perm       p_bonf   lo_uncorr pass
+    u             -1.172    1.077    0.16688      1.00000        -inf 
+    o             -0.882    0.209    0.00010      0.00250     -1.5229 
+    z             -0.753    2.299    1.00000      1.00000        -inf 
+    '             -0.724    4.434    1.00000      1.00000        -inf 
+    g             -0.697    0.184    0.00010      0.00250     -1.2204 
+    t             -0.681    0.114    0.00010      0.00250     -0.9665 
+    c             -0.630    0.594    0.10029      1.00000      -1.471 
+    n             -0.499    0.111    0.00010      0.00250     -0.7063 
+    h             -0.295    0.154    0.01400      0.34997     -0.4097 
+    d             -0.194    0.107    0.03100      0.77492     -0.2489 
+    s             -0.155    0.075    0.01940      0.48495     -0.1882 
+    e             -0.054    0.077    0.43886      1.00000     -0.0664 
+    y              0.026    0.112    0.74772      1.00000      0.0358 
+    l              0.071    0.144    0.55854      1.00000      0.1013 
+    m              0.085    0.201    0.55564      1.00000       0.119 
+    f              0.117    0.107    0.24248      1.00000      0.1334 
+    a              0.329    0.270    0.19108      1.00000      0.4626 
+    k              0.363    0.220    0.09009      1.00000      0.5083 
+    w              0.371    0.293    0.17018      1.00000      0.5515 
+    x              0.911    0.374    0.04550      1.00000      1.2645 
+    r              0.926    0.071    0.00010      0.00250      1.1292 
+    b              1.113    0.319    0.00830      0.20748      1.4321 
+    i              1.235    0.411    0.00240      0.05999      1.5331 
+    p              1.287    0.159    0.00010      0.00250      1.6574 YES
+    v              2.674    0.984    0.00220      0.05500      3.2704 
+
+--- culpeper_initial_char 
+    strata=1134  label words matched=1359  text words matched=56938
+    pooled mean|log-odds|=0.3595  rms=0.5259  max=1.3284
+    units Bonferroni-significant=5 ; units passing gate leg 1 (|lo|>=1 AND bonf p<0.01)=2 ; same on uncorrected estimator=4
+    unit        log-odds       SE     p_perm       p_bonf   lo_uncorr pass
+    i             -1.249    0.151    0.00010      0.00250     -1.7137 YES
+    y             -1.013    0.544    0.00410      0.10249        -inf 
+    u             -0.839    0.333    0.00010      0.00250     -2.0729 
+    z             -0.819    2.341    1.00000      1.00000        -inf 
+    d             -0.590    0.157    0.00010      0.00250     -1.0187 
+    k             -0.464    0.452    0.13759      1.00000     -0.9132 
+    a             -0.463    0.110    0.00010      0.00250     -0.6404 
+    t             -0.223    0.093    0.00410      0.10249     -0.2889 
+    q             -0.177    0.424    0.47745      1.00000       -0.33 
+    b             -0.168    0.118    0.07559      1.00000     -0.2328 
+    g             -0.084    0.165    0.50445      1.00000     -0.1259 
+    n             -0.083    0.234    0.61014      1.00000     -0.1382 
+    j             -0.062    0.245    0.67033      1.00000     -0.0988 
+    e             -0.015    0.173    0.84222      1.00000     -0.0236 
+    h              0.024    0.143    0.80602      1.00000      0.0339 
+    f              0.028    0.137    0.81182      1.00000       0.038 
+    p              0.036    0.116    0.69023      1.00000      0.0495 
+    c              0.086    0.105    0.32937      1.00000      0.1154 
+    s              0.100    0.089    0.20528      1.00000      0.1273 
+    m              0.195    0.133    0.10409      1.00000      0.2708 
+    l              0.209    0.150    0.12489      1.00000      0.2796 
+    r              0.219    0.148    0.09749      1.00000      0.3136 
+    v              0.220    0.193    0.17648      1.00000      0.3239 
+    w              0.294    0.116    0.00980      0.24498       0.367 
+    o              1.328    0.095    0.00010      0.00250       1.646 YES
+
+### PRIMARY: ZL3b-n, glyph units, comma_split=True
+    manuscript word tokens (all loci): 38184
+    pages carrying both label and text loci: 54
+    FIT (even folio) pages: 28 ; TEST (odd folio) pages: 26
+
+--- ZL3b_fit_even_final 
+    strata=126  label words matched=529  text words matched=3203
+    pooled mean|log-odds|=0.6212  rms=0.8124  max=1.7668
+    units Bonferroni-significant=2 ; units passing gate leg 1 (|lo|>=1 AND bonf p<0.01)=1 ; same on uncorrected estimator=1
+    unit        log-odds       SE     p_perm       p_bonf   lo_uncorr pass
+    chedy         -1.203    0.492    0.00020      0.00500     -2.0552 YES
+    ot            -0.756    3.347    1.00000      1.00000        -inf 
+    eey           -0.630    0.256    0.00130      0.03250     -0.9335 
+    in            -0.578    0.591    0.13079      1.00000     -1.1523 
+    ol            -0.426    0.176    0.00430      0.10749     -0.5679 
+    ain           -0.423    0.408    0.19608      1.00000     -0.6359 
+    daiin         -0.368    0.325    0.15479      1.00000     -0.5916 
+    o             -0.262    0.229    0.15329      1.00000      -0.383 
+    aiin          -0.212    0.223    0.24058      1.00000      -0.303 
+    dy            -0.155    0.139    0.22388      1.00000     -0.1861 
+    or            -0.145    0.217    0.42966      1.00000     -0.1981 
+    r             -0.060    0.306    0.82182      1.00000     -0.0943 
+    s             -0.041    0.187    0.82812      1.00000      -0.055 
+    l              0.107    0.435    0.80442      1.00000      0.1551 
+    al             0.134    0.172    0.40346      1.00000      0.1805 
+    y              0.141    0.114    0.19908      1.00000      0.1627 
+    ar             0.222    0.176    0.15358      1.00000      0.2989 
+    d              0.550    0.261    0.00980      0.24498      0.8988 
+    m              0.785    0.231    0.00040      0.01000      1.1618 
+    n              1.006    0.582    0.21968      1.00000      1.3122 
+    g              1.089    0.486    0.00430      0.10749       1.791 
+    a              1.353    0.542    0.00240      0.05999       2.196 
+    k              1.377    1.120    0.19428      1.00000      2.1518 
+    t              1.740    1.181    0.07509      1.00000         inf 
+    sh             1.767    1.127    0.04550      1.00000       4.012 
+
+--- ZL3b_fit_even_initial 
+    strata=126  label words matched=529  text words matched=3203
+    pooled mean|log-odds|=0.6460  rms=0.8258  max=2.2097
+    units Bonferroni-significant=7 ; units passing gate leg 1 (|lo|>=1 AND bonf p<0.01)=4 ; same on uncorrected estimator=6
+    unit        log-odds       SE     p_perm       p_bonf   lo_uncorr pass
+    chedy         -2.210    1.015    0.00140      0.03500        -inf 
+    qok           -1.692    0.392    0.00010      0.00250     -3.3293 YES
+    she           -1.223    0.338    0.00010      0.00250      -2.602 YES
+    q             -1.030    0.330    0.00010      0.00250      -1.561 YES
+    ch            -0.887    0.197    0.00010      0.00250     -1.3079 
+    aiin          -0.750    0.723    0.20638      1.00000     -1.1697 
+    t             -0.677    0.322    0.00240      0.05999     -1.2535 
+    che           -0.664    0.231    0.00020      0.00500      -1.013 
+    k             -0.649    0.365    0.00800      0.19998     -1.2226 
+    sh            -0.543    0.284    0.00650      0.16248     -0.9221 
+    p             -0.438    0.546    0.21718      1.00000     -0.8988 
+    c             -0.350    0.343    0.20578      1.00000     -0.5766 
+    l             -0.264    0.390    0.34867      1.00000     -0.3641 
+    al            -0.258    0.331    0.31347      1.00000     -0.4322 
+    daiin         -0.178    0.449    0.77802      1.00000      -0.214 
+    r             -0.045    0.376    0.96090      1.00000     -0.0674 
+    d             -0.003    0.187    0.96770      1.00000     -0.0045 
+    ol             0.111    0.232    0.66483      1.00000      0.1439 
+    y              0.248    0.195    0.14339      1.00000      0.3408 
+    ot             0.319    0.134    0.01960      0.48995      0.3663 
+    ar             0.333    0.344    0.34957      1.00000      0.4632 
+    s              0.382    0.223    0.06819      1.00000      0.5536 
+    ok             0.790    0.133    0.00010      0.00250      0.9262 
+    or             0.953    0.318    0.00310      0.07749      1.3802 
+    o              1.156    0.171    0.00010      0.00250      1.5614 YES
+
+--- ZL3b_test_odd_final 
+    strata=109  label words matched=466  text words matched=3098
+    pooled mean|log-odds|=0.6462  rms=0.8315  max=1.8623
+    units Bonferroni-significant=3 ; units passing gate leg 1 (|lo|>=1 AND bonf p<0.01)=2 ; same on uncorrected estimator=2
+    unit        log-odds       SE     p_perm       p_bonf   lo_uncorr pass
+    chedy         -1.862    1.009    0.00870      0.21748        -inf 
+    daiin         -1.102    0.369    0.00020      0.00500     -1.6288 YES
+    ot            -1.063    1.587    0.53735      1.00000        -inf 
+    in            -1.015    0.486    0.00080      0.02000     -2.7654 
+    a             -0.915    1.270    0.54315      1.00000        -inf 
+    eey           -0.898    0.303    0.00020      0.00500      -1.394 
+    sh            -0.769    2.784    1.00000      1.00000        -inf 
+    ol            -0.484    0.191    0.00270      0.06749      -0.606 
+    or            -0.221    0.239    0.24348      1.00000     -0.3246 
+    aiin          -0.157    0.259    0.50125      1.00000     -0.2191 
+    r             -0.137    0.285    0.56454      1.00000     -0.2085 
+    dy            -0.127    0.149    0.36736      1.00000     -0.1544 
+    s              0.002    0.191    0.98310      1.00000      0.0027 
+    ain            0.062    0.290    0.85362      1.00000      0.0842 
+    o              0.100    0.244    0.60624      1.00000      0.1469 
+    y              0.179    0.121    0.12349      1.00000      0.2049 
+    g              0.266    0.489    0.43976      1.00000      0.4734 
+    ar             0.329    0.172    0.04190      1.00000      0.4157 
+    m              0.338    0.228    0.09279      1.00000      0.4809 
+    al             0.344    0.180    0.04350      1.00000      0.4386 
+    d              0.512    0.307    0.07069      1.00000      0.7586 
+    t              1.080    0.858    0.10079      1.00000      1.9398 
+    l              1.115    0.551    0.00560      0.13999      1.7513 
+    k              1.491    0.788    0.01550      0.38746      2.8732 
+    n              1.586    0.546    0.00010      0.00250      2.7006 YES
+
+--- ZL3b_test_odd_initial 
+    strata=109  label words matched=466  text words matched=3098
+    pooled mean|log-odds|=0.6786  rms=0.8956  max=2.6151
+    units Bonferroni-significant=5 ; units passing gate leg 1 (|lo|>=1 AND bonf p<0.01)=4 ; same on uncorrected estimator=5
+    unit        log-odds       SE     p_perm       p_bonf   lo_uncorr pass
+    chedy         -2.615    2.388    0.15988      1.00000        -inf 
+    qok           -1.573    0.347    0.00010      0.00250     -3.0529 YES
+    daiin         -1.549    0.546    0.00020      0.00500     -2.0434 YES
+    c             -1.496    0.482    0.00010      0.00250     -2.8355 YES
+    q             -1.213    0.315    0.00010      0.00250     -2.1485 YES
+    aiin          -0.754    0.713    0.11309      1.00000     -1.3735 
+    che           -0.593    0.258    0.00280      0.06999     -0.9013 
+    she           -0.588    0.352    0.01890      0.47245      -0.954 
+    t             -0.553    0.386    0.02530      0.63244     -1.1072 
+    sh            -0.433    0.323    0.07639      1.00000     -0.7069 
+    p             -0.372    0.573    0.32507      1.00000     -0.8244 
+    al            -0.357    0.358    0.20968      1.00000     -0.5584 
+    ch            -0.332    0.194    0.03350      0.83742     -0.4396 
+    k             -0.156    0.289    0.39646      1.00000      -0.251 
+    l             -0.011    0.385    0.85481      1.00000     -0.0169 
+    ol             0.092    0.233    0.67343      1.00000      0.1181 
+    s              0.206    0.202    0.26127      1.00000      0.2718 
+    o              0.298    0.182    0.06529      1.00000      0.4008 
+    d              0.315    0.167    0.04490      1.00000      0.3894 
+    ok             0.351    0.154    0.02230      0.55744      0.4111 
+    r              0.421    0.435    0.34586      1.00000      0.5967 
+    y              0.445    0.180    0.00610      0.15249      0.5715 
+    or             0.553    0.372    0.13269      1.00000      0.7758 
+    ot             0.844    0.152    0.00010      0.00250      1.0174 
+    ar             0.844    0.327    0.01150      0.28747      1.0944 
+
+--- ZL3b_all_pages_final 
+    strata=235  label words matched=995  text words matched=6301
+    pooled mean|log-odds|=0.6026  rms=0.7585  max=1.4605
+    units Bonferroni-significant=7 ; units passing gate leg 1 (|lo|>=1 AND bonf p<0.01)=2 ; same on uncorrected estimator=4
+    unit        log-odds       SE     p_perm       p_bonf   lo_uncorr pass
+    chedy         -1.371    0.442    0.00010      0.00250     -2.4595 YES
+    ot            -1.001    1.443    0.52085      1.00000        -inf 
+    in            -0.853    0.374    0.00020      0.00500     -1.9572 
+    eey           -0.747    0.195    0.00010      0.00250     -1.1261 
+    daiin         -0.721    0.241    0.00010      0.00250     -1.0999 
+    ol            -0.453    0.130    0.00020      0.00500     -0.5862 
+    aiin          -0.189    0.169    0.17568      1.00000     -0.2668 
+    or            -0.180    0.161    0.15768      1.00000     -0.2537 
+    dy            -0.142    0.102    0.12359      1.00000     -0.1715 
+    ain           -0.118    0.235    0.59004      1.00000     -0.1665 
+    r             -0.102    0.209    0.58684      1.00000     -0.1568 
+    o             -0.099    0.167    0.47475      1.00000     -0.1449 
+    s             -0.020    0.134    0.87511      1.00000     -0.0267 
+    y              0.159    0.083    0.04460      1.00000      0.1825 
+    al             0.233    0.124    0.04250      1.00000       0.305 
+    ar             0.277    0.123    0.01330      0.33247      0.3598 
+    l              0.450    0.339    0.12599      1.00000      0.6543 
+    d              0.534    0.199    0.00220      0.05500      0.8368 
+    m              0.553    0.161    0.00010      0.00250      0.7973 
+    g              0.665    0.337    0.01640      0.40996      1.1151 
+    a              0.776    0.473    0.13419      1.00000      1.2413 
+    sh             1.282    0.890    0.20288      1.00000      2.3447 
+    n              1.323    0.394    0.00030      0.00750      1.9292 YES
+    t              1.359    0.684    0.00770      0.19248      2.6742 
+    k              1.460    0.649    0.00580      0.14499      2.6306 
+
+--- ZL3b_all_pages_initial 
+    strata=235  label words matched=995  text words matched=6301
+    pooled mean|log-odds|=0.6516  rms=0.8060  max=2.2895
+    units Bonferroni-significant=11 ; units passing gate leg 1 (|lo|>=1 AND bonf p<0.01)=3 ; same on uncorrected estimator=6
+    unit        log-odds       SE     p_perm       p_bonf   lo_uncorr pass
+    chedy         -2.289    0.936    0.00030      0.00750        -inf YES
+    qok           -1.627    0.260    0.00010      0.00250     -3.1746 YES
+    q             -1.127    0.228    0.00010      0.00250     -1.8384 YES
+    she           -0.946    0.243    0.00010      0.00250     -1.7016 
+    daiin         -0.824    0.338    0.00560      0.13999     -1.0094 
+    c             -0.814    0.274    0.00010      0.00250     -1.3357 
+    aiin          -0.752    0.508    0.04390      1.00000     -1.2627 
+    che           -0.632    0.172    0.00010      0.00250     -0.9633 
+    t             -0.626    0.247    0.00020      0.00500     -1.1961 
+    ch            -0.623    0.138    0.00010      0.00250     -0.8637 
+    sh            -0.495    0.213    0.00120      0.03000     -0.8266 
+    p             -0.407    0.395    0.12019      1.00000     -0.8652 
+    k             -0.364    0.226    0.02740      0.68493     -0.6164 
+    al            -0.304    0.243    0.11179      1.00000     -0.4926 
+    l             -0.141    0.274    0.45745      1.00000     -0.2002 
+    ol             0.102    0.164    0.52665      1.00000      0.1309 
+    r              0.144    0.282    0.56924      1.00000      0.2093 
+    d              0.169    0.124    0.13269      1.00000      0.2172 
+    s              0.283    0.150    0.03950      0.98740      0.3889 
+    y              0.353    0.133    0.00220      0.05500      0.4676 
+    ot             0.541    0.100    0.00010      0.00250      0.6325 
+    ar             0.598    0.235    0.00710      0.17748      0.7992 
+    ok             0.600    0.100    0.00010      0.00250      0.7019 
+    o              0.746    0.122    0.00010      0.00250      0.9942 
+    or             0.781    0.240    0.00180      0.04500      1.1122 
+
+### ROBUSTNESS
+-- raw EVA character level, ZL3b, comma_split=True, TEST (odd folios)
+--- ZL3b_test_odd_rawchar_final 
+    strata=121  label words matched=459  text words matched=2504
+    pooled mean|log-odds|=0.4903  rms=0.7516  max=2.2203
+    units Bonferroni-significant=1 ; units passing gate leg 1 (|lo|>=1 AND bonf p<0.01)=0 ; same on uncorrected estimator=0
+    unit        log-odds       SE     p_perm       p_bonf   lo_uncorr pass
+    u             -0.977    2.759    1.00000      1.00000        -inf 
+    i             -0.892    2.440    1.00000      1.00000        -inf 
+    h             -0.868    1.409    0.62174      1.00000        -inf 
+    n             -0.556    0.175    0.00030      0.00720     -0.6925 
+    a             -0.086    0.997    0.75413      1.00000     -0.1608 
+    s             -0.067    0.196    0.72883      1.00000     -0.0924 
+    l             -0.029    0.140    0.87761      1.00000     -0.0343 
+    y             -0.018    0.109    0.90721      1.00000     -0.0196 
+    x              0.000      n/a    1.00000      1.00000         0.0 
+    b              0.000      n/a    1.00000      1.00000         0.0 
+    v              0.000      n/a    1.00000      1.00000         0.0 
+    j              0.000      n/a    1.00000      1.00000         0.0 
+    q              0.000      n/a    1.00000      1.00000         0.0 
+    r              0.025    0.140    0.86451      1.00000      0.0306 
+    o              0.043    0.263    0.81712      1.00000       0.064 
+    g              0.159    0.548    0.55275      1.00000      0.3128 
+    d              0.439    0.319    0.10469      1.00000      0.6654 
+    e              0.485    0.546    0.18768      1.00000      0.8802 
+    f              0.709    2.001    0.99650      1.00000      2.4049 
+    t              0.720    0.881    0.49775      1.00000      1.0842 
+    m              0.739    0.229    0.00090      0.02160      1.0487 
+    k              1.230    0.819    0.08109      1.00000      2.2729 
+    p              1.506    0.926    0.05350      1.00000      3.5893 
+    c              2.220    1.556    0.16528      1.00000         inf 
+
+--- ZL3b_test_odd_rawchar_initial 
+    strata=121  label words matched=459  text words matched=2504
+    pooled mean|log-odds|=0.3026  rms=0.4798  max=1.5785
+    units Bonferroni-significant=3 ; units passing gate leg 1 (|lo|>=1 AND bonf p<0.01)=1 ; same on uncorrected estimator=1
+    unit        log-odds       SE     p_perm       p_bonf   lo_uncorr pass
+    q             -1.579    0.269    0.00010      0.00220     -2.4492 YES
+    c             -0.695    0.163    0.00010      0.00220     -0.8791 
+    p             -0.521    0.698    0.29047      1.00000     -1.2924 
+    t             -0.469    0.401    0.07689      1.00000     -0.9453 
+    s             -0.329    0.170    0.02380      0.52355     -0.4283 
+    l             -0.115    0.443    0.64164      1.00000      -0.172 
+    k             -0.103    0.300    0.60214      1.00000     -0.1766 
+    a             -0.058    0.216    0.76492      1.00000     -0.0776 
+    x              0.000      n/a    1.00000      1.00000         0.0 
+    m              0.000      n/a    1.00000      1.00000         0.0 
+    v              0.000      n/a    1.00000      1.00000         0.0 
+    i              0.000      n/a    1.00000      1.00000         0.0 
+    n              0.000      n/a    1.00000      1.00000         0.0 
+    z              0.000      n/a    1.00000      1.00000         0.0 
+    j              0.000      n/a    1.00000      1.00000         0.0 
+    r              0.128    0.433    0.75392      1.00000      0.1912 
+    g              0.134    1.197    0.89851      1.00000      0.2848 
+    d              0.254    0.158    0.08459      1.00000       0.321 
+    y              0.435    0.188    0.01140      0.25078      0.5776 
+    e              0.478    0.404    0.13939      1.00000      0.8119 
+    f              0.575    1.827    0.99170      1.00000      1.7208 
+    o              0.784    0.112    0.00010      0.00220      0.8851 
+
+-- comma_split=False, ZL3b, glyph units, TEST (odd folios)
+--- ZL3b_test_odd_nocomma_final 
+    strata=108  label words matched=445  text words matched=2787
+    pooled mean|log-odds|=0.6454  rms=0.8455  max=1.7785
+    units Bonferroni-significant=2 ; units passing gate leg 1 (|lo|>=1 AND bonf p<0.01)=1 ; same on uncorrected estimator=1
+    unit        log-odds       SE     p_perm       p_bonf   lo_uncorr pass
+    chedy         -1.778    1.018    0.01390      0.34747        -inf 
+    daiin         -0.952    0.355    0.00070      0.01750      -1.428 
+    in            -0.945    0.472    0.00090      0.02250      -2.522 
+    eey           -0.902    0.295    0.00040      0.01000     -1.4493 
+    she           -0.838    3.541    1.00000      1.00000        -inf 
+    ol            -0.503    0.198    0.00250      0.06249     -0.6368 
+    aiin          -0.384    0.276    0.07299      1.00000     -0.5755 
+    or            -0.203    0.245    0.30007      1.00000     -0.2909 
+    dy            -0.111    0.150    0.41096      1.00000     -0.1341 
+    r             -0.102    0.316    0.65783      1.00000     -0.1609 
+    a             -0.087    0.890    0.70923      1.00000     -0.1553 
+    s              0.069    0.201    0.68813      1.00000      0.0954 
+    ain            0.097    0.291    0.70443      1.00000      0.1321 
+    y              0.132    0.123    0.26517      1.00000      0.1511 
+    o              0.244    0.259    0.27927      1.00000      0.3755 
+    g              0.269    0.504    0.58434      1.00000       0.437 
+    al             0.319    0.185    0.06319      1.00000      0.4165 
+    ar             0.337    0.177    0.04210      1.00000       0.434 
+    m              0.357    0.225    0.07119      1.00000      0.5133 
+    d              0.610    0.313    0.02710      0.67743      0.9453 
+    e              0.936    0.636    0.03410      0.85242      1.7266 
+    l              1.041    0.537    0.00720      0.17998      1.7226 
+    n              1.528    0.547    0.00040      0.01000      2.7282 YES
+    p              1.649    0.930    0.02160      0.53995      4.9984 
+    k              1.740    1.029    0.00890      0.22248      5.2297 
+
+--- ZL3b_test_odd_nocomma_initial 
+    strata=108  label words matched=445  text words matched=2787
+    pooled mean|log-odds|=0.6761  rms=0.8407  max=1.6525
+    units Bonferroni-significant=6 ; units passing gate leg 1 (|lo|>=1 AND bonf p<0.01)=4 ; same on uncorrected estimator=5
+    unit        log-odds       SE     p_perm       p_bonf   lo_uncorr pass
+    daiin         -1.653    0.621    0.00010      0.00250       -2.32 YES
+    chedy         -1.582    1.704    0.29407      1.00000        -inf 
+    qok           -1.567    0.341    0.00010      0.00250      -3.101 YES
+    c             -1.446    0.479    0.00010      0.00250     -2.7721 YES
+    aiin          -1.376    1.271    0.20168      1.00000        -inf 
+    q             -1.203    0.317    0.00010      0.00250     -2.1398 YES
+    che           -0.716    0.270    0.00040      0.01000     -1.1864 
+    she           -0.524    0.351    0.03020      0.75492     -0.8977 
+    t             -0.522    0.383    0.03830      0.95740     -1.0686 
+    al            -0.476    0.400    0.11429      1.00000     -0.8022 
+    p             -0.426    0.613    0.28957      1.00000     -0.9877 
+    sh            -0.425    0.348    0.09269      1.00000      -0.722 
+    ch            -0.263    0.195    0.09499      1.00000     -0.3543 
+    k             -0.131    0.341    0.55824      1.00000     -0.2196 
+    l             -0.093    0.409    0.67753      1.00000     -0.1368 
+    ol             0.024    0.235    1.00000      1.00000      0.0299 
+    s              0.218    0.203    0.24268      1.00000      0.2939 
+    o              0.295    0.188    0.07139      1.00000      0.3946 
+    ok             0.339    0.153    0.02280      0.56994      0.4043 
+    d              0.352    0.169    0.03070      0.76742      0.4387 
+    y              0.386    0.184    0.02380      0.59494      0.5063 
+    or             0.434    0.364    0.19228      1.00000      0.6171 
+    r              0.601    0.469    0.15728      1.00000      0.8743 
+    ot             0.836    0.154    0.00010      0.00250      1.0039 
+    ar             1.019    0.349    0.00320      0.07999      1.3164 
+
+### REPLICATION: GC2a-n, glyph units, comma_split=True
+    GC2a pages with both registers: 46 (FIT 24 / TEST 22)
+    token retention under clean_tokens: ZL3b 99.3% (38184/38461) ; GC2a 23.5% (9426/40175)
+    *** GC2a-n is Glen Claston v101, not EVA: its glyphs include digits and upper case. clean_tokens keeps only pure-lower-case
+        tokens, and the frozen T2 merges (ch dy ai ok ...) are EVA merges with no meaning in v101. The GC2a numbers below are
+        therefore computed on a small, biased residue of that transcription and DO NOT constitute a replication.
+--- GC2a_test_odd_final 
+    strata=65  label words matched=129  text words matched=454
+    pooled mean|log-odds|=0.7633  rms=1.1883  max=3.5835
+    units Bonferroni-significant=0 ; units passing gate leg 1 (|lo|>=1 AND bonf p<0.01)=0 ; same on uncorrected estimator=0
+    unit        log-odds       SE     p_perm       p_bonf   lo_uncorr pass
+    ok            -1.435    1.831    1.00000      1.00000        -inf 
+    m             -0.482    0.318    0.07609      1.00000     -0.6522 
+    y             -0.387    0.252    0.06239      1.00000     -0.5216 
+    e             -0.312    0.240    0.13759      1.00000     -0.3941 
+    s             -0.162    0.350    0.65703      1.00000     -0.2248 
+    j              0.000      n/a    1.00000      1.00000         0.0 
+    b              0.000      n/a    1.00000      1.00000         0.0 
+    f              0.000      n/a    1.00000      1.00000         0.0 
+    t              0.000      n/a    1.00000      1.00000         0.0 
+    q              0.000      n/a    1.00000      1.00000         0.0 
+    ai             0.000      n/a    1.00000      1.00000         0.0 
+    w              0.000      n/a    1.00000      1.00000         0.0 
+    d              0.000      n/a    1.00000      1.00000         0.0 
+    ain            0.000      n/a    1.00000      1.00000         0.0 
+    n              0.295    0.432    0.54475      1.00000      0.3903 
+    o              0.370    0.397    0.22448      1.00000      0.5914 
+    k              1.060    1.237    0.25607      1.00000      1.7918 
+    x              1.081    1.113    0.12229      1.00000      1.5198 
+    z              1.196    0.549    0.00630      0.15748      1.7606 
+    p              1.196    0.448    0.00750      0.18748      1.7614 
+    c              1.625    1.509    0.29607      1.00000         inf 
+    g              1.736    2.580    0.61114      1.00000         inf 
+    h              1.764    1.439    0.12739      1.00000      3.0986 
+    a              2.398    1.741    0.19358      1.00000         inf 
+    u              3.583    2.700    0.19538      1.00000         inf 
+
+--- GC2a_test_odd_initial 
+    strata=65  label words matched=129  text words matched=454
+    pooled mean|log-odds|=0.3716  rms=0.5507  max=1.3629
+    units Bonferroni-significant=0 ; units passing gate leg 1 (|lo|>=1 AND bonf p<0.01)=0 ; same on uncorrected estimator=0
+    unit        log-odds       SE     p_perm       p_bonf   lo_uncorr pass
+    y             -1.363    0.690    0.01310      0.32747     -2.1727 
+    u             -0.905    2.177    1.00000      1.00000        -inf 
+    ai            -0.864    1.815    1.00000      1.00000        -inf 
+    j             -0.815    3.173    1.00000      1.00000        -inf 
+    d             -0.775    4.530    1.00000      1.00000        -inf 
+    h             -0.671    0.558    0.09739      1.00000     -1.1851 
+    k             -0.442    0.698    0.47455      1.00000     -0.7492 
+    s             -0.245    0.347    0.42956      1.00000     -0.3185 
+    o             -0.227    0.243    0.30587      1.00000     -0.2971 
+    e             -0.081    0.552    0.82422      1.00000     -0.1191 
+    g             -0.069    1.007    0.84372      1.00000     -0.1275 
+    p              0.000      n/a    1.00000      1.00000         0.0 
+    f              0.000      n/a    1.00000      1.00000         0.0 
+    t              0.000      n/a    1.00000      1.00000         0.0 
+    x              0.000      n/a    1.00000      1.00000         0.0 
+    sh             0.000      n/a    1.00000      1.00000         0.0 
+    w              0.000      n/a    1.00000      1.00000         0.0 
+    ee             0.000      n/a    1.00000      1.00000         0.0 
+    ch             0.000      n/a    1.00000      1.00000         0.0 
+    m              0.000      n/a    1.00000      1.00000         0.0 
+    n              0.000      n/a    1.00000      1.00000         0.0 
+    a              0.412    0.388    0.22178      1.00000      0.5763 
+    b              0.790    1.075    0.85911      1.00000       1.337 
+    c              0.814    0.874    0.18808      1.00000      1.3559 
+    ok             0.819    0.293    0.00240      0.05999      1.0871 
+
+==============================================================================
+GATE L1
+==============================================================================
+  Positive control (Culpeper, word-final chars):
+    units clearing |log-odds|>=1 and Bonferroni p<0.01 : 1 / 25
+    units Bonferroni-significant (any magnitude)        : 6 / 25
+    largest |log-odds| anywhere in the control          : 2.6740
+    pooled mean|log-odds| : 0.6497
+    -> MEASURED POWER of the "|log-odds| >= 1" leg: 1/25.
+  Voynich TEST (odd folios), word-final glyph units:
+    units clearing |log-odds|>=1 and Bonferroni p<0.01 : 2  (need >=3) -> FAIL
+    pooled mean|log-odds| : 0.6462  = 99.4% of control (need >=25%) -> PASS
+    [alt summaries: rms ratio 0.963, max ratio 0.696]
+    same leg 1 on the UNCORRECTED MH estimator: 2 units -> gate FAIL
+  GATE L1 (word-final family, TEST) : FAIL
+  Secondary family (word-initial glyph units, TEST): units passing 4, pooled ratio 1.888 -> PASS
+  FIT/TEST stability of per-unit log-odds: final r=0.560 (signs agree 20/25) ; initial r=0.801 (signs agree 23/25)
+  Replication on GC2a: NOT VALID (v101 alphabet vs an EVA-only parser and EVA-only merges) -- see results/l1.json "replication_GC2a.validity".
+
+  word-final, TEST -- text-heavy side (candidate grammatical material, log-odds < 0, most negative first):
+      chedy     -1.862   bonf p=0.21748   support: 0 label / 95 text words carry it
+      daiin     -1.102   bonf p=0.00500   support: 4 label / 95 text words carry it
+      ot        -1.063   bonf p=1.00000   support: 0 label / 2 text words carry it
+      in        -1.015   bonf p=0.02000   support: 1 label / 43 text words carry it
+      a         -0.915   bonf p=1.00000   support: 0 label / 4 text words carry it
+      eey       -0.898   bonf p=0.00500   support: 6 label / 159 text words carry it
+      sh        -0.769   bonf p=1.00000   support: 0 label / 2 text words carry it
+      ol        -0.484   bonf p=0.06749   support: 26 label / 381 text words carry it
+      or        -0.221   bonf p=1.00000   support: 15 label / 138 text words carry it
+      aiin      -0.157   bonf p=1.00000   support: 13 label / 151 text words carry it
+      r         -0.137   bonf p=1.00000   support: 11 label / 61 text words carry it
+      dy        -0.127   bonf p=1.00000   support: 58 label / 547 text words carry it
+  word-final, TEST -- label-heavy side (candidate name material, log-odds > 0):
+      n          1.586   bonf p=0.00250   support: 7 label / 1 text words carry it
+      k          1.491   bonf p=0.38746   support: 4 label / 3 text words carry it
+      l          1.115   bonf p=0.13999   support: 5 label / 15 text words carry it
+      t          1.080   bonf p=1.00000   support: 2 label / 1 text words carry it
+      d          0.512   bonf p=1.00000   support: 13 label / 42 text words carry it
+      al         0.344   bonf p=1.00000   support: 38 label / 236 text words carry it
+      m          0.338   bonf p=1.00000   support: 24 label / 66 text words carry it
+      ar         0.329   bonf p=1.00000   support: 48 label / 189 text words carry it
+      g          0.266   bonf p=1.00000   support: 4 label / 12 text words carry it
+      y          0.179   bonf p=1.00000   support: 113 label / 522 text words carry it
+      o          0.100   bonf p=1.00000   support: 17 label / 80 text words carry it
+      ain        0.062   bonf p=1.00000   support: 11 label / 117 text words carry it
+
+  word-initial, TEST -- text-heavy side (candidate grammatical material, log-odds < 0, most negative first):
+      chedy     -2.615   bonf p=1.00000   support: 0 label / 33 text words carry it
+      qok       -1.573   bonf p=0.00250   support: 2 label / 394 text words carry it
+      daiin     -1.549   bonf p=0.00500   support: 2 label / 60 text words carry it
+      c         -1.496   bonf p=0.00250   support: 1 label / 64 text words carry it
+      q         -1.213   bonf p=0.00250   support: 4 label / 248 text words carry it
+      aiin      -0.754   bonf p=1.00000   support: 1 label / 15 text words carry it
+      che       -0.593   bonf p=0.06999   support: 10 label / 191 text words carry it
+      she       -0.588   bonf p=0.47245   support: 5 label / 161 text words carry it
+      t         -0.553   bonf p=0.63244   support: 3 label / 58 text words carry it
+      sh        -0.433   bonf p=1.00000   support: 6 label / 100 text words carry it
+      p         -0.372   bonf p=1.00000   support: 2 label / 23 text words carry it
+      al        -0.357   bonf p=1.00000   support: 6 label / 33 text words carry it
+  word-initial, TEST -- label-heavy side (candidate name material, log-odds > 0):
+      ar         0.844   bonf p=0.28747   support: 17 label / 26 text words carry it
+      ot         0.844   bonf p=0.00250   support: 77 label / 134 text words carry it
+      or         0.553   bonf p=1.00000   support: 8 label / 26 text words carry it
+      y          0.445   bonf p=0.15249   support: 51 label / 114 text words carry it
+      r          0.421   bonf p=1.00000   support: 6 label / 39 text words carry it
+      ok         0.351   bonf p=0.55744   support: 61 label / 227 text words carry it
+      d          0.315   bonf p=1.00000   support: 48 label / 258 text words carry it
+      o          0.298   bonf p=1.00000   support: 41 label / 115 text words carry it
+      s          0.206   bonf p=1.00000   support: 28 label / 139 text words carry it
+      ol         0.092   bonf p=1.00000   support: 19 label / 148 text words carry it
+

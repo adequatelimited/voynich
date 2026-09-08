@@ -1,0 +1,277 @@
+  sha256 ZL3b-n.txt         bf5b6d4ac1e3a51b1847a9c388318d609020441ccd56984c901c32b09beccafc
+  sha256 meaning_lib.py     aa1ee5a340923cf7bd3f5aa1d433d24c10b2db50da1e7b2da9256cd98ef42fb1
+  sha256 t_l1.py            86cd9b504ee62cbff9c3164ebfe578422729e33c808a633e8c04c492987b2576
+  sha256 results/l1.json    e9f9b5cc651fb75185e8fdece4e24e7f7f9e3ce14dcac83ff78ecc97f1dbb666
+
+frozen K=25 final units  : y dy ol ar aiin or al eey ain s daiin o chedy m r d l in g n a k ot sh t
+frozen K=25 initial units: ch qok ok d ot q y che sh ol o she l s k t daiin c or ar p r chedy aiin al
+
+==============================================================================
+C1 baseline (odd folios, unit-length strata)
+    pages used: 26 ; label tokens 472 ; text tokens 4072
+==============================================================================
+--- C1 baseline (odd folios, unit-length strata) [final]
+    strata=109  label=466 text=3098  pooled mean|lo|=0.6462  units passing (|lo|>=1 & bonf p<.01)=2  bonf-sig=3
+    passers: daiin, n
+      n      lo=  1.586  bonf p= 0.00250  lab=   7 txt=    1  strata=  8  PASS
+      daiin  lo= -1.102  bonf p= 0.00500  lab=   4 txt=   95  strata= 30  PASS
+      chedy  lo= -1.862  bonf p= 0.21748  lab=   0 txt=   95  strata= 18  
+      eey    lo= -0.898  bonf p= 0.00500  lab=   6 txt=  159  strata= 46  
+      in     lo= -1.015  bonf p= 0.02000  lab=   1 txt=   43  strata= 29  
+
+--- C1 baseline (odd folios, unit-length strata) [initial]
+    strata=109  label=466 text=3098  pooled mean|lo|=0.6786  units passing (|lo|>=1 & bonf p<.01)=4  bonf-sig=5
+    passers: qok, daiin, c, q
+      qok    lo= -1.573  bonf p= 0.00250  lab=   2 txt=  394  strata= 52  PASS
+      q      lo= -1.213  bonf p= 0.00250  lab=   4 txt=  248  strata= 58  PASS
+      c      lo= -1.496  bonf p= 0.00250  lab=   1 txt=   64  strata= 22  PASS
+      daiin  lo= -1.549  bonf p= 0.00500  lab=   2 txt=   60  strata= 11  PASS
+      she    lo= -0.588  bonf p= 0.47245  lab=   5 txt=  161  strata= 40  
+      chedy  lo= -2.615  bonf p= 1.00000  lab=   0 txt=   33  strata=  3  
+      ot     lo=  0.844  bonf p= 0.00250  lab=  77 txt=  134  strata= 69  
+      o      lo=  0.298  bonf p= 1.00000  lab=  41 txt=  115  strata= 73  
+
+==============================================================================
+C2 text = locus-INITIAL words only
+    pages used: 26 ; label tokens 472 ; text tokens 491
+==============================================================================
+--- C2 text = locus-INITIAL words only [final]
+    strata=86  label=406 text=368  pooled mean|lo|=0.6724  units passing (|lo|>=1 & bonf p<.01)=0  bonf-sig=0
+    passers: (none)
+      n      lo=  0.743  bonf p= 1.00000  lab=   6 txt=    1  strata=  7  
+      daiin  lo= -1.700  bonf p= 0.03250  lab=   3 txt=   18  strata= 11  
+      chedy  lo= -1.333  bonf p= 1.00000  lab=   0 txt=   11  strata=  7  
+      eey    lo= -0.778  bonf p= 0.20998  lab=   6 txt=   20  strata= 20  
+      in     lo= -1.937  bonf p= 0.43496  lab=   0 txt=    6  strata=  4  
+
+--- C2 text = locus-INITIAL words only [initial]
+    strata=86  label=406 text=368  pooled mean|lo|=0.8508  units passing (|lo|>=1 & bonf p<.01)=3  bonf-sig=4
+    passers: daiin, qok, t
+      qok    lo= -1.755  bonf p= 0.00250  lab=   1 txt=   50  strata= 21  PASS
+      q      lo= -0.792  bonf p= 0.51745  lab=   4 txt=   25  strata= 16  
+      c      lo=  1.022  bonf p= 1.00000  lab=   1 txt=    0  strata=  1  
+      daiin  lo= -3.177  bonf p= 0.00250  lab=   2 txt=   14  strata=  7  PASS
+      she    lo=  0.353  bonf p= 1.00000  lab=   4 txt=    4  strata=  7  
+      chedy  lo= -1.157  bonf p= 1.00000  lab=   0 txt=    1  strata=  1  
+      ot     lo=  0.944  bonf p= 0.00250  lab=  61 txt=   13  strata= 41  
+      o      lo=  0.078  bonf p= 1.00000  lab=  32 txt=   19  strata= 34  
+
+==============================================================================
+C3 TYPE level: both sides deduplicated within page
+    pages used: 26 ; label tokens 443 ; text tokens 2718
+==============================================================================
+--- C3 TYPE level: both sides deduplicated within page [final]
+    strata=109  label=437 text=2128  pooled mean|lo|=0.5620  units passing (|lo|>=1 & bonf p<.01)=2  bonf-sig=3
+    passers: in, n
+      n      lo=  1.570  bonf p= 0.00500  lab=   7 txt=    1  strata=  8  PASS
+      daiin  lo= -0.612  bonf p= 0.60744  lab=   4 txt=   40  strata= 30  
+      chedy  lo= -1.385  bonf p= 0.46995  lab=   0 txt=   46  strata= 18  
+      eey    lo= -0.820  bonf p= 0.00750  lab=   6 txt=  102  strata= 46  
+      in     lo= -1.008  bonf p= 0.01000  lab=   1 txt=   41  strata= 29  PASS
+
+--- C3 TYPE level: both sides deduplicated within page [initial]
+    strata=109  label=437 text=2128  pooled mean|lo|=0.5465  units passing (|lo|>=1 & bonf p<.01)=3  bonf-sig=4
+    passers: c, qok, q
+      qok    lo= -1.277  bonf p= 0.00250  lab=   2 txt=  156  strata= 52  PASS
+      q      lo= -1.134  bonf p= 0.00250  lab=   4 txt=  168  strata= 58  PASS
+      c      lo= -1.373  bonf p= 0.00250  lab=   1 txt=   52  strata= 22  PASS
+      daiin  lo= -0.567  bonf p= 1.00000  lab=   2 txt=   11  strata= 11  
+      she    lo= -0.417  bonf p= 1.00000  lab=   5 txt=   74  strata= 40  
+      chedy  lo= -0.924  bonf p= 1.00000  lab=   0 txt=    3  strata=  3  
+      ot     lo=  0.809  bonf p= 0.00250  lab=  74 txt=  116  strata= 69  
+      o      lo=  0.234  bonf p= 1.00000  lab=  39 txt=  106  strata= 73  
+
+==============================================================================
+C4 text = paragraph (P) loci only
+    pages used: 20 ; label tokens 352 ; text tokens 3469
+==============================================================================
+--- C4 text = paragraph (P) loci only [final]
+    strata=79  label=347 text=2704  pooled mean|lo|=0.7290  units passing (|lo|>=1 & bonf p<.01)=2  bonf-sig=2
+    passers: daiin, n
+      n      lo=  1.539  bonf p= 0.00500  lab=   6 txt=    1  strata=  7  PASS
+      daiin  lo= -1.194  bonf p= 0.00500  lab=   4 txt=   91  strata= 26  PASS
+      chedy  lo= -2.048  bonf p= 0.41246  lab=   0 txt=   94  strata= 17  
+      eey    lo= -0.673  bonf p= 0.29247  lab=   5 txt=  128  strata= 35  
+      in     lo= -1.015  bonf p= 0.02000  lab=   1 txt=   43  strata= 29  
+
+--- C4 text = paragraph (P) loci only [initial]
+    strata=79  label=347 text=2704  pooled mean|lo|=0.7606  units passing (|lo|>=1 & bonf p<.01)=5  bonf-sig=5
+    passers: qok, daiin, c, q, ot
+      qok    lo= -1.796  bonf p= 0.00250  lab=   1 txt=  387  strata= 45  PASS
+      q      lo= -1.235  bonf p= 0.00250  lab=   4 txt=  243  strata= 53  PASS
+      c      lo= -1.540  bonf p= 0.00250  lab=   1 txt=   63  strata= 21  PASS
+      daiin  lo= -1.782  bonf p= 0.00500  lab=   2 txt=   58  strata=  9  PASS
+      she    lo= -0.786  bonf p= 0.26997  lab=   3 txt=  151  strata= 32  
+      chedy  lo= -2.615  bonf p= 1.00000  lab=   0 txt=   33  strata=  3  
+      ot     lo=  1.380  bonf p= 0.00250  lab=  45 txt=   62  strata= 42  PASS
+      o      lo=  0.228  bonf p= 1.00000  lab=  32 txt=   99  strata= 58  
+
+==============================================================================
+C5 drop illus=B (biological) pages
+    pages used: 20 ; label tokens 405 ; text tokens 2262
+==============================================================================
+--- C5 drop illus=B (biological) pages [final]
+    strata=86  label=399 text=1630  pooled mean|lo|=0.6432  units passing (|lo|>=1 & bonf p<.01)=3  bonf-sig=3
+    passers: eey, daiin, n
+      n      lo=  1.586  bonf p= 0.00750  lab=   7 txt=    1  strata=  8  PASS
+      daiin  lo= -1.066  bonf p= 0.00250  lab=   4 txt=   71  strata= 24  PASS
+      chedy  lo= -1.095  bonf p= 1.00000  lab=   0 txt=    1  strata=  1  
+      eey    lo= -1.087  bonf p= 0.00500  lab=   4 txt=  102  strata= 31  PASS
+      in     lo= -1.017  bonf p= 0.03750  lab=   1 txt=   27  strata= 18  
+
+--- C5 drop illus=B (biological) pages [initial]
+    strata=86  label=399 text=1630  pooled mean|lo|=0.5167  units passing (|lo|>=1 & bonf p<.01)=3  bonf-sig=4
+    passers: c, qok, q
+      qok    lo= -1.351  bonf p= 0.00250  lab=   1 txt=  101  strata= 36  PASS
+      q      lo= -1.074  bonf p= 0.00250  lab=   2 txt=   67  strata= 38  PASS
+      c      lo= -1.532  bonf p= 0.00250  lab=   1 txt=   60  strata= 19  PASS
+      daiin  lo= -1.512  bonf p= 0.01250  lab=   2 txt=   43  strata=  8  
+      she    lo= -0.458  bonf p= 1.00000  lab=   4 txt=   45  strata= 26  
+      chedy  lo=  0.000  bonf p= 1.00000  lab=   0 txt=    0  strata=  0  
+      ot     lo=  0.680  bonf p= 0.00250  lab=  64 txt=  102  strata= 57  
+      o      lo=  0.289  bonf p= 1.00000  lab=  38 txt=   90  strata= 60  
+
+==============================================================================
+C6 drop illus in {Z,A,C} (nymph/astro/cosmo label pages)
+    pages used: 17 ; label tokens 233 ; text tokens 3274
+==============================================================================
+--- C6 drop illus in {Z,A,C} (nymph/astro/cosmo label pages) [final]
+    strata=65  label=230 text=2522  pooled mean|lo|=0.7796  units passing (|lo|>=1 & bonf p<.01)=1  bonf-sig=1
+    passers: n
+      n      lo=  2.651  bonf p= 0.00750  lab=   4 txt=    0  strata=  4  PASS
+      daiin  lo= -1.335  bonf p= 0.01500  lab=   2 txt=   80  strata= 21  
+      chedy  lo= -2.048  bonf p= 0.38746  lab=   0 txt=   94  strata= 17  
+      eey    lo= -1.008  bonf p= 0.18998  lab=   2 txt=  124  strata= 29  
+      in     lo= -0.962  bonf p= 0.13999  lab=   1 txt=   38  strata= 25  
+
+--- C6 drop illus in {Z,A,C} (nymph/astro/cosmo label pages) [initial]
+    strata=65  label=230 text=2522  pooled mean|lo|=0.9212  units passing (|lo|>=1 & bonf p<.01)=5  bonf-sig=5
+    passers: daiin, c, qok, q, ot
+      qok    lo= -1.901  bonf p= 0.00250  lab=   1 txt=  383  strata= 41  PASS
+      q      lo= -1.288  bonf p= 0.00250  lab=   3 txt=  237  strata= 49  PASS
+      c      lo= -1.927  bonf p= 0.00250  lab=   0 txt=   62  strata= 19  PASS
+      daiin  lo= -2.956  bonf p= 0.00250  lab=   0 txt=   54  strata=  7  PASS
+      she    lo= -0.787  bonf p= 1.00000  lab=   2 txt=  146  strata= 28  
+      chedy  lo= -2.615  bonf p= 1.00000  lab=   0 txt=   33  strata=  3  
+      ot     lo=  1.799  bonf p= 0.00250  lab=  37 txt=   55  strata= 34  PASS
+      o      lo=  0.588  bonf p= 0.39246  lab=  22 txt=   74  strata= 45  
+
+==============================================================================
+C7 strata matched on CHARACTER length
+    pages used: 26 ; label tokens 472 ; text tokens 4072
+==============================================================================
+--- C7 strata matched on CHARACTER length [final]
+    strata=121  label=459 text=2504  pooled mean|lo|=0.6490  units passing (|lo|>=1 & bonf p<.01)=2  bonf-sig=3
+    passers: daiin, n
+      n      lo=  1.643  bonf p= 0.01000  lab=   7 txt=    1  strata=  8  PASS
+      daiin  lo= -1.199  bonf p= 0.00500  lab=   3 txt=  124  strata= 39  PASS
+      chedy  lo= -2.168  bonf p= 0.06249  lab=   0 txt=   87  strata= 15  
+      eey    lo= -0.971  bonf p= 0.00250  lab=   6 txt=  149  strata= 49  
+      in     lo= -1.106  bonf p= 0.06749  lab=   0 txt=   38  strata= 25  
+
+--- C7 strata matched on CHARACTER length [initial]
+    strata=121  label=459 text=2504  pooled mean|lo|=0.6358  units passing (|lo|>=1 & bonf p<.01)=2  bonf-sig=4
+    passers: qok, q
+      qok    lo= -1.653  bonf p= 0.00250  lab=   2 txt=  299  strata= 48  PASS
+      q      lo= -1.046  bonf p= 0.00250  lab=   4 txt=  171  strata= 53  PASS
+      c      lo= -1.090  bonf p= 0.01250  lab=   1 txt=   56  strata= 29  
+      daiin  lo= -1.141  bonf p= 0.03750  lab=   2 txt=   89  strata= 18  
+      she    lo= -0.703  bonf p= 0.07749  lab=   5 txt=  125  strata= 46  
+      chedy  lo= -2.421  bonf p= 1.00000  lab=   0 txt=   43  strata=  5  
+      ot     lo=  0.830  bonf p= 0.00250  lab=  76 txt=  117  strata= 79  
+      o      lo=  0.364  bonf p= 0.83992  lab=  41 txt=   95  strata= 65  
+
+==============================================================================
+C8 TYPE level AND text = locus-INITIAL words (both controls at once)
+    pages used: 26 ; label tokens 443 ; text tokens 444
+==============================================================================
+--- C8 TYPE level AND text = locus-INITIAL words (both controls at once) [final]
+    strata=86  label=380 text=339  pooled mean|lo|=0.6489  units passing (|lo|>=1 & bonf p<.01)=0  bonf-sig=0
+    passers: (none)
+      n      lo=  0.751  bonf p= 1.00000  lab=   6 txt=    1  strata=  7  
+      daiin  lo= -1.455  bonf p= 0.03250  lab=   3 txt=   11  strata= 11  
+      chedy  lo= -1.404  bonf p= 0.67493  lab=   0 txt=   11  strata=  7  
+      eey    lo= -0.809  bonf p= 0.16248  lab=   6 txt=   20  strata= 20  
+      in     lo= -1.909  bonf p= 0.36496  lab=   0 txt=    6  strata=  4  
+
+--- C8 TYPE level AND text = locus-INITIAL words (both controls at once) [initial]
+    strata=86  label=380 text=339  pooled mean|lo|=0.8034  units passing (|lo|>=1 & bonf p<.01)=2  bonf-sig=3
+    passers: qok, t
+      qok    lo= -1.643  bonf p= 0.00250  lab=   1 txt=   41  strata= 21  PASS
+      q      lo= -0.717  bonf p= 0.83742  lab=   4 txt=   19  strata= 16  
+      c      lo=  1.043  bonf p= 1.00000  lab=   1 txt=    0  strata=  1  
+      daiin  lo= -2.367  bonf p= 0.01500  lab=   2 txt=    7  strata=  7  
+      she    lo=  0.284  bonf p= 1.00000  lab=   4 txt=    4  strata=  7  
+      chedy  lo= -1.386  bonf p= 1.00000  lab=   0 txt=    1  strata=  1  
+      ot     lo=  0.914  bonf p= 0.00250  lab=  59 txt=   13  strata= 41  
+      o      lo=  0.113  bonf p= 1.00000  lab=  30 txt=   18  strata= 34  
+
+==============================================================================
+C9 TYPE level on the FIT half (even folios) -- does it hold there too
+    pages used: 28 ; label tokens 506 ; text tokens 3077
+==============================================================================
+--- C9 TYPE level on the FIT half (even folios) -- does it hold there too [final]
+    strata=126  label=499 text=2237  pooled mean|lo|=0.5260  units passing (|lo|>=1 & bonf p<.01)=0  bonf-sig=1
+    passers: (none)
+      n      lo=  0.988  bonf p= 1.00000  lab=   4 txt=    9  strata=  8  
+      daiin  lo= -0.134  bonf p= 1.00000  lab=   7 txt=   35  strata= 35  
+      chedy  lo= -0.851  bonf p= 0.12999  lab=   2 txt=   63  strata= 27  
+      eey    lo= -0.589  bonf p= 0.05249  lab=  11 txt=  122  strata= 58  
+      in     lo= -0.607  bonf p= 1.00000  lab=   2 txt=   20  strata= 15  
+
+--- C9 TYPE level on the FIT half (even folios) -- does it hold there too [initial]
+    strata=126  label=499 text=2237  pooled mean|lo|=0.5911  units passing (|lo|>=1 & bonf p<.01)=3  bonf-sig=7
+    passers: qok, she, o
+      qok    lo= -1.310  bonf p= 0.00250  lab=   1 txt=  145  strata= 46  PASS
+      q      lo= -0.970  bonf p= 0.00500  lab=   4 txt=  125  strata= 48  
+      c      lo= -0.324  bonf p= 1.00000  lab=   6 txt=   35  strata= 31  
+      daiin  lo=  0.495  bonf p= 1.00000  lab=   5 txt=    9  strata= 12  
+      she    lo= -1.116  bonf p= 0.00250  lab=   2 txt=  108  strata= 54  PASS
+      chedy  lo= -1.032  bonf p= 1.00000  lab=   0 txt=    7  strata=  7  
+      ot     lo=  0.384  bonf p= 0.14249  lab=  91 txt=  203  strata= 79  
+      o      lo=  1.040  bonf p= 0.00250  lab=  76 txt=   62  strata= 75  PASS
+
+==============================================================================
+C10 TYPE level, all pages (FIT+TEST pooled)
+    pages used: 54 ; label tokens 949 ; text tokens 5795
+==============================================================================
+--- C10 TYPE level, all pages (FIT+TEST pooled) [final]
+    strata=235  label=936 text=4365  pooled mean|lo|=0.5063  units passing (|lo|>=1 & bonf p<.01)=2  bonf-sig=5
+    passers: chedy, n
+      n      lo=  1.308  bonf p= 0.00250  lab=  11 txt=   10  strata= 16  PASS
+      daiin  lo= -0.352  bonf p= 1.00000  lab=  11 txt=   75  strata= 65  
+      chedy  lo= -1.008  bonf p= 0.00500  lab=   2 txt=  109  strata= 45  PASS
+      eey    lo= -0.689  bonf p= 0.00250  lab=  17 txt=  224  strata=104  
+      in     lo= -0.858  bonf p= 0.00250  lab=   3 txt=   61  strata= 44  
+
+--- C10 TYPE level, all pages (FIT+TEST pooled) [initial]
+    strata=235  label=936 text=4365  pooled mean|lo|=0.5438  units passing (|lo|>=1 & bonf p<.01)=2  bonf-sig=9
+    passers: qok, q
+      qok    lo= -1.292  bonf p= 0.00250  lab=   3 txt=  301  strata= 98  PASS
+      q      lo= -1.058  bonf p= 0.00250  lab=   8 txt=  293  strata=106  PASS
+      c      lo= -0.744  bonf p= 0.01500  lab=   7 txt=   87  strata= 53  
+      daiin  lo=  0.022  bonf p= 1.00000  lab=   7 txt=   20  strata= 23  
+      she    lo= -0.813  bonf p= 0.00250  lab=   7 txt=  182  strata= 94  
+      chedy  lo= -1.006  bonf p= 1.00000  lab=   0 txt=   10  strata= 10  
+      ot     lo=  0.568  bonf p= 0.00250  lab= 165 txt=  319  strata=148  
+      o      lo=  0.660  bonf p= 0.00250  lab= 115 txt=  168  strata=148  
+
+==============================================================================
+LEAVE-ONE-PAGE-OUT on the observed log-odds (no permutation)
+==============================================================================
+-- initial
+   qok    full lo= -1.573 | most-influential drops: f99v->-1.507, f77r->-1.516, f77v->-1.525, f99r->-1.533
+          still |lo|>=1 after dropping any single page: YES
+   q      full lo= -1.213 | most-influential drops: f77r->-1.127, f77v->-1.174, f83v->-1.194, f89r2->-1.194
+          still |lo|>=1 after dropping any single page: YES
+   c      full lo= -1.496 | most-influential drops: f99r->-1.259, f89v1->-1.401, f101v->-1.406, f99v->-1.447
+          still |lo|>=1 after dropping any single page: YES
+   daiin  full lo= -1.549 | most-influential drops: f49v->-0.847, f99r->-1.457, f89r2->-1.525, f75v->-1.533
+          still |lo|>=1 after dropping any single page: NO (drop f49v -> -0.847)
+
+-- final
+   n      full lo=  1.586 | most-influential drops: f17r->1.440, f89v2->1.471, f89r1->1.484, f101v->1.534
+          still |lo|>=1 after dropping any single page: YES
+   daiin  full lo= -1.102 | most-influential drops: f49v->-0.741, f99r->-1.047, f89r2->-1.071, f75v->-1.082
+          still |lo|>=1 after dropping any single page: NO (drop f49v -> -0.741)
+
