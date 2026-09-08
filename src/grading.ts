@@ -1,5 +1,5 @@
 import { canSummarize, excludedArtifact } from './artifacts.ts';
-import type { Contribution, EvidenceFile, GradingContext, GradingProfile, GradingReport, GradingStage, StageAssessment, StageReceipt, ValidationIssue } from './contracts.ts';
+import type { Contribution, EvidenceFile, GradingContext, GradingProfile, GradingReport, GradingStage, StageAssessment, StageReceipt, ValidationIssue, FamilyRecord } from './contracts.ts';
 import { assessmentSchema, isSafeRepositoryPath, validateAssessment, validateContribution } from './validation.ts';
 import { canonicalJson, hashObject, sha256 } from './hash.ts';
 
@@ -168,7 +168,7 @@ export function proposedIncrement(assessment: StageAssessment, context: GradingC
   return total;
 }
 /** Correction is conservative: it cannot improve the preceding decision or erase known blockers. */
-export function correctionErrors(previous: unknown, corrected: StageAssessment): string[] {
+export function correctionErrors(previous: unknown, corrected: StageAssessment, trustedFamilies?: FamilyRecord[]): string[] {
   const errors: string[] = [];
   const old = previous && typeof previous === 'object' && !Array.isArray(previous) ? previous as Partial<StageAssessment> : {};
   if ((!old.admission_action || ['hold', 'needs_revision', 'reject'].includes(old.admission_action))
@@ -179,7 +179,11 @@ export function correctionErrors(previous: unknown, corrected: StageAssessment):
     const prior = Array.isArray(old.outcomes) ? old.outcomes.find(o => o && o.family_id === outcome.family_id) : undefined;
     if (outcome.assessed_tier > 0 && (!prior || ![0, 2, 5, 10, 20].includes(prior.assessed_tier) || outcome.assessed_tier > prior.assessed_tier)) errors.push('Correction cannot add or increase positive outcome credit.');
     if (prior) for (const key of ['scope', 'category', 'aliases', 'predecessors', 'attribution_status', 'source_outcome_ids', 'acceptance_test', 'excluded_overlap', 'family_decision', 'family_comparisons'] as const) {
-      if (prior[key] !== undefined && canonicalJson(prior[key]) !== canonicalJson(outcome[key])) errors.push(`Correction cannot change outcome ${key}.`);
+      if (key === 'family_comparisons' && trustedFamilies && Array.isArray(prior.family_comparisons)) {
+        const allowed = prior.family_comparisons.map(comparison => ({...comparison,
+          existing_scope: trustedFamilies.find(family=>family.id===comparison.family_id)?.scope ?? comparison.existing_scope}));
+        if (canonicalJson(allowed) !== canonicalJson(outcome.family_comparisons)) errors.push('Correction may only restore exact trusted family-scope quotations; comparison identities, relationships and reasons remain frozen.');
+      } else if (prior[key] !== undefined && canonicalJson(prior[key]) !== canonicalJson(outcome[key])) errors.push(`Correction cannot change outcome ${key}.`);
     }
   }
   for (const finding of Array.isArray(old.findings) ? old.findings : []) {
@@ -204,7 +208,7 @@ export async function finalizeAssessments(input: GradingInput, reports: Assessme
   const final = correction ? reports.corrector : disagreement ? reports.adjudicator : reports.assessor;
   const checked = validateAssessment(final);
   result.holds.push(...assessmentErrors(final, input));
-  if (correction && checked.valid) result.holds.push(...correctionErrors(reports.adjudicator, checked.value));
+  if (correction && checked.valid) result.holds.push(...correctionErrors(reports.adjudicator, checked.value, String(input.profile.settings.response_contract ?? '').includes('CANONICAL_SCOPE_QUOTE_CORRECTION_V1') ? input.context.families : undefined));
   if (!checked.valid || result.holds.length) return result;
   result.assessment = checked.value;
   if (['hold', 'needs_revision'].includes(checked.value.admission_action) || checked.value.score_status === 'held' || checked.value.inspection_gaps.length) { result.holds.push(checked.value.next_action); return result; }
