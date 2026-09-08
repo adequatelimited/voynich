@@ -268,6 +268,31 @@
       ],
       "seed": false,
       "seed_baseline": 0
+    },
+    {
+      "id": "family-generative-falsification-adversarial-audit",
+      "rubric_version": "0.1",
+      "scope": "A pre-registered, frozen-decision-rule adversarial audit of six prior generative-falsification family claims: (1) discovery and quantification that the shared corpus parser used by prior pilots leaves IVTFF markup inside ~24% of published types, requiring restatement of all headline manuscript metrics under a newly implemented clean parser (with two uncertain-space treatment variants); (2) an alphabet-confound test showing the H2|1 anomaly is robust to EVA multigraph/determinism-merge alphabet normalization but the final-glyph anomaly is alphabet-dependent (0.08-0.27 bit gap depending on glyph-identity assumptions); (3) five untuned cipher constructions applied to real Latin/Culpeper plaintexts, showing a plain verbose cipher of Latin reproduces both entropy residues and fails only a type-ratio gate calibrated to the contaminated parser count; (4) permutation-null and Currier-language/section confound analysis showing the 'neighbouring-page 2x sharing' and '30% page-private' structural claims are largely artefacts of language/section confounding and hapax richness; (5) a new medieval-orthography control (two Chaucer editions) testing whether the vocabulary-richness anomaly survives non-standardized spelling.",
+      "acceptance_test": "Run `python adversarial_critique.py --repo ../.. --lab <dir with bibles/, pg49513.txt and the two Chaucer texts> --out results/`; confirm results.json verdicts match exactly: R0.1 CONTAMINATED, R0.2 RICHEST SURVIVES, R1.1 ALPHABET-ROBUST, R1.2 ALPHABET-DEPENDENT, R2.1 NOT REPRODUCED BY TESTED CIPHERS, R3.1 LANGUAGE/SECTION ARTEFACT, R3.2 HAPAX-RICHNESS CONSEQUENCE, R4.1 SURVIVES this control; clean types 7,734/8,804; within-class adjacency ratio 1.137; page-private 0.193 vs null 0.166.",
+      "aliases": [],
+      "predecessor_family_ids": [
+        "family-generative-falsification",
+        "family-generative-falsification-word-grammar-template",
+        "family-generative-falsification-controls-entry-ladder",
+        "family-generative-falsification-poetry-control",
+        "family-generative-falsification-languages-control"
+      ],
+      "excluded_overlap": [
+        "Does not claim credit for the pinned ZL3b corpus/parser (seed-corpus-parser) itself; audits and documents its known contamination instead.",
+        "Does not claim or duplicate the M5a/M5b table-and-grille mechanism experiment credited under family-generative-falsification.",
+        "Does not claim or duplicate the Stolfi word-grammar template generator credited under family-generative-falsification-word-grammar-template.",
+        "Does not claim or duplicate the entry-genre-ladder controls credited under family-generative-falsification-controls-entry-ladder.",
+        "Does not claim or duplicate the rhyme/line-structure poetry control credited under family-generative-falsification-poetry-control.",
+        "Does not claim or duplicate the nine-Bible languages-control final-glyph/H2|1 comparison credited under family-generative-falsification-languages-control; reuses those nine corpora only as inputs to a new alphabet-normalization test.",
+        "Does not claim credit for MS408 mirror registration (family-ms408-data-access)."
+      ],
+      "seed": false,
+      "seed_baseline": 0
     }
   ],
   "credit_high_water_tiers": {
@@ -278,9 +303,10 @@
     "family-generative-falsification": 5,
     "family-generative-falsification-controls-entry-ladder": 2,
     "family-generative-falsification-poetry-control": 2,
-    "family-generative-falsification-languages-control": 2
+    "family-generative-falsification-languages-control": 2,
+    "family-generative-falsification-adversarial-audit": 10
   },
-  "ledger_digest": "93368fafab35b75ee5e7b3b333e34f21965f4c574e9c88d58445c21e8a42a173",
+  "ledger_digest": "f7d739530f864a2c01144bc3b8a80c09dc573b6398de13209555d02ef0702f59",
   "public_evidence": [
     {
       "path": "research/context-index.json",
