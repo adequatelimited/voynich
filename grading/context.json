@@ -301,12 +301,12 @@
     "family-generative-falsification-doodler": 5,
     "family-generative-falsification-entry-doodler": 5,
     "family-generative-falsification-word-grammar-template": 5,
-    "family-generative-falsification": 5,
+    "family-generative-falsification": 10,
     "family-generative-falsification-controls-entry-ladder": 2,
     "family-generative-falsification-poetry-control": 2,
     "family-generative-falsification-languages-control": 2
   },
-  "ledger_digest": "03858d252727a56981ad82aabdd2a290749d67ef23110e360f2a6afb6aba173f",
+  "ledger_digest": "17bce961e77b9c823e37080e67fe6d40a3ace3659b48587d9a983938ce11d35b",
   "public_evidence": [
     {
       "path": "research/context-index.json",
