@@ -1,0 +1,458 @@
+{
+  "pilot_id": "P001",
+  "title": "atomic edge-slot morphology discriminating-control pilot",
+  "protocol_status": "Rules and evaluation were developed in one simultaneous scratch session; this is not a preregistered or confirmatory test",
+  "claim_scope": "whether train-selected atomic edge families form a distinctive productive prefix/core/suffix mechanism; no semantic, phonetic, or gloss claim",
+  "input": {
+    "alphabet": "STA1",
+    "source_sha256": "8438ba1c45f47fe1d06b5262cbcdf60ce69158a0edbd4dd802612896f3217e2a",
+    "accepted_loci": "substantive P* loci only",
+    "word_policy": "certain-space STA1 components only; reject uncertain spaces, alternatives, unreadable Z1, unknowns, and malformed components",
+    "analytical_unit": "one two-character STA1 code, which may represent a composite; family sequence retains each code's first character"
+  },
+  "split": {
+    "tag": "H004-v1",
+    "rule": "SHA256('H004-v1:' + page_id): first byte <154 train, 154-204 calibration, >=205 test",
+    "disclosure": "The exact H004-v1 tag is retained for auditability; calibration and test were inspected during the same scratch session and are not untouched holdouts"
+  },
+  "partitions": {
+    "train": {
+      "pages_with_accepted_prose_words": 130,
+      "accepted_tokens": 19031,
+      "family_types": 2822
+    },
+    "calibration": {
+      "pages_with_accepted_prose_words": 33,
+      "accepted_tokens": 4150,
+      "family_types": 1085
+    },
+    "test": {
+      "pages_with_accepted_prose_words": 44,
+      "accepted_tokens": 6610,
+      "family_types": 1505
+    }
+  },
+  "selection": {
+    "candidate_unit": "one STA family at the prefix or suffix edge",
+    "minimum_edge_residual_types": 10,
+    "minimum_edge_tokens": 50,
+    "minimum_edge_exclusivity": 0.8,
+    "edge_exclusivity_definition": "training types placing the family at that edge divided by training types containing the family anywhere",
+    "prefix_scan": [
+      {
+        "family": "A",
+        "edge_residual_types": 764,
+        "edge_tokens": 5879,
+        "containing_types": 2708,
+        "edge_exclusivity": 0.282127,
+        "qualified": false
+      },
+      {
+        "family": "B",
+        "edge_residual_types": 347,
+        "edge_tokens": 2511,
+        "containing_types": 1790,
+        "edge_exclusivity": 0.193855,
+        "qualified": false
+      },
+      {
+        "family": "C",
+        "edge_residual_types": 144,
+        "edge_tokens": 665,
+        "containing_types": 856,
+        "edge_exclusivity": 0.168224,
+        "qualified": false
+      },
+      {
+        "family": "D",
+        "edge_residual_types": 362,
+        "edge_tokens": 3208,
+        "containing_types": 377,
+        "edge_exclusivity": 0.960212,
+        "qualified": true
+      },
+      {
+        "family": "E",
+        "edge_residual_types": 0,
+        "edge_tokens": 0,
+        "containing_types": 83,
+        "edge_exclusivity": 0.0,
+        "qualified": false
+      },
+      {
+        "family": "F",
+        "edge_residual_types": 0,
+        "edge_tokens": 0,
+        "containing_types": 224,
+        "edge_exclusivity": 0.0,
+        "qualified": false
+      },
+      {
+        "family": "G",
+        "edge_residual_types": 1,
+        "edge_tokens": 1,
+        "containing_types": 240,
+        "edge_exclusivity": 0.004167,
+        "qualified": false
+      },
+      {
+        "family": "H",
+        "edge_residual_types": 0,
+        "edge_tokens": 0,
+        "containing_types": 21,
+        "edge_exclusivity": 0.0,
+        "qualified": false
+      },
+      {
+        "family": "J",
+        "edge_residual_types": 16,
+        "edge_tokens": 18,
+        "containing_types": 993,
+        "edge_exclusivity": 0.016113,
+        "qualified": false
+      },
+      {
+        "family": "K",
+        "edge_residual_types": 383,
+        "edge_tokens": 2916,
+        "containing_types": 1318,
+        "edge_exclusivity": 0.290592,
+        "qualified": false
+      },
+      {
+        "family": "L",
+        "edge_residual_types": 259,
+        "edge_tokens": 1739,
+        "containing_types": 632,
+        "edge_exclusivity": 0.40981,
+        "qualified": false
+      },
+      {
+        "family": "M",
+        "edge_residual_types": 7,
+        "edge_tokens": 13,
+        "containing_types": 88,
+        "edge_exclusivity": 0.079545,
+        "qualified": false
+      },
+      {
+        "family": "N",
+        "edge_residual_types": 0,
+        "edge_tokens": 0,
+        "containing_types": 7,
+        "edge_exclusivity": 0.0,
+        "qualified": false
+      },
+      {
+        "family": "P",
+        "edge_residual_types": 181,
+        "edge_tokens": 358,
+        "containing_types": 423,
+        "edge_exclusivity": 0.427896,
+        "qualified": false
+      },
+      {
+        "family": "Q",
+        "edge_residual_types": 256,
+        "edge_tokens": 956,
+        "containing_types": 1269,
+        "edge_exclusivity": 0.201734,
+        "qualified": false
+      },
+      {
+        "family": "R",
+        "edge_residual_types": 2,
+        "edge_tokens": 2,
+        "containing_types": 4,
+        "edge_exclusivity": 0.5,
+        "qualified": false
+      },
+      {
+        "family": "S",
+        "edge_residual_types": 9,
+        "edge_tokens": 14,
+        "containing_types": 25,
+        "edge_exclusivity": 0.36,
+        "qualified": false
+      },
+      {
+        "family": "T",
+        "edge_residual_types": 33,
+        "edge_tokens": 87,
+        "containing_types": 81,
+        "edge_exclusivity": 0.407407,
+        "qualified": false
+      },
+      {
+        "family": "U",
+        "edge_residual_types": 40,
+        "edge_tokens": 378,
+        "containing_types": 198,
+        "edge_exclusivity": 0.20202,
+        "qualified": false
+      },
+      {
+        "family": "V",
+        "edge_residual_types": 1,
+        "edge_tokens": 1,
+        "containing_types": 9,
+        "edge_exclusivity": 0.111111,
+        "qualified": false
+      },
+      {
+        "family": "W",
+        "edge_residual_types": 3,
+        "edge_tokens": 8,
+        "containing_types": 18,
+        "edge_exclusivity": 0.166667,
+        "qualified": false
+      },
+      {
+        "family": "X",
+        "edge_residual_types": 4,
+        "edge_tokens": 5,
+        "containing_types": 13,
+        "edge_exclusivity": 0.307692,
+        "qualified": false
+      }
+    ],
+    "suffix_scan": [
+      {
+        "family": "A",
+        "edge_residual_types": 1327,
+        "edge_tokens": 8540,
+        "containing_types": 2708,
+        "edge_exclusivity": 0.49003,
+        "qualified": false
+      },
+      {
+        "family": "B",
+        "edge_residual_types": 520,
+        "edge_tokens": 3685,
+        "containing_types": 1790,
+        "edge_exclusivity": 0.290503,
+        "qualified": false
+      },
+      {
+        "family": "C",
+        "edge_residual_types": 451,
+        "edge_tokens": 2855,
+        "containing_types": 856,
+        "edge_exclusivity": 0.526869,
+        "qualified": false
+      },
+      {
+        "family": "D",
+        "edge_residual_types": 0,
+        "edge_tokens": 0,
+        "containing_types": 377,
+        "edge_exclusivity": 0.0,
+        "qualified": false
+      },
+      {
+        "family": "E",
+        "edge_residual_types": 31,
+        "edge_tokens": 64,
+        "containing_types": 83,
+        "edge_exclusivity": 0.373494,
+        "qualified": false
+      },
+      {
+        "family": "F",
+        "edge_residual_types": 161,
+        "edge_tokens": 1165,
+        "containing_types": 224,
+        "edge_exclusivity": 0.71875,
+        "qualified": false
+      },
+      {
+        "family": "G",
+        "edge_residual_types": 211,
+        "edge_tokens": 2222,
+        "containing_types": 240,
+        "edge_exclusivity": 0.879167,
+        "qualified": true
+      },
+      {
+        "family": "H",
+        "edge_residual_types": 19,
+        "edge_tokens": 76,
+        "containing_types": 21,
+        "edge_exclusivity": 0.904762,
+        "qualified": true
+      },
+      {
+        "family": "J",
+        "edge_residual_types": 17,
+        "edge_tokens": 27,
+        "containing_types": 993,
+        "edge_exclusivity": 0.01712,
+        "qualified": false
+      },
+      {
+        "family": "K",
+        "edge_residual_types": 14,
+        "edge_tokens": 20,
+        "containing_types": 1318,
+        "edge_exclusivity": 0.010622,
+        "qualified": false
+      },
+      {
+        "family": "L",
+        "edge_residual_types": 10,
+        "edge_tokens": 12,
+        "containing_types": 632,
+        "edge_exclusivity": 0.015823,
+        "qualified": false
+      },
+      {
+        "family": "M",
+        "edge_residual_types": 2,
+        "edge_tokens": 3,
+        "containing_types": 88,
+        "edge_exclusivity": 0.022727,
+        "qualified": false
+      },
+      {
+        "family": "N",
+        "edge_residual_types": 4,
+        "edge_tokens": 4,
+        "containing_types": 7,
+        "edge_exclusivity": 0.571429,
+        "qualified": false
+      },
+      {
+        "family": "P",
+        "edge_residual_types": 13,
+        "edge_tokens": 17,
+        "containing_types": 423,
+        "edge_exclusivity": 0.030733,
+        "qualified": false
+      },
+      {
+        "family": "Q",
+        "edge_residual_types": 16,
+        "edge_tokens": 51,
+        "containing_types": 1269,
+        "edge_exclusivity": 0.012608,
+        "qualified": false
+      },
+      {
+        "family": "R",
+        "edge_residual_types": 1,
+        "edge_tokens": 1,
+        "containing_types": 4,
+        "edge_exclusivity": 0.25,
+        "qualified": false
+      },
+      {
+        "family": "S",
+        "edge_residual_types": 1,
+        "edge_tokens": 2,
+        "containing_types": 25,
+        "edge_exclusivity": 0.04,
+        "qualified": false
+      },
+      {
+        "family": "T",
+        "edge_residual_types": 1,
+        "edge_tokens": 1,
+        "containing_types": 81,
+        "edge_exclusivity": 0.012346,
+        "qualified": false
+      },
+      {
+        "family": "U",
+        "edge_residual_types": 6,
+        "edge_tokens": 7,
+        "containing_types": 198,
+        "edge_exclusivity": 0.030303,
+        "qualified": false
+      },
+      {
+        "family": "V",
+        "edge_residual_types": 0,
+        "edge_tokens": 0,
+        "containing_types": 9,
+        "edge_exclusivity": 0.0,
+        "qualified": false
+      },
+      {
+        "family": "W",
+        "edge_residual_types": 2,
+        "edge_tokens": 2,
+        "containing_types": 18,
+        "edge_exclusivity": 0.111111,
+        "qualified": false
+      },
+      {
+        "family": "X",
+        "edge_residual_types": 5,
+        "edge_tokens": 5,
+        "containing_types": 13,
+        "edge_exclusivity": 0.384615,
+        "qualified": false
+      }
+    ],
+    "selected_prefix_families": [
+      "D"
+    ],
+    "selected_suffix_families": [
+      "G",
+      "H"
+    ],
+    "segmentation_rule": "optional one-family prefix, nonempty core, optional one-family suffix; prefix stripping has priority on two-family words"
+  },
+  "productive_recombination_definition": "evaluation surface type absent from training, carrying a selected edge family, whose parsed core occurred in the training core inventory while its complete slot tuple did not",
+  "evaluation": {
+    "calibration": {
+      "unseen_surface_types": 370,
+      "unseen_affixed_types": 76,
+      "productive_unseen_types": 45,
+      "productive_type_rate_among_affixed": 0.592105,
+      "productive_type_coverage_all_unseen": 0.121622,
+      "unseen_affixed_tokens": 79,
+      "productive_unseen_tokens": 48,
+      "productive_token_rate_among_affixed": 0.607595,
+      "page_support": {
+        "evaluable_pages": 27,
+        "pages_with_at_least_one_productive_type": 22,
+        "page_counted_unseen_affixed_types": 78,
+        "page_counted_productive_types": 47
+      }
+    },
+    "test": {
+      "unseen_surface_types": 596,
+      "unseen_affixed_types": 123,
+      "productive_unseen_types": 69,
+      "productive_type_rate_among_affixed": 0.560976,
+      "productive_type_coverage_all_unseen": 0.115772,
+      "unseen_affixed_tokens": 132,
+      "productive_unseen_tokens": 77,
+      "productive_token_rate_among_affixed": 0.583333,
+      "page_support": {
+        "evaluable_pages": 29,
+        "pages_with_at_least_one_productive_type": 25,
+        "page_counted_unseen_affixed_types": 131,
+        "page_counted_productive_types": 76
+      }
+    }
+  },
+  "equal_cardinality_control": {
+    "control_definition": "exhaustive one-prefix-family and unordered two-suffix-family inventories over the training alphabet; the selected inventory is included",
+    "training_alphabet_families": 22,
+    "equal_cardinality_inventories": 5082,
+    "alternative_inventories": 5081,
+    "inventories_with_strictly_higher_test_rate": 2308,
+    "inventories_tied_on_test_rate": 1,
+    "selected_inventory_rank_from_best": 2309,
+    "selected_inventory_percentile": 0.545848,
+    "advancement_percentile_gate": 0.95,
+    "gate_met": false
+  },
+  "advancement": {
+    "criterion": "selected test productive-type rate must reach at least the 95th percentile of exhaustive equal-cardinality inventories",
+    "criterion_met": false,
+    "disposition": "failed discriminating control; do not advance the edge slots as morphology; assign no gloss"
+  }
+}

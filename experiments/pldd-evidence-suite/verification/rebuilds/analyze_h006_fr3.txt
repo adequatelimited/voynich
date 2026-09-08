@@ -1,0 +1,4 @@
+wrote <REBUILD_DIR>/h006-fr3-line-reset.json
+wrote <REBUILD_DIR>/h006-fr3-line-reset.md
+wrote <REBUILD_DIR>/h006-fr3-line-reset.sha256.txt
+report SHA-256 192845597048b3655debadd50661bebdf08b741bb28ecb23146811a59fc963c7

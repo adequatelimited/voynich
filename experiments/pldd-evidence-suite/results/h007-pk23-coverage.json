@@ -1,0 +1,289 @@
+{
+  "analysis_version": "H007-PK23-COV-v1",
+  "claim_scope": "direct_published_fixed_key_coverage_and_uniqueness",
+  "coverage": {
+    "decoded_output_released": false,
+    "discovery": {
+      "distinct_token_types": 1024,
+      "evaluated": true,
+      "generator_membership_gate_met": false,
+      "histogram": {
+        "B1": {
+          "distinct_types": 499,
+          "occurrences": 937
+        },
+        "BA": {
+          "distinct_types": 29,
+          "occurrences": 82
+        },
+        "C1": {
+          "distinct_types": 26,
+          "occurrences": 27
+        },
+        "CA": {
+          "distinct_types": 3,
+          "occurrences": 3
+        },
+        "U": {
+          "distinct_types": 93,
+          "occurrences": 797
+        },
+        "X": {
+          "distinct_types": 374,
+          "occurrences": 495
+        }
+      },
+      "token_occurrences": 2341,
+      "unique_output_gate_met": false
+    },
+    "discovery_gate_met": false,
+    "disposition": "rejected_on_discovery",
+    "holdout": {
+      "aggregate_histogram_reported": false,
+      "evaluated": false,
+      "sealed": true
+    },
+    "separate_output_protocol_authorized": false
+  },
+  "disposition": "rejected_on_discovery",
+  "inputs": {
+    "it_eva": {
+      "alphabet": "EvaT",
+      "byte_round_trip": true,
+      "independent_sample": false,
+      "path": "data/raw/transcriptions/IT2a-n.txt",
+      "sha256": "7f27a8b0feed8f6de0a99900df6bf912dd1d295c38e5f830bac8b41c3f536fb5"
+    },
+    "ivtff_parser": {
+      "path": "src/voynich/ivtff.py",
+      "sha256": "54d915b772d929f3ac5446ec19cbd1c5799956f43cdf5a6bfbb81279da7f693b"
+    },
+    "naibbe_commit": "f2675ec5dd275268bc64dd48ea64fc0e0e9827a2",
+    "naibbe_files": {
+      "LICENSE": {
+        "path": "data/raw/external/naibbe-f2675ec/LICENSE",
+        "sha256": "e8fb5c1110aaa38618eab2013d1e7c5cae343efd21ea9859478df4930f7746bc"
+      },
+      "README.md": {
+        "path": "data/raw/external/naibbe-f2675ec/README.md",
+        "sha256": "b9e78e849a3478341d1c3167b7c3ae960e18f57b4857a0297d296adfe480ec99"
+      },
+      "decrypt_naibbe.py": {
+        "path": "data/raw/external/naibbe-f2675ec/decrypt_naibbe.py",
+        "sha256": "1c18514bbaba914989f1961f41a3930b7c1afe81d6db37b07b1dd7d9e6ea3b49"
+      },
+      "decrypted/examples/endofpaper_decrypted.txt": {
+        "path": "data/raw/external/naibbe-f2675ec/decrypted/examples/endofpaper_decrypted.txt",
+        "sha256": "c89ca7e66548d76728d968a741296405a271000534f6946d76737fafe7a288c6"
+      },
+      "decrypted/examples/gallic_decrypted.txt": {
+        "path": "data/raw/external/naibbe-f2675ec/decrypted/examples/gallic_decrypted.txt",
+        "sha256": "c439209d7a3f5492e0adb68505316392ea8b5c25ec7b53605c2d43d27d85ce68"
+      },
+      "decrypted/nathist_output_ciphertext_decrypted.txt": {
+        "path": "data/raw/external/naibbe-f2675ec/decrypted/nathist_output_ciphertext_decrypted.txt",
+        "sha256": "852d1ad67f82d6472c8ef1d99bfa12c62f76f3d37be2623a131f47232b753ca2"
+      },
+      "encrypted/examples/endofpaper.txt": {
+        "path": "data/raw/external/naibbe-f2675ec/encrypted/examples/endofpaper.txt",
+        "sha256": "475055654de0049675c26de7550a37426045e4a57ab533cb97677b390e4764d7"
+      },
+      "encrypted/examples/gallic_naibbe.txt": {
+        "path": "data/raw/external/naibbe-f2675ec/encrypted/examples/gallic_naibbe.txt",
+        "sha256": "c813aa51a843a7c399c4707b000155ba615b00ffe34276054a6e2838cfcc8ae2"
+      },
+      "encrypted/nathist_output_ciphertext.txt": {
+        "path": "data/raw/external/naibbe-f2675ec/encrypted/nathist_output_ciphertext.txt",
+        "sha256": "9cdf2de12f371ac7efdb2e78713f229ada508286c1717758184238a59cd64326"
+      },
+      "naibbe.py": {
+        "path": "data/raw/external/naibbe-f2675ec/naibbe.py",
+        "sha256": "3f5e353d2c50f4e6a6b81567ca31cee4f0537a490b6346d054d26661648a6003"
+      },
+      "references/naibbe_tables.csv": {
+        "path": "data/raw/external/naibbe-f2675ec/references/naibbe_tables.csv",
+        "sha256": "4e7cfd54b7ec66515d39a51e11ec97e8e19b643b0b189124eebc3982e707dcec"
+      }
+    },
+    "protocol": {
+      "path": "notes/hypotheses/H007-PK23-published-key-coverage.md",
+      "sha256": "87dd3743413d8eeed08dd7f9eec4bd05dd25413a14fabb3a473d446a56c01501"
+    },
+    "zl_eva": {
+      "alphabet": "Eva-",
+      "byte_round_trip": true,
+      "path": "data/raw/transcriptions/ZL3b-n.txt",
+      "sha256": "bf5b6d4ac1e3a51b1847a9c388318d609020441ccd56984c901c32b09beccafc"
+    }
+  },
+  "published_table_integrity": {
+    "distinct_ciphertext_strings": 356,
+    "opaque_plaintext_labels": 23,
+    "prefix_entries": 138,
+    "role_entries": 414,
+    "suffix_entries": 138,
+    "tables": 6,
+    "unigram_entries": 138
+  },
+  "settings": {
+    "basic": true,
+    "key_search": false,
+    "manual_exceptions": false,
+    "mark_compound": true,
+    "table_completion": false
+  },
+  "stage0_author_controls": {
+    "comparison": "exact_utf8_output_bytes",
+    "controls_passed": 3,
+    "controls_run": 3,
+    "environment": {
+      "pandas_version": "2.2.3",
+      "python_version": "3.12.13"
+    },
+    "passed": true,
+    "settings": {
+      "basic": true,
+      "mark_compound": true
+    }
+  },
+  "table_independent_inventory": {
+    "apostrophe_bearing_token_occurrences": 0,
+    "discovery": {
+      "by_currier": {
+        "A": {
+          "lines": 329,
+          "token_occurrences": 1914
+        },
+        "B": {
+          "lines": 55,
+          "token_occurrences": 419
+        },
+        "unknown": {
+          "lines": 1,
+          "token_occurrences": 8
+        }
+      },
+      "by_hand": {
+        "1": {
+          "lines": 329,
+          "token_occurrences": 1914
+        },
+        "2": {
+          "lines": 48,
+          "token_occurrences": 358
+        },
+        "3": {
+          "lines": 5,
+          "token_occurrences": 36
+        },
+        "5": {
+          "lines": 3,
+          "token_occurrences": 33
+        }
+      },
+      "distinct_token_types": 1024,
+      "logical_lines": 385,
+      "page_panel_ids": 91,
+      "physical_folios": 46,
+      "token_occurrences": 2341
+    },
+    "holdout": {
+      "by_currier": {
+        "A": {
+          "lines": 116,
+          "token_occurrences": 594
+        },
+        "B": {
+          "lines": 25,
+          "token_occurrences": 183
+        }
+      },
+      "by_hand": {
+        "1": {
+          "lines": 116,
+          "token_occurrences": 594
+        },
+        "2": {
+          "lines": 9,
+          "token_occurrences": 60
+        },
+        "3": {
+          "lines": 13,
+          "token_occurrences": 105
+        },
+        "5": {
+          "lines": 3,
+          "token_occurrences": 18
+        }
+      },
+      "distinct_token_types": 451,
+      "logical_lines": 141,
+      "page_panel_ids": 33,
+      "physical_folios": 17,
+      "token_occurrences": 777
+    },
+    "holdout_physical_folios": [
+      "f4",
+      "f6",
+      "f7",
+      "f16",
+      "f19",
+      "f22",
+      "f25",
+      "f31",
+      "f33",
+      "f35",
+      "f36",
+      "f41",
+      "f42",
+      "f53",
+      "f54",
+      "f66",
+      "f95"
+    ],
+    "overall": {
+      "by_currier": {
+        "A": {
+          "lines": 445,
+          "token_occurrences": 2508
+        },
+        "B": {
+          "lines": 80,
+          "token_occurrences": 602
+        },
+        "unknown": {
+          "lines": 1,
+          "token_occurrences": 8
+        }
+      },
+      "by_hand": {
+        "1": {
+          "lines": 445,
+          "token_occurrences": 2508
+        },
+        "2": {
+          "lines": 57,
+          "token_occurrences": 418
+        },
+        "3": {
+          "lines": 18,
+          "token_occurrences": 141
+        },
+        "5": {
+          "lines": 6,
+          "token_occurrences": 51
+        }
+      },
+      "distinct_token_types": 1261,
+      "logical_lines": 526,
+      "page_panel_ids": 124,
+      "physical_folios": 63,
+      "token_occurrences": 3118
+    },
+    "type_overlap": {
+      "discovery_only": 810,
+      "holdout_only": 237,
+      "shared": 214
+    }
+  }
+}

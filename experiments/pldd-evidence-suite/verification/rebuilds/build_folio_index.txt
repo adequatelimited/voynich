@@ -1,0 +1,1 @@
+wrote <REBUILD_DIR>/yale-canvas-index.json (213 canvases)

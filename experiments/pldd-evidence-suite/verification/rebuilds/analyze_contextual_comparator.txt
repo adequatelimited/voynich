@@ -1,0 +1,49 @@
+order 1: preparing exact target distributions
+order 1: exact weights prepared; maximum total bit length 159
+order 1: 1/9999 replicates
+order 1: 500/9999 replicates
+order 1: 1000/9999 replicates
+order 1: 1500/9999 replicates
+order 1: 2000/9999 replicates
+order 1: 2500/9999 replicates
+order 1: 3000/9999 replicates
+order 1: 3500/9999 replicates
+order 1: 4000/9999 replicates
+order 1: 4500/9999 replicates
+order 1: 5000/9999 replicates
+order 1: 5500/9999 replicates
+order 1: 6000/9999 replicates
+order 1: 6500/9999 replicates
+order 1: 7000/9999 replicates
+order 1: 7500/9999 replicates
+order 1: 8000/9999 replicates
+order 1: 8500/9999 replicates
+order 1: 9000/9999 replicates
+order 1: 9500/9999 replicates
+order 1: 9999/9999 replicates
+order 2: preparing exact target distributions
+order 2: exact weights prepared; maximum total bit length 163
+order 2: 1/9999 replicates
+order 2: 500/9999 replicates
+order 2: 1000/9999 replicates
+order 2: 1500/9999 replicates
+order 2: 2000/9999 replicates
+order 2: 2500/9999 replicates
+order 2: 3000/9999 replicates
+order 2: 3500/9999 replicates
+order 2: 4000/9999 replicates
+order 2: 4500/9999 replicates
+order 2: 5000/9999 replicates
+order 2: 5500/9999 replicates
+order 2: 6000/9999 replicates
+order 2: 6500/9999 replicates
+order 2: 7000/9999 replicates
+order 2: 7500/9999 replicates
+order 2: 8000/9999 replicates
+order 2: 8500/9999 replicates
+order 2: 9000/9999 replicates
+order 2: 9500/9999 replicates
+order 2: 9999/9999 replicates
+wrote <REBUILD_DIR>/h004b2-contextual-comparator.json
+wrote <REBUILD_DIR>/h004b2-contextual-comparator.md
+runtime_seconds=18.194

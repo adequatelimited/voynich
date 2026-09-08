@@ -1,0 +1,60 @@
+{
+  "path_only_result_transformations": [
+    {
+      "artifact": "results/h004c-zg-discovery-manifest.json",
+      "original_sha256": "e6811015692835fdf0e0fa4e530eff2c74d2a73341170bc0cd85ff6a22d2f21d",
+      "published_sha256": "fddeea50665674bef82b88ed47f2040a51a2e0b9e4662c72e33e0548d4785c32",
+      "changes": [
+        {
+          "json_pointer": "/inputs/gc_sta1_level0/path",
+          "new_value": "data/raw/transcriptions/sta1/GC2a_0.txt",
+          "change": "remove historical workstation root prefix"
+        },
+        {
+          "json_pointer": "/inputs/zl_sta1/path",
+          "new_value": "data/raw/transcriptions/sta1/ZL3b.txt",
+          "change": "remove historical workstation root prefix"
+        },
+        {
+          "json_pointer": "/protocol/path",
+          "new_value": "notes/hypotheses/H004C-cross-transcription-sta.md",
+          "change": "remove historical workstation root prefix"
+        }
+      ],
+      "statistical_or_glyph_changes": false
+    },
+    {
+      "artifact": "results/h005-plant-anchors.json",
+      "original_sha256": "04950ee32f1a68c53efb9be7a921a2834f36109f89cefbe8de7eb242fadad179",
+      "published_sha256": "e9459292e7b7c87464589b07c13845531bb27b427157eb568a1b335c50f5cb1f",
+      "changes": [
+        {
+          "json_pointer": "/inputs/eva/path",
+          "new_value": "data/raw/transcriptions/ZL3b-n.txt",
+          "change": "remove historical workstation root prefix"
+        },
+        {
+          "json_pointer": "/inputs/gc_sta1/path",
+          "new_value": "data/raw/transcriptions/sta1/GC2a_0.txt",
+          "change": "remove historical workstation root prefix"
+        },
+        {
+          "json_pointer": "/inputs/protocol/path",
+          "new_value": "notes/hypotheses/H005-pharmaceutical-plant-anchors.md",
+          "change": "remove historical workstation root prefix"
+        },
+        {
+          "json_pointer": "/inputs/source_anchor_manifest/path",
+          "new_value": "data/derived/h005-source-anchor-manifest.json",
+          "change": "remove historical workstation root prefix"
+        },
+        {
+          "json_pointer": "/inputs/zl_sta1/path",
+          "new_value": "data/raw/transcriptions/sta1/ZL3b.txt",
+          "change": "remove historical workstation root prefix"
+        }
+      ],
+      "statistical_or_glyph_changes": false
+    }
+  ]
+}

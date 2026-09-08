@@ -1,0 +1,4 @@
+wrote <REBUILD_DIR>/h004c-zg-discovery-manifest.json
+wrote <REBUILD_DIR>/h004c-zg-discovery.md
+wrote <REBUILD_DIR>/h004c-zg-discovery-manifest.sha256.txt
+manifest SHA-256 fddeea50665674bef82b88ed47f2040a51a2e0b9e4662c72e33e0548d4785c32

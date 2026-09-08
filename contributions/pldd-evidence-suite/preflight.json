@@ -1,0 +1,10 @@
+{
+  "status": "held",
+  "issues": [
+    {
+      "path": "context",
+      "code": "policy_mismatch",
+      "message": "Contribution, context and profile policy versions must agree."
+    }
+  ]
+}

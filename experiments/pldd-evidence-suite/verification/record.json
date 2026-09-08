@@ -1,0 +1,40 @@
+{
+  "schema_version": 1,
+  "package": "pldd-evidence-suite",
+  "prepared_utc": "2026-09-08T04:28:35.970380+00:00",
+  "verification_kind": "local AI-assisted reproduction; not independent external validation",
+  "unit_tests": {
+    "passed": true,
+    "tests_run": 101,
+    "failures": 0,
+    "errors": 0,
+    "record": "verification/tests/rerun-status.json",
+    "initial_failure_retained": "verification/tests/status.json"
+  },
+  "frozen_rebuilds": {
+    "commands_run": 9,
+    "all_scientific_outputs_match": true,
+    "byte_identical_command_outputs": 8,
+    "runtime_metadata_only_command": "analyze_h007_pk23.py",
+    "record": "verification/rebuilds/record.json"
+  },
+  "integrity": {
+    "raw_inputs_byte_identical": 20,
+    "frozen_protocols_and_audit_notes_byte_identical": 14,
+    "source_audit": "verification/source-byte-audit.json"
+  },
+  "seals": {
+    "H004C_IT_event_projection": false,
+    "H005_IT_target_prose_projection": false,
+    "H006_holdout_residues": false,
+    "H007_holdout_table_evaluation": false,
+    "H008_execution": false,
+    "Latin_controls_imported_or_evaluated": false
+  },
+  "limitations": [
+    "Historical protocol timing is retained local evidence, not authenticated preregistration.",
+    "ZL/GC/IT are correlated transcription views of one manuscript.",
+    "H007 historical and current full JSON hashes differ solely because the author-control Python version changed from 3.12.13 to 3.12.14.",
+    "H004C and H005 published hashes differ from original records because only absolute input-path metadata was made relative."
+  ]
+}

@@ -1,0 +1,21 @@
+{
+  "all_json_deltas": [
+    {
+      "golden": "3.12.13",
+      "path": "$.stage0_author_controls.environment.python_version",
+      "rebuilt": "3.12.14"
+    }
+  ],
+  "comparison_rule": "Replace only rebuilt Python version metadata with the recorded golden Python version for comparison; preserve both originals.",
+  "golden_sha256": "174e0469312cfbe2d19fe8ad8f435fbd6453a7af9ba1305300140757519b46fd",
+  "rebuilt_sha256": "b4c99abda34a714364254a5fd6d14a3692aeb7bcc7c8fd7148ddeb82b61bd6c1",
+  "runtime": {
+    "interpreter_source": "environment",
+    "pandas_version": "2.2.3",
+    "python_version": "3.12.14"
+  },
+  "runtime_normalized_bytes_equal_golden": true,
+  "runtime_normalized_sha256": "174e0469312cfbe2d19fe8ad8f435fbd6453a7af9ba1305300140757519b46fd",
+  "runtime_seconds": 1.434677,
+  "scope": "Existing H007 discovery build and author controls only; unchanged held-out seal."
+}
