@@ -1,0 +1,353 @@
+{
+  "schema_version": "1.0",
+  "research_pr": 7,
+  "merge_sha": "92b9970e38de8d50e5a53d0c523794a27858a167",
+  "events": [
+    {
+      "schema_version": "1.0",
+      "id": "decision-7-family-generative-falsification-controls-entry-ladder-e38e9c52c08f",
+      "sequence": 11,
+      "kind": "award",
+      "family_id": "family-generative-falsification-controls-entry-ladder",
+      "rubric_version": "0.1",
+      "category": "experiments",
+      "repository_id": 1359336540,
+      "pr_number": 7,
+      "milestone_id": "milestone-1359336540-7-family-generative-falsification-controls-entry-ladder",
+      "earned_at": "2026-09-07T20:59:59Z",
+      "assessment_id": "assessment-f318f5bb7158a353eafb2e283341d039",
+      "artifact_binding_digest": "e38e9c52c08fb9e837e39ca29992da762d960e21cd626a09b0be79f561d4b255",
+      "authority_receipt_ref": "receipt:job-e38e9c52c08fb9e837e39ca29992da762d960e21",
+      "cumulative_tier": 2,
+      "allocation_shares": [
+        {
+          "github_id": 859355,
+          "share_basis_points": 10000,
+          "status": "paid",
+          "acknowledgment_receipt_ref": "github-pr:1359336540:7:ee7331faad32ff16c8bf7abd01bbf0cd51971823:b09eb0d999ed8240287a4d9264042578aa8c57781cdf0d0fe5980e5333dbee7b:bfe8e0ea6e4eefef996eb169f85fcefb20991a0ff43e81d9cfbfb8460bce7ad1"
+        }
+      ],
+      "reason": "This is a genuinely distinct, narrowly bounded diagnostic addition: two new real-text genre comparators applied with an existing metric suite, yielding one corrective finding about genre-dependence of entry-private vocabulary. It reuses the prior entry-metrics function and parsing pattern rather than introducing a new generative mechanism or reusable general-purpose tool, so tier 2 is the highest fully supported tier; tier 5 is not supported because there is no new mechanism, no substantially informative new pilot comparing models, and no demonstrated broader reusability beyond this specific two-text addition. It is not the same outcome as family-generative-falsification (Cardan grille), family-generative-falsification-entry-doodler (M3 generator), or family-generative-falsification-word-grammar-template (Stolfi grammar + original Culpeper/Alice controls); its 'extends' declaration is lineage only under CREDIT_IS_NOT_LINEAGE_V1."
+    }
+  ],
+  "families_added": [
+    {
+      "id": "family-generative-falsification-controls-entry-ladder",
+      "rubric_version": "0.1",
+      "scope": "A bounded diagnostic control extending the existing entry-structure metric suite (entry-private vocabulary share, adjacent/distant page Jaccard, ttr, entry token length) to two new real-text genres (Devil's Dictionary, Wonder Book of Knowledge) alongside the previously measured Culpeper/Alice controls, showing the manuscript's entry-private vocabulary is genre- and entry-length-dependent and lies on a continuum with short-entry real genres rather than being an order-of-magnitude outlier, with a documented correction to an earlier interpretive emphasis about device-overshoot.",
+      "acceptance_test": "Run `python controls_entry.py --corpus ../../data/corpora/ZL3b-n.txt --culpeper ../../data/corpora/pg49513.txt --alice ../../data/corpora/pg11.txt --devil ../../data/corpora/pg972.txt --wonder ../../data/corpora/pg41111.txt --out results/`; confirm results.json matches the recorded output showing devils_dictionary entry_unique_share=0.1383 and wonder_book_kids_encyclopedia entry_unique_share=0.0801, both between culpeper_encyclopedia (0.0281) and voynich (0.3024), and devils_dictionary jaccard_adjacent (0.0634) within 0.02 of voynich's 0.0804.",
+      "aliases": [],
+      "predecessor_family_ids": [
+        "family-generative-falsification",
+        "family-generative-falsification-word-grammar-template"
+      ],
+      "excluded_overlap": [
+        "Does not claim credit for the Cardan table-and-grille (M5a/M5b) mechanism experiment credited under family-generative-falsification.",
+        "Does not claim the M3 per-page entry/topic-carryover generator credited under family-generative-falsification-entry-doodler.",
+        "Does not claim the Stolfi word-grammar template generator or the original Culpeper/Alice real-language control measurement credited under family-generative-falsification-word-grammar-template; reuses those two texts' bytes only as baseline rows recomputed alongside the two new genres.",
+        "Does not claim credit for the pinned ZL3b corpus/parser (seed-corpus-parser) or local harness workflow (seed-local-harness), used only as inputs.",
+        "Does not claim credit for MS408 mirror registration (family-ms408-data-access)."
+      ],
+      "seed": false,
+      "seed_baseline": 0
+    }
+  ],
+  "milestones": [
+    {
+      "id": "milestone-1359336540-7-family-generative-falsification-controls-entry-ladder",
+      "family_id": "family-generative-falsification-controls-entry-ladder",
+      "repository_id": 1359336540,
+      "pr_number": 7,
+      "earned_at": "2026-09-07T20:59:59Z",
+      "depends_on": []
+    }
+  ],
+  "assessment": {
+    "schema_version": "1.0",
+    "assessment_id": "assessment-f318f5bb7158a353eafb2e283341d039",
+    "artifact_binding_digest": "f318f5bb7158a353eafb2e283341d039efd8f9b0a53fb6472be24be23e631ae9",
+    "merit_evidence_digest": "372ce8c557f2385f752a1454718e2e0b0c0c3821edebaf22aab6d43b1152d122",
+    "repository_id": 1359336540,
+    "pr_number": 7,
+    "head_sha": "ee7331faad32ff16c8bf7abd01bbf0cd51971823",
+    "base_sha": "6b5226afa57aeaac4b0650953527851cf43bfbe5",
+    "rules_version": "0.1",
+    "rubric_version": "0.1",
+    "grading_profile": "voynich-sonnet-ai-pilot-2026-09-07-v9",
+    "evaluator_commit": "a26c63625881b3fcb1326cea69d4b1f8430692b0",
+    "mode": "official_proposal",
+    "status": "complete",
+    "claimed_score": 2,
+    "expected_score": 2,
+    "official_proposed_score": 2,
+    "awarded_score": null,
+    "assessment": {
+      "schema_version": "1.0",
+      "admission_action": "accept",
+      "score_status": "proposed",
+      "conduct_status": "clear",
+      "findings": [
+        {
+          "blocks_merge_or_credit": false,
+          "rule_id_or_gate": "G6",
+          "severity": "info",
+          "path_or_locus": "contributions/controls-entry-ladder/contribution.yaml",
+          "evidence_refs": [
+            "contributions/controls-entry-ladder/contribution.yaml"
+          ],
+          "reason": "Corrected validation defects only: added required evidence_refs on findings and ensured each family_comparisons entry quotes the current trusted scope exactly once, matching the prior adjudicated judgment.",
+          "required_change": "",
+          "verification_step": "Compare family_comparisons existing_scope strings against context.families trusted scope text."
+        }
+      ],
+      "outcomes": [
+        {
+          "family_id": "family-generative-falsification-controls-entry-ladder",
+          "scope": "A bounded diagnostic control extending the existing entry-structure metric suite (entry-private vocabulary share, adjacent/distant page Jaccard, ttr, entry token length) to two new real-text genres (Devil's Dictionary, Wonder Book of Knowledge) alongside the previously measured Culpeper/Alice controls, showing the manuscript's entry-private vocabulary is genre- and entry-length-dependent and lies on a continuum with short-entry real genres rather than being an order-of-magnitude outlier, with a documented correction to an earlier interpretive emphasis about device-overshoot.",
+          "category": "experiments",
+          "predecessors": [
+            "family-generative-falsification",
+            "family-generative-falsification-word-grammar-template"
+          ],
+          "aliases": [],
+          "claimed_tier": 2,
+          "assessed_tier": 2,
+          "gate_evidence": [
+            {
+              "gate": "G1",
+              "status": "pass",
+              "evidence_refs": [
+                "experiments/controls-entry/report.md"
+              ],
+              "reason": "Directly addresses the generative-mechanisms/statistical-structure research question of whether entry-private vocabulary reflects encoded content vs. mechanical/device artifact."
+            },
+            {
+              "gate": "G2",
+              "status": "pass",
+              "evidence_refs": [
+                "data/manifests/pg972.json",
+                "data/manifests/pg41111.json",
+                "data/corpora/RIGHTS.md"
+              ],
+              "reason": "New PG972/PG41111 texts are Project Gutenberg public-domain items with rights notes, hashes and manifests; Culpeper/ZL3b reused from prior pinned sources with their own rights records."
+            },
+            {
+              "gate": "G3",
+              "status": "pass",
+              "evidence_refs": [
+                "experiments/controls-entry/controls_entry.py",
+                "experiments/controls-entry/results/results.json",
+                "experiments/controls-entry/report.md"
+              ],
+              "reason": "Documented command, deterministic stdlib-only code and recorded results.json are ordinary inspectable evidence sufficient for tier 2; no independently authenticated execution receipt exists or is required at this tier."
+            },
+            {
+              "gate": "G4",
+              "status": "pass",
+              "evidence_refs": [
+                "experiments/controls-entry/report.md"
+              ],
+              "reason": "Report explicitly discloses parser limitations (satirical register, ~1% narrative noise in Wonder Book), English-only control scope, and labels interpretive percentages as judgment not measurement."
+            },
+            {
+              "gate": "G5",
+              "status": "pass",
+              "evidence_refs": [
+                "contributions/controls-entry-ladder/contribution.yaml",
+                "contributions/controls-entry-ladder/rights.md"
+              ],
+              "reason": "Human contributor (Gnuchev) credited for the motivating hypothesis; AI assistance (Kimi Code CLI) disclosed with tasks and human-verification notes."
+            },
+            {
+              "gate": "G6",
+              "status": "pass",
+              "evidence_refs": [
+                "experiments/controls-entry/report.md",
+                "research/context-index.json"
+              ],
+              "reason": "Adds two new real-text genre controls not previously measured under this metric suite, producing a distinct corrective finding; explicitly excludes the grille (family-generative-falsification), M3 (entry-doodler), word-grammar-template and doodler families' own credited mechanisms/results, reusing only Culpeper/Alice bytes as baseline recomputation rows rather than new credited capability."
+            },
+            {
+              "gate": "G7",
+              "status": "pass",
+              "evidence_refs": [
+                "experiments/controls-entry/results/results.json",
+                "experiments/controls-entry/controls_entry.py"
+              ],
+              "reason": "Full metric table across all five texts is shown with parser thresholds documented in code; no evidence of selective reporting, and the report preserves a negative/complicating finding (interpretive weakening of a prior device-overshoot claim)."
+            }
+          ],
+          "attribution_status": "verified",
+          "reason": "This is a genuinely distinct, narrowly bounded diagnostic addition: two new real-text genre comparators applied with an existing metric suite, yielding one corrective finding about genre-dependence of entry-private vocabulary. It reuses the prior entry-metrics function and parsing pattern rather than introducing a new generative mechanism or reusable general-purpose tool, so tier 2 is the highest fully supported tier; tier 5 is not supported because there is no new mechanism, no substantially informative new pilot comparing models, and no demonstrated broader reusability beyond this specific two-text addition. It is not the same outcome as family-generative-falsification (Cardan grille), family-generative-falsification-entry-doodler (M3 generator), or family-generative-falsification-word-grammar-template (Stolfi grammar + original Culpeper/Alice controls); its 'extends' declaration is lineage only under CREDIT_IS_NOT_LINEAGE_V1.",
+          "family_decision": "new",
+          "family_comparisons": [
+            {
+              "family_id": "family-generative-falsification",
+              "existing_scope": "Pilot 4 in the generative-mechanism falsification family: implements the Cardan table-and-grille device (M5a independent-column, M5b row-coupled) built from the pinned ZL3b corpus, measures composite distance against real manuscript statistics across 28 configurations plus multi-seed stability, and narrows the residual gap to two local metrics (conditional bigram entropy, word-final predictability), extending outcome-m4-template-doodler-pilot.",
+              "relationship": "distinct_outcome",
+              "reason": "The submission does not implement, test, or extend the Cardan grille mechanism at all; it adds two real-text genre controls to an entry-metric suite from an earlier pilot. The 'extends: outcome-m5-grille-pilot' declaration is lineage framing, not substantive overlap with the grille's delivered mechanism/result."
+            },
+            {
+              "family_id": "family-generative-falsification-word-grammar-template",
+              "existing_scope": "A distinct generative-mechanism falsification pilot implementing Stolfi's published 2000 word grammar (core/mantle/crust unimodal-hill slot structure) as a template generator embedded in an entry/topic-carryover engine, and measuring two real-language positive controls (Culpeper's Complete Herbal 1653, Alice in Wonderland) with the identical metric suite against the pinned ZL3b corpus across 12 grid variants, showing (a) real language differs from the manuscript on conditional entropy, final-char entropy and entry-private vocabulary share, reframing prior 'unmatched by content-free generators' results away from a linguistic-content reading, and (b) the published grammar covers 86% of corpus word types with zero fitting and jointly reproduces vocabulary size, ttr, word length and page-sharing, leaving a residual mechanical-repetition signature (H2|1, final-char entropy, Zipf slope, entry-unique overshoot).",
+              "relationship": "distinct_outcome",
+              "reason": "That family already credits the Culpeper/Alice real-language controls and the Stolfi template-generator mechanism. This submission adds no generator and reuses Culpeper/Alice bytes only as re-included baseline rows; its new delivered content is the two additional genre controls (dictionary, kids' encyclopedia) and the resulting corrective interpretive finding, not previously credited there."
+            },
+            {
+              "family_id": "family-generative-falsification-entry-doodler",
+              "existing_scope": "A distinct generative-mechanism falsification pilot testing a content-free per-page entry/topic-carryover generator (M3) against the pinned ZL3b corpus's newly measured page-level structural fingerprint (adjacent vs distant page vocabulary Jaccard, page-unique vocabulary share) across 24 grid variants, showing these page-level metrics are reproducible content-free while character-level residue (H2|1, Zipf slope, word length) persists.",
+              "relationship": "distinct_outcome",
+              "reason": "That family credits a content-free generative M3 mechanism reproducing page-level metrics; this submission adds no generator, instead adding two new real-language genre controls to interpret entry-private vocabulary share using the pre-existing metric definitions, a different informative direction."
+            },
+            {
+              "family_id": "family-generative-falsification-doodler",
+              "existing_scope": "A distinct generative-mechanism falsification pilot testing content-free syllable-table (Rugg-style, M1) and self-citation/preferential-reuse (Schinner-style, M2) generators against the pinned ZL3b corpus across 27 M2 grid variants plus M0/M1 baselines on 10 quantitative metrics, identifying which corpus properties (ttr, H1, vocabulary growth) are reproducible content-free and which (H2|1, word-final entropy, Zipf slope) are not, plus a diagnostic finding on verbatim-reuse rate needed to avoid type-explosion.",
+              "relationship": "distinct_outcome",
+              "reason": "Unrelated mechanism scope; no overlap with the M1/M2 syllable-table/self-citation pilot."
+            },
+            {
+              "family_id": "family-ms408-data-access",
+              "existing_scope": "Registration of a third-party public mirror (Artheon Museum Lab) hosting 213 Beinecke MS 408 scans and extended EVA/IVTFF transliterations (RF1b-e, IT2a, LSI), with a machine-readable catalogue, per-file SHA-256 hashes recorded by the contributor from a 2026-09-06 fetch, an agent-oriented llms.txt entry point, and a rights/provenance record distinguishing CC0-hosted material from the reference_only 1998 Stolfi EVT.",
+              "relationship": "distinct_outcome",
+              "reason": "Unrelated scope; no overlap with MS408 mirror registration."
+            }
+          ],
+          "source_outcome_ids": [
+            "outcome-controls-entry-ladder"
+          ],
+          "acceptance_test": "Run `python controls_entry.py --corpus ../../data/corpora/ZL3b-n.txt --culpeper ../../data/corpora/pg49513.txt --alice ../../data/corpora/pg11.txt --devil ../../data/corpora/pg972.txt --wonder ../../data/corpora/pg41111.txt --out results/`; confirm results.json matches the recorded output showing devils_dictionary entry_unique_share=0.1383 and wonder_book_kids_encyclopedia entry_unique_share=0.0801, both between culpeper_encyclopedia (0.0281) and voynich (0.3024), and devils_dictionary jaccard_adjacent (0.0634) within 0.02 of voynich's 0.0804.",
+          "excluded_overlap": [
+            "Does not claim credit for the Cardan table-and-grille (M5a/M5b) mechanism experiment credited under family-generative-falsification.",
+            "Does not claim the M3 per-page entry/topic-carryover generator credited under family-generative-falsification-entry-doodler.",
+            "Does not claim the Stolfi word-grammar template generator or the original Culpeper/Alice real-language control measurement credited under family-generative-falsification-word-grammar-template; reuses those two texts' bytes only as baseline rows recomputed alongside the two new genres.",
+            "Does not claim credit for the pinned ZL3b corpus/parser (seed-corpus-parser) or local harness workflow (seed-local-harness), used only as inputs.",
+            "Does not claim credit for MS408 mirror registration (family-ms408-data-access)."
+          ],
+          "validation_evidence": {
+            "execution_receipt_refs": [],
+            "external_assessment_receipt_refs": [],
+            "independent_inspection_refs": []
+          }
+        }
+      ],
+      "inspected_paths": [
+        "contributions/controls-entry-ladder/contribution.yaml",
+        "contributions/controls-entry-ladder/rights.md",
+        "data/corpora/RIGHTS.md",
+        "data/corpora/pg41111.txt",
+        "data/corpora/pg49513.txt",
+        "data/corpora/pg972.txt",
+        "data/manifests/pg41111.json",
+        "data/manifests/pg49513.json",
+        "data/manifests/pg972.json",
+        "experiments/controls-entry/controls_entry.py",
+        "experiments/controls-entry/report.md",
+        "experiments/controls-entry/results/results.json",
+        "research/context-index.json"
+      ],
+      "inspection_gaps": [],
+      "next_action": "Accept and register the new family family-generative-falsification-controls-entry-ladder at tier 2. No contributor action required.",
+      "appeal_route": "If the contributor believes this diagnostic addition meets the tier-5 anchor (e.g., as a standalone reusable four-genre control tool independently usable beyond this pilot, or a materially new comparative pilot), they may resubmit with evidence of that broader reusable capability, or file an evidence-based appeal per RULES.md R8 and GRADING.md section 6 citing the specific rubric anchor and disputed gate."
+    },
+    "stages": [
+      {
+        "stage": "adjudicator",
+        "provider": "anthropic",
+        "model": "claude-sonnet-5",
+        "exposed_version": "claude-sonnet-5",
+        "prompt_digest": "ea3a5516d0f61d47c8bba9980ba1b5f1be78b96a221329a50b61cfac511229d0",
+        "response_digest": "fe4d4bd13d8b9ff06373ef255d9de5678b98a1f949e5135c60c5fbed9fd6f5ca",
+        "started_at": "2026-09-07T23:41:11.959Z",
+        "completed_at": "2026-09-07T23:42:44.083Z",
+        "usage": {
+          "sessions": 1,
+          "input_bytes": 248435,
+          "output_bytes": 36105,
+          "runtime_ms": 90835
+        },
+        "receipt_ref": "stage-results/job-e38e9c52c08fb9e837e39ca29992da762d960e21/adjudicator.json"
+      },
+      {
+        "stage": "adversary",
+        "provider": "anthropic",
+        "model": "claude-sonnet-5",
+        "exposed_version": "claude-sonnet-5",
+        "prompt_digest": "35021baf1e42ab0bf6c0aae6514b2649259b74c3200f7136b9205e5dd31bafbe",
+        "response_digest": "dd58320bbddc7d87cf2e384a53de2509d7a7e016861faae4061cfcca4c76f228",
+        "started_at": "2026-09-07T23:39:09.847Z",
+        "completed_at": "2026-09-07T23:40:22.932Z",
+        "usage": {
+          "sessions": 1,
+          "input_bytes": 227697,
+          "output_bytes": 39803,
+          "runtime_ms": 72270
+        },
+        "receipt_ref": "stage-results/job-e38e9c52c08fb9e837e39ca29992da762d960e21/adversary.json"
+      },
+      {
+        "stage": "assessor",
+        "provider": "anthropic",
+        "model": "claude-sonnet-5",
+        "exposed_version": "claude-sonnet-5",
+        "prompt_digest": "21c877c96f7d749ec2f416fd78364f634a701058d4c638e19e0991e79b05214c",
+        "response_digest": "37664510e737a40ed5d6d1aa86f2a0e96bcfd2bfd6a7d5cb21fbb2bd6c59804d",
+        "started_at": "2026-09-07T23:37:08.323Z",
+        "completed_at": "2026-09-07T23:38:20.830Z",
+        "usage": {
+          "sessions": 1,
+          "input_bytes": 227578,
+          "output_bytes": 49006,
+          "runtime_ms": 71587
+        },
+        "receipt_ref": "stage-results/job-e38e9c52c08fb9e837e39ca29992da762d960e21/assessor.json"
+      },
+      {
+        "stage": "corrector",
+        "provider": "anthropic",
+        "model": "claude-sonnet-5",
+        "exposed_version": "claude-sonnet-5",
+        "prompt_digest": "b053d349a4aecb5ce056fc0564cbb7ce59b5d1fedde0924c9a71c555dd1ff8c1",
+        "response_digest": "2418ec72deb1eb164e231d9ab9a6e353941687032ebcb3ddcdf8f05d06d42785",
+        "started_at": "2026-09-07T23:43:34.523Z",
+        "completed_at": "2026-09-07T23:44:22.646Z",
+        "usage": {
+          "sessions": 1,
+          "input_bytes": 262876,
+          "output_bytes": 43891,
+          "runtime_ms": 47210
+        },
+        "receipt_ref": "stage-results/job-e38e9c52c08fb9e837e39ca29992da762d960e21/corrector.json"
+      }
+    ],
+    "disagreements": [
+      "Material independent-assessment disagreement or invalid proposal."
+    ],
+    "holds": [],
+    "reused_assessment_id": null
+  },
+  "receipt": {
+    "schema_version": "1.0",
+    "id": "receipt:job-e38e9c52c08fb9e837e39ca29992da762d960e21",
+    "key_id": "voynich-2026-09-06",
+    "issued_at": "2026-09-07T23:48:42.039Z",
+    "payload": {
+      "repository_id": 1359336540,
+      "events_digest": "d62207267c5734f52c7335ef905b6e9f3e36f1681b2292fa96fd0dc70026daf1",
+      "milestones_digest": "e4e0af5932201d3537335351649c6728bbfae039d4f77898fc2395fd910f9b23",
+      "families_digest": "470eb2e0960dca3fcad9d0617896b2fe03f3ac7479f009266b8d5ad612817500",
+      "merge_sha": "92b9970e38de8d50e5a53d0c523794a27858a167",
+      "assessed_head": "ee7331faad32ff16c8bf7abd01bbf0cd51971823",
+      "artifact_digest": "e38e9c52c08fb9e837e39ca29992da762d960e21cd626a09b0be79f561d4b255",
+      "profile_digest": "2f8d18abf176f95380df7e809a525db1c36186a0f8bfe46ce106d8b228a28a93",
+      "report_digest": "46dcb73bb852b91bf3465c78565ddf32902e5d99fdc1a0e8881d86a42faf78d9",
+      "stage_receipt_refs": [
+        "stage-results/job-e38e9c52c08fb9e837e39ca29992da762d960e21/adjudicator.json",
+        "stage-results/job-e38e9c52c08fb9e837e39ca29992da762d960e21/adversary.json",
+        "stage-results/job-e38e9c52c08fb9e837e39ca29992da762d960e21/assessor.json",
+        "stage-results/job-e38e9c52c08fb9e837e39ca29992da762d960e21/corrector.json"
+      ]
+    },
+    "payload_digest": "5424466ef83ef52c8e0f3902ac1347e51a4ec4cd0d784d414716c2ebecbb8b77",
+    "signature": "ci0H5HnN5fnIAAWCmN7XSXN5y6r8ds_iO8pb2fNX5h4tiR_AOMpKNCfsgFozwUxUw_P2m_i8aympD5Ge7blPDQ"
+  }
+}

@@ -115,3 +115,22 @@ test('a valid final judgment cannot buy a correction and every gate and receipt 
   const falseExpert = assessment(); falseExpert.outcomes[0]!.validation_evidence = { execution_receipt_refs: [], external_assessment_receipt_refs: ['fake'], independent_inspection_refs: [] };
   assert.ok(validateStageJudgment(falseExpert, input).some(x => x.includes('External assessment')));
 });
+
+test('independent outcome mapping binds new families to real claims and participates in agreement', async () => {
+ const input=await gradingInput(); input.profile.settings={...input.profile.settings,outcome_scope:'independent-results-v1'};
+ const proposal=assessment(); assert.ok(validateStageJudgment(proposal,input).some(e=>e.includes('source_outcome_ids')));
+ proposal.outcomes[0]!.source_outcome_ids=[input.contribution.outcomes[0]!.id]; proposal.outcomes[0]!.acceptance_test='Inspect the distinct diagnostic finding'; proposal.outcomes[0]!.excluded_overlap=['Previously credited reusable harness'];
+ assert.deepEqual(validateStageJudgment(proposal,input),[]);
+ const other=structuredClone(proposal);other.outcomes[0]!.acceptance_test='A different result';assert.equal(assessmentsAgree(proposal,other),false);
+ proposal.outcomes[0]!.source_outcome_ids=['invented-claim'];assert.ok(validateStageJudgment(proposal,input).some(e=>e.includes('source_outcome_ids')));
+});
+
+test('a claimed new family cannot silently reuse occupied credit and comparisons bind real recorded scopes', async()=>{
+ const input=await gradingInput();input.profile.settings={...input.profile.settings,outcome_scope:'independent-results-v1',family_comparisons:'required-v1'};
+ const prior=input.context.families[0]!;const value=assessment();const outcome=value.outcomes[0]!;
+ outcome.source_outcome_ids=[input.contribution.outcomes[0]!.id];outcome.acceptance_test='A distinct check';outcome.excluded_overlap=['Existing result excluded'];outcome.family_decision='new';outcome.family_comparisons=[{family_id:prior.id,existing_scope:prior.scope,relationship:'distinct_outcome',reason:'Different useful result and acceptance test'}];
+ outcome.family_id=prior.id;assert.ok(validateStageJudgment(value,input).some(e=>e.includes('New outcome must use a new family ID')));
+ outcome.family_id='family-distinct-result';assert.deepEqual(validateStageJudgment(value,input),[]);
+ outcome.family_comparisons[0]!.existing_scope='Invented empty prior';assert.ok(validateStageJudgment(value,input).some(e=>e.includes('trusted scope')));
+ outcome.family_comparisons[0]!.existing_scope=prior.scope;outcome.family_comparisons[0]!.relationship='same_outcome';assert.ok(validateStageJudgment(value,input).some(e=>e.includes('cannot duplicate')));
+});

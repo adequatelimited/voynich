@@ -66,6 +66,9 @@ export interface Finding {
   blocks_merge_or_credit: boolean;
 }
 export interface OutcomeAssessment {
+  family_decision?: 'new' | 'extension' | 'duplicate';
+  family_comparisons?: Array<{family_id: string; existing_scope: string; relationship: 'same_outcome' | 'distinct_outcome'; reason: string}>;
+  source_outcome_ids?: string[]; acceptance_test?: string; excluded_overlap?: string[];
   family_id: string; scope: string; category: Category; predecessors: string[]; aliases: string[];
   claimed_tier: Tier; assessed_tier: Tier; gate_evidence: GateJudgment[];
   attribution_status: 'verified' | 'partially_withheld' | 'withheld'; reason: string;

@@ -1,0 +1,319 @@
+{
+  "schema_version": "1.0",
+  "research_pr": 4,
+  "merge_sha": "584a2d4540c7581303f59bb3e4e4c908b139ccfe",
+  "events": [
+    {
+      "schema_version": "1.0",
+      "id": "decision-4-family-generative-falsification-entry-doodler-5becce9e0428",
+      "sequence": 9,
+      "kind": "award",
+      "family_id": "family-generative-falsification-entry-doodler",
+      "rubric_version": "0.1",
+      "category": "experiments",
+      "repository_id": 1359336540,
+      "pr_number": 4,
+      "milestone_id": "milestone-1359336540-4-family-generative-falsification-entry-doodler",
+      "earned_at": "2026-09-07T18:49:23Z",
+      "assessment_id": "assessment-2ed10bd7dcca885926961b32300883dc",
+      "artifact_binding_digest": "5becce9e04282e5ab3270ae1be2ecda0333720be29f9b1ff1805f45dd6e48f78",
+      "authority_receipt_ref": "receipt:job-5becce9e04282e5ab3270ae1be2ecda0333720be",
+      "cumulative_tier": 5,
+      "allocation_shares": [
+        {
+          "github_id": 859355,
+          "share_basis_points": 10000,
+          "status": "paid",
+          "acknowledgment_receipt_ref": "github-pr:1359336540:4:6f98c4c4ceed2408648f2a6ed7a54319212c5216:60ab3420e223fa177a44111e68684f18d7c64b924b28ef95737bfb2c12da47df:826b99e54acb7aa4c811276f0ca0a22329b54e89b432cfc7124b99681a9af21d"
+        }
+      ],
+      "reason": "Resolves the disagreement between the two prior reports (both correctly proposed distinct_outcome/new-family but used inconsistent IDs) by adopting one canonical ID. Informative controlled pilot: new real-corpus page-structure measurements plus a content-free generator reproducing them, distinct from both existing generative-falsification families. Supports tier 5, not 10, given single corpus/seed, heuristic composite distance, and no independent replication or trusted execution receipt."
+    }
+  ],
+  "families_added": [
+    {
+      "id": "family-generative-falsification-entry-doodler",
+      "rubric_version": "0.1",
+      "scope": "A distinct generative-mechanism falsification pilot testing a content-free per-page entry/topic-carryover generator (M3) against the pinned ZL3b corpus's newly measured page-level structural fingerprint (adjacent vs distant page vocabulary Jaccard, page-unique vocabulary share) across 24 grid variants, showing these page-level metrics are reproducible content-free while character-level residue (H2|1, Zipf slope, word length) persists.",
+      "acceptance_test": "Run `python entry_doodler.py --corpus ../../data/corpora/ZL3b-n.txt --out results/ --seed 408`; confirm results.json matches the recorded output and that the best M3 variant matches real adjacent-page Jaccard (0.0804), distant-page Jaccard (0.0422) and page-unique share (0.3024) each within +/-0.01, while remaining measurably higher on H2|1 and shallower on Zipf slope than the real corpus.",
+      "aliases": [
+        "entry-doodler-pilot",
+        "family-generative-falsification-entrydoodler"
+      ],
+      "predecessor_family_ids": [],
+      "excluded_overlap": [
+        "Does not claim credit for the pinned ZL3b corpus/parser (seed-corpus-parser) or local harness workflow (seed-local-harness), used only as inputs.",
+        "Does not claim or reuse the Cardan table-and-grille (M5a/M5b) experiment credited under family-generative-falsification.",
+        "Does not claim or reuse the M1/M2 syllable-table/self-citation pilot credited under family-generative-falsification-doodler.",
+        "Does not claim a standalone clustering/confound audit credited under seed-baseline-clustering."
+      ],
+      "seed": false,
+      "seed_baseline": 0
+    }
+  ],
+  "milestones": [
+    {
+      "id": "milestone-1359336540-4-family-generative-falsification-entry-doodler",
+      "family_id": "family-generative-falsification-entry-doodler",
+      "repository_id": 1359336540,
+      "pr_number": 4,
+      "earned_at": "2026-09-07T18:49:23Z",
+      "depends_on": []
+    }
+  ],
+  "assessment": {
+    "schema_version": "1.0",
+    "assessment_id": "assessment-2ed10bd7dcca885926961b32300883dc",
+    "artifact_binding_digest": "2ed10bd7dcca885926961b32300883dc121d7d38bf15d459d7b99727e0e9c7a8",
+    "merit_evidence_digest": "23d6faaebf6241365f5a140873dd36fea29bb709a718c95145e50be4415c35f7",
+    "repository_id": 1359336540,
+    "pr_number": 4,
+    "head_sha": "6f98c4c4ceed2408648f2a6ed7a54319212c5216",
+    "base_sha": "e1bc712ffdbe8d575e751a055fc75885b789cf44",
+    "rules_version": "0.1",
+    "rubric_version": "0.1",
+    "grading_profile": "voynich-sonnet-ai-pilot-2026-09-07-v8",
+    "evaluator_commit": "e771aae873d6ab208745a4c0e174b2a156b3e122",
+    "mode": "official_proposal",
+    "status": "complete",
+    "claimed_score": 2,
+    "expected_score": 5,
+    "official_proposed_score": 5,
+    "awarded_score": null,
+    "assessment": {
+      "schema_version": "1.0",
+      "admission_action": "accept",
+      "score_status": "proposed",
+      "conduct_status": "clear",
+      "findings": [
+        {
+          "blocks_merge_or_credit": false,
+          "rule_id_or_gate": "G3",
+          "severity": "info",
+          "path_or_locus": "experiments/entry-doodler/entry_doodler.py",
+          "evidence_refs": [
+            "experiments/runs/2026-09-06T201500Z-entry-doodler-pilot/run.json",
+            "experiments/entry-doodler/results/results.json"
+          ],
+          "reason": "The submitted run.json/output.json are ordinary self-reported evidence, not a trusted independently authenticated execution receipt (context.execution_receipts is empty).",
+          "required_change": "None required for the supported tier; disclose lack of independent execution if claiming higher tiers in future.",
+          "verification_step": "Re-run the documented command locally and diff output.json against results.json."
+        },
+        {
+          "blocks_merge_or_credit": false,
+          "rule_id_or_gate": "family_scope_correction",
+          "severity": "warning",
+          "path_or_locus": "contributions/entry-doodler-pilot/contribution.yaml:outcomes[0].family_id",
+          "evidence_refs": [
+            "contributions/entry-doodler-pilot/contribution.yaml",
+            "research/context-index.json"
+          ],
+          "reason": "Both prior reports correctly identified that the contributor's declared family_id (family-generative-falsification) is actually the registered Cardan table-and-grille (M5a/M5b) scope, which this submission does not touch, but they invented two DIFFERENT new family_ids for the same outcome (family-generative-falsification-entrydoodler vs family-generative-falsification-entry-doodler). This submission's M3 mechanism is distinct from both registered families, so a new family is warranted, but the inconsistent naming must be resolved to a single canonical ID.",
+          "required_change": "Adopt a single canonical new family_id (family-generative-falsification-entry-doodler) for this outcome going forward.",
+          "verification_step": "Confirm no existing registered family in context.families uses either candidate ID and that both existing generative-falsification family scopes exclude page-level entry/topic mechanisms."
+        }
+      ],
+      "outcomes": [
+        {
+          "family_id": "family-generative-falsification-entry-doodler",
+          "scope": "A distinct generative-mechanism falsification pilot testing a content-free per-page entry/topic-carryover generator (M3) against the pinned ZL3b corpus's newly measured page-level structural fingerprint (adjacent vs distant page vocabulary Jaccard, page-unique vocabulary share) across 24 grid variants, showing these page-level metrics are reproducible content-free while character-level residue (H2|1, Zipf slope, word length) persists.",
+          "category": "experiments",
+          "predecessors": [
+            "outcome-generative-doodler-pilot"
+          ],
+          "aliases": [
+            "entry-doodler-pilot",
+            "family-generative-falsification-entrydoodler"
+          ],
+          "claimed_tier": 5,
+          "assessed_tier": 5,
+          "gate_evidence": [
+            {
+              "gate": "G1",
+              "status": "pass",
+              "evidence_refs": [
+                "experiments/entry-doodler/report.md"
+              ],
+              "reason": "Directly tests the generative-mechanisms/statistical-structure/layout-paleography branch question of whether content-free processes can jointly predict held-out diagnostics, extending prior character-level pilots to page-level document structure."
+            },
+            {
+              "gate": "G2",
+              "status": "pass",
+              "evidence_refs": [
+                "contributions/entry-doodler-pilot/rights.md"
+              ],
+              "reason": "Uses the pinned CC0 ZL3b corpus without modification/redistribution; code/prose are original work with disclosed AI assistance."
+            },
+            {
+              "gate": "G3",
+              "status": "pass",
+              "evidence_refs": [
+                "experiments/entry-doodler/entry_doodler.py",
+                "experiments/entry-doodler/results/results.json",
+                "experiments/runs/2026-09-06T201500Z-entry-doodler-pilot/run.json",
+                "experiments/runs/2026-09-06T201500Z-entry-doodler-pilot/output.json"
+              ],
+              "reason": "Deterministic command, seed, corpus hash, code and full 24-variant grid output are supplied and inspectable as ordinary evidence; no trusted execution receipt exists, so only ordinary submitted-run evidence is claimed."
+            },
+            {
+              "gate": "G4",
+              "status": "pass",
+              "evidence_refs": [
+                "experiments/entry-doodler/report.md"
+              ],
+              "reason": "Explicit limitations disclosed: single corpus/seed, heuristic composite distance, foldout adjacency inflation, fitted parameters, no GC2a cross-check."
+            },
+            {
+              "gate": "G5",
+              "status": "pass",
+              "evidence_refs": [
+                "contributions/entry-doodler-pilot/contribution.yaml"
+              ],
+              "reason": "Human attribution (gnuchev) and AI assistance (Kimi Code CLI/kimi-k3) disclosed with a verification note distinguishing the human-proposed hypothesis from AI-assisted implementation."
+            },
+            {
+              "gate": "G6",
+              "status": "pass",
+              "evidence_refs": [
+                "experiments/entry-doodler/report.md",
+                "research/context-index.json"
+              ],
+              "reason": "This page-level entry/topic-carryover mechanism and its metrics are materially distinct from family-generative-falsification's Cardan grille scope and family-generative-falsification-doodler's syllable/self-citation scope; different unit of analysis."
+            },
+            {
+              "gate": "G7",
+              "status": "pass",
+              "evidence_refs": [
+                "experiments/entry-doodler/report.md",
+                "experiments/entry-doodler/results/results.json"
+              ],
+              "reason": "Full 24-variant grid disclosed with both matched and persistently unmatched metrics; no evidence of selective reporting."
+            }
+          ],
+          "attribution_status": "verified",
+          "reason": "Resolves the disagreement between the two prior reports (both correctly proposed distinct_outcome/new-family but used inconsistent IDs) by adopting one canonical ID. Informative controlled pilot: new real-corpus page-structure measurements plus a content-free generator reproducing them, distinct from both existing generative-falsification families. Supports tier 5, not 10, given single corpus/seed, heuristic composite distance, and no independent replication or trusted execution receipt.",
+          "family_decision": "new",
+          "family_comparisons": [
+            {
+              "family_id": "family-generative-falsification",
+              "existing_scope": "Pilot 4 in the generative-mechanism falsification family: implements the Cardan table-and-grille device (M5a independent-column, M5b row-coupled) built from the pinned ZL3b corpus, measures composite distance against real manuscript statistics across 28 configurations plus multi-seed stability, and narrows the residual gap to two local metrics (conditional bigram entropy, word-final predictability), extending outcome-m4-template-doodler-pilot.",
+              "relationship": "distinct_outcome",
+              "reason": "The registered scope is the Cardan grille mechanism operating on character sequences; this submission implements a page-level entry/topic-carryover generator testing document-level structure, a different mechanism and unit of analysis."
+            },
+            {
+              "family_id": "family-generative-falsification-doodler",
+              "existing_scope": "A distinct generative-mechanism falsification pilot testing content-free syllable-table (Rugg-style, M1) and self-citation/preferential-reuse (Schinner-style, M2) generators against the pinned ZL3b corpus across 27 M2 grid variants plus M0/M1 baselines on 10 quantitative metrics, identifying which corpus properties (ttr, H1, vocabulary growth) are reproducible content-free and which (H2|1, word-final entropy, Zipf slope) are not, plus a diagnostic finding on verbatim-reuse rate needed to avoid type-explosion.",
+              "relationship": "distinct_outcome",
+              "reason": "That family tests character/word-sequence generators at whole-corpus level; this submission introduces new page-level structural metrics (adjacent/distant Jaccard, page-unique share) never measured in that family, a materially different unit of analysis."
+            }
+          ],
+          "source_outcome_ids": [
+            "outcome-entry-doodler-pilot"
+          ],
+          "acceptance_test": "Run `python entry_doodler.py --corpus ../../data/corpora/ZL3b-n.txt --out results/ --seed 408`; confirm results.json matches the recorded output and that the best M3 variant matches real adjacent-page Jaccard (0.0804), distant-page Jaccard (0.0422) and page-unique share (0.3024) each within +/-0.01, while remaining measurably higher on H2|1 and shallower on Zipf slope than the real corpus.",
+          "excluded_overlap": [
+            "Does not claim credit for the pinned ZL3b corpus/parser (seed-corpus-parser) or local harness workflow (seed-local-harness), used only as inputs.",
+            "Does not claim or reuse the Cardan table-and-grille (M5a/M5b) experiment credited under family-generative-falsification.",
+            "Does not claim or reuse the M1/M2 syllable-table/self-citation pilot credited under family-generative-falsification-doodler.",
+            "Does not claim a standalone clustering/confound audit credited under seed-baseline-clustering."
+          ]
+        }
+      ],
+      "inspected_paths": [
+        "contributions/entry-doodler-pilot/contribution.yaml",
+        "contributions/entry-doodler-pilot/rights.md",
+        "experiments/entry-doodler/entry_doodler.py",
+        "experiments/entry-doodler/report.md",
+        "experiments/entry-doodler/results/results.json",
+        "experiments/runs/2026-09-06T201500Z-entry-doodler-pilot/run.json",
+        "experiments/runs/2026-09-06T201500Z-entry-doodler-pilot/output.json",
+        "research/context-index.json"
+      ],
+      "inspection_gaps": [],
+      "next_action": "Accept the contribution at tier 5 under the canonical new family family-generative-falsification-entry-doodler, correcting the contributor's mismatched target family_id and reconciling the two prior reports' inconsistent naming to one ID. No contributor action required for admission.",
+      "appeal_route": "If the contributor or a reviewer disputes the family boundary (new family vs. extension of family-generative-falsification or family-generative-falsification-doodler), the tier-5 assessment, or the canonical family_id chosen to resolve the naming disagreement between the two prior reports, file a revision PR citing specific evidence of mechanism/metric overlap with either registered family for adjudicator review against this report's gate findings and family_comparisons."
+    },
+    "stages": [
+      {
+        "stage": "adjudicator",
+        "provider": "anthropic",
+        "model": "claude-sonnet-5",
+        "exposed_version": "claude-sonnet-5",
+        "prompt_digest": "f089805f4499dfc553eac45b36ebc3cd7bf2fea4bf6285a8023466fbe3400809",
+        "response_digest": "b3bec5c63cacaa09a567286b5c5dbd72f94d82d41cc9778a79f9871fe5af0f86",
+        "started_at": "2026-09-07T23:07:02.783Z",
+        "completed_at": "2026-09-07T23:08:08.274Z",
+        "usage": {
+          "sessions": 1,
+          "input_bytes": 211973,
+          "output_bytes": 46107,
+          "runtime_ms": 64584
+        },
+        "receipt_ref": "stage-results/job-5becce9e04282e5ab3270ae1be2ecda0333720be/adjudicator.json"
+      },
+      {
+        "stage": "adversary",
+        "provider": "anthropic",
+        "model": "claude-sonnet-5",
+        "exposed_version": "claude-sonnet-5",
+        "prompt_digest": "a70ef9cbd64363664b0963e0901e5bd61a684c4ec3d7a04b873a1b5707750a7a",
+        "response_digest": "17a1bcaa319dc2fc84172a797ffbb10064cff71cee4f0069ac2ba3c5ef7f661e",
+        "started_at": "2026-09-07T23:05:00.861Z",
+        "completed_at": "2026-09-07T23:06:01.012Z",
+        "usage": {
+          "sessions": 1,
+          "input_bytes": 193093,
+          "output_bytes": 42082,
+          "runtime_ms": 59390
+        },
+        "receipt_ref": "stage-results/job-5becce9e04282e5ab3270ae1be2ecda0333720be/adversary.json"
+      },
+      {
+        "stage": "assessor",
+        "provider": "anthropic",
+        "model": "claude-sonnet-5",
+        "exposed_version": "claude-sonnet-5",
+        "prompt_digest": "6973dc1bb2858df4eb2b3f07258b2848aae6755558e3982ad8166ad5e312aa19",
+        "response_digest": "204b7f117707b50608ab20346604386dc5e5cf2114f2eb9b82a000a637e2bb0b",
+        "started_at": "2026-09-07T23:02:39.520Z",
+        "completed_at": "2026-09-07T23:04:04.346Z",
+        "usage": {
+          "sessions": 1,
+          "input_bytes": 192974,
+          "output_bytes": 50229,
+          "runtime_ms": 83982
+        },
+        "receipt_ref": "stage-results/job-5becce9e04282e5ab3270ae1be2ecda0333720be/assessor.json"
+      }
+    ],
+    "disagreements": [
+      "Material independent-assessment disagreement or invalid proposal."
+    ],
+    "holds": [],
+    "reused_assessment_id": null
+  },
+  "receipt": {
+    "schema_version": "1.0",
+    "id": "receipt:job-5becce9e04282e5ab3270ae1be2ecda0333720be",
+    "key_id": "voynich-2026-09-06",
+    "issued_at": "2026-09-07T23:08:48.034Z",
+    "payload": {
+      "repository_id": 1359336540,
+      "events_digest": "51a9fb315bb08df096e1b5d5204624a97cd8a20b2b37e18425359c2e6ee254e9",
+      "milestones_digest": "eabf25edf259e2a6ba4487c20903a5931543a8f33a77ba19a38be01d1900bb48",
+      "families_digest": "1b7fcbf1dc17d7962c64e43a0906b084ef58f9baddcf9a505bb55c057bd43d03",
+      "merge_sha": "584a2d4540c7581303f59bb3e4e4c908b139ccfe",
+      "assessed_head": "6f98c4c4ceed2408648f2a6ed7a54319212c5216",
+      "artifact_digest": "5becce9e04282e5ab3270ae1be2ecda0333720be29f9b1ff1805f45dd6e48f78",
+      "profile_digest": "0139f52a56cfb53bb5ace90fe90c189fc28f39af08a1ce4b67412fb36c2c70c8",
+      "report_digest": "2d3d5dd1c0cd91338cda39afcd26db427db1b8a2d37183dab548276e1655b424",
+      "stage_receipt_refs": [
+        "stage-results/job-5becce9e04282e5ab3270ae1be2ecda0333720be/adjudicator.json",
+        "stage-results/job-5becce9e04282e5ab3270ae1be2ecda0333720be/adversary.json",
+        "stage-results/job-5becce9e04282e5ab3270ae1be2ecda0333720be/assessor.json"
+      ]
+    },
+    "payload_digest": "d59c620252db7cd194ea6f69a00a49f9c6d96fe924bd5f1936b15382084528b7",
+    "signature": "_BfeIzXg7vwOUSuXTTk6ixgjMGGgV3rHOf8Swe8X8wdmqpd9UqR22XaiyMBbwjqm1gDW7-UynDclUH-ZHAerCA"
+  }
+}

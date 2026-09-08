@@ -85,7 +85,30 @@ export function validateStageJudgment(value: StageAssessment, input: GradingInpu
   for (const path of inspected) if (!known.has(path)) errors.push(`Unknown inspected path: ${path}`);
   const families = new Set<string>();
   for (const outcome of value.outcomes) {
+    if (input.profile.settings.outcome_scope === 'independent-results-v1') {
+      const ids = outcome.source_outcome_ids;
+      if (!Array.isArray(ids) || !ids.length || new Set(ids).size !== ids.length || ids.some(id => !input.contribution.outcomes.some(claim => claim.id === id))) errors.push('Outcome requires exact source_outcome_ids from supplied claims.');
+      if (!outcome.acceptance_test?.trim() || !Array.isArray(outcome.excluded_overlap)) errors.push('Outcome requires an acceptance test and explicit excluded overlap.');
+    }
     if (families.has(outcome.family_id)) errors.push('Duplicate canonical outcome family.'); families.add(outcome.family_id);
+    if (input.profile.settings.family_comparisons === 'required-v1') {
+      const existing=input.context.families.find(f=>f.id===outcome.family_id||f.aliases.includes(outcome.family_id));
+      const comparisons=outcome.family_comparisons;
+      if (!['new','extension','duplicate'].includes(outcome.family_decision ?? '') || !Array.isArray(comparisons)) errors.push('Explicit family decision and comparisons are required.');
+      else {
+        if ((outcome.family_decision==='new') === !!existing) errors.push('New outcome must use a new family ID; extension/duplicate must identify an existing family.');
+        const seen=new Set<string>();
+        for (const comparison of comparisons) {
+          const family=input.context.families.find(f=>f.id===comparison.family_id);
+          if (!family || family.scope!==comparison.existing_scope || seen.has(comparison.family_id)) errors.push('Family comparison must quote the current trusted scope exactly once.');
+          seen.add(comparison.family_id);
+          if (outcome.family_decision==='new' && comparison.relationship!=='distinct_outcome') errors.push('A new family cannot duplicate a compared existing outcome.');
+        }
+        const sourceFamilies=input.contribution.outcomes.filter(claim=>outcome.source_outcome_ids?.includes(claim.id)).map(claim=>input.context.families.find(f=>f.id===claim.family_id||f.aliases.includes(claim.family_id))).filter(Boolean);
+        if(sourceFamilies.some(f=>!comparisons.some(c=>c.family_id===f!.id))) errors.push('Compare every already-known claimed source family before assigning credit.');
+        if(existing && !comparisons.some(c=>c.family_id===existing.id&&c.relationship==='same_outcome')) errors.push('Reusing a family requires an explicit same-outcome comparison.');
+      }
+    }
     const gates = new Set(outcome.gate_evidence.map(g => g.gate)); for (let i = 1; i <= 7; i++) if (!gates.has(`G${i}`)) errors.push(`Missing gate G${i}.`);
     if (outcome.gate_evidence.length !== 7 || gates.size !== 7 || [...gates].some(g => !/^G[1-7]$/.test(g))) errors.push('Exactly one of each G1-G7 is required.');
     if (outcome.assessed_tier > 0 && !['hold', 'needs_revision'].includes(value.admission_action)
@@ -116,7 +139,7 @@ export function needsAdjudication(input: GradingInput, assessor: unknown, advers
   return !a.valid || !b.valid || assessmentErrors(assessor, input).length > 0 || assessmentErrors(adversary, input).length > 0 || !assessmentsAgree(a.value, b.value);
 }
 function comparison(assessment: StageAssessment): string {
-  return canonicalJson({ admission: assessment.admission_action, score: assessment.score_status, conduct: assessment.conduct_status, gaps: [...assessment.inspection_gaps].sort(), blockers: assessment.findings.filter(f => f.blocks_merge_or_credit).map(f => [f.rule_id_or_gate, f.path_or_locus]).sort(), outcomes: assessment.outcomes.map(o => ({ family: o.family_id, scope: o.scope, tier: o.assessed_tier, category: o.category, aliases: [...o.aliases].sort(), predecessors: [...o.predecessors].sort(), gates: o.gate_evidence.map(g => [g.gate, g.status]).sort(), attribution: o.attribution_status })).sort((a, b) => a.family.localeCompare(b.family)) });
+  return canonicalJson({ admission: assessment.admission_action, score: assessment.score_status, conduct: assessment.conduct_status, gaps: [...assessment.inspection_gaps].sort(), blockers: assessment.findings.filter(f => f.blocks_merge_or_credit).map(f => [f.rule_id_or_gate, f.path_or_locus]).sort(), outcomes: assessment.outcomes.map(o => ({ ...(o.source_outcome_ids ? {source_outcome_ids:o.source_outcome_ids,...(o.family_decision?{family_decision:o.family_decision,family_comparisons:o.family_comparisons}:{}),acceptance_test:o.acceptance_test,excluded_overlap:o.excluded_overlap} : {}), family: o.family_id, scope: o.scope, tier: o.assessed_tier, category: o.category, aliases: [...o.aliases].sort(), predecessors: [...o.predecessors].sort(), gates: o.gate_evidence.map(g => [g.gate, g.status]).sort(), attribution: o.attribution_status })).sort((a, b) => a.family.localeCompare(b.family)) });
 }
 export const assessmentsAgree = (assessor: StageAssessment, adversary: StageAssessment): boolean => comparison(assessor) === comparison(adversary);
 /** Public stage construction for a durable coordinator which dispatches stages across separate requests. */
@@ -155,7 +178,7 @@ export function correctionErrors(previous: unknown, corrected: StageAssessment):
   for (const outcome of corrected.outcomes) {
     const prior = Array.isArray(old.outcomes) ? old.outcomes.find(o => o && o.family_id === outcome.family_id) : undefined;
     if (outcome.assessed_tier > 0 && (!prior || ![0, 2, 5, 10, 20].includes(prior.assessed_tier) || outcome.assessed_tier > prior.assessed_tier)) errors.push('Correction cannot add or increase positive outcome credit.');
-    if (prior) for (const key of ['scope', 'category', 'aliases', 'predecessors', 'attribution_status'] as const) {
+    if (prior) for (const key of ['scope', 'category', 'aliases', 'predecessors', 'attribution_status', 'source_outcome_ids', 'acceptance_test', 'excluded_overlap', 'family_decision', 'family_comparisons'] as const) {
       if (prior[key] !== undefined && canonicalJson(prior[key]) !== canonicalJson(outcome[key])) errors.push(`Correction cannot change outcome ${key}.`);
     }
   }
