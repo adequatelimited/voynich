@@ -1,0 +1,311 @@
+{
+  "schema_version": "1.0",
+  "research_pr": 12,
+  "merge_sha": "d4623f1f63c41725a8bca77638d7ac2b45b55b24",
+  "events": [
+    {
+      "schema_version": "1.0",
+      "id": "decision-12-family-generative-falsification-discriminating-tests-667a94a1fa37",
+      "sequence": 18,
+      "kind": "award",
+      "family_id": "family-generative-falsification-discriminating-tests",
+      "rubric_version": "0.1",
+      "category": "experiments",
+      "repository_id": 1359336540,
+      "pr_number": 12,
+      "milestone_id": "milestone-1359336540-12-family-generative-falsification-discriminating-tests",
+      "earned_at": "2026-09-08T00:55:33Z",
+      "assessment_id": "assessment-ab0daa67b468ecf115742e42d924f26c",
+      "artifact_binding_digest": "667a94a1fa37a86f2af19c1e80f61d66124305407169f06ebab365566fad387d",
+      "authority_receipt_ref": "receipt:job-667a94a1fa37a86f2af19c1e80f61d6612430540",
+      "cumulative_tier": 5,
+      "allocation_shares": [
+        {
+          "github_id": 859355,
+          "share_basis_points": 10000,
+          "status": "paid",
+          "acknowledgment_receipt_ref": "github-pr:1359336540:12:51aa2dc00f93f2ba3480f1545fd9072ade387540:a76409c782279712bdf4998387bf0bae22cc02606380d7467cbccccbb36c5379:cd1fe9c99fd63791277ff29da9991381de16d9fd517af29bcd74f79f2a01c74b"
+        }
+      ],
+      "reason": "Per FAMILY_IDENTITY_GUARD_V1 and CREDIT_IS_NOT_LINEAGE_V1, the claimant's declared family_id (family-generative-falsification) is not binding: the actual delivered result (a data-chosen re-segmentation curve and an illustration-linked-vocabulary discriminator) is materially distinct from that family's credited M5a/M5b table-and-grille scope and from the adversarial-audit's fixed-multigraph alphabet-confound scope. This is a genuinely new, independently useful outcome starting its own ladder at 0, not an extension of an already-saturated family (resolving the two reports' family_decision disagreement in favor of 'new', consistent with report 2). On tier: both T1 and T2 are informative controlled diagnostics with real baselines/nulls/positive-control checks and honestly disclosed limitations, meeting the tier-5 anchor ('informative controlled pilot ... that another contributor can inspect/use') rather than merely a bounded tier-2 diagnostic. Tier 10 is not supported: T1's central finding is an admitted null/underpowered result without established discriminating power, and T2's headline crossover is substantially qualified by the Greek-alphabet-size confound and lacks independent replication, so it does not reach the 'reproducible discriminating experiment with appropriate baselines/checks/independent inspection' anchor at full strength."
+    }
+  ],
+  "families_added": [
+    {
+      "id": "family-generative-falsification-discriminating-tests",
+      "rubric_version": "0.1",
+      "scope": "Two newly executed pre-registered discriminating tests against the pinned ZL3b corpus: (T2) a data-chosen byte-pair-merge re-segmentation test (hypothesis contributed by V. Gnuchev) showing the manuscript's H2|1 letter-pair anomaly is SEGMENTATION-DEPENDENT under a frozen decision rule -- at 40-60 symbol alphabets the gap to the lowest-entropy control language closes to 0.07-0.15 bits, with caveats that the crossover language (Greek) has an already-large raw alphabet (45 symbols), the gap against Latin/Finnish/Italian/English stays 0.2-0.6 bits at that size, and the association-merge criterion closes the gap less (0.21 bits); and (T1) the first executed illustration-linked-vocabulary test (editorial same-plant/similar-plant identifications vs text-sharing) across 12 same-plant and 28 similar-plant pairs with permutation and distance-matched nulls, found UNDERPOWERED because its own Culpeper positive control fails (p=0.44), with an exploratory size-corrected content-word lift statistic identified as the form that would give the test power.",
+      "acceptance_test": "Run `python discriminating_tests.py --repo ../.. --lab <dir with bibles/ and pg49513.txt> --out results/`; confirm results.json matches the recorded output: R8 gaps 0.652/0.151/0.065/0.089 at alphabet sizes 30/40/50/60 with crossover at 45 symbols (k=20, H2|1=3.089 matching Greek); R7 verdict UNDERPOWERED with Culpeper control N3 p≈0.44, T1a N1 p≈0.85, T1b N3 p≈0.21 and N4 p≈0.996.",
+      "aliases": [],
+      "predecessor_family_ids": [
+        "family-generative-falsification",
+        "family-generative-falsification-adversarial-audit"
+      ],
+      "excluded_overlap": [
+        "Does not claim the Cardan table-and-grille (M5a/M5b) mechanism experiment credited under family-generative-falsification.",
+        "Does not claim the parser-contamination, cipher, confound/permutation, or Chaucer-orthography findings credited under family-generative-falsification-adversarial-audit; reuses only its clean-parser/metric library (critique_lib.py, verbatim copy) as shared infrastructure.",
+        "Does not claim the fixed EVA-multigraph/determinism-merge alphabet-normalization result already credited under family-generative-falsification-adversarial-audit's alphabet-confound block; T2 is a distinct data-chosen byte-pair search method with distinct numeric results.",
+        "Does not claim the M1/M2, M3, or Stolfi-grammar generator pilots, the entry-ladder genre controls, the poetry control, or the languages-control Bible comparison credited under their respective families; reuses the nine Bible corpora and Culpeper/Alice only as inputs to the new T1/T2 tests."
+      ],
+      "seed": false,
+      "seed_baseline": 0
+    }
+  ],
+  "milestones": [
+    {
+      "id": "milestone-1359336540-12-family-generative-falsification-discriminating-tests",
+      "family_id": "family-generative-falsification-discriminating-tests",
+      "repository_id": 1359336540,
+      "pr_number": 12,
+      "earned_at": "2026-09-08T00:55:33Z",
+      "depends_on": []
+    }
+  ],
+  "assessment": {
+    "schema_version": "1.0",
+    "assessment_id": "assessment-ab0daa67b468ecf115742e42d924f26c",
+    "artifact_binding_digest": "ab0daa67b468ecf115742e42d924f26c5f10a13dbb1e8da82bab8d769ae475d7",
+    "merit_evidence_digest": "7deb4264acb4627f2fdc84b9dbce8aee22cd7b00956c306f5ccf0ec9fd22b02c",
+    "repository_id": 1359336540,
+    "pr_number": 12,
+    "head_sha": "51aa2dc00f93f2ba3480f1545fd9072ade387540",
+    "base_sha": "303df4685bd7eec2aaa1837f9cfdba779312fbac",
+    "rules_version": "0.1",
+    "rubric_version": "0.1",
+    "grading_profile": "voynich-sonnet-ai-pilot-2026-09-07-v10",
+    "evaluator_commit": "162fde2881c06101706ef226f75981a342c040ac",
+    "mode": "official_proposal",
+    "status": "complete",
+    "claimed_score": 2,
+    "expected_score": 5,
+    "official_proposed_score": 5,
+    "awarded_score": null,
+    "assessment": {
+      "schema_version": "1.0",
+      "admission_action": "accept",
+      "score_status": "proposed",
+      "conduct_status": "clear",
+      "findings": [
+        {
+          "rule_id_or_gate": "family_decision",
+          "severity": "warning",
+          "path_or_locus": "contributions/discriminating-tests/contribution.yaml (outcome-discriminating-tests, family_id)",
+          "evidence_refs": [
+            "contributions/discriminating-tests/contribution.yaml",
+            "research/context-index.json"
+          ],
+          "reason": "Report 1 called this an 'extension' of the already-saturated family-generative-falsification (high-water 10), which understates the delivered increment since the actual T1/T2 results do not overlap that family's credited table-and-grille scope. Report 2 correctly recognized this is a distinct new capability and used a new family_id. The two reports disagree on family_decision.",
+          "required_change": "Resolve to family_decision=new with a fresh descriptive family_id, per FAMILY_IDENTITY_GUARD_V1 and CREDIT_IS_NOT_LINEAGE_V1: reusing the claimant's declared family_id when the actual delivered result is materially distinct from that family's credited scope is a registry-comparison error, not evidence of overlap.",
+          "verification_step": "Compare T1 (illustration-linked vocabulary test) and T2 (data-chosen re-segmentation) against family-generative-falsification's credited scope (M5a/M5b Cardan grille) and family-generative-falsification-adversarial-audit's credited scope (fixed EVA-multigraph/determinism-merge alphabet test); confirm no substantive overlap.",
+          "blocks_merge_or_credit": false
+        }
+      ],
+      "outcomes": [
+        {
+          "family_id": "family-generative-falsification-discriminating-tests",
+          "scope": "Two newly executed pre-registered discriminating tests against the pinned ZL3b corpus: (T2) a data-chosen byte-pair-merge re-segmentation test (hypothesis contributed by V. Gnuchev) showing the manuscript's H2|1 letter-pair anomaly is SEGMENTATION-DEPENDENT under a frozen decision rule -- at 40-60 symbol alphabets the gap to the lowest-entropy control language closes to 0.07-0.15 bits, with caveats that the crossover language (Greek) has an already-large raw alphabet (45 symbols), the gap against Latin/Finnish/Italian/English stays 0.2-0.6 bits at that size, and the association-merge criterion closes the gap less (0.21 bits); and (T1) the first executed illustration-linked-vocabulary test (editorial same-plant/similar-plant identifications vs text-sharing) across 12 same-plant and 28 similar-plant pairs with permutation and distance-matched nulls, found UNDERPOWERED because its own Culpeper positive control fails (p=0.44), with an exploratory size-corrected content-word lift statistic identified as the form that would give the test power.",
+          "category": "experiments",
+          "predecessors": [
+            "family-generative-falsification",
+            "family-generative-falsification-adversarial-audit"
+          ],
+          "aliases": [],
+          "claimed_tier": 2,
+          "assessed_tier": 5,
+          "gate_evidence": [
+            {
+              "gate": "G1",
+              "status": "pass",
+              "evidence_refs": [
+                "experiments/discriminating-tests/PROTOCOL.md"
+              ],
+              "reason": "Directly targets whether the manuscript's letter-pair anomaly is a transcription-segmentation artefact and whether text tracks illustrated content, both live research questions in the generative-mechanisms/statistical-structure branches."
+            },
+            {
+              "gate": "G2",
+              "status": "pass",
+              "evidence_refs": [
+                "contributions/discriminating-tests/rights.md",
+                "contributions/discriminating-tests/contribution.yaml"
+              ],
+              "reason": "Uses repo-pinned ZL3b corpus, previously credited Culpeper/Alice/nine-Bible controls with documented provenance, and project-authored code; the Artheon mirror is cited only as a hash cross-check, not a redistribution claim."
+            },
+            {
+              "gate": "G3",
+              "status": "pass",
+              "evidence_refs": [
+                "experiments/discriminating-tests/discriminating_tests.py",
+                "experiments/discriminating-tests/results/results.json",
+                "experiments/runs/2026-09-07T110000Z-discriminating-tests/run.json",
+                "experiments/discriminating-tests/results/stdout.txt"
+              ],
+              "reason": "Ordinary inspectable command, deterministic seed, code and submitted run outputs/stdout are present and consistent; no independently authenticated execution receipt exists in context.execution_receipts (empty array), so this is ordinary submitted-run evidence, not independent execution, sufficient for the tier awarded."
+            },
+            {
+              "gate": "G4",
+              "status": "pass",
+              "evidence_refs": [
+                "experiments/discriminating-tests/REPORT.md"
+              ],
+              "reason": "Explicit limitations: Greek's own alphabet size confounding the T2 crossover, the underpowered T1 control, uncertain/multi-valued plant identifications, and disclosed protocol deviations (row parsing, control stop-list fix, exploratory lift statistic)."
+            },
+            {
+              "gate": "G5",
+              "status": "pass",
+              "evidence_refs": [
+                "contributions/discriminating-tests/contribution.yaml",
+                "contributions/discriminating-tests/rights.md"
+              ],
+              "reason": "Human hypothesis credit (Vasily Gnuchev) and AI-assistance disclosure (Claude Fable 5.1, tasks itemized) are both explicit, with a human-verification note."
+            },
+            {
+              "gate": "G6",
+              "status": "pass",
+              "evidence_refs": [
+                "experiments/discriminating-tests/REPORT.md",
+                "experiments/discriminating-tests/PROTOCOL.md"
+              ],
+              "reason": "T2's data-chosen byte-pair search at matched alphabet size is a distinct method and numeric result from the adversarial-audit's fixed EVA-multigraph/determinism-merge alphabet test; T1 is an entirely new capability (illustration-linked vocabulary) not present in any sibling family. Per DISTINCT_DIAGNOSTIC_RESULTS_V1, a newly isolated diagnostic method testing a different confound hypothesis is independently useful even reusing existing corpora/metrics."
+            },
+            {
+              "gate": "G7",
+              "status": "pass",
+              "evidence_refs": [
+                "experiments/discriminating-tests/REPORT.md"
+              ],
+              "reason": "Honest reporting of an underpowered/null result (T1) and a heavily caveated positive result (T2 crossover); deviations from the frozen protocol are disclosed rather than concealed."
+            }
+          ],
+          "attribution_status": "verified",
+          "reason": "Per FAMILY_IDENTITY_GUARD_V1 and CREDIT_IS_NOT_LINEAGE_V1, the claimant's declared family_id (family-generative-falsification) is not binding: the actual delivered result (a data-chosen re-segmentation curve and an illustration-linked-vocabulary discriminator) is materially distinct from that family's credited M5a/M5b table-and-grille scope and from the adversarial-audit's fixed-multigraph alphabet-confound scope. This is a genuinely new, independently useful outcome starting its own ladder at 0, not an extension of an already-saturated family (resolving the two reports' family_decision disagreement in favor of 'new', consistent with report 2). On tier: both T1 and T2 are informative controlled diagnostics with real baselines/nulls/positive-control checks and honestly disclosed limitations, meeting the tier-5 anchor ('informative controlled pilot ... that another contributor can inspect/use') rather than merely a bounded tier-2 diagnostic. Tier 10 is not supported: T1's central finding is an admitted null/underpowered result without established discriminating power, and T2's headline crossover is substantially qualified by the Greek-alphabet-size confound and lacks independent replication, so it does not reach the 'reproducible discriminating experiment with appropriate baselines/checks/independent inspection' anchor at full strength.",
+          "family_decision": "new",
+          "family_comparisons": [
+            {
+              "family_id": "family-generative-falsification",
+              "existing_scope": "Pilot 4 in the generative-mechanism falsification family: implements the Cardan table-and-grille device (M5a independent-column, M5b row-coupled) built from the pinned ZL3b corpus, measures composite distance against real manuscript statistics across 28 configurations plus multi-seed stability, and narrows the residual gap to two local metrics (conditional bigram entropy, word-final predictability), extending outcome-m4-template-doodler-pilot.",
+              "relationship": "distinct_outcome",
+              "reason": "This submission does not test or extend the M5a/M5b grille generator at all; it tests an unrelated re-segmentation hypothesis and an illustration-vocabulary hypothesis via byte-pair merging and text-image Jaccard statistics. The claimant's family_id label does not bind; no table-and-grille credit is consumed or duplicated."
+            }
+          ],
+          "source_outcome_ids": [
+            "outcome-discriminating-tests"
+          ],
+          "acceptance_test": "Run `python discriminating_tests.py --repo ../.. --lab <dir with bibles/ and pg49513.txt> --out results/`; confirm results.json matches the recorded output: R8 gaps 0.652/0.151/0.065/0.089 at alphabet sizes 30/40/50/60 with crossover at 45 symbols (k=20, H2|1=3.089 matching Greek); R7 verdict UNDERPOWERED with Culpeper control N3 p≈0.44, T1a N1 p≈0.85, T1b N3 p≈0.21 and N4 p≈0.996.",
+          "excluded_overlap": [
+            "Does not claim the Cardan table-and-grille (M5a/M5b) mechanism experiment credited under family-generative-falsification.",
+            "Does not claim the parser-contamination, cipher, confound/permutation, or Chaucer-orthography findings credited under family-generative-falsification-adversarial-audit; reuses only its clean-parser/metric library (critique_lib.py, verbatim copy) as shared infrastructure.",
+            "Does not claim the fixed EVA-multigraph/determinism-merge alphabet-normalization result already credited under family-generative-falsification-adversarial-audit's alphabet-confound block; T2 is a distinct data-chosen byte-pair search method with distinct numeric results.",
+            "Does not claim the M1/M2, M3, or Stolfi-grammar generator pilots, the entry-ladder genre controls, the poetry control, or the languages-control Bible comparison credited under their respective families; reuses the nine Bible corpora and Culpeper/Alice only as inputs to the new T1/T2 tests."
+          ],
+          "validation_evidence": {
+            "execution_receipt_refs": [],
+            "external_assessment_receipt_refs": [],
+            "independent_inspection_refs": []
+          }
+        }
+      ],
+      "inspected_paths": [
+        "contributions/discriminating-tests/contribution.yaml",
+        "contributions/discriminating-tests/rights.md",
+        "experiments/discriminating-tests/PROTOCOL.md",
+        "experiments/discriminating-tests/REPORT.md",
+        "experiments/discriminating-tests/critique_lib.py",
+        "experiments/discriminating-tests/discriminating_tests.py",
+        "experiments/discriminating-tests/exploratory_contentwords.py",
+        "experiments/discriminating-tests/results/exploratory_contentwords.json",
+        "experiments/discriminating-tests/results/results.json",
+        "experiments/discriminating-tests/results/stdout.txt",
+        "experiments/runs/2026-09-07T110000Z-discriminating-tests/exploratory_contentwords.json",
+        "experiments/runs/2026-09-07T110000Z-discriminating-tests/output.json",
+        "experiments/runs/2026-09-07T110000Z-discriminating-tests/run.json",
+        "experiments/runs/2026-09-07T110000Z-discriminating-tests/stdout.txt",
+        "research/context-index.json"
+      ],
+      "inspection_gaps": [],
+      "next_action": "Accept and merge at tier 5 under a new family_id (family-generative-falsification-discriminating-tests), resolving the two prior reports' disagreement in favor of family_decision=new (report 2's approach) since the actual T1/T2 results are materially distinct from both family-generative-falsification's and family-generative-falsification-adversarial-audit's credited scopes; the claimant's own family_id label and requested 2-point extension do not bind the assessment. Optional future work: pre-register the T1 v2 size-corrected lift statistic (K=100) for a powered illustration-vocabulary test, which could support a future upgrade if executed.",
+      "appeal_route": "If the contributor or another reviewer disputes the family-new determination or the tier-5 assessment (e.g., argues T2's crossover result independently meets tier 10 despite the Greek-alphabet caveat, or that T1's underpowered result should not reach tier 5), file a revision request citing the specific acceptance-test evidence in results.json/REPORT.md against this outcome's family_id and source_outcome_ids through the standard PR comment/appeal process for independent re-assessment against the same cited evidence and rubric anchors (tier-5 vs tier-10 informative-pilot vs reproducible-discrimination anchors in SCORING.md)."
+    },
+    "stages": [
+      {
+        "stage": "adjudicator",
+        "provider": "anthropic",
+        "model": "claude-sonnet-5",
+        "exposed_version": "claude-sonnet-5",
+        "prompt_digest": "66b1c662c40649778476bb834cf01ed3848a032b2fd1ae96960db3ea0e5972a2",
+        "response_digest": "1b85dc0a6ace05c8c36caf272d8b566484e71677f5129dd320506935cd4c3222",
+        "started_at": "2026-09-08T01:50:57.144Z",
+        "completed_at": "2026-09-08T01:52:24.985Z",
+        "usage": {
+          "sessions": 1,
+          "input_bytes": 351577,
+          "output_bytes": 72804,
+          "runtime_ms": 86968
+        },
+        "receipt_ref": "stage-results/job-667a94a1fa37a86f2af19c1e80f61d6612430540/adjudicator.json"
+      },
+      {
+        "stage": "adversary",
+        "provider": "anthropic",
+        "model": "claude-sonnet-5",
+        "exposed_version": "claude-sonnet-5",
+        "prompt_digest": "a6a2b09d17f01f08f3ff236916d40e5c1f961418e906ec022c8934ded328d798",
+        "response_digest": "718c73f8afd17f87cb5668dea99de68f04ff39f9802b5125c7732452b606a753",
+        "started_at": "2026-09-08T01:48:35.383Z",
+        "completed_at": "2026-09-08T01:50:04.864Z",
+        "usage": {
+          "sessions": 1,
+          "input_bytes": 329318,
+          "output_bytes": 71380,
+          "runtime_ms": 88701
+        },
+        "receipt_ref": "stage-results/job-667a94a1fa37a86f2af19c1e80f61d6612430540/adversary.json"
+      },
+      {
+        "stage": "assessor",
+        "provider": "anthropic",
+        "model": "claude-sonnet-5",
+        "exposed_version": "claude-sonnet-5",
+        "prompt_digest": "2c79e1f5d36e6a7db70595971fb986da532cde9fd3cd21774527b5fdbd315a54",
+        "response_digest": "7e0adaa684e5391928ed58c86a2ed1f937077b7c846bad924c33e76b1b8e6cbc",
+        "started_at": "2026-09-08T01:46:53.327Z",
+        "completed_at": "2026-09-08T01:47:34.096Z",
+        "usage": {
+          "sessions": 1,
+          "input_bytes": 329199,
+          "output_bytes": 34139,
+          "runtime_ms": 39887
+        },
+        "receipt_ref": "stage-results/job-667a94a1fa37a86f2af19c1e80f61d6612430540/assessor.json"
+      }
+    ],
+    "disagreements": [
+      "Material independent-assessment disagreement or invalid proposal."
+    ],
+    "holds": [],
+    "reused_assessment_id": null
+  },
+  "receipt": {
+    "schema_version": "1.0",
+    "id": "receipt:job-667a94a1fa37a86f2af19c1e80f61d6612430540",
+    "key_id": "voynich-2026-09-06",
+    "issued_at": "2026-09-08T02:03:19.231Z",
+    "payload": {
+      "repository_id": 1359336540,
+      "events_digest": "dcc5a42ec0cc80d82dff1d30918df9b456c2efea41f9f95423680a049d491961",
+      "milestones_digest": "2f6ec26f79d5dda7800a962c4d14adc26ba0834e6e4993a36344e28ab64ca47a",
+      "families_digest": "6dbd1f4411685d38b291d7fb2510a9728c2e6109f46e96b8a07380a2d2b8e261",
+      "merge_sha": "d4623f1f63c41725a8bca77638d7ac2b45b55b24",
+      "assessed_head": "51aa2dc00f93f2ba3480f1545fd9072ade387540",
+      "artifact_digest": "667a94a1fa37a86f2af19c1e80f61d66124305407169f06ebab365566fad387d",
+      "profile_digest": "a5e37f569c8ee802977b375a86972db85c5594c16abc72de4c9048e7090b2410",
+      "report_digest": "6e964cf0ad4d8d2e7d5168e5c75df2f7c3400363446a717e2444c2aae3bc92a7",
+      "stage_receipt_refs": [
+        "stage-results/job-667a94a1fa37a86f2af19c1e80f61d6612430540/adjudicator.json",
+        "stage-results/job-667a94a1fa37a86f2af19c1e80f61d6612430540/adversary.json",
+        "stage-results/job-667a94a1fa37a86f2af19c1e80f61d6612430540/assessor.json"
+      ]
+    },
+    "payload_digest": "18e4ecb6e57e0199ef26f61b8574c7472e551fed587bbde839489488b474a8f6",
+    "signature": "ym1TcVYqPPLgrZr3OWogVZQzUVgq-Uyd3TMMyPxFs7s-TI2yFLbAH7z_tOs7qW141ur6rH07qtCKihU6n_qfCg"
+  }
+}
