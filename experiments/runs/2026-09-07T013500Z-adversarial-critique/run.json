@@ -1,0 +1,28 @@
+{
+  "id": "2026-09-07T013500Z-adversarial-critique",
+  "experiment": "experiments/adversarial-critique",
+  "protocol": "experiments/adversarial-critique/PROTOCOL.md",
+  "protocol_commit": "15b6999",
+  "command": "python adversarial_critique.py --repo ../.. --lab <lab dir> --out results/",
+  "seeds": {"homophone_choice": 408, "distant_page_sampling": 7, "permutations": 200},
+  "corpus": {
+    "path": "data/corpora/ZL3b-n.txt",
+    "sha256": "bf5b6d4ac1e3a51b1847a9c388318d609020441ccd56984c901c32b09beccafc"
+  },
+  "other_inputs": "experiments/adversarial-critique/results/source_hashes.json",
+  "code": "experiments/adversarial-critique/adversarial_critique.py",
+  "environment": "CPython 3.12.7, stdlib only, Windows 11",
+  "started": "2026-09-07T01:35 local (Europe), final run after the deviations listed in REPORT.md",
+  "status": "completed",
+  "verdicts": {
+    "R0.1": "CONTAMINATED",
+    "R0.2": "RICHEST SURVIVES",
+    "R1.1": "ALPHABET-ROBUST",
+    "R1.2": "ALPHABET-DEPENDENT",
+    "R2.1": "NOT REPRODUCED BY TESTED CIPHERS",
+    "R3.1": "LANGUAGE/SECTION ARTEFACT",
+    "R3.2": "HAPAX-RICHNESS CONSEQUENCE",
+    "R4.1": "SURVIVES this control"
+  },
+  "ai_agent": "Claude Code, model claude-fable-5-1 (Anthropic); protocol, code, report and manifest drafted by the agent at the request of Vasily Gnuchev"
+}

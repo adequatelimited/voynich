@@ -1,12 +1,5 @@
 {
   "schema_version": "1.0",
-  "repository_id": 1359336540,
-  "pr_number": 0,
-  "head_sha": "local-uncommitted-candidate",
-  "base_sha": "4d73860a5bb4c84d64602a00bc713d9cbe9d73d5",
-  "rules_version": "0.1",
-  "rubric_version": "0.1",
-  "evaluator_commit": "unreleased-working-tree",
   "families": [
     {
       "id": "seed-source-catalog",
@@ -150,10 +143,190 @@
       "excluded_overlap": [],
       "seed": true,
       "seed_baseline": null
+    },
+    {
+      "id": "family-ms408-data-access",
+      "rubric_version": "0.1",
+      "scope": "Registration of a third-party public mirror (Artheon Museum Lab) hosting 213 Beinecke MS 408 scans and extended EVA/IVTFF transliterations (RF1b-e, IT2a, LSI), with a machine-readable catalogue, per-file SHA-256 hashes recorded by the contributor from a 2026-09-06 fetch, an agent-oriented llms.txt entry point, and a rights/provenance record distinguishing CC0-hosted material from the reference_only 1998 Stolfi EVT.",
+      "acceptance_test": "Fetch https://lab.artheonmuseum.org/voynich/catalogue.json, pick any entry, download its public_url and confirm the SHA-256 matches the catalogue; or run the hosted download_dataset.py which performs exactly this verification.",
+      "aliases": [],
+      "predecessor_family_ids": [],
+      "excluded_overlap": [],
+      "seed": false,
+      "seed_baseline": 0
+    },
+    {
+      "id": "family-generative-falsification-adversarial-audit",
+      "rubric_version": "0.1",
+      "scope": "A pre-registered, frozen-decision-rule adversarial audit of six prior generative-falsification family claims: (1) discovery and quantification that the shared corpus parser used by prior pilots leaves IVTFF markup inside ~24% of published types, requiring restatement of all headline manuscript metrics under a newly implemented clean parser (with two uncertain-space treatment variants); (2) an alphabet-confound test showing the H2|1 anomaly is robust to EVA multigraph/determinism-merge alphabet normalization but the final-glyph anomaly is alphabet-dependent (0.08-0.27 bit gap depending on glyph-identity assumptions); (3) five untuned cipher constructions applied to real Latin/Culpeper plaintexts, showing a plain verbose cipher of Latin reproduces both entropy residues and fails only a type-ratio gate calibrated to the contaminated parser count; (4) permutation-null and Currier-language/section confound analysis showing the 'neighbouring-page 2x sharing' and '30% page-private' structural claims are largely artefacts of language/section confounding and hapax richness; (5) a new medieval-orthography control (two Chaucer editions) testing whether the vocabulary-richness anomaly survives non-standardized spelling.",
+      "acceptance_test": "Run `python adversarial_critique.py --repo ../.. --lab <dir with bibles/, pg49513.txt and the two Chaucer texts> --out results/`; confirm results.json verdicts match exactly: R0.1 CONTAMINATED, R0.2 RICHEST SURVIVES, R1.1 ALPHABET-ROBUST, R1.2 ALPHABET-DEPENDENT, R2.1 NOT REPRODUCED BY TESTED CIPHERS, R3.1 LANGUAGE/SECTION ARTEFACT, R3.2 HAPAX-RICHNESS CONSEQUENCE, R4.1 SURVIVES this control; clean types 7,734/8,804; within-class adjacency ratio 1.137; page-private 0.193 vs null 0.166.",
+      "aliases": [],
+      "predecessor_family_ids": [
+        "family-generative-falsification",
+        "family-generative-falsification-word-grammar-template",
+        "family-generative-falsification-controls-entry-ladder",
+        "family-generative-falsification-poetry-control",
+        "family-generative-falsification-languages-control"
+      ],
+      "excluded_overlap": [
+        "Does not claim credit for the pinned ZL3b corpus/parser (seed-corpus-parser) itself; audits and documents its known contamination instead.",
+        "Does not claim or duplicate the M5a/M5b table-and-grille mechanism experiment credited under family-generative-falsification.",
+        "Does not claim or duplicate the Stolfi word-grammar template generator credited under family-generative-falsification-word-grammar-template.",
+        "Does not claim or duplicate the entry-genre-ladder controls credited under family-generative-falsification-controls-entry-ladder.",
+        "Does not claim or duplicate the rhyme/line-structure poetry control credited under family-generative-falsification-poetry-control.",
+        "Does not claim or duplicate the nine-Bible languages-control final-glyph/H2|1 comparison credited under family-generative-falsification-languages-control; reuses those nine corpora only as inputs to a new alphabet-normalization test.",
+        "Does not claim credit for MS408 mirror registration (family-ms408-data-access)."
+      ],
+      "seed": false,
+      "seed_baseline": 0
+    },
+    {
+      "id": "family-generative-falsification-doodler",
+      "rubric_version": "0.1",
+      "scope": "A distinct generative-mechanism falsification pilot testing content-free syllable-table (Rugg-style, M1) and self-citation/preferential-reuse (Schinner-style, M2) generators against the pinned ZL3b corpus across 27 M2 grid variants plus M0/M1 baselines on 10 quantitative metrics, identifying which corpus properties (ttr, H1, vocabulary growth) are reproducible content-free and which (H2|1, word-final entropy, Zipf slope) are not, plus a diagnostic finding on verbatim-reuse rate needed to avoid type-explosion.",
+      "acceptance_test": "Run `python doodler.py --corpus ../../data/corpora/ZL3b-n.txt --out results/ --seed 1904`; confirm results.json matches the recorded output and that for every M2 grid variant H2|1 remains below the corpus value, word-final entropy remains below the corpus value, and Zipf slope stays shallower than the corpus slope, per report.md.",
+      "aliases": [],
+      "predecessor_family_ids": [],
+      "excluded_overlap": [
+        "Does not claim credit for the pinned ZL3b corpus/parser (seed-corpus-parser) or local harness workflow (seed-local-harness), used only as inputs.",
+        "Does not claim or extend the Cardan table-and-grille (M5a/M5b) experiment credited under family-generative-falsification's existing high-water tier of 5.",
+        "Does not claim a standalone entropy-baseline audit credited under seed-baseline-entropy."
+      ],
+      "seed": false,
+      "seed_baseline": 0
+    },
+    {
+      "id": "family-generative-falsification-entry-doodler",
+      "rubric_version": "0.1",
+      "scope": "A distinct generative-mechanism falsification pilot testing a content-free per-page entry/topic-carryover generator (M3) against the pinned ZL3b corpus's newly measured page-level structural fingerprint (adjacent vs distant page vocabulary Jaccard, page-unique vocabulary share) across 24 grid variants, showing these page-level metrics are reproducible content-free while character-level residue (H2|1, Zipf slope, word length) persists.",
+      "acceptance_test": "Run `python entry_doodler.py --corpus ../../data/corpora/ZL3b-n.txt --out results/ --seed 408`; confirm results.json matches the recorded output and that the best M3 variant matches real adjacent-page Jaccard (0.0804), distant-page Jaccard (0.0422) and page-unique share (0.3024) each within +/-0.01, while remaining measurably higher on H2|1 and shallower on Zipf slope than the real corpus.",
+      "aliases": [
+        "entry-doodler-pilot",
+        "family-generative-falsification-entrydoodler"
+      ],
+      "predecessor_family_ids": [],
+      "excluded_overlap": [
+        "Does not claim credit for the pinned ZL3b corpus/parser (seed-corpus-parser) or local harness workflow (seed-local-harness), used only as inputs.",
+        "Does not claim or reuse the Cardan table-and-grille (M5a/M5b) experiment credited under family-generative-falsification.",
+        "Does not claim or reuse the M1/M2 syllable-table/self-citation pilot credited under family-generative-falsification-doodler.",
+        "Does not claim a standalone clustering/confound audit credited under seed-baseline-clustering."
+      ],
+      "seed": false,
+      "seed_baseline": 0
+    },
+    {
+      "id": "family-generative-falsification-word-grammar-template",
+      "rubric_version": "0.1",
+      "scope": "A distinct generative-mechanism falsification pilot implementing Stolfi's published 2000 word grammar (core/mantle/crust unimodal-hill slot structure) as a template generator embedded in an entry/topic-carryover engine, and measuring two real-language positive controls (Culpeper's Complete Herbal 1653, Alice in Wonderland) with the identical metric suite against the pinned ZL3b corpus across 12 grid variants, showing (a) real language differs from the manuscript on conditional entropy, final-char entropy and entry-private vocabulary share, reframing prior 'unmatched by content-free generators' results away from a linguistic-content reading, and (b) the published grammar covers 86% of corpus word types with zero fitting and jointly reproduces vocabulary size, ttr, word length and page-sharing, leaving a residual mechanical-repetition signature (H2|1, final-char entropy, Zipf slope, entry-unique overshoot).",
+      "acceptance_test": "Run `python m4_doodler.py --corpus ../../data/corpora/ZL3b-n.txt --alice ../../data/corpora/pg11.txt --culpeper ../../data/corpora/pg49513.txt --out results/ --seed 408`; confirm results.json matches the recorded output showing control H2|1 >= 3.1 bits for both Culpeper and Alice vs 2.26 for the corpus, Stolfi grammar coverage >= 0.85 of corpus word types, and the best M4 grid variant within +/-10% of corpus types/ttr while H2|1 remains >= 0.4 bits above the corpus.",
+      "aliases": [],
+      "predecessor_family_ids": [],
+      "excluded_overlap": [
+        "Does not claim or extend the Cardan table-and-grille (M5a/M5b) mechanism experiment credited under family-generative-falsification's existing high-water tier of 5.",
+        "Does not claim the M1/M2 syllable-table/self-citation pilot credited under family-generative-falsification-doodler.",
+        "Does not claim the M3 per-page entry/topic-carryover pilot credited under family-generative-falsification-entry-doodler; uses its entry-engine scaffold only as an input/dependency for the new M4 template layer."
+      ],
+      "seed": false,
+      "seed_baseline": 0
+    },
+    {
+      "id": "family-generative-falsification",
+      "rubric_version": "0.1",
+      "scope": "Pilot 4 in the generative-mechanism falsification family: implements the Cardan table-and-grille device (M5a independent-column, M5b row-coupled) built from the pinned ZL3b corpus, measures composite distance against real manuscript statistics across 28 configurations plus multi-seed stability, and narrows the residual gap to two local metrics (conditional bigram entropy, word-final predictability), extending outcome-m4-template-doodler-pilot.",
+      "acceptance_test": "Run the documented command; confirm results.json matches the recorded output and that every M5b variant beats every M5a variant on composite distance, with the best M5b at <= 0.55, Zipf <= -0.75, and adjacent-page Jaccard within 0.01 of the corpus.",
+      "aliases": [],
+      "predecessor_family_ids": [],
+      "excluded_overlap": [],
+      "seed": false,
+      "seed_baseline": 0
+    },
+    {
+      "id": "family-generative-falsification-controls-entry-ladder",
+      "rubric_version": "0.1",
+      "scope": "A bounded diagnostic control extending the existing entry-structure metric suite (entry-private vocabulary share, adjacent/distant page Jaccard, ttr, entry token length) to two new real-text genres (Devil's Dictionary, Wonder Book of Knowledge) alongside the previously measured Culpeper/Alice controls, showing the manuscript's entry-private vocabulary is genre- and entry-length-dependent and lies on a continuum with short-entry real genres rather than being an order-of-magnitude outlier, with a documented correction to an earlier interpretive emphasis about device-overshoot.",
+      "acceptance_test": "Run `python controls_entry.py --corpus ../../data/corpora/ZL3b-n.txt --culpeper ../../data/corpora/pg49513.txt --alice ../../data/corpora/pg11.txt --devil ../../data/corpora/pg972.txt --wonder ../../data/corpora/pg41111.txt --out results/`; confirm results.json matches the recorded output showing devils_dictionary entry_unique_share=0.1383 and wonder_book_kids_encyclopedia entry_unique_share=0.0801, both between culpeper_encyclopedia (0.0281) and voynich (0.3024), and devils_dictionary jaccard_adjacent (0.0634) within 0.02 of voynich's 0.0804.",
+      "aliases": [],
+      "predecessor_family_ids": [
+        "family-generative-falsification",
+        "family-generative-falsification-word-grammar-template"
+      ],
+      "excluded_overlap": [
+        "Does not claim credit for the Cardan table-and-grille (M5a/M5b) mechanism experiment credited under family-generative-falsification.",
+        "Does not claim the M3 per-page entry/topic-carryover generator credited under family-generative-falsification-entry-doodler.",
+        "Does not claim the Stolfi word-grammar template generator or the original Culpeper/Alice real-language control measurement credited under family-generative-falsification-word-grammar-template; reuses those two texts' bytes only as baseline rows recomputed alongside the two new genres.",
+        "Does not claim credit for the pinned ZL3b corpus/parser (seed-corpus-parser) or local harness workflow (seed-local-harness), used only as inputs.",
+        "Does not claim credit for MS408 mirror registration (family-ms408-data-access)."
+      ],
+      "seed": false,
+      "seed_baseline": 0
+    },
+    {
+      "id": "family-generative-falsification-poetry-control",
+      "rubric_version": "0.1",
+      "scope": "A new bounded diagnostic control in the generative-falsification research area: measures line-structured metrics (word-final char entropy, line-final word final-char entropy, line-initial first-char entropy, top-5 line-final word rhyme concentration) across the pinned ZL3b corpus's real lines, a newly added rhymed-verse control (Shakespeare's Sonnets, PG 1041), and existing Culpeper/Alice prose pseudo-line baselines, showing that rhyme (even at its most ending-constrained, 3.50 bits) does not approach the manuscript's every-word final-char entropy (2.59 bits), excluding versification as the mechanism behind the residual word-ending discipline, plus a side finding that the manuscript's line-final position is less constrained than its average word (2.99 vs 2.59), opposite of rhyme.",
+      "acceptance_test": "Run the documented command; confirm results.json matches the recorded output showing sonnet line-final final-char entropy in [3.3,3.7], prose controls (Culpeper/Alice) in [3.5,3.8], Voynich all-word final-char entropy in [2.5,2.7], and Voynich line-final entropy above its all-word value.",
+      "aliases": [],
+      "predecessor_family_ids": [],
+      "excluded_overlap": [
+        "Does not claim or extend the Cardan table-and-grille (M5a/M5b) mechanism experiment credited under family-generative-falsification.",
+        "Does not claim the M1/M2 syllable-table/self-citation pilot credited under family-generative-falsification-doodler.",
+        "Does not claim the M3 per-page entry/topic-carryover generator credited under family-generative-falsification-entry-doodler.",
+        "Does not claim the Stolfi word-grammar template generator or its original Culpeper/Alice word-level final-char entropy measurement credited under family-generative-falsification-word-grammar-template; reuses those two texts' bytes only as new line-structured baseline rows.",
+        "Does not claim the entry-ladder genre-control metrics (Devil's Dictionary/Wonder Book) credited under family-generative-falsification-controls-entry-ladder.",
+        "Does not claim credit for the pinned ZL3b corpus/parser (seed-corpus-parser) or local harness workflow (seed-local-harness), used only as inputs."
+      ],
+      "seed": false,
+      "seed_baseline": 0
+    },
+    {
+      "id": "family-generative-falsification-languages-control",
+      "rubric_version": "0.1",
+      "scope": "A bounded diagnostic control extending the generative-falsification metric suite (final-glyph entropy, conditional bigram entropy H2|1, type/token diversity, word length) to nine same-text (Bible) translations at equal 35k-token samples, testing whether a morphologically rich real language naturally reproduces the manuscript's word-ending discipline. Finds no tested language reaches the manuscript on either final-glyph entropy or H2|1; Finnish is nearest on endings (2.80 vs 2.58) but not close on H2|1; Russian, despite rich inflection, has the least predictable endings, refuting a simple morphology-based explanation; manuscript retains highest type diversity of all ten texts.",
+      "acceptance_test": "Run `python languages_control.py --corpus ../../data/corpora/ZL3b-n.txt --bibles <dir with the nine bible-corpus XMLs> --out results/`; confirm results.json matches the recorded output showing every language's word-final entropy above the manuscript's 2.585 (nearest Finnish 2.803) and every language's H2|1 above 2.261 (nearest Greek 3.143), with manuscript ttr (0.2893) highest among all ten texts; independently reproduce the Latin and English-WEB rows from the two committed corpora.",
+      "aliases": [],
+      "predecessor_family_ids": [],
+      "excluded_overlap": [
+        "Does not claim or extend the Cardan table-and-grille (M5a/M5b) mechanism experiment credited under family-generative-falsification.",
+        "Does not claim the rhyme/versification line-structure control credited under family-generative-falsification-poetry-control.",
+        "Does not claim the entry-structure genre-ladder metrics credited under family-generative-falsification-controls-entry-ladder.",
+        "Does not claim credit for the pinned ZL3b corpus/parser (seed-corpus-parser) or local harness workflow (seed-local-harness), used only as inputs."
+      ],
+      "seed": false,
+      "seed_baseline": 0
+    },
+    {
+      "id": "family-generative-falsification-discriminating-tests",
+      "rubric_version": "0.1",
+      "scope": "Two newly executed pre-registered discriminating tests against the pinned ZL3b corpus: (T2) a data-chosen byte-pair-merge re-segmentation test (hypothesis contributed by V. Gnuchev) showing the manuscript's H2|1 letter-pair anomaly is SEGMENTATION-DEPENDENT under a frozen decision rule -- at 40-60 symbol alphabets the gap to the lowest-entropy control language closes to 0.07-0.15 bits, with caveats that the crossover language (Greek) has an already-large raw alphabet (45 symbols), the gap against Latin/Finnish/Italian/English stays 0.2-0.6 bits at that size, and the association-merge criterion closes the gap less (0.21 bits); and (T1) the first executed illustration-linked-vocabulary test (editorial same-plant/similar-plant identifications vs text-sharing) across 12 same-plant and 28 similar-plant pairs with permutation and distance-matched nulls, found UNDERPOWERED because its own Culpeper positive control fails (p=0.44), with an exploratory size-corrected content-word lift statistic identified as the form that would give the test power.",
+      "acceptance_test": "Run `python discriminating_tests.py --repo ../.. --lab <dir with bibles/ and pg49513.txt> --out results/`; confirm results.json matches the recorded output: R8 gaps 0.652/0.151/0.065/0.089 at alphabet sizes 30/40/50/60 with crossover at 45 symbols (k=20, H2|1=3.089 matching Greek); R7 verdict UNDERPOWERED with Culpeper control N3 p≈0.44, T1a N1 p≈0.85, T1b N3 p≈0.21 and N4 p≈0.996.",
+      "aliases": [],
+      "predecessor_family_ids": [
+        "family-generative-falsification",
+        "family-generative-falsification-adversarial-audit"
+      ],
+      "excluded_overlap": [
+        "Does not claim the Cardan table-and-grille (M5a/M5b) mechanism experiment credited under family-generative-falsification.",
+        "Does not claim the parser-contamination, cipher, confound/permutation, or Chaucer-orthography findings credited under family-generative-falsification-adversarial-audit; reuses only its clean-parser/metric library (critique_lib.py, verbatim copy) as shared infrastructure.",
+        "Does not claim the fixed EVA-multigraph/determinism-merge alphabet-normalization result already credited under family-generative-falsification-adversarial-audit's alphabet-confound block; T2 is a distinct data-chosen byte-pair search method with distinct numeric results.",
+        "Does not claim the M1/M2, M3, or Stolfi-grammar generator pilots, the entry-ladder genre controls, the poetry control, or the languages-control Bible comparison credited under their respective families; reuses the nine Bible corpora and Culpeper/Alice only as inputs to the new T1/T2 tests."
+      ],
+      "seed": false,
+      "seed_baseline": 0
     }
   ],
-  "credit_high_water_tiers": {},
-  "ledger_digest": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+  "credit_high_water_tiers": {
+    "family-ms408-data-access": 5,
+    "family-generative-falsification-adversarial-audit": 10,
+    "family-generative-falsification-doodler": 5,
+    "family-generative-falsification-entry-doodler": 5,
+    "family-generative-falsification-word-grammar-template": 5,
+    "family-generative-falsification": 10,
+    "family-generative-falsification-controls-entry-ladder": 2,
+    "family-generative-falsification-poetry-control": 2,
+    "family-generative-falsification-languages-control": 2,
+    "family-generative-falsification-discriminating-tests": 5
+  },
+  "ledger_digest": "da04d51590a1f9960811b5c3768682b84a8133c4aa61755a124e9b73b46e2f43",
   "public_evidence": [
     {
       "path": "research/context-index.json",
@@ -163,14 +336,5 @@
       "media_type": "application/json",
       "inspection": "complete"
     }
-  ],
-  "acknowledgment_receipts": [],
-  "execution_receipts": [],
-  "external_assessment_receipts": [],
-  "context_status": "prelaunch_seed_only_not_an_official_forecast_context",
-  "notes": [
-    "No competitive decision exists in this seed context.",
-    "Current candidate SHA/PR and pinned evaluator release must be supplied by an authenticated official context export before equivalent local/official forecasts.",
-    "Unassessed seeds remain null and cannot be treated as zero."
   ]
 }

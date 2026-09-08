@@ -1,0 +1,303 @@
+{
+  "schema_version": "1.0",
+  "research_pr": 11,
+  "merge_sha": "5d00bdbf40b64da96f77bb03748c55e824f0cd22",
+  "events": [
+    {
+      "schema_version": "1.0",
+      "id": "decision-11-family-generative-falsification-45d64793259b",
+      "sequence": 17,
+      "target_event_id": "decision-11-family-generative-falsification-d33ebfce3273",
+      "kind": "upgrade",
+      "family_id": "family-generative-falsification",
+      "rubric_version": "0.1",
+      "category": "experiments",
+      "repository_id": 1359336540,
+      "pr_number": 11,
+      "milestone_id": "milestone-1359336540-11-family-generative-falsification",
+      "earned_at": "2026-09-08T00:42:12Z",
+      "assessment_id": "assessment-556f34cbc5041454c9b19f2fd156efb8",
+      "artifact_binding_digest": "45d64793259b0c38b5b832e1c6a7134ba0e7c2fe15574184d900500e3755d89d",
+      "authority_receipt_ref": "receipt:job-45d64793259b0c38b5b832e1c6a7134ba0e7c2fe",
+      "cumulative_tier": 10,
+      "allocation_shares": [
+        {
+          "github_id": 859355,
+          "share_basis_points": 10000,
+          "status": "paid",
+          "acknowledgment_receipt_ref": "github-pr:1359336540:11:0d79f8aaa05dc342e285bd8a7827aee15b369ba0:0733e8136b7004114823d89425cbbb196f694c6fbd00cdac09cfd0b91a40c3c6:163b95f210f31d6acb843e1c21579c275977db097c264958c8801455d649ec12"
+        }
+      ],
+      "reason": "Resolving the two prior reports' disagreement: the first report correctly identifies this as a genuinely new controlled discriminating result meeting the tier-10 anchor under DISTINCT_DIAGNOSTIC_RESULTS_V1. The second report's conclusion that the contributor's claimed cumulative tier of 5 caps the assessment is incorrect: per CREDIT_IS_NOT_LINEAGE_V1, claimed tier is neither floor nor ceiling. This result is correctly scoped as an extension of family-generative-falsification (not a new family) because it reuses the same generators/grids/composite metric; it does not claim the adversarial-audit family's own findings. Existing high-water tier is 5; this raises the cumulative assessed tier to 10, yielding new marginal credit of 5."
+    }
+  ],
+  "families_added": [],
+  "milestones": [],
+  "assessment": {
+    "schema_version": "1.0",
+    "assessment_id": "assessment-556f34cbc5041454c9b19f2fd156efb8",
+    "artifact_binding_digest": "556f34cbc5041454c9b19f2fd156efb80357992b716a902f9b9173b392820bab",
+    "merit_evidence_digest": "74cbf7bf9269dcafe2b849f53c0f91b6095745dcffb80ad1536b551dac07053b",
+    "repository_id": 1359336540,
+    "pr_number": 11,
+    "head_sha": "0d79f8aaa05dc342e285bd8a7827aee15b369ba0",
+    "base_sha": "363b27af64012405c17b2dccc8145bf06798b726",
+    "rules_version": "0.1",
+    "rubric_version": "0.1",
+    "grading_profile": "voynich-sonnet-ai-pilot-2026-09-07-v10",
+    "evaluator_commit": "01297efb988b782d43780db042c9295836fc45d4",
+    "mode": "official_proposal",
+    "status": "complete",
+    "claimed_score": 2,
+    "expected_score": 5,
+    "official_proposed_score": 5,
+    "awarded_score": null,
+    "assessment": {
+      "schema_version": "1.0",
+      "admission_action": "accept",
+      "score_status": "proposed",
+      "conduct_status": "clear",
+      "findings": [
+        {
+          "blocks_merge_or_credit": false,
+          "rule_id_or_gate": "G4",
+          "severity": "info",
+          "path_or_locus": "experiments/clean-rerun/PROTOCOL.md",
+          "evidence_refs": [
+            "experiments/clean-rerun/PROTOCOL.md"
+          ],
+          "reason": "The alternating page split gives FIT/TEST near-identical distributions, disclosed honestly as weakening R5.3's power to detect selection optimism; this is a limitation, not a defect.",
+          "required_change": "",
+          "verification_step": "Confirm the limitations section states this explicitly (it does)."
+        },
+        {
+          "blocks_merge_or_credit": false,
+          "rule_id_or_gate": "G6",
+          "severity": "info",
+          "path_or_locus": "contributions/clean-rerun/contribution.yaml",
+          "evidence_refs": [
+            "contributions/clean-rerun/contribution.yaml"
+          ],
+          "reason": "The two prior AI reports disagreed on whether this held-out re-evaluation is a same_outcome strengthening (no increment) or an independently useful new diagnostic (tier 10, +5). This assessment resolves the disagreement per DISTINCT_DIAGNOSTIC_RESULTS_V1: a preregistered held-out re-scoring reversing the family's ranking, disclosing a dead grid parameter, and adding a corrected cipher gate test is a separately informative diagnostic beyond the original in-sample composite-distance finding credited at tier 5, but remains within family-generative-falsification since it reuses the identical generators/grids/metric.",
+          "required_change": "",
+          "verification_step": "Compare results.json TEST composites, match counts, and R6.1 verdict against PROTOCOL.md's frozen decision rules."
+        }
+      ],
+      "outcomes": [
+        {
+          "family_id": "family-generative-falsification",
+          "scope": "A pre-registered held-out (FIT/TEST split) re-evaluation of all five prior generative-falsification models (M2, M3, M4, M5, M5b) on the clean parser, with habit tables built exclusively from FIT-half pages and models scored on held-out TEST-half data, under two uncertain-space treatments (S, M). This reverses the family's prior in-sample ranking (M5b best at composite 0.50) to a held-out ranking where M2 (self-citation) is best (0.69-0.74) and M4 (Stolfi template) worst (1.87-1.44); shows no model matches more than 3 of 9 real corpus properties out of sample; documents a previously unnoticed dead grid parameter in the M2 pilot's code (p_new unreachable given the branch-probability ordering, collapsing the 27-point grid to 9 effective points); and extends the cipher-advocate test with corrected five-way gates across 12 untuned cipher constructions (abbreviation x homophone count, on Latin and Culpeper), showing none jointly reproduces the manuscript's word-length/type-ratio/entropy fingerprint.",
+          "category": "experiments",
+          "predecessors": [
+            "outcome-adversarial-critique",
+            "outcome-generative-doodler-pilot",
+            "outcome-entry-doodler-pilot",
+            "outcome-m4-template-doodler-pilot",
+            "outcome-m5-grille-pilot"
+          ],
+          "aliases": [],
+          "claimed_tier": 5,
+          "assessed_tier": 10,
+          "gate_evidence": [
+            {
+              "gate": "G1",
+              "status": "pass",
+              "evidence_refs": [
+                "experiments/clean-rerun/PROTOCOL.md"
+              ],
+              "reason": "Directly extends the generative-mechanisms branch question: does an in-sample model comparison generalize to held-out manuscript pages, and does any content-free generator jointly reproduce the manuscript's residual fingerprint."
+            },
+            {
+              "gate": "G2",
+              "status": "pass",
+              "evidence_refs": [
+                "contributions/clean-rerun/rights.md"
+              ],
+              "reason": "Uses the repo-pinned ZL3b-n.txt corpus (sha256 recorded), vendored project code with per-function provenance comments, and Latin Vulgate/Culpeper control texts referenced by hash; rights record discloses AI use and independently notes (nonblocking) that the Artheon mirror serves byte-identical corpora."
+            },
+            {
+              "gate": "G3",
+              "status": "pass",
+              "evidence_refs": [
+                "experiments/clean-rerun/clean_rerun.py",
+                "experiments/clean-rerun/results/results.json",
+                "experiments/clean-rerun/REPORT.md",
+                "experiments/runs/2026-09-07T093000Z-clean-rerun/run.json",
+                "experiments/clean-rerun/results/stdout.txt"
+              ],
+              "reason": "Complete command, code, deterministic seeds, and full numeric results are supplied and internally consistent. context.execution_receipts is empty, so no independently authenticated execution receipt exists; this is ordinary submitted-run evidence, sufficient for tier 10 under the applicable anchor, not independent execution."
+            },
+            {
+              "gate": "G4",
+              "status": "pass",
+              "evidence_refs": [
+                "experiments/clean-rerun/REPORT.md",
+                "experiments/clean-rerun/PROTOCOL.md"
+              ],
+              "reason": "Explicit, itemized deviations section and disclosed weak power of R5.3 given the alternating split."
+            },
+            {
+              "gate": "G5",
+              "status": "pass",
+              "evidence_refs": [
+                "contributions/clean-rerun/contribution.yaml"
+              ],
+              "reason": "Human attribution (gnuchev) with roles, AI assistance disclosed (claude-fable-5-1) with itemized tasks and a human-verification note."
+            },
+            {
+              "gate": "G6",
+              "status": "pass",
+              "evidence_refs": [
+                "experiments/clean-rerun/REPORT.md",
+                "experiments/clean-rerun/results/results.json"
+              ],
+              "reason": "Delivers new information not previously credited: a held-out ranking reversal, a dead-parameter code defect discovery, and a corrected-gate cipher test. This goes beyond the original in-sample tier-5 credited finding and is distinct from the separately-credited adversarial-audit family's findings (reused here only as vendored library code)."
+            },
+            {
+              "gate": "G7",
+              "status": "pass",
+              "evidence_refs": [
+                "experiments/clean-rerun/REPORT.md"
+              ],
+              "reason": "Negative/mixed results reported plainly; deviations from protocol itemized rather than concealed."
+            }
+          ],
+          "attribution_status": "verified",
+          "reason": "Resolving the two prior reports' disagreement: the first report correctly identifies this as a genuinely new controlled discriminating result meeting the tier-10 anchor under DISTINCT_DIAGNOSTIC_RESULTS_V1. The second report's conclusion that the contributor's claimed cumulative tier of 5 caps the assessment is incorrect: per CREDIT_IS_NOT_LINEAGE_V1, claimed tier is neither floor nor ceiling. This result is correctly scoped as an extension of family-generative-falsification (not a new family) because it reuses the same generators/grids/composite metric; it does not claim the adversarial-audit family's own findings. Existing high-water tier is 5; this raises the cumulative assessed tier to 10, yielding new marginal credit of 5.",
+          "family_decision": "extension",
+          "family_comparisons": [
+            {
+              "family_id": "family-generative-falsification",
+              "existing_scope": "Pilot 4 in the generative-mechanism falsification family: implements the Cardan table-and-grille device (M5a independent-column, M5b row-coupled) built from the pinned ZL3b corpus, measures composite distance against real manuscript statistics across 28 configurations plus multi-seed stability, and narrows the residual gap to two local metrics (conditional bigram entropy, word-final predictability), extending outcome-m4-template-doodler-pilot.",
+              "relationship": "same_outcome",
+              "reason": "This submission directly extends the same family's own five models, same grids, and same composite metric with a pre-registered held-out re-run that materially changes the family's headline conclusion. Because it re-evaluates the identical underlying capability/result rather than introducing a distinct mechanism, it is the same outcome family, cumulatively upgraded to tier 10."
+            },
+            {
+              "family_id": "family-generative-falsification-adversarial-audit",
+              "existing_scope": "A pre-registered, frozen-decision-rule adversarial audit of six prior generative-falsification family claims: (1) discovery and quantification that the shared corpus parser used by prior pilots leaves IVTFF markup inside ~24% of published types, requiring restatement of all headline manuscript metrics under a newly implemented clean parser (with two uncertain-space treatment variants); (2) an alphabet-confound test showing the H2|1 anomaly is robust to EVA multigraph/determinism-merge alphabet normalization but the final-glyph anomaly is alphabet-dependent (0.08-0.27 bit gap depending on glyph-identity assumptions); (3) five untuned cipher constructions applied to real Latin/Culpeper plaintexts, showing a plain verbose cipher of Latin reproduces both entropy residues and fails only a type-ratio gate calibrated to the contaminated parser count; (4) permutation-null and Currier-language/section confound analysis showing the 'neighbouring-page 2x sharing' and '30% page-private' structural claims are largely artefacts of language/section confounding and hapax richness; (5) a new medieval-orthography control (two Chaucer editions) testing whether the vocabulary-richness anomaly survives non-standardized spelling.",
+              "relationship": "distinct_outcome",
+              "reason": "This submission vendors the audit's clean-parser and metric library verbatim as a code dependency but does not claim or duplicate any of the audit's own five credited findings. It applies that library to a new held-out evaluation of the generator models, which the audit family did not perform."
+            }
+          ],
+          "source_outcome_ids": [
+            "outcome-clean-rerun"
+          ],
+          "acceptance_test": "Run `python clean_rerun.py --repo ../.. --lab <dir with bibles/Latin.xml and pg49513.txt> --out results/`; confirm results.json TEST composites (S): M2 0.694, M3 0.765, M5b 1.136, M5 1.429, M4 1.874; held-out match counts 3/2/2/1/1; R6.1 = 'NOT REPRODUCED BY 12 UNTUNED CIPHERS'; gen_m2_fast equivalence check passes at start-up on 3,000 tokens.",
+          "excluded_overlap": [
+            "Does not claim credit for the original in-sample M5a/M5b composite-distance result already credited at family-generative-falsification's existing high-water tier of 5.",
+            "Does not claim the adversarial-critique's parser-contamination quantification, alphabet-confound test, permutation-null confound analysis, or Chaucer control, credited under family-generative-falsification-adversarial-audit.",
+            "Does not claim credit for the pinned ZL3b corpus/parser (seed-corpus-parser) or MS408 mirror registration (family-ms408-data-access), used only as inputs/references."
+          ],
+          "validation_evidence": {
+            "execution_receipt_refs": [],
+            "external_assessment_receipt_refs": [],
+            "independent_inspection_refs": []
+          }
+        }
+      ],
+      "inspected_paths": [
+        "contributions/clean-rerun/contribution.yaml",
+        "contributions/clean-rerun/rights.md",
+        "experiments/clean-rerun/PROTOCOL.md",
+        "experiments/clean-rerun/REPORT.md",
+        "experiments/clean-rerun/clean_rerun.py",
+        "experiments/clean-rerun/critique_lib.py",
+        "experiments/clean-rerun/family_generators.py",
+        "experiments/clean-rerun/insample_clean.py",
+        "experiments/clean-rerun/results/insample_clean.json",
+        "experiments/clean-rerun/results/results.json",
+        "experiments/clean-rerun/results/stdout.txt",
+        "experiments/runs/2026-09-07T093000Z-clean-rerun/insample_clean.json",
+        "experiments/runs/2026-09-07T093000Z-clean-rerun/output.json",
+        "experiments/runs/2026-09-07T093000Z-clean-rerun/run.json",
+        "experiments/runs/2026-09-07T093000Z-clean-rerun/stdout.txt",
+        "research/context-index.json"
+      ],
+      "inspection_gaps": [],
+      "next_action": "Accept and forward for deterministic ledger computation: this outcome extends family-generative-falsification from its existing high-water tier of 5 to an assessed cumulative tier of 10, yielding new_credit = max(0, 10-5) = 5, allocated per the declared attribution (gnuchev, 10000 bps). This resolves the disagreement between the two prior reports in favor of the independently-assessed tier.",
+      "appeal_route": "If the contributor or another reviewer disputes the assessed tier or the same_outcome/extension classification against family-generative-falsification, they may appeal via the standard PR comment/appeal process citing the tier-10 rubric anchor and CREDIT_IS_NOT_LINEAGE_V1/DISTINCT_DIAGNOSTIC_RESULTS_V1. No independently authenticated execution receipt exists for this run (context.execution_receipts is empty); this is a disclosed limitation, not a bar to tier 10 given the ordinary reproducible command/results evidence supplied."
+    },
+    "stages": [
+      {
+        "stage": "adjudicator",
+        "provider": "anthropic",
+        "model": "claude-sonnet-5",
+        "exposed_version": "claude-sonnet-5",
+        "prompt_digest": "d88c2d2e1d55a6877ad5050019f2c1a85aaf5b6e76d85e30737cf78aa968f005",
+        "response_digest": "12861b1eb73b0211579e6f544cda868c802121fc60baa327878d3d74ffe1b395",
+        "started_at": "2026-09-08T01:27:55.403Z",
+        "completed_at": "2026-09-08T01:29:27.213Z",
+        "usage": {
+          "sessions": 1,
+          "input_bytes": 427770,
+          "output_bytes": 56527,
+          "runtime_ms": 91009
+        },
+        "receipt_ref": "stage-results/job-45d64793259b0c38b5b832e1c6a7134ba0e7c2fe/adjudicator.json"
+      },
+      {
+        "stage": "adversary",
+        "provider": "anthropic",
+        "model": "claude-sonnet-5",
+        "exposed_version": "claude-sonnet-5",
+        "prompt_digest": "e1005e983d42e5ab2df3b08dc77d469712fe2df10210bf07822a4ce101611296",
+        "response_digest": "410f3f4ff47bab355755c16a86ed7c470c3865e108f6bcba2448e43142fa04eb",
+        "started_at": "2026-09-08T01:25:53.186Z",
+        "completed_at": "2026-09-08T01:27:05.296Z",
+        "usage": {
+          "sessions": 1,
+          "input_bytes": 406871,
+          "output_bytes": 44597,
+          "runtime_ms": 71113
+        },
+        "receipt_ref": "stage-results/job-45d64793259b0c38b5b832e1c6a7134ba0e7c2fe/adversary.json"
+      },
+      {
+        "stage": "assessor",
+        "provider": "anthropic",
+        "model": "claude-sonnet-5",
+        "exposed_version": "claude-sonnet-5",
+        "prompt_digest": "713964e9bc252416a791fb6b72376bed9335d7a9fd8a5bf182a5e47f119a1f1b",
+        "response_digest": "4b24aadb1c75f2797acb4ec9749a57c8f2e38d7c210710fb29917929b2199e1f",
+        "started_at": "2026-09-08T01:23:30.857Z",
+        "completed_at": "2026-09-08T01:24:57.591Z",
+        "usage": {
+          "sessions": 1,
+          "input_bytes": 406752,
+          "output_bytes": 52395,
+          "runtime_ms": 85784
+        },
+        "receipt_ref": "stage-results/job-45d64793259b0c38b5b832e1c6a7134ba0e7c2fe/assessor.json"
+      }
+    ],
+    "disagreements": [
+      "Material independent-assessment disagreement or invalid proposal."
+    ],
+    "holds": [],
+    "reused_assessment_id": null
+  },
+  "receipt": {
+    "schema_version": "1.0",
+    "id": "receipt:job-45d64793259b0c38b5b832e1c6a7134ba0e7c2fe",
+    "key_id": "voynich-2026-09-06",
+    "issued_at": "2026-09-08T01:42:59.884Z",
+    "payload": {
+      "repository_id": 1359336540,
+      "events_digest": "6d86a0d5ee87befbdc0936bbbd5e9e15c9aee50bb64828bab6dbf085b79841b7",
+      "milestones_digest": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+      "families_digest": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+      "merge_sha": "5d00bdbf40b64da96f77bb03748c55e824f0cd22",
+      "assessed_head": "0d79f8aaa05dc342e285bd8a7827aee15b369ba0",
+      "artifact_digest": "45d64793259b0c38b5b832e1c6a7134ba0e7c2fe15574184d900500e3755d89d",
+      "profile_digest": "a5e37f569c8ee802977b375a86972db85c5594c16abc72de4c9048e7090b2410",
+      "report_digest": "560ef108467a7173021eb30fef768620ed4429234fb0dfa62e8b0a82b56e9d7d",
+      "stage_receipt_refs": [
+        "stage-results/job-45d64793259b0c38b5b832e1c6a7134ba0e7c2fe/adjudicator.json",
+        "stage-results/job-45d64793259b0c38b5b832e1c6a7134ba0e7c2fe/adversary.json",
+        "stage-results/job-45d64793259b0c38b5b832e1c6a7134ba0e7c2fe/assessor.json"
+      ]
+    },
+    "payload_digest": "a4707eca8a71b5fcbbf3deae63d74381d2c63cdf4f0c7f9b007a54446bba9133",
+    "signature": "T4YGC8wXpnIXqkipM5LCslxLtYhH_HAg4OdYIPVxPV7Hvn08sapTS5bx85aRqQjCuBDtLZwrH_bTJGt9r_m6BQ"
+  }
+}

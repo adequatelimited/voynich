@@ -1,0 +1,15 @@
+{
+  "schema_version": "1.0",
+  "id": "pg1041",
+  "path": "data/corpora/pg1041.txt",
+  "origin": "https://www.gutenberg.org/ebooks/1041",
+  "sha256": "4a3a5466591e30ca93b2c19daeb24770bb08833b57b1616c972b97246e23580f",
+  "byte_length": 119936,
+  "media_type": "text/plain",
+  "source_id": "pg1041",
+  "rights": "Project Gutenberg eBook 1041, Shakespeare's Sonnets; public domain in the USA per the included Project Gutenberg license header. Wrapper and terms retained unchanged.",
+  "redistribution": "permitted",
+  "state": "verified",
+  "attribution": "William Shakespeare; Project Gutenberg transcription",
+  "retention": "Versioned immutable research source; rhymed-verse control for line-end constraint metrics."
+}

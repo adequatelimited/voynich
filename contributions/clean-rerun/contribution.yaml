@@ -1,0 +1,103 @@
+schema_version: "1.0"
+id: "clean-rerun-held-out"
+kind: research
+title: "Clean held-out re-run of the generative-falsification pilots: ranking reversed, no model matches the entropy, Zipf or hapax residues"
+summary: >-
+  Second pre-registered protocol after the adversarial critique (PR #10). All five
+  content-free generators of the family (M2 self-citation, M3 entry doodler, M4 Stolfi
+  template, M5 grille, M5b row-coupled grille) re-run with their code unchanged on the
+  clean parse, with habit tables built from a FIT half of the pages, configuration chosen
+  on FIT and scored on a held-out TEST half, under both treatments of uncertain spaces.
+  The family's ranking reverses: M2 0.69 (best), M3 0.77, M5b 1.14 (was 0.50), M5 1.43,
+  M4 1.87 on the family's own composite. No model matches more than 3 of 9 properties and
+  none matches H2|1, final-char entropy, Zipf slope or hapax share out of sample. Pilot 1's
+  p_new grid parameter is unreachable code. Twelve untuned ciphers of Latin and Culpeper
+  under corrected five-way gates reproduce the entropy residues but never the joint
+  fingerprint: word length against type ratio binds.
+branch_ids: ["generative-mechanisms", "statistical-structure"]
+contributors:
+  - github_id: 859355
+    github_login: "gnuchev"
+    roles: ["Conceptualization", "Supervision"]
+ai_usage:
+  status: assisted
+  tools:
+    - provider: "Anthropic"
+      model_id: "claude-fable-5-1"
+      model_version: "Claude Code agent (Claude Fable 5.1), 2026-09"
+      accessed_at: "2026-09-07"
+      tasks:
+        - "Design and pre-registration of PROTOCOL.md (held-out split, FIT-only habit tables, frozen rules R5.1-R5.4 and R6.1)"
+        - "Vendoring of the pilots' generators unchanged (family_generators.py) with per-function provenance"
+        - "Implementation of clean_rerun.py (exact-semantics Fenwick-tree speed-up of gen_m2 with equivalence check; corrected-gate cipher grid) and insample_clean.py (exploratory)"
+        - "Drafting of REPORT.md, this manifest and the rights record"
+      human_verification: >-
+        The re-run was requested by Vasily Gnuchev after the critique ("of course re-run, yes").
+        The protocol was committed before the script ran. All numbers are from the recorded
+        run output; the self-contained branch reproduces every metric in results.json (only the recorded runtimes differ).
+  reproducibility_notes: >-
+    Deterministic: python clean_rerun.py --repo ../.. --lab <dir with bibles/Latin.xml and
+    pg49513.txt> --out results/. Stdlib only. critique_lib.py is a verbatim copy of the
+    critique's module so the branch runs without PR #10.
+changes:
+  - path: "experiments/clean-rerun/PROTOCOL.md"
+    improvement: "Pre-registered held-out re-run design and frozen rules."
+  - path: "experiments/clean-rerun/clean_rerun.py"
+    improvement: "Clean-target, FIT-only-table, held-out re-run of M2, M3, M4, M5, M5b with the family's grids; corrected-gate cipher grid."
+  - path: "experiments/clean-rerun/family_generators.py"
+    improvement: "The pilots' generators vendored unchanged with provenance."
+  - path: "experiments/clean-rerun/critique_lib.py"
+    improvement: "Verbatim copy of the critique's clean parser and metric formulas, for a self-contained branch."
+  - path: "experiments/clean-rerun/insample_clean.py"
+    improvement: "Exploratory: the family's in-sample procedure on the clean target."
+  - path: "experiments/clean-rerun/REPORT.md"
+    improvement: "Held-out tables for both treatments, ranking reversal, dead-parameter finding, cipher constraint, deviations."
+  - path: "experiments/clean-rerun/results/results.json"
+    improvement: "Full numeric record including every grid point's FIT composite."
+  - path: "experiments/runs/2026-09-07T093000Z-clean-rerun/run.json"
+    improvement: "Run record."
+outcomes:
+  - id: "outcome-clean-rerun"
+    family_id: "family-generative-falsification"
+    extends: "outcome-adversarial-critique"
+    before: >-
+      The pilots' model comparisons (PRs #3-#6) were made in-sample on a contaminated parse,
+      with configuration selected on the metrics then reported as matched, and the family
+      narrative was one of progressive improvement ending in the row-coupled grille at
+      composite 0.50.
+    after: >-
+      On the clean target with FIT-only tables and held-out scoring the ranking reverses
+      (M2 best, M4 worst; M5b 0.84-1.14); at most 3 of 9 properties are matched by any
+      model; the entropy, Zipf and hapax residues are matched by none; a dead grid parameter
+      in pilot 1 is documented; and twelve untuned ciphers with corrected gates show that the
+      joint fingerprint (short words, high type ratio, low entropies) is not delivered by
+      simple encodings either.
+    acceptance_test: >-
+      Run the documented command; confirm results.json: TEST composites under S M2 0.694,
+      M3 0.765, M5b 1.136, M5 1.429, M4 1.874; held-out match counts 3/2/2/1/1; R6.1 no
+      cipher passes all five gates; gen_m2_fast equivalence check passes at start-up.
+    evidence:
+      - "experiments/clean-rerun/PROTOCOL.md"
+      - "experiments/clean-rerun/clean_rerun.py"
+      - "experiments/clean-rerun/family_generators.py"
+      - "experiments/clean-rerun/REPORT.md"
+      - "experiments/clean-rerun/results/results.json"
+      - "experiments/runs/2026-09-07T093000Z-clean-rerun/run.json"
+    related_outcomes: ["outcome-adversarial-critique", "outcome-generative-doodler-pilot", "outcome-entry-doodler-pilot", "outcome-m4-template-doodler-pilot", "outcome-m5-grille-pilot"]
+    claimed_cumulative_tier: 5
+    claimed_incremental_points: 2
+    claim_rationale: >-
+      Atlas "Experiments": bounded verified improvement (2) — a pre-registered held-out
+      re-evaluation of every model in the family that changes the family's ranking and
+      residue statement. Family cumulative stays 5.
+    attribution:
+      - github_id: 859355
+        share_basis_points: 10000
+claimed_total_points: 2
+rubric_version: "0.1"
+conflicts: []
+limitations:
+  - "The alternating page split makes FIT and TEST halves statistically near-identical, so R5.3 (selection optimism) has little power; the design mainly tests the FIT-only habit tables."
+  - "gen_m2 was replaced by an exact-semantics Fenwick-tree version for speed; equality with the vendored original is asserted at start-up on 3,000 tokens."
+  - "Only twelve untuned cipher families; failure to reproduce is weak evidence by design."
+rights_manifest: "contributions/clean-rerun/rights.md"

@@ -24,3 +24,17 @@ test('UTC weeks begin Monday and months are calendar half-open intervals', () =>
 test('exact ties use competition ranks and stable display identity', () => { const events = [event(1, 10, 103, { family_id: 'one' }), event(2, 5, 102, { family_id: 'two' }), event(3, 5, 101, { family_id: 'three' }), event(4, 2, 104, { family_id: 'four' })]; const state = replayLedger(events, ['one', 'two', 'three', 'four'].map(x => family(x)), trusted(events)); const board = buildLeaderboard(state, { as_of: '2026-09-30T00:00:00Z' }); assert.deepEqual(board.map(x => x.rank), [1, 2, 2, 4]); assert.deepEqual(board.map(x => x.github_id), [103, 101, 102, 104]); });
 test('identity alias preserves newcomer age and merges credit without duplication', () => { const events = [event(1, 2)]; const state = replayLedger(events, [family()], trusted(events)); const options = { as_of: '2026-09-06T00:00:00Z', identity_aliases: { 101: 102 }, first_substantive_merge: { 101: '2025-01-01T00:00:00Z', 102: '2026-09-01T00:00:00Z' } }; assert.equal(buildLeaderboard(state, options)[0]!.github_id, 102); assert.equal(buildLeaderboard(state, { ...options, newcomer: true }).length, 0); });
 test('zero decisions are terminal settled milestones with no leaderboard row', () => { const events = [event(1, 0)]; const state = replayLedger(events, [family()], trusted(events)); assert.equal(state.public_awards.length, 0); assert.equal(state.families['family-test']!.settled_milestones.length, 1); });
+
+
+test('authorized zero-credit regrade appends only the unoccupied increment on the original milestone', () => {
+ const earlier=event(1,5);const zero=event(2,5,102,{allocation_shares:[]});
+ const upgrade=event(3,10,102,{target_event_id:zero.id,pr_number:zero.pr_number,milestone_id:zero.milestone_id,earned_at:zero.earned_at,artifact_binding_digest:'b'.repeat(64)});
+ const events=[earlier,zero,upgrade];const state=replayLedger(events,[family()],trusted(events));
+ assert.deepEqual(state.public_awards.map(a=>[a.pr_number,a.units,a.earned_at]),[[1,50000,earlier.earned_at],[2,50000,zero.earned_at]]);
+ assert.equal(state.awards[zero.id]!.original_units,0);assert.equal(state.families['family-test']!.settled_milestones.length,2);
+ assert.throws(()=>replayLedger([earlier,zero,{...upgrade,target_event_id:earlier.id}],[family()],trusted(events)),/uncredited milestone/);
+ assert.throws(()=>replayLedger([earlier,zero,{...upgrade,artifact_binding_digest:zero.artifact_binding_digest}],[family()],trusted(events)),/uncredited milestone/);
+ assert.throws(()=>replayLedger([earlier,zero,{...upgrade,cumulative_tier:5}],[family()],trusted(events)),/uncredited milestone/);
+ const repeated={...upgrade,id:'repeat',sequence:4,assessment_id:'another',cumulative_tier:20 as const};
+ assert.throws(()=>replayLedger([...events,repeated],[family()],trusted(events)),/uncredited milestone/);
+});
