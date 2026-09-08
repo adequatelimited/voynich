@@ -1,0 +1,425 @@
+{
+  "schema_version": "1.0",
+  "research_pr": 13,
+  "merge_sha": "dda4b2746744cad6045e09f81225a5da0bda33b3",
+  "events": [
+    {
+      "schema_version": "1.0",
+      "id": "decision-13-family-generative-falsification-meaning-probes-af5a9430c919",
+      "sequence": 19,
+      "kind": "award",
+      "family_id": "family-generative-falsification-meaning-probes",
+      "rubric_version": "0.1",
+      "category": "experiments",
+      "repository_id": 1359336540,
+      "pr_number": 13,
+      "milestone_id": "milestone-1359336540-13-family-generative-falsification-meaning-probes",
+      "earned_at": "2026-09-08T03:46:22Z",
+      "assessment_id": "assessment-4f3919b71810a9dd8561fc22f8801e39",
+      "artifact_binding_digest": "af5a9430c919f0615fac1de52142cfa80887fc3407b54f07c19ed79e0e3442a9",
+      "authority_receipt_ref": "receipt:job-af5a9430c919f0615fac1de52142cfa80887fc34",
+      "cumulative_tier": 2,
+      "allocation_shares": [
+        {
+          "github_id": 859355,
+          "share_basis_points": 10000,
+          "status": "paid",
+          "acknowledgment_receipt_ref": "github-pr:1359336540:13:bae0bd898933179c2abf091615522e06d06a72da:4f21cedcbb1e252f5ea8e9cb250e986570d4b0f5fea6441ae1b5fbb8f11959a8:5e16fe6ee3fd5d334eed52f0d5265547580ee760c62968f4d5512a1a3cf1069b"
+        }
+      ],
+      "reason": "A genuinely new diagnostic battery testing interpretive content at manuscript positions not examined by any predecessor family. Distinct from all compared families; per CREDIT_IS_NOT_LINEAGE_V1 the shared predecessor citation and reused glyph-unit segmentation do not bind this into any existing family's occupied credit. Claimed tier 2 matches supported evidence; a new unoccupied family_id is required."
+    }
+  ],
+  "families_added": [
+    {
+      "id": "family-generative-falsification-meaning-probes",
+      "rubric_version": "0.1",
+      "scope": "Six pre-registered, adversarially-verified 'meaning probes' at the glyph-unit level (fixed by the frozen 20-merge byte-pair re-segmentation from a prior discriminating-tests result) testing whether the zodiac nymph labels form a numeral system (Z1 ordinal gradient, Z2 same-slot correspondence, Z3 fixed inventory, Z4 positional morphology), whether Recipes paragraph openers carry an entry-word formula (R1) or the drawn stars index text (R2), and whether label register vs running-text morphology shows a name/grammar split (L1). All six gates fail under the frozen decision rule; Z4's own JSON PASS is overridden to FAIL by a disclosed erratum after adversarial review found the passing statistic depended on an unregistered remainder convention and an unregistered seed. The report measures detection floors for each null result and identifies one non-registered observation (q-initial depletion of labels) explicitly not claimed as a finding. 34 adversarial verifier scripts materially corrected several claims in the original test outputs.",
+      "acceptance_test": "Run t_z1.py, t_z2z3.py, t_z4.py, t_r1r2.py, t_l1.py from experiments/meaning-probes/; confirm results/*.json match the reported verdicts (Z1/Z2/Z3/Z4 all FAIL per REPORT.md's erratum overriding the raw Z4 JSON PASS, R1a PASS with no meaning claim attached, R1b NOT MEASURABLE, R1c/R2/L1 FAIL), and that REPORT.md's adversarial-review table accounts for all 34 verifier script outputs and their corrections.",
+      "aliases": [],
+      "predecessor_family_ids": [],
+      "excluded_overlap": [
+        "Does not claim credit for the pinned ZL3b/GC2a corpus or parser (seed-corpus-parser), used only as input.",
+        "Does not claim or duplicate the clean-parser contamination audit, alphabet-normalization test, cipher-reconstruction, or permutation-null confound findings credited under family-generative-falsification-adversarial-audit.",
+        "Does not claim the byte-pair-merge segmentation-dependence result (T2) or illustration-linked-vocabulary test (T1) credited under family-generative-falsification-discriminating-tests.",
+        "Does not claim or extend the Cardan table-and-grille (M5a/M5b) mechanism experiment credited under family-generative-falsification.",
+        "Does not claim the Stolfi word-grammar template generator or its Culpeper/Alice measurements credited under family-generative-falsification-word-grammar-template.",
+        "Does not claim the M1/M2 syllable-table/self-citation pilot or the M3 per-page entry/topic-carryover generator credited under their respective families."
+      ],
+      "seed": false,
+      "seed_baseline": 0
+    }
+  ],
+  "milestones": [
+    {
+      "id": "milestone-1359336540-13-family-generative-falsification-meaning-probes",
+      "family_id": "family-generative-falsification-meaning-probes",
+      "repository_id": 1359336540,
+      "pr_number": 13,
+      "earned_at": "2026-09-08T03:46:22Z",
+      "depends_on": []
+    }
+  ],
+  "assessment": {
+    "schema_version": "1.0",
+    "assessment_id": "assessment-4f3919b71810a9dd8561fc22f8801e39",
+    "artifact_binding_digest": "4f3919b71810a9dd8561fc22f8801e3995d6181f1df8cd6909eff30710a4c917",
+    "merit_evidence_digest": "f13f7e622f3e43df32bf4625aec8c38988475bef2e9b591da077817d9aee575d",
+    "repository_id": 1359336540,
+    "pr_number": 13,
+    "head_sha": "bae0bd898933179c2abf091615522e06d06a72da",
+    "base_sha": "6c763430d276ca602a12293d69341fa9b9c273fd",
+    "rules_version": "0.1",
+    "rubric_version": "0.1",
+    "grading_profile": "voynich-sonnet-ai-pilot-2026-09-07-v14",
+    "evaluator_commit": "6c763430d276ca602a12293d69341fa9b9c273fd",
+    "mode": "official_proposal",
+    "status": "complete",
+    "claimed_score": 2,
+    "expected_score": 2,
+    "official_proposed_score": 2,
+    "awarded_score": null,
+    "assessment": {
+      "schema_version": "1.0",
+      "admission_action": "accept",
+      "score_status": "proposed",
+      "conduct_status": "clear",
+      "findings": [],
+      "outcomes": [
+        {
+          "family_id": "family-generative-falsification-meaning-probes",
+          "scope": "Six pre-registered, adversarially-verified 'meaning probes' at the glyph-unit level (fixed by the frozen 20-merge byte-pair re-segmentation from a prior discriminating-tests result) testing whether the zodiac nymph labels form a numeral system (Z1 ordinal gradient, Z2 same-slot correspondence, Z3 fixed inventory, Z4 positional morphology), whether Recipes paragraph openers carry an entry-word formula (R1) or the drawn stars index text (R2), and whether label register vs running-text morphology shows a name/grammar split (L1). All six gates fail under the frozen decision rule; Z4's own JSON PASS is overridden to FAIL by a disclosed erratum after adversarial review found the passing statistic depended on an unregistered remainder convention and an unregistered seed. The report measures detection floors for each null result and identifies one non-registered observation (q-initial depletion of labels) explicitly not claimed as a finding. 34 adversarial verifier scripts materially corrected several claims in the original test outputs.",
+          "category": "experiments",
+          "predecessors": [
+            "outcome-discriminating-tests",
+            "outcome-clean-rerun",
+            "outcome-adversarial-critique"
+          ],
+          "aliases": [],
+          "claimed_tier": 2,
+          "assessed_tier": 2,
+          "gate_evidence": [
+            {
+              "gate": "G1",
+              "status": "pass",
+              "evidence_refs": [
+                "experiments/meaning-probes/PROTOCOL.md"
+              ],
+              "reason": "Directly targets whether recoverable structure (numerals, entry formula, label register split) exists at specific manuscript positions, a clearly scoped research question building on a prior re-segmentation result."
+            },
+            {
+              "gate": "G2",
+              "status": "pass",
+              "evidence_refs": [
+                "contributions/meaning-probes/rights.md"
+              ],
+              "reason": "Uses only repo-pinned ZL3b/GC2a corpora and Culpeper control with documented provenance and hashes; no new redistribution claims."
+            },
+            {
+              "gate": "G3",
+              "status": "pass",
+              "evidence_refs": [
+                "experiments/meaning-probes/t_z1.py",
+                "experiments/meaning-probes/results/z1.json",
+                "experiments/meaning-probes/results/l1.json",
+                "experiments/meaning-probes/REPORT.md"
+              ],
+              "reason": "Commands, seeds, sha256-pinned inputs, and complete outputs supplied as ordinary submitted-run evidence for every test and all 34 verifier scripts; no independently authenticated execution receipt exists, so tier 10 is not claimed."
+            },
+            {
+              "gate": "G4",
+              "status": "pass",
+              "evidence_refs": [
+                "experiments/meaning-probes/REPORT.md"
+              ],
+              "reason": "Extensive disclosed uncertainty, ambiguity resolutions, measured detection floors, and an explicit errata section overriding the raw Z4 JSON PASS to FAIL."
+            },
+            {
+              "gate": "G5",
+              "status": "pass",
+              "evidence_refs": [
+                "contributions/meaning-probes/contribution.yaml"
+              ],
+              "reason": "Human contributor and two distinct AI model roles/tasks disclosed with verification notes."
+            },
+            {
+              "gate": "G6",
+              "status": "pass",
+              "evidence_refs": [
+                "experiments/meaning-probes/results/completeness_critic.md"
+              ],
+              "reason": "Tests entirely new positions not covered by prior generative-falsification, adversarial-audit, or discriminating-tests outcomes; explicitly excludes those families' credited results."
+            },
+            {
+              "gate": "G7",
+              "status": "pass",
+              "evidence_refs": [
+                "experiments/meaning-probes/results/completeness_critic.md",
+                "experiments/meaning-probes/REPORT.md"
+              ],
+              "reason": "34 adversarial verifier scripts included; report documents corrections and reversed claims rather than concealing them."
+            }
+          ],
+          "attribution_status": "verified",
+          "reason": "A genuinely new diagnostic battery testing interpretive content at manuscript positions not examined by any predecessor family. Distinct from all compared families; per CREDIT_IS_NOT_LINEAGE_V1 the shared predecessor citation and reused glyph-unit segmentation do not bind this into any existing family's occupied credit. Claimed tier 2 matches supported evidence; a new unoccupied family_id is required.",
+          "family_decision": "new",
+          "family_comparisons": [
+            {
+              "family_id": "family-generative-falsification",
+              "existing_scope": "Pilot 4 in the generative-mechanism falsification family: implements the Cardan table-and-grille device (M5a independent-column, M5b row-coupled) built from the pinned ZL3b corpus, measures composite distance against real manuscript statistics across 28 configurations plus multi-seed stability, and narrows the residual gap to two local metrics (conditional bigram entropy, word-final predictability), extending outcome-m4-template-doodler-pilot.",
+              "relationship": "distinct_outcome",
+              "reason": "The claimant nominates this family_id as an extension, but the delivered result (interpretive-content probes on zodiac labels/openers/stars/label register) is a substantively different capability from the credited table-and-grille mechanism-fitting experiment; no shared mechanism, generator, or metric is reused for credit."
+            },
+            {
+              "family_id": "family-generative-falsification-discriminating-tests",
+              "existing_scope": "Two newly executed pre-registered discriminating tests against the pinned ZL3b corpus: (T2) a data-chosen byte-pair-merge re-segmentation test (hypothesis contributed by V. Gnuchev) showing the manuscript's H2|1 letter-pair anomaly is SEGMENTATION-DEPENDENT under a frozen decision rule -- at 40-60 symbol alphabets the gap to the lowest-entropy control language closes to 0.07-0.15 bits, with caveats that the crossover language (Greek) has an already-large raw alphabet (45 symbols), the gap against Latin/Finnish/Italian/English stays 0.2-0.6 bits at that size, and the association-merge criterion closes the gap less (0.21 bits); and (T1) the first executed illustration-linked-vocabulary test (editorial same-plant/similar-plant identifications vs text-sharing) across 12 same-plant and 28 similar-plant pairs with permutation and distance-matched nulls, found UNDERPOWERED because its own Culpeper positive control fails (p=0.44), with an exploratory size-corrected content-word lift statistic identified as the form that would give the test power.",
+              "relationship": "distinct_outcome",
+              "reason": "Reuses T2's frozen 20-merge glyph-unit output only as a fixed input segmentation level; delivers a wholly new result set not part of T1/T2's scope or credited findings."
+            },
+            {
+              "family_id": "family-generative-falsification-adversarial-audit",
+              "existing_scope": "A pre-registered, frozen-decision-rule adversarial audit of six prior generative-falsification family claims: (1) discovery and quantification that the shared corpus parser used by prior pilots leaves IVTFF markup inside ~24% of published types, requiring restatement of all headline manuscript metrics under a newly implemented clean parser (with two uncertain-space treatment variants); (2) an alphabet-confound test showing the H2|1 anomaly is robust to EVA multigraph/determinism-merge alphabet normalization but the final-glyph anomaly is alphabet-dependent (0.08-0.27 bit gap depending on glyph-identity assumptions); (3) five untuned cipher constructions applied to real Latin/Culpeper plaintexts, showing a plain verbose cipher of Latin reproduces both entropy residues and fails only a type-ratio gate calibrated to the contaminated parser count; (4) permutation-null and Currier-language/section confound analysis showing the 'neighbouring-page 2x sharing' and '30% page-private' structural claims are largely artefacts of language/section confounding and hapax richness; (5) a new medieval-orthography control (two Chaucer editions) testing whether the vocabulary-richness anomaly survives non-standardized spelling.",
+              "relationship": "distinct_outcome",
+              "reason": "This submission's readability-hypothesis tests are entirely different questions and methods from the audit's parser/alphabet/cipher/confound structural findings; only shared clean-parser semantics are reused as infrastructure."
+            },
+            {
+              "family_id": "family-generative-falsification-word-grammar-template",
+              "existing_scope": "A distinct generative-mechanism falsification pilot implementing Stolfi's published 2000 word grammar (core/mantle/crust unimodal-hill slot structure) as a template generator embedded in an entry/topic-carryover engine, and measuring two real-language positive controls (Culpeper's Complete Herbal 1653, Alice in Wonderland) with the identical metric suite against the pinned ZL3b corpus across 12 grid variants, showing (a) real language differs from the manuscript on conditional entropy, final-char entropy and entry-private vocabulary share, reframing prior 'unmatched by content-free generators' results away from a linguistic-content reading, and (b) the published grammar covers 86% of corpus word types with zero fitting and jointly reproduces vocabulary size, ttr, word length and page-sharing, leaving a residual mechanical-repetition signature (H2|1, final-char entropy, Zipf slope, entry-unique overshoot).",
+              "relationship": "distinct_outcome",
+              "reason": "No shared generator, grammar, or metric; this submission tests interpretive content at specific manuscript loci rather than fitting a word-grammar template generator against corpus-wide statistics."
+            }
+          ],
+          "source_outcome_ids": [
+            "outcome-meaning-probes"
+          ],
+          "acceptance_test": "Run t_z1.py, t_z2z3.py, t_z4.py, t_r1r2.py, t_l1.py from experiments/meaning-probes/; confirm results/*.json match the reported verdicts (Z1/Z2/Z3/Z4 all FAIL per REPORT.md's erratum overriding the raw Z4 JSON PASS, R1a PASS with no meaning claim attached, R1b NOT MEASURABLE, R1c/R2/L1 FAIL), and that REPORT.md's adversarial-review table accounts for all 34 verifier script outputs and their corrections.",
+          "excluded_overlap": [
+            "Does not claim credit for the pinned ZL3b/GC2a corpus or parser (seed-corpus-parser), used only as input.",
+            "Does not claim or duplicate the clean-parser contamination audit, alphabet-normalization test, cipher-reconstruction, or permutation-null confound findings credited under family-generative-falsification-adversarial-audit.",
+            "Does not claim the byte-pair-merge segmentation-dependence result (T2) or illustration-linked-vocabulary test (T1) credited under family-generative-falsification-discriminating-tests.",
+            "Does not claim or extend the Cardan table-and-grille (M5a/M5b) mechanism experiment credited under family-generative-falsification.",
+            "Does not claim the Stolfi word-grammar template generator or its Culpeper/Alice measurements credited under family-generative-falsification-word-grammar-template.",
+            "Does not claim the M1/M2 syllable-table/self-citation pilot or the M3 per-page entry/topic-carryover generator credited under their respective families."
+          ]
+        }
+      ],
+      "inspected_paths": [
+        "contributions/meaning-probes/contribution.yaml",
+        "contributions/meaning-probes/rights.md",
+        "experiments/meaning-probes/PROTOCOL.md",
+        "experiments/meaning-probes/REPORT.md",
+        "experiments/meaning-probes/meaning_lib.py",
+        "experiments/meaning-probes/results/_v_z2z3_confound_2.json",
+        "experiments/meaning-probes/results/_v_z2z3_confound_3.json",
+        "experiments/meaning-probes/results/_v_z2z3_confound_4.json",
+        "experiments/meaning-probes/results/completeness_critic.md",
+        "experiments/meaning-probes/results/l1.json",
+        "experiments/meaning-probes/results/l1.stdout.txt",
+        "experiments/meaning-probes/results/r1r2.json",
+        "experiments/meaning-probes/results/r1r2.stdout.txt",
+        "experiments/meaning-probes/results/v_l1_confound_1.stdout.txt",
+        "experiments/meaning-probes/results/v_l1_confound_2.json",
+        "experiments/meaning-probes/results/v_l1_confound_2.stdout.txt",
+        "experiments/meaning-probes/results/v_l1_confound_3.json",
+        "experiments/meaning-probes/results/v_l1_confound_3.stdout.txt",
+        "experiments/meaning-probes/results/v_l1_null-correctness_a.json",
+        "experiments/meaning-probes/results/v_l1_null-correctness_a.stdout.txt",
+        "experiments/meaning-probes/results/v_l1_null-correctness_b.json",
+        "experiments/meaning-probes/results/v_l1_null-correctness_b.stdout.txt",
+        "experiments/meaning-probes/results/v_l1_null-correctness_c.stdout.txt",
+        "experiments/meaning-probes/results/v_l1_null-correctness_d.stdout.txt",
+        "experiments/meaning-probes/results/v_l1_null-correctness_e.stdout.txt",
+        "experiments/meaning-probes/results/v_l1_null-correctness_f.json",
+        "experiments/meaning-probes/results/v_l1_null-correctness_f.stdout.txt",
+        "experiments/meaning-probes/results/v_l1_null-correctness_g.stdout.txt",
+        "experiments/meaning-probes/results/v_l1_reimpl_a.json",
+        "experiments/meaning-probes/results/v_l1_reimpl_a.stdout.txt",
+        "experiments/meaning-probes/results/v_l1_reimpl_b.json",
+        "experiments/meaning-probes/results/v_l1_reimpl_b.stdout.txt",
+        "experiments/meaning-probes/results/v_r1r2_confound_1.json",
+        "experiments/meaning-probes/results/v_r1r2_confound_1.stdout.txt",
+        "experiments/meaning-probes/results/v_r1r2_confound_2.json",
+        "experiments/meaning-probes/results/v_r1r2_confound_2.stdout.txt",
+        "experiments/meaning-probes/results/v_r1r2_confound_3.stdout.txt",
+        "experiments/meaning-probes/results/v_r1r2_reimpl_a.json",
+        "experiments/meaning-probes/results/v_r1r2_reimpl_b.json",
+        "experiments/meaning-probes/results/v_r1r2_reimpl_c.json",
+        "experiments/meaning-probes/results/v_z1_confound_1.stdout.txt",
+        "experiments/meaning-probes/results/v_z1_confound_2.stdout.txt",
+        "experiments/meaning-probes/results/v_z1_confound_3.stdout.txt",
+        "experiments/meaning-probes/results/v_z1_confound_4.stdout.txt",
+        "experiments/meaning-probes/results/v_z2z3_reimplementation_a.json",
+        "experiments/meaning-probes/results/v_z4_confound_1.json",
+        "experiments/meaning-probes/results/v_z4_confound_1.stdout.txt",
+        "experiments/meaning-probes/results/v_z4_confound_2.json",
+        "experiments/meaning-probes/results/v_z4_confound_2.stdout.txt",
+        "experiments/meaning-probes/results/v_z4_confound_3.json",
+        "experiments/meaning-probes/results/v_z4_confound_3.stdout.txt",
+        "experiments/meaning-probes/results/v_z4_confound_4.stdout.txt",
+        "experiments/meaning-probes/results/v_z4_null-correctness.stdout.txt",
+        "experiments/meaning-probes/results/v_z4_null-correctness_decision.stdout.txt",
+        "experiments/meaning-probes/results/v_z4_null-correctness_family.stdout.txt",
+        "experiments/meaning-probes/results/v_z4_reimplementation_a.json",
+        "experiments/meaning-probes/results/v_z4_reimplementation_a.stdout.txt",
+        "experiments/meaning-probes/results/v_z4_reimplementation_b.json",
+        "experiments/meaning-probes/results/v_z4_reimplementation_b.stdout.txt",
+        "experiments/meaning-probes/results/v_z4_reimplementation_c.json",
+        "experiments/meaning-probes/results/v_z4_reimplementation_c.stdout.txt",
+        "experiments/meaning-probes/results/z1.json",
+        "experiments/meaning-probes/results/z1.stdout.txt",
+        "experiments/meaning-probes/results/z2z3.json",
+        "experiments/meaning-probes/results/z2z3.stdout.txt",
+        "experiments/meaning-probes/results/z4.json",
+        "experiments/meaning-probes/results/z4.stdout.txt",
+        "experiments/meaning-probes/smoke.py",
+        "experiments/meaning-probes/t_l1.py",
+        "experiments/meaning-probes/t_r1r2.py",
+        "experiments/meaning-probes/t_z1.py",
+        "experiments/meaning-probes/t_z2z3.py",
+        "experiments/meaning-probes/t_z4.py",
+        "experiments/meaning-probes/v_l1_confound_1.py",
+        "experiments/meaning-probes/v_l1_confound_2.py",
+        "experiments/meaning-probes/v_l1_confound_3.py",
+        "experiments/meaning-probes/v_l1_null-correctness_a.py",
+        "experiments/meaning-probes/v_l1_null-correctness_b.py",
+        "experiments/meaning-probes/v_l1_null-correctness_c.py",
+        "experiments/meaning-probes/v_l1_null-correctness_d.py",
+        "experiments/meaning-probes/v_l1_null-correctness_e.py",
+        "experiments/meaning-probes/v_l1_null-correctness_f.py",
+        "experiments/meaning-probes/v_l1_null-correctness_g.py",
+        "experiments/meaning-probes/v_l1_reimplementation_a.py",
+        "experiments/meaning-probes/v_l1_reimplementation_b.py",
+        "experiments/meaning-probes/v_r1r2_confound_1.py",
+        "experiments/meaning-probes/v_r1r2_confound_2.py",
+        "experiments/meaning-probes/v_r1r2_confound_3.py",
+        "experiments/meaning-probes/v_r1r2_null-correctness_calib.py",
+        "experiments/meaning-probes/v_r1r2_null-correctness_dump.py",
+        "experiments/meaning-probes/v_r1r2_null-correctness_final.py",
+        "experiments/meaning-probes/v_r1r2_null-correctness_r2.py",
+        "experiments/meaning-probes/v_r1r2_null-correctness_recheck.py",
+        "experiments/meaning-probes/v_r1r2_reimplementation_a.py",
+        "experiments/meaning-probes/v_r1r2_reimplementation_b.py",
+        "experiments/meaning-probes/v_r1r2_reimplementation_c.py",
+        "experiments/meaning-probes/v_r1r2_reimplementation_d.py",
+        "experiments/meaning-probes/v_z1_confound_1.py",
+        "experiments/meaning-probes/v_z1_confound_2.py",
+        "experiments/meaning-probes/v_z1_confound_3.py",
+        "experiments/meaning-probes/v_z1_confound_4.py",
+        "experiments/meaning-probes/v_z1_null-correctness_1.py",
+        "experiments/meaning-probes/v_z1_null-correctness_2.py",
+        "experiments/meaning-probes/v_z1_null-correctness_3.py",
+        "experiments/meaning-probes/v_z1_reimpl_a.json",
+        "experiments/meaning-probes/v_z1_reimpl_b.json",
+        "experiments/meaning-probes/v_z1_reimplementation_a.py",
+        "experiments/meaning-probes/v_z1_reimplementation_b.py",
+        "experiments/meaning-probes/v_z2z3_confound_1.py",
+        "experiments/meaning-probes/v_z2z3_confound_2.py",
+        "experiments/meaning-probes/v_z2z3_confound_3.py",
+        "experiments/meaning-probes/v_z2z3_confound_4.py",
+        "experiments/meaning-probes/v_z2z3_null-correctness_powercurve.py",
+        "experiments/meaning-probes/v_z2z3_null-correctness_recompute.py",
+        "experiments/meaning-probes/v_z2z3_null-correctness_ttr.py",
+        "experiments/meaning-probes/v_z2z3_reimplementation_a.py",
+        "experiments/meaning-probes/v_z2z3_reimplementation_b.py",
+        "experiments/meaning-probes/v_z4_confound_1.py",
+        "experiments/meaning-probes/v_z4_confound_2.py",
+        "experiments/meaning-probes/v_z4_confound_3.py",
+        "experiments/meaning-probes/v_z4_confound_4.py",
+        "experiments/meaning-probes/v_z4_null-correctness_decision.py",
+        "experiments/meaning-probes/v_z4_null-correctness_family.py",
+        "experiments/meaning-probes/v_z4_null-correctness_recompute.py",
+        "experiments/meaning-probes/v_z4_null-correctness_splits.py",
+        "experiments/meaning-probes/v_z4_reimplementation_a.py",
+        "experiments/meaning-probes/v_z4_reimplementation_b.py",
+        "experiments/meaning-probes/v_z4_reimplementation_c.py",
+        "experiments/runs/2026-09-07T140000Z-meaning-probes/run.json",
+        "research/context-index.json"
+      ],
+      "inspection_gaps": [],
+      "next_action": "Accept and merge at tier 2 as a new distinct family (family-generative-falsification-meaning-probes), consistent with both prior reports' conclusions. The submission is admissible, well-evidenced, and correctly resolves the family-nomination discrepancy under CREDIT_IS_NOT_LINEAGE_V1: the claimant's nominated family_id (family-generative-falsification) is occupied by a distinct table-and-grille result, so this outcome is registered under a new unoccupied ID. No revision is required for acceptance at tier 2.",
+      "appeal_route": "If the contributor believes tier 5 or 10 is warranted, they may request review citing the rubric's Experiments-row anchors (informative controlled pilot vs. reproducible discrimination/falsification) and the specific evidence (e.g., the 34-script adversarial verification suite, calibrated detection floors) supporting an upgrade. Disputes over family placement may be raised via the standard family-alias/consolidation review referencing FAMILY_IDENTITY_GUARD_V1 and CREDIT_IS_NOT_LINEAGE_V1, citing the specific already-credited result claimed to overlap."
+    },
+    "stages": [
+      {
+        "stage": "adjudicator",
+        "provider": "anthropic",
+        "model": "claude-sonnet-5",
+        "exposed_version": "claude-sonnet-5",
+        "prompt_digest": "e1291a3ce72cedf5bcf1241c8e2c6ad85b8462eb9ad0f776deb80d63a7e3cc5d",
+        "response_digest": "06a7cfec38ab5e745534096f18d11fddd1307064cd25c1ccb139ada6e631817b",
+        "started_at": "2026-09-08T03:42:40.075Z",
+        "completed_at": "2026-09-08T03:45:49.552Z",
+        "usage": {
+          "sessions": 1,
+          "input_bytes": 1193845,
+          "output_bytes": 130903,
+          "runtime_ms": 188595
+        },
+        "receipt_ref": "stage-results/job-af5a9430c919f0615fac1de52142cfa80887fc34/adjudicator.json"
+      },
+      {
+        "stage": "adversary",
+        "provider": "anthropic",
+        "model": "claude-sonnet-5",
+        "exposed_version": "claude-sonnet-5",
+        "prompt_digest": "c61459c037fef846eff80c7a0c49d59e8fb4629bd9a336ddbeed0ce0096804b5",
+        "response_digest": "3a9d3adcbd03a4f569b782058b5491e93ae4a7dbf64eb793829bb714ccfe9d44",
+        "started_at": "2026-09-08T03:38:58.238Z",
+        "completed_at": "2026-09-08T03:41:39.892Z",
+        "usage": {
+          "sessions": 1,
+          "input_bytes": 1163790,
+          "output_bytes": 112302,
+          "runtime_ms": 160774
+        },
+        "receipt_ref": "stage-results/job-af5a9430c919f0615fac1de52142cfa80887fc34/adversary.json"
+      },
+      {
+        "stage": "assessor",
+        "provider": "anthropic",
+        "model": "claude-sonnet-5",
+        "exposed_version": "claude-sonnet-5",
+        "prompt_digest": "364833934bb7f121f2404c4cf1b9520603a0d5d18643a5e3565d23413152bacd",
+        "response_digest": "cebc944d73602593e43451a682b8f1977b71cfd1caf408eefc740844e83515fc",
+        "started_at": "2026-09-08T03:35:36.035Z",
+        "completed_at": "2026-09-08T03:38:12.058Z",
+        "usage": {
+          "sessions": 1,
+          "input_bytes": 1163671,
+          "output_bytes": 104919,
+          "runtime_ms": 154918
+        },
+        "receipt_ref": "stage-results/job-af5a9430c919f0615fac1de52142cfa80887fc34/assessor.json"
+      }
+    ],
+    "disagreements": [
+      "Material independent-assessment disagreement or invalid proposal."
+    ],
+    "holds": [],
+    "reused_assessment_id": null
+  },
+  "receipt": {
+    "schema_version": "1.0",
+    "id": "receipt:job-af5a9430c919f0615fac1de52142cfa80887fc34",
+    "key_id": "voynich-2026-09-06",
+    "issued_at": "2026-09-08T03:47:33.493Z",
+    "payload": {
+      "repository_id": 1359336540,
+      "events_digest": "95732bd515be6c6926171b7ada219461ff55e7914d5708a6516887f502919e4d",
+      "milestones_digest": "59dde7c62c9cde423daf5d65580dbcd1554ec4e5b9a90391c64e819320293f9f",
+      "families_digest": "00a83a17783785cab7f9e7821dd7dc2541197a737d1c3ed8d45f087c1f14d9df",
+      "merge_sha": "dda4b2746744cad6045e09f81225a5da0bda33b3",
+      "assessed_head": "bae0bd898933179c2abf091615522e06d06a72da",
+      "artifact_digest": "af5a9430c919f0615fac1de52142cfa80887fc3407b54f07c19ed79e0e3442a9",
+      "profile_digest": "3c3123ca26e1e41f8b8a8b6eb090bebcad35d428965e989fd8548445e6175a06",
+      "report_digest": "94965d0756340c6a0852c8ff8ae01b72eb4c5b27bb774cb6fdc4f79c38962fa8",
+      "stage_receipt_refs": [
+        "stage-results/job-af5a9430c919f0615fac1de52142cfa80887fc34/adjudicator.json",
+        "stage-results/job-af5a9430c919f0615fac1de52142cfa80887fc34/adversary.json",
+        "stage-results/job-af5a9430c919f0615fac1de52142cfa80887fc34/assessor.json"
+      ]
+    },
+    "payload_digest": "73224045edb83ffad0aa1dd9b025586c6c66d14ab2a3f850bad0682772952268",
+    "signature": "39m_WGSro3BMuKDBYoCeSYGCQ7AXI9-Plds1IJuZ6yMWMwM-GPioDNBIVp7NEL3H7jrklXo4M9WSw7uT788_CA"
+  }
+}

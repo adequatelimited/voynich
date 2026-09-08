@@ -181,6 +181,25 @@
       "seed_baseline": 0
     },
     {
+      "id": "family-generative-falsification-discriminating-tests",
+      "rubric_version": "0.1",
+      "scope": "Two newly executed pre-registered discriminating tests against the pinned ZL3b corpus: (T2) a data-chosen byte-pair-merge re-segmentation test (hypothesis contributed by V. Gnuchev) showing the manuscript's H2|1 letter-pair anomaly is SEGMENTATION-DEPENDENT under a frozen decision rule -- at 40-60 symbol alphabets the gap to the lowest-entropy control language closes to 0.07-0.15 bits, with caveats that the crossover language (Greek) has an already-large raw alphabet (45 symbols), the gap against Latin/Finnish/Italian/English stays 0.2-0.6 bits at that size, and the association-merge criterion closes the gap less (0.21 bits); and (T1) the first executed illustration-linked-vocabulary test (editorial same-plant/similar-plant identifications vs text-sharing) across 12 same-plant and 28 similar-plant pairs with permutation and distance-matched nulls, found UNDERPOWERED because its own Culpeper positive control fails (p=0.44), with an exploratory size-corrected content-word lift statistic identified as the form that would give the test power.",
+      "acceptance_test": "Run `python discriminating_tests.py --repo ../.. --lab <dir with bibles/ and pg49513.txt> --out results/`; confirm results.json matches the recorded output: R8 gaps 0.652/0.151/0.065/0.089 at alphabet sizes 30/40/50/60 with crossover at 45 symbols (k=20, H2|1=3.089 matching Greek); R7 verdict UNDERPOWERED with Culpeper control N3 p≈0.44, T1a N1 p≈0.85, T1b N3 p≈0.21 and N4 p≈0.996.",
+      "aliases": [],
+      "predecessor_family_ids": [
+        "family-generative-falsification",
+        "family-generative-falsification-adversarial-audit"
+      ],
+      "excluded_overlap": [
+        "Does not claim the Cardan table-and-grille (M5a/M5b) mechanism experiment credited under family-generative-falsification.",
+        "Does not claim the parser-contamination, cipher, confound/permutation, or Chaucer-orthography findings credited under family-generative-falsification-adversarial-audit; reuses only its clean-parser/metric library (critique_lib.py, verbatim copy) as shared infrastructure.",
+        "Does not claim the fixed EVA-multigraph/determinism-merge alphabet-normalization result already credited under family-generative-falsification-adversarial-audit's alphabet-confound block; T2 is a distinct data-chosen byte-pair search method with distinct numeric results.",
+        "Does not claim the M1/M2, M3, or Stolfi-grammar generator pilots, the entry-ladder genre controls, the poetry control, or the languages-control Bible comparison credited under their respective families; reuses the nine Bible corpora and Culpeper/Alice only as inputs to the new T1/T2 tests."
+      ],
+      "seed": false,
+      "seed_baseline": 0
+    },
+    {
       "id": "family-generative-falsification-doodler",
       "rubric_version": "0.1",
       "scope": "A distinct generative-mechanism falsification pilot testing content-free syllable-table (Rugg-style, M1) and self-citation/preferential-reuse (Schinner-style, M2) generators against the pinned ZL3b corpus across 27 M2 grid variants plus M0/M1 baselines on 10 quantitative metrics, identifying which corpus properties (ttr, H1, vocabulary growth) are reproducible content-free and which (H2|1, word-final entropy, Zipf slope) are not, plus a diagnostic finding on verbatim-reuse rate needed to avoid type-explosion.",
@@ -295,20 +314,19 @@
       "seed_baseline": 0
     },
     {
-      "id": "family-generative-falsification-discriminating-tests",
+      "id": "family-generative-falsification-meaning-probes",
       "rubric_version": "0.1",
-      "scope": "Two newly executed pre-registered discriminating tests against the pinned ZL3b corpus: (T2) a data-chosen byte-pair-merge re-segmentation test (hypothesis contributed by V. Gnuchev) showing the manuscript's H2|1 letter-pair anomaly is SEGMENTATION-DEPENDENT under a frozen decision rule -- at 40-60 symbol alphabets the gap to the lowest-entropy control language closes to 0.07-0.15 bits, with caveats that the crossover language (Greek) has an already-large raw alphabet (45 symbols), the gap against Latin/Finnish/Italian/English stays 0.2-0.6 bits at that size, and the association-merge criterion closes the gap less (0.21 bits); and (T1) the first executed illustration-linked-vocabulary test (editorial same-plant/similar-plant identifications vs text-sharing) across 12 same-plant and 28 similar-plant pairs with permutation and distance-matched nulls, found UNDERPOWERED because its own Culpeper positive control fails (p=0.44), with an exploratory size-corrected content-word lift statistic identified as the form that would give the test power.",
-      "acceptance_test": "Run `python discriminating_tests.py --repo ../.. --lab <dir with bibles/ and pg49513.txt> --out results/`; confirm results.json matches the recorded output: R8 gaps 0.652/0.151/0.065/0.089 at alphabet sizes 30/40/50/60 with crossover at 45 symbols (k=20, H2|1=3.089 matching Greek); R7 verdict UNDERPOWERED with Culpeper control N3 p≈0.44, T1a N1 p≈0.85, T1b N3 p≈0.21 and N4 p≈0.996.",
+      "scope": "Six pre-registered, adversarially-verified 'meaning probes' at the glyph-unit level (fixed by the frozen 20-merge byte-pair re-segmentation from a prior discriminating-tests result) testing whether the zodiac nymph labels form a numeral system (Z1 ordinal gradient, Z2 same-slot correspondence, Z3 fixed inventory, Z4 positional morphology), whether Recipes paragraph openers carry an entry-word formula (R1) or the drawn stars index text (R2), and whether label register vs running-text morphology shows a name/grammar split (L1). All six gates fail under the frozen decision rule; Z4's own JSON PASS is overridden to FAIL by a disclosed erratum after adversarial review found the passing statistic depended on an unregistered remainder convention and an unregistered seed. The report measures detection floors for each null result and identifies one non-registered observation (q-initial depletion of labels) explicitly not claimed as a finding. 34 adversarial verifier scripts materially corrected several claims in the original test outputs.",
+      "acceptance_test": "Run t_z1.py, t_z2z3.py, t_z4.py, t_r1r2.py, t_l1.py from experiments/meaning-probes/; confirm results/*.json match the reported verdicts (Z1/Z2/Z3/Z4 all FAIL per REPORT.md's erratum overriding the raw Z4 JSON PASS, R1a PASS with no meaning claim attached, R1b NOT MEASURABLE, R1c/R2/L1 FAIL), and that REPORT.md's adversarial-review table accounts for all 34 verifier script outputs and their corrections.",
       "aliases": [],
-      "predecessor_family_ids": [
-        "family-generative-falsification",
-        "family-generative-falsification-adversarial-audit"
-      ],
+      "predecessor_family_ids": [],
       "excluded_overlap": [
-        "Does not claim the Cardan table-and-grille (M5a/M5b) mechanism experiment credited under family-generative-falsification.",
-        "Does not claim the parser-contamination, cipher, confound/permutation, or Chaucer-orthography findings credited under family-generative-falsification-adversarial-audit; reuses only its clean-parser/metric library (critique_lib.py, verbatim copy) as shared infrastructure.",
-        "Does not claim the fixed EVA-multigraph/determinism-merge alphabet-normalization result already credited under family-generative-falsification-adversarial-audit's alphabet-confound block; T2 is a distinct data-chosen byte-pair search method with distinct numeric results.",
-        "Does not claim the M1/M2, M3, or Stolfi-grammar generator pilots, the entry-ladder genre controls, the poetry control, or the languages-control Bible comparison credited under their respective families; reuses the nine Bible corpora and Culpeper/Alice only as inputs to the new T1/T2 tests."
+        "Does not claim credit for the pinned ZL3b/GC2a corpus or parser (seed-corpus-parser), used only as input.",
+        "Does not claim or duplicate the clean-parser contamination audit, alphabet-normalization test, cipher-reconstruction, or permutation-null confound findings credited under family-generative-falsification-adversarial-audit.",
+        "Does not claim the byte-pair-merge segmentation-dependence result (T2) or illustration-linked-vocabulary test (T1) credited under family-generative-falsification-discriminating-tests.",
+        "Does not claim or extend the Cardan table-and-grille (M5a/M5b) mechanism experiment credited under family-generative-falsification.",
+        "Does not claim the Stolfi word-grammar template generator or its Culpeper/Alice measurements credited under family-generative-falsification-word-grammar-template.",
+        "Does not claim the M1/M2 syllable-table/self-citation pilot or the M3 per-page entry/topic-carryover generator credited under their respective families."
       ],
       "seed": false,
       "seed_baseline": 0
@@ -317,6 +335,7 @@
   "credit_high_water_tiers": {
     "family-ms408-data-access": 5,
     "family-generative-falsification-adversarial-audit": 10,
+    "family-generative-falsification-discriminating-tests": 5,
     "family-generative-falsification-doodler": 5,
     "family-generative-falsification-entry-doodler": 5,
     "family-generative-falsification-word-grammar-template": 5,
@@ -324,9 +343,9 @@
     "family-generative-falsification-controls-entry-ladder": 2,
     "family-generative-falsification-poetry-control": 2,
     "family-generative-falsification-languages-control": 2,
-    "family-generative-falsification-discriminating-tests": 5
+    "family-generative-falsification-meaning-probes": 2
   },
-  "ledger_digest": "da04d51590a1f9960811b5c3768682b84a8133c4aa61755a124e9b73b46e2f43",
+  "ledger_digest": "8bf187f0181082b292ea3a9734bc845dd31dc02564bc3ce3709312ddbcd72d18",
   "public_evidence": [
     {
       "path": "research/context-index.json",
