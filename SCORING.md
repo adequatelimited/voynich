@@ -1,3 +1,7 @@
+## Current v10 clarification: credit distinct diagnostic results
+
+New evidence-supported diagnostic findings can earn their own credit even when they reuse existing generators or metrics. A research thread is not one capped outcome. Distinguish additional useful information from routine rerunning, cosmetic variations and repairs to the original acceptance defect. See [the release record](grading/releases/2026-09-08-distinct-diagnostics.md).
+
 ## Current v9 clarification: credit is not research ancestry
 
 A later result naming an earlier outcome as its predecessor does not establish that the earlier outcome was already rewarded. Family grouping requires substantive overlap in the actual delivered result or capability. Shared lineage, topic, code, inputs or diagnostics cannot replace that comparison. Preserve existing positive awards and assess distinct, useful upstream work separately. See [the release record](grading/releases/2026-09-07-credit-not-lineage.md).
