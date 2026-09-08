@@ -1,0 +1,99 @@
+schema_version: "1.0"
+id: "languages-control-morphology"
+kind: research
+title: "Multilingual same-text controls: no tested language reaches the manuscript's word-ending discipline"
+summary: >-
+  Multilingual control in the generative-falsification family, from a hypothesis by
+  Vasily Gnuchev: maybe a morphologically rich language naturally produces the
+  manuscript's word-ending predictability. The same text (Bible) in 9 languages at equal
+  35k-token samples, identical metrics. No language reaches the manuscript: nearest on
+  final-glyph entropy is Finnish (2.80 vs 2.58), nearest on letter-pair entropy is Greek
+  (3.14 vs 2.26); the manuscript also has the highest type diversity (0.289). Russian,
+  despite rich inflection, has the least predictable endings (4.23) — inflection alone
+  does not produce the discipline. Plain-natural-language reading weakens further;
+  encoded/invented-language and device readings unaffected.
+branch_ids: ["generative-mechanisms", "statistical-structure", "historical-comparanda"]
+contributors:
+  - github_id: 859355
+    github_login: "gnuchev"
+    roles: ["Conceptualization", "Formal analysis", "Resources"]
+ai_usage:
+  status: assisted
+  tools:
+    - provider: "Moonshot AI"
+      model_id: "kimi-k3"
+      model_version: "kimi-code/k3 (Kimi Code CLI; model string from local CLI config, 2026-09)"
+      accessed_at: "2026-09-07"
+      tasks:
+        - "Implementation of languages_control.py (XML parsing, sampling, metrics)"
+        - "Retrieval of the same-text multilingual corpus"
+        - "Drafting of report.md and this manifest"
+      human_verification: >-
+        The morphology hypothesis (test inflected languages; a Russian primer was also
+        suggested) was contributed by Vasily Gnuchev, 2026-09-07. XML parsing spot-checked
+        (token counts per language); all numbers from the recorded run output.
+  reproducibility_notes: >-
+    Deterministic: python languages_control.py --corpus ../../data/corpora/ZL3b-n.txt
+    --bibles <dir with the nine bible-corpus XMLs> --out results/. Stdlib only. Two
+    public-domain translations are committed (Latin Vulgate, English WEB); the rest are
+    referenced with sha256 hashes in source_hashes.json (reference_only).
+changes:
+  - path: "experiments/languages-control/languages_control.py"
+    improvement: "Same-text nine-language metric harness with equal-size sampling."
+  - path: "experiments/languages-control/report.md"
+    improvement: "Findings: language ladder; Finnish nearest but not reaching; Russian counter-surprise."
+  - path: "experiments/languages-control/results/results.json"
+    improvement: "Full metric table, 9 languages + Voynich."
+  - path: "experiments/languages-control/source_hashes.json"
+    improvement: "Sha256 + byte lengths for all nine translations; reference_only where rights not established."
+  - path: "data/corpora/bible-latin-vulgate.xml"
+    improvement: "Era-relevant inflected-language control, public domain (Vulgate)."
+  - path: "data/corpora/bible-english-web.xml"
+    improvement: "Public-domain English same-text control (WEB)."
+  - path: "data/manifests/bible-latin-vulgate.json"
+    improvement: "Schema manifest with fetched-byte hash."
+  - path: "data/manifests/bible-english-web.json"
+    improvement: "Schema manifest with fetched-byte hash."
+outcomes:
+  - id: "outcome-languages-control"
+    family_id: "family-generative-falsification"
+    extends: "outcome-poetry-control"
+    before: >-
+      All controls were English; the morphology objection (an inflected language might
+      naturally show manuscript-like endings) was untested.
+    after: >-
+      Nine languages on identical content show none reaches the manuscript on either
+      residual property; the nearest (Finnish, 2.80 vs 2.58) still falls short, and the
+      manuscript's type diversity exceeds every tested language. The morphology objection
+      is answered for the tested language set.
+    acceptance_test: >-
+      Run the documented command; confirm results.json matches: every language's
+      word-final entropy above the manuscript's 2.58 (nearest Finnish ~2.80) and every
+      language's H2|1 above 2.26 (nearest Greek ~3.14), with manuscript ttr highest.
+    evidence:
+      - "experiments/languages-control/languages_control.py"
+      - "experiments/languages-control/report.md"
+      - "experiments/languages-control/results/results.json"
+      - "experiments/languages-control/source_hashes.json"
+      - "data/corpora/bible-latin-vulgate.xml"
+      - "data/corpora/bible-english-web.xml"
+      - "data/manifests/bible-latin-vulgate.json"
+      - "data/manifests/bible-english-web.json"
+    related_outcomes: ["outcome-poetry-control", "outcome-controls-entry-ladder"]
+    claimed_cumulative_tier: 5
+    claimed_incremental_points: 2
+    claim_rationale: >-
+      Atlas "Experiments": bounded verified improvement (2) — same-text multilingual
+      control answering a named objection across the tested language set, with hashed
+      sources and honest redistribution scoping. Family cumulative stays 5.
+    attribution:
+      - github_id: 859355
+        share_basis_points: 10000
+claimed_total_points: 2
+rubric_version: "0.1"
+conflicts: []
+limitations:
+  - "Bible register in all languages; genre held constant but not encyclopedic."
+  - "Only Vulgate and WEB redistributed (public domain); other translations referenced by hash."
+  - "Prefix samples, not verse-aligned; a requested Russian primer control (Azbuka) remains queued for lack of a clean public full text."
+rights_manifest: "contributions/languages-control/rights.md"

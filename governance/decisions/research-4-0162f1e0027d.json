@@ -1,0 +1,296 @@
+{
+  "schema_version": "1.0",
+  "research_pr": 4,
+  "merge_sha": "584a2d4540c7581303f59bb3e4e4c908b139ccfe",
+  "events": [
+    {
+      "schema_version": "1.0",
+      "id": "decision-4-family-generative-falsification-0162f1e0027d",
+      "sequence": 4,
+      "kind": "upgrade",
+      "family_id": "family-generative-falsification",
+      "rubric_version": "0.1",
+      "category": "experiments",
+      "repository_id": 1359336540,
+      "pr_number": 4,
+      "milestone_id": "milestone-1359336540-4-family-generative-falsification",
+      "earned_at": "2026-09-07T18:49:23Z",
+      "assessment_id": "assessment-c70b1eb0df0d3d8ef8f081c439a651ee",
+      "artifact_binding_digest": "0162f1e0027d516679d50c523efcaaf060fe79a864494809d4cc96da7f3fd6d4",
+      "authority_receipt_ref": "receipt:job-0162f1e0027d516679d50c523efcaaf060fe79a8",
+      "cumulative_tier": 5,
+      "reason": "This is a well-documented, reproducible pilot extending an existing family with new real-corpus page-structure measurements and a working content-free generative model, meeting the tier-5 anchor for an informative reusable pilot (rubric section 5, tier-5 row: 'informative pilot another contributor can inspect/use'). Tier 10 is not supported: single corpus/seed, no cross-corpus (GC2a) check, no independently authenticated execution receipt, and a heuristic (not preregistered discriminating) composite distance metric. The two prior reports agreed on assessed tier 5 and admission accept; their disagreement was limited to a validation-schema defect (missing evidence_refs on one finding) and phrasing of the family-ledger caveat, both resolved here without altering the substantive tier judgment. Exact incremental credit above the existing family credit_high_water_tier of 5 is a deterministic broker computation, not a qualitative assessor decision, and is explained in findings rather than asserted as a specific number here."
+    }
+  ],
+  "families_added": [],
+  "milestones": [
+    {
+      "id": "milestone-1359336540-4-family-generative-falsification",
+      "family_id": "family-generative-falsification",
+      "repository_id": 1359336540,
+      "pr_number": 4,
+      "earned_at": "2026-09-07T18:49:23Z",
+      "depends_on": []
+    }
+  ],
+  "assessment": {
+    "schema_version": "1.0",
+    "assessment_id": "assessment-c70b1eb0df0d3d8ef8f081c439a651ee",
+    "artifact_binding_digest": "c70b1eb0df0d3d8ef8f081c439a651ee42afb52e1544351b27e00406d0464b7d",
+    "merit_evidence_digest": "c88ae2eb9315e34e9a5e07473e69f2fd48e8ccba6c3da7abe026faec13c66075",
+    "repository_id": 1359336540,
+    "pr_number": 4,
+    "head_sha": "6f98c4c4ceed2408648f2a6ed7a54319212c5216",
+    "base_sha": "e1bc712ffdbe8d575e751a055fc75885b789cf44",
+    "rules_version": "0.1",
+    "rubric_version": "0.1",
+    "grading_profile": "voynich-sonnet-ai-pilot-2026-09-07-v3",
+    "evaluator_commit": "ec609a1aaa23a5aaf6b4307859358e819bf033fe",
+    "mode": "official_proposal",
+    "status": "complete",
+    "claimed_score": 2,
+    "expected_score": 0,
+    "official_proposed_score": 0,
+    "awarded_score": null,
+    "assessment": {
+      "schema_version": "1.0",
+      "admission_action": "accept",
+      "score_status": "proposed",
+      "conduct_status": "clear",
+      "findings": [
+        {
+          "rule_id_or_gate": "G3",
+          "severity": "info",
+          "path_or_locus": "experiments/runs/2026-09-06T201500Z-entry-doodler-pilot/run.json",
+          "evidence_refs": [
+            "experiments/runs/2026-09-06T201500Z-entry-doodler-pilot/run.json",
+            "experiments/runs/2026-09-06T201500Z-entry-doodler-pilot/output.json"
+          ],
+          "reason": "run.json and output.json are ordinary submitted-run evidence (command, seed, corpus hash, full output) inspected in this snapshot. context.execution_receipts is empty, so no trusted independently authenticated execution receipt exists. This is sufficient to support the claimed and assessed tier (5, ordinary submitted-run evidence per rubric) but cannot support any tier requiring independently authenticated execution.",
+          "required_change": "None required for the assessed tier; if a future submission claims a tier requiring independent execution verification, supply a receipt reference present in context.execution_receipts.",
+          "verification_step": "Confirm context.execution_receipts remains empty; treat run.json/output.json strictly as ordinary evidence, not proof of independent execution.",
+          "blocks_merge_or_credit": false
+        },
+        {
+          "rule_id_or_gate": "R1/family-progression",
+          "severity": "info",
+          "path_or_locus": "contributions/entry-doodler-pilot/contribution.yaml",
+          "evidence_refs": [
+            "contributions/entry-doodler-pilot/contribution.yaml",
+            "research/context-index.json"
+          ],
+          "reason": "context.credit_high_water_tiers records family-generative-falsification at high-water 5. This submission's claimed_cumulative_tier is 5, matching the existing high-water rather than exceeding it. Both prior reports flagged this correctly as a broker arithmetic question (new_credit = max(0, approved_cumulative_tier - credit_high_water_tier)) rather than an assessor judgment; the qualitative assessed tier for this outcome, considered on its own evidentiary merits, is properly 5 per the rubric's tier-5 anchor for an informative reusable pilot. Whether any additional units are newly payable versus already consumed by the predecessor pilot is a deterministic ledger computation outside this qualitative judgment's scope.",
+          "required_change": "None required from the contributor. The broker resolves exact incremental units against the existing family ledger and predecessor outcome's settled tier.",
+          "verification_step": "Broker checks the ledger for outcome-generative-doodler-pilot's settled tier and computes the incremental credit for this outcome against credit_high_water_tiers['family-generative-falsification']=5.",
+          "blocks_merge_or_credit": false
+        },
+        {
+          "rule_id_or_gate": "G4",
+          "severity": "info",
+          "path_or_locus": "experiments/entry-doodler/report.md",
+          "evidence_refs": [
+            "experiments/entry-doodler/report.md",
+            "contributions/entry-doodler-pilot/contribution.yaml"
+          ],
+          "reason": "Limitations are disclosed in both report.md ('Limitations' section) and the manifest's limitations array: single corpus/seed, heuristic composite distance, foldout-adjacency confound, corpus-derived (not corpus-free) habit set, fitted (not paleographically derived) carry/topic parameters, and untested GC2a robustness.",
+          "required_change": "None.",
+          "verification_step": "Confirm the disclosed limitations remain present and substantive on any future head revision.",
+          "blocks_merge_or_credit": false
+        },
+        {
+          "rule_id_or_gate": "validation_conflict_resolution",
+          "severity": "info",
+          "path_or_locus": "$.findings[1]",
+          "evidence_refs": [
+            "experiments/entry-doodler/report.md"
+          ],
+          "reason": "One prior report's second finding (family-progression note) omitted the required evidence_refs field, causing a schema validation error ('$.findings[1].evidence_refs: Required field is missing'). This corrected assessment supplies evidence_refs on every finding, resolving the listed validation conflict without altering the substantive judgment (both prior reports agreed on tier 5, admission accept, and the same family-ledger caveat).",
+          "required_change": "None; this is the correction applied in this response.",
+          "verification_step": "Confirm all findings in this corrected object include a non-null evidence_refs array.",
+          "blocks_merge_or_credit": false
+        }
+      ],
+      "outcomes": [
+        {
+          "family_id": "family-generative-falsification",
+          "scope": "Pilot 2 (entry-doodler, M3) extending outcome-generative-doodler-pilot: adds real-corpus page-level structure measurements (adjacent/distant-page Jaccard, page-unique vocabulary share) and a content-free per-page entry generator reproducing those metrics, narrowing the unexplained residue to word-internal grammar (H2|1, Zipf slope, word length).",
+          "category": "experiments",
+          "predecessors": [
+            "outcome-generative-doodler-pilot"
+          ],
+          "aliases": [],
+          "claimed_tier": 5,
+          "assessed_tier": 5,
+          "attribution_status": "verified",
+          "gate_evidence": [
+            {
+              "gate": "G1",
+              "status": "pass",
+              "evidence_refs": [
+                "research/context-index.json",
+                "experiments/entry-doodler/report.md"
+              ],
+              "reason": "Directly addresses the generative-mechanisms, statistical-structure and layout-paleography branches by testing whether content-free page-structured generation can reproduce manuscript page-level statistics, extending the existing falsification family."
+            },
+            {
+              "gate": "G2",
+              "status": "pass",
+              "evidence_refs": [
+                "contributions/entry-doodler-pilot/rights.md"
+              ],
+              "reason": "Rights record clarifies original code/prose contributed under repository licenses; the corpus is the already-committed CC0-basis ZL3b-n.txt, read but not redistributed."
+            },
+            {
+              "gate": "G3",
+              "status": "pass",
+              "evidence_refs": [
+                "experiments/entry-doodler/entry_doodler.py",
+                "experiments/entry-doodler/results/results.json",
+                "experiments/runs/2026-09-06T201500Z-entry-doodler-pilot/run.json",
+                "experiments/runs/2026-09-06T201500Z-entry-doodler-pilot/output.json"
+              ],
+              "reason": "Inspectable code, documented command, seed, corpus hash and full 24-configuration results grid are present as ordinary submitted-run evidence, sufficient for tier 5; no independently authenticated execution receipt exists in context.execution_receipts, so this does not support a tier requiring independent verification."
+            },
+            {
+              "gate": "G4",
+              "status": "pass",
+              "evidence_refs": [
+                "experiments/entry-doodler/report.md",
+                "contributions/entry-doodler-pilot/contribution.yaml"
+              ],
+              "reason": "Explicit limitations disclosed: single corpus/seed, heuristic composite distance, fitted (not paleographically grounded) carry/topic parameters, foldout-adjacency confound, untested GC2a robustness."
+            },
+            {
+              "gate": "G5",
+              "status": "pass",
+              "evidence_refs": [
+                "contributions/entry-doodler-pilot/contribution.yaml",
+                "contributions/entry-doodler-pilot/rights.md"
+              ],
+              "reason": "Human contributor (gnuchev) credited for conceptualization/hypothesis; AI assistance (Kimi Code CLI, kimi-k3) disclosed for implementation/drafting, with a human_verification note distinguishing the human-proposed hypothesis from AI-assisted code/writing."
+            },
+            {
+              "gate": "G6",
+              "status": "pass",
+              "evidence_refs": [
+                "contributions/entry-doodler-pilot/contribution.yaml",
+                "experiments/entry-doodler/report.md"
+              ],
+              "reason": "Materially distinct increment from predecessor pilot: new page-level metrics and a distinct entry-based generative mechanism, with explicit extends/related_outcomes links avoiding double-counting; claimed cumulative tier (5) is not inflated to 10 given single-seed/single-corpus scope."
+            },
+            {
+              "gate": "G7",
+              "status": "pass",
+              "evidence_refs": [
+                "experiments/entry-doodler/results/results.json",
+                "experiments/entry-doodler/report.md"
+              ],
+              "reason": "Reported figures in report.md match results.json/output.json; the full 24-variant grid is disclosed rather than a cherry-picked best run; informal interpretive percentages are explicitly labeled as such, not presented as computed probabilities."
+            }
+          ],
+          "reason": "This is a well-documented, reproducible pilot extending an existing family with new real-corpus page-structure measurements and a working content-free generative model, meeting the tier-5 anchor for an informative reusable pilot (rubric section 5, tier-5 row: 'informative pilot another contributor can inspect/use'). Tier 10 is not supported: single corpus/seed, no cross-corpus (GC2a) check, no independently authenticated execution receipt, and a heuristic (not preregistered discriminating) composite distance metric. The two prior reports agreed on assessed tier 5 and admission accept; their disagreement was limited to a validation-schema defect (missing evidence_refs on one finding) and phrasing of the family-ledger caveat, both resolved here without altering the substantive tier judgment. Exact incremental credit above the existing family credit_high_water_tier of 5 is a deterministic broker computation, not a qualitative assessor decision, and is explained in findings rather than asserted as a specific number here.",
+          "validation_evidence": {
+            "execution_receipt_refs": [],
+            "external_assessment_receipt_refs": [],
+            "independent_inspection_refs": []
+          }
+        }
+      ],
+      "inspected_paths": [
+        "contributions/entry-doodler-pilot/contribution.yaml",
+        "contributions/entry-doodler-pilot/rights.md",
+        "experiments/entry-doodler/entry_doodler.py",
+        "experiments/entry-doodler/report.md",
+        "experiments/entry-doodler/results/results.json",
+        "experiments/runs/2026-09-06T201500Z-entry-doodler-pilot/output.json",
+        "experiments/runs/2026-09-06T201500Z-entry-doodler-pilot/run.json",
+        "research/context-index.json"
+      ],
+      "inspection_gaps": [],
+      "next_action": "Accept at assessed tier 5 for family-generative-falsification. The broker computes exact new_credit as max(0, 5 - credit_high_water_tiers['family-generative-falsification']=5) against the settled ledger state for the predecessor outcome-generative-doodler-pilot; no contributor action is required for admission. To pursue tier 10 in a future submission: add multi-seed stability runs, cross-check against GC2a, and supply a template-constrained word-grammar model (M4) as previewed in report.md's next-steps section.",
+      "appeal_route": "Contributor may open a follow-up PR citing this assessment and the specific disputed gate/tier or ledger-arithmetic finding (e.g., the family high-water interaction between this outcome and outcome-generative-doodler-pilot). Disputes over the broker's computed incremental credit under GRADING.md section 6 are resolved by the deterministic broker against the recorded ledger; unresolved evidence disagreements proceed to the documented adjudication/appeal process referenced in RULES.md."
+    },
+    "stages": [
+      {
+        "stage": "adjudicator",
+        "provider": "anthropic",
+        "model": "claude-sonnet-5",
+        "exposed_version": "claude-sonnet-5",
+        "prompt_digest": "6c1127de94cda6ca5eb599a257d33f2376ffb72a37e8f15d919a9c9502a07324",
+        "response_digest": "d02173c4e1f486241490bc1acaaeed56fe87188600b72233c70405301c08acfd",
+        "started_at": "2026-09-07T18:48:22.302Z",
+        "completed_at": "2026-09-07T18:48:56.710Z",
+        "usage": {
+          "sessions": 1,
+          "input_bytes": 182089,
+          "output_bytes": 12152,
+          "runtime_ms": 33655
+        },
+        "receipt_ref": "stage-results/job-0162f1e0027d516679d50c523efcaaf060fe79a8/adjudicator.json"
+      },
+      {
+        "stage": "adversary",
+        "provider": "anthropic",
+        "model": "claude-sonnet-5",
+        "exposed_version": "claude-sonnet-5",
+        "prompt_digest": "8986cebbf2b0e66fd43b6aedeafc7675e2441849a267999cf7bdcb79841023c5",
+        "response_digest": "2edbd503831bbc12f891ab909558fc388281e966a66fd9fd0446d4a24eef0306",
+        "started_at": "2026-09-07T18:47:00.799Z",
+        "completed_at": "2026-09-07T18:47:37.516Z",
+        "usage": {
+          "sessions": 1,
+          "input_bytes": 164994,
+          "output_bytes": 11132,
+          "runtime_ms": 36007
+        },
+        "receipt_ref": "stage-results/job-0162f1e0027d516679d50c523efcaaf060fe79a8/adversary.json"
+      },
+      {
+        "stage": "assessor",
+        "provider": "anthropic",
+        "model": "claude-sonnet-5",
+        "exposed_version": "claude-sonnet-5",
+        "prompt_digest": "580d56c1674a2eca5607296b4adce0f2a265d19f7d32a68aaafb179748626188",
+        "response_digest": "80e9639021293c8323532b63e1811b3cbfd9182462990764e35a3f4f3a3abb53",
+        "started_at": "2026-09-07T18:45:39.037Z",
+        "completed_at": "2026-09-07T18:46:08.278Z",
+        "usage": {
+          "sessions": 1,
+          "input_bytes": 164875,
+          "output_bytes": 9084,
+          "runtime_ms": 28513
+        },
+        "receipt_ref": "stage-results/job-0162f1e0027d516679d50c523efcaaf060fe79a8/assessor.json"
+      }
+    ],
+    "disagreements": [
+      "Material independent-assessment disagreement or invalid proposal."
+    ],
+    "holds": [],
+    "reused_assessment_id": null
+  },
+  "receipt": {
+    "schema_version": "1.0",
+    "id": "receipt:job-0162f1e0027d516679d50c523efcaaf060fe79a8",
+    "key_id": "voynich-2026-09-06",
+    "issued_at": "2026-09-07T18:49:36.505Z",
+    "payload": {
+      "repository_id": 1359336540,
+      "events_digest": "4be2fc871487186428652affee153426c10fa132b40a90f3277d51758acd308f",
+      "milestones_digest": "edbd0160e2e951e7adc65a8ba0f8586471e0324c4368210e7e4a59c857e6f54f",
+      "families_digest": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+      "merge_sha": "584a2d4540c7581303f59bb3e4e4c908b139ccfe",
+      "assessed_head": "6f98c4c4ceed2408648f2a6ed7a54319212c5216",
+      "artifact_digest": "0162f1e0027d516679d50c523efcaaf060fe79a864494809d4cc96da7f3fd6d4",
+      "profile_digest": "a2c6fd28fab5025b70fa361cc8a93bbe86469f155bf3db4be54ec952565b4ffa",
+      "report_digest": "053b0045452157b63369653c222de7958d404f012474e25d25e4a165aea5600c",
+      "stage_receipt_refs": [
+        "stage-results/job-0162f1e0027d516679d50c523efcaaf060fe79a8/adjudicator.json",
+        "stage-results/job-0162f1e0027d516679d50c523efcaaf060fe79a8/adversary.json",
+        "stage-results/job-0162f1e0027d516679d50c523efcaaf060fe79a8/assessor.json"
+      ]
+    },
+    "payload_digest": "6ef23aa83882a1cd2f996a27abee4297de933b07c49489ead6893a8f7350b299",
+    "signature": "fT104uixYqo0HAEMuZpCLqp2IAvXxakvXpqd2PC5kzWGRsO_ZGu_zQs0iA3R47VkTSN8HYq20cUOvj0AZz0sBQ"
+  }
+}

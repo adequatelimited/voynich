@@ -1,0 +1,15 @@
+{
+  "schema_version": "1.0",
+  "id": "bible-latin-vulgate",
+  "path": "data/corpora/bible-latin-vulgate.xml",
+  "origin": "https://github.com/christos-c/bible-corpus (bibles/Latin.xml)",
+  "sha256": "5bba9f75c06858a28ebe7b2fcc19cc32b3fbf587d6bc237ceac6fe7addd3df31",
+  "byte_length": 4877710,
+  "media_type": "application/xml",
+  "source_id": "bible-latin-vulgate",
+  "rights": "Biblia Sacra Vulgata (Latin); underlying text public domain. Corpus packaging: Christodoulopoulos & Steedman bible-corpus. Retrieved 2026-09-07.",
+  "redistribution": "permitted",
+  "state": "verified",
+  "attribution": "Biblia Sacra Vulgata (Latin); bible-corpus by Christos Christodoulopoulos and Mark Steedman",
+  "retention": "Versioned immutable research source; era-relevant inflected-language control."
+}

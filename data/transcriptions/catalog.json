@@ -2,7 +2,7 @@
   {
     "id": "transcription-zl3b",
     "title": "ZL3b",
-    "producer": "René Zandbergen, from the EVMT/LZ project with Gabriel Landini",
+    "producer": "Ren\u00c3\u00a9 Zandbergen, from the EVMT/LZ project with Gabriel Landini",
     "version": "3b, 2025-05-13",
     "alphabet": "Extended EVA",
     "format": "IVTFF 2.0",
@@ -18,7 +18,7 @@
   {
     "id": "transcription-gc2a",
     "title": "GC2a",
-    "producer": "Glen Claston; IVTFF conversion René Zandbergen",
+    "producer": "Glen Claston; IVTFF conversion Ren\u00c3\u00a9 Zandbergen",
     "version": "2a, 2023-02-05, modified 2025-06-25",
     "alphabet": "v101",
     "format": "IVTFF 2.0",
@@ -42,5 +42,66 @@
     "retrieval": "reference_only; no download/printing notice sent",
     "rights": "Original site download and reproduction terms differ from the CC0 statement on converted hosted copies; resolve scope before copying.",
     "independence": "Further independently produced reading; not a new reading when copied into LSI or IT."
+  },
+  {
+    "id": "transcription-rf1be",
+    "title": "RF1b-e reference transliteration (hosted)",
+    "producer": "Ren\u00c3\u00a9 Zandbergen; automated merge of ZL and GC",
+    "version": "1b-e",
+    "alphabet": "EVA",
+    "format": "IVTFF 2.0",
+    "source_id": "rf1be",
+    "retrieval": "hosted_external; bytes hashed 2026-09-06, not imported",
+    "independence": "Derived from ZL and GC; not independent data. Useful as a single consensus-like corpus for statistics.",
+    "limitations": [
+      "Automated merge; disagreements between ZL and GC are resolved mechanically, not by re-reading the manuscript."
+    ],
+    "integrity": "sha256 recorded in contributions/artheon-ms408-hosted-dataset/hosted-hashes.json (fetched bytes, 2026-09-06)"
+  },
+  {
+    "id": "transcription-it2a",
+    "title": "IT2a (Takahashi via Landini-Stolfi interlinear, hosted)",
+    "producer": "Takeshi Takahashi; IVTFF conversion hosted by Ren\u00c3\u00a9 Zandbergen",
+    "version": "2a",
+    "alphabet": "EVA",
+    "format": "IVTFF 2.0",
+    "source_id": "it2a",
+    "retrieval": "hosted_external; bytes hashed 2026-09-06, not imported",
+    "independence": "Takahashi's reading is independently produced; this converted copy shares locus metadata with LSI.",
+    "limitations": [
+      "Plain EVA without extended glyph distinctions; documented gaps against the manuscript."
+    ],
+    "integrity": "sha256 recorded in contributions/artheon-ms408-hosted-dataset/hosted-hashes.json (fetched bytes, 2026-09-06)"
+  },
+  {
+    "id": "transcription-lsi",
+    "title": "Landini-Stolfi Interlinear (LSI), IVTFF beta + original 1998 EVT",
+    "producer": "Gabriel Landini, Jorge Stolfi, and the named historical transcribers",
+    "version": "IVTFF 0d (beta); original text16e6.evt (1998)",
+    "alphabet": "EVA-T",
+    "format": "IVTFF 2.0 (beta) / EVT (original)",
+    "source_id": "lsi",
+    "retrieval": "hosted_external at https://lab.artheonmuseum.org/voynich/transcriptions/ (LSI_ivtff_0d.txt, LSI_text16e6.evt); reference_only for the original EVT pending terms review",
+    "rights": "voynich.nu-hosted IVTFF conversion covered by the site's CC0 statement; original 1998 EVT from Stolfi's UNICAMP site retains its own terms.",
+    "independence": "Compilation aligning FSG, Currier/D'Imperio, Takahashi, Grove and others locus-by-locus; constituent readings are not new data.",
+    "limitations": [
+      "Beta-format conversion; historical transcriptions carry keypunch-era errors documented in the file headers."
+    ]
+  },
+  {
+    "id": "dataset-artheon-lab-ms408",
+    "title": "Artheon Museum Lab MS 408 public dataset (scans + transliterations + agent docs)",
+    "producer": "Artheon Museum Lab (assembly and hosting); Beinecke Library (scans); voynich.nu / UNICAMP (transliterations)",
+    "version": "2026-09-06",
+    "alphabet": "n/a (dataset index)",
+    "format": "JSON catalogue + JPEG scans + IVTFF text + llms.txt + verified bulk downloader",
+    "source_id": "artheon-lab-ms408",
+    "retrieval": "hosted_external, anonymous HTTPS; per-file SHA-256 in the indexed catalogue",
+    "independence": "Re-hosting of existing public material with integrity hashes; no new manuscript readings.",
+    "limitations": [
+      "Scans are the Beinecke 2014-era JPEG derivatives (full size); archival TIFFs remain at Yale.",
+      "The catalogue index evolves; the pinned manifest records its 2026-09-06 bytes."
+    ],
+    "integrity": "sha256 recorded in contributions/artheon-ms408-hosted-dataset/hosted-hashes.json (fetched bytes, 2026-09-06)"
   }
 ]

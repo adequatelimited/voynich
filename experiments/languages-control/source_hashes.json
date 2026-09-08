@@ -1,0 +1,56 @@
+{
+ "English-WEB": {
+  "origin": "https://github.com/christos-c/bible-corpus (bibles/English-WEB.xml)",
+  "sha256": "7be852c5f574bfa0a2865bf9563472e6f09cec38a3f123b1700ba098745fc284",
+  "byte_length": 5491929,
+  "redistribution": "reference_only \u2014 underlying translation rights vary; not committed"
+ },
+ "Finnish": {
+  "origin": "https://github.com/christos-c/bible-corpus (bibles/Finnish.xml)",
+  "sha256": "1edd079bd782beba6a4724c029ff2d4f2b0398e06f14ffc6319bfe678aab10ab",
+  "byte_length": 6121468,
+  "redistribution": "reference_only \u2014 underlying translation rights vary; not committed"
+ },
+ "French": {
+  "origin": "https://github.com/christos-c/bible-corpus (bibles/French.xml)",
+  "sha256": "6910aa9541efcf27b5a1b34fd5d6ce5dc58037ed766351f2b069ed8141f72d77",
+  "byte_length": 6106544,
+  "redistribution": "reference_only \u2014 underlying translation rights vary; not committed"
+ },
+ "German": {
+  "origin": "https://github.com/christos-c/bible-corpus (bibles/German.xml)",
+  "sha256": "49be6f5e464ff94982c8ca58a9ff3afafbcea14eccdaf41b88c02f53792952a3",
+  "byte_length": 5978546,
+  "redistribution": "reference_only \u2014 underlying translation rights vary; not committed"
+ },
+ "Greek": {
+  "origin": "https://github.com/christos-c/bible-corpus (bibles/Greek.xml)",
+  "sha256": "facf2700ec785ead9f5f4aea9792da0f3b3b9c46e3cba36bdcf9e76813845dd3",
+  "byte_length": 9413251,
+  "redistribution": "reference_only \u2014 underlying translation rights vary; not committed"
+ },
+ "Italian": {
+  "origin": "https://github.com/christos-c/bible-corpus (bibles/Italian.xml)",
+  "sha256": "b0b16b82485b17874e09d101f183169d53c5c7edf7e645b0a09b83f337cce752",
+  "byte_length": 5753656,
+  "redistribution": "reference_only \u2014 underlying translation rights vary; not committed"
+ },
+ "Latin": {
+  "origin": "https://github.com/christos-c/bible-corpus (bibles/Latin.xml)",
+  "sha256": "5bba9f75c06858a28ebe7b2fcc19cc32b3fbf587d6bc237ceac6fe7addd3df31",
+  "byte_length": 4877710,
+  "redistribution": "reference_only \u2014 underlying translation rights vary; not committed"
+ },
+ "Russian": {
+  "origin": "https://github.com/christos-c/bible-corpus (bibles/Russian.xml)",
+  "sha256": "233a57d22a32a344a6a61d0364d9b6621156ef9f42520aebc5325eb66bd5005f",
+  "byte_length": 7917641,
+  "redistribution": "reference_only \u2014 underlying translation rights vary; not committed"
+ },
+ "Spanish": {
+  "origin": "https://github.com/christos-c/bible-corpus (bibles/Spanish.xml)",
+  "sha256": "01c44cd95bbe614415b9bffe0bf2a945a398f6424985e37c9bef4fd008576a01",
+  "byte_length": 5914708,
+  "redistribution": "reference_only \u2014 underlying translation rights vary; not committed"
+ }
+}

@@ -1,0 +1,105 @@
+{
+ "voynich": {
+  "language": "Voynich (ZL3b)",
+  "tokens": 34986,
+  "types": 10120,
+  "ttr": 0.2893,
+  "H1": 4.003,
+  "H2_given_1": 2.261,
+  "wordfinal_char_H": 2.585,
+  "word_len_mean": 5.6
+ },
+ "sample_tokens": 35000,
+ "languages": {
+  "English-WEB": {
+   "language": "English-WEB",
+   "tokens": 35000,
+   "types": 2750,
+   "ttr": 0.0786,
+   "H1": 4.228,
+   "H2_given_1": 3.255,
+   "wordfinal_char_H": 3.779,
+   "word_len_mean": 4.01
+  },
+  "Finnish": {
+   "language": "Finnish",
+   "tokens": 35000,
+   "types": 7379,
+   "ttr": 0.2108,
+   "H1": 4.163,
+   "H2_given_1": 3.308,
+   "wordfinal_char_H": 2.803,
+   "word_len_mean": 5.91
+  },
+  "French": {
+   "language": "French",
+   "tokens": 35000,
+   "types": 3738,
+   "ttr": 0.1068,
+   "H1": 4.259,
+   "H2_given_1": 3.312,
+   "wordfinal_char_H": 3.572,
+   "word_len_mean": 4.04
+  },
+  "German": {
+   "language": "German",
+   "tokens": 35000,
+   "types": 3846,
+   "ttr": 0.1099,
+   "H1": 4.341,
+   "H2_given_1": 3.209,
+   "wordfinal_char_H": 3.568,
+   "word_len_mean": 4.49
+  },
+  "Greek": {
+   "language": "Greek",
+   "tokens": 35000,
+   "types": 4526,
+   "ttr": 0.1293,
+   "H1": 4.218,
+   "H2_given_1": 3.143,
+   "wordfinal_char_H": 3.254,
+   "word_len_mean": 4.52
+  },
+  "Italian": {
+   "language": "Italian",
+   "tokens": 35000,
+   "types": 4725,
+   "ttr": 0.135,
+   "H1": 4.201,
+   "H2_given_1": 3.245,
+   "wordfinal_char_H": 3.02,
+   "word_len_mean": 4.47
+  },
+  "Latin": {
+   "language": "Latin",
+   "tokens": 35000,
+   "types": 7185,
+   "ttr": 0.2053,
+   "H1": 4.107,
+   "H2_given_1": 3.358,
+   "wordfinal_char_H": 3.303,
+   "word_len_mean": 5.32
+  },
+  "Russian": {
+   "language": "Russian",
+   "tokens": 35000,
+   "types": 6136,
+   "ttr": 0.1753,
+   "H1": 4.48,
+   "H2_given_1": 3.52,
+   "wordfinal_char_H": 4.23,
+   "word_len_mean": 4.48
+  },
+  "Spanish": {
+   "language": "Spanish",
+   "tokens": 35000,
+   "types": 4272,
+   "ttr": 0.1221,
+   "H1": 4.332,
+   "H2_given_1": 3.274,
+   "wordfinal_char_H": 3.627,
+   "word_len_mean": 4.15
+  }
+ }
+}
