@@ -252,6 +252,22 @@
       ],
       "seed": false,
       "seed_baseline": 0
+    },
+    {
+      "id": "family-generative-falsification-languages-control",
+      "rubric_version": "0.1",
+      "scope": "A bounded diagnostic control extending the generative-falsification metric suite (final-glyph entropy, conditional bigram entropy H2|1, type/token diversity, word length) to nine same-text (Bible) translations at equal 35k-token samples, testing whether a morphologically rich real language naturally reproduces the manuscript's word-ending discipline. Finds no tested language reaches the manuscript on either final-glyph entropy or H2|1; Finnish is nearest on endings (2.80 vs 2.58) but not close on H2|1; Russian, despite rich inflection, has the least predictable endings, refuting a simple morphology-based explanation; manuscript retains highest type diversity of all ten texts.",
+      "acceptance_test": "Run `python languages_control.py --corpus ../../data/corpora/ZL3b-n.txt --bibles <dir with the nine bible-corpus XMLs> --out results/`; confirm results.json matches the recorded output showing every language's word-final entropy above the manuscript's 2.585 (nearest Finnish 2.803) and every language's H2|1 above 2.261 (nearest Greek 3.143), with manuscript ttr (0.2893) highest among all ten texts; independently reproduce the Latin and English-WEB rows from the two committed corpora.",
+      "aliases": [],
+      "predecessor_family_ids": [],
+      "excluded_overlap": [
+        "Does not claim or extend the Cardan table-and-grille (M5a/M5b) mechanism experiment credited under family-generative-falsification.",
+        "Does not claim the rhyme/versification line-structure control credited under family-generative-falsification-poetry-control.",
+        "Does not claim the entry-structure genre-ladder metrics credited under family-generative-falsification-controls-entry-ladder.",
+        "Does not claim credit for the pinned ZL3b corpus/parser (seed-corpus-parser) or local harness workflow (seed-local-harness), used only as inputs."
+      ],
+      "seed": false,
+      "seed_baseline": 0
     }
   ],
   "credit_high_water_tiers": {
@@ -261,9 +277,10 @@
     "family-generative-falsification-word-grammar-template": 5,
     "family-generative-falsification": 5,
     "family-generative-falsification-controls-entry-ladder": 2,
-    "family-generative-falsification-poetry-control": 2
+    "family-generative-falsification-poetry-control": 2,
+    "family-generative-falsification-languages-control": 2
   },
-  "ledger_digest": "ec1bd2da1635063eb95ba7147e87eb2560fe59d1296739c760667089ff380d28",
+  "ledger_digest": "93368fafab35b75ee5e7b3b333e34f21965f4c574e9c88d58445c21e8a42a173",
   "public_evidence": [
     {
       "path": "research/context-index.json",
