@@ -1,0 +1,279 @@
+{
+  "schema_version": "1.0",
+  "research_pr": 5,
+  "merge_sha": "48e93897c364433d17c2cc1c38986e58b5bf030a",
+  "events": [
+    {
+      "schema_version": "1.0",
+      "id": "decision-5-family-generative-falsification-d7a39fdba82d",
+      "sequence": 6,
+      "kind": "upgrade",
+      "family_id": "family-generative-falsification",
+      "rubric_version": "0.1",
+      "category": "experiments",
+      "repository_id": 1359336540,
+      "pr_number": 5,
+      "milestone_id": "milestone-1359336540-5-family-generative-falsification",
+      "earned_at": "2026-09-07T21:43:54Z",
+      "assessment_id": "assessment-33e0c03e8f7c3363c7758518befabd6f",
+      "artifact_binding_digest": "d7a39fdba82d3c4d8209be40c7e369de3a5e128f67b8d63894b724a081556930",
+      "authority_receipt_ref": "receipt:job-d7a39fdba82d3c4d8209be40c7e369de3a5e128f",
+      "cumulative_tier": 5,
+      "reason": "A coherent, informative pilot extending an existing family: adds real positive controls that reframe prior 'unmatched' results and implements a published word-grammar matching several statistics simultaneously, with the residual gap well-characterized. This supports tier 5; tier 10 is not supported absent independent replication and a non-English (era-matched) control, as the submitter itself discloses. The family's high-water tier is already 5 (per credit_high_water_tiers), so this pilot does not exceed the existing ceiling; the broker computes the exact incremental allocation, which is likely at or near zero net-new credit beyond the prior high-water occupancy given the unchanged assessed tier."
+    }
+  ],
+  "families_added": [],
+  "milestones": [
+    {
+      "id": "milestone-1359336540-5-family-generative-falsification",
+      "family_id": "family-generative-falsification",
+      "repository_id": 1359336540,
+      "pr_number": 5,
+      "earned_at": "2026-09-07T21:43:54Z",
+      "depends_on": []
+    }
+  ],
+  "assessment": {
+    "schema_version": "1.0",
+    "assessment_id": "assessment-33e0c03e8f7c3363c7758518befabd6f",
+    "artifact_binding_digest": "33e0c03e8f7c3363c7758518befabd6f11c70542d50720a37fe61bed41f717f4",
+    "merit_evidence_digest": "640f85e3982c58319c6284815c5183594956a8e6cbbb08e68d7dbb9d3910de40",
+    "repository_id": 1359336540,
+    "pr_number": 5,
+    "head_sha": "7a50abc1cf9cdc789bdd4861e8723b18faff4ad1",
+    "base_sha": "b12ac52a2b2c89056aff705f0cd187014c86606c",
+    "rules_version": "0.1",
+    "rubric_version": "0.1",
+    "grading_profile": "voynich-sonnet-ai-pilot-2026-09-07-v6",
+    "evaluator_commit": "b12ac52a2b2c89056aff705f0cd187014c86606c",
+    "mode": "official_proposal",
+    "status": "complete",
+    "claimed_score": 2,
+    "expected_score": 0,
+    "official_proposed_score": 0,
+    "awarded_score": null,
+    "assessment": {
+      "schema_version": "1.0",
+      "admission_action": "accept",
+      "score_status": "proposed",
+      "conduct_status": "clear",
+      "findings": [
+        {
+          "rule_id_or_gate": "G3",
+          "severity": "info",
+          "path_or_locus": "experiments/runs/2026-09-07T060000Z-m4-template-pilot/run.json",
+          "evidence_refs": [
+            "experiments/runs/2026-09-07T060000Z-m4-template-pilot/run.json",
+            "experiments/runs/2026-09-07T060000Z-m4-template-pilot/output.json"
+          ],
+          "reason": "run.json/output.json are ordinary submitted-run evidence (self-executed), not a trusted independently authenticated execution receipt (context.execution_receipts is empty). Sufficient for the claimed tier 5 but insufficient for a higher tier requiring independent execution.",
+          "required_change": "None required for the claimed/assessed tier; disclose this limitation if seeking a higher tier later.",
+          "verification_step": "Re-run the documented command with pinned corpus/control hashes and compare to results.json.",
+          "blocks_merge_or_credit": false
+        },
+        {
+          "rule_id_or_gate": "G2",
+          "severity": "info",
+          "path_or_locus": "data/corpora/RIGHTS.md",
+          "evidence_refs": [
+            "data/corpora/RIGHTS.md",
+            "data/manifests/pg49513.json",
+            "contributions/m4-template-doodler-pilot/rights.md"
+          ],
+          "reason": "Rights/provenance for the new Culpeper control (PG49513) is documented with a public-domain basis and is consistent across manifest, RIGHTS.md and rights.md.",
+          "required_change": "None.",
+          "verification_step": "Confirm sha256 in manifest (d9bacb32...) matches the derived-view source hash reported for data/corpora/pg49513.txt.",
+          "blocks_merge_or_credit": false
+        }
+      ],
+      "outcomes": [
+        {
+          "family_id": "family-generative-falsification",
+          "scope": "Pilot 3 in the generative-mechanism falsification family: adds real-language positive controls (Culpeper's Complete Herbal, Alice in Wonderland) measured with the same metric suite as prior pilots, and implements Stolfi's published word-grammar (M4 template model) achieving 86% type coverage with zero fitting, narrowing residual anomalies to a smaller set of local metrics (H2|1, final-char entropy, Zipf slope, entry-private vocabulary share).",
+          "category": "experiments",
+          "predecessors": [
+            "outcome-entry-doodler-pilot",
+            "outcome-generative-doodler-pilot"
+          ],
+          "aliases": [],
+          "claimed_tier": 5,
+          "assessed_tier": 5,
+          "gate_evidence": [
+            {
+              "gate": "G1",
+              "status": "pass",
+              "evidence_refs": [
+                "experiments/m4-template-doodler/report.md",
+                "research/context-index.json"
+              ],
+              "reason": "Directly addresses branch questions under generative-mechanisms/statistical-structure/corpus-integrity, using positive controls to reinterpret prior negative results."
+            },
+            {
+              "gate": "G2",
+              "status": "pass",
+              "evidence_refs": [
+                "data/corpora/RIGHTS.md",
+                "data/manifests/pg49513.json",
+                "contributions/m4-template-doodler-pilot/rights.md"
+              ],
+              "reason": "Public-domain PG sourcing for new (Culpeper) and reused (Alice, ZL3b) corpora is documented with retained wrappers and hashes; applicable upstream basis is sufficient without a mirror-specific license."
+            },
+            {
+              "gate": "G3",
+              "status": "pass",
+              "evidence_refs": [
+                "experiments/m4-template-doodler/m4_doodler.py",
+                "experiments/runs/2026-09-07T060000Z-m4-template-pilot/run.json",
+                "experiments/runs/2026-09-07T060000Z-m4-template-pilot/output.json",
+                "experiments/m4-template-doodler/results/results.json"
+              ],
+              "reason": "Deterministic command, seed, hashes and full results are supplied as ordinary inspectable evidence (submitted-run, not an independently authenticated receipt); this is consistent with and sufficient for the claimed tier 5, which does not require independent execution."
+            },
+            {
+              "gate": "G4",
+              "status": "pass",
+              "evidence_refs": [
+                "experiments/m4-template-doodler/report.md"
+              ],
+              "reason": "Explicit limitations disclosed: English-only controls, corpus-estimated slot weights, single seed, coarse grid, sampled distant-Jaccard, artificial Alice chunking, unresolved rule-faked vs rule-encrypted ambiguity."
+            },
+            {
+              "gate": "G5",
+              "status": "pass",
+              "evidence_refs": [
+                "contributions/m4-template-doodler-pilot/contribution.yaml"
+              ],
+              "reason": "Named contributor with roles and explicit AI-use disclosure (Moonshot AI kimi-k3), with stated human verification steps."
+            },
+            {
+              "gate": "G6",
+              "status": "pass",
+              "evidence_refs": [
+                "experiments/m4-template-doodler/report.md",
+                "contributions/m4-template-doodler-pilot/contribution.yaml"
+              ],
+              "reason": "Clearly extends outcome-entry-doodler-pilot with a materially distinct increment (real positive controls plus a published-grammar implementation); overlap and predecessors are disclosed, not concealed."
+            },
+            {
+              "gate": "G7",
+              "status": "pass",
+              "evidence_refs": [
+                "experiments/m4-template-doodler/results/results.json",
+                "experiments/m4-template-doodler/report.md"
+              ],
+              "reason": "Report figures match results.json/output.json exactly; the claimed tier 5 (not 10) is explicitly and correctly justified given single seed, English-only controls, and absence of independent execution."
+            }
+          ],
+          "attribution_status": "verified",
+          "reason": "A coherent, informative pilot extending an existing family: adds real positive controls that reframe prior 'unmatched' results and implements a published word-grammar matching several statistics simultaneously, with the residual gap well-characterized. This supports tier 5; tier 10 is not supported absent independent replication and a non-English (era-matched) control, as the submitter itself discloses. The family's high-water tier is already 5 (per credit_high_water_tiers), so this pilot does not exceed the existing ceiling; the broker computes the exact incremental allocation, which is likely at or near zero net-new credit beyond the prior high-water occupancy given the unchanged assessed tier.",
+          "validation_evidence": {
+            "execution_receipt_refs": [],
+            "external_assessment_receipt_refs": [],
+            "independent_inspection_refs": [
+              "experiments/m4-template-doodler/results/results.json",
+              "experiments/runs/2026-09-07T060000Z-m4-template-pilot/output.json"
+            ]
+          }
+        }
+      ],
+      "inspected_paths": [
+        "contributions/m4-template-doodler-pilot/contribution.yaml",
+        "contributions/m4-template-doodler-pilot/rights.md",
+        "data/corpora/RIGHTS.md",
+        "experiments/m4-template-doodler/m4_doodler.py",
+        "experiments/m4-template-doodler/report.md",
+        "experiments/m4-template-doodler/results/results.json",
+        "experiments/runs/2026-09-07T060000Z-m4-template-pilot/output.json",
+        "experiments/runs/2026-09-07T060000Z-m4-template-pilot/run.json",
+        "data/corpora/pg49513.txt",
+        "data/manifests/pg49513.json",
+        "research/context-index.json"
+      ],
+      "inspection_gaps": [],
+      "next_action": "Accept the contribution at assessed tier 5 for family-generative-falsification. This resolves the second report's validation-error failure (missing schema fields) by returning a complete schema-conformant assessment; the first report's substantive judgment (tier 5, gates all pass, disclosed limitations) is adopted as correct against the supplied evidence. Because the family's existing high-water tier is already 5, the broker will determine whether any net-new credit units apply; no revision is required. A future upgrade to tier 10 would need independent execution/replication and an era-matched (Latin/Italian) control, as disclosed by the submitter.",
+      "appeal_route": "If the contributor disputes the tier or the high-water occupancy relative to prior pilots, they may open a follow-up PR citing the specific rubric anchor (Experiments row, tier 5 vs 10 in SCORING.md) and request adjudication referencing exact evidence in results.json/report.md; per RULES.md/GRADING.md this routes to the standard reconcile/adjudication stage, not a manual point edit."
+    },
+    "stages": [
+      {
+        "stage": "adjudicator",
+        "provider": "anthropic",
+        "model": "claude-sonnet-5",
+        "exposed_version": "claude-sonnet-5",
+        "prompt_digest": "28a79683458c0198d598d582aeba86e699b7e2bfceeb021c0b4cf53a94995cdc",
+        "response_digest": "a4b998d14755d3cc5ed60a34660b43be13e30d26aca259c8a0a197928009b36a",
+        "started_at": "2026-09-07T21:42:30.326Z",
+        "completed_at": "2026-09-07T21:43:18.123Z",
+        "usage": {
+          "sessions": 1,
+          "input_bytes": 200864,
+          "output_bytes": 16566,
+          "runtime_ms": 47033
+        },
+        "receipt_ref": "stage-results/job-d7a39fdba82d3c4d8209be40c7e369de3a5e128f/adjudicator.json"
+      },
+      {
+        "stage": "adversary",
+        "provider": "anthropic",
+        "model": "claude-sonnet-5",
+        "exposed_version": "claude-sonnet-5",
+        "prompt_digest": "f0e94e7cbb84166d1524f20b9dd957b3da18dde3bd5a1f0fdb5a0b3971671995",
+        "response_digest": "ec383043e87655512935109751f43f9cc3b0a3dc0ccd5dd728a0c0779725683e",
+        "started_at": "2026-09-07T21:36:23.477Z",
+        "completed_at": "2026-09-07T21:42:12.646Z",
+        "usage": {
+          "sessions": 1,
+          "input_bytes": 1200000,
+          "output_bytes": 128000,
+          "runtime_ms": 120000
+        },
+        "receipt_ref": "stage-results/job-d7a39fdba82d3c4d8209be40c7e369de3a5e128f/adversary.json"
+      },
+      {
+        "stage": "assessor",
+        "provider": "anthropic",
+        "model": "claude-sonnet-5",
+        "exposed_version": "claude-sonnet-5",
+        "prompt_digest": "0e94080fc3a50c250a8eaaaa348e219f576bf547f70c0b6b525a68304d467b93",
+        "response_digest": "3cb85bf99bc5d8522658e03d754f6574bc95aa71bd880ecd008fe097ab9a8d61",
+        "started_at": "2026-09-07T21:34:41.812Z",
+        "completed_at": "2026-09-07T21:35:33.179Z",
+        "usage": {
+          "sessions": 1,
+          "input_bytes": 192822,
+          "output_bytes": 14794,
+          "runtime_ms": 50449
+        },
+        "receipt_ref": "stage-results/job-d7a39fdba82d3c4d8209be40c7e369de3a5e128f/assessor.json"
+      }
+    ],
+    "disagreements": [
+      "Material independent-assessment disagreement or invalid proposal."
+    ],
+    "holds": [],
+    "reused_assessment_id": null
+  },
+  "receipt": {
+    "schema_version": "1.0",
+    "id": "receipt:job-d7a39fdba82d3c4d8209be40c7e369de3a5e128f",
+    "key_id": "voynich-2026-09-06",
+    "issued_at": "2026-09-07T21:44:14.161Z",
+    "payload": {
+      "repository_id": 1359336540,
+      "events_digest": "2653fa4c19a69d2c8ed785882165584223bad26451d667f6b9ca3c96f57bd8ee",
+      "milestones_digest": "2546a7a501cbe32da05e2b741c35802b46f7c88d1160451b5524cbccfa1c8bc5",
+      "families_digest": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+      "merge_sha": "48e93897c364433d17c2cc1c38986e58b5bf030a",
+      "assessed_head": "7a50abc1cf9cdc789bdd4861e8723b18faff4ad1",
+      "artifact_digest": "d7a39fdba82d3c4d8209be40c7e369de3a5e128f67b8d63894b724a081556930",
+      "profile_digest": "76e50193e26bbdea4f7cbaaa07093d2aa5b526ac50d1c4f5dad8aeb59ae476c1",
+      "report_digest": "65660ce60ceea306b0e6b48d68826846fa39961563c685456d0caf9d692e91a8",
+      "stage_receipt_refs": [
+        "stage-results/job-d7a39fdba82d3c4d8209be40c7e369de3a5e128f/adjudicator.json",
+        "stage-results/job-d7a39fdba82d3c4d8209be40c7e369de3a5e128f/adversary.json",
+        "stage-results/job-d7a39fdba82d3c4d8209be40c7e369de3a5e128f/assessor.json"
+      ]
+    },
+    "payload_digest": "d288f69c0e8ccb448e05f40ef013ad8d958530332b01a0a8703b92f4aa4ea537",
+    "signature": "YIOfvbD7r9cq8XRZmXn16TCS2y7jtD7lAoeBbeG-2ojGr1rIxsmPWqJxjIQdy66zyzQR9-KCrm7aJCRD3cVbBQ"
+  }
+}

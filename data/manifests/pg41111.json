@@ -1,0 +1,15 @@
+{
+  "schema_version": "1.0",
+  "id": "pg41111",
+  "path": "data/corpora/pg41111.txt",
+  "origin": "https://www.gutenberg.org/ebooks/41111",
+  "sha256": "3065bda5d1187ea6413aed1a620d2f020717e64ee4bb57756024c81d0de66b69",
+  "byte_length": 1029241,
+  "media_type": "text/plain",
+  "source_id": "pg41111",
+  "rights": "Project Gutenberg eBook 41111, The Wonder Book of Knowledge by Henry Chase Hill (ed.) (1921); public domain in the USA per the included Project Gutenberg license header. Wrapper and terms retained unchanged.",
+  "redistribution": "permitted",
+  "state": "verified",
+  "attribution": "Henry Chase Hill (ed.); Project Gutenberg transcription",
+  "retention": "Versioned immutable research source; popular/children encyclopedia control: Q&A entries."
+}

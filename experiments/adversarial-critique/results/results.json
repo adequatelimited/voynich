@@ -1,0 +1,1441 @@
+{
+ "protocol": "PROTOCOL.md",
+ "sample_tokens": 35000,
+ "verdicts": {
+  "R0.1": "CONTAMINATED",
+  "R0.2": "RICHEST SURVIVES",
+  "R1.1": "ALPHABET-ROBUST",
+  "R1.2": "ALPHABET-DEPENDENT",
+  "R2.1": "NOT REPRODUCED BY TESTED CIPHERS",
+  "R3.1": "LANGUAGE/SECTION ARTEFACT",
+  "R3.2": "HAPAX-RICHNESS CONSEQUENCE",
+  "R4.1": "SURVIVES this control"
+ },
+ "A0": {
+  "family_parser": {
+   "tokens": 34986,
+   "types": 10120,
+   "ttr": 0.2893,
+   "hapax_share_of_types": 0.7582,
+   "H1": 4.003,
+   "H2_given_1": 2.261,
+   "first_char_H": 3.202,
+   "last_char_H": 2.585,
+   "zipf_slope": -1.046,
+   "word_len_mean": 5.6,
+   "pages": 226,
+   "jaccard_adjacent": 0.0804,
+   "jaccard_distant": 0.0422,
+   "page_unique_share": 0.3024
+  },
+  "clean_parser": {
+   "tokens": 38184,
+   "types": 7734,
+   "ttr": 0.2025,
+   "hapax_share_of_types": 0.6831,
+   "H1": 3.867,
+   "H2_given_1": 2.132,
+   "first_char_H": 3.201,
+   "last_char_H": 2.523,
+   "zipf_slope": -1.078,
+   "word_len_mean": 4.96,
+   "pages": 226,
+   "jaccard_adjacent": 0.1093,
+   "jaccard_distant": 0.0625,
+   "page_unique_share": 0.1932
+  },
+  "clean_parser_comma_merged": {
+   "tokens": 35492,
+   "types": 8804,
+   "ttr": 0.2481,
+   "hapax_share_of_types": 0.7168,
+   "H1": 3.882,
+   "H2_given_1": 2.147,
+   "first_char_H": 3.145,
+   "last_char_H": 2.457,
+   "zipf_slope": -1.042,
+   "word_len_mean": 5.34,
+   "pages": 226,
+   "jaccard_adjacent": 0.0904,
+   "jaccard_distant": 0.0494,
+   "page_unique_share": 0.2381
+  },
+  "contaminated_tokens": 2830,
+  "contaminated_types": 2454,
+  "contamination_examples": [
+   [
+    "daiin$",
+    25
+   ],
+   [
+    "chedy$",
+    11
+   ],
+   [
+    "chey$",
+    10
+   ],
+   [
+    "%tchedy",
+    9
+   ],
+   [
+    "shedy$",
+    8
+   ],
+   [
+    "qokeey$",
+    7
+   ],
+   [
+    "cheody$",
+    7
+   ],
+   [
+    "%pol",
+    7
+   ],
+   [
+    "%pchedar",
+    7
+   ],
+   [
+    "%polaiin",
+    7
+   ],
+   [
+    "%pcheol",
+    6
+   ],
+   [
+    "%pchor",
+    6
+   ],
+   [
+    "%tchor",
+    5
+   ],
+   [
+    "dy$",
+    5
+   ],
+   [
+    "okaiin$",
+    5
+   ]
+  ],
+  "family_char_inventory": [
+   [
+    "o",
+    25257
+   ],
+   [
+    "e",
+    20337
+   ],
+   [
+    "y",
+    17746
+   ],
+   [
+    "h",
+    17530
+   ],
+   [
+    "a",
+    14661
+   ],
+   [
+    "c",
+    13028
+   ],
+   [
+    "d",
+    12986
+   ],
+   [
+    "i",
+    11786
+   ],
+   [
+    "k",
+    10851
+   ],
+   [
+    "l",
+    10532
+   ],
+   [
+    "r",
+    7512
+   ],
+   [
+    "s",
+    7326
+   ],
+   [
+    "t",
+    6817
+   ],
+   [
+    "n",
+    6147
+   ],
+   [
+    "q",
+    5431
+   ],
+   [
+    "p",
+    1605
+   ],
+   [
+    "m",
+    1075
+   ],
+   [
+    ":",
+    787
+   ],
+   [
+    "[",
+    784
+   ],
+   [
+    "]",
+    784
+   ],
+   [
+    "-",
+    754
+   ],
+   [
+    "%",
+    736
+   ],
+   [
+    "$",
+    736
+   ],
+   [
+    "f",
+    464
+   ],
+   [
+    "g",
+    165
+   ],
+   [
+    "x",
+    32
+   ],
+   [
+    "j",
+    21
+   ],
+   [
+    "v",
+    15
+   ],
+   [
+    "b",
+    15
+   ],
+   [
+    "u",
+    8
+   ],
+   [
+    "z",
+    8
+   ],
+   [
+    "~",
+    6
+   ],
+   [
+    "H",
+    2
+   ],
+   [
+    "=",
+    2
+   ],
+   [
+    "I",
+    1
+   ]
+  ],
+  "clean_min_len2": {
+   "tokens": 36765,
+   "types": 7715,
+   "ttr": 0.2098,
+   "hapax_share_of_types": 0.6846,
+   "H1": 3.871,
+   "H2_given_1": 2.119,
+   "first_char_H": 3.158,
+   "last_char_H": 2.468,
+   "zipf_slope": -1.064,
+   "word_len_mean": 5.11
+  },
+  "controls_same_tokeniser": {
+   "English-WEB": {
+    "tokens": 35000,
+    "types": 2505,
+    "ttr": 0.0716,
+    "hapax_share_of_types": 0.4192,
+    "H1": 4.04,
+    "H2_given_1": 3.188,
+    "first_char_H": 4.072,
+    "last_char_H": 3.754,
+    "zipf_slope": -1.241,
+    "word_len_mean": 4.0
+   },
+   "Finnish": {
+    "tokens": 35000,
+    "types": 7100,
+    "ttr": 0.2029,
+    "hapax_share_of_types": 0.5763,
+    "H1": 4.018,
+    "H2_given_1": 3.246,
+    "first_char_H": 3.864,
+    "last_char_H": 2.794,
+    "zipf_slope": -0.955,
+    "word_len_mean": 5.91
+   },
+   "French": {
+    "tokens": 35000,
+    "types": 3550,
+    "ttr": 0.1014,
+    "hapax_share_of_types": 0.5017,
+    "H1": 4.09,
+    "H2_given_1": 3.243,
+    "first_char_H": 4.221,
+    "last_char_H": 3.541,
+    "zipf_slope": -1.222,
+    "word_len_mean": 4.03
+   },
+   "German": {
+    "tokens": 35000,
+    "types": 3558,
+    "ttr": 0.1017,
+    "hapax_share_of_types": 0.468,
+    "H1": 4.068,
+    "H2_given_1": 3.133,
+    "first_char_H": 4.098,
+    "last_char_H": 3.514,
+    "zipf_slope": -1.153,
+    "word_len_mean": 4.5
+   },
+   "Greek": {
+    "tokens": 35000,
+    "types": 4286,
+    "ttr": 0.1225,
+    "hapax_share_of_types": 0.5271,
+    "H1": 4.068,
+    "H2_given_1": 3.089,
+    "first_char_H": 3.774,
+    "last_char_H": 3.23,
+    "zipf_slope": -1.116,
+    "word_len_mean": 4.52
+   },
+   "Italian": {
+    "tokens": 35000,
+    "types": 4396,
+    "ttr": 0.1256,
+    "hapax_share_of_types": 0.5293,
+    "H1": 4.017,
+    "H2_given_1": 3.162,
+    "first_char_H": 4.089,
+    "last_char_H": 2.97,
+    "zipf_slope": -1.138,
+    "word_len_mean": 4.45
+   },
+   "Latin": {
+    "tokens": 35000,
+    "types": 7144,
+    "ttr": 0.2041,
+    "hapax_share_of_types": 0.5966,
+    "H1": 4.005,
+    "H2_given_1": 3.323,
+    "first_char_H": 3.998,
+    "last_char_H": 3.3,
+    "zipf_slope": -0.966,
+    "word_len_mean": 5.32
+   },
+   "Russian": {
+    "tokens": 35000,
+    "types": 5945,
+    "ttr": 0.1699,
+    "hapax_share_of_types": 0.5696,
+    "H1": 4.319,
+    "H2_given_1": 3.465,
+    "first_char_H": 4.195,
+    "last_char_H": 4.095,
+    "zipf_slope": -1.022,
+    "word_len_mean": 4.48
+   },
+   "Spanish": {
+    "tokens": 35000,
+    "types": 3832,
+    "ttr": 0.1095,
+    "hapax_share_of_types": 0.5258,
+    "H1": 4.132,
+    "H2_given_1": 3.189,
+    "first_char_H": 4.136,
+    "last_char_H": 3.533,
+    "zipf_slope": -1.162,
+    "word_len_mean": 4.14
+   },
+   "Culpeper": {
+    "tokens": 35000,
+    "types": 3548,
+    "ttr": 0.1014,
+    "hapax_share_of_types": 0.4583,
+    "H1": 4.081,
+    "H2_given_1": 3.243,
+    "first_char_H": 4.037,
+    "last_char_H": 3.669,
+    "zipf_slope": -1.036,
+    "word_len_mean": 4.39
+   },
+   "Alice": {
+    "tokens": 26786,
+    "types": 2623,
+    "ttr": 0.0979,
+    "hapax_share_of_types": 0.4285,
+    "H1": 4.054,
+    "H2_given_1": 3.22,
+    "first_char_H": 4.056,
+    "last_char_H": 3.708,
+    "zipf_slope": -1.132,
+    "word_len_mean": 4.04
+   }
+  },
+  "clean_parser_35k": {
+   "tokens": 35000,
+   "types": 7252,
+   "ttr": 0.2072,
+   "hapax_share_of_types": 0.6824,
+   "H1": 3.865,
+   "H2_given_1": 2.137,
+   "first_char_H": 3.189,
+   "last_char_H": 2.518,
+   "zipf_slope": -1.083,
+   "word_len_mean": 4.94
+  },
+  "clean_parser_comma_merged_35k": {
+   "tokens": 35000,
+   "types": 8746,
+   "ttr": 0.2499,
+   "hapax_share_of_types": 0.7174,
+   "H1": 3.882,
+   "H2_given_1": 2.148,
+   "first_char_H": 3.145,
+   "last_char_H": 2.461,
+   "zipf_slope": -1.039,
+   "word_len_mean": 5.34
+  },
+  "max_control_types": {
+   "name": "Latin",
+   "types": 7144
+  }
+ },
+ "A1": {
+  "voynich": {
+   "label": "Voynich clean",
+   "raw": {
+    "symbols": 25,
+    "H1": 3.867,
+    "H2_given_1": 2.132,
+    "final_H": 2.523
+   },
+   "det": {
+    "symbols": 26,
+    "H1": 3.884,
+    "H2_given_1": 2.162,
+    "final_H": 2.531,
+    "merges": [
+     {
+      "pair": "q+o",
+      "count": 5275,
+      "p_b_given_a": 0.978
+     }
+    ]
+   },
+   "b": {
+    "symbols": 31,
+    "H1": 3.84,
+    "H2_given_1": 2.255,
+    "final_H": 2.526
+   },
+   "b_det": {
+    "symbols": 32,
+    "H1": 3.861,
+    "H2_given_1": 2.291,
+    "final_H": 2.535,
+    "merges": [
+     {
+      "pair": "q+o",
+      "count": 5275,
+      "p_b_given_a": 0.978
+     }
+    ]
+   },
+   "c": {
+    "symbols": 37,
+    "H1": 3.896,
+    "H2_given_1": 2.398,
+    "final_H": 2.711
+   },
+   "c_det": {
+    "symbols": 38,
+    "H1": 3.923,
+    "H2_given_1": 2.441,
+    "final_H": 2.719,
+    "merges": [
+     {
+      "pair": "q+o",
+      "count": 5275,
+      "p_b_given_a": 0.978
+     }
+    ]
+   }
+  },
+  "languages": {
+   "English-WEB": {
+    "label": "English-WEB",
+    "raw": {
+     "symbols": 26,
+     "H1": 4.04,
+     "H2_given_1": 3.188,
+     "final_H": 3.754
+    },
+    "det": {
+     "symbols": 26,
+     "H1": 4.04,
+     "H2_given_1": 3.188,
+     "final_H": 3.754,
+     "merges": []
+    }
+   },
+   "Finnish": {
+    "label": "Finnish",
+    "raw": {
+     "symbols": 24,
+     "H1": 4.018,
+     "H2_given_1": 3.246,
+     "final_H": 2.794
+    },
+    "det": {
+     "symbols": 24,
+     "H1": 4.018,
+     "H2_given_1": 3.246,
+     "final_H": 2.794,
+     "merges": []
+    }
+   },
+   "French": {
+    "label": "French",
+    "raw": {
+     "symbols": 38,
+     "H1": 4.09,
+     "H2_given_1": 3.243,
+     "final_H": 3.541
+    },
+    "det": {
+     "symbols": 39,
+     "H1": 4.087,
+     "H2_given_1": 3.252,
+     "final_H": 3.573,
+     "merges": [
+      {
+       "pair": "q+u",
+       "count": 1412,
+       "p_b_given_a": 1.0
+      }
+     ]
+    }
+   },
+   "German": {
+    "label": "German",
+    "raw": {
+     "symbols": 30,
+     "H1": 4.068,
+     "H2_given_1": 3.133,
+     "final_H": 3.514
+    },
+    "det": {
+     "symbols": 31,
+     "H1": 4.059,
+     "H2_given_1": 3.172,
+     "final_H": 3.556,
+     "merges": [
+      {
+       "pair": "c+h",
+       "count": 3807,
+       "p_b_given_a": 0.962
+      }
+     ]
+    }
+   },
+   "Greek": {
+    "label": "Greek",
+    "raw": {
+     "symbols": 45,
+     "H1": 4.068,
+     "H2_given_1": 3.089,
+     "final_H": 3.23
+    },
+    "det": {
+     "symbols": 45,
+     "H1": 4.068,
+     "H2_given_1": 3.089,
+     "final_H": 3.23,
+     "merges": []
+    }
+   },
+   "Italian": {
+    "label": "Italian",
+    "raw": {
+     "symbols": 29,
+     "H1": 4.017,
+     "H2_given_1": 3.162,
+     "final_H": 2.97
+    },
+    "det": {
+     "symbols": 29,
+     "H1": 4.01,
+     "H2_given_1": 3.166,
+     "final_H": 2.97,
+     "merges": [
+      {
+       "pair": "q+u",
+       "count": 983,
+       "p_b_given_a": 1.0
+      }
+     ]
+    }
+   },
+   "Latin": {
+    "label": "Latin",
+    "raw": {
+     "symbols": 25,
+     "H1": 4.005,
+     "H2_given_1": 3.323,
+     "final_H": 3.3
+    },
+    "det": {
+     "symbols": 25,
+     "H1": 4.005,
+     "H2_given_1": 3.337,
+     "final_H": 3.3,
+     "merges": [
+      {
+       "pair": "q+u",
+       "count": 3087,
+       "p_b_given_a": 1.0
+      }
+     ]
+    }
+   },
+   "Russian": {
+    "label": "Russian",
+    "raw": {
+     "symbols": 53,
+     "H1": 4.319,
+     "H2_given_1": 3.465,
+     "final_H": 4.095
+    },
+    "det": {
+     "symbols": 53,
+     "H1": 4.319,
+     "H2_given_1": 3.465,
+     "final_H": 4.095,
+     "merges": []
+    }
+   },
+   "Spanish": {
+    "label": "Spanish",
+    "raw": {
+     "symbols": 32,
+     "H1": 4.132,
+     "H2_given_1": 3.189,
+     "final_H": 3.533
+    },
+    "det": {
+     "symbols": 32,
+     "H1": 4.122,
+     "H2_given_1": 3.205,
+     "final_H": 3.533,
+     "merges": [
+      {
+       "pair": "q+u",
+       "count": 1834,
+       "p_b_given_a": 1.0
+      }
+     ]
+    }
+   }
+  },
+  "controls": {
+   "Culpeper": {
+    "label": "Culpeper",
+    "raw": {
+     "symbols": 26,
+     "H1": 4.081,
+     "H2_given_1": 3.243,
+     "final_H": 3.669
+    },
+    "det": {
+     "symbols": 26,
+     "H1": 4.081,
+     "H2_given_1": 3.243,
+     "final_H": 3.669,
+     "merges": []
+    }
+   },
+   "Alice": {
+    "label": "Alice",
+    "raw": {
+     "symbols": 26,
+     "H1": 4.054,
+     "H2_given_1": 3.22,
+     "final_H": 3.708
+    },
+    "det": {
+     "symbols": 27,
+     "H1": 4.052,
+     "H2_given_1": 3.218,
+     "final_H": 3.708,
+     "merges": [
+      {
+       "pair": "q+u",
+       "count": 211,
+       "p_b_given_a": 1.0
+      }
+     ]
+    }
+   }
+  },
+  "gate_R1_1": {
+   "voynich_b_det": 2.291,
+   "lowest_language_det": [
+    3.089,
+    "Greek"
+   ],
+   "gap": 0.798
+  },
+  "gate_R1_2": {
+   "voynich_level_c_final_H": 2.711,
+   "lowest_language_raw_final_H": [
+    2.794,
+    "Finnish"
+   ],
+   "gap": 0.083
+  }
+ },
+ "A2": {
+  "tables_summary": {
+   "letters": [
+    "o",
+    "e",
+    "y",
+    "h",
+    "a",
+    "c",
+    "d",
+    "i",
+    "k",
+    "l",
+    "r",
+    "s",
+    "t",
+    "n",
+    "q",
+    "p",
+    "m",
+    "f",
+    "g",
+    "x",
+    "b",
+    "v",
+    "j",
+    "z",
+    "u",
+    "w"
+   ],
+   "top_groups": [
+    [
+     "ch",
+     10889
+    ],
+    [
+     "he",
+     8144
+    ],
+    [
+     "dy",
+     6838
+    ],
+    [
+     "ai",
+     6631
+    ],
+    [
+     "ok",
+     6075
+    ],
+    [
+     "in",
+     5952
+    ],
+    [
+     "ol",
+     5548
+    ],
+    [
+     "qo",
+     5275
+    ],
+    [
+     "ee",
+     5240
+    ],
+    [
+     "ed",
+     5028
+    ],
+    [
+     "che",
+     5022
+    ],
+    [
+     "ii",
+     4669
+    ],
+    [
+     "sh",
+     4486
+    ],
+    [
+     "iin",
+     4242
+    ],
+    [
+     "aii",
+     4219
+    ],
+    [
+     "edy",
+     4172
+    ],
+    [
+     "ey",
+     4102
+    ],
+    [
+     "da",
+     4084
+    ],
+    [
+     "ho",
+     3991
+    ],
+    [
+     "ke",
+     3969
+    ],
+    [
+     "ot",
+     3837
+    ],
+    [
+     "eo",
+     3411
+    ],
+    [
+     "ar",
+     3342
+    ],
+    [
+     "al",
+     3159
+    ],
+    [
+     "qok",
+     3113
+    ],
+    [
+     "ka",
+     3042
+    ],
+    [
+     "or",
+     2660
+    ],
+    [
+     "cho",
+     2633
+    ],
+    [
+     "she",
+     2600
+    ],
+    [
+     "oke",
+     2544
+    ]
+   ],
+   "left_fragments": [
+    "o",
+    "qo",
+    "y",
+    "l",
+    "ol",
+    "ch",
+    "cho",
+    "d",
+    "che",
+    "sh",
+    "she",
+    "sho",
+    "cheo",
+    "s",
+    "al"
+   ],
+   "right_fragments": [
+    "y",
+    "aiin",
+    "edy",
+    "ol",
+    "ey",
+    "eey",
+    "ar",
+    "ain",
+    "al",
+    "eedy",
+    "or",
+    "l",
+    "r",
+    "eol",
+    "iin"
+   ]
+  },
+  "culpeper": {
+   "plaintext": {
+    "tokens": 35000,
+    "types": 3263,
+    "ttr": 0.0932,
+    "hapax_share_of_types": 0.4474,
+    "H1": 4.085,
+    "H2_given_1": 3.219,
+    "first_char_H": 4.049,
+    "last_char_H": 3.578,
+    "zipf_slope": -1.063,
+    "word_len_mean": 4.45,
+    "pages": 17,
+    "jaccard_adjacent": 0.2142,
+    "jaccard_distant": null,
+    "page_unique_share": 0.1235,
+    "label": "Culpeper entries (<=35k tokens)"
+   },
+   "C1": {
+    "tokens": 35000,
+    "types": 3263,
+    "ttr": 0.0932,
+    "hapax_share_of_types": 0.4474,
+    "H1": 4.085,
+    "H2_given_1": 3.219,
+    "first_char_H": 4.049,
+    "last_char_H": 3.578,
+    "zipf_slope": -1.063,
+    "word_len_mean": 4.45,
+    "pages": 17,
+    "jaccard_adjacent": 0.2142,
+    "jaccard_distant": null,
+    "page_unique_share": 0.1235,
+    "H2_given_1_det": 3.219,
+    "det_merges": 0,
+    "sample": "roanidfe ekda kha rdboia lycm lohboa ayqo mioheoi",
+    "passes_R2_1": false
+   },
+   "C2": {
+    "tokens": 35000,
+    "types": 3263,
+    "ttr": 0.0932,
+    "hapax_share_of_types": 0.4474,
+    "H1": 3.572,
+    "H2_given_1": 2.28,
+    "first_char_H": 2.927,
+    "last_char_H": 2.612,
+    "zipf_slope": -1.063,
+    "word_len_mean": 9.38,
+    "pages": 17,
+    "jaccard_adjacent": 0.2142,
+    "jaccard_distant": null,
+    "page_unique_share": 0.1235,
+    "H2_given_1_det": 2.449,
+    "det_merges": 3,
+    "sample": "chechokiinqooldahe heeeolok eeaiok cheolotchqook eddyiney edchaiotchok okdyaiich eyqochaihechqo",
+    "passes_R2_1": false
+   },
+   "C3": {
+    "tokens": 35000,
+    "types": 16224,
+    "ttr": 0.4635,
+    "hapax_share_of_types": 0.822,
+    "H1": 3.645,
+    "H2_given_1": 2.66,
+    "first_char_H": 3.173,
+    "last_char_H": 3.177,
+    "zipf_slope": -0.957,
+    "word_len_mean": 10.22,
+    "pages": 17,
+    "jaccard_adjacent": 0.0626,
+    "jaccard_distant": null,
+    "page_unique_share": 0.525,
+    "H2_given_1_det": 2.722,
+    "det_merges": 2,
+    "sample": "eeycheoliinqooldahe choeeolhed daiaihed cthtchotchqook eddyiney edoraiotchok oksheheych teeqochaihechqo",
+    "passes_R2_1": false
+   },
+   "C4": {
+    "tokens": 35000,
+    "types": 11847,
+    "ttr": 0.3385,
+    "hapax_share_of_types": 0.7334,
+    "H1": 3.568,
+    "H2_given_1": 2.615,
+    "first_char_H": 3.173,
+    "last_char_H": 3.115,
+    "zipf_slope": -0.925,
+    "word_len_mean": 7.33,
+    "pages": 17,
+    "jaccard_adjacent": 0.0898,
+    "jaccard_distant": null,
+    "page_unique_share": 0.3774,
+    "H2_given_1_det": 2.667,
+    "det_merges": 2,
+    "sample": "eeyokckhqodahe heeehed eeok eeyholqohed thtcey edotok okaii eyqohehy",
+    "passes_R2_1": false
+   },
+   "C5": {
+    "tokens": 35000,
+    "types": 3255,
+    "ttr": 0.093,
+    "hapax_share_of_types": 0.4473,
+    "H1": 3.858,
+    "H2_given_1": 2.689,
+    "first_char_H": 2.842,
+    "last_char_H": 1.575,
+    "zipf_slope": -1.064,
+    "word_len_mean": 7.0,
+    "pages": 17,
+    "jaccard_adjacent": 0.214,
+    "jaccard_distant": null,
+    "page_unique_share": 0.1235,
+    "H2_given_1_det": 2.689,
+    "det_merges": 0,
+    "sample": "sheoanidfaiin qokdey chehey shedboiey shycdy shohboey olyqy rioheoain",
+    "passes_R2_1": false
+   },
+   "C6": {
+    "tokens": 35000,
+    "types": 2861,
+    "ttr": 0.0817,
+    "hapax_share_of_types": 0.4257,
+    "H1": 3.463,
+    "H2_given_1": 2.254,
+    "first_char_H": 2.927,
+    "last_char_H": 2.477,
+    "zipf_slope": -1.108,
+    "word_len_mean": 6.72,
+    "pages": 17,
+    "jaccard_adjacent": 0.2308,
+    "jaccard_distant": null,
+    "page_unique_share": 0.1106,
+    "H2_given_1_det": 2.376,
+    "det_merges": 4,
+    "sample": "cheokiinqodahe heeeok eeok cheotqook ediney edotok okaii eyqoheqo"
+   }
+  },
+  "latin": {
+   "plaintext": {
+    "tokens": 34875,
+    "types": 7132,
+    "ttr": 0.2045,
+    "hapax_share_of_types": 0.5966,
+    "H1": 4.005,
+    "H2_given_1": 3.323,
+    "first_char_H": 3.998,
+    "last_char_H": 3.301,
+    "zipf_slope": -0.965,
+    "word_len_mean": 5.32,
+    "pages": 225,
+    "jaccard_adjacent": 0.13,
+    "jaccard_distant": 0.0772,
+    "page_unique_share": 0.1755,
+    "label": "Latin Vulgate (35k tokens, 155-token chunks)"
+   },
+   "C1": {
+    "tokens": 34875,
+    "types": 7132,
+    "ttr": 0.2045,
+    "hapax_share_of_types": 0.5966,
+    "H1": 4.005,
+    "H2_given_1": 3.323,
+    "first_char_H": 3.998,
+    "last_char_H": 3.301,
+    "zipf_slope": -0.965,
+    "word_len_mean": 5.32,
+    "pages": 225,
+    "jaccard_adjacent": 0.13,
+    "jaccard_distant": 0.0772,
+    "page_unique_share": 0.1755,
+    "H2_given_1_det": 3.337,
+    "det_merges": 1,
+    "sample": "memto thy slicydasyor ei hssldrhiso yl soc cyhirhdrc",
+    "passes_R2_1": false
+   },
+   "C2": {
+    "tokens": 34875,
+    "types": 7132,
+    "ttr": 0.2045,
+    "hapax_share_of_types": 0.5966,
+    "H1": 3.557,
+    "H2_given_1": 2.312,
+    "first_char_H": 2.971,
+    "last_char_H": 2.782,
+    "zipf_slope": -0.965,
+    "word_len_mean": 11.12,
+    "pages": 225,
+    "jaccard_adjacent": 0.13,
+    "jaccard_distant": 0.0772,
+    "page_unique_share": 0.1755,
+    "H2_given_1_det": 2.528,
+    "det_merges": 5,
+    "sample": "eyheeyshch shaidy iiedqoindyolokiidychche heqo aiiiiiedolcheaiqoiich dyed iichin indyaiqocheaiolchein",
+    "passes_R2_1": false
+   },
+   "C3": {
+    "tokens": 34875,
+    "types": 21660,
+    "ttr": 0.6211,
+    "hapax_share_of_types": 0.8736,
+    "H1": 3.64,
+    "H2_given_1": 2.658,
+    "first_char_H": 3.197,
+    "last_char_H": 3.152,
+    "zipf_slope": -0.8,
+    "word_len_mean": 12.17,
+    "pages": 225,
+    "jaccard_adjacent": 0.0323,
+    "jaccard_distant": 0.0283,
+    "page_unique_share": 0.5912,
+    "H2_given_1_det": 2.72,
+    "det_merges": 2,
+    "sample": "taheteeshch shaidy teedqoodsheolhedckchychche heqo aiiiiiedoleeyaiqotech dyoka techtc indyaiqoeeyaiolchein",
+    "passes_R2_1": false
+   },
+   "C4": {
+    "tokens": 34875,
+    "types": 15196,
+    "ttr": 0.4357,
+    "hapax_share_of_types": 0.8017,
+    "H1": 3.688,
+    "H2_given_1": 2.591,
+    "first_char_H": 3.197,
+    "last_char_H": 3.009,
+    "zipf_slope": -0.902,
+    "word_len_mean": 7.6,
+    "pages": 225,
+    "jaccard_adjacent": 0.0609,
+    "jaccard_distant": 0.0497,
+    "page_unique_share": 0.4019,
+    "H2_given_1_det": 2.679,
+    "det_merges": 2,
+    "sample": "taeykh shdy iiqoinsheoliisheeey hehy shockiiolcheqoii dy iiin insheqochekeechein",
+    "passes_R2_1": false
+   },
+   "C5": {
+    "tokens": 34875,
+    "types": 7109,
+    "ttr": 0.2038,
+    "hapax_share_of_types": 0.5954,
+    "H1": 3.836,
+    "H2_given_1": 2.819,
+    "first_char_H": 2.783,
+    "last_char_H": 1.657,
+    "zipf_slope": -0.967,
+    "word_len_mean": 7.76,
+    "pages": 225,
+    "jaccard_adjacent": 0.1302,
+    "jaccard_distant": 0.0774,
+    "page_unique_share": 0.1746,
+    "H2_given_1_det": 2.819,
+    "det_merges": 0,
+    "sample": "remty cheohedy sholicydasyoor qoain lssldrhisy yeedy shooeey chyhirhdreey",
+    "passes_R2_1": false
+   },
+   "C6": {
+    "tokens": 34875,
+    "types": 5352,
+    "ttr": 0.1535,
+    "hapax_share_of_types": 0.5503,
+    "H1": 3.544,
+    "H2_given_1": 2.162,
+    "first_char_H": 2.971,
+    "last_char_H": 2.635,
+    "zipf_slope": -1.05,
+    "word_len_mean": 7.04,
+    "pages": 225,
+    "jaccard_adjacent": 0.163,
+    "jaccard_distant": 0.108,
+    "page_unique_share": 0.1292,
+    "H2_given_1_det": 2.289,
+    "det_merges": 3,
+    "sample": "eyeysh shdy iiqoindyoliidyche heqo aiiiiiolcheqoii dy iiin indyqocheolchein"
+   }
+  },
+  "R2_1_hits": []
+ },
+ "A3": {
+  "observed": {
+   "pages": 226,
+   "jaccard_adjacent": 0.1093,
+   "jaccard_distant": 0.0625,
+   "page_unique_share": 0.1932
+  },
+  "permutation_null": {
+   "n_perm": 200,
+   "jaccard_adjacent": {
+    "mean": 0.1045,
+    "sd": 0.0013,
+    "p2.5": 0.1022,
+    "p97.5": 0.107
+   },
+   "jaccard_distant": {
+    "mean": 0.0915,
+    "sd": 0.0011,
+    "p2.5": 0.0893,
+    "p97.5": 0.0939
+   },
+   "page_unique_share": {
+    "mean": 0.1661,
+    "sd": 0.0021,
+    "p2.5": 0.1622,
+    "p97.5": 0.1709
+   }
+  },
+  "confounds": {
+   "adjacent_pairs_same_L_and_I": 178,
+   "adjacent_same_L_I_jaccard": 0.12,
+   "adjacent_pairs_diff_L_or_I": 47,
+   "adjacent_diff_L_or_I_jaccard": 0.0684,
+   "distant_same_L_I_pairs": 197,
+   "distant_same_L_I_jaccard": 0.1055,
+   "ratio_within_class": 1.137,
+   "adjacent_cross_language_pairs": 30,
+   "adjacent_cross_language_jaccard": 0.0509,
+   "language_counts": {
+    "A": 114,
+    "B": 82,
+    "?": 30
+   },
+   "section_counts": {
+    "T": 7,
+    "H": 129,
+    "C": 10,
+    "S": 25,
+    "A": 8,
+    "Z": 12,
+    "B": 19,
+    "P": 16
+   }
+  },
+  "paragraph_loci_only": {
+   "pages": 206,
+   "jaccard_adjacent": 0.1111,
+   "jaccard_distant": 0.0638,
+   "page_unique_share": 0.1861,
+   "tokens": 34820
+  },
+  "controls_size_matched": {
+   "Culpeper_full": {
+    "pages": 138,
+    "jaccard_adjacent": 0.2128,
+    "jaccard_distant": 0.1552,
+    "page_unique_share": 0.0287,
+    "tokens": 242234
+   },
+   "Culpeper_35k": {
+    "pages": 17,
+    "jaccard_adjacent": 0.2136,
+    "jaccard_distant": null,
+    "page_unique_share": 0.1247,
+    "tokens": 35000
+   },
+   "Alice_full": {
+    "pages": 165,
+    "jaccard_adjacent": 0.1914,
+    "jaccard_distant": 0.1535,
+    "page_unique_share": 0.0735,
+    "tokens": 25575
+   },
+   "Alice_35k": {
+    "pages": 165,
+    "jaccard_adjacent": 0.1914,
+    "jaccard_distant": 0.1535,
+    "page_unique_share": 0.0735,
+    "tokens": 25575
+   }
+  },
+  "comma_merged_sensitivity": {
+   "observed": {
+    "pages": 226,
+    "jaccard_adjacent": 0.0904,
+    "jaccard_distant": 0.0494,
+    "page_unique_share": 0.2381
+   },
+   "permutation_null": {
+    "n_perm": 200,
+    "jaccard_adjacent": {
+     "mean": 0.086,
+     "sd": 0.0012,
+     "p2.5": 0.0838,
+     "p97.5": 0.0886
+    },
+    "jaccard_distant": {
+     "mean": 0.0748,
+     "sd": 0.0012,
+     "p2.5": 0.0726,
+     "p97.5": 0.0774
+    },
+    "page_unique_share": {
+     "mean": 0.205,
+     "sd": 0.0022,
+     "p2.5": 0.2009,
+     "p97.5": 0.2098
+    }
+   },
+   "confounds": {
+    "adjacent_pairs_same_L_and_I": 178,
+    "adjacent_same_L_I_jaccard": 0.0995,
+    "adjacent_pairs_diff_L_or_I": 47,
+    "adjacent_diff_L_or_I_jaccard": 0.056,
+    "distant_same_L_I_pairs": 197,
+    "distant_same_L_I_jaccard": 0.0872,
+    "ratio_within_class": 1.141,
+    "adjacent_cross_language_pairs": 30,
+    "adjacent_cross_language_jaccard": 0.0379,
+    "language_counts": {
+     "A": 114,
+     "B": 82,
+     "?": 30
+    },
+    "section_counts": {
+     "T": 7,
+     "H": 129,
+     "C": 10,
+     "S": 25,
+     "A": 8,
+     "Z": 12,
+     "B": 19,
+     "P": 16
+    }
+   }
+  },
+  "family_parser_observed": {
+   "pages": 226,
+   "jaccard_adjacent": 0.0804,
+   "jaccard_distant": 0.0422,
+   "page_unique_share": 0.3024
+  },
+  "R3_2_excess_over_null": 0.0271,
+  "R3_3_ratio_vs_culpeper_35k": 1.55
+ },
+ "A4": {
+  "Skeat_MiddleEnglish": {
+   "min_len2": {
+    "tokens": 35000,
+    "types": 4966,
+    "ttr": 0.1419,
+    "hapax_share_of_types": 0.5344,
+    "H1": 4.012,
+    "H2_given_1": 3.147,
+    "first_char_H": 4.028,
+    "last_char_H": 3.42,
+    "zipf_slope": -1.029,
+    "word_len_mean": 4.04
+   },
+   "min_len1": {
+    "tokens": 35000,
+    "types": 4793,
+    "ttr": 0.1369,
+    "hapax_share_of_types": 0.5306,
+    "H1": 3.999,
+    "H2_given_1": 3.161,
+    "first_char_H": 4.016,
+    "last_char_H": 3.552,
+    "zipf_slope": -1.049,
+    "word_len_mean": 3.9
+   },
+   "sample": "whan that aprille with his shoures sote the droghte of marche hath perced to the rote and bathed every veyne"
+  },
+  "Purves_modernised": {
+   "min_len2": {
+    "tokens": 35000,
+    "types": 4773,
+    "ttr": 0.1364,
+    "hapax_share_of_types": 0.5435,
+    "H1": 4.038,
+    "H2_given_1": 3.173,
+    "first_char_H": 4.063,
+    "last_char_H": 3.533,
+    "zipf_slope": -1.092,
+    "word_len_mean": 4.07
+   },
+   "min_len1": {
+    "tokens": 35000,
+    "types": 4644,
+    "ttr": 0.1327,
+    "hapax_share_of_types": 0.5435,
+    "H1": 4.023,
+    "H2_given_1": 3.188,
+    "first_char_H": 4.046,
+    "last_char_H": 3.662,
+    "zipf_slope": -1.103,
+    "word_len_mean": 3.94
+   },
+   "sample": "when that aprilis with his showers swoot the drought of march hath pierced to the root and bathed every vein"
+  },
+  "voynich_clean": {
+   "min_len1": {
+    "tokens": 38184,
+    "types": 7734,
+    "ttr": 0.2025,
+    "hapax_share_of_types": 0.6831,
+    "H1": 3.867,
+    "H2_given_1": 2.132,
+    "first_char_H": 3.201,
+    "last_char_H": 2.523,
+    "zipf_slope": -1.078,
+    "word_len_mean": 4.96
+   },
+   "min_len2": {
+    "tokens": 36765,
+    "types": 7715,
+    "ttr": 0.2098,
+    "hapax_share_of_types": 0.6846,
+    "H1": 3.871,
+    "H2_given_1": 2.119,
+    "first_char_H": 3.158,
+    "last_char_H": 2.468,
+    "zipf_slope": -1.064,
+    "word_len_mean": 5.11
+   }
+  },
+  "R4_2_orthography_effect_ttr": 0.0042
+ }
+}

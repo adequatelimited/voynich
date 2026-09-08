@@ -1,0 +1,27 @@
+{
+  "id": "2026-09-07T093000Z-clean-rerun",
+  "experiment": "experiments/clean-rerun",
+  "protocol": "experiments/clean-rerun/PROTOCOL.md",
+  "protocol_commit": "1df3a69 (this branch; originally 8873bfa)",
+  "command": "python clean_rerun.py --repo ../.. --lab <lab dir> --out results/",
+  "exploratory_command": "python insample_clean.py --repo ../.. --out results/",
+  "seeds": {"generators": 408, "distant_page_sampling": 7},
+  "corpus": {
+    "path": "data/corpora/ZL3b-n.txt",
+    "sha256": "bf5b6d4ac1e3a51b1847a9c388318d609020441ccd56984c901c32b09beccafc"
+  },
+  "code": ["experiments/clean-rerun/clean_rerun.py", "experiments/clean-rerun/family_generators.py",
+           "experiments/adversarial-critique/adversarial_critique.py"],
+  "environment": "CPython 3.12.7, stdlib only, Windows 11",
+  "started": "2026-09-07T09:30 local (Europe)",
+  "status": "completed",
+  "verdicts": {
+    "R5.1_matches_S": {"M2": 3, "M3": 2, "M4": 1, "M5": 1, "M5b": 2},
+    "R5.1_matches_M": {"M2": 2, "M3": 3, "M4": 1, "M5": 1, "M5b": 3},
+    "R5.2_residue_best_model_S_M2": {"H2_given_1": "UNMATCHED", "last_char_H": "UNMATCHED", "zipf_slope": "UNMATCHED", "jaccard_adjacent": "MATCHED", "word_len_mean": "UNMATCHED"},
+    "R5.3": "all GENERALISE (weak test: alternating split)",
+    "R5.4_test_ranking": ["M2", "M3", "M5b", "M5", "M4"],
+    "R6.1": "NOT REPRODUCED BY 12 UNTUNED CIPHERS"
+  },
+  "ai_agent": "Claude Code, model claude-fable-5-1 (Anthropic); re-run requested by Vasily Gnuchev after the adversarial critique"
+}

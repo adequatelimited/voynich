@@ -1,0 +1,287 @@
+{
+  "schema_version": "1.0",
+  "research_pr": 1,
+  "merge_sha": "2fce568279f0e238fbce137c748a4876d8f752fb",
+  "events": [
+    {
+      "schema_version": "1.0",
+      "id": "decision-1-family-ms408-data-access-2559716ea305",
+      "sequence": 2,
+      "kind": "award",
+      "family_id": "family-ms408-data-access",
+      "rubric_version": "0.1",
+      "category": "corpus_annotations",
+      "repository_id": 1359336540,
+      "pr_number": 1,
+      "milestone_id": "milestone-1359336540-1-family-ms408-data-access",
+      "earned_at": "2026-09-07T18:20:02Z",
+      "assessment_id": "assessment-38794cac1c5729c359fd25575f85efc4",
+      "artifact_binding_digest": "2559716ea305ad702633be2f637e0348dc75f49892fa9927eeed162b96205347",
+      "authority_receipt_ref": "receipt:job-2559716ea305ad702633be2f637e0348dc75f498",
+      "cumulative_tier": 5,
+      "allocation_shares": [
+        {
+          "github_id": 859355,
+          "share_basis_points": 10000,
+          "status": "paid",
+          "acknowledgment_receipt_ref": "github-pr:1359336540:1:1222435507ce5dbdaa794a8518eed3f864297d10:7b4a2c48ce89723134696b228356d47172e5481c1bb361b2d0712989ed3e2e3b:cdea8214564f4183864c09c10621e7694d7f7739cf2869afdeec53c7353240b5"
+        }
+      ],
+      "reason": "Both prior reports independently reached the same admission (accept), score_status (proposed), tier (5 assessed matching claimed 5) and near-identical gate reasoning for this single outcome family. The disagreement to resolve is a validation defect: one report's findings entries omitted the required evidence_refs field, failing schema validation. This corrected assessment restates the same substantive judgment (tier 5, all gates pass, no blocker) with evidence_refs populated for every finding, per the corrector's mandate to fix reported validation defects without altering the underlying merit judgment. The outcome is a usable provenance-preserving resource per the rubric's 'Source acquisition, rights resolution, digitization and preservation' row: it removes a material access obstacle (verified, agent-readable access to the full Beinecke scan set and additional RF1b-e/IT2a/LSI transliterations not previously catalogued), documents per-source rights, and supplies an inspectable acceptance test. It does not reach tier 10, which would require either independently authenticated execution of the verification pipeline (no context.execution_receipts entry exists) or demonstrated downstream analytical use/impact of this access route; neither is present in the supplied evidence. Overlap check: catalog entries are additive to the existing zl3b/gc2a/takahashi-original entries, so this is treated as a new family rather than requiring predecessor settlement."
+    }
+  ],
+  "families_added": [
+    {
+      "id": "family-ms408-data-access",
+      "rubric_version": "0.1",
+      "scope": "Registration of a third-party public mirror (Artheon Museum Lab) hosting 213 Beinecke MS 408 scans and extended EVA/IVTFF transliterations (RF1b-e, IT2a, LSI), with a machine-readable catalogue, per-file SHA-256 hashes recorded by the contributor from a 2026-09-06 fetch, an agent-oriented llms.txt entry point, and a rights/provenance record distinguishing CC0-hosted material from the reference_only 1998 Stolfi EVT.",
+      "acceptance_test": "Fetch https://lab.artheonmuseum.org/voynich/catalogue.json, pick any entry, download its public_url and confirm the SHA-256 matches the catalogue; or run the hosted download_dataset.py which performs exactly this verification.",
+      "aliases": [],
+      "predecessor_family_ids": [],
+      "excluded_overlap": [],
+      "seed": false,
+      "seed_baseline": 0
+    }
+  ],
+  "milestones": [
+    {
+      "id": "milestone-1359336540-1-family-ms408-data-access",
+      "family_id": "family-ms408-data-access",
+      "repository_id": 1359336540,
+      "pr_number": 1,
+      "earned_at": "2026-09-07T18:20:02Z",
+      "depends_on": []
+    }
+  ],
+  "assessment": {
+    "schema_version": "1.0",
+    "assessment_id": "assessment-38794cac1c5729c359fd25575f85efc4",
+    "artifact_binding_digest": "38794cac1c5729c359fd25575f85efc4587cb9364d81adf3f0bd787ae6733dd6",
+    "merit_evidence_digest": "19075a5793f7ed3e0efaf895a9b3b1c16e7f3e126cdad3fdeae768800b2dfc94",
+    "repository_id": 1359336540,
+    "pr_number": 1,
+    "head_sha": "1222435507ce5dbdaa794a8518eed3f864297d10",
+    "base_sha": "ec609a1aaa23a5aaf6b4307859358e819bf033fe",
+    "rules_version": "0.1",
+    "rubric_version": "0.1",
+    "grading_profile": "voynich-sonnet-ai-pilot-2026-09-07-v3",
+    "evaluator_commit": "ec609a1aaa23a5aaf6b4307859358e819bf033fe",
+    "mode": "official_proposal",
+    "status": "complete",
+    "claimed_score": 5,
+    "expected_score": 5,
+    "official_proposed_score": 5,
+    "awarded_score": null,
+    "assessment": {
+      "schema_version": "1.0",
+      "admission_action": "accept",
+      "score_status": "proposed",
+      "conduct_status": "clear",
+      "findings": [
+        {
+          "rule_id_or_gate": "G3",
+          "severity": "info",
+          "path_or_locus": "contributions/artheon-ms408-hosted-dataset/hosted-hashes.json",
+          "evidence_refs": [
+            "contributions/artheon-ms408-hosted-dataset/hosted-hashes.json"
+          ],
+          "reason": "The submission records SHA-256 hashes the contributor states were computed from bytes fetched on 2026-09-06 from the third-party mirror lab.artheonmuseum.org. This is ordinary submitted evidence (an author-reported checksum list), not an independently authenticated execution or retrieval receipt. context.execution_receipts is empty, so no entry corresponds to this fetch.",
+          "required_change": "None required for the accepted tier 5. For any future higher-tier claim resting on independently verified live availability or integrity of the mirror, supply a trusted execution/retrieval receipt from context.execution_receipts.",
+          "verification_step": "A reviewer or future contributor can independently fetch https://lab.artheonmuseum.org/voynich/catalogue.json and compare hashes; this remains unverified by this assessment and is a nonblocking limitation, not a gate failure at the assessed tier.",
+          "blocks_merge_or_credit": false
+        },
+        {
+          "rule_id_or_gate": "R4/G2",
+          "severity": "info",
+          "path_or_locus": "contributions/artheon-ms408-hosted-dataset/rights.md",
+          "evidence_refs": [
+            "contributions/artheon-ms408-hosted-dataset/rights.md"
+          ],
+          "reason": "Rights record cites Yale Beinecke public IIIF access, voynich.nu's CC0 licensing statement for hosted transliterations, and honestly flags the original 1998 Stolfi EVT as reference_only pending terms review, rather than concealing the ambiguity. The submission imports only metadata/hashes/catalog entries, not the underlying scan or transliteration bytes, so redistribution rights for the mirror's actual bytes are not directly at issue for the material actually submitted here, per the inclusion-first policy's treatment of attributed external references.",
+          "required_change": "None required for present scope. If a future contribution imports the mirror's actual scan/text bytes into this repository, rights for that specific redistribution should be reconfirmed, particularly for the reference_only EVT.",
+          "verification_step": "Inspect voynich.nu/roadmap.html licensing statement and the UNICAMP Stolfi archive terms before importing bytes directly into this repository.",
+          "blocks_merge_or_credit": false
+        },
+        {
+          "rule_id_or_gate": "G6",
+          "severity": "info",
+          "path_or_locus": "data/transcriptions/catalog.json",
+          "evidence_refs": [
+            "data/transcriptions/catalog.json"
+          ],
+          "reason": "New catalog entries (rf1be, it2a, lsi, artheon-lab-ms408) are additive metadata registrations distinct from the existing zl3b/gc2a/takahashi-original entries already present in the same file; no duplication of already-registered sources is apparent from the supplied content.",
+          "required_change": "",
+          "verification_step": "Compare catalog.json against the prior catalog state (pre-PR) to confirm no duplicate source_id entries were introduced.",
+          "blocks_merge_or_credit": false
+        }
+      ],
+      "outcomes": [
+        {
+          "family_id": "family-ms408-data-access",
+          "scope": "Registration of a third-party public mirror (Artheon Museum Lab) hosting 213 Beinecke MS 408 scans and extended EVA/IVTFF transliterations (RF1b-e, IT2a, LSI), with a machine-readable catalogue, per-file SHA-256 hashes recorded by the contributor from a 2026-09-06 fetch, an agent-oriented llms.txt entry point, and a rights/provenance record distinguishing CC0-hosted material from the reference_only 1998 Stolfi EVT.",
+          "category": "corpus_annotations",
+          "predecessors": [],
+          "aliases": [],
+          "claimed_tier": 5,
+          "assessed_tier": 5,
+          "attribution_status": "verified",
+          "gate_evidence": [
+            {
+              "gate": "G1",
+              "status": "pass",
+              "evidence_refs": [
+                "contributions/artheon-ms408-hosted-dataset/contribution.yaml",
+                "research/context-index.json"
+              ],
+              "reason": "Directly connects to the corpus-integrity research branch (per research/context-index.json branch listing) by expanding verified, agent-accessible corpus/scan access beyond the existing pinned ZL3b/GC2a corpora and Takahashi reference-only pages."
+            },
+            {
+              "gate": "G2",
+              "status": "pass",
+              "evidence_refs": [
+                "contributions/artheon-ms408-hosted-dataset/rights.md"
+              ],
+              "reason": "Traceable per-source rights and provenance record: Beinecke public IIIF scans, voynich.nu CC0-licensed transliteration hosting with named original authors, and an explicit reference_only flag for the Stolfi EVT pending terms review. This is an attributed external reference with disclosed provenance, not an unqualified redistribution claim of unverified bytes, consistent with the inclusion-first policy's treatment of applicable upstream open/public-domain bases."
+            },
+            {
+              "gate": "G3",
+              "status": "pass",
+              "evidence_refs": [
+                "contributions/artheon-ms408-hosted-dataset/hosted-hashes.json",
+                "data/transcriptions/catalog.json"
+              ],
+              "reason": "Inspectable ordinary evidence is supplied: a hash manifest with byte lengths and SHA-256 values, and a catalog with source-level integrity/retrieval metadata. No trusted execution receipt exists in context.execution_receipts (which is empty), so no independently authenticated verification of the live fetch is credited; tier 5 does not require such a receipt, so this is not a gate failure at the assessed tier."
+            },
+            {
+              "gate": "G4",
+              "status": "pass",
+              "evidence_refs": [
+                "contributions/artheon-ms408-hosted-dataset/contribution.yaml"
+              ],
+              "reason": "Explicit limitations are stated: scans are JPEG derivatives not archival TIFFs, re-hosting adds no new manuscript readings, the mirror catalogue evolves so only the 2026-09-06 pin is fixed, and the original EVT's license status is unresolved."
+            },
+            {
+              "gate": "G5",
+              "status": "pass",
+              "evidence_refs": [
+                "contributions/artheon-ms408-hosted-dataset/contribution.yaml"
+              ],
+              "reason": "Named human contributor (github_id 859355, gnuchev) with role attribution and full attribution share, plus explicit AI-use disclosure (Moonshot AI kimi-k3, tasks: download orchestration scripting, hash catalogue generation, doc drafting) with a stated human-verification step distinguishing AI-scripted tooling from the contributor's own fetch/verification."
+            },
+            {
+              "gate": "G6",
+              "status": "pass",
+              "evidence_refs": [
+                "data/transcriptions/catalog.json",
+                "research/context-index.json"
+              ],
+              "reason": "Registers catalog entries (rf1be, it2a, lsi, artheon-lab-ms408) genuinely distinct from the zl3b/gc2a/takahashi-original entries already listed in research/context-index.json's source collection; this is additive incremental coverage, not a duplicate of the existing seed-corpus-parser or seed-source-catalog families."
+            },
+            {
+              "gate": "G7",
+              "status": "pass",
+              "evidence_refs": [
+                "contributions/artheon-ms408-hosted-dataset/contribution.yaml",
+                "contributions/artheon-ms408-hosted-dataset/hosted-hashes.json"
+              ],
+              "reason": "No fabricated claim of independent verification beyond what is disclosed; the submission is explicit that hashes were computed from the contributor's own fetch, not an independently authenticated receipt, and the reference_only status of the Stolfi EVT is disclosed rather than concealed."
+            }
+          ],
+          "reason": "Both prior reports independently reached the same admission (accept), score_status (proposed), tier (5 assessed matching claimed 5) and near-identical gate reasoning for this single outcome family. The disagreement to resolve is a validation defect: one report's findings entries omitted the required evidence_refs field, failing schema validation. This corrected assessment restates the same substantive judgment (tier 5, all gates pass, no blocker) with evidence_refs populated for every finding, per the corrector's mandate to fix reported validation defects without altering the underlying merit judgment. The outcome is a usable provenance-preserving resource per the rubric's 'Source acquisition, rights resolution, digitization and preservation' row: it removes a material access obstacle (verified, agent-readable access to the full Beinecke scan set and additional RF1b-e/IT2a/LSI transliterations not previously catalogued), documents per-source rights, and supplies an inspectable acceptance test. It does not reach tier 10, which would require either independently authenticated execution of the verification pipeline (no context.execution_receipts entry exists) or demonstrated downstream analytical use/impact of this access route; neither is present in the supplied evidence. Overlap check: catalog entries are additive to the existing zl3b/gc2a/takahashi-original entries, so this is treated as a new family rather than requiring predecessor settlement."
+        }
+      ],
+      "inspected_paths": [
+        "contributions/artheon-ms408-hosted-dataset/contribution.yaml",
+        "contributions/artheon-ms408-hosted-dataset/hosted-hashes.json",
+        "contributions/artheon-ms408-hosted-dataset/rights.md",
+        "data/transcriptions/catalog.json",
+        "research/context-index.json"
+      ],
+      "inspection_gaps": [],
+      "next_action": "Accept at tier 5 for family-ms408-data-access. To pursue tier 10 in a future PR, supply either an independently authenticated execution receipt (added to context.execution_receipts) confirming the remote mirror's integrity-verification pipeline, or demonstrated downstream analytical use (e.g., a baseline/experiment run against the newly registered RF1b-e/IT2a/LSI corpora with controls) that materially extends an existing analysis.",
+      "appeal_route": "If the contributor believes tier 10 evidence exists (e.g., a prior or concurrent analysis depending on this dataset, or a trusted execution receipt authenticating the described fetch/verification), file a revision on the same PR citing the specific missing artifact per GRADING.md section 3; the assessor will re-inspect under an evidence-based regrade. Disputes over the rights classification of the reference_only Stolfi EVT, or over family/predecessor overlap with seed-source-catalog/seed-corpus-parser, may be raised through the same PR-based review process described in RULES.md R8."
+    },
+    "stages": [
+      {
+        "stage": "adjudicator",
+        "provider": "anthropic",
+        "model": "claude-sonnet-5",
+        "exposed_version": "claude-sonnet-5",
+        "prompt_digest": "53ded440c208f848b21ce77d4ea6c5956c2cd8f516d87d9f293beca9b5f40ef9",
+        "response_digest": "d9b027b193daf802a90b97fa8df729324549c1582ab9bc40a3dda493d1bd1613",
+        "started_at": "2026-09-07T18:16:27.108Z",
+        "completed_at": "2026-09-07T18:17:00.941Z",
+        "usage": {
+          "sessions": 1,
+          "input_bytes": 153749,
+          "output_bytes": 11683,
+          "runtime_ms": 32930
+        },
+        "receipt_ref": "stage-results/job-c01bc88b8887647b68fe63fad522a5731dec5228/adjudicator.json"
+      },
+      {
+        "stage": "adversary",
+        "provider": "anthropic",
+        "model": "claude-sonnet-5",
+        "exposed_version": "claude-sonnet-5",
+        "prompt_digest": "15802ab34d280d2989e72da51630839dc0a93cee60bab64a5215dbc26eddc281",
+        "response_digest": "a81310cea67574385f74376d9e8223f7bd7c27f68c724d940fa65c4185e1c7da",
+        "started_at": "2026-09-07T18:14:44.588Z",
+        "completed_at": "2026-09-07T18:15:22.879Z",
+        "usage": {
+          "sessions": 1,
+          "input_bytes": 135514,
+          "output_bytes": 10526,
+          "runtime_ms": 36574
+        },
+        "receipt_ref": "stage-results/job-c01bc88b8887647b68fe63fad522a5731dec5228/adversary.json"
+      },
+      {
+        "stage": "assessor",
+        "provider": "anthropic",
+        "model": "claude-sonnet-5",
+        "exposed_version": "claude-sonnet-5",
+        "prompt_digest": "2fff2cfa1598eb82bfcaa36c6167415d9f56fa4cdf30b226e4b50cb8d51e7db9",
+        "response_digest": "e062cc76fe2c92cd1d1986b802ea0c8ccef24c2a6976e8685f8f17b794158ec2",
+        "started_at": "2026-09-07T18:13:22.561Z",
+        "completed_at": "2026-09-07T18:13:58.018Z",
+        "usage": {
+          "sessions": 1,
+          "input_bytes": 135395,
+          "output_bytes": 10690,
+          "runtime_ms": 34547
+        },
+        "receipt_ref": "stage-results/job-c01bc88b8887647b68fe63fad522a5731dec5228/assessor.json"
+      }
+    ],
+    "disagreements": [
+      "Material independent-assessment disagreement or invalid proposal."
+    ],
+    "holds": [],
+    "reused_assessment_id": "assessment-75ea93367270b840ada53611d9f8a1f3"
+  },
+  "receipt": {
+    "schema_version": "1.0",
+    "id": "receipt:job-2559716ea305ad702633be2f637e0348dc75f498",
+    "key_id": "voynich-2026-09-06",
+    "issued_at": "2026-09-07T18:20:15.564Z",
+    "payload": {
+      "repository_id": 1359336540,
+      "events_digest": "e810a1adad53ffd38b5b742b96b8f09f215d8114314843844a2951d7bdcbd1d2",
+      "milestones_digest": "02fa7ef94b78a71220614442edd23f57c31d0a13ba4eba3ebb2252beea34cc28",
+      "families_digest": "b679d53462bde3dd92832bd66f8b9e119b9c12e9266a49f8756478b7841411cc",
+      "merge_sha": "2fce568279f0e238fbce137c748a4876d8f752fb",
+      "assessed_head": "1222435507ce5dbdaa794a8518eed3f864297d10",
+      "artifact_digest": "2559716ea305ad702633be2f637e0348dc75f49892fa9927eeed162b96205347",
+      "profile_digest": "a2c6fd28fab5025b70fa361cc8a93bbe86469f155bf3db4be54ec952565b4ffa",
+      "report_digest": "f5082b18adfadf15f1450ba0ac775172aec6e72e5e9114f8a336e6632c71573e",
+      "stage_receipt_refs": [
+        "stage-results/job-c01bc88b8887647b68fe63fad522a5731dec5228/adjudicator.json",
+        "stage-results/job-c01bc88b8887647b68fe63fad522a5731dec5228/adversary.json",
+        "stage-results/job-c01bc88b8887647b68fe63fad522a5731dec5228/assessor.json"
+      ]
+    },
+    "payload_digest": "5728329435e2b0b06e2de74f69e532a3d3ed957a5f2aa742784da45ac5706544",
+    "signature": "30Xti82t7X3MUfHYyjZR6-_N8_RwVNq8iQIUv13KugrGRPLxIxRipI9hLmhllihm4WyRcZez55JNqPW8dgPZCA"
+  }
+}

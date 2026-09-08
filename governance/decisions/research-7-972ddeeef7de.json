@@ -1,0 +1,292 @@
+{
+  "schema_version": "1.0",
+  "research_pr": 7,
+  "merge_sha": "92b9970e38de8d50e5a53d0c523794a27858a167",
+  "events": [
+    {
+      "schema_version": "1.0",
+      "id": "decision-7-family-generative-falsification-972ddeeef7de",
+      "sequence": 5,
+      "kind": "upgrade",
+      "family_id": "family-generative-falsification",
+      "rubric_version": "0.1",
+      "category": "experiments",
+      "repository_id": 1359336540,
+      "pr_number": 7,
+      "milestone_id": "milestone-1359336540-7-family-generative-falsification",
+      "earned_at": "2026-09-07T20:59:59Z",
+      "assessment_id": "assessment-ec17492f3bcc9e681c0a02141d6b8f02",
+      "artifact_binding_digest": "972ddeeef7de24ed9a7d7538a1cabaf384d49edabd5455e72c77b7174edf54b1",
+      "authority_receipt_ref": "receipt:job-972ddeeef7de24ed9a7d7538a1cabaf384d49eda",
+      "cumulative_tier": 2,
+      "reason": "Resolving the disagreement between the two prior reports: both agree G1-G7 pass and the work is a genuine, bounded, useful controls extension (two new hashed, rights-documented real-genre corpora plus a documented deterministic pipeline) that materially revises pilot 3's device-overshoot emphasis within family-generative-falsification. They disagree on assessed_tier (5 vs 2) and on how to read claimed_cumulative_tier=5 against claimed_incremental_points=2. Per RULES.md section 6 and SCORING.md's high-water formula, new_credit = max(0, approved_cumulative_tier - credit_high_water_tier); context.credit_high_water_tiers already records family-generative-falsification at 5. This submission's own contribution.yaml explicitly claims claimed_incremental_points=2 while claimed_cumulative_tier=5 merely restates existing family occupancy, not new value created by this specific outcome. The rubric's 5-point anchor ('Completed reusable contribution... a coherent source synthesis, validated dataset/annotation batch, usable protocol/tool, or informative pilot') is not newly earned here as a fresh milestone — the family already occupies that tier via predecessor pilots — whereas the 2-point anchor ('a checked material correction/source contribution... that demonstrably change[s] the interpretation of an earlier family claim') squarely fits: two new controls with verified hashes and rights records that correct pilot 3's emphasis. The first report's proposed settlement (assessed_tier=5, deferring exact arithmetic to the broker) does not correctly apply the high-water occupancy already disclosed in context; the second report's assessed_tier=2 is the fully supported result consistent with the contributor's own claimed_incremental_points and the family's existing high-water mark. No G3 upgrade to tier 10 is supported because no trusted execution receipt exists in context.execution_receipts; this is disclosed as a nonblocking limitation, not a blocker. Assessed tier: 2."
+    }
+  ],
+  "families_added": [],
+  "milestones": [
+    {
+      "id": "milestone-1359336540-7-family-generative-falsification",
+      "family_id": "family-generative-falsification",
+      "repository_id": 1359336540,
+      "pr_number": 7,
+      "earned_at": "2026-09-07T20:59:59Z",
+      "depends_on": []
+    }
+  ],
+  "assessment": {
+    "schema_version": "1.0",
+    "assessment_id": "assessment-ec17492f3bcc9e681c0a02141d6b8f02",
+    "artifact_binding_digest": "ec17492f3bcc9e681c0a02141d6b8f02e73612912065df685c7349caa7961565",
+    "merit_evidence_digest": "c87567b52086f3f2f9e20330f5588ccd7026a819038484ac26dab5f1fa901c62",
+    "repository_id": 1359336540,
+    "pr_number": 7,
+    "head_sha": "ee7331faad32ff16c8bf7abd01bbf0cd51971823",
+    "base_sha": "6b5226afa57aeaac4b0650953527851cf43bfbe5",
+    "rules_version": "0.1",
+    "rubric_version": "0.1",
+    "grading_profile": "voynich-sonnet-ai-pilot-2026-09-07-v4",
+    "evaluator_commit": "6b5226afa57aeaac4b0650953527851cf43bfbe5",
+    "mode": "official_proposal",
+    "status": "complete",
+    "claimed_score": 2,
+    "expected_score": 0,
+    "official_proposed_score": 0,
+    "awarded_score": null,
+    "assessment": {
+      "schema_version": "1.0",
+      "admission_action": "accept",
+      "score_status": "proposed",
+      "conduct_status": "clear",
+      "findings": [
+        {
+          "rule_id_or_gate": "G3",
+          "severity": "info",
+          "path_or_locus": "experiments/controls-entry/controls_entry.py",
+          "evidence_refs": [
+            "experiments/controls-entry/controls_entry.py",
+            "experiments/controls-entry/results/results.json"
+          ],
+          "reason": "Ordinary submitted-run evidence (code, documented command, results.json) is present but no trusted execution receipt exists in context.execution_receipts (empty array); this supports ordinary-run tiers, not independently authenticated execution.",
+          "required_change": "None required for the assessed tier; for a higher tier, supply a trusted execution receipt or independent reproduction.",
+          "verification_step": "Run the documented command against the pinned corpora and compare output to results.json.",
+          "blocks_merge_or_credit": false
+        },
+        {
+          "rule_id_or_gate": "R4/G2",
+          "severity": "info",
+          "path_or_locus": "data/corpora/RIGHTS.md",
+          "evidence_refs": [
+            "data/corpora/RIGHTS.md",
+            "data/manifests/pg972.json",
+            "data/manifests/pg41111.json"
+          ],
+          "reason": "Rights basis (Project Gutenberg public-domain item records) is disclosed with hashes and retained wrappers; this is an author-reported check, not independently re-verified against the live PG mirror. Under the inclusion-first policy this is a nonblocking limitation, not an admission failure.",
+          "required_change": "None required; nonblocking limitation.",
+          "verification_step": "An independent reviewer can fetch the cited Gutenberg ebook IDs and compare SHA-256 to the manifest.",
+          "blocks_merge_or_credit": false
+        },
+        {
+          "rule_id_or_gate": "R3",
+          "severity": "info",
+          "path_or_locus": "contributions/controls-entry-ladder/rights.md",
+          "evidence_refs": [
+            "contributions/controls-entry-ladder/contribution.yaml",
+            "contributions/controls-entry-ladder/rights.md"
+          ],
+          "reason": "Minor inconsistency between AI model version strings: contribution.yaml discloses 'kimi-k3' while rights.md states 'kimi-k2'. Both disclose the same provider, tasks and human-verification notes distinguishing the human-contributed hypothesis from AI-assisted implementation/drafting, so this does not indicate concealment.",
+          "required_change": "Correct the model-version string to match across contribution.yaml and rights.md in a follow-up commit.",
+          "verification_step": "Diff the two AI disclosure statements for consistency after correction.",
+          "blocks_merge_or_credit": false
+        }
+      ],
+      "outcomes": [
+        {
+          "family_id": "family-generative-falsification",
+          "scope": "Extension of the entry-structure diagnostic within the generative-mechanism falsification family: adds two new real-genre controls (Devil's Dictionary, Wonder Book of Knowledge) to the existing entry-private-vocabulary/neighbor-Jaccard metric suite, using the same pinned ZL3b corpus and identical code path as prior pilots (M4/M5), and revises the interpretation of pilot 3's device-overshoot claim.",
+          "category": "experiments",
+          "predecessors": [
+            "outcome-m4-template-doodler-pilot",
+            "outcome-m5-grille-pilot"
+          ],
+          "aliases": [],
+          "claimed_tier": 5,
+          "assessed_tier": 2,
+          "gate_evidence": [
+            {
+              "gate": "G1",
+              "status": "pass",
+              "evidence_refs": [
+                "experiments/controls-entry/report.md",
+                "research/context-index.json"
+              ],
+              "reason": "Directly extends the generative-mechanisms/statistical-structure branch question of which controls should anchor entry-structure diagnostics used to discriminate device-generation from encoded-content explanations."
+            },
+            {
+              "gate": "G2",
+              "status": "pass",
+              "evidence_refs": [
+                "data/corpora/RIGHTS.md",
+                "data/manifests/pg972.json",
+                "data/manifests/pg41111.json"
+              ],
+              "reason": "Both new control texts are Project Gutenberg public-domain e-texts with recorded SHA-256, origin URLs, retained wrappers and a stated rights basis; not independently re-verified against the live mirror, a disclosed nonblocking limitation under the inclusion-first policy."
+            },
+            {
+              "gate": "G3",
+              "status": "pass",
+              "evidence_refs": [
+                "experiments/controls-entry/controls_entry.py",
+                "experiments/controls-entry/results/results.json",
+                "data/corpora/pg972.txt",
+                "data/corpora/pg41111.txt"
+              ],
+              "reason": "Documented deterministic command, inspectable code and full recorded output table are supplied as ordinary evidence; context.execution_receipts is empty, so this supports the ordinary-run tier, not an independently authenticated execution claim."
+            },
+            {
+              "gate": "G4",
+              "status": "pass",
+              "evidence_refs": [
+                "experiments/controls-entry/report.md"
+              ],
+              "reason": "Report explicitly states scope (four real genres, English-only), parser thresholds, ~1% noise in the Wonder Book parser, satirical-register caveat for the dictionary, and explicitly flags the medieval-language control as an open gap."
+            },
+            {
+              "gate": "G5",
+              "status": "pass",
+              "evidence_refs": [
+                "contributions/controls-entry-ladder/contribution.yaml",
+                "contributions/controls-entry-ladder/rights.md"
+              ],
+              "reason": "Human contributor (gnuchev) credited for the motivating hypothesis; AI assistance (Moonshot AI Kimi Code CLI) disclosed for implementation/retrieval/drafting with human-verification notes distinguishing roles. A minor kimi-k2/kimi-k3 version-string inconsistency is noted as an info finding, not a concealment."
+            },
+            {
+              "gate": "G6",
+              "status": "pass",
+              "evidence_refs": [
+                "experiments/controls-entry/report.md",
+                "research/context-index.json"
+              ],
+              "reason": "Explicitly extends outcome-m5-grille-pilot within family-generative-falsification, whose credit_high_water_tiers value is already 5 per supplied context. Adds two new controls not previously present and states what materially revises the prior device-overshoot emphasis, avoiding duplicate restatement of already-credited evidence."
+            },
+            {
+              "gate": "G7",
+              "status": "pass",
+              "evidence_refs": [
+                "experiments/controls-entry/report.md",
+                "experiments/controls-entry/results/results.json"
+              ],
+              "reason": "Report numbers match results.json values; the contribution transparently states its own claimed_incremental_points (2) alongside claimed_cumulative_tier (5), and explicitly revises rather than conceals a prior claim's emphasis. No evidence of fabrication or selective reporting."
+            }
+          ],
+          "attribution_status": "verified",
+          "reason": "Resolving the disagreement between the two prior reports: both agree G1-G7 pass and the work is a genuine, bounded, useful controls extension (two new hashed, rights-documented real-genre corpora plus a documented deterministic pipeline) that materially revises pilot 3's device-overshoot emphasis within family-generative-falsification. They disagree on assessed_tier (5 vs 2) and on how to read claimed_cumulative_tier=5 against claimed_incremental_points=2. Per RULES.md section 6 and SCORING.md's high-water formula, new_credit = max(0, approved_cumulative_tier - credit_high_water_tier); context.credit_high_water_tiers already records family-generative-falsification at 5. This submission's own contribution.yaml explicitly claims claimed_incremental_points=2 while claimed_cumulative_tier=5 merely restates existing family occupancy, not new value created by this specific outcome. The rubric's 5-point anchor ('Completed reusable contribution... a coherent source synthesis, validated dataset/annotation batch, usable protocol/tool, or informative pilot') is not newly earned here as a fresh milestone — the family already occupies that tier via predecessor pilots — whereas the 2-point anchor ('a checked material correction/source contribution... that demonstrably change[s] the interpretation of an earlier family claim') squarely fits: two new controls with verified hashes and rights records that correct pilot 3's emphasis. The first report's proposed settlement (assessed_tier=5, deferring exact arithmetic to the broker) does not correctly apply the high-water occupancy already disclosed in context; the second report's assessed_tier=2 is the fully supported result consistent with the contributor's own claimed_incremental_points and the family's existing high-water mark. No G3 upgrade to tier 10 is supported because no trusted execution receipt exists in context.execution_receipts; this is disclosed as a nonblocking limitation, not a blocker. Assessed tier: 2.",
+          "validation_evidence": {
+            "execution_receipt_refs": [],
+            "external_assessment_receipt_refs": [],
+            "independent_inspection_refs": []
+          }
+        }
+      ],
+      "inspected_paths": [
+        "contributions/controls-entry-ladder/contribution.yaml",
+        "contributions/controls-entry-ladder/rights.md",
+        "data/corpora/RIGHTS.md",
+        "data/corpora/pg41111.txt",
+        "data/corpora/pg49513.txt",
+        "data/corpora/pg972.txt",
+        "data/manifests/pg41111.json",
+        "data/manifests/pg49513.json",
+        "data/manifests/pg972.json",
+        "experiments/controls-entry/controls_entry.py",
+        "experiments/controls-entry/report.md",
+        "experiments/controls-entry/results/results.json",
+        "research/context-index.json"
+      ],
+      "inspection_gaps": [],
+      "next_action": "Accept and settle family-generative-falsification's incremental credit at the fully supported assessed_tier=2, consistent with the contributor's own claimed_incremental_points and the family's existing credit_high_water_tiers value of 5 (no new high-water advance since claimed_cumulative_tier=5 restates prior occupancy rather than new value). No contributor action is required for admission. Optional follow-up: correct the kimi-k2/kimi-k3 version-string inconsistency between rights.md and contribution.yaml, and add a medieval Latin/Italian control to strengthen a future upgrade toward tier 10 with independent replication/execution receipts.",
+      "appeal_route": "If the contributor disputes the assessed tier (2 vs the claimed cumulative 5) or the high-water interaction with family-generative-falsification, they may open a follow-up PR citing this assessment and the specific rubric anchor (SCORING.md section 6 high-water formula, or the tier-2/tier-5 evidence anchors) contested, per RULES.md R8 and GRADING.md section 5's appeal process. Unresolved evidence disputes may request adjudication of the high-water/predecessor-occupancy determination only, not a discretionary point change."
+    },
+    "stages": [
+      {
+        "stage": "adjudicator",
+        "provider": "anthropic",
+        "model": "claude-sonnet-5",
+        "exposed_version": "claude-sonnet-5",
+        "prompt_digest": "6eabf579303a303f2be3f4f8527ab909de2ef809375bfc698b0da0f1ad6726a3",
+        "response_digest": "945cc56260a6b77e926bad46050872a707e25a903727f8d62a7f1350ad6abfe6",
+        "started_at": "2026-09-07T20:58:57.218Z",
+        "completed_at": "2026-09-07T20:59:30.854Z",
+        "usage": {
+          "sessions": 1,
+          "input_bytes": 187355,
+          "output_bytes": 11685,
+          "runtime_ms": 32891
+        },
+        "receipt_ref": "stage-results/job-972ddeeef7de24ed9a7d7538a1cabaf384d49eda/adjudicator.json"
+      },
+      {
+        "stage": "adversary",
+        "provider": "anthropic",
+        "model": "claude-sonnet-5",
+        "exposed_version": "claude-sonnet-5",
+        "prompt_digest": "dd8ccbe523d0026eee4ec973521a7d2e67ec021d5ecc6685db8470262d6c96c3",
+        "response_digest": "8386e0725d7b316c64b3d232d4882788a34294d9bde5ebb39b4234d9aaf8780a",
+        "started_at": "2026-09-07T20:57:35.572Z",
+        "completed_at": "2026-09-07T20:58:07.523Z",
+        "usage": {
+          "sessions": 1,
+          "input_bytes": 171117,
+          "output_bytes": 9533,
+          "runtime_ms": 31140
+        },
+        "receipt_ref": "stage-results/job-972ddeeef7de24ed9a7d7538a1cabaf384d49eda/adversary.json"
+      },
+      {
+        "stage": "assessor",
+        "provider": "anthropic",
+        "model": "claude-sonnet-5",
+        "exposed_version": "claude-sonnet-5",
+        "prompt_digest": "3d9f4c7656c9b6b7c1c7eaf5bd7b8fe727e488d6c2a2e640c1c9bfb41dc4d2e6",
+        "response_digest": "56fd6975d2893c28bac73ce9ab2e2093b2c2509806cf42ccc8bdc6d7a0155b7b",
+        "started_at": "2026-09-07T20:56:13.769Z",
+        "completed_at": "2026-09-07T20:56:47.702Z",
+        "usage": {
+          "sessions": 1,
+          "input_bytes": 170998,
+          "output_bytes": 9788,
+          "runtime_ms": 33043
+        },
+        "receipt_ref": "stage-results/job-972ddeeef7de24ed9a7d7538a1cabaf384d49eda/assessor.json"
+      }
+    ],
+    "disagreements": [
+      "Material independent-assessment disagreement or invalid proposal."
+    ],
+    "holds": [],
+    "reused_assessment_id": null
+  },
+  "receipt": {
+    "schema_version": "1.0",
+    "id": "receipt:job-972ddeeef7de24ed9a7d7538a1cabaf384d49eda",
+    "key_id": "voynich-2026-09-06",
+    "issued_at": "2026-09-07T21:00:18.643Z",
+    "payload": {
+      "repository_id": 1359336540,
+      "events_digest": "bafcd965b6f232f0977eee134bdf6e18d377f50045c721b3c6b7ad73924f04ea",
+      "milestones_digest": "78fbad620ac974a5690b9d142aadeb291ef246950005587d6e8c8a0f39ec2b2e",
+      "families_digest": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+      "merge_sha": "92b9970e38de8d50e5a53d0c523794a27858a167",
+      "assessed_head": "ee7331faad32ff16c8bf7abd01bbf0cd51971823",
+      "artifact_digest": "972ddeeef7de24ed9a7d7538a1cabaf384d49edabd5455e72c77b7174edf54b1",
+      "profile_digest": "0a94f6459746920ceef4826ab14d949a176bc6eb57c7901d616e43dc3612f6ae",
+      "report_digest": "bc9af61a0728627dd7c20e3f1ee75c4735c728d6dbe529643f5306d3e7ac5dcf",
+      "stage_receipt_refs": [
+        "stage-results/job-972ddeeef7de24ed9a7d7538a1cabaf384d49eda/adjudicator.json",
+        "stage-results/job-972ddeeef7de24ed9a7d7538a1cabaf384d49eda/adversary.json",
+        "stage-results/job-972ddeeef7de24ed9a7d7538a1cabaf384d49eda/assessor.json"
+      ]
+    },
+    "payload_digest": "ef079c671542014ddbc8b3d1ad9c9dc9023f4e3e96c1c0bac6f92b091fa238f3",
+    "signature": "3mTISlMn2A-XOa2kXtP0pVUtVn5enj8U5r7VPYatw3PhhR5vSCs-FbRkdpitDScJMgCyZm63Tbw1o3T6PqX3Bw"
+  }
+}
