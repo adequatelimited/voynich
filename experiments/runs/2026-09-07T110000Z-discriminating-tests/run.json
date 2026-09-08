@@ -1,0 +1,16 @@
+{
+  "id": "2026-09-07T110000Z-discriminating-tests",
+  "experiment": "experiments/discriminating-tests",
+  "protocol": "experiments/discriminating-tests/PROTOCOL.md",
+  "protocol_commit": "09e8f8d (this branch; originally 318a679)",
+  "command": "python discriminating_tests.py --repo ../.. --lab <lab dir> --out results/",
+  "exploratory_command": "python exploratory_contentwords.py --repo ../.. --lab <lab dir> --out results/",
+  "seed": 408,
+  "corpus": {"path": "data/corpora/ZL3b-n.txt", "sha256": "bf5b6d4ac1e3a51b1847a9c388318d609020441ccd56984c901c32b09beccafc"},
+  "environment": "CPython 3.12.7, stdlib only, Windows 11",
+  "started": "2026-09-07T11:00 local (Europe), final run after the deviations listed in REPORT.md",
+  "status": "completed",
+  "verdicts": {"R7": "UNDERPOWERED (control p=0.44)", "R8.1": "SEGMENTATION-DEPENDENT", "R8.2_crossover_alphabet": 45},
+  "hypothesis_credit": "T2 (two EVA symbols = one glyph): Vasily Gnuchev, 2026-09-07; T1 run at his request",
+  "ai_agent": "Claude Code, model claude-fable-5-1 (Anthropic)"
+}

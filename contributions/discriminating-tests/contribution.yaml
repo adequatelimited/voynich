@@ -1,0 +1,111 @@
+schema_version: "1.0"
+id: "discriminating-tests-resegmentation-illustration"
+kind: research
+title: "Two discriminating tests: data-chosen re-segmentation (hypothesis V. Gnuchev: two EVA symbols are one glyph) and illustration-linked vocabulary"
+summary: >-
+  Third pre-registered protocol in the family. T2 tests a hypothesis contributed by Vasily
+  Gnuchev: that the manuscript's letter-pair predictability exists because two or three EVA
+  letters are really one glyph. Byte-pair-style merging applied identically to the
+  manuscript and eleven control corpora, compared at equal alphabet size: verdict
+  SEGMENTATION-DEPENDENT by the frozen rule. Twenty frequency-chosen merges (ch dy ai ok ol
+  ee sh in che aiin ot ar al qok or she eey ain daiin chedy) bring the manuscript's H2|1 to
+  3.09 bits, the lowest language's value at the same 45-symbol alphabet. Caveats recorded:
+  that language is Greek, whose raw tokenised alphabet already has 45 symbols (accented
+  vowels); against Latin, Finnish, Italian and English the gap at 45-60 symbols is still
+  0.2-0.6 bits; after 60 merges it is under 0.1 bit against every language; the
+  association-criterion sensitivity closes the gap less (0.21 bits). The excess
+  predictability is concentrated in a few dozen fixed letter groups, which single glyphs,
+  cipher groups and device fragments all predict. T1 tests whether the text knows what is
+  drawn, using only the transliteration's editorial plant identifications and "same plant
+  as" cross-references: 12 herbal/pharmaceutical same-plant pairs and 28 similar-plant
+  pairs against permutation and distance-matched nulls, with a Culpeper positive control.
+  Verdict UNDERPOWERED: the control fails its gate (related Culpeper entries share no more
+  whole-entry vocabulary than random ones, p 0.44), so the manuscript's null result
+  (same-plant p 0.85; similar-plant pairs below their distance-matched null) carries no
+  weight. An exploratory size-corrected content-word statistic gives the control power and
+  finds nothing in the manuscript; proposed as T1 v2 for pre-registration.
+branch_ids: ["statistical-structure", "layout-paleography", "generative-mechanisms"]
+contributors:
+  - github_id: 859355
+    github_login: "gnuchev"
+    roles: ["Conceptualization", "Supervision"]
+ai_usage:
+  status: assisted
+  tools:
+    - provider: "Anthropic"
+      model_id: "claude-fable-5-1"
+      model_version: "Claude Code agent (Claude Fable 5.1), 2026-09"
+      accessed_at: "2026-09-07"
+      tasks:
+        - "Design and pre-registration of PROTOCOL.md (T1a/T1b nulls, positive control, T2 merge curves, frozen rules R7 and R8)"
+        - "Implementation of discriminating_tests.py (pharmaceutical row parsing from locus codes, plant-identification token matching, permutation and distance-matched nulls, byte-pair and association merging for 13 corpora) and exploratory_contentwords.py"
+        - "Drafting of REPORT.md, this manifest and the rights record"
+      human_verification: >-
+        The re-segmentation hypothesis (two EVA symbols are one glyph) was contributed by
+        Vasily Gnuchev on 2026-09-07; he also asked for the illustration test to be run. The
+        protocol was committed before the script ran. Deviations (row parsing with empty
+        label loci, language fallback for the null, the 'chapter' token in the control's
+        headwords, the exploratory lift) are listed in REPORT.md. All numbers are from the
+        recorded run output; the self-contained branch reproduces them.
+  reproducibility_notes: >-
+    Deterministic (seed 408): python discriminating_tests.py --repo ../.. --lab <dir with
+    bibles/ and pg49513.txt> --out results/. Stdlib only. critique_lib.py is a verbatim copy
+    of PR #10's adversarial_critique.py so the branch runs without PR #10.
+changes:
+  - path: "experiments/discriminating-tests/PROTOCOL.md"
+    improvement: "Pre-registered illustration-linked-vocabulary test (T1) and data-chosen re-segmentation test (T2) with frozen rules."
+  - path: "experiments/discriminating-tests/discriminating_tests.py"
+    improvement: "Implementation of both tests, the Culpeper positive control and the merge curves."
+  - path: "experiments/discriminating-tests/exploratory_contentwords.py"
+    improvement: "Labelled exploratory: size-corrected lift with frequent words removed."
+  - path: "experiments/discriminating-tests/critique_lib.py"
+    improvement: "Verbatim copy of the critique's clean parser and metric formulas, for a self-contained branch."
+  - path: "experiments/discriminating-tests/REPORT.md"
+    improvement: "Verdicts, tables, the caveats on the crossover, the control failure, deviations, and the T1 v2 proposal."
+  - path: "experiments/discriminating-tests/results/results.json"
+    improvement: "Full numeric record including every merge curve."
+  - path: "experiments/runs/2026-09-07T110000Z-discriminating-tests/run.json"
+    improvement: "Run record with hypothesis credit."
+outcomes:
+  - id: "outcome-discriminating-tests"
+    family_id: "family-generative-falsification"
+    extends: "outcome-clean-rerun"
+    before: >-
+      The letter-pair constraint was the family's one residue described as robust to the
+      transcription alphabet (fixed merge sets only); the illustration-similarity test had
+      been named as the one test able to separate content from device but never run.
+    after: >-
+      The letter-pair anomaly is SEGMENTATION-DEPENDENT by a frozen rule: it is concentrated
+      in a few dozen fixed letter groups and is language-like at a 45-60-symbol inventory, so
+      the family's statement must be restated at glyph level (hypothesis credit: Vasily
+      Gnuchev). The illustration test is UNDERPOWERED by its own control; the form in which
+      it has power (size-corrected content words) is identified and queued.
+    acceptance_test: >-
+      Run the documented command; confirm results.json: R8 gaps 0.652/0.151/0.065/0.089 at
+      alphabet sizes 30/40/50/60, crossover at 45 symbols (k=20, 3.089); R7 control N3 p
+      about 0.44, T1a N1 p about 0.85, T1b N3 p about 0.21 and N4 p about 0.996.
+    evidence:
+      - "experiments/discriminating-tests/PROTOCOL.md"
+      - "experiments/discriminating-tests/discriminating_tests.py"
+      - "experiments/discriminating-tests/REPORT.md"
+      - "experiments/discriminating-tests/results/results.json"
+      - "experiments/runs/2026-09-07T110000Z-discriminating-tests/run.json"
+    related_outcomes: ["outcome-adversarial-critique", "outcome-clean-rerun", "outcome-languages-control"]
+    claimed_cumulative_tier: 5
+    claimed_incremental_points: 2
+    claim_rationale: >-
+      Atlas "Experiments": bounded verified improvement (2) — a pre-registered test of a
+      contributor hypothesis that changes the family's strongest residue statement, plus the
+      first executed content-versus-device discriminator with an honest power finding.
+      Family cumulative stays 5.
+    attribution:
+      - github_id: 859355
+        share_basis_points: 10000
+claimed_total_points: 2
+rubric_version: "0.1"
+conflicts: []
+limitations:
+  - "The crossover at 45 symbols is against Greek, whose raw alphabet already has 45 symbols; against the other languages the gap at 45-60 symbols is 0.2-0.6 bits."
+  - "The illustration test's pre-registered statistic (whole-page Jaccard) has no power even in a real herbal; the size-corrected variant is exploratory and not yet pre-registered."
+  - "Plant identifications are published proposals compiled in the ZL3b comments, uncertain and sometimes multiple; most 'same plant as' cross-references carry a question mark."
+rights_manifest: "contributions/discriminating-tests/rights.md"
