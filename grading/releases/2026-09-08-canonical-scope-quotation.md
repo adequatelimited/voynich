@@ -1,0 +1,5 @@
+# Repair exact registry quotations without changing research judgments
+
+Profile v13 repairs a contradiction in the correction formatter: it previously froze erroneous existing_scope quotations while also requiring those quotations to match the trusted registry exactly. The correction now permits only the exact registry scope for the same family ID. Comparison count, order, IDs, distinctness relationships and reasoning remain frozen, as do outcome identity, scope and the prohibition on increasing scores. Unknown families still fail validation.
+
+This is a literal-reference repair, not a change to the scoring rubric or permission to use prose in place of structured comparison evidence. Native and server validators enforce the same permitted repair. The new profile applies to unresolved reviews; earlier accepted assessments and earned points are preserved. PR13's v12 final correction remained invalid and produced no award, so its unresolved review can use this repaired contract. Resource limits and Sonnet model are unchanged.
