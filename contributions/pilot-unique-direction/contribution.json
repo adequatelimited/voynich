@@ -1,0 +1,81 @@
+{
+  "schema_version": "1.0",
+  "id": "pilot-unique-direction",
+  "kind": "direction",
+  "title": "[UNRANKED PILOT FIXTURE] unique-direction",
+  "summary": "Document bounded overlap with the existing uncertainty-ranking seed and withdraw hypothetical positive credit.",
+  "branch_ids": [],
+  "contributors": [
+    {
+      "github_id": 226906489,
+      "github_login": "adequatelimited",
+      "roles": [
+        "Conceptualization"
+      ]
+    }
+  ],
+  "ai_usage": {
+    "status": "primarily_generated",
+    "tools": [
+      {
+        "provider": "OpenAI",
+        "model_id": "Codex; exact backend version not exposed",
+        "model_version": "not exposed",
+        "accessed_at": "2026-09-06T23:15:47.009Z",
+        "tasks": [
+          "Prepared synthetic launch test fixtures"
+        ],
+        "human_verification": "Operator has not yet completed the contributor pilot."
+      },
+      {
+        "provider": "OpenAI",
+        "model_id": "Codex; exact backend version not exposed",
+        "model_version": "not exposed",
+        "accessed_at": "2026-09-07T04:11:00Z",
+        "tasks": [
+          "Revised synthetic controls and disclosed limitations for pipeline integration testing",
+          "Independently checked supplied context-index overlap and withdrew hypothetical positive credit after inspecting an invalid model response."
+        ],
+        "human_verification": "Operator authorized integration testing; no scientific verification or human review of these proposed controls is asserted."
+      }
+    ],
+    "reproducibility_notes": "Synthetic integration material only; no research result or qualification is asserted."
+  },
+  "changes": [
+    {
+      "path": "contributions/pilot-unique-direction/proposal.md",
+      "improvement": "Document bounded overlap with the existing uncertainty-ranking seed and withdraw hypothetical positive credit."
+    }
+  ],
+  "outcomes": [
+    {
+      "id": "outcome-pilot-unique-direction",
+      "family_id": "family-pilot-boundary-direction",
+      "before": "No occupied proposal in the isolated synthetic context.",
+      "after": "Document bounded overlap with the existing uncertainty-ranking seed and withdraw hypothetical positive credit.",
+      "acceptance_test": "Inspect the fixed controls, concentration statistic, character-invariance check, overlap-check step, and explicit no-execution limitation.",
+      "evidence": [
+        "contributions/pilot-unique-direction/proposal.md"
+      ],
+      "related_outcomes": [
+        "seed-direction-uncertainty-ranking"
+      ],
+      "claimed_cumulative_tier": 0,
+      "claimed_incremental_points": 0,
+      "claim_rationale": "Existing direction overlap is documented; this routine integration fixture claims no research credit.",
+      "attribution": [
+        {
+          "github_id": 226906489,
+          "share_basis_points": 10000
+        }
+      ]
+    }
+  ],
+  "claimed_total_points": 0,
+  "rubric_version": "0.1",
+  "conflicts": [],
+  "limitations": [
+    "Synthetic pilot only. Never award competitive points or count this as an outside-contributor pilot."
+  ],
+  "rights_manifest": "contributions/pilot-unique-direction/rights.md"
+}
