@@ -1,0 +1,92 @@
+{
+  "schema_version": 1,
+  "protocol_id": "H005-v1",
+  "created_utc": "2026-07-10T00:00:00Z",
+  "claim_boundary": "Complete current q15/q19 fragment-to-whole-herbal claim universe, fixed without target-prose inspection",
+  "sources": [
+    {
+      "url": "https://voynich.nu/q15/index.html",
+      "retrieved": "2026-07-10",
+      "page_latest_update": "2025-06-15",
+      "retrieved_bytes_sha256": "25a8bb0083a2c6c09913910c52d03a699091c100294f8fe3c604e3846253f3a7",
+      "local_copy": false,
+      "reason_not_cached": "Copyrighted research page; URL, retrieval date, version date, and retrieved-byte hash retained instead"
+    },
+    {
+      "url": "https://voynich.nu/q19/index.html",
+      "retrieved": "2026-07-10",
+      "page_latest_update": "2025-06-14",
+      "retrieved_bytes_sha256": "119fe32a005723833ec07a313fd87e1cd044a1f685ddd4fdd199e573c1dff1fb",
+      "local_copy": false,
+      "reason_not_cached": "Copyrighted research page; URL, retrieval date, version date, and retrieved-byte hash retained instead"
+    }
+  ],
+  "inclusion_rule": "Include every explicit q15/q19 statement that a numbered pharmaceutical fragment appears to be the same plant as, shows some similarity with, or was observed by Petersen to resemble a named whole-herbal folio; exclude taxon guesses, container comparisons, and whole-herbal-to-whole-herbal comparisons; deduplicate by pharmaceutical page, fragment number, and target page.",
+  "strength_codes": {
+    "S": "source says appears to be the same plant",
+    "M": "source says shows some similarity",
+    "P": "Petersen comparison or check-only note"
+  },
+  "mapping_statuses": {
+    "lf_locus": "one coordinate-mapped IVTFF Lf locus",
+    "lf_loci_multi": "one numbered fragment has a predeclared multi-locus Lf query",
+    "lf_mapping_by_row_order": "Lf mapping is by published row order and must remain flagged",
+    "lf_mapping_needs_coordinate_review": "plausible Lf mapping not admitted in H005-v1",
+    "no_lf_for_fragment": "the claimed fragment has no Lf; nearby Lc labels must not be substituted"
+  },
+  "pairs": [
+    {"pair_id":"q15-f88r-8-f15v","quire":"q15","fragment_page":"f88r","fragment_number":8,"target_page":"f15v","strength":"P","label_loci":["f88r.15"],"mapping_status":"lf_locus"},
+    {"pair_id":"q15-f88r-11-f90r2","quire":"q15","fragment_page":"f88r","fragment_number":11,"target_page":"f90r2","strength":"M","label_loci":["f88r.24"],"mapping_status":"lf_locus"},
+    {"pair_id":"q15-f88v-22-f94v","quire":"q15","fragment_page":"f88v","fragment_number":22,"target_page":"f94v","strength":"M","label_loci":["f88v.30"],"mapping_status":"lf_locus"},
+    {"pair_id":"q15-f89r1-25-f57r","quire":"q15","fragment_page":"f89r1","fragment_number":25,"target_page":"f57r","strength":"M","label_loci":["f89r1.4"],"mapping_status":"lf_locus"},
+    {"pair_id":"q15-f89r1-26-f43v","quire":"q15","fragment_page":"f89r1","fragment_number":26,"target_page":"f43v","strength":"P","label_loci":["f89r1.5"],"mapping_status":"lf_locus"},
+    {"pair_id":"q15-f89r1-28-f30r","quire":"q15","fragment_page":"f89r1","fragment_number":28,"target_page":"f30r","strength":"M","label_loci":["f89r1.13"],"mapping_status":"lf_locus"},
+    {"pair_id":"q15-f89r1-31-f33r","quire":"q15","fragment_page":"f89r1","fragment_number":31,"target_page":"f33r","strength":"M","label_loci":["f89r1.26"],"mapping_status":"lf_locus"},
+    {"pair_id":"q15-f89r2-35-f35v","quire":"q15","fragment_page":"f89r2","fragment_number":35,"target_page":"f35v","strength":"M","label_loci":["f89r2.4"],"mapping_status":"lf_locus"},
+    {"pair_id":"q15-f89r2-40-f87v","quire":"q15","fragment_page":"f89r2","fragment_number":40,"target_page":"f87v","strength":"P","label_loci":["f89r2.17"],"mapping_status":"lf_mapping_by_row_order"},
+    {"pair_id":"q15-f89v2-50-f10v","quire":"q15","fragment_page":"f89v2","fragment_number":50,"target_page":"f10v","strength":"M","label_loci":["f89v2.2"],"mapping_status":"lf_locus"},
+    {"pair_id":"q15-f89v2-52-f40v","quire":"q15","fragment_page":"f89v2","fragment_number":52,"target_page":"f40v","strength":"P","label_loci":["f89v2.4"],"mapping_status":"lf_locus"},
+    {"pair_id":"q15-f89v2-54-f48v","quire":"q15","fragment_page":"f89v2","fragment_number":54,"target_page":"f48v","strength":"S","label_loci":["f89v2.6"],"mapping_status":"lf_locus"},
+    {"pair_id":"q15-f89v2-56-f24r","quire":"q15","fragment_page":"f89v2","fragment_number":56,"target_page":"f24r","strength":"M","label_loci":["f89v2.13"],"mapping_status":"lf_locus"},
+    {"pair_id":"q15-f89v2-61-f48r","quire":"q15","fragment_page":"f89v2","fragment_number":61,"target_page":"f48r","strength":"S","label_loci":["f89v2.28"],"mapping_status":"lf_locus"},
+
+    {"pair_id":"q19-f99r-80-f51r","quire":"q19","fragment_page":"f99r","fragment_number":80,"target_page":"f51r","strength":"M","label_loci":["f99r.20"],"mapping_status":"lf_locus"},
+    {"pair_id":"q19-f99r-94-f96v","quire":"q19","fragment_page":"f99r","fragment_number":94,"target_page":"f96v","strength":"M","label_loci":["f99r.46"],"mapping_status":"lf_locus"},
+    {"pair_id":"q19-f99v-95-f44r","quire":"q19","fragment_page":"f99v","fragment_number":95,"target_page":"f44r","strength":"M","label_loci":["f99v.2"],"mapping_status":"lf_locus"},
+    {"pair_id":"q19-f99v-110-f34v","quire":"q19","fragment_page":"f99v","fragment_number":110,"target_page":"f34v","strength":"M","label_loci":["f99v.27","f99v.28"],"mapping_status":"lf_loci_multi"},
+    {"pair_id":"q19-f100r-116-f96v","quire":"q19","fragment_page":"f100r","fragment_number":116,"target_page":"f96v","strength":"M","label_loci":["f100r.2"],"mapping_status":"lf_locus"},
+    {"pair_id":"q19-f100v-133-f13v","quire":"q19","fragment_page":"f100v","fragment_number":133,"target_page":"f13v","strength":"M","label_loci":["f100v.3"],"mapping_status":"lf_locus"},
+    {"pair_id":"q19-f100v-136-f90v2","quire":"q19","fragment_page":"f100v","fragment_number":136,"target_page":"f90v2","strength":"M","label_loci":["f100v.6"],"mapping_status":"lf_locus"},
+    {"pair_id":"q19-f101r-150-f30v","quire":"q19","fragment_page":"f101r","fragment_number":150,"target_page":"f30v","strength":"M","label_loci":[],"mapping_status":"no_lf_for_fragment"},
+    {"pair_id":"q19-f101r-150-f55v","quire":"q19","fragment_page":"f101r","fragment_number":150,"target_page":"f55v","strength":"M","label_loci":[],"mapping_status":"no_lf_for_fragment"},
+    {"pair_id":"q19-f101r-155-f49r","quire":"q19","fragment_page":"f101r","fragment_number":155,"target_page":"f49r","strength":"M","label_loci":[],"mapping_status":"no_lf_for_fragment"},
+    {"pair_id":"q19-f101r-168-f4v","quire":"q19","fragment_page":"f101r","fragment_number":168,"target_page":"f4v","strength":"M","label_loci":[],"mapping_status":"no_lf_for_fragment"},
+    {"pair_id":"q19-f101v-188-f37r","quire":"q19","fragment_page":"f101v","fragment_number":188,"target_page":"f37r","strength":"M","label_loci":["f101v.7"],"mapping_status":"lf_mapping_needs_coordinate_review"},
+    {"pair_id":"q19-f102r1-203-f37v","quire":"q19","fragment_page":"f102r1","fragment_number":203,"target_page":"f37v","strength":"S","label_loci":[],"mapping_status":"no_lf_for_fragment"},
+    {"pair_id":"q19-f102r1-204-f1v","quire":"q19","fragment_page":"f102r1","fragment_number":204,"target_page":"f1v","strength":"S","label_loci":[],"mapping_status":"no_lf_for_fragment"},
+    {"pair_id":"q19-f102r2-205-f47v","quire":"q19","fragment_page":"f102r2","fragment_number":205,"target_page":"f47v","strength":"S","label_loci":[],"mapping_status":"no_lf_for_fragment"},
+    {"pair_id":"q19-f102r2-206-f32v","quire":"q19","fragment_page":"f102r2","fragment_number":206,"target_page":"f32v","strength":"S","label_loci":[],"mapping_status":"no_lf_for_fragment"},
+    {"pair_id":"q19-f102r2-209-f53r","quire":"q19","fragment_page":"f102r2","fragment_number":209,"target_page":"f53r","strength":"M","label_loci":[],"mapping_status":"no_lf_for_fragment"},
+    {"pair_id":"q19-f102r2-212-f18v","quire":"q19","fragment_page":"f102r2","fragment_number":212,"target_page":"f18v","strength":"S","label_loci":["f102r2.21"],"mapping_status":"lf_locus"},
+    {"pair_id":"q19-f102r2-213-f23r","quire":"q19","fragment_page":"f102r2","fragment_number":213,"target_page":"f23r","strength":"S","label_loci":["f102r2.22"],"mapping_status":"lf_locus"},
+    {"pair_id":"q19-f102v2-225-f36r","quire":"q19","fragment_page":"f102v2","fragment_number":225,"target_page":"f36r","strength":"M","label_loci":["f102v2.14"],"mapping_status":"lf_locus"},
+    {"pair_id":"q19-f102v1-240-f19r","quire":"q19","fragment_page":"f102v1","fragment_number":240,"target_page":"f19r","strength":"S","label_loci":["f102v1.17"],"mapping_status":"lf_locus"}
+  ],
+  "supplemental_excluded": [
+    {
+      "claim": "f100v fragment 131 to f3v",
+      "source": "pinned ZL3b comment, absent from current q19 claim page",
+      "reason": "legacy-only claim outside the frozen current-source inclusion rule"
+    },
+    {
+      "claim": "f100r fragment 117 to f90v1/f90v2",
+      "source": "pinned ZL3b comments",
+      "reason": "conflicts with current q19 mapping of f90v2 to f100v fragment 136"
+    },
+    {
+      "claim": "f89v panel/item references for f48r/f48v",
+      "source": "pinned ZL3b comments",
+      "reason": "older panel/item notation conflicts with current fragment numbering; current q15 numbers 54 and 61 govern H005-v1"
+    }
+  ]
+}

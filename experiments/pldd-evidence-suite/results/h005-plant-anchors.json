@@ -1,0 +1,1701 @@
+{
+  "analysis_version": "H005-v1",
+  "blinded_image_gold_available": false,
+  "breadth_checks": {
+    "at_least_12_physical_targets": true,
+    "at_least_16_strict_pairs": true,
+    "at_least_3_pharmaceutical_pages": true,
+    "at_least_5_holdout_pairs": true,
+    "at_least_5_holdout_physical_folios": true,
+    "both_q15_and_q19": true
+  },
+  "breadth_gate_met": true,
+  "disposition": "reject H005-v1 as a q15/q19 plant-identity label retrieval route under the frozen ZL/GC source-claim benchmark",
+  "h005_zg_gate_met": false,
+  "identity_collision_gate_met": false,
+  "inputs": {
+    "eva": {
+      "path": "data/raw/transcriptions/ZL3b-n.txt",
+      "sha256": "bf5b6d4ac1e3a51b1847a9c388318d609020441ccd56984c901c32b09beccafc"
+    },
+    "gc_sta1": {
+      "path": "data/raw/transcriptions/sta1/GC2a_0.txt",
+      "sha256": "b39cabbd9c8c8a098bfa9f76e0649291d17d77e1cb4fb0a3351ff7bdc832ace3"
+    },
+    "protocol": {
+      "path": "notes/hypotheses/H005-pharmaceutical-plant-anchors.md",
+      "sha256": "45ef1b6e712efc8e670e6e283f057c551905f6038ecb3d07d0777a963a417b4e"
+    },
+    "reserved_it_sta1": {
+      "declared_sha256": "215f2d05690828c00bd4ae00d6201df31050adcd81601343b142ae91b9dfeee4",
+      "opened_by_this_analysis": false,
+      "parsed_by_this_analysis": false,
+      "target_prose_projected_by_this_analysis": false
+    },
+    "source_anchor_manifest": {
+      "pairs": 35,
+      "path": "data/derived/h005-source-anchor-manifest.json",
+      "sha256": "f6f6f8edd9b21f5aa1e952e26a6104ad327a15a98e426a1fc4ed8e735b9631c7"
+    },
+    "zl_sta1": {
+      "path": "data/raw/transcriptions/sta1/ZL3b.txt",
+      "sha256": "8438ba1c45f47fe1d06b5262cbcdf60ce69158a0edbd4dd802612896f3217e2a"
+    }
+  },
+  "it_robustness_authorized": false,
+  "manifest_audit": {
+    "excluded_queries": 18,
+    "holdout_physical_folios": [
+      "f19",
+      "f43",
+      "f44",
+      "f48",
+      "f57"
+    ],
+    "holdout_queries": 5,
+    "query_audit": [
+      {
+        "admitted": true,
+        "pair_id": "q15-f88r-8-f15v",
+        "query_families": [
+          "AQAB"
+        ],
+        "reasons": [],
+        "split": "discovery",
+        "target_physical_folio": "f15"
+      },
+      {
+        "admitted": false,
+        "pair_id": "q15-f88r-11-f90r2",
+        "query_families": [],
+        "reasons": [
+          "invalid_zl_component:f88r.24"
+        ],
+        "split": "discovery",
+        "target_physical_folio": "f90"
+      },
+      {
+        "admitted": false,
+        "pair_id": "q15-f88v-22-f94v",
+        "query_families": [],
+        "reasons": [
+          "invalid_zl_component:f88v.30"
+        ],
+        "split": "discovery",
+        "target_physical_folio": "f94"
+      },
+      {
+        "admitted": true,
+        "pair_id": "q15-f89r1-25-f57r",
+        "query_families": [
+          "AQABBA"
+        ],
+        "reasons": [],
+        "split": "holdout",
+        "target_physical_folio": "f57"
+      },
+      {
+        "admitted": true,
+        "pair_id": "q15-f89r1-26-f43v",
+        "query_families": [
+          "ACACKABAG"
+        ],
+        "reasons": [],
+        "split": "holdout",
+        "target_physical_folio": "f43"
+      },
+      {
+        "admitted": true,
+        "pair_id": "q15-f89r1-28-f30r",
+        "query_families": [
+          "AQACAF"
+        ],
+        "reasons": [],
+        "split": "discovery",
+        "target_physical_folio": "f30"
+      },
+      {
+        "admitted": false,
+        "pair_id": "q15-f89r1-31-f33r",
+        "query_families": [],
+        "reasons": [
+          "invalid_zl_component:f89r1.26"
+        ],
+        "split": "discovery",
+        "target_physical_folio": "f33"
+      },
+      {
+        "admitted": true,
+        "pair_id": "q15-f89r2-35-f35v",
+        "query_families": [
+          "CABAGLJAB"
+        ],
+        "reasons": [],
+        "split": "discovery",
+        "target_physical_folio": "f35"
+      },
+      {
+        "admitted": false,
+        "pair_id": "q15-f89r2-40-f87v",
+        "query_families": [],
+        "reasons": [
+          "lf_mapping_by_row_order"
+        ],
+        "split": "discovery",
+        "target_physical_folio": "f87"
+      },
+      {
+        "admitted": false,
+        "pair_id": "q15-f89v2-50-f10v",
+        "query_families": [],
+        "reasons": [
+          "zl_gc_family_disagreement:f89v2.2"
+        ],
+        "split": "discovery",
+        "target_physical_folio": "f10"
+      },
+      {
+        "admitted": false,
+        "pair_id": "q15-f89v2-52-f40v",
+        "query_families": [],
+        "reasons": [
+          "zl_gc_family_disagreement:f89v2.4"
+        ],
+        "split": "discovery",
+        "target_physical_folio": "f40"
+      },
+      {
+        "admitted": true,
+        "pair_id": "q15-f89v2-54-f48v",
+        "query_families": [
+          "KAQAB"
+        ],
+        "reasons": [],
+        "split": "holdout",
+        "target_physical_folio": "f48"
+      },
+      {
+        "admitted": false,
+        "pair_id": "q15-f89v2-56-f24r",
+        "query_families": [],
+        "reasons": [
+          "component_count_mismatch:f89v2.13"
+        ],
+        "split": "discovery",
+        "target_physical_folio": "f24"
+      },
+      {
+        "admitted": false,
+        "pair_id": "q15-f89v2-61-f48r",
+        "query_families": [],
+        "reasons": [
+          "zl_gc_family_disagreement:f89v2.28"
+        ],
+        "split": "holdout",
+        "target_physical_folio": "f48"
+      },
+      {
+        "admitted": true,
+        "pair_id": "q19-f99r-80-f51r",
+        "query_families": [
+          "AACA"
+        ],
+        "reasons": [],
+        "split": "discovery",
+        "target_physical_folio": "f51"
+      },
+      {
+        "admitted": true,
+        "pair_id": "q19-f99r-94-f96v",
+        "query_families": [
+          "QABCACA"
+        ],
+        "reasons": [],
+        "split": "discovery",
+        "target_physical_folio": "f96"
+      },
+      {
+        "admitted": true,
+        "pair_id": "q19-f99v-95-f44r",
+        "query_families": [
+          "AQABBA"
+        ],
+        "reasons": [],
+        "split": "holdout",
+        "target_physical_folio": "f44"
+      },
+      {
+        "admitted": true,
+        "pair_id": "q19-f99v-110-f34v",
+        "query_families": [
+          "AQAB",
+          "KAC",
+          "ABJQAC"
+        ],
+        "reasons": [],
+        "split": "discovery",
+        "target_physical_folio": "f34"
+      },
+      {
+        "admitted": true,
+        "pair_id": "q19-f100r-116-f96v",
+        "query_families": [
+          "CAKACTA"
+        ],
+        "reasons": [],
+        "split": "discovery",
+        "target_physical_folio": "f96"
+      },
+      {
+        "admitted": true,
+        "pair_id": "q19-f100v-133-f13v",
+        "query_families": [
+          "APKAC"
+        ],
+        "reasons": [],
+        "split": "discovery",
+        "target_physical_folio": "f13"
+      },
+      {
+        "admitted": true,
+        "pair_id": "q19-f100v-136-f90v2",
+        "query_families": [
+          "AQKAKBA"
+        ],
+        "reasons": [],
+        "split": "discovery",
+        "target_physical_folio": "f90"
+      },
+      {
+        "admitted": false,
+        "pair_id": "q19-f101r-150-f30v",
+        "query_families": [],
+        "reasons": [
+          "no_lf_for_fragment"
+        ],
+        "split": "discovery",
+        "target_physical_folio": "f30"
+      },
+      {
+        "admitted": false,
+        "pair_id": "q19-f101r-150-f55v",
+        "query_families": [],
+        "reasons": [
+          "no_lf_for_fragment"
+        ],
+        "split": "discovery",
+        "target_physical_folio": "f55"
+      },
+      {
+        "admitted": false,
+        "pair_id": "q19-f101r-155-f49r",
+        "query_families": [],
+        "reasons": [
+          "no_lf_for_fragment"
+        ],
+        "split": "discovery",
+        "target_physical_folio": "f49"
+      },
+      {
+        "admitted": false,
+        "pair_id": "q19-f101r-168-f4v",
+        "query_families": [],
+        "reasons": [
+          "no_lf_for_fragment"
+        ],
+        "split": "holdout",
+        "target_physical_folio": "f4"
+      },
+      {
+        "admitted": false,
+        "pair_id": "q19-f101v-188-f37r",
+        "query_families": [],
+        "reasons": [
+          "lf_mapping_needs_coordinate_review"
+        ],
+        "split": "discovery",
+        "target_physical_folio": "f37"
+      },
+      {
+        "admitted": false,
+        "pair_id": "q19-f102r1-203-f37v",
+        "query_families": [],
+        "reasons": [
+          "no_lf_for_fragment"
+        ],
+        "split": "discovery",
+        "target_physical_folio": "f37"
+      },
+      {
+        "admitted": false,
+        "pair_id": "q19-f102r1-204-f1v",
+        "query_families": [],
+        "reasons": [
+          "no_lf_for_fragment"
+        ],
+        "split": "discovery",
+        "target_physical_folio": "f1"
+      },
+      {
+        "admitted": false,
+        "pair_id": "q19-f102r2-205-f47v",
+        "query_families": [],
+        "reasons": [
+          "no_lf_for_fragment"
+        ],
+        "split": "discovery",
+        "target_physical_folio": "f47"
+      },
+      {
+        "admitted": false,
+        "pair_id": "q19-f102r2-206-f32v",
+        "query_families": [],
+        "reasons": [
+          "no_lf_for_fragment"
+        ],
+        "split": "discovery",
+        "target_physical_folio": "f32"
+      },
+      {
+        "admitted": false,
+        "pair_id": "q19-f102r2-209-f53r",
+        "query_families": [],
+        "reasons": [
+          "no_lf_for_fragment"
+        ],
+        "split": "discovery",
+        "target_physical_folio": "f53"
+      },
+      {
+        "admitted": true,
+        "pair_id": "q19-f102r2-212-f18v",
+        "query_families": [
+          "QABBACAB"
+        ],
+        "reasons": [],
+        "split": "discovery",
+        "target_physical_folio": "f18"
+      },
+      {
+        "admitted": true,
+        "pair_id": "q19-f102r2-213-f23r",
+        "query_families": [
+          "ABABABACA"
+        ],
+        "reasons": [],
+        "split": "discovery",
+        "target_physical_folio": "f23"
+      },
+      {
+        "admitted": true,
+        "pair_id": "q19-f102v2-225-f36r",
+        "query_families": [
+          "CACAB"
+        ],
+        "reasons": [],
+        "split": "discovery",
+        "target_physical_folio": "f36"
+      },
+      {
+        "admitted": true,
+        "pair_id": "q19-f102v1-240-f19r",
+        "query_families": [
+          "BACABABA"
+        ],
+        "reasons": [],
+        "split": "holdout",
+        "target_physical_folio": "f19"
+      }
+    ],
+    "raw_holdout_claims_before_query_gates": 7,
+    "raw_holdout_physical_folios_before_query_gates": [
+      "f19",
+      "f4",
+      "f43",
+      "f44",
+      "f48",
+      "f57"
+    ],
+    "source_pairs": 35,
+    "strict_pharmaceutical_pages": 11,
+    "strict_physical_targets": 16,
+    "strict_queries": 17,
+    "strict_quires": [
+      "q15",
+      "q19"
+    ]
+  },
+  "referential_gloss_authorized": false,
+  "stage": "ZL/GC source-claim retrieval; pre-IT and pre-image-gold",
+  "statistical_checks": {
+    "mrr_delta_at_least_0_15": false,
+    "mrr_p_at_most_0_01": false,
+    "positive_discovery_and_holdout_direction_in_each_quire": false,
+    "top_three_fraction_at_least_0_60": false,
+    "top_three_p_at_most_0_01": false
+  },
+  "statistical_gate_met": false,
+  "zg_analysis": {
+    "holdout_metrics": {
+      "by_quire_discovery_conservative_mrr": {
+        "q15": {
+          "delta": 0.07444675756887864,
+          "null_mean": 0.047298492255188916,
+          "null_quantiles": {
+            "q025": 0.01303917933506365,
+            "q05": 0.014165527958631408,
+            "q50": 0.025883838383838384,
+            "q95": 0.1353174603174603,
+            "q975": 0.3435994630024481
+          },
+          "observed": 0.12174524982406755,
+          "one_sided_monte_carlo_p": 0.0659
+        },
+        "q19": {
+          "delta": 0.013823351609178754,
+          "null_mean": 0.05939785845961238,
+          "null_quantiles": {
+            "q025": 0.02417444276614948,
+            "q05": 0.02551106677676146,
+            "q50": 0.047586839918999896,
+            "q95": 0.1313748854700153,
+            "q975": 0.14612963979161162
+          },
+          "observed": 0.07322121006879113,
+          "one_sided_monte_carlo_p": 0.2802
+        }
+      },
+      "by_quire_holdout_conservative_mrr": {
+        "q15": {
+          "delta": 0.25458515417020944,
+          "null_mean": 0.30097040138534614,
+          "null_quantiles": {
+            "q025": 0.13333333333333333,
+            "q05": 0.1414141414141414,
+            "q50": 0.24603174603174605,
+            "q95": 0.5277777777777778,
+            "q975": 0.6984126984126985
+          },
+          "observed": 0.5555555555555556,
+          "one_sided_monte_carlo_p": 0.0484
+        },
+        "q19": {
+          "delta": -0.02317642233036188,
+          "null_mean": 0.039620272597741556,
+          "null_quantiles": {
+            "q025": 0.011744505494505494,
+            "q05": 0.012461300309597523,
+            "q50": 0.020125404530744337,
+            "q95": 0.13662790697674418,
+            "q975": 0.17708333333333331
+          },
+          "observed": 0.016443850267379677,
+          "one_sided_monte_carlo_p": 0.8116
+        }
+      },
+      "by_source_strength_holdout_conservative_mrr": {
+        "M": {
+          "delta": -0.12636922796223538,
+          "null_mean": 0.2170555024720393,
+          "null_quantiles": {
+            "q025": 0.0890151515151515,
+            "q05": 0.08958333333333333,
+            "q50": 0.13470873786407767,
+            "q95": 0.5128205128205128,
+            "q975": 0.5277777777777778
+          },
+          "observed": 0.09068627450980392,
+          "one_sided_monte_carlo_p": 0.9198
+        },
+        "P": {
+          "delta": 0.8655623098620301,
+          "null_mean": 0.1344376901379699,
+          "null_quantiles": {
+            "q025": 0.05,
+            "q05": 0.05263157894736842,
+            "q50": 0.09523809523809523,
+            "q95": 0.3333333333333333,
+            "q975": 1.0
+          },
+          "observed": 1.0,
+          "one_sided_monte_carlo_p": 0.0302
+        },
+        "S": {
+          "delta": 0.05228938195617261,
+          "null_mean": 0.20680152713473648,
+          "null_quantiles": {
+            "q025": 0.0890151515151515,
+            "q05": 0.08966244725738397,
+            "q50": 0.13541666666666666,
+            "q95": 0.5116279069767442,
+            "q975": 0.5217391304347826
+          },
+          "observed": 0.2590909090909091,
+          "one_sided_monte_carlo_p": 0.2335
+        }
+      },
+      "by_unique_query_form_holdout_conservative_mrr": {
+        "ACACKABAG": {
+          "delta": 0.8655623098620301,
+          "null_mean": 0.1344376901379699,
+          "null_quantiles": {
+            "q025": 0.05,
+            "q05": 0.05263157894736842,
+            "q50": 0.09523809523809523,
+            "q95": 0.3333333333333333,
+            "q975": 1.0
+          },
+          "observed": 1.0,
+          "one_sided_monte_carlo_p": 0.0302
+        },
+        "AQABBA": {
+          "delta": -0.12636922796223538,
+          "null_mean": 0.2170555024720393,
+          "null_quantiles": {
+            "q025": 0.0890151515151515,
+            "q05": 0.08958333333333333,
+            "q50": 0.13470873786407767,
+            "q95": 0.5128205128205128,
+            "q975": 0.5277777777777778
+          },
+          "observed": 0.09068627450980392,
+          "one_sided_monte_carlo_p": 0.9198
+        },
+        "BACABABA": {
+          "delta": -0.01896192348972836,
+          "null_mean": 0.03714374167154654,
+          "null_quantiles": {
+            "q025": 0.010638297872340425,
+            "q05": 0.01098901098901099,
+            "q50": 0.020833333333333332,
+            "q95": 0.125,
+            "q975": 0.25
+          },
+          "observed": 0.01818181818181818,
+          "one_sided_monte_carlo_p": 0.6655
+        },
+        "KAQAB": {
+          "delta": 0.12354068740207352,
+          "null_mean": 0.3764593125979265,
+          "null_quantiles": {
+            "q025": 0.16666666666666666,
+            "q05": 0.16666666666666666,
+            "q50": 0.25,
+            "q95": 1.0,
+            "q975": 1.0
+          },
+          "observed": 0.5,
+          "one_sided_monte_carlo_p": 0.2826
+        }
+      },
+      "conservative_mrr": {
+        "delta": 0.1434805235699809,
+        "null_mean": 0.1964303498703043,
+        "null_quantiles": {
+          "q025": 0.09090579710144928,
+          "q05": 0.09736235595390526,
+          "q50": 0.1637574323504429,
+          "q95": 0.3575305291723202,
+          "q975": 0.4284920634920635
+        },
+        "observed": 0.3399108734402852,
+        "one_sided_monte_carlo_p": 0.0568
+      },
+      "top_three_fraction": {
+        "delta": 0.24152415241524153,
+        "null_mean": 0.1584758475847585,
+        "null_quantiles": {
+          "q025": 0.0,
+          "q05": 0.0,
+          "q50": 0.2,
+          "q95": 0.4,
+          "q975": 0.4
+        },
+        "observed": 0.4,
+        "one_sided_monte_carlo_p": 0.1592
+      }
+    },
+    "model_definitions": {
+      "BM25_b": 0.75,
+      "BM25_k1": 1.2,
+      "M0": "exact STA-family-token BM25",
+      "M1": "boundary-marked STA-family character 2/3-gram BM25"
+    },
+    "model_selection": {
+      "discovery_conservative_mrr": {
+        "M0": 0.03910457,
+        "M1": 0.08535222
+      },
+      "selected_model": "M1",
+      "tie_break_order": [
+        "M0",
+        "M1"
+      ]
+    },
+    "null_selected_model_counts": {
+      "M0": 2814,
+      "M1": 7185
+    },
+    "pair_results": [
+      {
+        "candidate_pages": 95,
+        "conservative_top_five": [
+          {
+            "conservative_rank": 1.0,
+            "gc_score": 0.34174109,
+            "page_id": "f13v",
+            "zl_score": 0.36045131
+          },
+          {
+            "conservative_rank": 3.0,
+            "gc_score": 0.33678282,
+            "page_id": "f54v",
+            "zl_score": 0.35719907
+          },
+          {
+            "conservative_rank": 4.0,
+            "gc_score": 0.33569815,
+            "page_id": "f44v",
+            "zl_score": 0.35730775
+          },
+          {
+            "conservative_rank": 4.0,
+            "gc_score": 0.3414695,
+            "page_id": "f51v",
+            "zl_score": 0.3559905
+          },
+          {
+            "conservative_rank": 6.0,
+            "gc_score": 0.3320462,
+            "page_id": "f18v",
+            "zl_score": 0.35289374
+          }
+        ],
+        "fragment": "f88r#8",
+        "label_loci": [
+          "f88r.15"
+        ],
+        "pair_id": "q15-f88r-8-f15v",
+        "query_families": [
+          "AQAB"
+        ],
+        "quire": "q15",
+        "split": "discovery",
+        "strength": "P",
+        "target_page": "f15v",
+        "target_physical_folio": "f15",
+        "target_ranks": {
+          "GC": 87.0,
+          "ZL": 86.0,
+          "conservative": 87.0
+        },
+        "target_scores": {
+          "GC": 0.12322984,
+          "ZL": 0.12378187
+        },
+        "target_stratum_L_H": [
+          "A",
+          "1"
+        ]
+      },
+      {
+        "candidate_pages": 6,
+        "conservative_top_five": [
+          {
+            "conservative_rank": 1.0,
+            "gc_score": 2.53365513,
+            "page_id": "f48v",
+            "zl_score": 2.97820232
+          },
+          {
+            "conservative_rank": 2.0,
+            "gc_score": 2.45017488,
+            "page_id": "f66v",
+            "zl_score": 2.88478009
+          },
+          {
+            "conservative_rank": 3.0,
+            "gc_score": 2.36735037,
+            "page_id": "f48r",
+            "zl_score": 2.71140846
+          },
+          {
+            "conservative_rank": 4.0,
+            "gc_score": 2.03064715,
+            "page_id": "f41r",
+            "zl_score": 2.34784043
+          },
+          {
+            "conservative_rank": 6.0,
+            "gc_score": 1.6927339,
+            "page_id": "f41v",
+            "zl_score": 1.51723197
+          }
+        ],
+        "fragment": "f89r1#25",
+        "label_loci": [
+          "f89r1.4"
+        ],
+        "pair_id": "q15-f89r1-25-f57r",
+        "query_families": [
+          "AQABBA"
+        ],
+        "quire": "q15",
+        "split": "holdout",
+        "strength": "M",
+        "target_page": "f57r",
+        "target_physical_folio": "f57",
+        "target_ranks": {
+          "GC": 6.0,
+          "ZL": 5.0,
+          "conservative": 6.0
+        },
+        "target_scores": {
+          "GC": 1.63563999,
+          "ZL": 2.03505903
+        },
+        "target_stratum_L_H": [
+          "B",
+          "5"
+        ]
+      },
+      {
+        "candidate_pages": 20,
+        "conservative_top_five": [
+          {
+            "conservative_rank": 1.0,
+            "gc_score": 7.72430764,
+            "page_id": "f43v",
+            "zl_score": 7.73522876
+          },
+          {
+            "conservative_rank": 3.0,
+            "gc_score": 3.92772056,
+            "page_id": "f26v",
+            "zl_score": 4.15670318
+          },
+          {
+            "conservative_rank": 4.0,
+            "gc_score": 3.12515491,
+            "page_id": "f26r",
+            "zl_score": 3.52457006
+          },
+          {
+            "conservative_rank": 5.0,
+            "gc_score": 2.81918926,
+            "page_id": "f33v",
+            "zl_score": 3.28872929
+          },
+          {
+            "conservative_rank": 6.0,
+            "gc_score": 3.0453124,
+            "page_id": "f40v",
+            "zl_score": 3.12545043
+          }
+        ],
+        "fragment": "f89r1#26",
+        "label_loci": [
+          "f89r1.5"
+        ],
+        "pair_id": "q15-f89r1-26-f43v",
+        "query_families": [
+          "ACACKABAG"
+        ],
+        "quire": "q15",
+        "split": "holdout",
+        "strength": "P",
+        "target_page": "f43v",
+        "target_physical_folio": "f43",
+        "target_ranks": {
+          "GC": 1.0,
+          "ZL": 1.0,
+          "conservative": 1.0
+        },
+        "target_scores": {
+          "GC": 7.72430764,
+          "ZL": 7.73522876
+        },
+        "target_stratum_L_H": [
+          "B",
+          "2"
+        ]
+      },
+      {
+        "candidate_pages": 95,
+        "conservative_top_five": [
+          {
+            "conservative_rank": 1.0,
+            "gc_score": 5.68344936,
+            "page_id": "f36r",
+            "zl_score": 5.84049784
+          },
+          {
+            "conservative_rank": 3.0,
+            "gc_score": 4.48705313,
+            "page_id": "f30r",
+            "zl_score": 5.11751227
+          },
+          {
+            "conservative_rank": 3.0,
+            "gc_score": 4.78286312,
+            "page_id": "f42r",
+            "zl_score": 4.92200643
+          },
+          {
+            "conservative_rank": 4.0,
+            "gc_score": 4.26947237,
+            "page_id": "f10v",
+            "zl_score": 4.51628304
+          },
+          {
+            "conservative_rank": 5.0,
+            "gc_score": 4.13604309,
+            "page_id": "f10r",
+            "zl_score": 4.1355857
+          }
+        ],
+        "fragment": "f89r1#28",
+        "label_loci": [
+          "f89r1.13"
+        ],
+        "pair_id": "q15-f89r1-28-f30r",
+        "query_families": [
+          "AQACAF"
+        ],
+        "quire": "q15",
+        "split": "discovery",
+        "strength": "M",
+        "target_page": "f30r",
+        "target_physical_folio": "f30",
+        "target_ranks": {
+          "GC": 3.0,
+          "ZL": 2.0,
+          "conservative": 3.0
+        },
+        "target_scores": {
+          "GC": 4.48705313,
+          "ZL": 5.11751227
+        },
+        "target_stratum_L_H": [
+          "A",
+          "1"
+        ]
+      },
+      {
+        "candidate_pages": 95,
+        "conservative_top_five": [
+          {
+            "conservative_rank": 1.0,
+            "gc_score": 4.43519213,
+            "page_id": "f90v2",
+            "zl_score": 4.7113879
+          },
+          {
+            "conservative_rank": 4.0,
+            "gc_score": 4.23298692,
+            "page_id": "f90v1",
+            "zl_score": 4.49995957
+          },
+          {
+            "conservative_rank": 5.0,
+            "gc_score": 4.29357075,
+            "page_id": "f87r",
+            "zl_score": 4.49623196
+          },
+          {
+            "conservative_rank": 5.0,
+            "gc_score": 4.20714228,
+            "page_id": "f87v",
+            "zl_score": 4.57449577
+          },
+          {
+            "conservative_rank": 6.0,
+            "gc_score": 4.11304148,
+            "page_id": "f3r",
+            "zl_score": 4.50096113
+          }
+        ],
+        "fragment": "f89r2#35",
+        "label_loci": [
+          "f89r2.4"
+        ],
+        "pair_id": "q15-f89r2-35-f35v",
+        "query_families": [
+          "CABAGLJAB"
+        ],
+        "quire": "q15",
+        "split": "discovery",
+        "strength": "M",
+        "target_page": "f35v",
+        "target_physical_folio": "f35",
+        "target_ranks": {
+          "GC": 49.0,
+          "ZL": 49.0,
+          "conservative": 49.0
+        },
+        "target_scores": {
+          "GC": 2.26349005,
+          "ZL": 2.340138
+        },
+        "target_stratum_L_H": [
+          "A",
+          "1"
+        ]
+      },
+      {
+        "candidate_pages": 6,
+        "conservative_top_five": [
+          {
+            "conservative_rank": 1.0,
+            "gc_score": 2.44177904,
+            "page_id": "f66v",
+            "zl_score": 3.21144652
+          },
+          {
+            "conservative_rank": 2.0,
+            "gc_score": 2.33150641,
+            "page_id": "f48v",
+            "zl_score": 1.672461
+          },
+          {
+            "conservative_rank": 4.0,
+            "gc_score": 1.69149973,
+            "page_id": "f41v",
+            "zl_score": 1.58669753
+          },
+          {
+            "conservative_rank": 5.0,
+            "gc_score": 1.58709592,
+            "page_id": "f48r",
+            "zl_score": 1.56351725
+          },
+          {
+            "conservative_rank": 6.0,
+            "gc_score": 1.93251633,
+            "page_id": "f41r",
+            "zl_score": 1.23087205
+          }
+        ],
+        "fragment": "f89v2#54",
+        "label_loci": [
+          "f89v2.6"
+        ],
+        "pair_id": "q15-f89v2-54-f48v",
+        "query_families": [
+          "KAQAB"
+        ],
+        "quire": "q15",
+        "split": "holdout",
+        "strength": "S",
+        "target_page": "f48v",
+        "target_physical_folio": "f48",
+        "target_ranks": {
+          "GC": 2.0,
+          "ZL": 2.0,
+          "conservative": 2.0
+        },
+        "target_scores": {
+          "GC": 2.33150641,
+          "ZL": 1.672461
+        },
+        "target_stratum_L_H": [
+          "B",
+          "5"
+        ]
+      },
+      {
+        "candidate_pages": 95,
+        "conservative_top_five": [
+          {
+            "conservative_rank": 3.0,
+            "gc_score": 4.52465982,
+            "page_id": "f16v",
+            "zl_score": 5.07388238
+          },
+          {
+            "conservative_rank": 5.0,
+            "gc_score": 4.37670919,
+            "page_id": "f6r",
+            "zl_score": 4.36527395
+          },
+          {
+            "conservative_rank": 6.0,
+            "gc_score": 4.12232822,
+            "page_id": "f2r",
+            "zl_score": 4.52633643
+          },
+          {
+            "conservative_rank": 7.0,
+            "gc_score": 4.04930924,
+            "page_id": "f18r",
+            "zl_score": 4.43788595
+          },
+          {
+            "conservative_rank": 8.0,
+            "gc_score": 3.61404685,
+            "page_id": "f96v",
+            "zl_score": 3.79457045
+          }
+        ],
+        "fragment": "f99r#80",
+        "label_loci": [
+          "f99r.20"
+        ],
+        "pair_id": "q19-f99r-80-f51r",
+        "query_families": [
+          "AACA"
+        ],
+        "quire": "q19",
+        "split": "discovery",
+        "strength": "M",
+        "target_page": "f51r",
+        "target_physical_folio": "f51",
+        "target_ranks": {
+          "GC": 50.0,
+          "ZL": 36.0,
+          "conservative": 50.0
+        },
+        "target_scores": {
+          "GC": 1.72825495,
+          "ZL": 2.23726117
+        },
+        "target_stratum_L_H": [
+          "A",
+          "1"
+        ]
+      },
+      {
+        "candidate_pages": 95,
+        "conservative_top_five": [
+          {
+            "conservative_rank": 2.0,
+            "gc_score": 8.60617568,
+            "page_id": "f36r",
+            "zl_score": 9.25308522
+          },
+          {
+            "conservative_rank": 3.0,
+            "gc_score": 8.45501881,
+            "page_id": "f23v",
+            "zl_score": 9.25246496
+          },
+          {
+            "conservative_rank": 3.0,
+            "gc_score": 8.32622381,
+            "page_id": "f2r",
+            "zl_score": 10.3175656
+          },
+          {
+            "conservative_rank": 5.0,
+            "gc_score": 7.61344865,
+            "page_id": "f30v",
+            "zl_score": 8.51051903
+          },
+          {
+            "conservative_rank": 5.0,
+            "gc_score": 7.61876951,
+            "page_id": "f49r",
+            "zl_score": 8.08694183
+          }
+        ],
+        "fragment": "f99r#94",
+        "label_loci": [
+          "f99r.46"
+        ],
+        "pair_id": "q19-f99r-94-f96v",
+        "query_families": [
+          "QABCACA"
+        ],
+        "quire": "q19",
+        "split": "discovery",
+        "strength": "M",
+        "target_page": "f96v",
+        "target_physical_folio": "f96",
+        "target_ranks": {
+          "GC": 22.0,
+          "ZL": 21.0,
+          "conservative": 22.0
+        },
+        "target_scores": {
+          "GC": 3.90241182,
+          "ZL": 3.97321234
+        },
+        "target_stratum_L_H": [
+          "A",
+          "1"
+        ]
+      },
+      {
+        "candidate_pages": 95,
+        "conservative_top_five": [
+          {
+            "conservative_rank": 3.0,
+            "gc_score": 2.84834889,
+            "page_id": "f23v",
+            "zl_score": 3.02973723
+          },
+          {
+            "conservative_rank": 3.0,
+            "gc_score": 2.76394015,
+            "page_id": "f54v",
+            "zl_score": 3.16781983
+          },
+          {
+            "conservative_rank": 4.0,
+            "gc_score": 2.69465177,
+            "page_id": "f23r",
+            "zl_score": 3.08256055
+          },
+          {
+            "conservative_rank": 4.0,
+            "gc_score": 2.77097168,
+            "page_id": "f45r",
+            "zl_score": 3.00969625
+          },
+          {
+            "conservative_rank": 7.0,
+            "gc_score": 2.61705192,
+            "page_id": "f52r",
+            "zl_score": 3.00401792
+          }
+        ],
+        "fragment": "f99v#95",
+        "label_loci": [
+          "f99v.2"
+        ],
+        "pair_id": "q19-f99v-95-f44r",
+        "query_families": [
+          "AQABBA"
+        ],
+        "quire": "q19",
+        "split": "holdout",
+        "strength": "M",
+        "target_page": "f44r",
+        "target_physical_folio": "f44",
+        "target_ranks": {
+          "GC": 42.0,
+          "ZL": 68.0,
+          "conservative": 68.0
+        },
+        "target_scores": {
+          "GC": 1.76321596,
+          "ZL": 0.41741944
+        },
+        "target_stratum_L_H": [
+          "A",
+          "1"
+        ]
+      },
+      {
+        "candidate_pages": 20,
+        "conservative_top_five": [
+          {
+            "conservative_rank": 2.0,
+            "gc_score": 4.36971671,
+            "page_id": "f31r",
+            "zl_score": 3.47574607
+          },
+          {
+            "conservative_rank": 4.0,
+            "gc_score": 2.83917139,
+            "page_id": "f39v",
+            "zl_score": 2.57494949
+          },
+          {
+            "conservative_rank": 5.0,
+            "gc_score": 2.82475911,
+            "page_id": "f34r",
+            "zl_score": 2.58377462
+          },
+          {
+            "conservative_rank": 5.0,
+            "gc_score": 2.92753448,
+            "page_id": "f55r",
+            "zl_score": 2.55028241
+          },
+          {
+            "conservative_rank": 6.0,
+            "gc_score": 2.75574284,
+            "page_id": "f33r",
+            "zl_score": 2.53496015
+          }
+        ],
+        "fragment": "f99v#110",
+        "label_loci": [
+          "f99v.27",
+          "f99v.28"
+        ],
+        "pair_id": "q19-f99v-110-f34v",
+        "query_families": [
+          "AQAB",
+          "KAC",
+          "ABJQAC"
+        ],
+        "quire": "q19",
+        "split": "discovery",
+        "strength": "M",
+        "target_page": "f34v",
+        "target_physical_folio": "f34",
+        "target_ranks": {
+          "GC": 7.0,
+          "ZL": 7.0,
+          "conservative": 7.0
+        },
+        "target_scores": {
+          "GC": 2.74761197,
+          "ZL": 2.53170306
+        },
+        "target_stratum_L_H": [
+          "B",
+          "2"
+        ]
+      },
+      {
+        "candidate_pages": 95,
+        "conservative_top_five": [
+          {
+            "conservative_rank": 2.0,
+            "gc_score": 6.29003982,
+            "page_id": "f90r2",
+            "zl_score": 6.44310486
+          },
+          {
+            "conservative_rank": 3.0,
+            "gc_score": 5.49976187,
+            "page_id": "f1v",
+            "zl_score": 5.3745625
+          },
+          {
+            "conservative_rank": 4.0,
+            "gc_score": 5.08106977,
+            "page_id": "f6v",
+            "zl_score": 5.0664967
+          },
+          {
+            "conservative_rank": 5.0,
+            "gc_score": 4.92641879,
+            "page_id": "f7r",
+            "zl_score": 4.88645854
+          },
+          {
+            "conservative_rank": 6.0,
+            "gc_score": 4.65459303,
+            "page_id": "f11r",
+            "zl_score": 4.40626568
+          }
+        ],
+        "fragment": "f100r#116",
+        "label_loci": [
+          "f100r.2"
+        ],
+        "pair_id": "q19-f100r-116-f96v",
+        "query_families": [
+          "CAKACTA"
+        ],
+        "quire": "q19",
+        "split": "discovery",
+        "strength": "M",
+        "target_page": "f96v",
+        "target_physical_folio": "f96",
+        "target_ranks": {
+          "GC": 67.0,
+          "ZL": 73.0,
+          "conservative": 73.0
+        },
+        "target_scores": {
+          "GC": 1.77236111,
+          "ZL": 1.61576751
+        },
+        "target_stratum_L_H": [
+          "A",
+          "1"
+        ]
+      },
+      {
+        "candidate_pages": 95,
+        "conservative_top_five": [
+          {
+            "conservative_rank": 1.0,
+            "gc_score": 4.46536089,
+            "page_id": "f17r",
+            "zl_score": 4.73364051
+          },
+          {
+            "conservative_rank": 2.0,
+            "gc_score": 4.38990654,
+            "page_id": "f9v",
+            "zl_score": 4.68566114
+          },
+          {
+            "conservative_rank": 3.0,
+            "gc_score": 4.36971351,
+            "page_id": "f45r",
+            "zl_score": 4.61900019
+          },
+          {
+            "conservative_rank": 5.0,
+            "gc_score": 4.29000186,
+            "page_id": "f13r",
+            "zl_score": 4.43772273
+          },
+          {
+            "conservative_rank": 6.0,
+            "gc_score": 4.06366424,
+            "page_id": "f23r",
+            "zl_score": 4.16775302
+          }
+        ],
+        "fragment": "f100v#133",
+        "label_loci": [
+          "f100v.3"
+        ],
+        "pair_id": "q19-f100v-133-f13v",
+        "query_families": [
+          "APKAC"
+        ],
+        "quire": "q19",
+        "split": "discovery",
+        "strength": "M",
+        "target_page": "f13v",
+        "target_physical_folio": "f13",
+        "target_ranks": {
+          "GC": 91.0,
+          "ZL": 90.0,
+          "conservative": 91.0
+        },
+        "target_scores": {
+          "GC": 0.12205882,
+          "ZL": 0.12222795
+        },
+        "target_stratum_L_H": [
+          "A",
+          "1"
+        ]
+      },
+      {
+        "candidate_pages": 95,
+        "conservative_top_five": [
+          {
+            "conservative_rank": 1.0,
+            "gc_score": 7.14812457,
+            "page_id": "f24v",
+            "zl_score": 7.01090893
+          },
+          {
+            "conservative_rank": 2.0,
+            "gc_score": 6.78274804,
+            "page_id": "f30r",
+            "zl_score": 6.77500117
+          },
+          {
+            "conservative_rank": 4.0,
+            "gc_score": 5.47066279,
+            "page_id": "f47v",
+            "zl_score": 5.85515532
+          },
+          {
+            "conservative_rank": 5.0,
+            "gc_score": 5.62533118,
+            "page_id": "f27v",
+            "zl_score": 5.43667594
+          },
+          {
+            "conservative_rank": 7.0,
+            "gc_score": 4.71441093,
+            "page_id": "f47r",
+            "zl_score": 4.70312604
+          }
+        ],
+        "fragment": "f100v#136",
+        "label_loci": [
+          "f100v.6"
+        ],
+        "pair_id": "q19-f100v-136-f90v2",
+        "query_families": [
+          "AQKAKBA"
+        ],
+        "quire": "q19",
+        "split": "discovery",
+        "strength": "M",
+        "target_page": "f90v2",
+        "target_physical_folio": "f90",
+        "target_ranks": {
+          "GC": 66.0,
+          "ZL": 79.0,
+          "conservative": 79.0
+        },
+        "target_scores": {
+          "GC": 0.53286279,
+          "ZL": 0.2434548
+        },
+        "target_stratum_L_H": [
+          "A",
+          "1"
+        ]
+      },
+      {
+        "candidate_pages": 95,
+        "conservative_top_five": [
+          {
+            "conservative_rank": 2.0,
+            "gc_score": 4.60349957,
+            "page_id": "f9r",
+            "zl_score": 5.19403135
+          },
+          {
+            "conservative_rank": 3.0,
+            "gc_score": 4.64520131,
+            "page_id": "f13r",
+            "zl_score": 5.01195037
+          },
+          {
+            "conservative_rank": 4.0,
+            "gc_score": 4.59367703,
+            "page_id": "f23v",
+            "zl_score": 4.90695584
+          },
+          {
+            "conservative_rank": 5.0,
+            "gc_score": 4.42652554,
+            "page_id": "f37r",
+            "zl_score": 4.83188064
+          },
+          {
+            "conservative_rank": 5.0,
+            "gc_score": 4.39954347,
+            "page_id": "f87v",
+            "zl_score": 5.0415329
+          }
+        ],
+        "fragment": "f102r2#212",
+        "label_loci": [
+          "f102r2.21"
+        ],
+        "pair_id": "q19-f102r2-212-f18v",
+        "query_families": [
+          "QABBACAB"
+        ],
+        "quire": "q19",
+        "split": "discovery",
+        "strength": "S",
+        "target_page": "f18v",
+        "target_physical_folio": "f18",
+        "target_ranks": {
+          "GC": 25.0,
+          "ZL": 24.0,
+          "conservative": 25.0
+        },
+        "target_scores": {
+          "GC": 3.42049149,
+          "ZL": 3.82348464
+        },
+        "target_stratum_L_H": [
+          "A",
+          "1"
+        ]
+      },
+      {
+        "candidate_pages": 95,
+        "conservative_top_five": [
+          {
+            "conservative_rank": 2.0,
+            "gc_score": 3.18224142,
+            "page_id": "f23v",
+            "zl_score": 3.59833838
+          },
+          {
+            "conservative_rank": 2.0,
+            "gc_score": 3.21349097,
+            "page_id": "f96v",
+            "zl_score": 3.5370055
+          },
+          {
+            "conservative_rank": 4.0,
+            "gc_score": 2.98342248,
+            "page_id": "f24v",
+            "zl_score": 3.32511581
+          },
+          {
+            "conservative_rank": 5.0,
+            "gc_score": 2.98950771,
+            "page_id": "f87r",
+            "zl_score": 3.27966217
+          },
+          {
+            "conservative_rank": 5.0,
+            "gc_score": 2.96473712,
+            "page_id": "f87v",
+            "zl_score": 3.35847333
+          }
+        ],
+        "fragment": "f102r2#213",
+        "label_loci": [
+          "f102r2.22"
+        ],
+        "pair_id": "q19-f102r2-213-f23r",
+        "query_families": [
+          "ABABABACA"
+        ],
+        "quire": "q19",
+        "split": "discovery",
+        "strength": "S",
+        "target_page": "f23r",
+        "target_physical_folio": "f23",
+        "target_ranks": {
+          "GC": 25.0,
+          "ZL": 13.0,
+          "conservative": 25.0
+        },
+        "target_scores": {
+          "GC": 2.55009844,
+          "ZL": 3.02029196
+        },
+        "target_stratum_L_H": [
+          "A",
+          "1"
+        ]
+      },
+      {
+        "candidate_pages": 95,
+        "conservative_top_five": [
+          {
+            "conservative_rank": 1.0,
+            "gc_score": 4.70698393,
+            "page_id": "f96v",
+            "zl_score": 4.74212966
+          },
+          {
+            "conservative_rank": 2.0,
+            "gc_score": 4.35119085,
+            "page_id": "f87r",
+            "zl_score": 4.39402346
+          },
+          {
+            "conservative_rank": 3.0,
+            "gc_score": 4.06769248,
+            "page_id": "f36r",
+            "zl_score": 4.14926772
+          },
+          {
+            "conservative_rank": 5.0,
+            "gc_score": 4.01736982,
+            "page_id": "f8v",
+            "zl_score": 4.03784674
+          },
+          {
+            "conservative_rank": 5.0,
+            "gc_score": 3.97610131,
+            "page_id": "f9r",
+            "zl_score": 4.08023762
+          }
+        ],
+        "fragment": "f102v2#225",
+        "label_loci": [
+          "f102v2.14"
+        ],
+        "pair_id": "q19-f102v2-225-f36r",
+        "query_families": [
+          "CACAB"
+        ],
+        "quire": "q19",
+        "split": "discovery",
+        "strength": "M",
+        "target_page": "f36r",
+        "target_physical_folio": "f36",
+        "target_ranks": {
+          "GC": 3.0,
+          "ZL": 3.0,
+          "conservative": 3.0
+        },
+        "target_scores": {
+          "GC": 4.06769248,
+          "ZL": 4.14926772
+        },
+        "target_stratum_L_H": [
+          "A",
+          "1"
+        ]
+      },
+      {
+        "candidate_pages": 95,
+        "conservative_top_five": [
+          {
+            "conservative_rank": 2.0,
+            "gc_score": 2.76967606,
+            "page_id": "f87r",
+            "zl_score": 2.96948661
+          },
+          {
+            "conservative_rank": 3.0,
+            "gc_score": 2.74053317,
+            "page_id": "f90r1",
+            "zl_score": 2.94971025
+          },
+          {
+            "conservative_rank": 4.0,
+            "gc_score": 2.66600017,
+            "page_id": "f87v",
+            "zl_score": 3.08578038
+          },
+          {
+            "conservative_rank": 4.0,
+            "gc_score": 2.73247024,
+            "page_id": "f96v",
+            "zl_score": 2.93177993
+          },
+          {
+            "conservative_rank": 5.0,
+            "gc_score": 2.65324719,
+            "page_id": "f8v",
+            "zl_score": 2.84789437
+          }
+        ],
+        "fragment": "f102v1#240",
+        "label_loci": [
+          "f102v1.17"
+        ],
+        "pair_id": "q19-f102v1-240-f19r",
+        "query_families": [
+          "BACABABA"
+        ],
+        "quire": "q19",
+        "split": "holdout",
+        "strength": "S",
+        "target_page": "f19r",
+        "target_physical_folio": "f19",
+        "target_ranks": {
+          "GC": 51.0,
+          "ZL": 55.0,
+          "conservative": 55.0
+        },
+        "target_scores": {
+          "GC": 1.59707179,
+          "ZL": 1.56923748
+        },
+        "target_stratum_L_H": [
+          "A",
+          "1"
+        ]
+      }
+    ],
+    "permutations_requested": 9999,
+    "permutations_run": 9999,
+    "query_form_collisions": [
+      {
+        "pair_ids": [
+          "q15-f89r1-25-f57r",
+          "q19-f99v-95-f44r"
+        ],
+        "query_families": [
+          "AQABBA"
+        ],
+        "target_physical_folios": [
+          "f44",
+          "f57"
+        ]
+      }
+    ],
+    "seed_label": "H005-v1|target-null|seed=5005",
+    "seed_unsigned_big_endian_128": 332271911553312101763099166472904240163
+  }
+}

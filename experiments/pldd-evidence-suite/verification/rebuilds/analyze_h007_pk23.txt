@@ -1,0 +1,4 @@
+wrote <REBUILD_DIR>/h007-pk23-coverage.json
+wrote <REBUILD_DIR>/h007-pk23-coverage.md
+wrote <REBUILD_DIR>/h007-pk23-coverage.sha256.txt
+report SHA-256 b4c99abda34a714364254a5fd6d14a3692aeb7bcc7c8fd7148ddeb82b61bd6c1

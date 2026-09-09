@@ -1,0 +1,1640 @@
+{
+  "integrity": {
+    "alphabet": "Eva-",
+    "format_version": "2.0",
+    "source_sha256": "bf5b6d4ac1e3a51b1847a9c388318d609020441ccd56984c901c32b09beccafc",
+    "retained_source_sha256": "bf5b6d4ac1e3a51b1847a9c388318d609020441ccd56984c901c32b09beccafc",
+    "source_bytes_retained": true,
+    "physical_lines": 8510,
+    "page_panel_records": 227,
+    "loci": 5385,
+    "substantive_loci": 5385,
+    "invalid_locator_loci": 0,
+    "locus_families": {
+      "P": 4130,
+      "L": 1029,
+      "C": 84,
+      "R": 142
+    },
+    "paragraph_starts": 740,
+    "paragraph_ends": 740,
+    "alternative_groups": 817,
+    "uncertain_spaces": 2748,
+    "drawing_boundaries": {
+      "aligned": 758,
+      "misaligned": 6
+    },
+    "ligature_groups": 446,
+    "extended_eva_codes": 178,
+    "tokens_comma_as_boundary": 39026,
+    "tokens_comma_joined": 36278
+  },
+  "conservative_basic_eva": {
+    "accepted_tokens": 32892,
+    "types": 7317,
+    "excluded_components": 3386,
+    "exclusion_reasons": {
+      "uncertain_word_space": 2449,
+      "alternative_reading": 728,
+      "extended_eva": 127,
+      "unreadable_glyph": 81,
+      "joined_eva_form": 1
+    },
+    "top_tokens": [
+      {
+        "token": "daiin",
+        "count": 783
+      },
+      {
+        "token": "chedy",
+        "count": 445
+      },
+      {
+        "token": "shedy",
+        "count": 380
+      },
+      {
+        "token": "ol",
+        "count": 379
+      },
+      {
+        "token": "chol",
+        "count": 331
+      },
+      {
+        "token": "aiin",
+        "count": 315
+      },
+      {
+        "token": "qokeey",
+        "count": 302
+      },
+      {
+        "token": "qokeedy",
+        "count": 301
+      },
+      {
+        "token": "chey",
+        "count": 292
+      },
+      {
+        "token": "dar",
+        "count": 276
+      },
+      {
+        "token": "qokain",
+        "count": 276
+      },
+      {
+        "token": "or",
+        "count": 271
+      },
+      {
+        "token": "qokedy",
+        "count": 270
+      },
+      {
+        "token": "qokaiin",
+        "count": 263
+      },
+      {
+        "token": "ar",
+        "count": 262
+      },
+      {
+        "token": "shey",
+        "count": 233
+      },
+      {
+        "token": "okaiin",
+        "count": 208
+      },
+      {
+        "token": "s",
+        "count": 199
+      },
+      {
+        "token": "dain",
+        "count": 194
+      },
+      {
+        "token": "chor",
+        "count": 193
+      },
+      {
+        "token": "dal",
+        "count": 188
+      },
+      {
+        "token": "qokal",
+        "count": 184
+      },
+      {
+        "token": "dy",
+        "count": 177
+      },
+      {
+        "token": "okeey",
+        "count": 172
+      },
+      {
+        "token": "shol",
+        "count": 171
+      },
+      {
+        "token": "al",
+        "count": 165
+      },
+      {
+        "token": "otedy",
+        "count": 155
+      },
+      {
+        "token": "cheey",
+        "count": 151
+      },
+      {
+        "token": "otaiin",
+        "count": 150
+      },
+      {
+        "token": "qokar",
+        "count": 145
+      }
+    ]
+  },
+  "strata": {
+    "currier_language": {
+      "A": {
+        "loci": 1821,
+        "certain_basic_eva_tokens": 9747
+      },
+      "B": {
+        "loci": 2809,
+        "certain_basic_eva_tokens": 20422
+      },
+      "unknown": {
+        "loci": 755,
+        "certain_basic_eva_tokens": 2723
+      }
+    },
+    "hand": {
+      "1": {
+        "loci": 1754,
+        "certain_basic_eva_tokens": 9280
+      },
+      "2": {
+        "loci": 1371,
+        "certain_basic_eva_tokens": 9665
+      },
+      "3": {
+        "loci": 1221,
+        "certain_basic_eva_tokens": 10228
+      },
+      "4": {
+        "loci": 894,
+        "certain_basic_eva_tokens": 2942
+      },
+      "5": {
+        "loci": 145,
+        "certain_basic_eva_tokens": 777
+      }
+    },
+    "illustration_type": {
+      "A": {
+        "loci": 240,
+        "certain_basic_eva_tokens": 785
+      },
+      "B": {
+        "loci": 861,
+        "certain_basic_eva_tokens": 5492
+      },
+      "C": {
+        "loci": 401,
+        "certain_basic_eva_tokens": 1807
+      },
+      "H": {
+        "loci": 1640,
+        "certain_basic_eva_tokens": 9770
+      },
+      "P": {
+        "loci": 458,
+        "certain_basic_eva_tokens": 2174
+      },
+      "S": {
+        "loci": 1164,
+        "certain_basic_eva_tokens": 9829
+      },
+      "T": {
+        "loci": 286,
+        "certain_basic_eva_tokens": 1997
+      },
+      "Z": {
+        "loci": 335,
+        "certain_basic_eva_tokens": 1038
+      }
+    },
+    "locus_family": {
+      "P": {
+        "loci": 4130,
+        "certain_basic_eva_tokens": 29704
+      },
+      "L": {
+        "loci": 1029,
+        "certain_basic_eva_tokens": 1007
+      },
+      "C": {
+        "loci": 84,
+        "certain_basic_eva_tokens": 1881
+      },
+      "R": {
+        "loci": 142,
+        "certain_basic_eva_tokens": 300
+      }
+    }
+  },
+  "hypotheses": {
+    "H001": {
+      "hypothesis_id": "H001",
+      "claim_scope": "gallows-initial paragraph-position enrichment only; no semantics",
+      "split": "SHA256('H001-v1:' + page_id), first byte < 51 is held out",
+      "discovery_pages": 160,
+      "held_out_pages": 47,
+      "discovery": {
+        "total_positions": 22941,
+        "initial_positions": 503,
+        "eligible_paragraphs": 503,
+        "excluded_uncertain_initials": 66
+      },
+      "held_out": {
+        "total_positions": 6751,
+        "initial_positions": 142,
+        "eligible_paragraphs": 142,
+        "excluded_uncertain_initials": 29
+      },
+      "literature_derived_feature": {
+        "definition": "accepted basic-EVA token starts with k, t, p, or f",
+        "discovery": {
+          "total": 1594,
+          "initial": 415,
+          "initial_positions": 503,
+          "all_positions": 22941,
+          "initial_rate": 0.825,
+          "background_rate": 0.0525,
+          "log2_odds": 6.403
+        },
+        "held_out": {
+          "total": 504,
+          "initial": 132,
+          "initial_positions": 142,
+          "all_positions": 6751,
+          "initial_rate": 0.9296,
+          "background_rate": 0.0563,
+          "log2_odds": 7.723
+        },
+        "held_out_direction_positive": true
+      },
+      "exploratory_selection_rule": "discovery total>=20, initial>=3, log2_odds>=1.5",
+      "exploratory_whole_token_candidates": [
+        {
+          "token": "tchedy",
+          "discovery_total": 26,
+          "discovery_initial": 10,
+          "discovery_log2_odds": 4.854,
+          "held_out_total": 5,
+          "held_out_initial": 0,
+          "held_out_log2_odds": 2.075,
+          "held_out_direction_positive": false
+        },
+        {
+          "token": "pchedy",
+          "discovery_total": 26,
+          "discovery_initial": 4,
+          "discovery_log2_odds": 3.166,
+          "held_out_total": 3,
+          "held_out_initial": 0,
+          "held_out_log2_odds": 2.727,
+          "held_out_direction_positive": false
+        },
+        {
+          "token": "tar",
+          "discovery_total": 22,
+          "discovery_initial": 3,
+          "discovery_log2_odds": 3.007,
+          "held_out_total": 6,
+          "held_out_initial": 0,
+          "held_out_log2_odds": 1.834,
+          "held_out_direction_positive": false
+        },
+        {
+          "token": "tol",
+          "discovery_total": 23,
+          "discovery_initial": 3,
+          "discovery_log2_odds": 2.935,
+          "held_out_total": 6,
+          "held_out_initial": 1,
+          "held_out_log2_odds": 3.67,
+          "held_out_direction_positive": true
+        }
+      ],
+      "exploratory_held_out_positive_direction_count": 1
+    },
+    "H002": {
+      "hypothesis_id": "H002",
+      "claim_scope": "exact certain-EVA label-type recurrence in local prose; no gloss",
+      "true_label_types": [
+        "La",
+        "Lc",
+        "Lf",
+        "Ln",
+        "Lp",
+        "Ls",
+        "Lt",
+        "Lz"
+      ],
+      "stratum": [
+        "illustration_type_I",
+        "Currier_L",
+        "hand_H"
+      ],
+      "peer_scope": "same split and same I/L/H; own page excluded",
+      "split": "SHA256('H002-v1:' + page_id), first byte < 51 is held out",
+      "eligible_records_before_peer_filter": 27,
+      "discovery": {
+        "pages_with_peers": 23,
+        "evaluated_label_types": 279,
+        "observed_local_hits": 30,
+        "expected_peer_hits": 28.3333,
+        "observed_rate": 0.1075,
+        "expected_rate": 0.1016,
+        "enrichment": 0.006,
+        "positive_page_scores": 10,
+        "zero_page_scores": 4,
+        "negative_page_scores": 9,
+        "local_hits": [
+          {
+            "page_id": "f102v1",
+            "token": "okeody"
+          },
+          {
+            "page_id": "f102v2",
+            "token": "cheor"
+          },
+          {
+            "page_id": "f75v",
+            "token": "dal"
+          },
+          {
+            "page_id": "f75v",
+            "token": "lol"
+          },
+          {
+            "page_id": "f75v",
+            "token": "olol"
+          },
+          {
+            "page_id": "f75v",
+            "token": "otedy"
+          },
+          {
+            "page_id": "f75v",
+            "token": "oteey"
+          },
+          {
+            "page_id": "f75v",
+            "token": "qokal"
+          },
+          {
+            "page_id": "f75v",
+            "token": "qotedy"
+          },
+          {
+            "page_id": "f77r",
+            "token": "otedy"
+          },
+          {
+            "page_id": "f77v",
+            "token": "shedy"
+          },
+          {
+            "page_id": "f80r",
+            "token": "okaly"
+          },
+          {
+            "page_id": "f80r",
+            "token": "olky"
+          },
+          {
+            "page_id": "f81v",
+            "token": "otain"
+          },
+          {
+            "page_id": "f82r",
+            "token": "okal"
+          },
+          {
+            "page_id": "f83v",
+            "token": "okaiin"
+          },
+          {
+            "page_id": "f83v",
+            "token": "okchdy"
+          },
+          {
+            "page_id": "f84r",
+            "token": "dshedy"
+          },
+          {
+            "page_id": "f84r",
+            "token": "okedy"
+          },
+          {
+            "page_id": "f84r",
+            "token": "or"
+          },
+          {
+            "page_id": "f84r",
+            "token": "otedy"
+          },
+          {
+            "page_id": "f88r",
+            "token": "okol"
+          },
+          {
+            "page_id": "f89r2",
+            "token": "cheody"
+          },
+          {
+            "page_id": "f89r2",
+            "token": "dy"
+          },
+          {
+            "page_id": "f89r2",
+            "token": "opcheor"
+          },
+          {
+            "page_id": "f99r",
+            "token": "dar"
+          },
+          {
+            "page_id": "f99r",
+            "token": "okeoly"
+          },
+          {
+            "page_id": "f99r",
+            "token": "okor"
+          },
+          {
+            "page_id": "f99v",
+            "token": "dar"
+          },
+          {
+            "page_id": "f99v",
+            "token": "doldam"
+          }
+        ],
+        "pages": [
+          {
+            "page_id": "f100v",
+            "stratum_I_L_H": [
+              "P",
+              "A",
+              "1"
+            ],
+            "label_types": 14,
+            "observed_local_hits": 0,
+            "expected_peer_hits": 0.3333,
+            "enrichment": -0.0238
+          },
+          {
+            "page_id": "f101v",
+            "stratum_I_L_H": [
+              "P",
+              "A",
+              "1"
+            ],
+            "label_types": 16,
+            "observed_local_hits": 0,
+            "expected_peer_hits": 1.0,
+            "enrichment": -0.0625
+          },
+          {
+            "page_id": "f102r1",
+            "stratum_I_L_H": [
+              "P",
+              "A",
+              "1"
+            ],
+            "label_types": 4,
+            "observed_local_hits": 0,
+            "expected_peer_hits": 0.0,
+            "enrichment": 0.0
+          },
+          {
+            "page_id": "f102r2",
+            "stratum_I_L_H": [
+              "P",
+              "A",
+              "1"
+            ],
+            "label_types": 4,
+            "observed_local_hits": 0,
+            "expected_peer_hits": 0.0,
+            "enrichment": 0.0
+          },
+          {
+            "page_id": "f102v1",
+            "stratum_I_L_H": [
+              "P",
+              "A",
+              "1"
+            ],
+            "label_types": 8,
+            "observed_local_hits": 1,
+            "expected_peer_hits": 0.3333,
+            "enrichment": 0.0833
+          },
+          {
+            "page_id": "f102v2",
+            "stratum_I_L_H": [
+              "P",
+              "A",
+              "1"
+            ],
+            "label_types": 19,
+            "observed_local_hits": 1,
+            "expected_peer_hits": 2.25,
+            "enrichment": -0.0658
+          },
+          {
+            "page_id": "f75v",
+            "stratum_I_L_H": [
+              "B",
+              "B",
+              "2"
+            ],
+            "label_types": 27,
+            "observed_local_hits": 7,
+            "expected_peer_hits": 7.4444,
+            "enrichment": -0.0165
+          },
+          {
+            "page_id": "f77r",
+            "stratum_I_L_H": [
+              "B",
+              "B",
+              "2"
+            ],
+            "label_types": 9,
+            "observed_local_hits": 1,
+            "expected_peer_hits": 1.7778,
+            "enrichment": -0.0864
+          },
+          {
+            "page_id": "f77v",
+            "stratum_I_L_H": [
+              "B",
+              "B",
+              "2"
+            ],
+            "label_types": 7,
+            "observed_local_hits": 1,
+            "expected_peer_hits": 2.0,
+            "enrichment": -0.1429
+          },
+          {
+            "page_id": "f78r",
+            "stratum_I_L_H": [
+              "B",
+              "B",
+              "2"
+            ],
+            "label_types": 6,
+            "observed_local_hits": 0,
+            "expected_peer_hits": 0.2222,
+            "enrichment": -0.037
+          },
+          {
+            "page_id": "f80r",
+            "stratum_I_L_H": [
+              "B",
+              "B",
+              "2"
+            ],
+            "label_types": 10,
+            "observed_local_hits": 2,
+            "expected_peer_hits": 0.8889,
+            "enrichment": 0.1111
+          },
+          {
+            "page_id": "f81v",
+            "stratum_I_L_H": [
+              "B",
+              "B",
+              "2"
+            ],
+            "label_types": 2,
+            "observed_local_hits": 1,
+            "expected_peer_hits": 0.3333,
+            "enrichment": 0.3333
+          },
+          {
+            "page_id": "f82r",
+            "stratum_I_L_H": [
+              "B",
+              "B",
+              "2"
+            ],
+            "label_types": 10,
+            "observed_local_hits": 1,
+            "expected_peer_hits": 0.8889,
+            "enrichment": 0.0111
+          },
+          {
+            "page_id": "f83r",
+            "stratum_I_L_H": [
+              "B",
+              "B",
+              "2"
+            ],
+            "label_types": 4,
+            "observed_local_hits": 0,
+            "expected_peer_hits": 0.0,
+            "enrichment": 0.0
+          },
+          {
+            "page_id": "f83v",
+            "stratum_I_L_H": [
+              "B",
+              "B",
+              "2"
+            ],
+            "label_types": 4,
+            "observed_local_hits": 2,
+            "expected_peer_hits": 0.8889,
+            "enrichment": 0.2778
+          },
+          {
+            "page_id": "f84r",
+            "stratum_I_L_H": [
+              "B",
+              "B",
+              "2"
+            ],
+            "label_types": 14,
+            "observed_local_hits": 4,
+            "expected_peer_hits": 3.2222,
+            "enrichment": 0.0556
+          },
+          {
+            "page_id": "f88r",
+            "stratum_I_L_H": [
+              "P",
+              "A",
+              "1"
+            ],
+            "label_types": 14,
+            "observed_local_hits": 1,
+            "expected_peer_hits": 0.5,
+            "enrichment": 0.0357
+          },
+          {
+            "page_id": "f88v",
+            "stratum_I_L_H": [
+              "P",
+              "A",
+              "1"
+            ],
+            "label_types": 12,
+            "observed_local_hits": 0,
+            "expected_peer_hits": 0.3333,
+            "enrichment": -0.0278
+          },
+          {
+            "page_id": "f89r1",
+            "stratum_I_L_H": [
+              "P",
+              "A",
+              "1"
+            ],
+            "label_types": 10,
+            "observed_local_hits": 0,
+            "expected_peer_hits": 0.1667,
+            "enrichment": -0.0167
+          },
+          {
+            "page_id": "f89r2",
+            "stratum_I_L_H": [
+              "P",
+              "A",
+              "1"
+            ],
+            "label_types": 21,
+            "observed_local_hits": 3,
+            "expected_peer_hits": 1.75,
+            "enrichment": 0.0595
+          },
+          {
+            "page_id": "f89v1",
+            "stratum_I_L_H": [
+              "P",
+              "A",
+              "1"
+            ],
+            "label_types": 7,
+            "observed_local_hits": 0,
+            "expected_peer_hits": 0.0,
+            "enrichment": 0.0
+          },
+          {
+            "page_id": "f99r",
+            "stratum_I_L_H": [
+              "P",
+              "A",
+              "1"
+            ],
+            "label_types": 29,
+            "observed_local_hits": 3,
+            "expected_peer_hits": 2.0833,
+            "enrichment": 0.0316
+          },
+          {
+            "page_id": "f99v",
+            "stratum_I_L_H": [
+              "P",
+              "A",
+              "1"
+            ],
+            "label_types": 28,
+            "observed_local_hits": 2,
+            "expected_peer_hits": 1.9167,
+            "enrichment": 0.003
+          }
+        ]
+      },
+      "held_out": {
+        "pages_with_peers": 2,
+        "evaluated_label_types": 30,
+        "observed_local_hits": 2,
+        "expected_peer_hits": 0.0,
+        "observed_rate": 0.0667,
+        "expected_rate": 0.0,
+        "enrichment": 0.0667,
+        "positive_page_scores": 1,
+        "zero_page_scores": 1,
+        "negative_page_scores": 0,
+        "local_hits": [
+          {
+            "page_id": "f89v2",
+            "token": "chody"
+          },
+          {
+            "page_id": "f89v2",
+            "token": "sheol"
+          }
+        ],
+        "pages": [
+          {
+            "page_id": "f100r",
+            "stratum_I_L_H": [
+              "P",
+              "A",
+              "1"
+            ],
+            "label_types": 15,
+            "observed_local_hits": 0,
+            "expected_peer_hits": 0.0,
+            "enrichment": 0.0
+          },
+          {
+            "page_id": "f89v2",
+            "stratum_I_L_H": [
+              "P",
+              "A",
+              "1"
+            ],
+            "label_types": 15,
+            "observed_local_hits": 2,
+            "expected_peer_hits": 0.0,
+            "enrichment": 0.1333
+          }
+        ]
+      },
+      "primary_criterion": "held-out enrichment > 0 with at least 10 evaluated label types",
+      "enough_label_types_under_frozen_rule": true,
+      "held_out_evaluation_units": {
+        "unit": "page",
+        "count": 2
+      },
+      "interpretation": "descriptive within-ZL screen; not an inferential result",
+      "within_zl_primary_criterion_met": true,
+      "independent_transcription_validation_required": true,
+      "disposition": "numeric screen passed; do not use as a crib without independent transcription validation",
+      "cross_transcription_sta1_audit": {
+        "input_sha256": {
+          "eva": "bf5b6d4ac1e3a51b1847a9c388318d609020441ccd56984c901c32b09beccafc",
+          "zl_sta1": "8438ba1c45f47fe1d06b5262cbcdf60ce69158a0edbd4dd802612896f3217e2a",
+          "gc_sta1_level0": "b39cabbd9c8c8a098bfa9f76e0649291d17d77e1cb4fb0a3351ff7bdc832ace3"
+        },
+        "matching_rule": "map every exact certain-EVA occurrence to the same page, locus number, and zero-based nonempty dot/drawing-boundary component in ZL and GC STA1",
+        "uncertainty_policy": "missing loci, locus metadata mismatches, out-of-range indexes, uncertain spaces, alternatives, unreadable glyphs, and malformed STA1 fail closed",
+        "hits": [
+          {
+            "page_id": "f89v2",
+            "eva_token": "chody",
+            "label_occurrences": [
+              {
+                "role": "label",
+                "eva_locus": "<f89v2.12,@Lf>",
+                "component_index": 1,
+                "index_basis": "zero-based nonempty dot/drawing-boundary component",
+                "zl_sta1_word": "K1A1B1A2",
+                "gc_sta1_word": "K1A1BaA2",
+                "zl_family": "KABA",
+                "gc_family": "KABA",
+                "exact_word_agrees_between_transcriptions": false,
+                "family_agrees_between_transcriptions": true,
+                "alignment_status": "aligned_certain"
+              }
+            ],
+            "prose_occurrences": [
+              {
+                "role": "prose",
+                "eva_locus": "<f89v2.9,+P0>",
+                "component_index": 9,
+                "index_basis": "zero-based nonempty dot/drawing-boundary component",
+                "zl_sta1_word": "K1A1B1A2",
+                "gc_sta1_word": "K1A1B1A2",
+                "zl_family": "KABA",
+                "gc_family": "KABA",
+                "exact_word_agrees_between_transcriptions": true,
+                "family_agrees_between_transcriptions": true,
+                "alignment_status": "aligned_certain"
+              },
+              {
+                "role": "prose",
+                "eva_locus": "<f89v2.9,+P0>",
+                "component_index": 13,
+                "index_basis": "zero-based nonempty dot/drawing-boundary component",
+                "zl_sta1_word": "K1A1B1A2",
+                "gc_sta1_word": "K1A1B1A2",
+                "zl_family": "KABA",
+                "gc_family": "KABA",
+                "exact_word_agrees_between_transcriptions": true,
+                "family_agrees_between_transcriptions": true,
+                "alignment_status": "aligned_certain"
+              }
+            ],
+            "pair_comparisons": [
+              {
+                "label_locus": "<f89v2.12,@Lf>",
+                "label_component_index": 1,
+                "prose_locus": "<f89v2.9,+P0>",
+                "prose_component_index": 9,
+                "exact_member_match": {
+                  "zl": true,
+                  "gc": false,
+                  "supported_by_both_transcriptions": false
+                },
+                "family_match": {
+                  "zl": true,
+                  "gc": true,
+                  "supported_by_both_transcriptions": true
+                }
+              },
+              {
+                "label_locus": "<f89v2.12,@Lf>",
+                "label_component_index": 1,
+                "prose_locus": "<f89v2.9,+P0>",
+                "prose_component_index": 13,
+                "exact_member_match": {
+                  "zl": true,
+                  "gc": false,
+                  "supported_by_both_transcriptions": false
+                },
+                "family_match": {
+                  "zl": true,
+                  "gc": true,
+                  "supported_by_both_transcriptions": true
+                }
+              }
+            ],
+            "alignment_complete": true,
+            "any_pair_exact_member_supported_by_both_transcriptions": false,
+            "any_pair_family_supported_by_both_transcriptions": true
+          },
+          {
+            "page_id": "f89v2",
+            "eva_token": "sheol",
+            "label_occurrences": [
+              {
+                "role": "label",
+                "eva_locus": "<f89v2.5,@Lf>",
+                "component_index": 0,
+                "index_basis": "zero-based nonempty dot/drawing-boundary component",
+                "zl_sta1_word": "L1J1A1B2",
+                "gc_sta1_word": "LeJ1A3B2",
+                "zl_family": "LJAB",
+                "gc_family": "LJAB",
+                "exact_word_agrees_between_transcriptions": false,
+                "family_agrees_between_transcriptions": true,
+                "alignment_status": "aligned_certain"
+              }
+            ],
+            "prose_occurrences": [
+              {
+                "role": "prose",
+                "eva_locus": "<f89v2.7,@P0>",
+                "component_index": 1,
+                "index_basis": "zero-based nonempty dot/drawing-boundary component",
+                "zl_sta1_word": "L1J1A1B2",
+                "gc_sta1_word": "L1J1A1B2",
+                "zl_family": "LJAB",
+                "gc_family": "LJAB",
+                "exact_word_agrees_between_transcriptions": true,
+                "family_agrees_between_transcriptions": true,
+                "alignment_status": "aligned_certain"
+              }
+            ],
+            "pair_comparisons": [
+              {
+                "label_locus": "<f89v2.5,@Lf>",
+                "label_component_index": 0,
+                "prose_locus": "<f89v2.7,@P0>",
+                "prose_component_index": 1,
+                "exact_member_match": {
+                  "zl": true,
+                  "gc": false,
+                  "supported_by_both_transcriptions": false
+                },
+                "family_match": {
+                  "zl": true,
+                  "gc": true,
+                  "supported_by_both_transcriptions": true
+                }
+              }
+            ],
+            "alignment_complete": true,
+            "any_pair_exact_member_supported_by_both_transcriptions": false,
+            "any_pair_family_supported_by_both_transcriptions": true
+          }
+        ],
+        "summary": {
+          "held_out_hits_audited": 2,
+          "all_alignments_complete": true,
+          "hits_with_exact_member_support_in_both_transcriptions": 0,
+          "hits_with_family_support_in_both_transcriptions": 2,
+          "all_hits_have_exact_member_support_in_both_transcriptions": false,
+          "all_hits_have_family_support_in_both_transcriptions": true
+        }
+      }
+    },
+    "H003": {
+      "hypothesis_id": "H003",
+      "claim_scope": "locus-shared STA-family type recurrence; no token alignment, allography, or gloss claim",
+      "input_sha256": {
+        "zl_sta1": "8438ba1c45f47fe1d06b5262cbcdf60ce69158a0edbd4dd802612896f3217e2a",
+        "gc_sta1_level0": "b39cabbd9c8c8a098bfa9f76e0649291d17d77e1cb4fb0a3351ff7bdc832ace3"
+      },
+      "alignment": {
+        "zl_substantive_loci": 5385,
+        "gc_substantive_loci": 5366,
+        "common_loci": 5366,
+        "zl_only_loci": 19,
+        "gc_only_loci": 0,
+        "locus_type_mismatches": 0,
+        "locator_mismatches": 0
+      },
+      "partition": "SHA256('H003-v1:' + page_id), first byte < 64 enters partition B",
+      "partition_validity": "retrospective exploratory partition defined after H002 output was inspected; partition B is not an untouched holdout",
+      "prior_h002_partition_overlap": {
+        "partition_b_pages_with_peers": [
+          "f80r",
+          "f81v",
+          "f82r",
+          "f88r",
+          "f89v1",
+          "f99v"
+        ],
+        "also_h002_discovery_pages": [
+          "f80r",
+          "f81v",
+          "f82r",
+          "f88r",
+          "f89v1",
+          "f99v"
+        ],
+        "also_h002_held_out_pages": []
+      },
+      "matching_semantics": "unordered family-type set intersection within an aligned locus; not positional word agreement",
+      "peer_scope": "same retrospective partition and same I/L/H; own page excluded",
+      "eligible_records_before_peer_filter": 26,
+      "partition_a": {
+        "pages_with_peers": 20,
+        "evaluated_label_types": 215,
+        "observed_local_hits": 48,
+        "expected_peer_hits": 43.0649,
+        "observed_rate": 0.2233,
+        "expected_rate": 0.2003,
+        "enrichment": 0.023,
+        "positive_page_scores": 11,
+        "zero_page_scores": 4,
+        "negative_page_scores": 5,
+        "local_hits": [
+          {
+            "page_id": "f100r",
+            "token": "ABKJAB"
+          },
+          {
+            "page_id": "f100r",
+            "token": "AQJAB"
+          },
+          {
+            "page_id": "f100v",
+            "token": "AQKAB"
+          },
+          {
+            "page_id": "f100v",
+            "token": "KAC"
+          },
+          {
+            "page_id": "f101v",
+            "token": "AQAB"
+          },
+          {
+            "page_id": "f102v1",
+            "token": "AQJABA"
+          },
+          {
+            "page_id": "f102v2",
+            "token": "AQACA"
+          },
+          {
+            "page_id": "f102v2",
+            "token": "KJAC"
+          },
+          {
+            "page_id": "f75v",
+            "token": "ABAB"
+          },
+          {
+            "page_id": "f75v",
+            "token": "AQAB"
+          },
+          {
+            "page_id": "f75v",
+            "token": "AQJBA"
+          },
+          {
+            "page_id": "f75v",
+            "token": "AQKA"
+          },
+          {
+            "page_id": "f75v",
+            "token": "BAB"
+          },
+          {
+            "page_id": "f75v",
+            "token": "BBA"
+          },
+          {
+            "page_id": "f75v",
+            "token": "DAQAB"
+          },
+          {
+            "page_id": "f75v",
+            "token": "DAQJBA"
+          },
+          {
+            "page_id": "f77r",
+            "token": "AQJBA"
+          },
+          {
+            "page_id": "f77r",
+            "token": "AQKBA"
+          },
+          {
+            "page_id": "f77v",
+            "token": "AQAB"
+          },
+          {
+            "page_id": "f77v",
+            "token": "LJBA"
+          },
+          {
+            "page_id": "f78r",
+            "token": "AQKBA"
+          },
+          {
+            "page_id": "f82v",
+            "token": "ABQAB"
+          },
+          {
+            "page_id": "f82v",
+            "token": "ABQKBA"
+          },
+          {
+            "page_id": "f82v",
+            "token": "AQAB"
+          },
+          {
+            "page_id": "f82v",
+            "token": "AQAF"
+          },
+          {
+            "page_id": "f82v",
+            "token": "AQKBA"
+          },
+          {
+            "page_id": "f83v",
+            "token": "AQAG"
+          },
+          {
+            "page_id": "f83v",
+            "token": "AQKBA"
+          },
+          {
+            "page_id": "f84r",
+            "token": "ABA"
+          },
+          {
+            "page_id": "f84r",
+            "token": "AC"
+          },
+          {
+            "page_id": "f84r",
+            "token": "AQJBA"
+          },
+          {
+            "page_id": "f84r",
+            "token": "BAG"
+          },
+          {
+            "page_id": "f84r",
+            "token": "BLJBA"
+          },
+          {
+            "page_id": "f88v",
+            "token": "KJAUA"
+          },
+          {
+            "page_id": "f89r2",
+            "token": "APKJAC"
+          },
+          {
+            "page_id": "f89r2",
+            "token": "AQAB"
+          },
+          {
+            "page_id": "f89r2",
+            "token": "BA"
+          },
+          {
+            "page_id": "f89r2",
+            "token": "KJABA"
+          },
+          {
+            "page_id": "f89r2",
+            "token": "KJAC"
+          },
+          {
+            "page_id": "f89v2",
+            "token": "KABA"
+          },
+          {
+            "page_id": "f89v2",
+            "token": "LJAB"
+          },
+          {
+            "page_id": "f99r",
+            "token": "AF"
+          },
+          {
+            "page_id": "f99r",
+            "token": "AQABA"
+          },
+          {
+            "page_id": "f99r",
+            "token": "AQABBA"
+          },
+          {
+            "page_id": "f99r",
+            "token": "AQAC"
+          },
+          {
+            "page_id": "f99r",
+            "token": "AQJABA"
+          },
+          {
+            "page_id": "f99r",
+            "token": "BAB"
+          },
+          {
+            "page_id": "f99r",
+            "token": "BAC"
+          }
+        ],
+        "pages": [
+          {
+            "page_id": "f100r",
+            "stratum_I_L_H": [
+              "P",
+              "A",
+              "1"
+            ],
+            "label_types": 13,
+            "observed_local_hits": 2,
+            "expected_peer_hits": 2.1818,
+            "enrichment": -0.014
+          },
+          {
+            "page_id": "f100v",
+            "stratum_I_L_H": [
+              "P",
+              "A",
+              "1"
+            ],
+            "label_types": 13,
+            "observed_local_hits": 2,
+            "expected_peer_hits": 1.7273,
+            "enrichment": 0.021
+          },
+          {
+            "page_id": "f101v",
+            "stratum_I_L_H": [
+              "P",
+              "A",
+              "1"
+            ],
+            "label_types": 11,
+            "observed_local_hits": 1,
+            "expected_peer_hits": 1.0909,
+            "enrichment": -0.0083
+          },
+          {
+            "page_id": "f102r1",
+            "stratum_I_L_H": [
+              "P",
+              "A",
+              "1"
+            ],
+            "label_types": 2,
+            "observed_local_hits": 0,
+            "expected_peer_hits": 0.0,
+            "enrichment": 0.0
+          },
+          {
+            "page_id": "f102r2",
+            "stratum_I_L_H": [
+              "P",
+              "A",
+              "1"
+            ],
+            "label_types": 3,
+            "observed_local_hits": 0,
+            "expected_peer_hits": 0.0,
+            "enrichment": 0.0
+          },
+          {
+            "page_id": "f102v1",
+            "stratum_I_L_H": [
+              "P",
+              "A",
+              "1"
+            ],
+            "label_types": 6,
+            "observed_local_hits": 1,
+            "expected_peer_hits": 0.5455,
+            "enrichment": 0.0758
+          },
+          {
+            "page_id": "f102v2",
+            "stratum_I_L_H": [
+              "P",
+              "A",
+              "1"
+            ],
+            "label_types": 17,
+            "observed_local_hits": 2,
+            "expected_peer_hits": 2.0,
+            "enrichment": 0.0
+          },
+          {
+            "page_id": "f75v",
+            "stratum_I_L_H": [
+              "B",
+              "B",
+              "2"
+            ],
+            "label_types": 23,
+            "observed_local_hits": 8,
+            "expected_peer_hits": 7.8571,
+            "enrichment": 0.0062
+          },
+          {
+            "page_id": "f77r",
+            "stratum_I_L_H": [
+              "B",
+              "B",
+              "2"
+            ],
+            "label_types": 9,
+            "observed_local_hits": 2,
+            "expected_peer_hits": 3.5714,
+            "enrichment": -0.1746
+          },
+          {
+            "page_id": "f77v",
+            "stratum_I_L_H": [
+              "B",
+              "B",
+              "2"
+            ],
+            "label_types": 7,
+            "observed_local_hits": 2,
+            "expected_peer_hits": 2.8571,
+            "enrichment": -0.1224
+          },
+          {
+            "page_id": "f78r",
+            "stratum_I_L_H": [
+              "B",
+              "B",
+              "2"
+            ],
+            "label_types": 5,
+            "observed_local_hits": 1,
+            "expected_peer_hits": 0.8571,
+            "enrichment": 0.0286
+          },
+          {
+            "page_id": "f82v",
+            "stratum_I_L_H": [
+              "B",
+              "B",
+              "2"
+            ],
+            "label_types": 11,
+            "observed_local_hits": 5,
+            "expected_peer_hits": 4.0,
+            "enrichment": 0.0909
+          },
+          {
+            "page_id": "f83r",
+            "stratum_I_L_H": [
+              "B",
+              "B",
+              "2"
+            ],
+            "label_types": 4,
+            "observed_local_hits": 0,
+            "expected_peer_hits": 0.0,
+            "enrichment": 0.0
+          },
+          {
+            "page_id": "f83v",
+            "stratum_I_L_H": [
+              "B",
+              "B",
+              "2"
+            ],
+            "label_types": 4,
+            "observed_local_hits": 2,
+            "expected_peer_hits": 1.8571,
+            "enrichment": 0.0357
+          },
+          {
+            "page_id": "f84r",
+            "stratum_I_L_H": [
+              "B",
+              "B",
+              "2"
+            ],
+            "label_types": 11,
+            "observed_local_hits": 5,
+            "expected_peer_hits": 4.4286,
+            "enrichment": 0.0519
+          },
+          {
+            "page_id": "f88v",
+            "stratum_I_L_H": [
+              "P",
+              "A",
+              "1"
+            ],
+            "label_types": 12,
+            "observed_local_hits": 1,
+            "expected_peer_hits": 0.8182,
+            "enrichment": 0.0152
+          },
+          {
+            "page_id": "f89r1",
+            "stratum_I_L_H": [
+              "P",
+              "A",
+              "1"
+            ],
+            "label_types": 10,
+            "observed_local_hits": 0,
+            "expected_peer_hits": 1.0909,
+            "enrichment": -0.1091
+          },
+          {
+            "page_id": "f89r2",
+            "stratum_I_L_H": [
+              "P",
+              "A",
+              "1"
+            ],
+            "label_types": 18,
+            "observed_local_hits": 5,
+            "expected_peer_hits": 2.5455,
+            "enrichment": 0.1364
+          },
+          {
+            "page_id": "f89v2",
+            "stratum_I_L_H": [
+              "P",
+              "A",
+              "1"
+            ],
+            "label_types": 10,
+            "observed_local_hits": 2,
+            "expected_peer_hits": 1.4545,
+            "enrichment": 0.0545
+          },
+          {
+            "page_id": "f99r",
+            "stratum_I_L_H": [
+              "P",
+              "A",
+              "1"
+            ],
+            "label_types": 26,
+            "observed_local_hits": 7,
+            "expected_peer_hits": 4.1818,
+            "enrichment": 0.1084
+          }
+        ]
+      },
+      "partition_b": {
+        "pages_with_peers": 6,
+        "evaluated_label_types": 62,
+        "observed_local_hits": 15,
+        "expected_peer_hits": 13.5,
+        "observed_rate": 0.2419,
+        "expected_rate": 0.2177,
+        "enrichment": 0.0242,
+        "positive_page_scores": 2,
+        "zero_page_scores": 1,
+        "negative_page_scores": 3,
+        "local_hits": [
+          {
+            "page_id": "f80r",
+            "token": "ABQA"
+          },
+          {
+            "page_id": "f80r",
+            "token": "AQABA"
+          },
+          {
+            "page_id": "f80r",
+            "token": "AQAC"
+          },
+          {
+            "page_id": "f81v",
+            "token": "AQAF"
+          },
+          {
+            "page_id": "f82r",
+            "token": "AQAB"
+          },
+          {
+            "page_id": "f82r",
+            "token": "AQKAC"
+          },
+          {
+            "page_id": "f88r",
+            "token": "AQAB"
+          },
+          {
+            "page_id": "f88r",
+            "token": "AQABBA"
+          },
+          {
+            "page_id": "f99v",
+            "token": "AQAB"
+          },
+          {
+            "page_id": "f99v",
+            "token": "AQABA"
+          },
+          {
+            "page_id": "f99v",
+            "token": "AQABBA"
+          },
+          {
+            "page_id": "f99v",
+            "token": "AQABBABA"
+          },
+          {
+            "page_id": "f99v",
+            "token": "AQAC"
+          },
+          {
+            "page_id": "f99v",
+            "token": "BABBAB"
+          },
+          {
+            "page_id": "f99v",
+            "token": "BAC"
+          }
+        ],
+        "pages": [
+          {
+            "page_id": "f80r",
+            "stratum_I_L_H": [
+              "B",
+              "B",
+              "2"
+            ],
+            "label_types": 7,
+            "observed_local_hits": 3,
+            "expected_peer_hits": 0.5,
+            "enrichment": 0.3571
+          },
+          {
+            "page_id": "f81v",
+            "stratum_I_L_H": [
+              "B",
+              "B",
+              "2"
+            ],
+            "label_types": 2,
+            "observed_local_hits": 1,
+            "expected_peer_hits": 1.5,
+            "enrichment": -0.25
+          },
+          {
+            "page_id": "f82r",
+            "stratum_I_L_H": [
+              "B",
+              "B",
+              "2"
+            ],
+            "label_types": 10,
+            "observed_local_hits": 2,
+            "expected_peer_hits": 3.0,
+            "enrichment": -0.1
+          },
+          {
+            "page_id": "f88r",
+            "stratum_I_L_H": [
+              "P",
+              "A",
+              "1"
+            ],
+            "label_types": 11,
+            "observed_local_hits": 2,
+            "expected_peer_hits": 2.5,
+            "enrichment": -0.0455
+          },
+          {
+            "page_id": "f89v1",
+            "stratum_I_L_H": [
+              "P",
+              "A",
+              "1"
+            ],
+            "label_types": 5,
+            "observed_local_hits": 0,
+            "expected_peer_hits": 0.0,
+            "enrichment": 0.0
+          },
+          {
+            "page_id": "f99v",
+            "stratum_I_L_H": [
+              "P",
+              "A",
+              "1"
+            ],
+            "label_types": 27,
+            "observed_local_hits": 7,
+            "expected_peer_hits": 6.0,
+            "enrichment": 0.037
+          }
+        ]
+      },
+      "frozen_advancement_criterion": "partition-B enrichment>0, >=5 pages with peers, >=30 label types, and positive page scores > negative page scores",
+      "criterion_checks": {
+        "minimum_page_breadth_met": true,
+        "minimum_label_count_met": true,
+        "enrichment_direction_ok": true,
+        "page_sign_ok": false
+      },
+      "minimum_breadth_met": true,
+      "advancement_criterion_met": false,
+      "disposition": "do not advance this crib; absence is not established"
+    }
+  }
+}

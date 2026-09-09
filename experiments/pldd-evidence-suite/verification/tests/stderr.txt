@@ -1,0 +1,124 @@
+test_event_semantics_and_frozen_seed (test_contextual_comparator.ContextualComparatorTests.test_event_semantics_and_frozen_seed) ... ok
+test_fraction_weights_are_exact_and_reduced (test_contextual_comparator.ContextualComparatorTests.test_fraction_weights_are_exact_and_reduced) ... ok
+test_fraction_weights_fail_closed_above_frozen_ceiling (test_contextual_comparator.ContextualComparatorTests.test_fraction_weights_fail_closed_above_frozen_ceiling) ... ok
+test_production_artifacts_are_pinned_and_renderer_current (test_contextual_comparator.ContextualComparatorTests.test_production_artifacts_are_pinned_and_renderer_current) ... ok
+test_q_times_likelihood_ratio_and_simulation_are_deterministic (test_contextual_comparator.ContextualComparatorTests.test_q_times_likelihood_ratio_and_simulation_are_deterministic) ... ok
+test_quantile_tail_ties_and_unrounded_gate (test_contextual_comparator.ContextualComparatorTests.test_quantile_tail_ties_and_unrounded_gate) ... ok
+test_singletons_map_to_UNK_and_unseen_context_backs_off_exactly (test_contextual_comparator.ContextualComparatorTests.test_singletons_map_to_UNK_and_unseen_context_backs_off_exactly) ... ok
+test_top_level_rejects_nonfrozen_simulation_parameters_first (test_contextual_comparator.ContextualComparatorTests.test_top_level_rejects_nonfrozen_simulation_parameters_first) ... ok
+test_strict_sta1_words_and_slotting (test_edge_morphology.EdgeMorphologyFixtureTests.test_strict_sta1_words_and_slotting) ... ok
+test_generated_p001_artifacts_are_current (test_edge_morphology.PinnedEdgeMorphologyPilotTests.test_generated_p001_artifacts_are_current) ... ok
+test_p001_regression_and_failed_control (test_edge_morphology.PinnedEdgeMorphologyPilotTests.test_p001_regression_and_failed_control) ... ok
+test_baseline_artifacts_match_current_analysis (test_generated_results.GeneratedResultFreshnessTests.test_baseline_artifacts_match_current_analysis) ... ok
+test_manifest_is_machine_readable_and_explicitly_pre_it (test_h004c.H004CPinnedTests.test_manifest_is_machine_readable_and_explicitly_pre_it) ... ok
+test_pinned_strict_inventory_fails_frozen_breadth (test_h004c.H004CPinnedTests.test_pinned_strict_inventory_fails_frozen_breadth) ... ok
+test_production_artifacts_preserve_full_run_and_audit_chronology (test_h004c.H004CPinnedTests.test_production_artifacts_preserve_full_run_and_audit_chronology) ... ok
+test_component_count_mismatch_is_a_hard_gap (test_h004c.H004CSkeletonTests.test_component_count_mismatch_is_a_hard_gap) ... ok
+test_exact_ordinal_skeleton_freezes_preceding_ten_ids (test_h004c.H004CSkeletonTests.test_exact_ordinal_skeleton_freezes_preceding_ten_ids) ... ok
+test_invalid_slot_retains_ordinal_and_resets_context (test_h004c.H004CSkeletonTests.test_invalid_slot_retains_ordinal_and_resets_context) ... ok
+test_joint_shuffle_preserves_each_cell_tuple_multiset (test_h004c.H004CSkeletonTests.test_joint_shuffle_preserves_each_cell_tuple_multiset) ... ok
+test_paragraph_boundary_disagreement_excludes_disputed_positions (test_h004c.H004CSkeletonTests.test_paragraph_boundary_disagreement_excludes_disputed_positions) ... ok
+test_small_permutation_run_is_deterministic (test_h004c.H004CSkeletonTests.test_small_permutation_run_is_deterministic) ... ok
+test_malformed_ligature_is_retained_as_an_invalid_slot (test_h004c.H004CSlotTests.test_malformed_ligature_is_retained_as_an_invalid_slot) ... ok
+test_sta_families_preserve_order_and_reject_uncertainty (test_h004c.H004CSlotTests.test_sta_families_preserve_order_and_reject_uncertainty) ... ok
+test_manifest_inventory_and_f1r (test_iiif.YaleManifestTests.test_manifest_inventory_and_f1r) ... ok
+test_alternative_identifiers_require_no_page_headers (test_ivtff.IVTFFParserTests.test_alternative_identifiers_require_no_page_headers) ... ok
+test_conservative_tokenization_excludes_joined_capitals (test_ivtff.IVTFFParserTests.test_conservative_tokenization_excludes_joined_capitals) ... ok
+test_conservative_tokenization_explains_every_exclusion (test_ivtff.IVTFFParserTests.test_conservative_tokenization_explains_every_exclusion) ... ok
+test_free_comments_cannot_activate_embedded_controls (test_ivtff.IVTFFParserTests.test_free_comments_cannot_activate_embedded_controls) ... ok
+test_joins_logical_continuations_but_emits_physical_source (test_ivtff.IVTFFParserTests.test_joins_logical_continuations_but_emits_physical_source) ... ok
+test_parses_metadata_tags_and_retains_source_bytes (test_ivtff.IVTFFParserTests.test_parses_metadata_tags_and_retains_source_bytes) ... ok
+test_rejects_invalid_inline_syntax (test_ivtff.IVTFFParserTests.test_rejects_invalid_inline_syntax) ... ok
+test_rejects_mixed_standard_and_alternative_identifiers (test_ivtff.IVTFFParserTests.test_rejects_mixed_standard_and_alternative_identifiers) ... ok
+test_requires_matched_paragraph_markers (test_ivtff.IVTFFParserTests.test_requires_matched_paragraph_markers) ... ok
+test_eva_analyses_reject_other_alphabets (test_ivtff.PinnedCorpusTests.test_eva_analyses_reject_other_alphabets) ... ok
+test_h002_is_deterministic_and_reports_held_out_data (test_ivtff.PinnedCorpusTests.test_h002_is_deterministic_and_reports_held_out_data) ... ok
+test_h002_sta1_audit_is_positional_and_fail_closed (test_ivtff.PinnedCorpusTests.test_h002_sta1_audit_is_positional_and_fail_closed) ... ok
+test_h003_is_deterministic_and_uses_sta1 (test_ivtff.PinnedCorpusTests.test_h003_is_deterministic_and_uses_sta1) ... ok
+test_pinned_corpus_regression_counts (test_ivtff.PinnedCorpusTests.test_pinned_corpus_regression_counts) ... ok
+test_pinned_corpus_shape (test_ivtff.PinnedCorpusTests.test_pinned_corpus_shape) ... ok
+test_pinned_hash_and_source_retention (test_ivtff.PinnedCorpusTests.test_pinned_hash_and_source_retention) ... ok
+test_sta1_glyph_count_matches_published_total (test_ivtff.PinnedCorpusTests.test_sta1_glyph_count_matches_published_total) ... ok
+test_edit_distance_is_capped_and_symmetric (test_local_order.LocalOrderTests.test_edit_distance_is_capped_and_symmetric) ... ok
+test_pinned_inventory_and_small_run_are_deterministic (test_local_order.LocalOrderTests.test_pinned_inventory_and_small_run_are_deterministic) ... ok
+test_pinned_production_artifacts_are_internally_current (test_local_order.LocalOrderTests.test_pinned_production_artifacts_are_internally_current) ... ok
+test_uncertainty_resets_the_causal_window (test_local_order.LocalOrderTests.test_uncertainty_resets_the_causal_window) ... ok
+test_all_six_classes_and_priority_are_exhaustive (test_naibbe_coverage.H007ObserverTests.test_all_six_classes_and_priority_are_exhaustive) ... ok
+test_ambiguous_child_is_ca_and_compound_is_not_recursive (test_naibbe_coverage.H007ObserverTests.test_ambiguous_child_is_ca_and_compound_is_not_recursive) ... ok
+test_bigram_dedup_and_compound_non_dedup_match_author_flow (test_naibbe_coverage.H007ObserverTests.test_bigram_dedup_and_compound_non_dedup_match_author_flow) ... ok
+test_forward_atom_closure_is_intrinsically_non_unique (test_naibbe_coverage.H007ObserverTests.test_forward_atom_closure_is_intrinsically_non_unique) ... ok
+test_pinned_table_geometry_and_last_row_wins (test_naibbe_coverage.H007ObserverTests.test_pinned_table_geometry_and_last_row_wins) ... ok
+test_all_pre_table_hash_header_and_round_trip_pins (test_naibbe_coverage.H007PinnedCorpusTests.test_all_pre_table_hash_header_and_round_trip_pins) ... ok
+test_complete_frozen_inventory_matches_every_dimension (test_naibbe_coverage.H007PinnedCorpusTests.test_complete_frozen_inventory_matches_every_dimension) ... ok
+test_exact_consensus_gate_keeps_apostrophe_and_unknown_currier (test_naibbe_coverage.H007PinnedCorpusTests.test_exact_consensus_gate_keeps_apostrophe_and_unknown_currier) ... ok
+test_hash_failure_aborts_before_parse_or_table (test_naibbe_coverage.H007PinnedCorpusTests.test_hash_failure_aborts_before_parse_or_table) ... ok
+test_inventory_mismatch_fails_before_any_observer_exists (test_naibbe_coverage.H007PinnedCorpusTests.test_inventory_mismatch_fails_before_any_observer_exists) ... ok
+test_physical_folio_hash_split_is_exact (test_naibbe_coverage.H007PinnedCorpusTests.test_physical_folio_hash_split_is_exact) ... ok
+test_canonical_json_markdown_sidecar_and_paths (test_naibbe_coverage.H007SealingAndLeakageTests.test_canonical_json_markdown_sidecar_and_paths) ... ok
+test_discovery_completes_after_first_contradiction (test_naibbe_coverage.H007SealingAndLeakageTests.test_discovery_completes_after_first_contradiction) ... ok
+test_frozen_inventory_is_rechecked_before_first_holdout_call (test_naibbe_coverage.H007SealingAndLeakageTests.test_frozen_inventory_is_rechecked_before_first_holdout_call) ... ok
+test_pipeline_call_order_is_inventory_stage0_table_then_coverage (test_naibbe_coverage.H007SealingAndLeakageTests.test_pipeline_call_order_is_inventory_stage0_table_then_coverage) ... ok
+test_production_artifacts_are_fresh_deterministic_and_sealed (test_naibbe_coverage.H007SealingAndLeakageTests.test_production_artifacts_are_fresh_deterministic_and_sealed) ... FAIL
+test_public_schema_and_label_token_hash_canaries_do_not_leak (test_naibbe_coverage.H007SealingAndLeakageTests.test_public_schema_and_label_token_hash_canaries_do_not_leak) ... ok
+test_x_ba_and_ca_each_poison_holdout_without_zero_histogram (test_naibbe_coverage.H007SealingAndLeakageTests.test_x_ba_and_ca_each_poison_holdout_without_zero_histogram) ... ok
+test_dependency_failure_is_sanitized_and_never_loads_table (test_naibbe_coverage.H007Stage0Tests.test_dependency_failure_is_sanitized_and_never_loads_table) ... ok
+test_every_vendored_author_byte_is_pinned (test_naibbe_coverage.H007Stage0Tests.test_every_vendored_author_byte_is_pinned) ... ok
+test_literal_author_controls_pass_without_mutating_raw_tree (test_naibbe_coverage.H007Stage0Tests.test_literal_author_controls_pass_without_mutating_raw_tree) ... ok
+test_stage0_calls_only_the_three_allowlisted_author_inputs (test_naibbe_coverage.H007Stage0Tests.test_stage0_calls_only_the_three_allowlisted_author_inputs) ... ok
+test_stage0_rejects_any_new_file_in_the_pinned_author_tree (test_naibbe_coverage.H007Stage0Tests.test_stage0_rejects_any_new_file_in_the_pinned_author_tree) ... ok
+test_frozen_manifest_hash_and_complete_claim_count (test_plant_anchors.H005PinnedTests.test_frozen_manifest_hash_and_complete_claim_count) ... ok
+test_production_artifacts_are_canonical_and_pre_it (test_plant_anchors.H005PinnedTests.test_production_artifacts_are_canonical_and_pre_it) ... ok
+test_strict_query_inventory_and_physical_holdout_are_frozen (test_plant_anchors.H005PinnedTests.test_strict_query_inventory_and_physical_holdout_are_frozen) ... ok
+test_bm25_uses_query_multiplicity_and_midranks (test_plant_anchors.H005PrimitiveTests.test_bm25_uses_query_multiplicity_and_midranks) ... ok
+test_family_ngrams_are_within_token_and_boundary_marked (test_plant_anchors.H005PrimitiveTests.test_family_ngrams_are_within_token_and_boundary_marked) ... ok
+test_physical_folio_and_frozen_holdout (test_plant_anchors.H005PrimitiveTests.test_physical_folio_and_frozen_holdout) ... ok
+test_query_gate_is_exact_locus_type_component_and_family (test_plant_anchors.H005QueryGateTests.test_query_gate_is_exact_locus_type_component_and_family) ... ok
+test_small_null_run_is_deterministic_and_selection_adjusted (test_plant_anchors.H005QueryGateTests.test_small_null_run_is_deterministic_and_selection_adjusted) ... ok
+test_all_raw_artifact_hashes (test_provenance.PinnedArtifactHashes.test_all_raw_artifact_hashes) ... ok
+test_all_raw_hashes_are_checked_before_any_parse (test_ternary_frame.H006ArtifactTests.test_all_raw_hashes_are_checked_before_any_parse) ... ok
+test_brace_and_multi_label_attrition_are_reported (test_ternary_frame.H006ArtifactTests.test_brace_and_multi_label_attrition_are_reported) ... ok
+test_byte_identical_emit_is_checked_before_eligibility (test_ternary_frame.H006ArtifactTests.test_byte_identical_emit_is_checked_before_eligibility) ... ok
+test_frozen_inventory_guard_aborts_synthetic_mismatch_before_expansion (test_ternary_frame.H006ArtifactTests.test_frozen_inventory_guard_aborts_synthetic_mismatch_before_expansion) ... ok
+test_hash_mismatch_fails_before_analysis (test_ternary_frame.H006ArtifactTests.test_hash_mismatch_fails_before_analysis) ... ok
+test_inventory_mismatch_does_not_inspect_line_tokens (test_ternary_frame.H006ArtifactTests.test_inventory_mismatch_does_not_inspect_line_tokens) ... ok
+test_pinned_input_hash_constants_match_files_without_running_analysis (test_ternary_frame.H006ArtifactTests.test_pinned_input_hash_constants_match_files_without_running_analysis) ... ok
+test_production_artifacts_are_fresh_deterministic_and_sealed (test_ternary_frame.H006ArtifactTests.test_production_artifacts_are_fresh_deterministic_and_sealed) ... ok
+test_recorded_paths_are_repository_relative_and_cwd_independent (test_ternary_frame.H006ArtifactTests.test_recorded_paths_are_repository_relative_and_cwd_independent) ... ok
+test_report_builder_enforces_it_header_after_raw_hashes (test_ternary_frame.H006ArtifactTests.test_report_builder_enforces_it_header_after_raw_hashes) ... ok
+test_synthetic_json_markdown_and_sidecar_are_canonical (test_ternary_frame.H006ArtifactTests.test_synthetic_json_markdown_and_sidecar_are_canonical) ... ok
+test_braces_are_normalized_audited_and_logical_continuations_stay_one_line (test_ternary_frame.H006EligibilityTests.test_braces_are_normalized_audited_and_logical_continuations_stay_one_line) ... ok
+test_braces_inside_inert_comments_do_not_enter_the_ligature_audit (test_ternary_frame.H006EligibilityTests.test_braces_inside_inert_comments_do_not_enter_the_ligature_audit) ... ok
+test_it_header_and_exact_zl_metadata_domains_are_enforced (test_ternary_frame.H006EligibilityTests.test_it_header_and_exact_zl_metadata_domains_are_enforced) ... ok
+test_physical_folio_and_split_keep_panels_together (test_ternary_frame.H006EligibilityTests.test_physical_folio_and_split_keep_panels_together) ... ok
+test_strict_exact_consensus_and_word_final_n_gate (test_ternary_frame.H006EligibilityTests.test_strict_exact_consensus_and_word_final_n_gate) ... ok
+test_expansion_rejects_out_of_inventory_and_unknown_model (test_ternary_frame.H006ExpansionTests.test_expansion_rejects_out_of_inventory_and_unknown_model) ... ok
+test_recursive_pair_and_optional_e_expansions_are_exact (test_ternary_frame.H006ExpansionTests.test_recursive_pair_and_optional_e_expansions_are_exact) ... ok
+test_breadth_pass_but_both_models_fail_keeps_holdout_sealed (test_ternary_frame.H006GateTests.test_breadth_pass_but_both_models_fail_keeps_holdout_sealed) ... ok
+test_discovery_failure_never_reads_or_reports_holdout_residue (test_ternary_frame.H006GateTests.test_discovery_failure_never_reads_or_reports_holdout_residue) ... ok
+test_exact_all_lines_gate_and_frozen_breadth (test_ternary_frame.H006GateTests.test_exact_all_lines_gate_and_frozen_breadth) ... ok
+test_holdout_breadth_and_pair_tie_break (test_ternary_frame.H006GateTests.test_holdout_breadth_and_pair_tie_break) ... ok
+test_holdout_breadth_failure_keeps_qualified_model_residues_sealed (test_ternary_frame.H006GateTests.test_holdout_breadth_failure_keeps_qualified_model_residues_sealed) ... ok
+test_only_pair_reaches_holdout_and_full_histogram_does_not_stop_early (test_ternary_frame.H006GateTests.test_only_pair_reaches_holdout_and_full_histogram_does_not_stop_early) ... ok
+
+======================================================================
+FAIL: test_production_artifacts_are_fresh_deterministic_and_sealed (test_naibbe_coverage.H007SealingAndLeakageTests.test_production_artifacts_are_fresh_deterministic_and_sealed)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "<PACKAGE>/tests/test_naibbe_coverage.py", line 619, in test_production_artifacts_are_fresh_deterministic_and_sealed
+    self.assertEqual(
+    ~~~~~~~~~~~~~~~~^
+        report_hash,
+        ^^^^^^^^^^^^
+        "174e0469312cfbe2d19fe8ad8f435fbd6453a7af9ba1305300140757519b46fd",
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+AssertionError: 'b4c99abda34a714364254a5fd6d14a3692aeb7bcc7c8fd7148ddeb82b61bd6c1' != '174e0469312cfbe2d19fe8ad8f435fbd6453a7af9ba1305300140757519b46fd'
+- b4c99abda34a714364254a5fd6d14a3692aeb7bcc7c8fd7148ddeb82b61bd6c1
++ 174e0469312cfbe2d19fe8ad8f435fbd6453a7af9ba1305300140757519b46fd
+
+
+----------------------------------------------------------------------
+Ran 101 tests in 25.632s
+
+FAILED (failures=1)

@@ -1,0 +1,733 @@
+{
+  "schema_version": "1.0",
+  "id": "pldd-evidence-suite",
+  "kind": "research",
+  "title": "Source-retaining corpus alignment and bounded hypothesis tests H001-H007",
+  "summary": "A reproducible package with named transcription views, explicit uncertainty/attrition, an edge-inventory control failure, a complete local-order robustness sequence, exact-coordinate pharmaceutical-label retrieval, two fixed-three-trit line-reset rejections and a literal Naibbe-key coverage/ambiguity diagnostic. Preserves contrary evidence and sealed holdouts; makes no decipherment, completed upstream tokenizer-fix or independent human-validation claim.",
+  "branch_ids": [
+    "corpus-integrity",
+    "statistical-structure",
+    "morphology-segmentation",
+    "semantic-multimodal",
+    "generative-mechanisms",
+    "replication-decipherments"
+  ],
+  "contributors": [
+    {
+      "github_id": 13791686,
+      "github_login": "pldallairedemers",
+      "roles": [
+        "Conceptualization",
+        "Supervision",
+        "Project administration"
+      ]
+    }
+  ],
+  "ai_usage": {
+    "status": "primarily_generated",
+    "tools": [
+      {
+        "provider": "unknown",
+        "model_id": "unknown",
+        "model_version": "unknown",
+        "accessed_at": "2026-07-09/2026-07-10 (source-recorded)",
+        "tasks": [
+          "Historical protocol development, implementation, analysis, tests and research documentation; exact historical model identifiers/settings were not retained."
+        ],
+        "human_verification": "The project was directed by the human contributor. No independent human replication or line-by-line review is claimed; historical dates and independent-review wording in source notes are not authenticated external evidence."
+      },
+      {
+        "provider": "OpenAI",
+        "model_id": "GPT-6",
+        "model_version": "unknown",
+        "accessed_at": "2026-09-08",
+        "tasks": [
+          "Codex publication packaging and portability adapters",
+          "Actual deterministic tests, report rebuild checks and contribution validation",
+          "Separate AI-agent review of scientific scope, public overlap and source rights",
+          "Contribution summary, manifest and rights documentation"
+        ],
+        "human_verification": "The contributor explicitly authorized publishing relevant local-project content to adequatelimited/voynich through its contribution guide. Preparation and verification were performed by AI agents; no immutable model snapshot, effort setting, independent human audit or peer review is asserted."
+      }
+    ],
+    "reproducibility_notes": "The package contains actual commands, pinned inputs, outputs, fixtures and a verification record. Protocol freezes are internal and not independently timestamped preregistrations. Publication-only edits are documented; frozen protocol and raw input bytes remain unchanged. Local execution and separate AI reviewers are ordinary evidence, not trusted external execution receipts. H008 and Latin controls are outside this submission; programmatic holdout gates are preserved."
+  },
+  "changes": [
+    {
+      "path": "experiments/pldd-evidence-suite/PUBLICATION-CHANGES.md",
+      "improvement": "Documentation, provenance, checksums or actual validation evidence for the scientific package."
+    },
+    {
+      "path": "experiments/pldd-evidence-suite/README.md",
+      "improvement": "Documentation, provenance, checksums or actual validation evidence for the scientific package."
+    },
+    {
+      "path": "experiments/pldd-evidence-suite/SHA256SUMS.txt",
+      "improvement": "Documentation, provenance, checksums or actual validation evidence for the scientific package."
+    },
+    {
+      "path": "experiments/pldd-evidence-suite/data/PROVENANCE.md",
+      "improvement": "Documentation, provenance, checksums or actual validation evidence for the scientific package."
+    },
+    {
+      "path": "experiments/pldd-evidence-suite/data/derived/h005-source-anchor-manifest.json",
+      "improvement": "Documentation, provenance, checksums or actual validation evidence for the scientific package."
+    },
+    {
+      "path": "experiments/pldd-evidence-suite/data/derived/yale-canvas-index.json",
+      "improvement": "Documentation, provenance, checksums or actual validation evidence for the scientific package."
+    },
+    {
+      "path": "experiments/pldd-evidence-suite/data/raw/external/naibbe-f2675ec/LICENSE",
+      "improvement": "Pinned attributed raw evidence for reproducibility; source availability is not a novelty claim."
+    },
+    {
+      "path": "experiments/pldd-evidence-suite/data/raw/external/naibbe-f2675ec/README.md",
+      "improvement": "Pinned attributed raw evidence for reproducibility; source availability is not a novelty claim."
+    },
+    {
+      "path": "experiments/pldd-evidence-suite/data/raw/external/naibbe-f2675ec/decrypt_naibbe.py",
+      "improvement": "Pinned attributed raw evidence for reproducibility; source availability is not a novelty claim."
+    },
+    {
+      "path": "experiments/pldd-evidence-suite/data/raw/external/naibbe-f2675ec/decrypted/examples/endofpaper_decrypted.txt",
+      "improvement": "Pinned attributed raw evidence for reproducibility; source availability is not a novelty claim."
+    },
+    {
+      "path": "experiments/pldd-evidence-suite/data/raw/external/naibbe-f2675ec/decrypted/examples/gallic_decrypted.txt",
+      "improvement": "Pinned attributed raw evidence for reproducibility; source availability is not a novelty claim."
+    },
+    {
+      "path": "experiments/pldd-evidence-suite/data/raw/external/naibbe-f2675ec/decrypted/nathist_output_ciphertext_decrypted.txt",
+      "improvement": "Pinned attributed raw evidence for reproducibility; source availability is not a novelty claim."
+    },
+    {
+      "path": "experiments/pldd-evidence-suite/data/raw/external/naibbe-f2675ec/encrypted/examples/endofpaper.txt",
+      "improvement": "Pinned attributed raw evidence for reproducibility; source availability is not a novelty claim."
+    },
+    {
+      "path": "experiments/pldd-evidence-suite/data/raw/external/naibbe-f2675ec/encrypted/examples/gallic_naibbe.txt",
+      "improvement": "Pinned attributed raw evidence for reproducibility; source availability is not a novelty claim."
+    },
+    {
+      "path": "experiments/pldd-evidence-suite/data/raw/external/naibbe-f2675ec/encrypted/nathist_output_ciphertext.txt",
+      "improvement": "Pinned attributed raw evidence for reproducibility; source availability is not a novelty claim."
+    },
+    {
+      "path": "experiments/pldd-evidence-suite/data/raw/external/naibbe-f2675ec/naibbe.py",
+      "improvement": "Pinned attributed raw evidence for reproducibility; source availability is not a novelty claim."
+    },
+    {
+      "path": "experiments/pldd-evidence-suite/data/raw/external/naibbe-f2675ec/references/naibbe_tables.csv",
+      "improvement": "Pinned attributed raw evidence for reproducibility; source availability is not a novelty claim."
+    },
+    {
+      "path": "experiments/pldd-evidence-suite/data/raw/iiif/yale-ms-408.json",
+      "improvement": "Pinned attributed raw evidence for reproducibility; source availability is not a novelty claim."
+    },
+    {
+      "path": "experiments/pldd-evidence-suite/data/raw/transcriptions/GC2a-n.txt",
+      "improvement": "Pinned attributed raw evidence for reproducibility; source availability is not a novelty claim."
+    },
+    {
+      "path": "experiments/pldd-evidence-suite/data/raw/transcriptions/IT2a-n.txt",
+      "improvement": "Pinned attributed raw evidence for reproducibility; source availability is not a novelty claim."
+    },
+    {
+      "path": "experiments/pldd-evidence-suite/data/raw/transcriptions/RF1b-e.txt",
+      "improvement": "Pinned attributed raw evidence for reproducibility; source availability is not a novelty claim."
+    },
+    {
+      "path": "experiments/pldd-evidence-suite/data/raw/transcriptions/RF1b-er.txt",
+      "improvement": "Pinned attributed raw evidence for reproducibility; source availability is not a novelty claim."
+    },
+    {
+      "path": "experiments/pldd-evidence-suite/data/raw/transcriptions/ZL3b-n.txt",
+      "improvement": "Pinned attributed raw evidence for reproducibility; source availability is not a novelty claim."
+    },
+    {
+      "path": "experiments/pldd-evidence-suite/data/raw/transcriptions/sta1/GC2a_0.txt",
+      "improvement": "Pinned attributed raw evidence for reproducibility; source availability is not a novelty claim."
+    },
+    {
+      "path": "experiments/pldd-evidence-suite/data/raw/transcriptions/sta1/IT2a.txt",
+      "improvement": "Pinned attributed raw evidence for reproducibility; source availability is not a novelty claim."
+    },
+    {
+      "path": "experiments/pldd-evidence-suite/data/raw/transcriptions/sta1/ZL3b.txt",
+      "improvement": "Pinned attributed raw evidence for reproducibility; source availability is not a novelty claim."
+    },
+    {
+      "path": "experiments/pldd-evidence-suite/notes/evidence-constraints.md",
+      "improvement": "Protocol, research chronology, limitations or prior failed/retracted approach."
+    },
+    {
+      "path": "experiments/pldd-evidence-suite/notes/hypotheses/H001-paragraph-initial-gallows.md",
+      "improvement": "Protocol, research chronology, limitations or prior failed/retracted approach."
+    },
+    {
+      "path": "experiments/pldd-evidence-suite/notes/hypotheses/H002-local-label-recurrence.md",
+      "improvement": "Protocol, research chronology, limitations or prior failed/retracted approach."
+    },
+    {
+      "path": "experiments/pldd-evidence-suite/notes/hypotheses/H003-locus-shared-family-label-recurrence.md",
+      "improvement": "Protocol, research chronology, limitations or prior failed/retracted approach."
+    },
+    {
+      "path": "experiments/pldd-evidence-suite/notes/hypotheses/H004-local-preceding-context.md",
+      "improvement": "Protocol, research chronology, limitations or prior failed/retracted approach."
+    },
+    {
+      "path": "experiments/pldd-evidence-suite/notes/hypotheses/H004B-markov-surrogates.md",
+      "improvement": "Protocol, research chronology, limitations or prior failed/retracted approach."
+    },
+    {
+      "path": "experiments/pldd-evidence-suite/notes/hypotheses/H004B2-contextual-comparator.md",
+      "improvement": "Protocol, research chronology, limitations or prior failed/retracted approach."
+    },
+    {
+      "path": "experiments/pldd-evidence-suite/notes/hypotheses/H004C-cross-transcription-sta.md",
+      "improvement": "Protocol, research chronology, limitations or prior failed/retracted approach."
+    },
+    {
+      "path": "experiments/pldd-evidence-suite/notes/hypotheses/H005-pharmaceutical-plant-anchors.md",
+      "improvement": "Protocol, research chronology, limitations or prior failed/retracted approach."
+    },
+    {
+      "path": "experiments/pldd-evidence-suite/notes/hypotheses/H006-FR3-line-reset-ternary-code-outcome.md",
+      "improvement": "Protocol, research chronology, limitations or prior failed/retracted approach."
+    },
+    {
+      "path": "experiments/pldd-evidence-suite/notes/hypotheses/H006-FR3-line-reset-ternary-code.md",
+      "improvement": "Protocol, research chronology, limitations or prior failed/retracted approach."
+    },
+    {
+      "path": "experiments/pldd-evidence-suite/notes/hypotheses/H007-PK23-published-key-coverage-outcome.md",
+      "improvement": "Protocol, research chronology, limitations or prior failed/retracted approach."
+    },
+    {
+      "path": "experiments/pldd-evidence-suite/notes/hypotheses/H007-PK23-published-key-coverage.md",
+      "improvement": "Protocol, research chronology, limitations or prior failed/retracted approach."
+    },
+    {
+      "path": "experiments/pldd-evidence-suite/notes/hypotheses/H007-forward-closure-feasibility.md",
+      "improvement": "Protocol, research chronology, limitations or prior failed/retracted approach."
+    },
+    {
+      "path": "experiments/pldd-evidence-suite/notes/pilots/P001-edge-morphology.md",
+      "improvement": "Protocol, research chronology, limitations or prior failed/retracted approach."
+    },
+    {
+      "path": "experiments/pldd-evidence-suite/notes/research-log.md",
+      "improvement": "Protocol, research chronology, limitations or prior failed/retracted approach."
+    },
+    {
+      "path": "experiments/pldd-evidence-suite/pyproject.toml",
+      "improvement": "Documentation, provenance, checksums or actual validation evidence for the scientific package."
+    },
+    {
+      "path": "experiments/pldd-evidence-suite/results/baseline-zl3b.json",
+      "improvement": "Complete retained result, including failed gates and bounded conclusions."
+    },
+    {
+      "path": "experiments/pldd-evidence-suite/results/baseline-zl3b.md",
+      "improvement": "Complete retained result, including failed gates and bounded conclusions."
+    },
+    {
+      "path": "experiments/pldd-evidence-suite/results/h004-local-order.json",
+      "improvement": "Complete retained result, including failed gates and bounded conclusions."
+    },
+    {
+      "path": "experiments/pldd-evidence-suite/results/h004-local-order.md",
+      "improvement": "Complete retained result, including failed gates and bounded conclusions."
+    },
+    {
+      "path": "experiments/pldd-evidence-suite/results/h004b2-contextual-comparator.json",
+      "improvement": "Complete retained result, including failed gates and bounded conclusions."
+    },
+    {
+      "path": "experiments/pldd-evidence-suite/results/h004b2-contextual-comparator.md",
+      "improvement": "Complete retained result, including failed gates and bounded conclusions."
+    },
+    {
+      "path": "experiments/pldd-evidence-suite/results/h004c-zg-discovery-manifest.json",
+      "improvement": "Complete retained result, including failed gates and bounded conclusions."
+    },
+    {
+      "path": "experiments/pldd-evidence-suite/results/h004c-zg-discovery-manifest.sha256.txt",
+      "improvement": "Complete retained result, including failed gates and bounded conclusions."
+    },
+    {
+      "path": "experiments/pldd-evidence-suite/results/h004c-zg-discovery.md",
+      "improvement": "Complete retained result, including failed gates and bounded conclusions."
+    },
+    {
+      "path": "experiments/pldd-evidence-suite/results/h005-plant-anchors.json",
+      "improvement": "Complete retained result, including failed gates and bounded conclusions."
+    },
+    {
+      "path": "experiments/pldd-evidence-suite/results/h005-plant-anchors.md",
+      "improvement": "Complete retained result, including failed gates and bounded conclusions."
+    },
+    {
+      "path": "experiments/pldd-evidence-suite/results/h005-plant-anchors.sha256.txt",
+      "improvement": "Complete retained result, including failed gates and bounded conclusions."
+    },
+    {
+      "path": "experiments/pldd-evidence-suite/results/h006-fr3-line-reset.json",
+      "improvement": "Complete retained result, including failed gates and bounded conclusions."
+    },
+    {
+      "path": "experiments/pldd-evidence-suite/results/h006-fr3-line-reset.md",
+      "improvement": "Complete retained result, including failed gates and bounded conclusions."
+    },
+    {
+      "path": "experiments/pldd-evidence-suite/results/h006-fr3-line-reset.sha256.txt",
+      "improvement": "Complete retained result, including failed gates and bounded conclusions."
+    },
+    {
+      "path": "experiments/pldd-evidence-suite/results/h007-pk23-coverage.json",
+      "improvement": "Complete retained result, including failed gates and bounded conclusions."
+    },
+    {
+      "path": "experiments/pldd-evidence-suite/results/h007-pk23-coverage.md",
+      "improvement": "Complete retained result, including failed gates and bounded conclusions."
+    },
+    {
+      "path": "experiments/pldd-evidence-suite/results/h007-pk23-coverage.sha256.txt",
+      "improvement": "Complete retained result, including failed gates and bounded conclusions."
+    },
+    {
+      "path": "experiments/pldd-evidence-suite/results/p001-edge-morphology.json",
+      "improvement": "Complete retained result, including failed gates and bounded conclusions."
+    },
+    {
+      "path": "experiments/pldd-evidence-suite/results/p001-edge-morphology.md",
+      "improvement": "Complete retained result, including failed gates and bounded conclusions."
+    },
+    {
+      "path": "experiments/pldd-evidence-suite/scripts/analyze_contextual_comparator.py",
+      "improvement": "Reusable parser/analysis implementation or documented publication adapter."
+    },
+    {
+      "path": "experiments/pldd-evidence-suite/scripts/analyze_corpus.py",
+      "improvement": "Reusable parser/analysis implementation or documented publication adapter."
+    },
+    {
+      "path": "experiments/pldd-evidence-suite/scripts/analyze_edge_morphology.py",
+      "improvement": "Reusable parser/analysis implementation or documented publication adapter."
+    },
+    {
+      "path": "experiments/pldd-evidence-suite/scripts/analyze_h004c_zg.py",
+      "improvement": "Reusable parser/analysis implementation or documented publication adapter."
+    },
+    {
+      "path": "experiments/pldd-evidence-suite/scripts/analyze_h005_plant_anchors.py",
+      "improvement": "Reusable parser/analysis implementation or documented publication adapter."
+    },
+    {
+      "path": "experiments/pldd-evidence-suite/scripts/analyze_h006_fr3.py",
+      "improvement": "Reusable parser/analysis implementation or documented publication adapter."
+    },
+    {
+      "path": "experiments/pldd-evidence-suite/scripts/analyze_h007_pk23.py",
+      "improvement": "Reusable parser/analysis implementation or documented publication adapter."
+    },
+    {
+      "path": "experiments/pldd-evidence-suite/scripts/analyze_local_order.py",
+      "improvement": "Reusable parser/analysis implementation or documented publication adapter."
+    },
+    {
+      "path": "experiments/pldd-evidence-suite/scripts/build_folio_index.py",
+      "improvement": "Reusable parser/analysis implementation or documented publication adapter."
+    },
+    {
+      "path": "experiments/pldd-evidence-suite/scripts/verify_publication.py",
+      "improvement": "Reusable parser/analysis implementation or documented publication adapter."
+    },
+    {
+      "path": "experiments/pldd-evidence-suite/src/voynich/__init__.py",
+      "improvement": "Reusable parser/analysis implementation or documented publication adapter."
+    },
+    {
+      "path": "experiments/pldd-evidence-suite/src/voynich/analysis.py",
+      "improvement": "Reusable parser/analysis implementation or documented publication adapter."
+    },
+    {
+      "path": "experiments/pldd-evidence-suite/src/voynich/contextual_comparator.py",
+      "improvement": "Reusable parser/analysis implementation or documented publication adapter."
+    },
+    {
+      "path": "experiments/pldd-evidence-suite/src/voynich/edge_morphology.py",
+      "improvement": "Reusable parser/analysis implementation or documented publication adapter."
+    },
+    {
+      "path": "experiments/pldd-evidence-suite/src/voynich/h004c.py",
+      "improvement": "Reusable parser/analysis implementation or documented publication adapter."
+    },
+    {
+      "path": "experiments/pldd-evidence-suite/src/voynich/iiif.py",
+      "improvement": "Reusable parser/analysis implementation or documented publication adapter."
+    },
+    {
+      "path": "experiments/pldd-evidence-suite/src/voynich/ivtff.py",
+      "improvement": "Reusable parser/analysis implementation or documented publication adapter."
+    },
+    {
+      "path": "experiments/pldd-evidence-suite/src/voynich/local_order.py",
+      "improvement": "Reusable parser/analysis implementation or documented publication adapter."
+    },
+    {
+      "path": "experiments/pldd-evidence-suite/src/voynich/naibbe_coverage.py",
+      "improvement": "Reusable parser/analysis implementation or documented publication adapter."
+    },
+    {
+      "path": "experiments/pldd-evidence-suite/src/voynich/plant_anchors.py",
+      "improvement": "Reusable parser/analysis implementation or documented publication adapter."
+    },
+    {
+      "path": "experiments/pldd-evidence-suite/src/voynich/ternary_frame.py",
+      "improvement": "Reusable parser/analysis implementation or documented publication adapter."
+    },
+    {
+      "path": "experiments/pldd-evidence-suite/tests/test_contextual_comparator.py",
+      "improvement": "Executable fixture or regression evidence for the declared package scope."
+    },
+    {
+      "path": "experiments/pldd-evidence-suite/tests/test_edge_morphology.py",
+      "improvement": "Executable fixture or regression evidence for the declared package scope."
+    },
+    {
+      "path": "experiments/pldd-evidence-suite/tests/test_generated_results.py",
+      "improvement": "Executable fixture or regression evidence for the declared package scope."
+    },
+    {
+      "path": "experiments/pldd-evidence-suite/tests/test_h004c.py",
+      "improvement": "Executable fixture or regression evidence for the declared package scope."
+    },
+    {
+      "path": "experiments/pldd-evidence-suite/tests/test_iiif.py",
+      "improvement": "Executable fixture or regression evidence for the declared package scope."
+    },
+    {
+      "path": "experiments/pldd-evidence-suite/tests/test_ivtff.py",
+      "improvement": "Executable fixture or regression evidence for the declared package scope."
+    },
+    {
+      "path": "experiments/pldd-evidence-suite/tests/test_local_order.py",
+      "improvement": "Executable fixture or regression evidence for the declared package scope."
+    },
+    {
+      "path": "experiments/pldd-evidence-suite/tests/test_naibbe_coverage.py",
+      "improvement": "Executable fixture or regression evidence for the declared package scope."
+    },
+    {
+      "path": "experiments/pldd-evidence-suite/tests/test_plant_anchors.py",
+      "improvement": "Executable fixture or regression evidence for the declared package scope."
+    },
+    {
+      "path": "experiments/pldd-evidence-suite/tests/test_provenance.py",
+      "improvement": "Executable fixture or regression evidence for the declared package scope."
+    },
+    {
+      "path": "experiments/pldd-evidence-suite/tests/test_ternary_frame.py",
+      "improvement": "Executable fixture or regression evidence for the declared package scope."
+    },
+    {
+      "path": "experiments/pldd-evidence-suite/verification/publication-transforms.json",
+      "improvement": "Documentation, provenance, checksums or actual validation evidence for the scientific package."
+    },
+    {
+      "path": "experiments/pldd-evidence-suite/verification/rebuilds/analyze_contextual_comparator.txt",
+      "improvement": "Documentation, provenance, checksums or actual validation evidence for the scientific package."
+    },
+    {
+      "path": "experiments/pldd-evidence-suite/verification/rebuilds/analyze_corpus.txt",
+      "improvement": "Documentation, provenance, checksums or actual validation evidence for the scientific package."
+    },
+    {
+      "path": "experiments/pldd-evidence-suite/verification/rebuilds/analyze_edge_morphology.txt",
+      "improvement": "Documentation, provenance, checksums or actual validation evidence for the scientific package."
+    },
+    {
+      "path": "experiments/pldd-evidence-suite/verification/rebuilds/analyze_h004c_zg.txt",
+      "improvement": "Documentation, provenance, checksums or actual validation evidence for the scientific package."
+    },
+    {
+      "path": "experiments/pldd-evidence-suite/verification/rebuilds/analyze_h005_plant_anchors.txt",
+      "improvement": "Documentation, provenance, checksums or actual validation evidence for the scientific package."
+    },
+    {
+      "path": "experiments/pldd-evidence-suite/verification/rebuilds/analyze_h006_fr3.txt",
+      "improvement": "Documentation, provenance, checksums or actual validation evidence for the scientific package."
+    },
+    {
+      "path": "experiments/pldd-evidence-suite/verification/rebuilds/analyze_h007_pk23.txt",
+      "improvement": "Documentation, provenance, checksums or actual validation evidence for the scientific package."
+    },
+    {
+      "path": "experiments/pldd-evidence-suite/verification/rebuilds/analyze_local_order.txt",
+      "improvement": "Documentation, provenance, checksums or actual validation evidence for the scientific package."
+    },
+    {
+      "path": "experiments/pldd-evidence-suite/verification/rebuilds/build_folio_index.txt",
+      "improvement": "Documentation, provenance, checksums or actual validation evidence for the scientific package."
+    },
+    {
+      "path": "experiments/pldd-evidence-suite/verification/rebuilds/initial-record.json",
+      "improvement": "Documentation, provenance, checksums or actual validation evidence for the scientific package."
+    },
+    {
+      "path": "experiments/pldd-evidence-suite/verification/rebuilds/record.json",
+      "improvement": "Documentation, provenance, checksums or actual validation evidence for the scientific package."
+    },
+    {
+      "path": "experiments/pldd-evidence-suite/verification/record.json",
+      "improvement": "Documentation, provenance, checksums or actual validation evidence for the scientific package."
+    },
+    {
+      "path": "experiments/pldd-evidence-suite/verification/source-byte-audit.json",
+      "improvement": "Documentation, provenance, checksums or actual validation evidence for the scientific package."
+    },
+    {
+      "path": "experiments/pldd-evidence-suite/verification/tests/h007-rebuilt-report.json",
+      "improvement": "Executable fixture or regression evidence for the declared package scope."
+    },
+    {
+      "path": "experiments/pldd-evidence-suite/verification/tests/h007-runtime-delta.json",
+      "improvement": "Executable fixture or regression evidence for the declared package scope."
+    },
+    {
+      "path": "experiments/pldd-evidence-suite/verification/tests/rerun-status.json",
+      "improvement": "Executable fixture or regression evidence for the declared package scope."
+    },
+    {
+      "path": "experiments/pldd-evidence-suite/verification/tests/rerun-stderr.txt",
+      "improvement": "Executable fixture or regression evidence for the declared package scope."
+    },
+    {
+      "path": "experiments/pldd-evidence-suite/verification/tests/rerun-stdout.txt",
+      "improvement": "Executable fixture or regression evidence for the declared package scope."
+    },
+    {
+      "path": "experiments/pldd-evidence-suite/verification/tests/status.json",
+      "improvement": "Executable fixture or regression evidence for the declared package scope."
+    },
+    {
+      "path": "experiments/pldd-evidence-suite/verification/tests/stderr.txt",
+      "improvement": "Executable fixture or regression evidence for the declared package scope."
+    },
+    {
+      "path": "experiments/pldd-evidence-suite/verification/tests/stdout.txt",
+      "improvement": "Executable fixture or regression evidence for the declared package scope."
+    },
+    {
+      "path": "contributions/pldd-evidence-suite/REPORT.md",
+      "improvement": "Documentation, provenance, checksums or actual validation evidence for the scientific package."
+    },
+    {
+      "path": "contributions/pldd-evidence-suite/SUBMISSION-CHECKS.md",
+      "improvement": "Documentation, provenance, checksums or actual validation evidence for the scientific package."
+    },
+    {
+      "path": "contributions/pldd-evidence-suite/preflight.json",
+      "improvement": "Documentation, provenance, checksums or actual validation evidence for the scientific package."
+    },
+    {
+      "path": "contributions/pldd-evidence-suite/rights.md",
+      "improvement": "Documentation, provenance, checksums or actual validation evidence for the scientific package."
+    }
+  ],
+  "outcomes": [
+    {
+      "id": "outcome-pldd-corpus-sta1-audit",
+      "family_id": "family-pldd-corpus-sta1-audit",
+      "extends": null,
+      "before": "The shared project already has pinned ZL/GC files, an EVA parser, baseline counts and an Artheon image/transcription mirror. Its meaning-probes report documents failed v101 replication.",
+      "after": "A second source-retaining implementation with explicit uncertainty exclusions and reproducible ZL/GC STA1 locus/family agreement and attrition audits. H001-H003 and Yale canvas indexing are supporting examples; upstream meaning_lib and v101 BPE are not repaired.",
+      "acceptance_test": "Run the package test suite and verify raw source-byte/hash retention, 227 page/panel records and 5,385 loci, uncertainty fixtures, conservative alphabet rejection and the worked H002/H003/STA1 alignment exclusions. Check that composite foldout labels remain unresolved rather than guessed.",
+      "evidence": [
+        "contributions/pldd-evidence-suite/REPORT.md",
+        "experiments/pldd-evidence-suite/src/voynich/ivtff.py",
+        "experiments/pldd-evidence-suite/src/voynich/analysis.py",
+        "experiments/pldd-evidence-suite/tests/test_ivtff.py",
+        "experiments/pldd-evidence-suite/tests/test_iiif.py",
+        "experiments/pldd-evidence-suite/results/baseline-zl3b.md",
+        "experiments/pldd-evidence-suite/notes/hypotheses/H002-local-label-recurrence.md",
+        "experiments/pldd-evidence-suite/notes/hypotheses/H003-locus-shared-family-label-recurrence.md"
+      ],
+      "related_outcomes": [
+        "outcome-artheon-ms408-hosted-dataset",
+        "outcome-meaning-probes"
+      ],
+      "claimed_cumulative_tier": 5,
+      "claimed_incremental_points": 5,
+      "claim_rationale": "Tier 5: an inspectable reusable cross-transcription audit capability with actual fixtures and manuscript examples. Existing raw-data acquisition, generic parser/harness baselines and image access are excluded from this claim; no completed upstream repair is claimed.",
+      "attribution": [
+        {
+          "github_id": 13791686,
+          "share_basis_points": 10000
+        }
+      ]
+    },
+    {
+      "id": "outcome-pldd-p001-edge-inventory",
+      "family_id": "family-pldd-p001-edge-inventory",
+      "extends": null,
+      "before": "The public project tests grammar and segmentation, but the inspected records do not contain this equal-cardinality edge-inventory discrimination pilot.",
+      "after": "A selected one-prefix/two-suffix parse fails discrimination against 5,082 equal-cardinality inventories, ranking 2,309th. The 69 recombinations among 123 affixed test types do not justify a morphology or gloss claim.",
+      "acceptance_test": "Run analyze_edge_morphology.py and the edge-morphology tests; reproduce 2,309/5,082 and the failed 95th-percentile gate. Preserve disclosure that exploratory calibration/test partitions were inspected in the same session.",
+      "evidence": [
+        "contributions/pldd-evidence-suite/REPORT.md",
+        "experiments/pldd-evidence-suite/src/voynich/edge_morphology.py",
+        "experiments/pldd-evidence-suite/tests/test_edge_morphology.py",
+        "experiments/pldd-evidence-suite/notes/pilots/P001-edge-morphology.md",
+        "experiments/pldd-evidence-suite/results/p001-edge-morphology.md",
+        "experiments/pldd-evidence-suite/results/p001-edge-morphology.json"
+      ],
+      "related_outcomes": [
+        "outcome-m4-template-doodler-pilot",
+        "outcome-discriminating-tests"
+      ],
+      "claimed_cumulative_tier": 5,
+      "claimed_incremental_points": 5,
+      "claim_rationale": "Tier 5: an informative controlled pilot with an explicit negative result. It is not a pristine held-out or publicly preregistered confirmation. Existing grammar and re-segmentation results are excluded.",
+      "attribution": [
+        {
+          "github_id": 13791686,
+          "share_basis_points": 10000
+        }
+      ]
+    },
+    {
+      "id": "outcome-pldd-h004-local-order-robustness",
+      "family_id": "family-pldd-h004-local-order-robustness",
+      "extends": null,
+      "before": "The shared position baseline measures adjacent repetition and within-locus shuffles; copy-generation hypotheses and related generative pilots already exist.",
+      "after": "A preceding-ten-token exact/one-edit matched-null screen across 33 pages and 2,072 targets, accompanied by the B-v1 retraction, invalid B-v2 comparator and failed cross-transcription C route, limits the interpretation of its static order signal.",
+      "acceptance_test": "Rebuild H004, H004-B-v2 and H004-C with their fixed 9,999 replicates; verify static deltas 0.0504/0.0379 and p 0.0001/0.0003, invalid contextual gates, C retained targets 648 with failed breadth/effect gates, and unchanged IT non-evaluation.",
+      "evidence": [
+        "contributions/pldd-evidence-suite/REPORT.md",
+        "experiments/pldd-evidence-suite/results/h004-local-order.md",
+        "experiments/pldd-evidence-suite/results/h004b2-contextual-comparator.md",
+        "experiments/pldd-evidence-suite/results/h004c-zg-discovery.md",
+        "experiments/pldd-evidence-suite/notes/hypotheses/H004-local-preceding-context.md",
+        "experiments/pldd-evidence-suite/notes/hypotheses/H004B-markov-surrogates.md",
+        "experiments/pldd-evidence-suite/notes/hypotheses/H004B2-contextual-comparator.md",
+        "experiments/pldd-evidence-suite/notes/hypotheses/H004C-cross-transcription-sta.md"
+      ],
+      "related_outcomes": [
+        "outcome-adversarial-critique",
+        "outcome-clean-rerun"
+      ],
+      "claimed_cumulative_tier": 5,
+      "claimed_incremental_points": 5,
+      "claim_rationale": "Tier 5: a reproducible bounded investigation with the complete contrary evidence. The original static result and follow-up failures form one outcome; no separate credit for ordinary corrections, no general mechanism identification and no independent human validation.",
+      "attribution": [
+        {
+          "github_id": 13791686,
+          "share_basis_points": 10000
+        }
+      ]
+    },
+    {
+      "id": "outcome-pldd-h005-coordinate-label-retrieval",
+      "family_id": "family-pldd-h005-coordinate-label-retrieval",
+      "extends": null,
+      "before": "Upstream T1 already tests editorial herbal/pharmaceutical plant associations by vocabulary sharing and reports an underpowered positive control. The plant-link question is not new.",
+      "after": "A distinct exact-coordinate label-to-whole-herbal retrieval benchmark derived from 35 q15/q19 source claims, with 17 strict ZL/GC pairs and five held-out pairs, fails all statistical advancement gates and the distinct-target identity gate.",
+      "acceptance_test": "Rebuild H005 and verify the source-ledger hash, 17 strict pairs, held-out MRR 0.33991087 versus null 0.19643035, p 0.0568, top-three 2/5 with p 0.1592, negative q19 direction, AQABBA target collision and unopened IT target prose.",
+      "evidence": [
+        "contributions/pldd-evidence-suite/REPORT.md",
+        "experiments/pldd-evidence-suite/data/derived/h005-source-anchor-manifest.json",
+        "experiments/pldd-evidence-suite/notes/hypotheses/H005-pharmaceutical-plant-anchors.md",
+        "experiments/pldd-evidence-suite/results/h005-plant-anchors.md",
+        "experiments/pldd-evidence-suite/results/h005-plant-anchors.json",
+        "experiments/pldd-evidence-suite/tests/test_plant_anchors.py"
+      ],
+      "related_outcomes": [
+        "outcome-discriminating-tests"
+      ],
+      "claimed_cumulative_tier": 5,
+      "claimed_incremental_points": 5,
+      "claim_rationale": "Tier 5: a reusable annotated benchmark and informative bounded retrieval pilot. Only five held-out pairs and no blinded botanical gold; this does not assign species or reject all label functions. Upstream T1 and the original source claims are expressly excluded from novelty credit.",
+      "attribution": [
+        {
+          "github_id": 13791686,
+          "share_basis_points": 10000
+        }
+      ]
+    },
+    {
+      "id": "outcome-pldd-h006-fr3-line-rejection",
+      "family_id": "family-pldd-h006-fr3-line-rejection",
+      "extends": null,
+      "before": "The public branches request finite cipher/generator diagnostics, but the inspected record contains no necessary-condition screen for these two specific fixed-three-trit line-reset models.",
+      "after": "Two explicit component tables under independent line reset produce 598 and 593 contradictions among 919 discovery lines. Neither exact model qualifies, and 266 held-out residues remain uncomputed.",
+      "acceptance_test": "Rebuild H006 and its fixtures with the unchanged frozen protocol and exact ZL/IT consensus guard. Verify residue histograms 321/297/301 and 326/303/290, rejection of both models, and the programmatic holdout seal.",
+      "evidence": [
+        "contributions/pldd-evidence-suite/REPORT.md",
+        "experiments/pldd-evidence-suite/notes/hypotheses/H006-FR3-line-reset-ternary-code.md",
+        "experiments/pldd-evidence-suite/notes/hypotheses/H006-FR3-line-reset-ternary-code-outcome.md",
+        "experiments/pldd-evidence-suite/results/h006-fr3-line-reset.md",
+        "experiments/pldd-evidence-suite/results/h006-fr3-line-reset.json",
+        "experiments/pldd-evidence-suite/tests/test_ternary_frame.py"
+      ],
+      "related_outcomes": [],
+      "claimed_cumulative_tier": 5,
+      "claimed_incremental_points": 5,
+      "claim_rationale": "Tier 5: an executed exact necessary-condition diagnostic with reproducible controls and a narrow failure boundary. It does not refute Matlach et al. generally, other reset conventions or historical homophony.",
+      "attribution": [
+        {
+          "github_id": 13791686,
+          "share_basis_points": 10000
+        }
+      ]
+    },
+    {
+      "id": "outcome-pldd-h007-published-key-coverage",
+      "family_id": "family-pldd-h007-published-key-coverage",
+      "extends": null,
+      "before": "The public project discusses cipher compatibility and failure budgets, but the inspected record does not contain this literal Naibbe fixed-key coverage and unique-output test.",
+      "after": "The literal author decoder passes three controls; a 2,341-occurrence discovery corpus has 495 uncovered, 82 bigram-ambiguous and three compound-ambiguous occurrences. Both exact gates fail. A table-only closure audit explains why added segmentations do not restore unique decoding.",
+      "acceptance_test": "Run the author-control and Naibbe coverage tests and rebuild H007. Verify classes U=797 B1=937 BA=82 C1=27 CA=3 X=495, no table evaluation of 777 held-out occurrences, synthetic decoder parity, and the 18,947-atom/14,648 multi-atom-collision table-only assertions.",
+      "evidence": [
+        "contributions/pldd-evidence-suite/REPORT.md",
+        "experiments/pldd-evidence-suite/notes/hypotheses/H007-PK23-published-key-coverage.md",
+        "experiments/pldd-evidence-suite/notes/hypotheses/H007-PK23-published-key-coverage-outcome.md",
+        "experiments/pldd-evidence-suite/notes/hypotheses/H007-forward-closure-feasibility.md",
+        "experiments/pldd-evidence-suite/results/h007-pk23-coverage.md",
+        "experiments/pldd-evidence-suite/results/h007-pk23-coverage.json",
+        "experiments/pldd-evidence-suite/tests/test_naibbe_coverage.py"
+      ],
+      "related_outcomes": [],
+      "claimed_cumulative_tier": 5,
+      "claimed_incremental_points": 5,
+      "claim_rationale": "Tier 5: a usable diagnostic and bounded negative case study, with complete scope and source attribution. Greshko did not claim this key deciphered the manuscript. No exact randomized encoder, broader Naibbe key family or plaintext language is refuted.",
+      "attribution": [
+        {
+          "github_id": 13791686,
+          "share_basis_points": 10000
+        }
+      ]
+    }
+  ],
+  "claimed_total_points": 30,
+  "rubric_version": "0.1",
+  "conflicts": [
+    "The contributor directs the source project and is its sole proposed credit beneficiary. No independent or nonconflicted external scientific assessment is claimed."
+  ],
+  "limitations": [
+    "Tier claims are proposed completed reusable contributions; official scoring is evidence-dependent and no award is asserted.",
+    "No validated token gloss, language identification, decipherment or general refutation of language/cipher models.",
+    "Existing corpus acquisition, Yale/Artheon image availability, generic parser/harness baselines and known gallows behavior are excluded from new credit.",
+    "The package has not fixed upstream meaning_lib v101 tokenization or byte-pair merges, nor rerun upstream meaning probes.",
+    "The complete H004 sequence includes invalid contextual comparators and failed cross-transcription gates; the static order signal does not establish a generating mechanism.",
+    "H005 has five held-out pairs, source-claim rather than blinded botanical labels, and failed statistical/identity gates.",
+    "H006/H007 reject only the specified exact models; held-out outcomes remain sealed by the original advancement rules.",
+    "Current tests/rebuilds are local AI-assisted execution, not independent human replication or authenticated external receipts.",
+    "Raw source dates and internal protocol freezes have not been independently publicly timestamped.",
+    "Large supported data files may be inspected through the published deterministic structural/partial-semantic views; full raw bytes and hashes are included."
+  ],
+  "rights_manifest": "contributions/pldd-evidence-suite/rights.md"
+}

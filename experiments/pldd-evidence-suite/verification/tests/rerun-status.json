@@ -1,0 +1,34 @@
+{
+  "command": [
+    "python3",
+    "-B",
+    "-m",
+    "unittest",
+    "discover",
+    "-s",
+    "tests",
+    "-v"
+  ],
+  "cwd": "<PACKAGE>",
+  "environment": {
+    "PYTHONDONTWRITEBYTECODE": "1",
+    "H007_PANDAS_PYTHON": "<PANDAS_PYTHON>"
+  },
+  "python_version": "3.14.5",
+  "started_utc": "2026-09-08T04:25:17.448987+00:00",
+  "status": "passed",
+  "reason_for_rerun": "Parent relocated the byte-identical Yale IIIF input for package portability and made H007 original-golden validation and comparison under changed runtime metadata explicit. First-run logs are preserved.",
+  "exit_code": 0,
+  "finished_utc": "2026-09-08T04:25:35.058809+00:00",
+  "runtime_seconds": 17.60953,
+  "tests_run": 101,
+  "unittest_runtime_seconds": 17.323,
+  "failures": 0,
+  "errors": 0,
+  "passed_tests": 101,
+  "pandas_runtime": {
+    "interpreter_source": "environment",
+    "pandas_version": "2.2.3",
+    "python_version": "3.12.14"
+  }
+}

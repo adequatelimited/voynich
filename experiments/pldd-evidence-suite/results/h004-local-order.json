@@ -1,0 +1,154 @@
+{
+  "hypothesis_id": "H004",
+  "analysis_version": "H004-v1",
+  "claim_scope": "local transcription-form prediction beyond a static matched null; no semantics or generator claim",
+  "input": {
+    "source_sha256": "bf5b6d4ac1e3a51b1847a9c388318d609020441ccd56984c901c32b09beccafc",
+    "alphabet": "Eva-",
+    "format_version": "2.0"
+  },
+  "protocol": {
+    "window_tokens": 10,
+    "minimum_page_targets": 10,
+    "split": "SHA256('H004-v1:' + page_id), first byte < 51 is reserved",
+    "permutations": 9999,
+    "seed": 4004,
+    "distance": "EVA code-point Levenshtein thresholded at 0, 1, or >1",
+    "null_cells": [
+      "page",
+      "I",
+      "L",
+      "H",
+      "EVA_length",
+      "paragraph_initial",
+      "line_position"
+    ],
+    "reset_conditions": [
+      "paragraph boundary",
+      "uncertain or excluded component",
+      "I/L/H change"
+    ],
+    "aggregation": "mean within page, then equal mean across pages"
+  },
+  "eligibility": {
+    "pages_with_any_targets": 195,
+    "eligible_discovery_pages": 131,
+    "eligible_reserved_pages": 33,
+    "discovery_targets": 7060,
+    "reserved_targets": 2072,
+    "reserved_currier_pages": {
+      "A": 16,
+      "B": 17
+    },
+    "reserved_currier_targets": {
+      "A": 458,
+      "B": 1614
+    },
+    "movable_reserved_targets": 2000,
+    "movable_reserved_target_fraction": 0.965251
+  },
+  "held_out_static_null": {
+    "copy_or_one_edit": {
+      "observed_equal_page_mean": 0.306206,
+      "null_mean": 0.255761,
+      "delta": 0.050445,
+      "monte_carlo_p": 0.0001,
+      "positive_pages": 26,
+      "zero_pages": 0,
+      "negative_pages": 7,
+      "positive_page_fraction": 0.787879,
+      "gate_checks": {
+        "delta_at_least_0_02": true,
+        "p_at_most_0_005": true,
+        "positive_page_fraction_above_0_60": true
+      }
+    },
+    "one_edit_without_exact": {
+      "observed_equal_page_mean": 0.228127,
+      "null_mean": 0.19021,
+      "delta": 0.037917,
+      "monte_carlo_p": 0.0003,
+      "positive_pages": 25,
+      "zero_pages": 0,
+      "negative_pages": 8,
+      "positive_page_fraction": 0.757576,
+      "gate_checks": {
+        "delta_at_least_0_02": true,
+        "p_at_most_0_005": true,
+        "positive_page_fraction_above_0_60": true
+      }
+    },
+    "exact_repeat_diagnostic": {
+      "observed_equal_page_mean": 0.07808,
+      "null_mean": 0.065551,
+      "delta": 0.012529,
+      "monte_carlo_p": 0.0326,
+      "positive_pages": 19,
+      "zero_pages": 0,
+      "negative_pages": 14,
+      "positive_page_fraction": 0.575758,
+      "gate_checks": {
+        "delta_at_least_0_02": false,
+        "p_at_most_0_005": false,
+        "positive_page_fraction_above_0_60": false
+      }
+    }
+  },
+  "held_out_currier_robustness": {
+    "A": {
+      "targets": 458,
+      "metrics": {
+        "copy_or_one_edit": {
+          "observed": 0.279476,
+          "null_mean": 0.236222,
+          "delta": 0.043254,
+          "monte_carlo_p": 0.0053,
+          "robustness_check_met": true
+        },
+        "one_edit_without_exact": {
+          "observed": 0.20524,
+          "null_mean": 0.170693,
+          "delta": 0.034547,
+          "monte_carlo_p": 0.0137,
+          "robustness_check_met": true
+        }
+      }
+    },
+    "B": {
+      "targets": 1614,
+      "metrics": {
+        "copy_or_one_edit": {
+          "observed": 0.335812,
+          "null_mean": 0.266851,
+          "delta": 0.068961,
+          "monte_carlo_p": 0.0001,
+          "robustness_check_met": true
+        },
+        "one_edit_without_exact": {
+          "observed": 0.239157,
+          "null_mean": 0.197604,
+          "delta": 0.041553,
+          "monte_carlo_p": 0.0001,
+          "robustness_check_met": true
+        }
+      }
+    }
+  },
+  "breadth_checks": {
+    "at_least_30_reserved_pages": true,
+    "at_least_1500_reserved_targets": true,
+    "currier_A_at_least_5_pages_and_200_targets": true,
+    "currier_B_at_least_5_pages_and_200_targets": true,
+    "movable_target_fraction_at_least_0_80": true
+  },
+  "static_matched_null_gate_met": true,
+  "mechanism_gate": {
+    "copy_edit_mechanism_advanced": false,
+    "reason": "the static order effect is compatible with Markov dependence, morphology, syntax, topic sequence, and transcription effects",
+    "unimplemented_required_tests": [
+      "discovery-trained order-1 and order-2 word-Markov surrogates",
+      "cross-transcription STA-family robustness check"
+    ]
+  },
+  "disposition": "predictive-order screen passed; copy/edit mechanism remains unvalidated"
+}
