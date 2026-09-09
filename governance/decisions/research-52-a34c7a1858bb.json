@@ -1,0 +1,1085 @@
+{
+  "schema_version": "1.0",
+  "research_pr": 52,
+  "merge_sha": "e00e3b8fef3a81a972a3876ce1d1d801993a11c2",
+  "events": [
+    {
+      "schema_version": "1.0",
+      "id": "decision-52-family-pldd-corpus-sta1-audit-a34c7a1858bb",
+      "sequence": 20,
+      "kind": "award",
+      "family_id": "family-pldd-corpus-sta1-audit",
+      "rubric_version": "0.1",
+      "category": "tools_methods",
+      "repository_id": 1359336540,
+      "pr_number": 52,
+      "milestone_id": "milestone-1359336540-52-family-pldd-corpus-sta1-audit",
+      "earned_at": "2026-09-09T01:45:25Z",
+      "assessment_id": "assessment-16c3fc127b22dde4e5ab7cd757e9a502",
+      "artifact_binding_digest": "a34c7a1858bbeb7cb222baa25d2434175cda128a9ed56dfeec4ca9eead4283e0",
+      "authority_receipt_ref": "receipt:job-a34c7a1858bbeb7cb222baa25d2434175cda128a",
+      "cumulative_tier": 5,
+      "allocation_shares": [
+        {
+          "github_id": 13791686,
+          "share_basis_points": 10000,
+          "status": "paid",
+          "acknowledgment_receipt_ref": "github-pr:1359336540:52:9bf09159589e6bd13894e19f7c405760f4178b07:41aa67bb8f19f46bf467f8e14a94ee0feb60cd0bf35ced34d1474d0d063a9ed9:627404108574d44593ccdb42a5db2e3907bd36197a3cfba99905ac5fda56e827"
+        }
+      ],
+      "reason": "Distinct reusable tool/capability not previously credited by any existing family; both prior independent reports agree it's new. Tier 5 supported by inspectable tests, rebuild logs and worked STA1 examples; no independent execution receipt available so tier 10 not supported."
+    },
+    {
+      "schema_version": "1.0",
+      "id": "decision-52-family-pldd-p001-edge-inventory-a34c7a1858bb",
+      "sequence": 21,
+      "kind": "award",
+      "family_id": "family-pldd-p001-edge-inventory",
+      "rubric_version": "0.1",
+      "category": "experiments",
+      "repository_id": 1359336540,
+      "pr_number": 52,
+      "milestone_id": "milestone-1359336540-52-family-pldd-p001-edge-inventory",
+      "earned_at": "2026-09-09T01:45:25Z",
+      "assessment_id": "assessment-16c3fc127b22dde4e5ab7cd757e9a502",
+      "artifact_binding_digest": "a34c7a1858bbeb7cb222baa25d2434175cda128a9ed56dfeec4ca9eead4283e0",
+      "authority_receipt_ref": "receipt:job-a34c7a1858bbeb7cb222baa25d2434175cda128a",
+      "cumulative_tier": 5,
+      "allocation_shares": [
+        {
+          "github_id": 13791686,
+          "share_basis_points": 10000,
+          "status": "paid",
+          "acknowledgment_receipt_ref": "github-pr:1359336540:52:9bf09159589e6bd13894e19f7c405760f4178b07:41aa67bb8f19f46bf467f8e14a94ee0feb60cd0bf35ced34d1474d0d063a9ed9:96e17156eb4b6e63fa2cbaea4f67118a43fabfbcf5b3778fc5d124724727681c"
+        }
+      ],
+      "reason": "Informative controlled negative pilot with exhaustive equal-cardinality null; disclosed same-session exploratory limitation caps it below tier 10. Distinct mechanism/metric from the word-grammar-template family's edge control."
+    },
+    {
+      "schema_version": "1.0",
+      "id": "decision-52-family-pldd-h004-local-order-robustness-a34c7a1858bb",
+      "sequence": 22,
+      "kind": "award",
+      "family_id": "family-pldd-h004-local-order-robustness",
+      "rubric_version": "0.1",
+      "category": "experiments",
+      "repository_id": 1359336540,
+      "pr_number": 52,
+      "milestone_id": "milestone-1359336540-52-family-pldd-h004-local-order-robustness",
+      "earned_at": "2026-09-09T01:45:25Z",
+      "assessment_id": "assessment-16c3fc127b22dde4e5ab7cd757e9a502",
+      "artifact_binding_digest": "a34c7a1858bbeb7cb222baa25d2434175cda128a9ed56dfeec4ca9eead4283e0",
+      "authority_receipt_ref": "receipt:job-a34c7a1858bbeb7cb222baa25d2434175cda128a",
+      "cumulative_tier": 5,
+      "allocation_shares": [
+        {
+          "github_id": 13791686,
+          "share_basis_points": 10000,
+          "status": "paid",
+          "acknowledgment_receipt_ref": "github-pr:1359336540:52:9bf09159589e6bd13894e19f7c405760f4178b07:41aa67bb8f19f46bf467f8e14a94ee0feb60cd0bf35ced34d1474d0d063a9ed9:e6f9b386ad5fe30bdafd42b2589b5c3f5eb423560590911d7d41913628e7cc1b"
+        }
+      ],
+      "reason": "A reproducible bounded local-order screen with full contrary-evidence disclosure. The static result alone might approach tier 10 anchor, but the bundled sequence's own conclusion states mechanism remains unvalidated and two follow-up tests are inconclusive/failed; tier 5 is the highest fully supported level given the contribution's own stated limits."
+    },
+    {
+      "schema_version": "1.0",
+      "id": "decision-52-family-pldd-h005-coordinate-label-retrieval-a34c7a1858bb",
+      "sequence": 23,
+      "kind": "award",
+      "family_id": "family-pldd-h005-coordinate-label-retrieval",
+      "rubric_version": "0.1",
+      "category": "experiments",
+      "repository_id": 1359336540,
+      "pr_number": 52,
+      "milestone_id": "milestone-1359336540-52-family-pldd-h005-coordinate-label-retrieval",
+      "earned_at": "2026-09-09T01:45:25Z",
+      "assessment_id": "assessment-16c3fc127b22dde4e5ab7cd757e9a502",
+      "artifact_binding_digest": "a34c7a1858bbeb7cb222baa25d2434175cda128a9ed56dfeec4ca9eead4283e0",
+      "authority_receipt_ref": "receipt:job-a34c7a1858bbeb7cb222baa25d2434175cda128a",
+      "cumulative_tier": 5,
+      "allocation_shares": [
+        {
+          "github_id": 13791686,
+          "share_basis_points": 10000,
+          "status": "paid",
+          "acknowledgment_receipt_ref": "github-pr:1359336540:52:9bf09159589e6bd13894e19f7c405760f4178b07:41aa67bb8f19f46bf467f8e14a94ee0feb60cd0bf35ced34d1474d0d063a9ed9:2a8881320b61f67a63a25054839e49ab844e19d518bcb21aeb361a3338b17e86"
+        }
+      ],
+      "reason": "A reusable annotated retrieval benchmark and informative negative bounded pilot; five held-out pairs and non-blinded source-claim gold limit this below tier 10."
+    },
+    {
+      "schema_version": "1.0",
+      "id": "decision-52-family-pldd-h006-fr3-line-rejection-a34c7a1858bb",
+      "sequence": 24,
+      "kind": "award",
+      "family_id": "family-pldd-h006-fr3-line-rejection",
+      "rubric_version": "0.1",
+      "category": "experiments",
+      "repository_id": 1359336540,
+      "pr_number": 52,
+      "milestone_id": "milestone-1359336540-52-family-pldd-h006-fr3-line-rejection",
+      "earned_at": "2026-09-09T01:45:25Z",
+      "assessment_id": "assessment-16c3fc127b22dde4e5ab7cd757e9a502",
+      "artifact_binding_digest": "a34c7a1858bbeb7cb222baa25d2434175cda128a9ed56dfeec4ca9eead4283e0",
+      "authority_receipt_ref": "receipt:job-a34c7a1858bbeb7cb222baa25d2434175cda128a",
+      "cumulative_tier": 5,
+      "allocation_shares": [
+        {
+          "github_id": 13791686,
+          "share_basis_points": 10000,
+          "status": "paid",
+          "acknowledgment_receipt_ref": "github-pr:1359336540:52:9bf09159589e6bd13894e19f7c405760f4178b07:41aa67bb8f19f46bf467f8e14a94ee0feb60cd0bf35ced34d1474d0d063a9ed9:d86cdba8a36de6b196140395241526e8ccc9d7066c7263d907d7fa4796bcff4e"
+        }
+      ],
+      "reason": "Executed exact deterministic necessary-condition diagnostic with reproducible controls and narrow, honestly bounded failure scope; solidly a tier-5 informative negative result."
+    },
+    {
+      "schema_version": "1.0",
+      "id": "decision-52-family-pldd-h007-published-key-coverage-a34c7a1858bb",
+      "sequence": 25,
+      "kind": "award",
+      "family_id": "family-pldd-h007-published-key-coverage",
+      "rubric_version": "0.1",
+      "category": "experiments",
+      "repository_id": 1359336540,
+      "pr_number": 52,
+      "milestone_id": "milestone-1359336540-52-family-pldd-h007-published-key-coverage",
+      "earned_at": "2026-09-09T01:45:25Z",
+      "assessment_id": "assessment-16c3fc127b22dde4e5ab7cd757e9a502",
+      "artifact_binding_digest": "a34c7a1858bbeb7cb222baa25d2434175cda128a9ed56dfeec4ca9eead4283e0",
+      "authority_receipt_ref": "receipt:job-a34c7a1858bbeb7cb222baa25d2434175cda128a",
+      "cumulative_tier": 5,
+      "allocation_shares": [
+        {
+          "github_id": 13791686,
+          "share_basis_points": 10000,
+          "status": "paid",
+          "acknowledgment_receipt_ref": "github-pr:1359336540:52:9bf09159589e6bd13894e19f7c405760f4178b07:41aa67bb8f19f46bf467f8e14a94ee0feb60cd0bf35ced34d1474d0d063a9ed9:87acda39e610271019158e4ac7b122576f7efe200c6e2bb8b374cd3f5f797a15"
+        }
+      ],
+      "reason": "Usable diagnostic and bounded negative case study with independent code audit corroborating the negative result; solid tier 5."
+    }
+  ],
+  "families_added": [
+    {
+      "id": "family-pldd-corpus-sta1-audit",
+      "rubric_version": "0.1",
+      "scope": "A second source-retaining IVTFF/STA1 implementation with explicit uncertainty exclusions, reproducible ZL/GC STA1 locus/family agreement and attrition audits (H001-H003), and a conservative Yale canvas index preserving composite/partial-foldout ambiguity rather than guessing mappings.",
+      "acceptance_test": "Run package tests; verify 227 page/panel records, 5,385 loci, uncertainty exclusion counts, H002/H003 audit disposition, and that composite Yale foldouts remain unresolved rather than guessed.",
+      "aliases": [],
+      "predecessor_family_ids": [],
+      "excluded_overlap": [
+        "Raw ZL/GC corpus acquisition and generic EVA parsing baseline (seed-corpus-parser).",
+        "Yale IIIF manifest/image access already registered under family-ms408-data-access.",
+        "Rediscovery of known gallows behavior (H001) claimed only as supporting context, not new credit."
+      ],
+      "seed": false,
+      "seed_baseline": 0
+    },
+    {
+      "id": "family-pldd-p001-edge-inventory",
+      "rubric_version": "0.1",
+      "scope": "An exhaustive equal-cardinality edge-inventory discriminating-control pilot (P001) testing a selected one-prefix/two-suffix STA-family morphology parse against 5,082 alternative inventories, finding the selected inventory ranks only 2,309th (54.58th percentile, gate 95th), with disclosed same-session calibration/test inspection.",
+      "acceptance_test": "Run analyze_edge_morphology.py; reproduce rank 2,309/5,082 and failed 95th-percentile gate exactly.",
+      "aliases": [],
+      "predecessor_family_ids": [],
+      "excluded_overlap": [
+        "Does not claim credit for grammar/segmentation results in other generative-falsification families.",
+        "Does not claim illustration-linked vocabulary or byte-pair segmentation results in family-generative-falsification-discriminating-tests."
+      ],
+      "seed": false,
+      "seed_baseline": 0
+    },
+    {
+      "id": "family-pldd-h004-local-order-robustness",
+      "rubric_version": "0.1",
+      "scope": "A preceding-ten-token exact/one-edit matched-permutation local-order screen (H004) across 33 reserved pages and 2,072 targets showing a statistically significant static order effect (delta 0.0504/0.0379, p 0.0001/0.0003), together with the complete disclosed follow-up sequence: a retracted invalid Markov-surrogate design (B-v1), an executed teacher-forced contextual comparator (B-v2) that fails its own validity gates and is therefore inconclusive, and a cross-transcription STA-family robustness check (H004-C) that fails the frozen breadth gate at only 648 targets and also fails its already-exposed effect gates.",
+      "acceptance_test": "Rebuild H004/H004-B-v2/H004-C; verify static deltas 0.0504/0.0379 (p 0.0001/0.0003), B-v2 invalidity, and H004-C's 648-target breadth failure with reported effect-gate results.",
+      "aliases": [],
+      "predecessor_family_ids": [],
+      "excluded_overlap": [
+        "Does not claim general copy-generation mechanism identification.",
+        "Does not duplicate seed-baseline-position's shuffle diagnostic scope."
+      ],
+      "seed": false,
+      "seed_baseline": 0
+    },
+    {
+      "id": "family-pldd-h005-coordinate-label-retrieval",
+      "rubric_version": "0.1",
+      "scope": "A new exact-coordinate label-to-whole-herbal retrieval benchmark derived from 35 q15/q19 source claims (17 strict ZL/GC pairs, 5 held-out pairs), using a locked BM25 retrieval model selected on discovery data, tested against a selection-adjusted matched null; all statistical advancement gates fail (MRR delta 0.1435, p=0.0568; top-3 p=0.1592) and a distinct-target identity-collision gate also fails (AQABBA maps to both f44 and f57).",
+      "acceptance_test": "Rebuild H005; verify 17 strict pairs, held-out MRR 0.33991087 vs null 0.19643035 (p=0.0568), AQABBA collision, and unopened IT prose.",
+      "aliases": [],
+      "predecessor_family_ids": [],
+      "excluded_overlap": [
+        "Does not claim upstream T1's illustration-linked-vocabulary result or its own novelty as first plant-association test.",
+        "Does not assign species or reject general label-meaning hypotheses."
+      ],
+      "seed": false,
+      "seed_baseline": 0
+    },
+    {
+      "id": "family-pldd-h006-fr3-line-rejection",
+      "rubric_version": "0.1",
+      "scope": "An exact necessary-condition screen testing two explicit fixed-three-trit component tables (PAIR, OPTIONAL_E) under independent per-line phase-zero reset against 919 discovery lines, rejecting both models outright (598/593 contradictions) with held-out residues (266 lines) left uncomputed per the frozen advancement rule.",
+      "acceptance_test": "Rebuild H006; verify residue histograms 321/297/301 and 326/303/290, rejection of both models, and sealed 266-line holdout.",
+      "aliases": [],
+      "predecessor_family_ids": [],
+      "excluded_overlap": [],
+      "seed": false,
+      "seed_baseline": 0
+    },
+    {
+      "id": "family-pldd-h007-published-key-coverage",
+      "rubric_version": "0.1",
+      "scope": "A literal fixed-key coverage/ambiguity diagnostic applying Greshko's published Naibbe reverse table and decoder literally (BASIC=True, MARK_COMPOUND=True) to a strict ZL/IT-consensus herbal corpus of 2,341 discovery occurrences, finding both the generator-membership gate (X=495) and unique-output gate (BA=82, CA=3) fail, with a table-only closure audit proving that adding arbitrary deleted-boundary compounding cannot rescue unique decoding (14,648/18,947 atomic strings admit a distinct multi-atom decoding).",
+      "acceptance_test": "Run author-control and Naibbe coverage tests; verify classes U=797 B1=937 BA=82 C1=27 CA=3 X=495, held-out sealed, and forward-closure audit's 14,648/18,947 collision figures.",
+      "aliases": [],
+      "predecessor_family_ids": [],
+      "excluded_overlap": [
+        "Does not reject the general Naibbe ciphertext-compatibility thesis or Greshko's own claims, which he never made about manuscript decipherment."
+      ],
+      "seed": false,
+      "seed_baseline": 0
+    }
+  ],
+  "milestones": [
+    {
+      "id": "milestone-1359336540-52-family-pldd-corpus-sta1-audit",
+      "family_id": "family-pldd-corpus-sta1-audit",
+      "repository_id": 1359336540,
+      "pr_number": 52,
+      "earned_at": "2026-09-09T01:45:25Z",
+      "depends_on": []
+    },
+    {
+      "id": "milestone-1359336540-52-family-pldd-p001-edge-inventory",
+      "family_id": "family-pldd-p001-edge-inventory",
+      "repository_id": 1359336540,
+      "pr_number": 52,
+      "earned_at": "2026-09-09T01:45:25Z",
+      "depends_on": []
+    },
+    {
+      "id": "milestone-1359336540-52-family-pldd-h004-local-order-robustness",
+      "family_id": "family-pldd-h004-local-order-robustness",
+      "repository_id": 1359336540,
+      "pr_number": 52,
+      "earned_at": "2026-09-09T01:45:25Z",
+      "depends_on": []
+    },
+    {
+      "id": "milestone-1359336540-52-family-pldd-h005-coordinate-label-retrieval",
+      "family_id": "family-pldd-h005-coordinate-label-retrieval",
+      "repository_id": 1359336540,
+      "pr_number": 52,
+      "earned_at": "2026-09-09T01:45:25Z",
+      "depends_on": []
+    },
+    {
+      "id": "milestone-1359336540-52-family-pldd-h006-fr3-line-rejection",
+      "family_id": "family-pldd-h006-fr3-line-rejection",
+      "repository_id": 1359336540,
+      "pr_number": 52,
+      "earned_at": "2026-09-09T01:45:25Z",
+      "depends_on": []
+    },
+    {
+      "id": "milestone-1359336540-52-family-pldd-h007-published-key-coverage",
+      "family_id": "family-pldd-h007-published-key-coverage",
+      "repository_id": 1359336540,
+      "pr_number": 52,
+      "earned_at": "2026-09-09T01:45:25Z",
+      "depends_on": []
+    }
+  ],
+  "assessment": {
+    "schema_version": "1.0",
+    "assessment_id": "assessment-16c3fc127b22dde4e5ab7cd757e9a502",
+    "artifact_binding_digest": "16c3fc127b22dde4e5ab7cd757e9a5023382e6494634bca6fe186b774909be44",
+    "merit_evidence_digest": "58449d410515e6fbe72625e54999a656032d84a9070aa4a4d0c37652361ef46f",
+    "repository_id": 1359336540,
+    "pr_number": 52,
+    "head_sha": "9bf09159589e6bd13894e19f7c405760f4178b07",
+    "base_sha": "b470c129462ca22845371ec9a57c84bccc24af25",
+    "rules_version": "0.1",
+    "rubric_version": "0.1",
+    "grading_profile": "voynich-sonnet-ai-pilot-2026-09-07-v14",
+    "evaluator_commit": "6c763430d276ca602a12293d69341fa9b9c273fd",
+    "mode": "official_proposal",
+    "status": "complete",
+    "claimed_score": 30,
+    "expected_score": 30,
+    "official_proposed_score": 30,
+    "awarded_score": null,
+    "assessment": {
+      "schema_version": "1.0",
+      "admission_action": "accept",
+      "score_status": "proposed",
+      "conduct_status": "clear",
+      "findings": [
+        {
+          "blocks_merge_or_credit": false,
+          "rule_id_or_gate": "G7",
+          "severity": "info",
+          "path_or_locus": "experiments/pldd-evidence-suite/notes/hypotheses/H004-local-preceding-context.md",
+          "evidence_refs": [
+            "experiments/pldd-evidence-suite/notes/hypotheses/H004-local-preceding-context.md",
+            "experiments/pldd-evidence-suite/results/h004b2-contextual-comparator.md"
+          ],
+          "reason": "H004 sequence discloses invalid contextual comparators and failed cross-transcription route; no concealment observed.",
+          "required_change": "",
+          "verification_step": "Confirm h004b2 and h004c reports state inconclusive/reject dispositions."
+        },
+        {
+          "blocks_merge_or_credit": false,
+          "rule_id_or_gate": "R4",
+          "severity": "info",
+          "path_or_locus": "contributions/pldd-evidence-suite/rights.md",
+          "evidence_refs": [
+            "contributions/pldd-evidence-suite/rights.md"
+          ],
+          "reason": "Naibbe vendor files carry a citation-condition MIT variant; rights.md discloses and complies via required citation, not a blocker.",
+          "required_change": "",
+          "verification_step": "Confirm README.md and rights.md both cite Greshko (2025)."
+        }
+      ],
+      "outcomes": [
+        {
+          "family_id": "family-pldd-corpus-sta1-audit",
+          "scope": "A second source-retaining IVTFF/STA1 implementation with explicit uncertainty exclusions, reproducible ZL/GC STA1 locus/family agreement and attrition audits (H001-H003), and a conservative Yale canvas index preserving composite/partial-foldout ambiguity rather than guessing mappings.",
+          "category": "tools_methods",
+          "predecessors": [],
+          "aliases": [],
+          "claimed_tier": 5,
+          "assessed_tier": 5,
+          "gate_evidence": [
+            {
+              "gate": "G1",
+              "status": "pass",
+              "evidence_refs": [
+                "contributions/pldd-evidence-suite/REPORT.md"
+              ],
+              "reason": "Directly supports corpus-integrity/morphology-segmentation research questions."
+            },
+            {
+              "gate": "G2",
+              "status": "pass",
+              "evidence_refs": [
+                "contributions/pldd-evidence-suite/rights.md",
+                "experiments/pldd-evidence-suite/data/PROVENANCE.md"
+              ],
+              "reason": "CC0 Zandbergen tables and public Yale manifest with retained provenance and hashes."
+            },
+            {
+              "gate": "G3",
+              "status": "pass",
+              "evidence_refs": [
+                "experiments/pldd-evidence-suite/src/voynich/ivtff.py",
+                "experiments/pldd-evidence-suite/tests/test_ivtff.py",
+                "experiments/pldd-evidence-suite/verification/rebuilds/record.json"
+              ],
+              "reason": "Actual code, tests, and rebuild logs comparing generated bytes to retained artifacts, as ordinary submitted-run evidence."
+            },
+            {
+              "gate": "G4",
+              "status": "pass",
+              "evidence_refs": [
+                "experiments/pldd-evidence-suite/results/baseline-zl3b.md"
+              ],
+              "reason": "Explicit scope, exclusions, and disposition for H001-H003 given."
+            },
+            {
+              "gate": "G5",
+              "status": "pass",
+              "evidence_refs": [
+                "contributions/pldd-evidence-suite/rights.md",
+                "contributions/pldd-evidence-suite/contribution.yaml"
+              ],
+              "reason": "Human attribution and AI-use disclosure present."
+            },
+            {
+              "gate": "G6",
+              "status": "pass",
+              "evidence_refs": [
+                "contributions/pldd-evidence-suite/REPORT.md"
+              ],
+              "reason": "Explicit comparison table excludes seed-corpus-parser/family-ms408-data-access overlap; new cross-transcription implementation."
+            },
+            {
+              "gate": "G7",
+              "status": "pass",
+              "evidence_refs": [
+                "experiments/pldd-evidence-suite/notes/hypotheses/H002-local-label-recurrence.md",
+                "experiments/pldd-evidence-suite/notes/hypotheses/H003-locus-shared-family-label-recurrence.md"
+              ],
+              "reason": "Failed/insufficient results retained rather than suppressed."
+            }
+          ],
+          "attribution_status": "verified",
+          "reason": "Distinct reusable tool/capability not previously credited by any existing family; both prior independent reports agree it's new. Tier 5 supported by inspectable tests, rebuild logs and worked STA1 examples; no independent execution receipt available so tier 10 not supported.",
+          "family_decision": "new",
+          "family_comparisons": [
+            {
+              "family_id": "seed-corpus-parser",
+              "existing_scope": "Pinned ZL/GC corpora, folio/locus metadata and tested EVA uncertainty parser.",
+              "relationship": "distinct_outcome",
+              "reason": "Reuses raw ZL/GC bytes as input but supplies a separate implementation plus a new STA1 cross-transcription agreement/attrition audit capability not in seed scope."
+            },
+            {
+              "family_id": "family-ms408-data-access",
+              "existing_scope": "Registration of a third-party public mirror (Artheon Museum Lab) hosting 213 Beinecke MS 408 scans and extended EVA/IVTFF transliterations (RF1b-e, IT2a, LSI), with a machine-readable catalogue, per-file SHA-256 hashes recorded by the contributor from a 2026-09-06 fetch, an agent-oriented llms.txt entry point, and a rights/provenance record distinguishing CC0-hosted material from the reference_only 1998 Stolfi EVT.",
+              "relationship": "distinct_outcome",
+              "reason": "Yale manifest/canvas indexing is supporting tooling reused from existing image access; no new image-hosting or catalogue claim is made here."
+            }
+          ],
+          "source_outcome_ids": [
+            "outcome-pldd-corpus-sta1-audit"
+          ],
+          "acceptance_test": "Run package tests; verify 227 page/panel records, 5,385 loci, uncertainty exclusion counts, H002/H003 audit disposition, and that composite Yale foldouts remain unresolved rather than guessed.",
+          "excluded_overlap": [
+            "Raw ZL/GC corpus acquisition and generic EVA parsing baseline (seed-corpus-parser).",
+            "Yale IIIF manifest/image access already registered under family-ms408-data-access.",
+            "Rediscovery of known gallows behavior (H001) claimed only as supporting context, not new credit."
+          ]
+        },
+        {
+          "family_id": "family-pldd-p001-edge-inventory",
+          "scope": "An exhaustive equal-cardinality edge-inventory discriminating-control pilot (P001) testing a selected one-prefix/two-suffix STA-family morphology parse against 5,082 alternative inventories, finding the selected inventory ranks only 2,309th (54.58th percentile, gate 95th), with disclosed same-session calibration/test inspection.",
+          "category": "experiments",
+          "predecessors": [],
+          "aliases": [],
+          "claimed_tier": 5,
+          "assessed_tier": 5,
+          "gate_evidence": [
+            {
+              "gate": "G1",
+              "status": "pass",
+              "evidence_refs": [
+                "experiments/pldd-evidence-suite/notes/pilots/P001-edge-morphology.md"
+              ],
+              "reason": "Tests a morphology/segmentation hypothesis directly."
+            },
+            {
+              "gate": "G2",
+              "status": "pass",
+              "evidence_refs": [
+                "experiments/pldd-evidence-suite/data/PROVENANCE.md"
+              ],
+              "reason": "Uses pinned CC0 STA1 ZL source."
+            },
+            {
+              "gate": "G3",
+              "status": "pass",
+              "evidence_refs": [
+                "experiments/pldd-evidence-suite/src/voynich/edge_morphology.py",
+                "experiments/pldd-evidence-suite/tests/test_edge_morphology.py",
+                "experiments/pldd-evidence-suite/results/p001-edge-morphology.json"
+              ],
+              "reason": "Executable pilot with actual command, inputs, and retained JSON output."
+            },
+            {
+              "gate": "G4",
+              "status": "pass",
+              "evidence_refs": [
+                "experiments/pldd-evidence-suite/notes/pilots/P001-edge-morphology.md"
+              ],
+              "reason": "Explicitly discloses non-preregistered, same-session calibration/test inspection as a limitation."
+            },
+            {
+              "gate": "G5",
+              "status": "pass",
+              "evidence_refs": [
+                "contributions/pldd-evidence-suite/rights.md"
+              ],
+              "reason": "Attribution and AI disclosure present."
+            },
+            {
+              "gate": "G6",
+              "status": "pass",
+              "evidence_refs": [
+                "contributions/pldd-evidence-suite/REPORT.md"
+              ],
+              "reason": "Distinguished from existing grammar/segmentation family scopes via explicit exclusion table."
+            },
+            {
+              "gate": "G7",
+              "status": "pass",
+              "evidence_refs": [
+                "experiments/pldd-evidence-suite/results/p001-edge-morphology.md"
+              ],
+              "reason": "Negative/failed result retained and reported honestly."
+            }
+          ],
+          "attribution_status": "verified",
+          "reason": "Informative controlled negative pilot with exhaustive equal-cardinality null; disclosed same-session exploratory limitation caps it below tier 10. Distinct mechanism/metric from the word-grammar-template family's edge control.",
+          "family_decision": "new",
+          "family_comparisons": [
+            {
+              "family_id": "family-generative-falsification-word-grammar-template",
+              "existing_scope": "A distinct generative-mechanism falsification pilot implementing Stolfi's published 2000 word grammar (core/mantle/crust unimodal-hill slot structure) as a template generator embedded in an entry/topic-carryover engine, and measuring two real-language positive controls (Culpeper's Complete Herbal 1653, Alice in Wonderland) with the identical metric suite against the pinned ZL3b corpus across 12 grid variants, showing (a) real language differs from the manuscript on conditional entropy, final-char entropy and entry-private vocabulary share, reframing prior 'unmatched by content-free generators' results away from a linguistic-content reading, and (b) the published grammar covers 86% of corpus word types with zero fitting and jointly reproduces vocabulary size, ttr, word length and page-sharing, leaving a residual mechanical-repetition signature (H2|1, final-char entropy, Zipf slope, entry-unique overshoot).",
+              "relationship": "distinct_outcome",
+              "reason": "Different mechanism (edge-slot morphology parse vs. word-grammar template generator) and different metric/null construction (equal-cardinality inventory ranking vs generator-comparison metric suite)."
+            }
+          ],
+          "source_outcome_ids": [
+            "outcome-pldd-p001-edge-inventory"
+          ],
+          "acceptance_test": "Run analyze_edge_morphology.py; reproduce rank 2,309/5,082 and failed 95th-percentile gate exactly.",
+          "excluded_overlap": [
+            "Does not claim credit for grammar/segmentation results in other generative-falsification families.",
+            "Does not claim illustration-linked vocabulary or byte-pair segmentation results in family-generative-falsification-discriminating-tests."
+          ]
+        },
+        {
+          "family_id": "family-pldd-h004-local-order-robustness",
+          "scope": "A preceding-ten-token exact/one-edit matched-permutation local-order screen (H004) across 33 reserved pages and 2,072 targets showing a statistically significant static order effect (delta 0.0504/0.0379, p 0.0001/0.0003), together with the complete disclosed follow-up sequence: a retracted invalid Markov-surrogate design (B-v1), an executed teacher-forced contextual comparator (B-v2) that fails its own validity gates and is therefore inconclusive, and a cross-transcription STA-family robustness check (H004-C) that fails the frozen breadth gate at only 648 targets and also fails its already-exposed effect gates.",
+          "category": "experiments",
+          "predecessors": [],
+          "aliases": [],
+          "claimed_tier": 5,
+          "assessed_tier": 5,
+          "gate_evidence": [
+            {
+              "gate": "G1",
+              "status": "pass",
+              "evidence_refs": [
+                "experiments/pldd-evidence-suite/notes/hypotheses/H004-local-preceding-context.md"
+              ],
+              "reason": "Tests statistical-structure/local-order research question directly."
+            },
+            {
+              "gate": "G2",
+              "status": "pass",
+              "evidence_refs": [
+                "experiments/pldd-evidence-suite/data/PROVENANCE.md"
+              ],
+              "reason": "Pinned CC0 ZL3b source with hash."
+            },
+            {
+              "gate": "G3",
+              "status": "pass",
+              "evidence_refs": [
+                "experiments/pldd-evidence-suite/src/voynich/local_order.py",
+                "experiments/pldd-evidence-suite/src/voynich/contextual_comparator.py",
+                "experiments/pldd-evidence-suite/src/voynich/h004c.py",
+                "experiments/pldd-evidence-suite/results/h004-local-order.json",
+                "experiments/pldd-evidence-suite/results/h004b2-contextual-comparator.json",
+                "experiments/pldd-evidence-suite/results/h004c-zg-discovery-manifest.json"
+              ],
+              "reason": "Complete executed pipeline with retained JSON/markdown outputs and rebuild verification."
+            },
+            {
+              "gate": "G4",
+              "status": "pass",
+              "evidence_refs": [
+                "experiments/pldd-evidence-suite/notes/hypotheses/H004B2-contextual-comparator.md",
+                "experiments/pldd-evidence-suite/notes/hypotheses/H004C-cross-transcription-sta.md"
+              ],
+              "reason": "Explicit statement that static order effect does not establish mechanism; failed gates disclosed."
+            },
+            {
+              "gate": "G5",
+              "status": "pass",
+              "evidence_refs": [
+                "contributions/pldd-evidence-suite/rights.md"
+              ],
+              "reason": "Attribution/AI disclosure present."
+            },
+            {
+              "gate": "G6",
+              "status": "pass",
+              "evidence_refs": [
+                "contributions/pldd-evidence-suite/REPORT.md"
+              ],
+              "reason": "Distinguished from seed-baseline-position and generative-falsification pilots via exclusion table."
+            },
+            {
+              "gate": "G7",
+              "status": "pass",
+              "evidence_refs": [
+                "experiments/pldd-evidence-suite/notes/hypotheses/H004B-markov-surrogates.md"
+              ],
+              "reason": "Retracted invalid design retained as an audit record rather than concealed."
+            }
+          ],
+          "attribution_status": "verified",
+          "reason": "A reproducible bounded local-order screen with full contrary-evidence disclosure. The static result alone might approach tier 10 anchor, but the bundled sequence's own conclusion states mechanism remains unvalidated and two follow-up tests are inconclusive/failed; tier 5 is the highest fully supported level given the contribution's own stated limits.",
+          "family_decision": "new",
+          "family_comparisons": [
+            {
+              "family_id": "seed-baseline-position",
+              "existing_scope": "P0 locus position/repetition and within-locus shuffle diagnostics.",
+              "relationship": "distinct_outcome",
+              "reason": "Seed measures general adjacent repetition/shuffle; this is a specific preceding-ten-token matched-null screen with a distinct permutation cell design and full Markov/cross-transcription follow-up sequence not in seed scope."
+            }
+          ],
+          "source_outcome_ids": [
+            "outcome-pldd-h004-local-order-robustness"
+          ],
+          "acceptance_test": "Rebuild H004/H004-B-v2/H004-C; verify static deltas 0.0504/0.0379 (p 0.0001/0.0003), B-v2 invalidity, and H004-C's 648-target breadth failure with reported effect-gate results.",
+          "excluded_overlap": [
+            "Does not claim general copy-generation mechanism identification.",
+            "Does not duplicate seed-baseline-position's shuffle diagnostic scope."
+          ]
+        },
+        {
+          "family_id": "family-pldd-h005-coordinate-label-retrieval",
+          "scope": "A new exact-coordinate label-to-whole-herbal retrieval benchmark derived from 35 q15/q19 source claims (17 strict ZL/GC pairs, 5 held-out pairs), using a locked BM25 retrieval model selected on discovery data, tested against a selection-adjusted matched null; all statistical advancement gates fail (MRR delta 0.1435, p=0.0568; top-3 p=0.1592) and a distinct-target identity-collision gate also fails (AQABBA maps to both f44 and f57).",
+          "category": "experiments",
+          "predecessors": [],
+          "aliases": [],
+          "claimed_tier": 5,
+          "assessed_tier": 5,
+          "gate_evidence": [
+            {
+              "gate": "G1",
+              "status": "pass",
+              "evidence_refs": [
+                "experiments/pldd-evidence-suite/notes/hypotheses/H005-pharmaceutical-plant-anchors.md"
+              ],
+              "reason": "Directly tests semantic-multimodal text-image association hypothesis."
+            },
+            {
+              "gate": "G2",
+              "status": "pass",
+              "evidence_refs": [
+                "experiments/pldd-evidence-suite/data/PROVENANCE.md"
+              ],
+              "reason": "Source-claim pages cited with retrieval hash/date, not redistributed; ZL/GC pinned CC0."
+            },
+            {
+              "gate": "G3",
+              "status": "pass",
+              "evidence_refs": [
+                "experiments/pldd-evidence-suite/src/voynich/plant_anchors.py",
+                "experiments/pldd-evidence-suite/results/h005-plant-anchors.json",
+                "experiments/pldd-evidence-suite/tests/test_plant_anchors.py"
+              ],
+              "reason": "Full executed pipeline with retained results and tests."
+            },
+            {
+              "gate": "G4",
+              "status": "pass",
+              "evidence_refs": [
+                "experiments/pldd-evidence-suite/results/h005-plant-anchors.md"
+              ],
+              "reason": "Explicit statistical failure and identity-collision disclosure."
+            },
+            {
+              "gate": "G5",
+              "status": "pass",
+              "evidence_refs": [
+                "contributions/pldd-evidence-suite/rights.md"
+              ],
+              "reason": "Attribution/AI disclosure present."
+            },
+            {
+              "gate": "G6",
+              "status": "pass",
+              "evidence_refs": [
+                "contributions/pldd-evidence-suite/REPORT.md"
+              ],
+              "reason": "Explicitly excludes overlap with upstream T1 illustration-vocabulary test."
+            },
+            {
+              "gate": "G7",
+              "status": "pass",
+              "evidence_refs": [
+                "experiments/pldd-evidence-suite/results/h005-plant-anchors.md"
+              ],
+              "reason": "Full failure reported, not selectively presented."
+            }
+          ],
+          "attribution_status": "verified",
+          "reason": "A reusable annotated retrieval benchmark and informative negative bounded pilot; five held-out pairs and non-blinded source-claim gold limit this below tier 10.",
+          "family_decision": "new",
+          "family_comparisons": [
+            {
+              "family_id": "family-generative-falsification-discriminating-tests",
+              "existing_scope": "Two newly executed pre-registered discriminating tests against the pinned ZL3b corpus: (T2) a data-chosen byte-pair-merge re-segmentation test (hypothesis contributed by V. Gnuchev) showing the manuscript's H2|1 letter-pair anomaly is SEGMENTATION-DEPENDENT under a frozen decision rule -- at 40-60 symbol alphabets the gap to the lowest-entropy control language closes to 0.07-0.15 bits, with caveats that the crossover language (Greek) has an already-large raw alphabet (45 symbols), the gap against Latin/Finnish/Italian/English stays 0.2-0.6 bits at that size, and the association-merge criterion closes the gap less (0.21 bits); and (T1) the first executed illustration-linked-vocabulary test (editorial same-plant/similar-plant identifications vs text-sharing) across 12 same-plant and 28 similar-plant pairs with permutation and distance-matched nulls, found UNDERPOWERED because its own Culpeper positive control fails (p=0.44), with an exploratory size-corrected content-word lift statistic identified as the form that would give the test power.",
+              "relationship": "distinct_outcome",
+              "reason": "T1 tests editorial same/similar-plant identification via text-sharing vocabulary across all herbal pages; H005 tests an exact-coordinate Lf-label retrieval to a specific claimed whole-herbal target using BM25 over a disjoint 35-claim source ledger. Different claim universe, different retrieval mechanism, different null (target-reassignment vs permutation), and no shared credited result."
+            }
+          ],
+          "source_outcome_ids": [
+            "outcome-pldd-h005-coordinate-label-retrieval"
+          ],
+          "acceptance_test": "Rebuild H005; verify 17 strict pairs, held-out MRR 0.33991087 vs null 0.19643035 (p=0.0568), AQABBA collision, and unopened IT prose.",
+          "excluded_overlap": [
+            "Does not claim upstream T1's illustration-linked-vocabulary result or its own novelty as first plant-association test.",
+            "Does not assign species or reject general label-meaning hypotheses."
+          ]
+        },
+        {
+          "family_id": "family-pldd-h006-fr3-line-rejection",
+          "scope": "An exact necessary-condition screen testing two explicit fixed-three-trit component tables (PAIR, OPTIONAL_E) under independent per-line phase-zero reset against 919 discovery lines, rejecting both models outright (598/593 contradictions) with held-out residues (266 lines) left uncomputed per the frozen advancement rule.",
+          "category": "experiments",
+          "predecessors": [],
+          "aliases": [],
+          "claimed_tier": 5,
+          "assessed_tier": 5,
+          "gate_evidence": [
+            {
+              "gate": "G1",
+              "status": "pass",
+              "evidence_refs": [
+                "experiments/pldd-evidence-suite/notes/hypotheses/H006-FR3-line-reset-ternary-code.md"
+              ],
+              "reason": "Tests a specific cipher/generative mechanism hypothesis."
+            },
+            {
+              "gate": "G2",
+              "status": "pass",
+              "evidence_refs": [
+                "experiments/pldd-evidence-suite/data/PROVENANCE.md"
+              ],
+              "reason": "Pinned CC0 ZL/IT sources with hashes."
+            },
+            {
+              "gate": "G3",
+              "status": "pass",
+              "evidence_refs": [
+                "experiments/pldd-evidence-suite/src/voynich/ternary_frame.py",
+                "experiments/pldd-evidence-suite/results/h006-fr3-line-reset.json",
+                "experiments/pldd-evidence-suite/tests/test_ternary_frame.py"
+              ],
+              "reason": "Complete executed diagnostic with retained results and tests."
+            },
+            {
+              "gate": "G4",
+              "status": "pass",
+              "evidence_refs": [
+                "experiments/pldd-evidence-suite/notes/hypotheses/H006-FR3-line-reset-ternary-code-outcome.md"
+              ],
+              "reason": "Explicit scope: rejects only the specific tested conjunction, not the broader Matlach hypothesis."
+            },
+            {
+              "gate": "G5",
+              "status": "pass",
+              "evidence_refs": [
+                "contributions/pldd-evidence-suite/rights.md"
+              ],
+              "reason": "Attribution/AI disclosure present."
+            },
+            {
+              "gate": "G6",
+              "status": "pass",
+              "evidence_refs": [
+                "contributions/pldd-evidence-suite/REPORT.md"
+              ],
+              "reason": "No existing family tests this specific construction; explicitly new."
+            },
+            {
+              "gate": "G7",
+              "status": "pass",
+              "evidence_refs": [
+                "experiments/pldd-evidence-suite/notes/hypotheses/H006-FR3-line-reset-ternary-code.md"
+              ],
+              "reason": "Pre-freeze contamination disclosure and no selective reporting."
+            }
+          ],
+          "attribution_status": "verified",
+          "reason": "Executed exact deterministic necessary-condition diagnostic with reproducible controls and narrow, honestly bounded failure scope; solidly a tier-5 informative negative result.",
+          "family_decision": "new",
+          "family_comparisons": [],
+          "source_outcome_ids": [
+            "outcome-pldd-h006-fr3-line-rejection"
+          ],
+          "acceptance_test": "Rebuild H006; verify residue histograms 321/297/301 and 326/303/290, rejection of both models, and sealed 266-line holdout.",
+          "excluded_overlap": []
+        },
+        {
+          "family_id": "family-pldd-h007-published-key-coverage",
+          "scope": "A literal fixed-key coverage/ambiguity diagnostic applying Greshko's published Naibbe reverse table and decoder literally (BASIC=True, MARK_COMPOUND=True) to a strict ZL/IT-consensus herbal corpus of 2,341 discovery occurrences, finding both the generator-membership gate (X=495) and unique-output gate (BA=82, CA=3) fail, with a table-only closure audit proving that adding arbitrary deleted-boundary compounding cannot rescue unique decoding (14,648/18,947 atomic strings admit a distinct multi-atom decoding).",
+          "category": "experiments",
+          "predecessors": [],
+          "aliases": [],
+          "claimed_tier": 5,
+          "assessed_tier": 5,
+          "gate_evidence": [
+            {
+              "gate": "G1",
+              "status": "pass",
+              "evidence_refs": [
+                "experiments/pldd-evidence-suite/notes/hypotheses/H007-PK23-published-key-coverage.md"
+              ],
+              "reason": "Tests replication-decipherment/cipher-benchmark research question."
+            },
+            {
+              "gate": "G2",
+              "status": "pass",
+              "evidence_refs": [
+                "contributions/pldd-evidence-suite/rights.md"
+              ],
+              "reason": "Naibbe vendor files pinned with MIT license and required citation compliance."
+            },
+            {
+              "gate": "G3",
+              "status": "pass",
+              "evidence_refs": [
+                "experiments/pldd-evidence-suite/src/voynich/naibbe_coverage.py",
+                "experiments/pldd-evidence-suite/results/h007-pk23-coverage.json",
+                "experiments/pldd-evidence-suite/tests/test_naibbe_coverage.py"
+              ],
+              "reason": "Complete executed pipeline with Stage-0 author control validation and retained results."
+            },
+            {
+              "gate": "G4",
+              "status": "pass",
+              "evidence_refs": [
+                "experiments/pldd-evidence-suite/notes/hypotheses/H007-forward-closure-feasibility.md"
+              ],
+              "reason": "Explicit scope limiting rejection to the literal published decoder/table, not the broader Naibbe mechanism."
+            },
+            {
+              "gate": "G5",
+              "status": "pass",
+              "evidence_refs": [
+                "contributions/pldd-evidence-suite/rights.md"
+              ],
+              "reason": "Attribution/AI disclosure and required publication citation present."
+            },
+            {
+              "gate": "G6",
+              "status": "pass",
+              "evidence_refs": [
+                "contributions/pldd-evidence-suite/REPORT.md"
+              ],
+              "reason": "New diagnostic; no existing family tests this literal decoder."
+            },
+            {
+              "gate": "G7",
+              "status": "pass",
+              "evidence_refs": [
+                "experiments/pldd-evidence-suite/notes/hypotheses/H007-PK23-published-key-coverage-outcome.md"
+              ],
+              "reason": "Full negative result and held-out sealing reported honestly."
+            }
+          ],
+          "attribution_status": "verified",
+          "reason": "Usable diagnostic and bounded negative case study with independent code audit corroborating the negative result; solid tier 5.",
+          "family_decision": "new",
+          "family_comparisons": [],
+          "source_outcome_ids": [
+            "outcome-pldd-h007-published-key-coverage"
+          ],
+          "acceptance_test": "Run author-control and Naibbe coverage tests; verify classes U=797 B1=937 BA=82 C1=27 CA=3 X=495, held-out sealed, and forward-closure audit's 14,648/18,947 collision figures.",
+          "excluded_overlap": [
+            "Does not reject the general Naibbe ciphertext-compatibility thesis or Greshko's own claims, which he never made about manuscript decipherment."
+          ]
+        }
+      ],
+      "inspected_paths": [
+        "contributions/pldd-evidence-suite/REPORT.md",
+        "contributions/pldd-evidence-suite/SUBMISSION-CHECKS.md",
+        "contributions/pldd-evidence-suite/contribution.yaml",
+        "contributions/pldd-evidence-suite/preflight.json",
+        "contributions/pldd-evidence-suite/rights.md",
+        "experiments/pldd-evidence-suite/PUBLICATION-CHANGES.md",
+        "experiments/pldd-evidence-suite/README.md",
+        "experiments/pldd-evidence-suite/SHA256SUMS.txt",
+        "experiments/pldd-evidence-suite/data/PROVENANCE.md",
+        "experiments/pldd-evidence-suite/data/derived/h005-source-anchor-manifest.json",
+        "experiments/pldd-evidence-suite/data/derived/yale-canvas-index.json",
+        "experiments/pldd-evidence-suite/data/raw/external/naibbe-f2675ec/LICENSE",
+        "experiments/pldd-evidence-suite/data/raw/external/naibbe-f2675ec/README.md",
+        "experiments/pldd-evidence-suite/data/raw/external/naibbe-f2675ec/decrypt_naibbe.py",
+        "experiments/pldd-evidence-suite/data/raw/external/naibbe-f2675ec/decrypted/examples/endofpaper_decrypted.txt",
+        "experiments/pldd-evidence-suite/data/raw/external/naibbe-f2675ec/decrypted/examples/gallic_decrypted.txt",
+        "experiments/pldd-evidence-suite/data/raw/external/naibbe-f2675ec/decrypted/nathist_output_ciphertext_decrypted.txt",
+        "experiments/pldd-evidence-suite/data/raw/external/naibbe-f2675ec/encrypted/examples/endofpaper.txt",
+        "experiments/pldd-evidence-suite/data/raw/external/naibbe-f2675ec/encrypted/examples/gallic_naibbe.txt",
+        "experiments/pldd-evidence-suite/data/raw/external/naibbe-f2675ec/encrypted/nathist_output_ciphertext.txt",
+        "experiments/pldd-evidence-suite/data/raw/external/naibbe-f2675ec/naibbe.py",
+        "experiments/pldd-evidence-suite/data/raw/external/naibbe-f2675ec/references/naibbe_tables.csv",
+        "experiments/pldd-evidence-suite/data/raw/iiif/yale-ms-408.json",
+        "experiments/pldd-evidence-suite/data/raw/transcriptions/GC2a-n.txt",
+        "experiments/pldd-evidence-suite/data/raw/transcriptions/IT2a-n.txt",
+        "experiments/pldd-evidence-suite/data/raw/transcriptions/RF1b-e.txt",
+        "experiments/pldd-evidence-suite/data/raw/transcriptions/RF1b-er.txt",
+        "experiments/pldd-evidence-suite/data/raw/transcriptions/ZL3b-n.txt",
+        "experiments/pldd-evidence-suite/data/raw/transcriptions/sta1/GC2a_0.txt",
+        "experiments/pldd-evidence-suite/data/raw/transcriptions/sta1/IT2a.txt",
+        "experiments/pldd-evidence-suite/data/raw/transcriptions/sta1/ZL3b.txt",
+        "experiments/pldd-evidence-suite/notes/evidence-constraints.md",
+        "experiments/pldd-evidence-suite/notes/hypotheses/H001-paragraph-initial-gallows.md",
+        "experiments/pldd-evidence-suite/notes/hypotheses/H002-local-label-recurrence.md",
+        "experiments/pldd-evidence-suite/notes/hypotheses/H003-locus-shared-family-label-recurrence.md",
+        "experiments/pldd-evidence-suite/notes/hypotheses/H004-local-preceding-context.md",
+        "experiments/pldd-evidence-suite/notes/hypotheses/H004B-markov-surrogates.md",
+        "experiments/pldd-evidence-suite/notes/hypotheses/H004B2-contextual-comparator.md",
+        "experiments/pldd-evidence-suite/notes/hypotheses/H004C-cross-transcription-sta.md",
+        "experiments/pldd-evidence-suite/notes/hypotheses/H005-pharmaceutical-plant-anchors.md",
+        "experiments/pldd-evidence-suite/notes/hypotheses/H006-FR3-line-reset-ternary-code-outcome.md",
+        "experiments/pldd-evidence-suite/notes/hypotheses/H006-FR3-line-reset-ternary-code.md",
+        "experiments/pldd-evidence-suite/notes/hypotheses/H007-PK23-published-key-coverage-outcome.md",
+        "experiments/pldd-evidence-suite/notes/hypotheses/H007-PK23-published-key-coverage.md",
+        "experiments/pldd-evidence-suite/notes/hypotheses/H007-forward-closure-feasibility.md",
+        "experiments/pldd-evidence-suite/notes/pilots/P001-edge-morphology.md",
+        "experiments/pldd-evidence-suite/notes/research-log.md",
+        "experiments/pldd-evidence-suite/pyproject.toml",
+        "experiments/pldd-evidence-suite/results/baseline-zl3b.json",
+        "experiments/pldd-evidence-suite/results/baseline-zl3b.md",
+        "experiments/pldd-evidence-suite/results/h004-local-order.json",
+        "experiments/pldd-evidence-suite/results/h004-local-order.md",
+        "experiments/pldd-evidence-suite/results/h004b2-contextual-comparator.json",
+        "experiments/pldd-evidence-suite/results/h004b2-contextual-comparator.md",
+        "experiments/pldd-evidence-suite/results/h004c-zg-discovery-manifest.json",
+        "experiments/pldd-evidence-suite/results/h004c-zg-discovery-manifest.sha256.txt",
+        "experiments/pldd-evidence-suite/results/h004c-zg-discovery.md",
+        "experiments/pldd-evidence-suite/results/h005-plant-anchors.json",
+        "experiments/pldd-evidence-suite/results/h005-plant-anchors.md",
+        "experiments/pldd-evidence-suite/results/h005-plant-anchors.sha256.txt",
+        "experiments/pldd-evidence-suite/results/h006-fr3-line-reset.json",
+        "experiments/pldd-evidence-suite/results/h006-fr3-line-reset.md",
+        "experiments/pldd-evidence-suite/results/h006-fr3-line-reset.sha256.txt",
+        "experiments/pldd-evidence-suite/results/h007-pk23-coverage.json",
+        "experiments/pldd-evidence-suite/results/h007-pk23-coverage.md",
+        "experiments/pldd-evidence-suite/results/h007-pk23-coverage.sha256.txt",
+        "experiments/pldd-evidence-suite/results/p001-edge-morphology.json",
+        "experiments/pldd-evidence-suite/results/p001-edge-morphology.md",
+        "experiments/pldd-evidence-suite/scripts/analyze_contextual_comparator.py",
+        "experiments/pldd-evidence-suite/scripts/analyze_corpus.py",
+        "experiments/pldd-evidence-suite/scripts/analyze_edge_morphology.py",
+        "experiments/pldd-evidence-suite/scripts/analyze_h004c_zg.py",
+        "experiments/pldd-evidence-suite/scripts/analyze_h005_plant_anchors.py",
+        "experiments/pldd-evidence-suite/scripts/analyze_h006_fr3.py",
+        "experiments/pldd-evidence-suite/scripts/analyze_h007_pk23.py",
+        "experiments/pldd-evidence-suite/scripts/analyze_local_order.py",
+        "experiments/pldd-evidence-suite/scripts/build_folio_index.py",
+        "experiments/pldd-evidence-suite/scripts/verify_publication.py",
+        "experiments/pldd-evidence-suite/src/voynich/__init__.py",
+        "experiments/pldd-evidence-suite/src/voynich/analysis.py",
+        "experiments/pldd-evidence-suite/src/voynich/contextual_comparator.py",
+        "experiments/pldd-evidence-suite/src/voynich/edge_morphology.py",
+        "experiments/pldd-evidence-suite/src/voynich/h004c.py",
+        "experiments/pldd-evidence-suite/src/voynich/iiif.py",
+        "experiments/pldd-evidence-suite/src/voynich/ivtff.py",
+        "experiments/pldd-evidence-suite/src/voynich/local_order.py",
+        "experiments/pldd-evidence-suite/src/voynich/naibbe_coverage.py",
+        "experiments/pldd-evidence-suite/src/voynich/plant_anchors.py",
+        "experiments/pldd-evidence-suite/src/voynich/ternary_frame.py",
+        "experiments/pldd-evidence-suite/tests/test_contextual_comparator.py",
+        "experiments/pldd-evidence-suite/tests/test_edge_morphology.py",
+        "experiments/pldd-evidence-suite/tests/test_generated_results.py",
+        "experiments/pldd-evidence-suite/tests/test_h004c.py",
+        "experiments/pldd-evidence-suite/tests/test_iiif.py",
+        "experiments/pldd-evidence-suite/tests/test_ivtff.py",
+        "experiments/pldd-evidence-suite/tests/test_local_order.py",
+        "experiments/pldd-evidence-suite/tests/test_naibbe_coverage.py",
+        "experiments/pldd-evidence-suite/tests/test_plant_anchors.py",
+        "experiments/pldd-evidence-suite/tests/test_provenance.py",
+        "experiments/pldd-evidence-suite/tests/test_ternary_frame.py",
+        "experiments/pldd-evidence-suite/verification/publication-transforms.json",
+        "experiments/pldd-evidence-suite/verification/rebuilds/analyze_contextual_comparator.txt",
+        "experiments/pldd-evidence-suite/verification/rebuilds/analyze_corpus.txt",
+        "experiments/pldd-evidence-suite/verification/rebuilds/analyze_edge_morphology.txt",
+        "experiments/pldd-evidence-suite/verification/rebuilds/analyze_h004c_zg.txt",
+        "experiments/pldd-evidence-suite/verification/rebuilds/analyze_h005_plant_anchors.txt",
+        "experiments/pldd-evidence-suite/verification/rebuilds/analyze_h006_fr3.txt",
+        "experiments/pldd-evidence-suite/verification/rebuilds/analyze_h007_pk23.txt",
+        "experiments/pldd-evidence-suite/verification/rebuilds/analyze_local_order.txt",
+        "experiments/pldd-evidence-suite/verification/rebuilds/build_folio_index.txt",
+        "experiments/pldd-evidence-suite/verification/rebuilds/initial-record.json",
+        "experiments/pldd-evidence-suite/verification/rebuilds/record.json",
+        "experiments/pldd-evidence-suite/verification/record.json",
+        "experiments/pldd-evidence-suite/verification/source-byte-audit.json",
+        "experiments/pldd-evidence-suite/verification/tests/h007-rebuilt-report.json",
+        "experiments/pldd-evidence-suite/verification/tests/h007-runtime-delta.json",
+        "experiments/pldd-evidence-suite/verification/tests/rerun-status.json",
+        "experiments/pldd-evidence-suite/verification/tests/rerun-stderr.txt",
+        "experiments/pldd-evidence-suite/verification/tests/rerun-stdout.txt",
+        "experiments/pldd-evidence-suite/verification/tests/status.json",
+        "experiments/pldd-evidence-suite/verification/tests/stderr.txt",
+        "experiments/pldd-evidence-suite/verification/tests/stdout.txt",
+        "research/context-index.json"
+      ],
+      "inspection_gaps": [],
+      "next_action": "Accept as submitted at the assessed tiers (5 for each of the six distinct outcomes). No revisions required for admission. If a higher tier is sought for any outcome, provide independently authenticated execution receipts or a pristine (non-same-session) holdout to satisfy the tier-10 discriminating-experiment anchor.",
+      "appeal_route": "File a correction request citing the specific outcome family, contested gate, and supplementary evidence (e.g., independent replication or execution receipts); reassessment follows the published correction/appeal process, not resubmission alone."
+    },
+    "stages": [
+      {
+        "stage": "adjudicator",
+        "provider": "anthropic",
+        "model": "claude-sonnet-5",
+        "exposed_version": "claude-sonnet-5",
+        "prompt_digest": "3ac376832653ada8f4972a5bab2767dbf81b4f32c086e9f8159d763ef2795742",
+        "response_digest": "d284b4c750d2173416c7cc649ca11f6fc5bb056a46b5d0b8190ff9d09371d2cb",
+        "started_at": "2026-09-09T01:38:29.790Z",
+        "completed_at": "2026-09-09T01:41:51.828Z",
+        "usage": {
+          "sessions": 1,
+          "input_bytes": 1159980,
+          "output_bytes": 140738,
+          "runtime_ms": 201219
+        },
+        "receipt_ref": "stage-results/job-a34c7a1858bbeb7cb222baa25d2434175cda128a/adjudicator.json"
+      },
+      {
+        "stage": "adversary",
+        "provider": "anthropic",
+        "model": "claude-sonnet-5",
+        "exposed_version": "claude-sonnet-5",
+        "prompt_digest": "d8c53d6e98a335d9e9d5560fab1cc8da2f331ad84cdc06fb24bb32afa70a3581",
+        "response_digest": "1cea55e0cce6a3ca34b83d8be743d1b6b1be02c02883762f04b745c40044bfee",
+        "started_at": "2026-09-09T01:34:07.613Z",
+        "completed_at": "2026-09-09T01:37:27.107Z",
+        "usage": {
+          "sessions": 1,
+          "input_bytes": 1099123,
+          "output_bytes": 125730,
+          "runtime_ms": 198430
+        },
+        "receipt_ref": "stage-results/job-a34c7a1858bbeb7cb222baa25d2434175cda128a/adversary.json"
+      },
+      {
+        "stage": "assessor",
+        "provider": "anthropic",
+        "model": "claude-sonnet-5",
+        "exposed_version": "claude-sonnet-5",
+        "prompt_digest": "1441a519ced3143ff5f1787c11755d22b9c3498ed18ad91397fd7c0a7f8ad108",
+        "response_digest": "4554c6badbaf5868a9f5e5e34fb0281f9870bf1b6acecfaa24118efcd97ab5e8",
+        "started_at": "2026-09-09T01:27:44.925Z",
+        "completed_at": "2026-09-09T01:33:07.452Z",
+        "usage": {
+          "sessions": 1,
+          "input_bytes": 1099004,
+          "output_bytes": 193790,
+          "runtime_ms": 321530
+        },
+        "receipt_ref": "stage-results/job-a34c7a1858bbeb7cb222baa25d2434175cda128a/assessor.json"
+      }
+    ],
+    "disagreements": [
+      "Material independent-assessment disagreement or invalid proposal."
+    ],
+    "holds": [],
+    "reused_assessment_id": null
+  },
+  "receipt": {
+    "schema_version": "1.0",
+    "id": "receipt:job-a34c7a1858bbeb7cb222baa25d2434175cda128a",
+    "key_id": "voynich-2026-09-06",
+    "issued_at": "2026-09-09T01:46:23.768Z",
+    "payload": {
+      "repository_id": 1359336540,
+      "events_digest": "9876049881ee2c0e475a2112fa7ec3c0972f8da001aa8362e0492a8ddcda5e13",
+      "milestones_digest": "fa8d3aabd77cba7037a18f548a8383d00a81a4bd93b307a5312c50cd73218ee1",
+      "families_digest": "38f217d82d75412d645a831594dc335817c3859e5b153b23568858c06d13fd5b",
+      "merge_sha": "e00e3b8fef3a81a972a3876ce1d1d801993a11c2",
+      "assessed_head": "9bf09159589e6bd13894e19f7c405760f4178b07",
+      "artifact_digest": "a34c7a1858bbeb7cb222baa25d2434175cda128a9ed56dfeec4ca9eead4283e0",
+      "profile_digest": "3c3123ca26e1e41f8b8a8b6eb090bebcad35d428965e989fd8548445e6175a06",
+      "report_digest": "664bd417a7b2c88583ee85b408688a84c317532c146e8bb0dd3d51b1435fd60a",
+      "stage_receipt_refs": [
+        "stage-results/job-a34c7a1858bbeb7cb222baa25d2434175cda128a/adjudicator.json",
+        "stage-results/job-a34c7a1858bbeb7cb222baa25d2434175cda128a/adversary.json",
+        "stage-results/job-a34c7a1858bbeb7cb222baa25d2434175cda128a/assessor.json"
+      ]
+    },
+    "payload_digest": "18faeb2e6dec4cbe5f59af688f578a7cccde1dd12bac0215bb7e65e4c011ec18",
+    "signature": "F-nc9JYhlLwrAdlZW_O8RQYCS4wcwEl8D4s-hXMiSAk2b_ynU4QhjTq-fhmp6XklNhgXq58LUzYEeESqliZgAw"
+  }
+}
