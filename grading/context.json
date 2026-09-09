@@ -200,6 +200,24 @@
       "seed_baseline": 0
     },
     {
+      "id": "family-generative-falsification-meaning-probes",
+      "rubric_version": "0.1",
+      "scope": "Six pre-registered, adversarially-verified 'meaning probes' at the glyph-unit level (fixed by the frozen 20-merge byte-pair re-segmentation from a prior discriminating-tests result) testing whether the zodiac nymph labels form a numeral system (Z1 ordinal gradient, Z2 same-slot correspondence, Z3 fixed inventory, Z4 positional morphology), whether Recipes paragraph openers carry an entry-word formula (R1) or the drawn stars index text (R2), and whether label register vs running-text morphology shows a name/grammar split (L1). All six gates fail under the frozen decision rule; Z4's own JSON PASS is overridden to FAIL by a disclosed erratum after adversarial review found the passing statistic depended on an unregistered remainder convention and an unregistered seed. The report measures detection floors for each null result and identifies one non-registered observation (q-initial depletion of labels) explicitly not claimed as a finding. 34 adversarial verifier scripts materially corrected several claims in the original test outputs.",
+      "acceptance_test": "Run t_z1.py, t_z2z3.py, t_z4.py, t_r1r2.py, t_l1.py from experiments/meaning-probes/; confirm results/*.json match the reported verdicts (Z1/Z2/Z3/Z4 all FAIL per REPORT.md's erratum overriding the raw Z4 JSON PASS, R1a PASS with no meaning claim attached, R1b NOT MEASURABLE, R1c/R2/L1 FAIL), and that REPORT.md's adversarial-review table accounts for all 34 verifier script outputs and their corrections.",
+      "aliases": [],
+      "predecessor_family_ids": [],
+      "excluded_overlap": [
+        "Does not claim credit for the pinned ZL3b/GC2a corpus or parser (seed-corpus-parser), used only as input.",
+        "Does not claim or duplicate the clean-parser contamination audit, alphabet-normalization test, cipher-reconstruction, or permutation-null confound findings credited under family-generative-falsification-adversarial-audit.",
+        "Does not claim the byte-pair-merge segmentation-dependence result (T2) or illustration-linked-vocabulary test (T1) credited under family-generative-falsification-discriminating-tests.",
+        "Does not claim or extend the Cardan table-and-grille (M5a/M5b) mechanism experiment credited under family-generative-falsification.",
+        "Does not claim the Stolfi word-grammar template generator or its Culpeper/Alice measurements credited under family-generative-falsification-word-grammar-template.",
+        "Does not claim the M1/M2 syllable-table/self-citation pilot or the M3 per-page entry/topic-carryover generator credited under their respective families."
+      ],
+      "seed": false,
+      "seed_baseline": 0
+    },
+    {
       "id": "family-generative-falsification-doodler",
       "rubric_version": "0.1",
       "scope": "A distinct generative-mechanism falsification pilot testing content-free syllable-table (Rugg-style, M1) and self-citation/preferential-reuse (Schinner-style, M2) generators against the pinned ZL3b corpus across 27 M2 grid variants plus M0/M1 baselines on 10 quantitative metrics, identifying which corpus properties (ttr, H1, vocabulary growth) are reproducible content-free and which (H2|1, word-final entropy, Zipf slope) are not, plus a diagnostic finding on verbatim-reuse rate needed to avoid type-explosion.",
@@ -314,19 +332,82 @@
       "seed_baseline": 0
     },
     {
-      "id": "family-generative-falsification-meaning-probes",
+      "id": "family-pldd-corpus-sta1-audit",
       "rubric_version": "0.1",
-      "scope": "Six pre-registered, adversarially-verified 'meaning probes' at the glyph-unit level (fixed by the frozen 20-merge byte-pair re-segmentation from a prior discriminating-tests result) testing whether the zodiac nymph labels form a numeral system (Z1 ordinal gradient, Z2 same-slot correspondence, Z3 fixed inventory, Z4 positional morphology), whether Recipes paragraph openers carry an entry-word formula (R1) or the drawn stars index text (R2), and whether label register vs running-text morphology shows a name/grammar split (L1). All six gates fail under the frozen decision rule; Z4's own JSON PASS is overridden to FAIL by a disclosed erratum after adversarial review found the passing statistic depended on an unregistered remainder convention and an unregistered seed. The report measures detection floors for each null result and identifies one non-registered observation (q-initial depletion of labels) explicitly not claimed as a finding. 34 adversarial verifier scripts materially corrected several claims in the original test outputs.",
-      "acceptance_test": "Run t_z1.py, t_z2z3.py, t_z4.py, t_r1r2.py, t_l1.py from experiments/meaning-probes/; confirm results/*.json match the reported verdicts (Z1/Z2/Z3/Z4 all FAIL per REPORT.md's erratum overriding the raw Z4 JSON PASS, R1a PASS with no meaning claim attached, R1b NOT MEASURABLE, R1c/R2/L1 FAIL), and that REPORT.md's adversarial-review table accounts for all 34 verifier script outputs and their corrections.",
+      "scope": "A second source-retaining IVTFF/STA1 implementation with explicit uncertainty exclusions, reproducible ZL/GC STA1 locus/family agreement and attrition audits (H001-H003), and a conservative Yale canvas index preserving composite/partial-foldout ambiguity rather than guessing mappings.",
+      "acceptance_test": "Run package tests; verify 227 page/panel records, 5,385 loci, uncertainty exclusion counts, H002/H003 audit disposition, and that composite Yale foldouts remain unresolved rather than guessed.",
       "aliases": [],
       "predecessor_family_ids": [],
       "excluded_overlap": [
-        "Does not claim credit for the pinned ZL3b/GC2a corpus or parser (seed-corpus-parser), used only as input.",
-        "Does not claim or duplicate the clean-parser contamination audit, alphabet-normalization test, cipher-reconstruction, or permutation-null confound findings credited under family-generative-falsification-adversarial-audit.",
-        "Does not claim the byte-pair-merge segmentation-dependence result (T2) or illustration-linked-vocabulary test (T1) credited under family-generative-falsification-discriminating-tests.",
-        "Does not claim or extend the Cardan table-and-grille (M5a/M5b) mechanism experiment credited under family-generative-falsification.",
-        "Does not claim the Stolfi word-grammar template generator or its Culpeper/Alice measurements credited under family-generative-falsification-word-grammar-template.",
-        "Does not claim the M1/M2 syllable-table/self-citation pilot or the M3 per-page entry/topic-carryover generator credited under their respective families."
+        "Raw ZL/GC corpus acquisition and generic EVA parsing baseline (seed-corpus-parser).",
+        "Yale IIIF manifest/image access already registered under family-ms408-data-access.",
+        "Rediscovery of known gallows behavior (H001) claimed only as supporting context, not new credit."
+      ],
+      "seed": false,
+      "seed_baseline": 0
+    },
+    {
+      "id": "family-pldd-p001-edge-inventory",
+      "rubric_version": "0.1",
+      "scope": "An exhaustive equal-cardinality edge-inventory discriminating-control pilot (P001) testing a selected one-prefix/two-suffix STA-family morphology parse against 5,082 alternative inventories, finding the selected inventory ranks only 2,309th (54.58th percentile, gate 95th), with disclosed same-session calibration/test inspection.",
+      "acceptance_test": "Run analyze_edge_morphology.py; reproduce rank 2,309/5,082 and failed 95th-percentile gate exactly.",
+      "aliases": [],
+      "predecessor_family_ids": [],
+      "excluded_overlap": [
+        "Does not claim credit for grammar/segmentation results in other generative-falsification families.",
+        "Does not claim illustration-linked vocabulary or byte-pair segmentation results in family-generative-falsification-discriminating-tests."
+      ],
+      "seed": false,
+      "seed_baseline": 0
+    },
+    {
+      "id": "family-pldd-h004-local-order-robustness",
+      "rubric_version": "0.1",
+      "scope": "A preceding-ten-token exact/one-edit matched-permutation local-order screen (H004) across 33 reserved pages and 2,072 targets showing a statistically significant static order effect (delta 0.0504/0.0379, p 0.0001/0.0003), together with the complete disclosed follow-up sequence: a retracted invalid Markov-surrogate design (B-v1), an executed teacher-forced contextual comparator (B-v2) that fails its own validity gates and is therefore inconclusive, and a cross-transcription STA-family robustness check (H004-C) that fails the frozen breadth gate at only 648 targets and also fails its already-exposed effect gates.",
+      "acceptance_test": "Rebuild H004/H004-B-v2/H004-C; verify static deltas 0.0504/0.0379 (p 0.0001/0.0003), B-v2 invalidity, and H004-C's 648-target breadth failure with reported effect-gate results.",
+      "aliases": [],
+      "predecessor_family_ids": [],
+      "excluded_overlap": [
+        "Does not claim general copy-generation mechanism identification.",
+        "Does not duplicate seed-baseline-position's shuffle diagnostic scope."
+      ],
+      "seed": false,
+      "seed_baseline": 0
+    },
+    {
+      "id": "family-pldd-h005-coordinate-label-retrieval",
+      "rubric_version": "0.1",
+      "scope": "A new exact-coordinate label-to-whole-herbal retrieval benchmark derived from 35 q15/q19 source claims (17 strict ZL/GC pairs, 5 held-out pairs), using a locked BM25 retrieval model selected on discovery data, tested against a selection-adjusted matched null; all statistical advancement gates fail (MRR delta 0.1435, p=0.0568; top-3 p=0.1592) and a distinct-target identity-collision gate also fails (AQABBA maps to both f44 and f57).",
+      "acceptance_test": "Rebuild H005; verify 17 strict pairs, held-out MRR 0.33991087 vs null 0.19643035 (p=0.0568), AQABBA collision, and unopened IT prose.",
+      "aliases": [],
+      "predecessor_family_ids": [],
+      "excluded_overlap": [
+        "Does not claim upstream T1's illustration-linked-vocabulary result or its own novelty as first plant-association test.",
+        "Does not assign species or reject general label-meaning hypotheses."
+      ],
+      "seed": false,
+      "seed_baseline": 0
+    },
+    {
+      "id": "family-pldd-h006-fr3-line-rejection",
+      "rubric_version": "0.1",
+      "scope": "An exact necessary-condition screen testing two explicit fixed-three-trit component tables (PAIR, OPTIONAL_E) under independent per-line phase-zero reset against 919 discovery lines, rejecting both models outright (598/593 contradictions) with held-out residues (266 lines) left uncomputed per the frozen advancement rule.",
+      "acceptance_test": "Rebuild H006; verify residue histograms 321/297/301 and 326/303/290, rejection of both models, and sealed 266-line holdout.",
+      "aliases": [],
+      "predecessor_family_ids": [],
+      "excluded_overlap": [],
+      "seed": false,
+      "seed_baseline": 0
+    },
+    {
+      "id": "family-pldd-h007-published-key-coverage",
+      "rubric_version": "0.1",
+      "scope": "A literal fixed-key coverage/ambiguity diagnostic applying Greshko's published Naibbe reverse table and decoder literally (BASIC=True, MARK_COMPOUND=True) to a strict ZL/IT-consensus herbal corpus of 2,341 discovery occurrences, finding both the generator-membership gate (X=495) and unique-output gate (BA=82, CA=3) fail, with a table-only closure audit proving that adding arbitrary deleted-boundary compounding cannot rescue unique decoding (14,648/18,947 atomic strings admit a distinct multi-atom decoding).",
+      "acceptance_test": "Run author-control and Naibbe coverage tests; verify classes U=797 B1=937 BA=82 C1=27 CA=3 X=495, held-out sealed, and forward-closure audit's 14,648/18,947 collision figures.",
+      "aliases": [],
+      "predecessor_family_ids": [],
+      "excluded_overlap": [
+        "Does not reject the general Naibbe ciphertext-compatibility thesis or Greshko's own claims, which he never made about manuscript decipherment."
       ],
       "seed": false,
       "seed_baseline": 0
@@ -336,6 +417,7 @@
     "family-ms408-data-access": 5,
     "family-generative-falsification-adversarial-audit": 10,
     "family-generative-falsification-discriminating-tests": 5,
+    "family-generative-falsification-meaning-probes": 2,
     "family-generative-falsification-doodler": 5,
     "family-generative-falsification-entry-doodler": 5,
     "family-generative-falsification-word-grammar-template": 5,
@@ -343,9 +425,14 @@
     "family-generative-falsification-controls-entry-ladder": 2,
     "family-generative-falsification-poetry-control": 2,
     "family-generative-falsification-languages-control": 2,
-    "family-generative-falsification-meaning-probes": 2
+    "family-pldd-corpus-sta1-audit": 5,
+    "family-pldd-p001-edge-inventory": 5,
+    "family-pldd-h004-local-order-robustness": 5,
+    "family-pldd-h005-coordinate-label-retrieval": 5,
+    "family-pldd-h006-fr3-line-rejection": 5,
+    "family-pldd-h007-published-key-coverage": 5
   },
-  "ledger_digest": "8bf187f0181082b292ea3a9734bc845dd31dc02564bc3ce3709312ddbcd72d18",
+  "ledger_digest": "0d4eaa5ba4ac73006e4358281b7a6e42c54111ad19e63e1042049d2e6f8b3079",
   "public_evidence": [
     {
       "path": "research/context-index.json",
